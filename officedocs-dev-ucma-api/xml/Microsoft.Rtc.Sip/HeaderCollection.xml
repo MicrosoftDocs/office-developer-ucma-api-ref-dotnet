@@ -1,0 +1,424 @@
+﻿<Type Name="HeaderCollection" FullName="Microsoft.Rtc.Sip.HeaderCollection">
+  <TypeSignature Language="C#" Value="public sealed class HeaderCollection : System.Collections.ICollection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit HeaderCollection extends System.Object implements class System.Collections.ICollection, class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.HeaderCollection" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class HeaderCollection&#xA;Implements ICollection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class HeaderCollection sealed : System::Collections::ICollection" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.ICollection</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>                  Represents an ordered collection of SIP headers.              This class implements the IEnumerable and ICollection interfaces.The HeaderCollection class is derived from the System.Object class.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public int Add (Microsoft.Rtc.Sip.Header h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Add(class Microsoft.Rtc.Sip.Header h) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.Add(Microsoft.Rtc.Sip.Header)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Add (h As Header) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int Add(Microsoft::Rtc::Sip::Header ^ h);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="h" Type="Microsoft.Rtc.Sip.Header" />
+      </Parameters>
+      <Docs>
+        <param name="h">To be added.</param>
+        <summary>The Add method adds the specific header to the collection.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Clear();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The Clear method removes all headers from the collection.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (Microsoft.Rtc.Sip.Header h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Contains(class Microsoft.Rtc.Sip.Header h) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.Contains(Microsoft.Rtc.Sip.Header)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Contains (h As Header) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Contains(Microsoft::Rtc::Sip::Header ^ h);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="h" Type="Microsoft.Rtc.Sip.Header" />
+      </Parameters>
+      <Docs>
+        <param name="h">To be added.</param>
+        <summary>The Contains method determines whether the specific header exists in the collection.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>This method searches for a specific header object, not the header type. There may be multiple distinct headers within the collection that share the same header type. This method will return <b>true</b> only if an exact match (same header type, value, parameter list) is found.</para>
+          <para>The match is not case-sensitive.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Array array, int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Array array, int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.CopyTo(System.Array,System.Int32)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void CopyTo(Array ^ array, int index);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Array" />
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="index">To be added.</param>
+        <summary>The CopyTo method copies the entire HeaderCollection to a compatible one-dimensional array, starting at the specified index of the target array.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.HeaderCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.ICollection.Count</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Number of elements that are contained in the collection.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirst">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Header FindFirst (Microsoft.Rtc.Sip.Header.StandardHeaderType standardType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Sip.Header FindFirst(valuetype Microsoft.Rtc.Sip.Header/StandardHeaderType standardType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.FindFirst(Microsoft.Rtc.Sip.Header.StandardHeaderType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindFirst (standardType As Header.StandardHeaderType) As Header" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Sip::Header ^ FindFirst(Microsoft::Rtc::Sip::Header::StandardHeaderType standardType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Header</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="standardType" Type="Microsoft.Rtc.Sip.Header+StandardHeaderType" />
+      </Parameters>
+      <Docs>
+        <param name="standardType">To be added.</param>
+        <summary>                  Finds the first header of the specified standard type.              </summary>
+        <returns>                  The first header of the specified type, if found, or null otherwise.              </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindFirst">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Header FindFirst (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Sip.Header FindFirst(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.FindFirst(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindFirst (type As String) As Header" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Sip::Header ^ FindFirst(System::String ^ type);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Header</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">To be added.</param>
+        <summary>                  Finds the first header of the specified type.              </summary>
+        <returns>                  The first header of the specified type, if found, or null otherwise.              </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Returns an enumerator that can iterate through the collection.              </summary>
+        <returns>This method has no parameters.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (Microsoft.Rtc.Sip.Header h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 IndexOf(class Microsoft.Rtc.Sip.Header h) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.IndexOf(Microsoft.Rtc.Sip.Header)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IndexOf (h As Header) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int IndexOf(Microsoft::Rtc::Sip::Header ^ h);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="h" Type="Microsoft.Rtc.Sip.Header" />
+      </Parameters>
+      <Docs>
+        <param name="h">To be added.</param>
+        <summary>                  Determines the index of a specific item in the list.              </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, Microsoft.Rtc.Sip.Header h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Insert(int32 index, class Microsoft.Rtc.Sip.Header h) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.Insert(System.Int32,Microsoft.Rtc.Sip.Header)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Insert (index As Integer, h As Header)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Insert(int index, Microsoft::Rtc::Sip::Header ^ h);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="h" Type="Microsoft.Rtc.Sip.Header" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="h">To be added.</param>
+        <summary>                  Inserts an item to the list at the specified position.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFixedSize">
+      <MemberSignature Language="C#" Value="public bool IsFixedSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFixedSize" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.HeaderCollection.IsFixedSize" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsFixedSize As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsFixedSize { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the list has a fixed size.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.HeaderCollection.IsReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the list is read-only.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSynchronized">
+      <MemberSignature Language="C#" Value="public bool IsSynchronized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSynchronized" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.HeaderCollection.IsSynchronized" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSynchronized As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSynchronized { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.ICollection.IsSynchronized</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether access to the collection is synchronized.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Header this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.Header Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.HeaderCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As Header" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::Header ^ default[int] { Microsoft::Rtc::Sip::Header ^ get(int index); void set(int index, Microsoft::Rtc::Sip::Header ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Header</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>                  Retrieves a reference to the element at the specified index.              In C#, the Item property is the indexer for the <see cref="T:Microsoft.Rtc.Sip.HeaderCollection" /> class.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (Microsoft.Rtc.Sip.Header h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(class Microsoft.Rtc.Sip.Header h) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.Remove(Microsoft.Rtc.Sip.Header)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Remove (h As Header)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Remove(Microsoft::Rtc::Sip::Header ^ h);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="h" Type="Microsoft.Rtc.Sip.Header" />
+      </Parameters>
+      <Docs>
+        <param name="h">To be added.</param>
+        <summary>                  Removes the first occurrence of the specific item from the list.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.HeaderCollection.RemoveAt(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveAt (index As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveAt(int index);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>                  Removes the list item at the specified index.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.HeaderCollection.SyncRoot" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyncRoot As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.ICollection.SyncRoot</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The SyncRoot property contains an object that is used to synchronize access to the collection. This implementation always returns the current instance of the <see cref="T:Microsoft.Rtc.Sip.HeaderCollection" /> object.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

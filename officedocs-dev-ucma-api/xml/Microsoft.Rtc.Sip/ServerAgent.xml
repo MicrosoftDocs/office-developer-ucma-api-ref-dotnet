@@ -1,0 +1,809 @@
+﻿<Type Name="ServerAgent" FullName="Microsoft.Rtc.Sip.ServerAgent">
+  <TypeSignature Language="C#" Value="public class ServerAgent : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServerAgent extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.ServerAgent" />
+  <TypeSignature Language="VB.NET" Value="Public Class ServerAgent&#xA;Implements IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ServerAgent : IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Implements the server agent. </summary>
+    <remarks>
+      <para>Applications use <see cref="ServerAgent" /> objects to interact with the server. Each object of this class represents a logical SIP application to the server, and the server to the application. Most applications will only create one such object, but in special cases, it may be necessary to create multiple server agent objects (for example, logging all incoming and all outgoing messages). In order to terminate interaction with the server, applications should call the <see cref="Dispose()" /> method.              </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerAgent (Microsoft.Rtc.Sip.ApplicationManifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Sip.ApplicationManifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.#ctor(Microsoft.Rtc.Sip.ApplicationManifest)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (manifest As ApplicationManifest)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerAgent(Microsoft::Rtc::Sip::ApplicationManifest ^ manifest);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="manifest" Type="Microsoft.Rtc.Sip.ApplicationManifest" />
+      </Parameters>
+      <Docs>
+        <param name="manifest">Compiled application manifest.              </param>
+        <summary>Simplified version of the constructor for use by script-only applications.              </summary>
+        <remarks>
+          <para>
+            <b>Note</b>: This constructor should be used by applications that are only using a SIP Processing Language (MSPL) script in the application manifest for message processing. No calls to Dispatch should be present in the message filter script.In this case, the application serves solely to register the script with Lync Server 2013. No message processing is performed within the managed code application.</para>
+          <para>Two common exceptions that should be caught when calling this constructor:</para>
+          <list type="bullet">
+            <item>
+              <description>
+                <see cref="T:Microsoft.Rtc.Sip.ServerNotFoundException" />: Lync Server 2013 is not running.</description>
+            </item>
+            <item>
+              <description>
+                <see cref="T:Microsoft.Rtc.Sip.UnauthorizedException" />: A connection to Lync Server 2013 could not be initialized. This is because of the current security context (user must be a member of the "Lync Server Users" local group), because the application has not been configured to run on this server, or because an application with the same URI (as specified in the application manifest) is already running.</description>
+            </item>
+          </list>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerAgent (object app, Microsoft.Rtc.Sip.ApplicationManifest manifest);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object app, class Microsoft.Rtc.Sip.ApplicationManifest manifest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.#ctor(System.Object,Microsoft.Rtc.Sip.ApplicationManifest)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (app As Object, manifest As ApplicationManifest)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerAgent(System::Object ^ app, Microsoft::Rtc::Sip::ApplicationManifest ^ manifest);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="app" Type="System.Object" />
+        <Parameter Name="manifest" Type="Microsoft.Rtc.Sip.ApplicationManifest" />
+      </Parameters>
+      <Docs>
+        <param name="app">Application object that implement dispatch handlers specified in the manifest. Additionally, the assembly containing the type of this object is searched for classes inheriting from built-in SIP classes, such as ServerTransaction. These classes are used whenever the SIP library needs to create a SIP object. This allows applications to maintain additional state with each SIP object. If an application wishes to take advantage of this feature, it should use the <see cref="T:Microsoft.Rtc.Sip.DefaultRTCClassAttribute" />  attribute on the class definition.              </param>
+        <param name="manifest">Compiled application manifest.              </param>
+        <summary>Creates a new server agent for the supplied application object and with the supplied application maifest.              </summary>
+        <remarks>
+          <para>This constructor is used by applications that receive messages dispatched from an MSPL script in the application manifest. The provided object implements the dispatch handlers for filtered messages.</para>
+          <para>A method used for handling specific dispatches is specified in the message filter script by calls to the MSPL built-in function Dispatch, passing the name of the method. Within the application, these methods must be implemented on a class, an instance of which is passed to this constructor. For example, if you have a call to Dispatch within the message filter script, as shown in the next example.</para>
+          <code>if (sipRequest) {
+   Dispatch("OnRequestReceived");
+}
+</code>
+          <para>As shown in the following example, you also need a corresponding method implemented in the application. Note that for request handlers, the function signature must match that of the RequestReceivedEventHandler delegate. For responses, the function signature must match that of the ResponseReceivedEventHandler delegate.</para>
+          <code>class MyRequestHandlers {
+   ...
+   public MyRequestHandlers() {
+      // Constructor logic here
+   }
+   ...
+   public void OnRequestReceived(object sender, RequestReceivedEventArgs rreArgs) {
+      // Implement message handling behavior here
+   }
+   ...
+}
+</code>
+          <para>With the class and the dispatch handlers implemented, you are able to call the constructor and create an instance of the ServerAgent class.</para>
+          <code>// First, create an instance of the class that contains the dispatch handlers.
+MyRequestHandlers myHandlers = new MyRequestHandlers();
+
+// Second, obtain and compile your application manifest.
+ApplicationManifest myAppManifest = ApplicationManifest.CreateFromFile("C:\\xmldocs\\my_app_manifest_xml_file.xml");
+
+try {
+
+   myAppManifest.Compile();
+
+}
+catch (CompilerErrorException compilerErrorException) {
+
+   Console.WriteLine("The following MSPL compiler errors occurred:");
+   foreach (object errMsg in compilerErrorException.ErrorMessages)
+   {
+      Console.Write("\t{0}", errMsg.ToString());
+   }
+   Console.WriteLine();
+
+}
+
+// Now, create an instance of ServerAgent.
+try {
+
+   ServerAgent.WaitForServerAvailable(3); // Maximum 3 tries before failure
+   ServerAgent myServerAgent = new ServerAgent(myHandlers, myAppManifest);
+
+}
+catch (UnauthorizedException ue) {
+
+   Console.WriteLine("User is not authorized to connect to Lync Server: {0}", ue.ToString());
+
+}
+catch (ServerNotFoundException snfe) {
+
+   Console.WriteLine("Lync Server not available: {0}", snfe.ToString());
+
+}
+</code>
+          <para>The assembly containing the specified application object is searched for classes inheriting from built-in SIP classes, such as ServerTransaction. These classes are used whenever the SIP library needs to create a SIP object. This allows applications to maintain additional state with each SIP object. To take advantage of this feature, an application should use the [DefaultRTCClassAttribute] attribute on the class definition.</para>
+          <para>Two common exceptions that should be caught when calling this constructor:</para>
+          <list type="bullet">
+            <item>
+              <description>ServerNotFoundException: Microsoft Lync Server 2013 is not running.</description>
+            </item>
+            <item>
+              <description>UnauthorizedException: A connection to Lync Server 2013 could not be initialized. This is because of the current security context (user must be a member of the "Lync Server Users" local group), because the application has not been configured to run on this server (through WMI), or because an application with the same URI (as specified in the application manifest) is already running.</description>
+            </item>
+          </list>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Sip.ServerNotFoundException">Server not running.              </exception>
+        <exception cref="T:Microsoft.Rtc.Sip.UnauthorizedException">Server connection could not be initialized. This could be either because of the current security context (user must be a member of the "RTC Server Users" local group), because the application has not been configured to run on this server (through WMI), or because an application with the same URI is already running.              </exception>
+        <exception cref="T:System.ArgumentException" />
+        <exception cref="T:System.Exception">Other errors.              </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveWorkerThreads">
+      <MemberSignature Language="C#" Value="public int ActiveWorkerThreads { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ActiveWorkerThreads" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.ActiveWorkerThreads" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveWorkerThreads As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ActiveWorkerThreads { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>              Returns the number of worker threads currently executing              inside ProcessEvent.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>              This can be used by an application to decide whether more              worker threads need to be deployed.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAuthorizedHost">
+      <MemberSignature Language="C#" Value="public void AddAuthorizedHost (Guid instance, string address, bool treatAsServer, bool treatAsAuthenticated, bool outboundOnly, bool supportsIPv4 = true, bool supportsIPv6 = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAuthorizedHost(valuetype System.Guid instance, string address, bool treatAsServer, bool treatAsAuthenticated, bool outboundOnly, bool supportsIPv4, bool supportsIPv6) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.AddAuthorizedHost(System.Guid,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddAuthorizedHost (instance As Guid, address As String, treatAsServer As Boolean, treatAsAuthenticated As Boolean, outboundOnly As Boolean, Optional supportsIPv4 As Boolean = true, Optional supportsIPv6 As Boolean = true)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Guid" />
+        <Parameter Name="address" Type="System.String" />
+        <Parameter Name="treatAsServer" Type="System.Boolean" />
+        <Parameter Name="treatAsAuthenticated" Type="System.Boolean" />
+        <Parameter Name="outboundOnly" Type="System.Boolean" />
+        <Parameter Name="supportsIPv4" Type="System.Boolean" />
+        <Parameter Name="supportsIPv6" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="instance">To be added.</param>
+        <param name="address">To be added.</param>
+        <param name="treatAsServer">To be added.</param>
+        <param name="treatAsAuthenticated">To be added.</param>
+        <param name="outboundOnly">To be added.</param>
+        <param name="supportsIPv4">To be added.</param>
+        <param name="supportsIPv6">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthorizedHostOperationCompleted">
+      <MemberSignature Language="C#" Value="public event Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventHandler AuthorizedHostOperationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventHandler AuthorizedHostOperationCompleted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.ServerAgent.AuthorizedHostOperationCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event AuthorizedHostOperationCompleted As AuthorizedHostOperationCompletedEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Rtc::Sip::AuthorizedHostOperationCompletedEventHandler ^ AuthorizedHostOperationCompleted;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Occurs when Add/RemoveAuthorizedHost operations complete.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckDisposed">
+      <MemberSignature Language="C#" Value="protected virtual void CheckDisposed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CheckDisposed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.CheckDisposed" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CheckDisposed ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void CheckDisposed();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Throws an <see cref="ObjectDisposedException" /> if the object is in the                  disposed state.              </summary>
+        <remarks>
+          <para>                  This routine should be called in the prolog of every public                  routine in this class and its derived classes. It ensures that                  no operations are performed on disposed objects.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cleanup">
+      <MemberSignature Language="C#" Value="public static void Cleanup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Cleanup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.Cleanup" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub Cleanup ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void Cleanup();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Clean up function to clear static state. Supports RtcHost infrastructure, not intended for third-party developers.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CloseHandle">
+      <MemberSignature Language="C#" Value="public static int CloseHandle (IntPtr hObject);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig pinvokeimpl (&quot;Kernel32.dll&quot; as &quot;CloseHandle&quot; winapi)int32 CloseHandle(native int hObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.CloseHandle(System.IntPtr)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CloseHandle (hObject As IntPtr) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static int CloseHandle(IntPtr hObject);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hObject" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="hObject">The object handle to close, such as the handle to any security token.</param>
+        <summary>The CloseHandle method closes an open Microsoft Windows object handle.</summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>If the function succeeds, the return value is nonzero. Otherwise, it returns zero (0). To get the specific Windows error code, create a new instance of Win32Exception, which will obtain the corresponding Windows error code, as demonstrated in the following code example.</para>
+          <code>if (ServerAgent.CloseHandle(mySecurityToken) == 0) {
+ Win32Exception e = new Win32Exception();
+ Console.WriteLine("Windows Error {0}: {1}", e.ErrorCode, e.Message);
+}
+</code>
+          <para>In the Microsoft Windows Platform SDK, a list of Windows error codes appears in Winerror.h.</para>
+          <para>Calling this method is identical to calling the Windows CloseHandle function in kernel32.lib (defined in Windows.h).</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionDropped">
+      <MemberSignature Language="C#" Value="public event Microsoft.Rtc.Sip.ConnectionDroppedEventHandler ConnectionDropped;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Rtc.Sip.ConnectionDroppedEventHandler ConnectionDropped" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.ServerAgent.ConnectionDropped" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionDropped As ConnectionDroppedEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Rtc::Sip::ConnectionDroppedEventHandler ^ ConnectionDropped;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Occurs when the connection to the server has been dropped. For                  example, when the server has crashed.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Releases all resources used by this object.              </summary>
+        <remarks>
+          <para>                  Calling <see cref="Dispose" /> allows the resources used by this object                  to be freed.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">If <b>true</b>, managed resources as well as unmanaged resources are released; if <b>false</b>, only unmanaged resources are disposed.</param>
+        <summary>                  Releases the unmanaged resources used by this object and                  optionally releases the managed resources.              </summary>
+        <remarks>
+          <para>                  If a wait handle was retrieved from the server agent, it must no                  longer be used, as it is invalidated by this method.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~ServerAgent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="C++ CLI" Value="!ServerAgent ()" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>             Finalizer of an instance for this class.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InsideRtcHost">
+      <MemberSignature Language="C#" Value="public static bool InsideRtcHost { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool InsideRtcHost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.InsideRtcHost" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property InsideRtcHost As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool InsideRtcHost { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>             Indicates whether the server agent is running inside RTCHost.exe. Not intended             for third-party developers.             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessagesInServerAgent">
+      <MemberSignature Language="C#" Value="public int MessagesInServerAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MessagesInServerAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.MessagesInServerAgent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessagesInServerAgent As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MessagesInServerAgent { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>              Returns the number of messages correctly contained in              ServerAgent's state manager.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>              This can be used by an application to throttle the              processing rate. Note that throttling may cause              messages to be rejected by the Server.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConnectionDropped">
+      <MemberSignature Language="C#" Value="protected virtual void OnConnectionDropped (Microsoft.Rtc.Sip.ConnectionDroppedReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnConnectionDropped(valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.OnConnectionDropped(Microsoft.Rtc.Sip.ConnectionDroppedReason)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnConnectionDropped (reason As ConnectionDroppedReason)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnConnectionDropped(Microsoft::Rtc::Sip::ConnectionDroppedReason reason);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reason" Type="Microsoft.Rtc.Sip.ConnectionDroppedReason" />
+      </Parameters>
+      <Docs>
+        <param name="reason">Reason why the connection to Microsoft Lync Server was dropped.</param>
+        <summary>Raises the <see cref="ConnectionDropped" /> event.              </summary>
+        <remarks>
+          <para>                  Overrides should always call the base class.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEvent">
+      <MemberSignature Language="C#" Value="public void ProcessEvent (object internalQueuedEventFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ProcessEvent(object internalQueuedEventFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.ProcessEvent(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ProcessEvent (internalQueuedEventFlag As Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ProcessEvent(System::Object ^ internalQueuedEventFlag);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="internalQueuedEventFlag" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="internalQueuedEventFlag">To be added.</param>
+        <summary>                  Dequeues an event from the server queue and processes it.              </summary>
+        <remarks>
+          <para>This method implements the <see cref="ThreadPool.WaitCallback" /> delegate to make it easy for applications to use the built-in system thread pool.              </para>
+          <para>This method must be called in order to dispatch messages to their corresponding event handlers (the methods registered with the respective MSPL Dispatch calls). When a server event is available for processing (a message has arrived and Dispatch has been called), the signal is received over the wait handle specified by the ServerAgent.WaitHandle property.</para>
+          <para>The following example demonstrates passing this method to a WaitCallback delegate.</para>
+          <code>public void LCServerEventHandler(ServerAgent sa)
+{
+   ManualResetEvent autoResetEvent = new ManualResetEvent(false);
+   WaitHandle[] handleArray = new WaitHandle[] {
+                                 myAppServerAgent.WaitHandle,
+                                 manualResetEvent
+                              };
+
+   WaitCallback waitCallback = new WaitCallback(myAppServerAgent.ProcessEvent);
+
+   while (true)
+   {
+      int signaledEvent = WaitHandle.WaitAny(handleArray);
+
+      if (signaledEvent == 0)  // The server event wait handle (index = 0) in handleArray was signaled
+      {
+
+          // Schedule a worker thread to process the server event
+          try
+          {
+             if (!ThreadPool.QueueUserWorkItem(waitCallBack))
+             {
+                 Console.WriteLine("QueueUserWorkItem fails, quitting.");
+                 return;
+             }
+
+          }
+          catch (Exception e)
+          {
+             Console.WriteLine("Unexpected exception: {0}\n{1}",
+                               e.Message,
+                               e.StackTrace);
+          }
+       }
+       else // Manual reset event handle (index = 1) in handle array was signaled
+       {
+          Console.WriteLine("Quit handle signaled, worker will quit now\n");
+          break;
+       }
+   }
+}
+
+</code>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessEventOnThreadPool">
+      <MemberSignature Language="C#" Value="public void ProcessEventOnThreadPool ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ProcessEventOnThreadPool() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.ProcessEventOnThreadPool" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ProcessEventOnThreadPool ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ProcessEventOnThreadPool();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dequeues events from the server queue and processes them on ThreadPool thread. This method takes into account the number of active worker threads before queuing events on threadpool.              </summary>
+        <remarks>
+          <para>This method can be called from the application main thread, unlike ProcessEvent which is generally called on a ThreadPool thread.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAuthorizedHost">
+      <MemberSignature Language="C#" Value="public void RemoveAuthorizedHost (Guid instance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveAuthorizedHost(valuetype System.Guid instance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.RemoveAuthorizedHost(System.Guid)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveAuthorizedHost (instance As Guid)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveAuthorizedHost(Guid instance);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Guid" />
+      </Parameters>
+      <Docs>
+        <param name="instance">                  Uniquely identifies the entry for the host in the authorized host table.              </param>
+        <summary>                  Removes an entry from the authorized host table              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ServerAgent.ServerRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.ServerAgent/ServerRole Role" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.Role" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Role As ServerAgent.ServerRole" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::ServerAgent::ServerRole Role { Microsoft::Rtc::Sip::ServerAgent::ServerRole get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ServerAgent+ServerRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  The current server role.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerFqdn">
+      <MemberSignature Language="C#" Value="public static string ServerFqdn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ServerFqdn" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.ServerFqdn" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ServerFqdn As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ ServerFqdn { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  The server's machine FQDN              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerPool">
+      <MemberSignature Language="C#" Value="public static string ServerPool { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string ServerPool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.ServerPool" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ServerPool As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::String ^ ServerPool { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  The name of the pool to which the server belongs.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>On Standard edition servers, this value will be the same as the fully qualified domain name (FQDN) of the server.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerProcess">
+      <MemberSignature Language="C#" Value="public static System.Diagnostics.Process ServerProcess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Diagnostics.Process ServerProcess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.ServerProcess" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property ServerProcess As Process" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Diagnostics::Process ^ ServerProcess { System::Diagnostics::Process ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Diagnostics.Process</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Server process.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SPLLoggerPresent">
+      <MemberSignature Language="C#" Value="public static bool SPLLoggerPresent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool SPLLoggerPresent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.SPLLoggerPresent" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SPLLoggerPresent As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool SPLLoggerPresent { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  SPL Logger present              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnhandledException">
+      <MemberSignature Language="C#" Value="public event Microsoft.Rtc.Sip.UnhandledExceptionHandler UnhandledException;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Rtc.Sip.UnhandledExceptionHandler UnhandledException" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.ServerAgent.UnhandledException" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event UnhandledException As UnhandledExceptionHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Rtc::Sip::UnhandledExceptionHandler ^ UnhandledException;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.UnhandledExceptionHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                 Occurs when an unhandled exception is caught by the ServerAgent                 dispatcher. The application can return true to allow the process to continue                 or false to cause the exception to be re-thrown.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForServerAvailable">
+      <MemberSignature Language="C#" Value="public static void WaitForServerAvailable (int maxRetry);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void WaitForServerAvailable(int32 maxRetry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerAgent.WaitForServerAvailable(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub WaitForServerAvailable (maxRetry As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void WaitForServerAvailable(int maxRetry);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxRetry" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="maxRetry">Supplies the maximum amount of retries if the Server is not running. Each retry results in a delay of 10 seconds.</param>
+        <summary>Waits for the RTCSRV process to startup.             </summary>
+        <remarks>
+          <para>
+            <b>Note</b>: Applications should call this method before they create their first ServerAgent object.</para>
+          <para>If Microsoft Lync Server 2013 is not available, this method will sleep for 10 seconds and check again, for up to maxRetryCount times. When Lync Server 2013 is available, this method returns. If the server does not become available after waiting for the specified number of times, it throws either UnauthorizedException or ServerNotFoundException.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitHandle">
+      <MemberSignature Language="C#" Value="public System.Threading.WaitHandle WaitHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Threading.WaitHandle WaitHandle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerAgent.WaitHandle" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WaitHandle As WaitHandle" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Threading::WaitHandle ^ WaitHandle { System::Threading::WaitHandle ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.WaitHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Internal handle used to signal that there is pending input from                  the SIP server that the server agent needs to process.                  </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Applications should wait on this handle, and whenever it is                  signaled, should call <see cref="ServerAgent.ProcessEvent()" />. This                  mechanism allows applications to control the concurrency model.                  For example, applications can queue up work items using the                  <see cref="ThreadPool" /> class.              </para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example demonstrates the use of a wait handle when queuing work items in a thread pool.</para>
+          <code>public void LCServerEventHandler(ServerAgent sa)
+{
+   ManualResetEvent autoResetEvent = new ManualResetEvent(false);
+   WaitHandle[] handleArray = new WaitHandle[] {
+                                 myAppServerAgent.WaitHandle,
+                                 manualResetEvent
+                              };
+
+   WaitCallback waitCallback = new WaitCallback(myAppServerAgent.ProcessEvent);
+
+   while (true)
+   {
+      int signaledEvent = WaitHandle.WaitAny(handleArray);
+
+      if (signaledEvent == 0)  // The server event wait handle (index = 0) in handleArray was signaled
+      {
+
+          // Schedule a worker thread to process the server event
+          try
+          {
+             if (!ThreadPool.QueueUserWorkItem(waitCallBack))
+             {
+                 Console.WriteLine("QueueUserWorkItem fails, quitting.");
+                 return;
+             }
+
+          }
+          catch (Exception e)
+          {
+             Console.WriteLine("Unexpected exception: {0}\n{1}",
+                               e.Message,
+                               e.StackTrace);
+          }
+       }
+       else // Manual reset event handle (index = 1) in handle array was signaled
+       {
+          Console.WriteLine("Quit handle signaled, worker will quit now\n");
+          break;
+       }
+   }
+}
+</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

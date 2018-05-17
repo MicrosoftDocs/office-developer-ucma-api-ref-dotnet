@@ -1,0 +1,469 @@
+﻿<Type Name="Request" FullName="Microsoft.Rtc.Sip.Request">
+  <TypeSignature Language="C#" Value="public class Request : Microsoft.Rtc.Sip.Message" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Request extends Microsoft.Rtc.Sip.Message" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.Request" />
+  <TypeSignature Language="VB.NET" Value="Public Class Request&#xA;Inherits Message" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Request : Microsoft::Rtc::Sip::Message" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Message</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>                  Represents SIP requests.              The Request class defines a SIP request sent from a client transaction to a server transaction.Client transactions are represented as a <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> object, and server transactions are represented as a <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object. A request is sent by calling the <see cref="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" /> method. Any transaction may have only one associated request.Requests are proxied by calling the <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" /> and creating an associated ClientTransaction object for the proxied request. To fork a request, call ServerTransaction.CreateBranch once for each fork, and then call ClientTransaction.SendRequest on each element in the <see cref="T:Microsoft.Rtc.Sip.BranchCollection" /> found at <see cref="P:Microsoft.Rtc.Sip.ServerTransaction.Branches" />.To generate a response message for a request, call <see cref="M:Microsoft.Rtc.Sip.Request.CreateResponse" /> on the associated Request object. Populate the <see cref="T:Microsoft.Rtc.Sip.Response" /> message with the proper status class and reason phrase, and then pass it to <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.SendResponse(Microsoft.Rtc.Sip.Response)" />, by using the ServerTransaction object for the initial request.When a response is returned for a specific request, a <see cref="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" /> event is raised on the ClientTransaction object that sent the request, and a <see cref="T:Microsoft.Rtc.Sip.ResponseReceivedEventArgs" /> object is supplied to the method that is provided to the <see cref="T:Microsoft.Rtc.Sip.ResponseReceivedEventHandler" /> delegate.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Request ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Request();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>The Request constructor creates an instance of a Request object.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Request (Microsoft.Rtc.Sip.Request.StandardMethodType method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Sip.Request/StandardMethodType method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.#ctor(Microsoft.Rtc.Sip.Request.StandardMethodType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (method As Request.StandardMethodType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Request(Microsoft::Rtc::Sip::Request::StandardMethodType method);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="method" Type="Microsoft.Rtc.Sip.Request+StandardMethodType" />
+      </Parameters>
+      <Docs>
+        <param name="method">To be added.</param>
+        <summary>                  Creates a new request with the specified standard method type.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Request (string method);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (method As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Request(System::String ^ method);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="method">To be added.</param>
+        <summary>                  Creates a new request with the specified method type.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Request (Microsoft.Rtc.Sip.Request.StandardMethodType method, string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Sip.Request/StandardMethodType method, string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.#ctor(Microsoft.Rtc.Sip.Request.StandardMethodType,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (method As Request.StandardMethodType, requestUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Request(Microsoft::Rtc::Sip::Request::StandardMethodType method, System::String ^ requestUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="method" Type="Microsoft.Rtc.Sip.Request+StandardMethodType" />
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="method">To be added.</param>
+        <param name="requestUri">To be added.</param>
+        <summary>                  Creates a new request with the specified standard method type                  and target URI.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Request (string method, string requestUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string method, string requestUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (method As String, requestUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Request(System::String ^ method, System::String ^ requestUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="method" Type="System.String" />
+        <Parameter Name="requestUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="method">To be added.</param>
+        <param name="requestUri">To be added.</param>
+        <summary>                  Creates a new request with the specified method type and target                  URI.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Request Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Sip.Request Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As Request" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Sip::Request ^ Clone();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Request</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Creates a new request based on this request.              </summary>
+        <returns>Returns a System.Object that contains the clone of the request. The clone should be subsequently cast as Request to obtain functionality.</returns>
+        <remarks>
+          <para>                  The clone is not perfect. Some system-level properties such as the                  VIA header are not cloned, because the new request takes on a                  new identity.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Request Clone (string targetUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Sip.Request Clone(string targetUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.Clone(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone (targetUri As String) As Request" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Sip::Request ^ Clone(System::String ^ targetUri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Request</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUri">To be added.</param>
+        <summary>                  Creates a new request based on this request with the specified                  target URI.              </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>                  The clone is not perfect. Some system-level properties such as the                  VIA header are not cloned, because the new request takes on a                  new identity.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateResponse">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Rtc.Sip.Response CreateResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Sip.Response CreateResponse() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.CreateResponse" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateResponse () As Response" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Rtc::Sip::Response ^ CreateResponse();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Response</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Creates a response to this request.              </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>A <see cref="T:Microsoft.Rtc.Sip.Response" /> object contains a specific status code that is sent to the client transaction, and it indicates the status of the request.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateResponse">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Response CreateResponse (int statusCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Sip.Response CreateResponse(int32 statusCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.CreateResponse(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateResponse (statusCode As Integer) As Response" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Sip::Response ^ CreateResponse(int statusCode);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Response</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">To be added.</param>
+        <summary>                  Creates a response to this message with the specified status                  code.              </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>A <see cref="T:Microsoft.Rtc.Sip.Response" /> object contains a specific status code that is sent to the client transaction, and it indicates the status of the request.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStandardMethod">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Sip.Request.StandardMethodType GetStandardMethod (string method);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Sip.Request/StandardMethodType GetStandardMethod(string method) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.GetStandardMethod(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetStandardMethod (method As String) As Request.StandardMethodType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Sip::Request::StandardMethodType GetStandardMethod(System::String ^ method);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Request+StandardMethodType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="method" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="method">To be added.</param>
+        <summary>             Returns a StandardMethodType enum value that matches the supplied method.             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public string Method { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Request.Method" />
+      <MemberSignature Language="VB.NET" Value="Public Property Method As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Method { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  SIP method type.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  Standard methods types should be accessed through the <see cref="P:Microsoft.Rtc.Sip.Request.StandardMethod" /> property, but these two properties are                  linked. Setting one property affects the other property.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestUri">
+      <MemberSignature Language="C#" Value="public string RequestUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Request.RequestUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property RequestUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RequestUri { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Request URI.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  For outgoing requests, if the request URI is not set, it is                  initialized based on the TO header.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Retarget">
+      <MemberSignature Language="C#" Value="public void Retarget (string targetUserUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Retarget(string targetUserUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.Retarget(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Retarget (targetUserUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Retarget(System::String ^ targetUserUri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetUserUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="targetUserUri">To be added.</param>
+        <summary>                  Sets a new target user (logical destination) for the request.                  The actual destination address for request routing is not provided.                  Other applications and/or servers should come up with the route.                  Setting request URI directly implies that the actual destination address is provided.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RsFrom">
+      <MemberSignature Language="C#" Value="public bool RsFrom { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RsFrom" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Request.RsFrom" />
+      <MemberSignature Language="VB.NET" Value="Public Property RsFrom As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RsFrom {  void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RsTo">
+      <MemberSignature Language="C#" Value="public bool RsTo { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RsTo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Request.RsTo" />
+      <MemberSignature Language="VB.NET" Value="Public Property RsTo As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RsTo {  void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDestination">
+      <MemberSignature Language="C#" Value="public void SetDestination (Microsoft.Rtc.Sip.ContactInfo entry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDestination(class Microsoft.Rtc.Sip.ContactInfo entry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.SetDestination(Microsoft.Rtc.Sip.ContactInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetDestination (entry As ContactInfo)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetDestination(Microsoft::Rtc::Sip::ContactInfo ^ entry);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="Microsoft.Rtc.Sip.ContactInfo" />
+      </Parameters>
+      <Docs>
+        <param name="entry">Instance of the ContactInfo where the request should be sent.</param>
+        <summary>             Sets the destination of the request to the specified ContactInfo. Use this method             instead of setting the <see cref="P:Microsoft.Rtc.Sip.Request.RequestUri" /> property directly.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDestination">
+      <MemberSignature Language="C#" Value="public void SetDestination (byte[] serializedContactEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDestination(unsigned int8[] serializedContactEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.SetDestination(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetDestination (serializedContactEntry As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetDestination(cli::array &lt;System::Byte&gt; ^ serializedContactEntry);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="serializedContactEntry" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="serializedContactEntry">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshaled">
+      <MemberSignature Language="C#" Value="protected internal override void SetMarshaled ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetMarshaled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Request.SetMarshaled" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub SetMarshaled ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void SetMarshaled();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Updates state to Marshaled.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SimpleProxy">
+      <MemberSignature Language="C#" Value="public bool SimpleProxy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SimpleProxy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Request.SimpleProxy" />
+      <MemberSignature Language="VB.NET" Value="Public Property SimpleProxy As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SimpleProxy { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether this request can be simple proxied.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>              The server will optimize message proxying if              Request.SimpleProxy is set to <b>true</b> and              <see cref="P:Microsoft.Rtc.Sip.ServerTransaction.EnableForking" /> is set to <b>false</b>.                           The simple proxy property may not be set for applications              that modify the To or From URI of the request before              proxying (you can change header parameters).              Likewise, applications that change the Call-ID header may not              set the SimpleProxy property. Undefined behavior occurs if you modify the headers and set the SimpleProxy property.                           </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardMethod">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Request.StandardMethodType StandardMethod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.Request/StandardMethodType StandardMethod" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Request.StandardMethod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StandardMethod As Request.StandardMethodType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::Request::StandardMethodType StandardMethod { Microsoft::Rtc::Sip::Request::StandardMethodType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Request+StandardMethodType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Efficient representation of common SIP method types.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  Values are simple integers that are more efficient to compare                  than strings. If the method type is not among the predefined                  values, NonstandardMethod is returned.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

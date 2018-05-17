@@ -1,0 +1,157 @@
+﻿<Type Name="ServerTransaction" FullName="Microsoft.Rtc.Sip.ServerTransaction">
+  <TypeSignature Language="C#" Value="public class ServerTransaction : Microsoft.Rtc.Sip.Transaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServerTransaction extends Microsoft.Rtc.Sip.Transaction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.ServerTransaction" />
+  <TypeSignature Language="VB.NET" Value="Public Class ServerTransaction&#xA;Inherits Transaction" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ServerTransaction : Microsoft::Rtc::Sip::Transaction" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Transaction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents SIP server transactions.The ServerTransaction class defines a SIP server transaction object located on a SIP proxy or user agent server (UAS). A ServerTransaction instance is generated as the <see cref="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.ServerTransaction" /> property, available on the <see cref="T:Microsoft.Rtc.Sip.RequestReceivedEventArgs" /> object dispatched to a specific method by the MSPL script filter. (For more information, see the Dispatch MSPL built-in function.) There are no public constructors for this class.The request being serviced by this server transaction can be forwarded by calling <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" />, which will create an associated <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" />. To fork a message, CreateBranch can be called for each fork. The collection of branches for this server transaction can be obtained as a <see cref="T:Microsoft.Rtc.Sip.BranchCollection" /> object by referencing the <see cref="P:Microsoft.Rtc.Sip.ServerTransaction.Branches" /> property. Requests are sent by calling <see cref="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" /> on each branch.To send a response for the request the server transaction was created to service, call <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.SendResponse(Microsoft.Rtc.Sip.Response" /> with the <see cref="T:Microsoft.Rtc.Sip.Response" /> object created by calling <see cref="M:Microsoft.Rtc.Sip.Request.CreateResponse(System.Int32)" /> on the <see cref="T:Microsoft.Rtc.Sip.Request" /> object available in the <see cref="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.Request" /> property.The ServerTransaction class is derived from the <see cref="T:Microsoft.Rtc.Sip.Transaction" /> class.</summary>
+    <remarks>
+      <para>                  Server transactions are used by UASs and proxies.              </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServerTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerTransaction.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ServerTransaction();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>                  Protected constructor that prevents direct creation of server                  transaction objects by general callers.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Branches">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.BranchCollection Branches { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.BranchCollection Branches" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerTransaction.Branches" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Branches As BranchCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::BranchCollection ^ Branches { Microsoft::Rtc::Sip::BranchCollection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.BranchCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Branches property contains all branches (client transactions) associated with this server transaction as a <see cref="T:Microsoft.Rtc.Sip.BranchCollection" /> object.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  This collection is non-empty when an application begins to proxy                  a request by creating branches. Each created branch is                  automatically added to this collection.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChallengeRequest">
+      <MemberSignature Language="C#" Value="public void ChallengeRequest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ChallengeRequest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerTransaction.ChallengeRequest" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ChallengeRequest ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ChallengeRequest();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The ChallengeRequest method sends an authentication challenge response to the client transaction whose request is attempting to initiate this server transaction.</summary>
+        <remarks>
+          <para>The challenge response is installation-specific (for example, if Kerberos is the primary authentication model supported by the server, than the challenge will be through Kerberos).</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBranch">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Rtc.Sip.ClientTransaction CreateBranch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Sip.ClientTransaction CreateBranch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateBranch () As ClientTransaction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Rtc::Sip::ClientTransaction ^ CreateBranch();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ClientTransaction</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The CreateBranch method adds a new <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> object to the <see cref="P:Microsoft.Rtc.Sip.ServerTransaction.Branches" /> property.</summary>
+        <returns>Returns the instance of <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> that was added to <see cref="P:Microsoft.Rtc.Sip.ServerTransaction.Branches" />.</returns>
+        <remarks>
+          <para>This method creates an empty <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> associated with this <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> instance. The <see cref="P:Microsoft.Rtc.Sip.Transaction.Request" /> property is populated by calling one of the <see cref="M:Microsoft.Rtc.Sip.Request.Clone" /> overloads on the <see cref="P:Microsoft.Rtc.Sip.Transaction.Request" /> property, and passing this clone to <see cref="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" />.</para>
+          <para>If you intend to fork a request (call CreateBranch a second time on the same ServerTransaction), you must set the <see cref="P:Microsoft.Rtc.Sip.ServerTransaction.EnableForking" /> property to <b>true</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableForking">
+      <MemberSignature Language="C#" Value="public bool EnableForking { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableForking" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ServerTransaction.EnableForking" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableForking As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableForking { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Flag indicating whether this transaction might be forked.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If <b>true</b>, more than one branch can be created with <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" />. If <b>false</b>, ArgumentException will be thrown if the application attempts to create a second branch. The default value is <b>true</b>.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponse">
+      <MemberSignature Language="C#" Value="public virtual void SendResponse (Microsoft.Rtc.Sip.Response response);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendResponse(class Microsoft.Rtc.Sip.Response response) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ServerTransaction.SendResponse(Microsoft.Rtc.Sip.Response)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SendResponse(Microsoft::Rtc::Sip::Response ^ response);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="response" Type="Microsoft.Rtc.Sip.Response" />
+      </Parameters>
+      <Docs>
+        <param name="response">Specifies a Response object that contains the SIP response.</param>
+        <summary>The SendResponse method sends a SIP response message to the client transaction whose request initiated this server transaction.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

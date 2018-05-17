@@ -1,0 +1,140 @@
+﻿<Type Name="ApplicationConfigHelper" FullName="Microsoft.Rtc.Sip.ApplicationConfigHelper">
+  <TypeSignature Language="C#" Value="public class ApplicationConfigHelper : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationConfigHelper extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.ApplicationConfigHelper" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationConfigHelper&#xA;Implements IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationConfigHelper : IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>             Class which wraps ServiceConsumer to provide information about             ServerApplication configuration.             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationConfigHelper ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationConfigHelper();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>             Constructs a <see cref="T:Microsoft.Rtc.Sip.ApplicationConfigHelper" /> object.             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Sip.ApplicationConfigHelperException">Thrown when code is not running in a valid topology.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeRegisterChangeNotification">
+      <MemberSignature Language="C#" Value="public void DeRegisterChangeNotification (string appUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeRegisterChangeNotification(string appUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.DeRegisterChangeNotification(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeRegisterChangeNotification (appUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeRegisterChangeNotification(System::String ^ appUri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appUri">URI of the application that should no longer be monitored.</param>
+        <summary>             Removes an application from the monitored list.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>             Disposes the used resources. Native resources are not being used directly, and a full IDisposable pattern is not necessary.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ApplicationConfiguration GetApplicationConfiguration (string appUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Sip.ApplicationConfiguration GetApplicationConfiguration(string appUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.GetApplicationConfiguration(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetApplicationConfiguration (appUri As String) As ApplicationConfiguration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Sip::ApplicationConfiguration ^ GetApplicationConfiguration(System::String ^ appUri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ApplicationConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appUri">URI of the server application.</param>
+        <summary>             Gets the configuration for an application.             </summary>
+        <returns>Configuration information for the application. If application is not present in the              Server Applications list, then null is returned.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Sip.ApplicationConfigHelperException">Thrown in case of an internal error.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterChangeNotification">
+      <MemberSignature Language="C#" Value="public void RegisterChangeNotification (string appUri, Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler handler);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterChangeNotification(string appUri, class Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler handler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.RegisterChangeNotification(System.String,Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterChangeNotification (appUri As String, handler As ApplicationConfigChangedEventHandler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterChangeNotification(System::String ^ appUri, Microsoft::Rtc::Sip::ApplicationConfigChangedEventHandler ^ handler);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appUri" Type="System.String" />
+        <Parameter Name="handler" Type="Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="appUri">URI of the application to monitor.</param>
+        <param name="handler">Function that is invoked when settings change.</param>
+        <summary>             Registers a handler that is called when settings             change for the server application with supplied application URI.             </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Sip.ApplicationConfigHelperException">Thrown in case of an internal error.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

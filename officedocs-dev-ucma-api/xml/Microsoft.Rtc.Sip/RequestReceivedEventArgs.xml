@@ -1,0 +1,81 @@
+﻿<Type Name="RequestReceivedEventArgs" FullName="Microsoft.Rtc.Sip.RequestReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class RequestReceivedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestReceivedEventArgs extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.RequestReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class RequestReceivedEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RequestReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>The RequestReceivedEventArgs class defines information to an application regarding the arrival of a SIP request.When a request has been successfully dispatched by the MSPL message filter (see the Dispatch built-in function), an event containing a RequestReceivedEventArgs object will be dispatched to the specified method (whose signature must match the <see cref="T:Microsoft.Rtc.Sip.ResponseReceivedEventHandler" /> delegate). RequestReceivedEventArgs contains the request as the <see cref="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.Request" /> property.An instance of <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> is created as a property of RequestReceivedEventArgs. This property represents the new server transaction for the request. To forward this request, call <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" /> to create a <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> and call <see cref="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" />, passing the <see cref="T:Microsoft.Rtc.Sip.Request" /> object in the RequestReceivedEventArgs.Request property.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public object[] Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object[] Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As Object()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Object ^&gt; ^ Parameters { cli::array &lt;System::Object ^&gt; ^ get(); void set(cli::array &lt;System::Object ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Optional dispatch call parameters.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Request Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.Request Request" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.Request" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Request As Request" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::Request ^ Request { Microsoft::Rtc::Sip::Request ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Request</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Request property contains the <see cref="T:Microsoft.Rtc.Sip.Request" /> object for the request that initiated the server transaction that is contained in <see cref="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.ServerTransaction" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerTransaction">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ServerTransaction ServerTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.ServerTransaction ServerTransaction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.ServerTransaction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerTransaction As ServerTransaction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::ServerTransaction ^ ServerTransaction { Microsoft::Rtc::Sip::ServerTransaction ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ServerTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ServerTransaction property contains the new <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object that will service the received request.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

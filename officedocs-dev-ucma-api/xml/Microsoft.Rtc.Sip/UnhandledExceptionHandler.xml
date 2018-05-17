@@ -1,0 +1,28 @@
+﻿<Type Name="UnhandledExceptionHandler" FullName="Microsoft.Rtc.Sip.UnhandledExceptionHandler">
+  <TypeSignature Language="C#" Value="public delegate bool UnhandledExceptionHandler(object sender, Exception ex);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnhandledExceptionHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.UnhandledExceptionHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function UnhandledExceptionHandler(sender As Object, ex As Exception) As Boolean " />
+  <TypeSignature Language="C++ CLI" Value="public delegate bool UnhandledExceptionHandler(System::Object ^ sender, Exception ^ ex);" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="ex" Type="System.Exception" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">The 'this' pointer value when the exception was caught.</param>
+    <param name="ex">Exception</param>
+    <summary>                  Delegate for possibly handling an exception in the application.              </summary>
+    <returns>                  True if the exception was handled. A return value of false will cause the exception                  to be re-thrown.              </returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,255 @@
+﻿<Type Name="ClientTransaction" FullName="Microsoft.Rtc.Sip.ClientTransaction">
+  <TypeSignature Language="C#" Value="public class ClientTransaction : Microsoft.Rtc.Sip.Transaction" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ClientTransaction extends Microsoft.Rtc.Sip.Transaction" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.ClientTransaction" />
+  <TypeSignature Language="VB.NET" Value="Public Class ClientTransaction&#xA;Inherits Transaction" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ClientTransaction : Microsoft::Rtc::Sip::Transaction" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Transaction</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>The ClientTransaction class defines a SIP client transaction object located on a SIP proxy.A ClientTransaction object is created by calling the <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" /> method on a <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object. To fork the proxy behavior, ServerTransaction.CreateBranch can be called multiple times. However, a ClientTransaction object can service only one request. To send the request, call the <see cref="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" /> method.To handle the responses for the request that are sent by a specific client transaction, you must register for the <see cref="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" /> event. This event returns a <see cref="T:Microsoft.Rtc.Sip.ResponseReceivedEventArgs" /> object whenever it is raised, and contains the response as a <see cref="T:Microsoft.Rtc.Sip.Response" /> class object.Currently, the User Account Control (UAC) client transaction case is not supported, where the server originates a client transaction. Only proxy behaviors are available for this classThe ClientTransaction class is derived from the <see cref="T:Microsoft.Rtc.Sip.Transaction" /> class.</summary>
+    <remarks>
+      <para>                  Client transactions are used by UACs and proxies.              </para>
+      <para>For information about the nature of client transactions, the UAC, inbound and outbound proxies, and server transactions, see Section 17 of <a href="http://www.ietf.org/rfc/rfc3261.txt">RFC 3261 (SIP: Session</a></para>
+      <para>Example Code</para>
+      <para>The following code example logs the time a request is passed to the "OnRequest" dispatch handler, and then forwards the request by creating a branch on the server transaction that is passed to the handler. Requests are dispatched to this method from the MSPL script in the application manifest by using the Dispatch MSPL function.</para>
+      <code>public void OnRequest(object sender, RequestReceivedEventArgs e)
+{
+
+Console.WriteLine("Enter OnRequest:" + System.DateTime.Now.ToLongTimeString());
+
+ClientTransaction branch = e.ServerTransaction.CreateBranch();
+branch.SendRequest(e.Request);
+
+}
+</code>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClientTransaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ClientTransaction.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ClientTransaction();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>Protected constructor that prevents direct creation of the server transaction objects by general callers.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ClientTransaction (Microsoft.Rtc.Sip.ServerAgent serverAgent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Sip.ServerAgent serverAgent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ClientTransaction.#ctor(Microsoft.Rtc.Sip.ServerAgent)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ClientTransaction(Microsoft::Rtc::Sip::ServerAgent ^ serverAgent);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serverAgent" Type="Microsoft.Rtc.Sip.ServerAgent" />
+      </Parameters>
+      <Docs>
+        <param name="serverAgent">To be added.</param>
+        <summary>                  Creates a new client transaction.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public virtual void Cancel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ClientTransaction.Cancel" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Cancel ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Cancel();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Cancels the client transaction.              </summary>
+        <remarks>
+          <para>                  When the transaction is canceled, the <see cref="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" /> event is                  raised.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="public virtual void Cancel (Microsoft.Rtc.Sip.CancelContext context);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Cancel(class Microsoft.Rtc.Sip.CancelContext context) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ClientTransaction.Cancel(Microsoft.Rtc.Sip.CancelContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Cancel (context As CancelContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Cancel(Microsoft::Rtc::Sip::CancelContext ^ context);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Rtc.Sip.CancelContext" />
+      </Parameters>
+      <Docs>
+        <param name="context">Supplies a cancel context that is added to the outgoing SIP CANCEL request.</param>
+        <summary>                 Cancels the client transaction.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsForked">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ClientTransaction.ForkState IsForked { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.ClientTransaction/ForkState IsForked" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ClientTransaction.IsForked" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsForked As ClientTransaction.ForkState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::ClientTransaction::ForkState IsForked { Microsoft::Rtc::Sip::ClientTransaction::ForkState get(); void set(Microsoft::Rtc::Sip::ClientTransaction::ForkState value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ClientTransaction+ForkState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>             Fork state of the outgoing client transaction.             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResponseReceived">
+      <MemberSignature Language="C#" Value="protected virtual void OnResponseReceived (Microsoft.Rtc.Sip.ResponseReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnResponseReceived(class Microsoft.Rtc.Sip.ResponseReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ClientTransaction.OnResponseReceived(Microsoft.Rtc.Sip.ResponseReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnResponseReceived (e As ResponseReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnResponseReceived(Microsoft::Rtc::Sip::ResponseReceivedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Sip.ResponseReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>The OnResponseReceived method raises the <see cref="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" /> event.</summary>
+        <remarks>
+          <para>                  Overrides should always call the base class.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseReceived">
+      <MemberSignature Language="C#" Value="public event Microsoft.Rtc.Sip.ResponseReceivedEventHandler ResponseReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Rtc.Sip.ResponseReceivedEventHandler ResponseReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ResponseReceived As ResponseReceivedEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Rtc::Sip::ResponseReceivedEventHandler ^ ResponseReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ResponseReceivedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ResponseReceived event is raised when a response message for the request sent by the <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> object is received.</summary>
+        <remarks>
+          <para>Responses to the message sent by a ClientTransaction object are obtained by registering for the ResponseReceived event. Responses can also be obtained through the Dispatch MSPL function from a message filter script.</para>
+          <para>The response is obtained from the <see cref="P:Microsoft.Rtc.Sip.ResponseReceivedEventArgs.Response" /> property that is defined on the <see cref="T:Microsoft.Rtc.Sip.ResponseReceivedEventArgs" /> object that returned by the event.</para>
+          <para>Example Code</para>
+          <para>The following example demonstrates how to register for a ResponseReceived event.</para>
+          <code>myClientTransaction.ResponseReceived += new ResponseReceivedEventHandler(OnResponseReceived);
+
+...
+
+// The method for handling the response signature must correspond
+// with that of the ResponseReceivedEventHandler delegate.
+
+public void OnResponseReceived(object sender, ResponseReceivedEventArgs responseReceivedArgs) {
+
+  // Obtain the Response object.
+  Response resp = responseReceivedArgs.Response;
+
+  // Put processing for the response here.
+  ...
+}
+</code>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRequest">
+      <MemberSignature Language="C#" Value="public virtual void SendRequest (Microsoft.Rtc.Sip.Request request);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendRequest(class Microsoft.Rtc.Sip.Request request) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SendRequest(Microsoft::Rtc::Sip::Request ^ request);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="request" Type="Microsoft.Rtc.Sip.Request" />
+      </Parameters>
+      <Docs>
+        <param name="request">To be added.</param>
+        <summary>The SendRequest method sends a SIP request to a server transaction on a proxy or user account system (UAS).</summary>
+        <remarks>
+          <para>Two requests cannot be sent through the same client transaction. If a second request is attempted, InvalidOperationException is thrown.</para>
+          <para>To fork a request, call <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" /> on the parent <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object that handles the originating request. ClientTransaction.SendRequest must be called immediately on the new <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> object that is created by the call to ServerTransaction.CreateBranch.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerTransaction">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ServerTransaction ServerTransaction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.ServerTransaction ServerTransaction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.ClientTransaction.ServerTransaction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerTransaction As ServerTransaction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::ServerTransaction ^ ServerTransaction { Microsoft::Rtc::Sip::ServerTransaction ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ServerTransaction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ServerTransaction property contains the root <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object for which this client transaction is a branch.</summary>
+        <value>                  Server transaction that is associated with this client transaction if                  this is a branch.              </value>
+        <remarks>
+          <para>                  Not valid (null) for user account control (UAC) transactions, since they do not                  participate in proxying.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

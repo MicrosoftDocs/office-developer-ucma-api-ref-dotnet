@@ -1,0 +1,523 @@
+﻿<Type Name="Header" FullName="Microsoft.Rtc.Sip.Header">
+  <TypeSignature Language="C#" Value="public class Header : Microsoft.Rtc.Sip.Impl.ReplicatedObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi Header extends Microsoft.Rtc.Sip.Impl.ReplicatedObject" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.Header" />
+  <TypeSignature Language="VB.NET" Value="Public Class Header&#xA;Inherits ReplicatedObject" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Header : Microsoft::Rtc::Sip::Impl::ReplicatedObject" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Impl.ReplicatedObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>The Header class defines a SIP header.. A Header instance may belong to               multiple HeaderCollection instances.              The Header class is derived from the System.Object class.</summary>
+    <remarks>
+      <para>                  This class is intended as a base class for some header types.                  Static constructor methods are provided.              </para>
+      <para>A SIP header field is represented as type: value *(;parameter-name=parameter-value). The header type is a specific name, such as "Via", "Subject", or "Route". The header value is a string value corresponding to the type. The optional parameter list occurs after the value, with each parameter name/value pair separated from the header value and the other parameters by a semicolon.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The following code sample sends a redirection response with the new endpoint address in the "Contact" header. Requests are dispatched to this method from the MSPL script in the application manifest by using the Dispatch MSPL function.</para>
+      <code>public void OnRequest(object sender, RequestReceivedEventArgs rreArgs)
+{
+
+// Send a generic response to the sender indicating redirection (302).
+
+Response response = rreArgs.Request.CreateResponse(302);
+
+response.ReasonPhrase = "Redirected by Lync Server";
+
+// Add the "Contact" header indicating the new redirection address of the SIP user.
+// In this example, the localhost is supplied; in a real application, the second
+// parameter of the Header constructor would be the redirection address of the user.
+
+Header h = new Header("Contact", "sip:127.0.0.1:5060;transport=tcp");
+response.AllHeaders.Add(h);
+
+// Send the response.
+rreArgs.ServerTransaction.SendResponse(response);
+
+}
+</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal Header ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; Header();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>The Header constructor initializes a new instance of the Header class without a specified type or value.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Header (Microsoft.Rtc.Sip.Header.StandardHeaderType standardType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Sip.Header/StandardHeaderType standardType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.#ctor(Microsoft.Rtc.Sip.Header.StandardHeaderType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (standardType As Header.StandardHeaderType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Header(Microsoft::Rtc::Sip::Header::StandardHeaderType standardType);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="standardType" Type="Microsoft.Rtc.Sip.Header+StandardHeaderType" />
+      </Parameters>
+      <Docs>
+        <param name="standardType">To be added.</param>
+        <summary>                  Creates a new header object with a specified standard header type.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Header (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Header(System::String ^ type);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">To be added.</param>
+        <summary>                  Creates a new header object with a specified header type.              </summary>
+        <remarks>
+          <para>This constructor creates a header with an empty value that should be populated.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Header (Microsoft.Rtc.Sip.Header.StandardHeaderType standardType, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Sip.Header/StandardHeaderType standardType, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.#ctor(Microsoft.Rtc.Sip.Header.StandardHeaderType,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (standardType As Header.StandardHeaderType, value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Header(Microsoft::Rtc::Sip::Header::StandardHeaderType standardType, System::String ^ value);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="standardType" Type="Microsoft.Rtc.Sip.Header+StandardHeaderType" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="standardType">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>                  Creates a new header object with a specified standard header type and value.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Header (string type, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string type, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As String, value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Header(System::String ^ type, System::String ^ value);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>The Header constructor creates a new instance of the Header class of the specified SIP header type, with the specified value.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="protected internal virtual System.Collections.Specialized.NameValueCollection GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance class System.Collections.Specialized.NameValueCollection GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.GetParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function GetParameters () As NameValueCollection" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual System::Collections::Specialized::NameValueCollection ^ GetParameters();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Protected method that is used to retrieve header parameters. Derived classes can override this method, for example, to synthesize parameters from an internal representation.              </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValue">
+      <MemberSignature Language="C#" Value="protected internal virtual string GetValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.GetValue" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function GetValue () As String" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual System::String ^ GetValue();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Protected method that is used to retrieve the header value. Derived classes can override this method, for example, to synthesize the value from an internal representation.              </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetValueNoParameters">
+      <MemberSignature Language="C#" Value="protected internal virtual string GetValueNoParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance string GetValueNoParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.GetValueNoParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function GetValueNoParameters () As String" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual System::String ^ GetValueNoParameters();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Protected method that is used to retrieve the header value without parameters. Derived classes can override this method, for example, to synthesize the value from an internal representation.              </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Header.IsReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The IsReadOnly property indicates whether the SIP header is read-only.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Some headers, such as the SIP VIA header, cannot be modified, but are exposed to applications for read-only purposes.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="parameters">
+      <MemberSignature Language="C#" Value="protected internal System.Collections.Specialized.NameValueCollection parameters;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly class System.Collections.Specialized.NameValueCollection parameters" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.Header.parameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend parameters As NameValueCollection " />
+      <MemberSignature Language="C++ CLI" Value="protected public: System::Collections::Specialized::NameValueCollection ^ parameters;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Private storage of header parameters. Derived classes may either use this field for their storage, or provide their own. This field is used by this class's implementation of the <see cref="M:Microsoft.Rtc.Sip.Header.GetParameters" /> and <see cref="M:Microsoft.Rtc.Sip.Header.SetParameters(System.Collections.Specialized.NameValueCollection)" /> method.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Specialized.NameValueCollection Parameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Specialized.NameValueCollection Parameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Header.Parameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property Parameters As NameValueCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Specialized::NameValueCollection ^ Parameters { System::Collections::Specialized::NameValueCollection ^ get(); void set(System::Collections::Specialized::NameValueCollection ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Specialized.NameValueCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Parameters property contains the parameters for the SIP header as a collection of name/value pairs.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Parameters are optional for many SIP headers.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseHeaderValue">
+      <MemberSignature Language="C#" Value="protected internal void ParseHeaderValue (bool parseParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void ParseHeaderValue(bool parseParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.ParseHeaderValue(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub ParseHeaderValue (parseParameters As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; void ParseHeaderValue(bool parseParameters);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parseParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="parseParameters">                  Parse parameters.</param>
+        <summary>Protected helper method that parses a string into a header value and parameters.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshaled">
+      <MemberSignature Language="C#" Value="protected internal override void SetMarshaled ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetMarshaled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.SetMarshaled" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub SetMarshaled ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void SetMarshaled();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Updates state to Marshaled.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetParameters">
+      <MemberSignature Language="C#" Value="protected internal virtual void SetParameters (System.Collections.Specialized.NameValueCollection parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetParameters(class System.Collections.Specialized.NameValueCollection parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.SetParameters(System.Collections.Specialized.NameValueCollection)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub SetParameters (parameters As NameValueCollection)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void SetParameters(System::Collections::Specialized::NameValueCollection ^ parameters);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameters" Type="System.Collections.Specialized.NameValueCollection" />
+      </Parameters>
+      <Docs>
+        <param name="parameters">To be added.</param>
+        <summary>Protected method that is used to set header parameters. Derived classes can override this method, for example, to parse parameters into an internal representation.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValue">
+      <MemberSignature Language="C#" Value="protected internal virtual void SetValue (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetValue(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.SetValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub SetValue (value As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void SetValue(System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>Protected method that is used to set the header value. A derived class can override this method, for example, to parse the value into an internal representation.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetValueNoParameters">
+      <MemberSignature Language="C#" Value="protected internal virtual void SetValueNoParameters (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void SetValueNoParameters(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Header.SetValueNoParameters(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub SetValueNoParameters (value As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void SetValueNoParameters(System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>Protected method that is used to set the header value without parameters. A derived class can override this method, for example, to parse the value into an internal representation.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Header.StandardHeaderType StandardType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.Header/StandardHeaderType StandardType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Header.StandardType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StandardType As Header.StandardHeaderType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::Header::StandardHeaderType StandardType { Microsoft::Rtc::Sip::Header::StandardHeaderType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Header+StandardHeaderType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Efficient representation of common SIP header types.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  Values are simple integers that are more efficient to compare than strings. If the header type is not among the predefined values, NonstandardHeader is returned.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public string Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Header.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Type { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Type property contains the SIP header type as a string.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>A header type is a string value such as "From", "To", "Contact", "Call-ID", or "CSeq".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="value">
+      <MemberSignature Language="C#" Value="protected internal byte[] value;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly unsigned int8[] value" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.Header.value" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend value As Byte() " />
+      <MemberSignature Language="C++ CLI" Value="protected public: cli::array &lt;System::Byte&gt; ^ value;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Private storage of the header value. Derived classes may either use this field for their storage, or provide their own. This field is used by this class's implementation of <see cref="M:Microsoft.Rtc.Sip.Header.GetValue" /> and <see cref="M:Microsoft.Rtc.Sip.Header.SetValue(System.String)" />.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public string Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Value" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Header.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Value { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Value property contains the SIP header value as a string.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property contains the header parameters that are separated from the address (and its parameters) by a semi-colon. To obtain just the parameters, use the <see cref="P:Microsoft.Rtc.Sip.Header.Parameters" /> property. To obtain just the header value without the parameters, use the <see cref="P:Microsoft.Rtc.Sip.Header.ValueNoParameters" /> property.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="valueNoParameters">
+      <MemberSignature Language="C#" Value="protected internal int valueNoParameters;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly int32 valueNoParameters" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.Header.valueNoParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend valueNoParameters As Integer " />
+      <MemberSignature Language="C++ CLI" Value="protected public: int valueNoParameters;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Index into header of end of the value portion, excluding parameters. Classes may either use this field for their storage, or provide their own. This field is used by this class's implementation of <see cref="M:Microsoft.Rtc.Sip.Header.GetValueNoParameters" /> and <see cref="M:Microsoft.Rtc.Sip.Header.SetValueNoParameters(System.String)" />. </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueNoParameters">
+      <MemberSignature Language="C#" Value="public string ValueNoParameters { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ValueNoParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Header.ValueNoParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Property ValueNoParameters As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ValueNoParameters { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ValueNoParameters property contains the SIP header value as a string, minus any attached parameters.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  This is the string that precedes the first non-quoted semicolon. The remainder is parsed into <see cref="P:Microsoft.Rtc.Sip.Header.Parameters" />.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

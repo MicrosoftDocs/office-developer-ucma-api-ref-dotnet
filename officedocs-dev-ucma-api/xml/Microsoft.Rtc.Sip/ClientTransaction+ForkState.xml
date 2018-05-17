@@ -1,0 +1,77 @@
+﻿<Type Name="ClientTransaction+ForkState" FullName="Microsoft.Rtc.Sip.ClientTransaction+ForkState">
+  <TypeSignature Language="C#" Value="public enum ClientTransaction.ForkState" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed ClientTransaction/ForkState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.ClientTransaction.ForkState" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ClientTransaction.ForkState" />
+  <TypeSignature Language="C++ CLI" Value="public: enum class ClientTransaction::ForkState" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>             Controls the value of the branched parameter that is located in the topmost Via header of the outgoing requests.             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ClientTransaction/ForkState Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ClientTransaction.ForkState.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="C++ CLI" Value="Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ClientTransaction+ForkState</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>             If an application creates multiple branches, the default behavior is to set the branched parameter             to TRUE for each branch.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Forked">
+      <MemberSignature Language="C#" Value="Forked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ClientTransaction/ForkState Forked = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ClientTransaction.ForkState.Forked" />
+      <MemberSignature Language="VB.NET" Value="Forked" />
+      <MemberSignature Language="C++ CLI" Value="Forked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ClientTransaction+ForkState</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>             Branched parameter is always set to TRUE regardless of the number of branches that are created by the             application.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotForked">
+      <MemberSignature Language="C#" Value="NotForked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ClientTransaction/ForkState NotForked = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ClientTransaction.ForkState.NotForked" />
+      <MemberSignature Language="VB.NET" Value="NotForked" />
+      <MemberSignature Language="C++ CLI" Value="NotForked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ClientTransaction+ForkState</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>             Branched parameter is always set to FALSE regardless of the number of branches that are created by             the application.             </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

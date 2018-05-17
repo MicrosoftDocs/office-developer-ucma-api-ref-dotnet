@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Framework Name="managed-sip">
+  <Namespace Name="Microsoft.Rtc.Sip">
+    <Type Name="Microsoft.Rtc.Sip.ApplicationConfigChangedEventArgs" Id="T:Microsoft.Rtc.Sip.ApplicationConfigChangedEventArgs">
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationConfigChangedEventArgs.ApplicationUri" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationConfigChangedEventArgs.InitialNotification" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationConfigChangedEventArgs.NewConfig" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationConfigChangedEventArgs.OldConfig" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler" Id="T:Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler" />
+    <Type Name="Microsoft.Rtc.Sip.ApplicationConfigHelper" Id="T:Microsoft.Rtc.Sip.ApplicationConfigHelper">
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.DeRegisterChangeNotification(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.Dispose" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.GetApplicationConfiguration(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfigHelper.RegisterChangeNotification(System.String,Microsoft.Rtc.Sip.ApplicationConfigChangedEventHandler)" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ApplicationConfigHelperException" Id="T:Microsoft.Rtc.Sip.ApplicationConfigHelperException">
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfigHelperException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ApplicationConfiguration" Id="T:Microsoft.Rtc.Sip.ApplicationConfiguration">
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfiguration.Clone" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfiguration.Equals(System.Object)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfiguration.GetHashCode" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationConfiguration.ToString" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationConfiguration.Critical" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationConfiguration.Enabled" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ApplicationManifest" Id="T:Microsoft.Rtc.Sip.ApplicationManifest">
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationManifest.Compile" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationManifest.CreateFromFile(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationManifest.CreateFromString(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ApplicationManifest.SetDebugOutput(System.Boolean)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationManifest.ApplicationUri" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationManifest.BaseAddress" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationManifest.CommittedEnd" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationManifest.ReservedEnd" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationManifest.ScriptOnly" />
+      <Member Id="P:Microsoft.Rtc.Sip.ApplicationManifest.TracingFlags" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AppViaStamp" Id="T:Microsoft.Rtc.Sip.AppViaStamp">
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStamp.Pool" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStamp.Server" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStamp.Stamp" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AppViaStampCollection" Id="T:Microsoft.Rtc.Sip.AppViaStampCollection">
+      <Member Id="M:Microsoft.Rtc.Sip.AppViaStampCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Rtc.Sip.AppViaStampCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStampCollection.Count" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStampCollection.IsReadOnly" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStampCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStampCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Rtc.Sip.AppViaStampCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AuthenticationInfo" Id="T:Microsoft.Rtc.Sip.AuthenticationInfo">
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.Authenticated" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.CertificateAuthorized" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.ConnectionAuthorizationEnabled" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSourceNetwork" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSourceType" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.MtlsConnection" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.Origin" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.ReceivedFromInternalServer" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.SecurityToken" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.ServerSource" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.TlsPeer" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthenticationInfo.TrustedConnection" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AuthenticationInfo/ExternalNetwork" Id="T:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalNetwork">
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalNetwork.Federation" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalNetwork.PublicCloud" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalNetwork.Unknown" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AuthenticationInfo/ExternalSource" Id="T:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource">
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.AccessProxy" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.AuthorizedServer" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.AutoFed" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.ClearingHouse" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.DirectPartner" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.InternetUser" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.Proxy" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource.Unknown" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AuthenticationInfo/MessageOrigin" Id="T:Microsoft.Rtc.Sip.AuthenticationInfo.MessageOrigin">
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.MessageOrigin.LocalMachine" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.MessageOrigin.NetworkExternal" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.MessageOrigin.NetworkInternal" />
+      <Member Id="F:Microsoft.Rtc.Sip.AuthenticationInfo.MessageOrigin.NetworkUnknown" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventArgs" Id="T:Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventArgs">
+      <Member Id="M:Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventArgs.#ctor(System.Guid,System.Int32,System.String)" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventArgs.Exception" />
+      <Member Id="P:Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventArgs.Instance" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventHandler" Id="T:Microsoft.Rtc.Sip.AuthorizedHostOperationCompletedEventHandler" />
+    <Type Name="Microsoft.Rtc.Sip.BranchCollection" Id="T:Microsoft.Rtc.Sip.BranchCollection">
+      <Member Id="M:Microsoft.Rtc.Sip.BranchCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Rtc.Sip.BranchCollection.Count" />
+      <Member Id="P:Microsoft.Rtc.Sip.BranchCollection.IsEmpty" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.CancelContext" Id="T:Microsoft.Rtc.Sip.CancelContext">
+      <Member Id="M:Microsoft.Rtc.Sip.CancelContext.#ctor" />
+      <Member Id="P:Microsoft.Rtc.Sip.CancelContext.DiagCode" />
+      <Member Id="P:Microsoft.Rtc.Sip.CancelContext.ReasonHeader" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.CancelReceivedEventArgs" Id="T:Microsoft.Rtc.Sip.CancelReceivedEventArgs">
+      <Member Id="P:Microsoft.Rtc.Sip.CancelReceivedEventArgs.CancelReason" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ClientTransaction" Id="T:Microsoft.Rtc.Sip.ClientTransaction">
+      <Member Id="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" />
+      <Member Id="M:Microsoft.Rtc.Sip.ClientTransaction.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.ClientTransaction.#ctor(Microsoft.Rtc.Sip.ServerAgent)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ClientTransaction.Cancel" />
+      <Member Id="M:Microsoft.Rtc.Sip.ClientTransaction.Cancel(Microsoft.Rtc.Sip.CancelContext)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ClientTransaction.OnResponseReceived(Microsoft.Rtc.Sip.ResponseReceivedEventArgs)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ClientTransaction.IsForked" />
+      <Member Id="P:Microsoft.Rtc.Sip.ClientTransaction.ServerTransaction" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ClientTransaction/ForkState" Id="T:Microsoft.Rtc.Sip.ClientTransaction.ForkState">
+      <Member Id="F:Microsoft.Rtc.Sip.ClientTransaction.ForkState.Default" />
+      <Member Id="F:Microsoft.Rtc.Sip.ClientTransaction.ForkState.Forked" />
+      <Member Id="F:Microsoft.Rtc.Sip.ClientTransaction.ForkState.NotForked" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.CompilerErrorException" Id="T:Microsoft.Rtc.Sip.CompilerErrorException">
+      <Member Id="M:Microsoft.Rtc.Sip.CompilerErrorException.#ctor(System.Collections.ArrayList)" />
+      <Member Id="M:Microsoft.Rtc.Sip.CompilerErrorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <Member Id="P:Microsoft.Rtc.Sip.CompilerErrorException.ErrorMessages" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ConnectionDroppedEventArgs" Id="T:Microsoft.Rtc.Sip.ConnectionDroppedEventArgs">
+      <Member Id="M:Microsoft.Rtc.Sip.ConnectionDroppedEventArgs.#ctor(Microsoft.Rtc.Sip.ConnectionDroppedReason)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ConnectionDroppedEventArgs.Reason" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ConnectionDroppedEventHandler" Id="T:Microsoft.Rtc.Sip.ConnectionDroppedEventHandler" />
+    <Type Name="Microsoft.Rtc.Sip.ConnectionDroppedReason" Id="T:Microsoft.Rtc.Sip.ConnectionDroppedReason">
+      <Member Id="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ApplicationDisabled" />
+      <Member Id="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ApplicationDisconnected" />
+      <Member Id="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ApplicationReconnectTimeout" />
+      <Member Id="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ServerAgentDisposed" />
+      <Member Id="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ServerShutdown" />
+      <Member Id="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ServerTerminated" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ContactInfo" Id="T:Microsoft.Rtc.Sip.ContactInfo">
+      <Member Id="M:Microsoft.Rtc.Sip.ContactInfo.ToString" />
+      <Member Id="P:Microsoft.Rtc.Sip.ContactInfo.Uri" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.DefaultRTCClassAttribute" Id="T:Microsoft.Rtc.Sip.DefaultRTCClassAttribute">
+      <Member Id="M:Microsoft.Rtc.Sip.DefaultRTCClassAttribute.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Header" Id="T:Microsoft.Rtc.Sip.Header">
+      <Member Id="F:Microsoft.Rtc.Sip.Header.parameters" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.value" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.valueNoParameters" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.#ctor(Microsoft.Rtc.Sip.Header.StandardHeaderType)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.#ctor(Microsoft.Rtc.Sip.Header.StandardHeaderType,System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.GetParameters" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.GetValue" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.GetValueNoParameters" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.ParseHeaderValue(System.Boolean)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.SetMarshaled" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.SetParameters(System.Collections.Specialized.NameValueCollection)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.SetValue(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Header.SetValueNoParameters(System.String)" />
+      <Member Id="P:Microsoft.Rtc.Sip.Header.IsReadOnly" />
+      <Member Id="P:Microsoft.Rtc.Sip.Header.Parameters" />
+      <Member Id="P:Microsoft.Rtc.Sip.Header.StandardType" />
+      <Member Id="P:Microsoft.Rtc.Sip.Header.Type" />
+      <Member Id="P:Microsoft.Rtc.Sip.Header.Value" />
+      <Member Id="P:Microsoft.Rtc.Sip.Header.ValueNoParameters" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Header/StandardHeaderType" Id="T:Microsoft.Rtc.Sip.Header.StandardHeaderType">
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Accept" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.AcceptEncoding" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.AcceptLanguage" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Allow" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.AllowEvents" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ApplicationVia" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.AuthenticationInfo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Authorization" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.CallID" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Compression" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Contact" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ContentDisposition" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ContentEncoding" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ContentLanguage" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ContentLength" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ContentType" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.CSeq" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Date" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Diversion" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.EdgeProxy" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Encryption" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Event" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Expires" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.From" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Hide" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.HistoryInfo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.InReplyTo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MaxForwards" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MimeVersion" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MinSE" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSApplication" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSApplicationAor" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSArchiving" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSClientDiagnostics" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSConfRole" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSDiagnostics" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSDiagnosticsPublic" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MsEnableDnsFailover" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSFocusUri" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSIcrOrigUri" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MsImFormat" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSKeepAlive" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSMcuContact" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MsNegotiateData" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSOriginalCallerID" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSPrimaryRouter" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSReferrerPhone" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MsRegistrarCdrInfo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSRoutingPhase" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSRoutingTarget" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSSelectedPstnUsages" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MsSplitDomainInfo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSSubnet" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSTargetClass" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSTelemetryId" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSTenantId" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSTextFormat" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSTrunkingPeer" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSTrustedDialoutLeg" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSUserData" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSUserLogonData" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSVerificationLevel" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.MSXmppSubscriber" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.NonStandard" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Organization" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.PAssertedIdentity" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Path" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.PDialogRecoveryAction" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.PPreferredIdentity" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Priority" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Privacy" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ProxyAuthenticate" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ProxyAuthenticationInfo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ProxyAuthorization" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ProxyRequire" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.PSessionOnBehalfOf" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Reason" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.RecordRoute" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ReferredBy" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.ReferTo" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Require" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.RetryAfter" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Route" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Server" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.SessionExpires" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.SipETag" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.SipIfMatch" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Subject" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Supported" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.TimeStamp" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.To" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Unsupported" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.UserAgent" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Via" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.Warning" />
+      <Member Id="F:Microsoft.Rtc.Sip.Header.StandardHeaderType.WWWAuthenticate" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.HeaderCollection" Id="T:Microsoft.Rtc.Sip.HeaderCollection">
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.Add(Microsoft.Rtc.Sip.Header)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.Clear" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.Contains(Microsoft.Rtc.Sip.Header)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.FindFirst(Microsoft.Rtc.Sip.Header.StandardHeaderType)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.FindFirst(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.IndexOf(Microsoft.Rtc.Sip.Header)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.Insert(System.Int32,Microsoft.Rtc.Sip.Header)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.Remove(Microsoft.Rtc.Sip.Header)" />
+      <Member Id="M:Microsoft.Rtc.Sip.HeaderCollection.RemoveAt(System.Int32)" />
+      <Member Id="P:Microsoft.Rtc.Sip.HeaderCollection.Count" />
+      <Member Id="P:Microsoft.Rtc.Sip.HeaderCollection.IsFixedSize" />
+      <Member Id="P:Microsoft.Rtc.Sip.HeaderCollection.IsReadOnly" />
+      <Member Id="P:Microsoft.Rtc.Sip.HeaderCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Rtc.Sip.HeaderCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Rtc.Sip.HeaderCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Message" Id="T:Microsoft.Rtc.Sip.Message">
+      <Member Id="F:Microsoft.Rtc.Sip.Message.marshalContent" />
+      <Member Id="M:Microsoft.Rtc.Sip.Message.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.Message.CopyProperties(Microsoft.Rtc.Sip.Message,Microsoft.Rtc.Sip.Message)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Message.GetHeaders(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Message.InitializeUnmarshaled(Microsoft.Rtc.Sip.Impl.ReplicatedObject)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Message.SetMarshaled" />
+      <Member Id="M:Microsoft.Rtc.Sip.Message.System#ICloneable#Clone" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.AllHeaders" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.AllStamps" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.AuthenticationInfo" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.Content" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.RawContent" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.Received" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.Stamp" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.StampPool" />
+      <Member Id="P:Microsoft.Rtc.Sip.Message.TimeReceived" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.NotificationReceivedEventArgs" Id="T:Microsoft.Rtc.Sip.NotificationReceivedEventArgs">
+      <Member Id="P:Microsoft.Rtc.Sip.NotificationReceivedEventArgs.Parameters" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.NotificationReceivedEventHandler" Id="T:Microsoft.Rtc.Sip.NotificationReceivedEventHandler" />
+    <Type Name="Microsoft.Rtc.Sip.ObjectSpace" Id="T:Microsoft.Rtc.Sip.ObjectSpace">
+      <Member Id="M:Microsoft.Rtc.Sip.ObjectSpace.Dispose" />
+      <Member Id="M:Microsoft.Rtc.Sip.ObjectSpace.Finalize" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Request" Id="T:Microsoft.Rtc.Sip.Request">
+      <Member Id="M:Microsoft.Rtc.Sip.Request.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.#ctor(Microsoft.Rtc.Sip.Request.StandardMethodType)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.#ctor(Microsoft.Rtc.Sip.Request.StandardMethodType,System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.#ctor(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.#ctor(System.String,System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.Clone" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.Clone(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.CreateResponse" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.CreateResponse(System.Int32)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.GetStandardMethod(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.Retarget(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.SetDestination(Microsoft.Rtc.Sip.ContactInfo)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.SetDestination(System.Byte[])" />
+      <Member Id="M:Microsoft.Rtc.Sip.Request.SetMarshaled" />
+      <Member Id="P:Microsoft.Rtc.Sip.Request.Method" />
+      <Member Id="P:Microsoft.Rtc.Sip.Request.RequestUri" />
+      <Member Id="P:Microsoft.Rtc.Sip.Request.RsFrom" />
+      <Member Id="P:Microsoft.Rtc.Sip.Request.RsTo" />
+      <Member Id="P:Microsoft.Rtc.Sip.Request.SimpleProxy" />
+      <Member Id="P:Microsoft.Rtc.Sip.Request.StandardMethod" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Request/StandardMethodType" Id="T:Microsoft.Rtc.Sip.Request.StandardMethodType">
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Ack" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.BENotify" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Bye" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Cancel" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Info" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Invite" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Message" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.NonStandard" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Notify" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Options" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Refer" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Register" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Service" />
+      <Member Id="F:Microsoft.Rtc.Sip.Request.StandardMethodType.Subscribe" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.RequestReceivedEventArgs" Id="T:Microsoft.Rtc.Sip.RequestReceivedEventArgs">
+      <Member Id="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.Parameters" />
+      <Member Id="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.Request" />
+      <Member Id="P:Microsoft.Rtc.Sip.RequestReceivedEventArgs.ServerTransaction" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.RequestReceivedEventHandler" Id="T:Microsoft.Rtc.Sip.RequestReceivedEventHandler" />
+    <Type Name="Microsoft.Rtc.Sip.Response" Id="T:Microsoft.Rtc.Sip.Response">
+      <Member Id="M:Microsoft.Rtc.Sip.Response.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.Response.GetStatusClass(System.Int32)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Response.SetMarshaled" />
+      <Member Id="P:Microsoft.Rtc.Sip.Response.ReasonPhrase" />
+      <Member Id="P:Microsoft.Rtc.Sip.Response.StatusClass" />
+      <Member Id="P:Microsoft.Rtc.Sip.Response.StatusCode" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ResponseCollection" Id="T:Microsoft.Rtc.Sip.ResponseCollection">
+      <Member Id="M:Microsoft.Rtc.Sip.ResponseCollection.Contains(Microsoft.Rtc.Sip.Response)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ResponseCollection.CopyTo(System.Array,System.Int32)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ResponseCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Rtc.Sip.ResponseCollection.IndexOf(Microsoft.Rtc.Sip.Response)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseCollection.Count" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseCollection.IsFixedSize" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseCollection.IsReadOnly" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseCollection.IsSynchronized" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseCollection.SyncRoot" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ResponseReceivedEventArgs" Id="T:Microsoft.Rtc.Sip.ResponseReceivedEventArgs">
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseReceivedEventArgs.ClientTransaction" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseReceivedEventArgs.Parameters" />
+      <Member Id="P:Microsoft.Rtc.Sip.ResponseReceivedEventArgs.Response" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ResponseReceivedEventHandler" Id="T:Microsoft.Rtc.Sip.ResponseReceivedEventHandler" />
+    <Type Name="Microsoft.Rtc.Sip.ServerAgent" Id="T:Microsoft.Rtc.Sip.ServerAgent">
+      <Member Id="E:Microsoft.Rtc.Sip.ServerAgent.AuthorizedHostOperationCompleted" />
+      <Member Id="E:Microsoft.Rtc.Sip.ServerAgent.ConnectionDropped" />
+      <Member Id="E:Microsoft.Rtc.Sip.ServerAgent.UnhandledException" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.#ctor(Microsoft.Rtc.Sip.ApplicationManifest)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.#ctor(System.Object,Microsoft.Rtc.Sip.ApplicationManifest)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.AddAuthorizedHost(System.Guid,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.CheckDisposed" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.Cleanup" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.CloseHandle(System.IntPtr)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.Dispose" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.Dispose(System.Boolean)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.Finalize" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.OnConnectionDropped(Microsoft.Rtc.Sip.ConnectionDroppedReason)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.ProcessEvent(System.Object)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.ProcessEventOnThreadPool" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.RemoveAuthorizedHost(System.Guid)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerAgent.WaitForServerAvailable(System.Int32)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.ActiveWorkerThreads" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.InsideRtcHost" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.MessagesInServerAgent" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.Role" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.ServerFqdn" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.ServerPool" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.ServerProcess" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.SPLLoggerPresent" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerAgent.WaitHandle" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ServerAgent/ServerRole" Id="T:Microsoft.Rtc.Sip.ServerAgent.ServerRole">
+      <Member Id="F:Microsoft.Rtc.Sip.ServerAgent.ServerRole.AccessProxy" />
+      <Member Id="F:Microsoft.Rtc.Sip.ServerAgent.ServerRole.FrontEnd" />
+      <Member Id="F:Microsoft.Rtc.Sip.ServerAgent.ServerRole.HomeServer" />
+      <Member Id="F:Microsoft.Rtc.Sip.ServerAgent.ServerRole.Proxy" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ServerNotFoundException" Id="T:Microsoft.Rtc.Sip.ServerNotFoundException">
+      <Member Id="M:Microsoft.Rtc.Sip.ServerNotFoundException.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerNotFoundException.#ctor(System.Exception)" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.ServerTransaction" Id="T:Microsoft.Rtc.Sip.ServerTransaction">
+      <Member Id="M:Microsoft.Rtc.Sip.ServerTransaction.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerTransaction.ChallengeRequest" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerTransaction.CreateBranch" />
+      <Member Id="M:Microsoft.Rtc.Sip.ServerTransaction.SendResponse(Microsoft.Rtc.Sip.Response)" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerTransaction.Branches" />
+      <Member Id="P:Microsoft.Rtc.Sip.ServerTransaction.EnableForking" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Transaction" Id="T:Microsoft.Rtc.Sip.Transaction">
+      <Member Id="E:Microsoft.Rtc.Sip.Transaction.Canceled" />
+      <Member Id="E:Microsoft.Rtc.Sip.Transaction.Terminated" />
+      <Member Id="E:Microsoft.Rtc.Sip.Transaction.TimedOut" />
+      <Member Id="F:Microsoft.Rtc.Sip.Transaction.simpleProxy" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.CheckDisposed" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.Close" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.Dispose" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.Dispose(System.Boolean)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.Finalize" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.GetCorrelationId" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.IsTraceFilterMatch" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.OnCanceled(System.String)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.OnTerminated" />
+      <Member Id="M:Microsoft.Rtc.Sip.Transaction.OnTimedOut" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.MarshalContent" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.OriginationTime" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.Request" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.Responses" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.ServerAgent" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.SyncRoot" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.TraceCorrelationGuid" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.TraceCorrelationId" />
+      <Member Id="P:Microsoft.Rtc.Sip.Transaction.TraceFilterMatch" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.UnauthorizedException" Id="T:Microsoft.Rtc.Sip.UnauthorizedException">
+      <Member Id="M:Microsoft.Rtc.Sip.UnauthorizedException.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.UnauthorizedException.#ctor(System.Exception)" />
+      <Member Id="M:Microsoft.Rtc.Sip.UnauthorizedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.UnhandledExceptionHandler" Id="T:Microsoft.Rtc.Sip.UnhandledExceptionHandler" />
+  </Namespace>
+  <Namespace Name="Microsoft.Rtc.Sip.Impl">
+    <Type Name="Microsoft.Rtc.Sip.Impl.ReplicatedObject" Id="T:Microsoft.Rtc.Sip.Impl.ReplicatedObject">
+      <Member Id="F:Microsoft.Rtc.Sip.Impl.ReplicatedObject.state" />
+      <Member Id="M:Microsoft.Rtc.Sip.Impl.ReplicatedObject.#ctor" />
+      <Member Id="M:Microsoft.Rtc.Sip.Impl.ReplicatedObject.InitializeMarshaled(Microsoft.Rtc.Sip.ServerAgent,Microsoft.Rtc.Sip.ObjectSpace,System.UInt32)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Impl.ReplicatedObject.InitializeUnmarshaled(Microsoft.Rtc.Sip.Impl.ReplicatedObject)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Impl.ReplicatedObject.InitializeUnmarshaled(Microsoft.Rtc.Sip.ServerAgent,Microsoft.Rtc.Sip.ObjectSpace)" />
+      <Member Id="M:Microsoft.Rtc.Sip.Impl.ReplicatedObject.SetMarshaled" />
+    </Type>
+    <Type Name="Microsoft.Rtc.Sip.Impl.ReplicatedObject/State" Id="T:Microsoft.Rtc.Sip.Impl.ReplicatedObject.State">
+      <Member Id="F:Microsoft.Rtc.Sip.Impl.ReplicatedObject.State.Marshaled" />
+      <Member Id="F:Microsoft.Rtc.Sip.Impl.ReplicatedObject.State.Raw" />
+      <Member Id="F:Microsoft.Rtc.Sip.Impl.ReplicatedObject.State.Unmarshaled" />
+    </Type>
+  </Namespace>
+</Framework>

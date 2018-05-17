@@ -1,0 +1,134 @@
+﻿<Type Name="ConnectionDroppedReason" FullName="Microsoft.Rtc.Sip.ConnectionDroppedReason">
+  <TypeSignature Language="C#" Value="public enum ConnectionDroppedReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConnectionDroppedReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.ConnectionDroppedReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ConnectionDroppedReason" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ConnectionDroppedReason" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Represents the reason for the dropped connection event.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationDisabled">
+      <MemberSignature Language="C#" Value="ApplicationDisabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason ApplicationDisabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ApplicationDisabled" />
+      <MemberSignature Language="VB.NET" Value="ApplicationDisabled" />
+      <MemberSignature Language="C++ CLI" Value="ApplicationDisabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>             Application has been disabled by the administrator. Applications should check their configuration state and attempt reconnection only if configuration state indicates that the application is enabled.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationDisconnected">
+      <MemberSignature Language="C#" Value="ApplicationDisconnected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason ApplicationDisconnected = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ApplicationDisconnected" />
+      <MemberSignature Language="VB.NET" Value="ApplicationDisconnected" />
+      <MemberSignature Language="C++ CLI" Value="ApplicationDisconnected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Application has been disconnected by the server. This can be a transient overload or is due to a non-responsive application. The application can reestablish the connection.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationReconnectTimeout">
+      <MemberSignature Language="C#" Value="ApplicationReconnectTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason ApplicationReconnectTimeout = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ApplicationReconnectTimeout" />
+      <MemberSignature Language="VB.NET" Value="ApplicationReconnectTimeout" />
+      <MemberSignature Language="C++ CLI" Value="ApplicationReconnectTimeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>             Application reconnect timed out. Application can wait and try to reestablish the connection.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerAgentDisposed">
+      <MemberSignature Language="C#" Value="ServerAgentDisposed" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason ServerAgentDisposed = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ServerAgentDisposed" />
+      <MemberSignature Language="VB.NET" Value="ServerAgentDisposed" />
+      <MemberSignature Language="C++ CLI" Value="ServerAgentDisposed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>             This is normally raised when ServerAgent.Dispose() is called by the application and  the connection was terminated by ServerAgent.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerShutdown">
+      <MemberSignature Language="C#" Value="ServerShutdown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason ServerShutdown = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ServerShutdown" />
+      <MemberSignature Language="VB.NET" Value="ServerShutdown" />
+      <MemberSignature Language="C++ CLI" Value="ServerShutdown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>             Server is shutting down. Application should also shut down at this point.             </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerTerminated">
+      <MemberSignature Language="C#" Value="ServerTerminated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Sip.ConnectionDroppedReason ServerTerminated = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.ConnectionDroppedReason.ServerTerminated" />
+      <MemberSignature Language="VB.NET" Value="ServerTerminated" />
+      <MemberSignature Language="C++ CLI" Value="ServerTerminated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ConnectionDroppedReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>             Server process shut down unexpectedly. This could be due to external conditions and application can call WaitForServerAvailable and attempt to reconnect after the server starts again.             </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

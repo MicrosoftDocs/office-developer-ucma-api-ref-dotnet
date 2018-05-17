@@ -1,0 +1,157 @@
+﻿<Type Name="Response" FullName="Microsoft.Rtc.Sip.Response">
+  <TypeSignature Language="C#" Value="public class Response : Microsoft.Rtc.Sip.Message" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Response extends Microsoft.Rtc.Sip.Message" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.Response" />
+  <TypeSignature Language="VB.NET" Value="Public Class Response&#xA;Inherits Message" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Response : Microsoft::Rtc::Sip::Message" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Message</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>The Response class defines a SIP response sent from a server transaction to a client transaction.To generate a response message for a request, call <see cref="M:Microsoft.Rtc.Sip.Request.CreateResponse" /> on the associated <see cref="T:Microsoft.Rtc.Sip.Request" /> object. Populate the Response message with the proper status class and reason phrase, and then pass it to <see cref="M:Microsoft.Rtc.Sip.ServerTransaction.SendResponse(Microsoft.Rtc.Sip.Response)" />, using the <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object for the initial request.There are two methods for receiving a response:First, the response is filtered by the MSPL message filter and dispatched to a specific method that is defined in your application. (For more information, see the Dispatch built-in MSPL function.) The method handling the response must have a signature that matches the <see cref="T:Microsoft.Rtc.Sip.RequestReceivedEventHandler" /> delegate. Second, the originating request that incurred the response was sent from a specific <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> object instance that is running on your application. In this case, the response is obtained by registering an event handler for the <see cref="E:Microsoft.Rtc.Sip.ClientTransaction.ResponseReceived" /> event. In both cases, the response is returned as the <see cref="P:Microsoft.Rtc.Sip.ResponseReceivedEventArgs.Response" /> property, which contains a Response object. In the case where a ClientTransaction object on the application incurred the response, the <see cref="P:Microsoft.Rtc.Sip.ResponseReceivedEventArgs.ClientTransaction" /> property will contain a reference to the specific client transaction.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Response ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Response.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Response();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>                  Protected constructor to prevent public use.              </summary>
+        <remarks>
+          <para>                  Applications should use either the constructor or <see cref="M:Microsoft.Rtc.Sip.Request.CreateResponse" />.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStatusClass">
+      <MemberSignature Language="C#" Value="public static int GetStatusClass (int statusCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetStatusClass(int32 statusCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Response.GetStatusClass(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetStatusClass (statusCode As Integer) As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static int GetStatusClass(int statusCode);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="statusCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="statusCode">To be added.</param>
+        <summary>                  Numeric SIP status code class - static version.              </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>                  For example, a 486 status code belongs to the 400 status class.                  This property is calculated based on the supplied <see cref="P:Microsoft.Rtc.Sip.Response.StatusCode" />.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReasonPhrase">
+      <MemberSignature Language="C#" Value="public string ReasonPhrase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ReasonPhrase" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Response.ReasonPhrase" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReasonPhrase As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ReasonPhrase { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Text explanation of the status code.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  This property is set automatically set whenever status code is                  updated. If a non-standard status code is used, this property                  is set to the corresponding x00 reason phrase. Thus,                  applications should set reason phrase after setting the status                  code.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshaled">
+      <MemberSignature Language="C#" Value="protected internal override void SetMarshaled ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetMarshaled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Response.SetMarshaled" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub SetMarshaled ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void SetMarshaled();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Updates state to Marshaled.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusClass">
+      <MemberSignature Language="C#" Value="public int StatusClass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusClass" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Response.StatusClass" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StatusClass As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int StatusClass { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The StatusClass property contains the class of the numeric SIP status code. </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  For example, a 486 status code belongs to the 400 status class.                  This property is calculated based on <see cref="P:Microsoft.Rtc.Sip.Response.StatusCode" />.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int StatusCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Response.StatusCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property StatusCode As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int StatusCode { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The StatusCode property contains the numeric SIP status code for the response.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>A status code is currently represented as a 3-digit integer. For example, 404.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

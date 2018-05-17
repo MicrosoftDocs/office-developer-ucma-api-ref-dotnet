@@ -1,0 +1,60 @@
+﻿<Type Name="DefaultRTCClassAttribute" FullName="Microsoft.Rtc.Sip.DefaultRTCClassAttribute">
+  <TypeSignature Language="C#" Value="public class DefaultRTCClassAttribute : Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DefaultRTCClassAttribute extends System.Attribute" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.DefaultRTCClassAttribute" />
+  <TypeSignature Language="VB.NET" Value="Public Class DefaultRTCClassAttribute&#xA;Inherits Attribute" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DefaultRTCClassAttribute : Attribute" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Attribute</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>The DefaultRTCClassAttribute class indicates which derived class to use in place of a standard SIP class. For example, a custom class to handle SIP responses can be designated with this attribute, as long as the new response class inherits from the <see cref="T:Microsoft.Rtc.Sip.Response" /> class. To use DefaultRTCClassAttribute, the custom class must inherit from one of the following classes: <see cref="T:Microsoft.Rtc.Sip.Request" />, <see cref="T:Microsoft.Rtc.Sip.Response" />, <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" />, or <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" />.The DefaultRTCClassAttribute class is derived from the System.Attribute class.</summary>
+    <remarks>To be added.</remarks>
+    <example>
+      <para />
+      <code>[DefaultRTCClassAttribute]
+public class MyServerTransaction: ServerTransaction {
+
+internal string additionalState;
+
+public MyServerTransaction() {
+
+// Constructor logic here
+// ...
+Console.WriteLine ("MyServerTransaction created.");
+
+}
+
+}</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DefaultRTCClassAttribute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.DefaultRTCClassAttribute.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DefaultRTCClassAttribute();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>The DefaultRTCClassAttribute constructor creates a new instance of the DefaultRTCClassAttribute class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

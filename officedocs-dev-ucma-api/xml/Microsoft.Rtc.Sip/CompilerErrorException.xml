@@ -1,0 +1,83 @@
+﻿<Type Name="CompilerErrorException" FullName="Microsoft.Rtc.Sip.CompilerErrorException">
+  <TypeSignature Language="C#" Value="public sealed class CompilerErrorException : ApplicationException" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit CompilerErrorException extends System.ApplicationException" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.CompilerErrorException" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class CompilerErrorException&#xA;Inherits ApplicationException" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CompilerErrorException sealed : ApplicationException" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ApplicationException</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>The CompilerErrorException class defines the exception that is thrown when an application manifest compiler encounters an error.The CompilerErrorException class is derived from the System.ApplicationException class.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerErrorException (System.Collections.ArrayList errorMessages);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.ArrayList errorMessages) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.CompilerErrorException.#ctor(System.Collections.ArrayList)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (errorMessages As ArrayList)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CompilerErrorException(System::Collections::ArrayList ^ errorMessages);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorMessages" Type="System.Collections.ArrayList" />
+      </Parameters>
+      <Docs>
+        <param name="errorMessages">An ArrayList object that contains the error string that is returned by the application manifest compiler. Each element in the ArrayList contains an individual, ordered error string, from the first encountered to the last encountered.</param>
+        <summary>The CompilerErrorException constructor initializes a new object of the <see cref="T:Microsoft.Rtc.Sip.CompilerErrorException" /> class, with the error messages specified as an ordered ArrayList.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CompilerErrorException (System.Runtime.Serialization.SerializationInfo si, System.Runtime.Serialization.StreamingContext sc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Runtime.Serialization.SerializationInfo si, valuetype System.Runtime.Serialization.StreamingContext sc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.CompilerErrorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (si As SerializationInfo, sc As StreamingContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CompilerErrorException(System::Runtime::Serialization::SerializationInfo ^ si, System::Runtime::Serialization::StreamingContext sc);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="si" Type="System.Runtime.Serialization.SerializationInfo" />
+        <Parameter Name="sc" Type="System.Runtime.Serialization.StreamingContext" />
+      </Parameters>
+      <Docs>
+        <param name="si">To be added.</param>
+        <param name="sc">To be added.</param>
+        <summary>The CompilerErrorException constructor initializes run-time serialization and streaming context.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorMessages">
+      <MemberSignature Language="C#" Value="public System.Collections.ArrayList ErrorMessages { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ArrayList ErrorMessages" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.CompilerErrorException.ErrorMessages" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorMessages As ArrayList" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ArrayList ^ ErrorMessages { System::Collections::ArrayList ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ArrayList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ErrorMessages property contains the errors that are encountered during compilation of the application manifest.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,374 @@
+﻿<Type Name="Message" FullName="Microsoft.Rtc.Sip.Message">
+  <TypeSignature Language="C#" Value="public abstract class Message : Microsoft.Rtc.Sip.Impl.ReplicatedObject, ICloneable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Message extends Microsoft.Rtc.Sip.Impl.ReplicatedObject implements class System.ICloneable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.Message" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Message&#xA;Inherits ReplicatedObject&#xA;Implements ICloneable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Message abstract : Microsoft::Rtc::Sip::Impl::ReplicatedObject, ICloneable" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Impl.ReplicatedObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>                  Base class for SIP message classes.              </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal Message ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Message.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; Message();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>                  Initializes a new instance.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllHeaders">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.HeaderCollection AllHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.HeaderCollection AllHeaders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.AllHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllHeaders As HeaderCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::HeaderCollection ^ AllHeaders { Microsoft::Rtc::Sip::HeaderCollection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.HeaderCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Collection that contains all of the headers for this message.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllStamps">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.AppViaStampCollection AllStamps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.AppViaStampCollection AllStamps" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.AllStamps" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllStamps As AppViaStampCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::AppViaStampCollection ^ AllStamps { Microsoft::Rtc::Sip::AppViaStampCollection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.AppViaStampCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>             Returns all the stamps that are associated with the message.             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationInfo">
+      <MemberSignature Language="C#" Value="public object AuthenticationInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object AuthenticationInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.AuthenticationInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthenticationInfo As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ AuthenticationInfo { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Stack-specific authentication information.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>All information regarding the authentication of this message, including whether authentication was successful, is included in the AuthenticationInfo structure.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Content">
+      <MemberSignature Language="C#" Value="public string Content { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Content" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.Content" />
+      <MemberSignature Language="VB.NET" Value="Public Property Content As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Content { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Message content parsed as a string.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property contains the value associated with the "Content" header.</para>
+          <para>This property is valid only for UTF-8 text content types. Nontext and encoded types should use the <see cref="P:Microsoft.Rtc.Sip.Message.RawContent" /> property.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyProperties">
+      <MemberSignature Language="C#" Value="protected internal static void CopyProperties (Microsoft.Rtc.Sip.Message source, Microsoft.Rtc.Sip.Message target);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblystatic hidebysig void CopyProperties(class Microsoft.Rtc.Sip.Message source, class Microsoft.Rtc.Sip.Message target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Message.CopyProperties(Microsoft.Rtc.Sip.Message,Microsoft.Rtc.Sip.Message)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Shared Sub CopyProperties (source As Message, target As Message)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; static void CopyProperties(Microsoft::Rtc::Sip::Message ^ source, Microsoft::Rtc::Sip::Message ^ target);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Sip.Message" />
+        <Parameter Name="target" Type="Microsoft.Rtc.Sip.Message" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="target">To be added.</param>
+        <summary>                  Copies properties to the supplied target message. Used for                  cloning.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.IEnumerator GetHeaders (string type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.IEnumerator GetHeaders(string type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Message.GetHeaders(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHeaders (type As String) As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetHeaders(System::String ^ type);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="type">To be added.</param>
+        <summary>                  A read-only collection of headers of the specified type.              </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeUnmarshaled">
+      <MemberSignature Language="C#" Value="protected internal override void InitializeUnmarshaled (Microsoft.Rtc.Sip.Impl.ReplicatedObject other);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void InitializeUnmarshaled(class Microsoft.Rtc.Sip.Impl.ReplicatedObject other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Message.InitializeUnmarshaled(Microsoft.Rtc.Sip.Impl.ReplicatedObject)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub InitializeUnmarshaled (other As ReplicatedObject)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void InitializeUnmarshaled(Microsoft::Rtc::Sip::Impl::ReplicatedObject ^ other);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Rtc.Sip.Impl.ReplicatedObject" />
+      </Parameters>
+      <Docs>
+        <param name="other">                  Another object that shares the same object space.              </param>
+        <summary>                  Initializes an object that is created by the application in the                  Unmarshaled state.              </summary>
+        <remarks>
+          <para>                  Overridden to support cloning.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="marshalContent">
+      <MemberSignature Language="C#" Value="protected bool marshalContent;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool marshalContent" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.Message.marshalContent" />
+      <MemberSignature Language="VB.NET" Value="Protected marshalContent As Boolean " />
+      <MemberSignature Language="C++ CLI" Value="protected: bool marshalContent;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The marshalContent field is used to marshal content.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawContent">
+      <MemberSignature Language="C#" Value="public byte[] RawContent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] RawContent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.RawContent" />
+      <MemberSignature Language="VB.NET" Value="Public Property RawContent As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::Byte&gt; ^ RawContent { cli::array &lt;System::Byte&gt; ^ get(); void set(cli::array &lt;System::Byte&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Raw message content.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property contains the value associated with the "Content" header. The type of data and encoding can be found in other headers, such as "Content-Encoding", "Content-Disposition", and "Content-Type".</para>
+          <para>This property is exposed to support a wide range of content types, such as ASN.1 formatted data.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Received">
+      <MemberSignature Language="C#" Value="public bool Received { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Received" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.Received" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Received As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Received { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether this message was received by the server                  (as opposed to having been created by the calling application).              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMarshaled">
+      <MemberSignature Language="C#" Value="protected internal override void SetMarshaled ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetMarshaled() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Message.SetMarshaled" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub SetMarshaled ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void SetMarshaled();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Updates state to Marshaled.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stamp">
+      <MemberSignature Language="C#" Value="public virtual string Stamp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Stamp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.Stamp" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Stamp As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Stamp { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Stamp property contains the string that is used to stamp a message. Setting Stamp marks the message with the supplied string, which can then be read either by the application or downstream instances of the application.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The Stamp property returns only the first stamp on the message. If there are multiple stamps on the message, use the <see cref="P:Microsoft.Rtc.Sip.Message.AllStamps" /> property to retrieve a collection containing all of the stamps.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StampPool">
+      <MemberSignature Language="C#" Value="public string StampPool { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StampPool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.StampPool" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StampPool As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ StampPool { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The StampPool property specifies the name of the Enterprise Edition pool in which the last stamp for the application was set.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Message.System#ICloneable#Clone" />
+      <MemberSignature Language="VB.NET" Value="Function Clone () As Object Implements ICloneable.Clone" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Object ^ System.ICloneable.Clone() = ICloneable::Clone;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ICloneable.Clone</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Creates a copy of this object.              </summary>
+        <returns>                  A clone of the message.              </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeReceived">
+      <MemberSignature Language="C#" Value="public DateTime TimeReceived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime TimeReceived" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Message.TimeReceived" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimeReceived As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime TimeReceived { DateTime get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The TimeReceived property indicates the date and time (represented as a DateTime object) the message was received by the server.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

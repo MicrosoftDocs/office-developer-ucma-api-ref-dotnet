@@ -1,0 +1,543 @@
+﻿<Type Name="Transaction" FullName="Microsoft.Rtc.Sip.Transaction">
+  <TypeSignature Language="C#" Value="public abstract class Transaction : Microsoft.Rtc.Sip.Impl.ReplicatedObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Transaction extends Microsoft.Rtc.Sip.Impl.ReplicatedObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.Transaction" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Transaction&#xA;Inherits ReplicatedObject&#xA;Implements IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Transaction abstract : Microsoft::Rtc::Sip::Impl::ReplicatedObject, IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Sip.Impl.ReplicatedObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>                  Base class for SIP transaction classes.              </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Transaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Transaction();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Canceled">
+      <MemberSignature Language="C#" Value="public event EventHandler Canceled;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Canceled" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.Transaction.Canceled" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Canceled As EventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ Canceled;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Occurs when the transaction has been canceled.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckDisposed">
+      <MemberSignature Language="C#" Value="protected void CheckDisposed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckDisposed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.CheckDisposed" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CheckDisposed ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void CheckDisposed();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Throws an <see cref="ObjectDisposedException" /> if the object is in the                  disposed state.              </summary>
+        <remarks>
+          <para>                  This routine should be called in the prolog of every public                  routine in this class and its derived classes. It ensures that                  no operations are performed on disposed objects.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="protected virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.Close" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Close ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Close();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Allows derived classes to provide custom lifetime management.              </summary>
+        <remarks>
+          <para>                  Invoked when the server agent is done with this object.                               The default implementation simply calls <see cref="M:Microsoft.Rtc.Sip.Transaction.Dispose" />.                  Applications that keep the object in an undisposed state                  can take alternative action.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Releases all resources used by this object.              </summary>
+        <remarks>
+          <para>                  Calling <see cref="M:Microsoft.Rtc.Sip.Transaction.Dispose" /> allows the resources used by this object                  to be freed.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>                  Releases the unmanaged resources used by this object and                  optionally releases the managed resources.              </summary>
+        <remarks>
+          <para>If a wait handle was retrieved from the server agent, do not use it; this method invalidates it.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~Transaction ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="C++ CLI" Value="!Transaction ()" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The Finalize method provides a finalizer for this instance of the Transaction class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCorrelationId">
+      <MemberSignature Language="C#" Value="public uint GetCorrelationId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int32 GetCorrelationId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.GetCorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCorrelationId () As UInteger" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::UInt32 GetCorrelationId();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>             Trace correlation ID.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTraceFilterMatch">
+      <MemberSignature Language="C#" Value="public bool IsTraceFilterMatch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsTraceFilterMatch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.IsTraceFilterMatch" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsTraceFilterMatch () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsTraceFilterMatch();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Determines whether the message matches any existing trace filter.             </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MarshalContent">
+      <MemberSignature Language="C#" Value="public bool MarshalContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MarshalContent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.MarshalContent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MarshalContent As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool MarshalContent { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>             Determines whether the content body of the SIP message is marshaled or is not marshaled.             </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>For a <see cref="T:Microsoft.Rtc.Sip.ClientTransaction" /> object, this property contains the <see cref="T:Microsoft.Rtc.Sip.Request" /> object that is passed to <see cref="M:Microsoft.Rtc.Sip.ClientTransaction.SendRequest(Microsoft.Rtc.Sip.Request)" />.</para>
+          <para>For a <see cref="T:Microsoft.Rtc.Sip.ServerTransaction" /> object, this property contains the Request object whose associated request message created this instance.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnCanceled">
+      <MemberSignature Language="C#" Value="protected virtual void OnCanceled (string cancelReasonHeader = null);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnCanceled(string cancelReasonHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.OnCanceled(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnCanceled (Optional cancelReasonHeader As String = null)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancelReasonHeader" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="cancelReasonHeader">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTerminated">
+      <MemberSignature Language="C#" Value="protected virtual void OnTerminated ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTerminated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.OnTerminated" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTerminated ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTerminated();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Raises the <see cref="E:Microsoft.Rtc.Sip.Transaction.Terminated" /> event.              </summary>
+        <remarks>
+          <para>                  Overrides should always call the base class.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTimedOut">
+      <MemberSignature Language="C#" Value="protected virtual void OnTimedOut ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnTimedOut() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Sip.Transaction.OnTimedOut" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnTimedOut ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnTimedOut();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>                  Raises the <see cref="E:Microsoft.Rtc.Sip.Transaction.TimedOut" /> event.              </summary>
+        <remarks>
+          <para>                  Overrides should always call the base class.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OriginationTime">
+      <MemberSignature Language="C#" Value="public DateTime OriginationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime OriginationTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.OriginationTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginationTime As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime OriginationTime { DateTime get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Time the transaction was originated.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Request">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.Request Request { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.Request Request" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.Request" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Request As Request" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::Request ^ Request { Microsoft::Rtc::Sip::Request ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.Request</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Request that started the transaction.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Responses">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ResponseCollection Responses { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.ResponseCollection Responses" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.Responses" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Responses As ResponseCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::ResponseCollection ^ Responses { Microsoft::Rtc::Sip::ResponseCollection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ResponseCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Collection of responses in the transaction.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>                  Some transactions contain more than one response. This could be                  due to either 1xx-class provisional responses or multiple 2xx                  responses to INVITEs.                               Note that this set includes only those responses that matched                  message processing rules and were dispatched to the application.                  If the application was never notificed of a response, this                  collection will not contain it. This implies that applications                  should not poll this collection to see if any new responses                  came in.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerAgent">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.ServerAgent ServerAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Sip.ServerAgent ServerAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.ServerAgent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerAgent As ServerAgent" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::ServerAgent ^ ServerAgent { Microsoft::Rtc::Sip::ServerAgent ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.ServerAgent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  The ServerAgent which created this transaction.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="simpleProxy">
+      <MemberSignature Language="C#" Value="protected internal bool simpleProxy;" />
+      <MemberSignature Language="ILAsm" Value=".field familyorassembly bool simpleProxy" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Sip.Transaction.simpleProxy" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend simpleProxy As Boolean " />
+      <MemberSignature Language="C++ CLI" Value="protected public: bool simpleProxy;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>             For internal use.             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="public object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.SyncRoot" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SyncRoot As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Object space used for synchronizing access to a group of objects                  related to a server or a UAC transaction.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>To synchronize access to a transaction, obtain this property and pass it to lock().</para>
+          <para>Example Code</para>
+          <code>lock (myServerTransaction.SyncRoot) {
+// ...
+// Perform thread operation on transaction here
+// ...
+}
+</code>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminated">
+      <MemberSignature Language="C#" Value="public event EventHandler Terminated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Terminated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.Transaction.Terminated" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Terminated As EventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ Terminated;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Occurs when the transaction is terminated.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimedOut">
+      <MemberSignature Language="C#" Value="public event EventHandler TimedOut;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler TimedOut" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Sip.Transaction.TimedOut" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event TimedOut As EventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ TimedOut;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Occurs when the transaction has timed out.              </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceCorrelationGuid">
+      <MemberSignature Language="C#" Value="public Guid TraceCorrelationGuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Guid TraceCorrelationGuid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.TraceCorrelationGuid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TraceCorrelationGuid As Guid" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Guid TraceCorrelationGuid { Guid get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Guid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceCorrelationId">
+      <MemberSignature Language="C#" Value="public uint TraceCorrelationId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 TraceCorrelationId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.TraceCorrelationId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TraceCorrelationId As UInteger" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::UInt32 TraceCorrelationId { System::UInt32 get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>             Trace Correlation ID.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceFilterMatch">
+      <MemberSignature Language="C#" Value="public bool TraceFilterMatch { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TraceFilterMatch" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.Transaction.TraceFilterMatch" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TraceFilterMatch As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool TraceFilterMatch { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Determines whether the message matches any existing trace filter.             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

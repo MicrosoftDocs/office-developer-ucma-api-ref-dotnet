@@ -1,0 +1,267 @@
+﻿<Type Name="AuthenticationInfo" FullName="Microsoft.Rtc.Sip.AuthenticationInfo">
+  <TypeSignature Language="C#" Value="public struct AuthenticationInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit AuthenticationInfo extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Sip.AuthenticationInfo" />
+  <TypeSignature Language="VB.NET" Value="Public Structure AuthenticationInfo" />
+  <TypeSignature Language="C++ CLI" Value="public value class AuthenticationInfo" />
+  <AssemblyInfo>
+    <AssemblyName>ServerAgent</AssemblyName>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>                  Microsoft-specific message authentication and authorization information.              </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Authenticated">
+      <MemberSignature Language="C#" Value="public bool Authenticated { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Authenticated" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.Authenticated" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Authenticated As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Authenticated { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the message is authenticated.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateAuthorized">
+      <MemberSignature Language="C#" Value="public bool CertificateAuthorized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CertificateAuthorized" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.CertificateAuthorized" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CertificateAuthorized As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CertificateAuthorized { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the certificate is authorized.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>              This flag is deprecated and will always return false.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionAuthorizationEnabled">
+      <MemberSignature Language="C#" Value="public bool ConnectionAuthorizationEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ConnectionAuthorizationEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.ConnectionAuthorizationEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionAuthorizationEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ConnectionAuthorizationEnabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether connection authorization is enabled.              </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>              This flag is deprecated and will always return false.              </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalSourceNetwork">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.AuthenticationInfo.ExternalNetwork ExternalSourceNetwork { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.AuthenticationInfo/ExternalNetwork ExternalSourceNetwork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSourceNetwork" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExternalSourceNetwork As AuthenticationInfo.ExternalNetwork" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::AuthenticationInfo::ExternalNetwork ExternalSourceNetwork { Microsoft::Rtc::Sip::AuthenticationInfo::ExternalNetwork get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.AuthenticationInfo+ExternalNetwork</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  If message came from external edge of an enterprise Edge Proxy, this identifies the source network.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExternalSourceType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSource ExternalSourceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.AuthenticationInfo/ExternalSource ExternalSourceType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.ExternalSourceType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExternalSourceType As AuthenticationInfo.ExternalSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::AuthenticationInfo::ExternalSource ExternalSourceType { Microsoft::Rtc::Sip::AuthenticationInfo::ExternalSource get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.AuthenticationInfo+ExternalSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  If message came from external edge of an enterprise Edge Proxy, this identifies the source type.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MtlsConnection">
+      <MemberSignature Language="C#" Value="public bool MtlsConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MtlsConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.MtlsConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MtlsConnection As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool MtlsConnection { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the message is received over a Mutual Transport Layer Security (MTLS) connection.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Origin">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Sip.AuthenticationInfo.MessageOrigin Origin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Sip.AuthenticationInfo/MessageOrigin Origin" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.Origin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Origin As AuthenticationInfo.MessageOrigin" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Sip::AuthenticationInfo::MessageOrigin Origin { Microsoft::Rtc::Sip::AuthenticationInfo::MessageOrigin get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Sip.AuthenticationInfo+MessageOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Describes how the message is created.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceivedFromInternalServer">
+      <MemberSignature Language="C#" Value="public bool ReceivedFromInternalServer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceivedFromInternalServer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.ReceivedFromInternalServer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceivedFromInternalServer As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReceivedFromInternalServer { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the message is received from an internal                  server.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityToken">
+      <MemberSignature Language="C#" Value="public IntPtr SecurityToken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int SecurityToken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.SecurityToken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SecurityToken As IntPtr" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property IntPtr SecurityToken { IntPtr get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>              This API is deprecated and will always return IntPtr.Zero.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerSource">
+      <MemberSignature Language="C#" Value="public bool ServerSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ServerSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.ServerSource" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerSource As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ServerSource { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the sender is a server source.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TlsPeer">
+      <MemberSignature Language="C#" Value="public string TlsPeer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TlsPeer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.TlsPeer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TlsPeer As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TlsPeer { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  The previous hop sender'sTransport Layer Security (TLS) peer name if it is available.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedConnection">
+      <MemberSignature Language="C#" Value="public bool TrustedConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrustedConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Sip.AuthenticationInfo.TrustedConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TrustedConnection As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool TrustedConnection { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>ServerAgent</AssemblyName>
+        <AssemblyVersion>7.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>                  Indicates whether the message is received over a trusted                  connection.              </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
