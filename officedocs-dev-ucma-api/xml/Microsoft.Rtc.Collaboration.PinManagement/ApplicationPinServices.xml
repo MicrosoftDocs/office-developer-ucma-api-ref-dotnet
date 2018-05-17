@@ -1,0 +1,118 @@
+﻿<Type Name="ApplicationPinServices" FullName="Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices">
+  <TypeSignature Language="C#" Value="public class ApplicationPinServices : Microsoft.Rtc.Collaboration.PinManagement.PinServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationPinServices extends Microsoft.Rtc.Collaboration.PinManagement.PinServices" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationPinServices&#xA;Inherits PinServices" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationPinServices : Microsoft::Rtc::Collaboration::PinManagement::PinServices" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.PinManagement.PinServices</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents pin services available to an application.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginVerifyPin">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginVerifyPin (string uriToVerify, string pin, Microsoft.Rtc.Collaboration.PinManagement.VerifyPinOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginVerifyPin(string uriToVerify, string pin, class Microsoft.Rtc.Collaboration.PinManagement.VerifyPinOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices.BeginVerifyPin(System.String,System.String,Microsoft.Rtc.Collaboration.PinManagement.VerifyPinOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginVerifyPin (uriToVerify As String, pin As String, options As VerifyPinOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginVerifyPin(System::String ^ uriToVerify, System::String ^ pin, Microsoft::Rtc::Collaboration::PinManagement::VerifyPinOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uriToVerify" Type="System.String" />
+        <Parameter Name="pin" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.PinManagement.VerifyPinOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="uriToVerify">The uri for which we need to verify the pin. This can be a global telephone uri, telephone extension or a SIP uri. Cannot be null or empty.</param>
+        <param name="pin">Pin to be verified. Cannot be null or empty.</param>
+        <param name="options">The optional parameters to be used when verifying given pin.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to verify given pin for the uri.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="uriToVerify" /> parameter is null, empty or invalid sip URI or tel URI.
+            <paramref name="pin" /> parameter is null or empty.
+            <paramref name="options" /> parameter contains invalid or restricted signaling headers.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Endpoint is not in valid state to perform this operation.
+            
+            Pin services uri is not available.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndVerifyPin">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.PinManagement.PinVerificationResult EndVerifyPin (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.PinManagement.PinVerificationResult EndVerifyPin(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices.EndVerifyPin(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndVerifyPin (result As IAsyncResult) As PinVerificationResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::PinManagement::PinVerificationResult ^ EndVerifyPin(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PinManagement.PinVerificationResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <returns>Returns pin owner details.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException">
+            Thrown when the pin verification for the given uri failed. Applications can use the Reason property to get the failure reason.
+            <see cref="P:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.Reason" /></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the remote side returns a failure response for the establish request operation.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

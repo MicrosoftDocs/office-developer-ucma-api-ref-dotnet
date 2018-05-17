@@ -1,0 +1,77 @@
+﻿<Type Name="VoiceActivityChangedEventArgs" FullName="Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class VoiceActivityChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VoiceActivityChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class VoiceActivityChangedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class VoiceActivityChangedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents information received when recorder detects a change in voice state.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsVoice">
+      <MemberSignature Language="C#" Value="public bool IsVoice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVoice" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs.IsVoice" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsVoice As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsVoice { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the voice state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Returns false if detects silence, true otherwise.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeStamp">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeStamp { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeStamp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs.TimeStamp" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimeStamp As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan TimeStamp { TimeSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the time stamp.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Returns the length in milliseconds from the moment the Recorder was started or the handler was assigned to a started Recorder.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

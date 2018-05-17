@@ -1,0 +1,179 @@
+﻿<Type Name="SendProvisionalResponseOptions" FullName="Microsoft.Rtc.Signaling.SendProvisionalResponseOptions">
+  <TypeSignature Language="C#" Value="public class SendProvisionalResponseOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SendProvisionalResponseOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class SendProvisionalResponseOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SendProvisionalResponseOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the options for sending a provisional response.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendProvisionalResponseOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SendProvisionalResponseOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instances of the SendProvisionalResponseOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipDialogContext DialogContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipDialogContext DialogContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions.DialogContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property DialogContext As SipDialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipDialogContext ^ DialogContext { Microsoft::Rtc::Signaling::SipDialogContext ^ get(); void set(Microsoft::Rtc::Signaling::SipDialogContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipDialogContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the dialog on which negotiation is happening.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The dialog is used to track the negotiation status for a remote endpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included in the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. 
+            Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUnreliable">
+      <MemberSignature Language="C#" Value="public bool IsUnreliable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUnreliable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions.IsUnreliable" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsUnreliable As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsUnreliable { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the provisional should be sent unreliably.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This requests that the provisional is sent unreliably. It is not recommended
+            to send an offer or answer in a provisional that is sent unreliably as 
+            the handling of such a message is not predictable.
+            </para>
+          <para>
+            If false, and the 100rel extension is supported by the connected parties,
+            then a reliable provisional will be sent. 
+            </para>
+          <para>
+            If False, and the 100rel extension is not supported by connected parties,
+            an unreliable provisional will be sent.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NeedOfferAnswer">
+      <MemberSignature Language="C#" Value="public bool NeedOfferAnswer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NeedOfferAnswer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions.NeedOfferAnswer" />
+      <MemberSignature Language="VB.NET" Value="Public Property NeedOfferAnswer As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool NeedOfferAnswer { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the application requires that an offer or 
+            answer be included in the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseText">
+      <MemberSignature Language="C#" Value="public string ResponseText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendProvisionalResponseOptions.ResponseText" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ResponseText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The response text to be used for the provisional response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,431 @@
+﻿<Type Name="RemotePresenceView" FullName="Microsoft.Rtc.Collaboration.Presence.RemotePresenceView">
+  <TypeSignature Language="C#" Value="public class RemotePresenceView" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RemotePresenceView extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView" />
+  <TypeSignature Language="VB.NET" Value="Public Class RemotePresenceView" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RemotePresenceView" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class is used to fetch presence information for remote presentities from LocalEndpoint.
+            </summary>
+    <remarks>
+      <para>Choosing <see cref="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Polling" /> results in each presentity's presence queried at fixed intervals
+             specified by the <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.PollingInterval" /> parameter. The list of categories to poll for can be set using the method 
+             <see cref="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SetPresenceSubscriptionCategoriesForPolling(System.Collections.Generic.IEnumerable{System.String})" />.</para>
+      <para>
+        <see cref="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Default" /> results in the persistent subscription to presentities. The endpoint is then
+             informed of any real-times changes to their presence information. In addition network optimizations are provided where 
+             if the subscription limit is reached on any presentity or the remote presentity is an automaton or a bot, then their presence
+             is automatically polled for. This conserves network traffic and in the case of automatons, allow them to have more subscribers.
+             Application who desire persistent subscription are strongly advised to use this mode.</para>
+      <para>Choosing <see cref="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Persistent" /> is very similar to choosing <see cref="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Default" />
+             except that the optimizations indicated in the end are not provided.</para>
+      <para>Multiple instances of RemotePresenceView can be created on an endpoint. The <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.ApplicationContext" /> can be used
+            to differentiate one view from another. The same presentity can be added to different views and operations one each view
+            is considered independent of other views.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotePresenceView (Microsoft.Rtc.Collaboration.LocalEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.LocalEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As LocalEndpoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RemotePresenceView(Microsoft::Rtc::Collaboration::LocalEndpoint ^ endpoint);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.LocalEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint to which this RemotePresenceView belongs.</param>
+        <summary>
+            Creates an instance of the RemotePresenceView class.
+            </summary>
+        <remarks>
+          <para>
+            The subscription mode is <see cref="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Default" />.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="endpoint" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotePresenceView (Microsoft.Rtc.Collaboration.LocalEndpoint endpoint, Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.LocalEndpoint endpoint, class Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint,Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As LocalEndpoint, settings As RemotePresenceViewSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RemotePresenceView(Microsoft::Rtc::Collaboration::LocalEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::Presence::RemotePresenceViewSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.LocalEndpoint" />
+        <Parameter Name="settings" Type="Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint to which this RemotePresenceView belongs.</param>
+        <param name="settings">The settings to use to initialize this RemotePresenceView.</param>
+        <summary>
+            Creates an instance of the RemotePresenceView class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="endpoint" /> or <paramref name="settings" /> is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when <paramref name="endpoint" /> is not established.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationContext">
+      <MemberSignature Language="C#" Value="public object ApplicationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.ApplicationContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets an application-defined context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> This custom context allows an application to store and retrieve 
+            application-specific data associated with this instance. </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to dispose this view.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation started by <see cref="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.BeginTerminate(System.AsyncCallback,System.Object)" />.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="ArgumentNullException">The parameter was null. The IAsyncResult is a required parameter.</exception>
+        <exception cref="ArgumentException">The IAsyncResult object was created by a Begin method for a different operation</exception>
+        <exception cref="InvalidOperationException">End was called multiple times.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPresentities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetPresentities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetPresentities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.GetPresentities" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPresentities () As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetPresentities();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a snapshot of the list of targets in this view.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollingInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan PollingInterval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PollingInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.PollingInterval" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PollingInterval As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan PollingInterval { TimeSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the polling interval.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt; PresenceNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt; PresenceNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.PresenceNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PresenceNotificationReceived As EventHandler(Of RemotePresentitiesNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentitiesNotificationEventArgs ^&gt; ^ PresenceNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when presence notifications arrive for participants in this view.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceSubscriptionCategories">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; PresenceSubscriptionCategories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; PresenceSubscriptionCategories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.PresenceSubscriptionCategories" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceSubscriptionCategories As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ PresenceSubscriptionCategories { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of categories for which presence information will be returned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property is initialized with Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceServices.PresenceSubscriptionCategories
+            for persistent subscriptions.
+            If the <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SubscriptionMode" /> is <see cref="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Polling" />, this value can be changed 
+            using the method <see cref="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SetPresenceSubscriptionCategoriesForPolling(System.Collections.Generic.IEnumerable{System.String})" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPresenceSubscriptionCategoriesForPolling">
+      <MemberSignature Language="C#" Value="public void SetPresenceSubscriptionCategoriesForPolling (System.Collections.Generic.IEnumerable&lt;string&gt; subscriptionCategories);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPresenceSubscriptionCategoriesForPolling(class System.Collections.Generic.IEnumerable`1&lt;string&gt; subscriptionCategories) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SetPresenceSubscriptionCategoriesForPolling(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPresenceSubscriptionCategoriesForPolling (subscriptionCategories As IEnumerable(Of String))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetPresenceSubscriptionCategoriesForPolling(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ subscriptionCategories);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriptionCategories" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="subscriptionCategories">List of categories to be subscribed for.</param>
+        <summary>
+            Sets the presence subscription categories for polling.  
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is called when <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SubscriptionMode" /> is not Polling or the view is already active.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown <paramref name="subscriptionCategories" /> is null or contains a null member.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="subscriptionCategories" /> is an empty collection.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSubscribingToPresentities">
+      <MemberSignature Language="C#" Value="public void StartSubscribingToPresentities (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitySubscriptionTarget&gt; targets);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartSubscribingToPresentities(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.Presence.RemotePresentitySubscriptionTarget&gt; targets) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.StartSubscribingToPresentities(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.Presence.RemotePresentitySubscriptionTarget})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartSubscribingToPresentities (targets As IEnumerable(Of RemotePresentitySubscriptionTarget))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void StartSubscribingToPresentities(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentitySubscriptionTarget ^&gt; ^ targets);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targets" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitySubscriptionTarget&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targets">Targets being subscribed to in this view.</param>
+        <summary>
+            Start the operation to subscribe to the specified list of targets.
+            </summary>
+        <remarks>
+          <para>
+            Use the <see cref="E:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SubscriptionStateChanged" /> event to track whether a subscription is successful. Presence events can be obtained by wiring the
+            <see cref="E:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.PresenceNotificationReceived" /> event handlers.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the underlying endpoint is not established or when the view is no longer active.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown <paramref name="targets" /> is null or contains a null member.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="targets" /> is an empty collection.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartUnsubscribingToPresentities">
+      <MemberSignature Language="C#" Value="public void StartUnsubscribingToPresentities (System.Collections.Generic.IEnumerable&lt;string&gt; uris);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartUnsubscribingToPresentities(class System.Collections.Generic.IEnumerable`1&lt;string&gt; uris) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.StartUnsubscribingToPresentities(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartUnsubscribingToPresentities (uris As IEnumerable(Of String))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void StartUnsubscribingToPresentities(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ uris);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uris" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="uris">Uris of targets being removed from this view.</param>
+        <summary>
+            Start the operation to unsubscribe to the specified list of targets.
+            </summary>
+        <remarks>
+          <para>
+            Any duplicates in <paramref name="uris" /> or any presentity listed in <paramref name="uris" /> that are not in the view
+            will be ignored.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the underlying endpoint is not established.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="uris" /> is null or contains a null member.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="uris" /> is an empty collection or containers an invalid URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriberEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LocalEndpoint SubscriberEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LocalEndpoint SubscriberEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SubscriberEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriberEndpoint As LocalEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ SubscriberEndpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of endpoint to which this RemotePresenceView belongs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode SubscriptionMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode SubscriptionMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SubscriptionMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriptionMode As RemotePresenceViewSubscriptionMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::RemotePresenceViewSubscriptionMode SubscriptionMode { Microsoft::Rtc::Collaboration::Presence::RemotePresenceViewSubscriptionMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the mode of subscription in this view.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemoteSubscriptionStateChangedEventArgs&gt; SubscriptionStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.RemoteSubscriptionStateChangedEventArgs&gt; SubscriptionStateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView.SubscriptionStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event SubscriptionStateChanged As EventHandler(Of RemoteSubscriptionStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemoteSubscriptionStateChangedEventArgs ^&gt; ^ SubscriptionStateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemoteSubscriptionStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when subscription state changes for participants in this view.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

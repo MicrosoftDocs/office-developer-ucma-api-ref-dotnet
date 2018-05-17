@@ -1,0 +1,425 @@
+﻿<Type Name="InstantMessagingMcuSession" FullName="Microsoft.Rtc.Collaboration.InstantMessagingMcuSession">
+  <TypeSignature Language="C#" Value="public class InstantMessagingMcuSession : Microsoft.Rtc.Collaboration.McuSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstantMessagingMcuSession extends Microsoft.Rtc.Collaboration.McuSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class InstantMessagingMcuSession&#xA;Inherits McuSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InstantMessagingMcuSession : Microsoft::Rtc::Collaboration::McuSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.McuSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Allows requests to be made to the Instant Messaging MCU.
+            </summary>
+    <remarks>
+      <para>
+            This class represents the Instant Messaging specific implementation of the media-agnostic McuSession. The class encapsulates
+            operations and events relevant to the Instant Messaging MCU.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginDialOut">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDialOut (string destinationUri, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.BeginDialOut(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDialOut (destinationUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUri" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUri">The URI of the entity to call.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Requests from the Instant Messaging MCU to initiate an Instant Messaging call to the supplied destination URI.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied destinationUri is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the supplied destinationUri is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyInstantMessagingBlockAllMode">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyInstantMessagingBlockAllMode (Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode mode, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyInstantMessagingBlockAllMode(valuetype Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode mode, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.BeginModifyInstantMessagingBlockAllMode(Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginModifyInstantMessagingBlockAllMode (mode As InstantMessagingBlockAllMode, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyInstantMessagingBlockAllMode(Microsoft::Rtc::Collaboration::InstantMessagingBlockAllMode mode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The instant messaging block filter mode to apply.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Modifies the instant messaging block filter on InstantMessagingMcuSession.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when given <paramref name="mode" /> is invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDialOut">
+      <MemberSignature Language="C#" Value="public void EndDialOut (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDialOut(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.EndDialOut(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDialOut (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDialOut(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndModifyInstantMessagingBlockAllMode">
+      <MemberSignature Language="C#" Value="public void EndModifyInstantMessagingBlockAllMode (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndModifyInstantMessagingBlockAllMode(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.EndModifyInstantMessagingBlockAllMode(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndModifyInstantMessagingBlockAllMode (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndModifyInstantMessagingBlockAllMode(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="protected override void HandleParticipantEndpointAttendanceChanged (System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; addedEndpoints, System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; removedEndpoints);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleParticipantEndpointAttendanceChanged(class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint, class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; addedEndpoints, class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint, class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; removedEndpoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.HandleParticipantEndpointAttendanceChanged(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointAttendanceChanged (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addedEndpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt;" />
+        <Parameter Name="removedEndpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="addedEndpoints">Endpoints added to the MCU roster.</param>
+        <param name="removedEndpoints">Endpoints removed from the MCU roster.</param>
+        <summary>
+            Processes added or removed participant endpoints to the MCU.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="protected override void HandleParticipantEndpointPropertiesChanged (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; pmi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleParticipantEndpointPropertiesChanged(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; pmi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.HandleParticipantEndpointPropertiesChanged(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointPropertiesChanged (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointPropertiesChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="pmi" Type="Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Endpoint with changed properties.</param>
+        <param name="pmi">Current property values and changed information.</param>
+        <summary>
+            Process updated MCU participant endpoint properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePropertiesChanged">
+      <MemberSignature Language="C#" Value="protected override void HandlePropertiesChanged (Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; pmi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandlePropertiesChanged(class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.McuSessionProperties&gt; pmi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.HandlePropertiesChanged(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandlePropertiesChanged (pmi As PropertyMergeInformation(Of McuSessionProperties))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandlePropertiesChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmi" Type="Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pmi">Current property values and changed information.</param>
+        <summary>
+            Process updated session properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantMessagingBlockAllMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode InstantMessagingBlockAllMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode InstantMessagingBlockAllMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.InstantMessagingBlockAllMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstantMessagingBlockAllMode As InstantMessagingBlockAllMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingBlockAllMode InstantMessagingBlockAllMode { Microsoft::Rtc::Collaboration::InstantMessagingBlockAllMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingBlockAllMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether messages can be sent in the conversation. <see cref="P:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.InstantMessagingBlockAllMode" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointAttendanceChanged As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of InstantMessagingMcuParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft::Rtc::Collaboration::InstantMessagingMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointAttendanceChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more participant endpoints join or leave the MCU.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointPropertiesChanged As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of InstantMessagingMcuParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::InstantMessagingMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointPropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more participant endpoint properties changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.InstantMessagingMcuSessionProperties&gt;&gt; PropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.InstantMessagingMcuSessionProperties&gt;&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.PropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of InstantMessagingMcuSessionProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::InstantMessagingMcuSessionProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.InstantMessagingMcuSessionProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more session properties change.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCore">
+      <MemberSignature Language="C#" Value="protected override void ResetCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ResetCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.ResetCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ResetCore ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ResetCore();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Recycles the InstantMessagingMcuSession for reuse.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMediaTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;string&gt; SupportedMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; SupportedMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.SupportedMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the media types supported by the Instant Messaging MCU.
+            </summary>
+        <value>The media types supported by the MCU</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParticipantEndpointProperties">
+      <MemberSignature Language="C#" Value="public bool TryGetParticipantEndpointProperties (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, out Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetParticipantEndpointProperties(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, [out] class Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&amp; properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingMcuSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As InstantMessagingMcuParticipantEndpointProperties) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Collaboration::InstantMessagingMcuParticipantEndpointProperties ^ % properties);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.InstantMessagingMcuParticipantEndpointProperties&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The participant endpoint for which to retrieve properties.</param>
+        <param name="properties">The properties if available, or null.</param>
+        <summary>
+            Gets the properties of the supplied participant endpoint in this MCU.
+            </summary>
+        <returns>True if properties were found for this participant, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

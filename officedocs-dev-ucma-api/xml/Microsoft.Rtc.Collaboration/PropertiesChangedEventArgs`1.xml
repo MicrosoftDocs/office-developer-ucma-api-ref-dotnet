@@ -1,0 +1,95 @@
+﻿<Type Name="PropertiesChangedEventArgs&lt;TProperties&gt;" FullName="Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;TProperties&gt;">
+  <TypeSignature Language="C#" Value="public class PropertiesChangedEventArgs&lt;TProperties&gt; : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PropertiesChangedEventArgs`1&lt;TProperties&gt; extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1" />
+  <TypeSignature Language="VB.NET" Value="Public Class PropertiesChangedEventArgs(Of TProperties)&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TProperties&gt;&#xA;public ref class PropertiesChangedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TProperties" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TProperties"></typeparam>
+    <summary>
+            Represents properties that have changed on an object.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal PropertiesChangedEventArgs (System.Collections.Generic.IEnumerable&lt;string&gt; changedPropertyNames, TProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;string&gt; changedPropertyNames, !TProperties properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1.#ctor(System.Collections.Generic.IEnumerable{System.String},`0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (changedPropertyNames As IEnumerable(Of String), properties As TProperties)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; PropertiesChangedEventArgs(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ changedPropertyNames, TProperties properties);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="changedPropertyNames" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="properties" Type="TProperties" />
+      </Parameters>
+      <Docs>
+        <param name="changedPropertyNames">A list of changed property names.</param>
+        <param name="properties">The current values of the properties.</param>
+        <summary>
+            Creates a new instance of PropertiesChangedEventArgs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangedPropertyNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; ChangedPropertyNames { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; ChangedPropertyNames" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1.ChangedPropertyNames" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChangedPropertyNames As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ ChangedPropertyNames { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of property names that have changed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public TProperties Properties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !TProperties Properties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1.Properties" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Properties As TProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TProperties Properties { TProperties get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TProperties</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current values of the properties.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,101 @@
+﻿<Type Name="AudioVideoMcuDialOutOptions" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions">
+  <TypeSignature Language="C#" Value="public class AudioVideoMcuDialOutOptions : Microsoft.Rtc.Collaboration.McuDialOutOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioVideoMcuDialOutOptions extends Microsoft.Rtc.Collaboration.McuDialOutOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioVideoMcuDialOutOptions&#xA;Inherits McuDialOutOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoMcuDialOutOptions : Microsoft::Rtc::Collaboration::McuDialOutOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.McuDialOutOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents options that an application can use to customize when dialing-out to a participant through audio-video MCU.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AudioVideoMcuDialOutOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; AudioVideoMcuDialOutOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the AudioVideoMcuDialoutOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateAssistantDisabled">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; PrivateAssistantDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; PrivateAssistantDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions.PrivateAssistantDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property PrivateAssistantDisabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;bool&gt; PrivateAssistantDisabled { Nullable&lt;bool&gt; get(); void set(Nullable&lt;bool&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the private vitual assistant is to be disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFromDefaultRouting">
+      <MemberSignature Language="C#" Value="public bool RemoveFromDefaultRouting { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RemoveFromDefaultRouting" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions.RemoveFromDefaultRouting" />
+      <MemberSignature Language="VB.NET" Value="Public Property RemoveFromDefaultRouting As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RemoveFromDefaultRouting { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the dial out will be removed from the MCU default routing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This operation can only be performed by trusted applications and is only supported
+            by the audio-video MCU.
+            </para>
+          <para>
+            Removing the dialed-out to endpoint from the MCU default routing means that the endpoint
+            will not receive any media from other endpoints connected to the MCU default routing. Also 
+            those endpoints will not receive any media from this endpoint.
+            </para>
+          <para>
+            The dialed-out to endpoint can be added back to the MCU default routing 
+            by calling <see cref="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginAddToDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

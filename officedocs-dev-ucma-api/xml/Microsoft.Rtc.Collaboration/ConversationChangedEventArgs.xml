@@ -1,0 +1,108 @@
+﻿<Type Name="ConversationChangedEventArgs" FullName="Microsoft.Rtc.Collaboration.ConversationChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ConversationChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConversationChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConversationChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationChangedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConversationChangedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the information supplied when a call is moved to a derived Conversation.
+            </summary>
+    <remarks>
+      <para>
+            Moving a call to a derived Conversation ensures that the original Conversation is maintained in a consistent state. 
+            A call can be "moved" to a derived Conversation during one of the following operations.
+            </para>
+      <list type="bullet">
+        <item>
+          <description>A modality escalation where the new outbound call is accepted by a different remote participant than 
+            the one in the current Conversation. For example, this can happen when adding the outbound audio call that is added 
+            to an instant messaging conversation
+            is deflected to a different remote participant.</description>
+        </item>
+        <item>
+          <description>A partial escalation to conferencing that involves multimodal communications with multiple remote endpoints. 
+              This can happen for either of the following reasons.
+              </description>
+        </item>
+      </list>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="NewConversation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conversation NewConversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Conversation NewConversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationChangedEventArgs.NewConversation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewConversation As Conversation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ NewConversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conversation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the new Conversation that contains the Call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousConversation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conversation PreviousConversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Conversation PreviousConversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationChangedEventArgs.PreviousConversation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreviousConversation As Conversation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ PreviousConversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conversation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Conversation that contained the Call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationChangedReason Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConversationChangedReason Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationChangedEventArgs.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As ConversationChangedReason" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationChangedReason Reason { Microsoft::Rtc::Collaboration::ConversationChangedReason get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationChangedReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the reason for which the conversation was changed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

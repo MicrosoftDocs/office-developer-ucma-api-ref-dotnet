@@ -1,0 +1,624 @@
+﻿<Type Name="LocalOwnerPresence" FullName="Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence">
+  <TypeSignature Language="C#" Value="public class LocalOwnerPresence : Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LocalOwnerPresence extends Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" />
+  <TypeSignature Language="VB.NET" Value="Public Class LocalOwnerPresence&#xA;Inherits PublishSubscribeSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LocalOwnerPresence : Microsoft::Rtc::Collaboration::Presence::PublishSubscribeSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            LocalOwnerPresence allows the publication and subscription to presence categories and management of access control lists.
+            It also provides access to a list of subscribers and delegates.
+            </summary>
+    <remarks>
+      <para>
+            This is the main class for managing the presence of the endpoint owner. Here, the application can publish presence categories,
+            subscribe to presence notifications, and assign and manage access control lists.
+            Both UserEndpoint and ApplicationEndpoint instances can publish presence, although they do so in different ways. An ApplicationEndpoint 
+            cannot use the grammar-based method in which container IDs and instance values are automatically generated. Instead, this endpoint type 
+            must explicitly specify these values.
+            Presence categories are well defined types recognized by the server such as state, note, device, contact card etc.
+            </para>
+      <para>
+            Container management enables an application to add specific URIs, domain names, and network flags to containers, as well as to remove 
+            them from containers. These operations permit an application to control subscriber access to presence categories published in these containers. 
+            The network flags consist of sameEnterprise, publicCloud, and federated.
+            </para>
+      <para>
+            Calling BeginSubscribe on a LocalOwnerPresence instance enables an endpoint to receive notifications about changes made to presence categories, 
+            container memberships, and subscriber and delegate lists. This is especially useful in an multiple points of presence (MPOP) scenario to keep 
+            all endpoints of a unified communications entity synchronized.
+            </para>
+      <para>
+            Bootstrapping is another process unique to UserEndpoints. Here, the newly created containers can be initialized with
+            default container memberships and publications decided by the Microsoft Lync Server administrator.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AutomaticPublicationState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresencePublicationState AutomaticPublicationState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.PresencePublicationState AutomaticPublicationState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutomaticPublicationState As PresencePublicationState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresencePublicationState AutomaticPublicationState { Microsoft::Rtc::Collaboration::Presence::PresencePublicationState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresencePublicationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the status of automatic presence publication that occurs along with endpoint establish.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Automtatic presence publication will only be done 
+            when <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" /> 
+            or <see cref="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" /> is set to true and the initial presence
+            publication as part of the endpoint establishment process fails. The publication will be retried and this property will
+            be set to <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresencePublicationState.Published" /> upon successul completion.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticPublicationStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresencePublicationStateChangedEventArgs&gt; AutomaticPublicationStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresencePublicationStateChangedEventArgs&gt; AutomaticPublicationStateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event AutomaticPublicationStateChanged As EventHandler(Of PresencePublicationStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::PresencePublicationStateChangedEventArgs ^&gt; ^ AutomaticPublicationStateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresencePublicationStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of automatic publications changes.
+            </summary>
+        <remarks>
+          <para>Automatic presence publication will only be done 
+            when <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" /> 
+            or <see cref="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" /> is set to true.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAcknowledgeSubscriber">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAcknowledgeSubscriber (string subscriberId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAcknowledgeSubscriber(string subscriberId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginAcknowledgeSubscriber(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAcknowledgeSubscriber (subscriberId As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAcknowledgeSubscriber(System::String ^ subscriberId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subscriberId" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="subscriberId">The subscriber to acknowledge.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to acknowledge a subscriber.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="subscriberId" /> is empty.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="subscriberId" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDeletePresence">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDeletePresence (System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; categoryItems, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDeletePresence(class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; categoryItems, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginDeletePresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDeletePresence (categoryItems As ICollection(Of PresenceCategory), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeletePresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^&gt; ^ categoryItems, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryItems" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="categoryItems">The list of categoryItems to be deleted.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to delete the given list of categories.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state, or when the endpoint is an application endpoint and there is an unknown category.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="categoryItems" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="categoryItems" /> contains a null CategoryItem or the instance id of a category in <paramref name="categoryItems" /> could not be determined.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDeletePresence">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDeletePresence (System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; categories, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDeletePresence(class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; categories, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginDeletePresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDeletePresence (categories As ICollection(Of PresenceCategoryWithMetaData), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeletePresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ categories, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categories" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="categories">The list of categories to be deleted.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to delete the given list of categories.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="categories" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="categories" /> contains a null CategoryItem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginPublishPresence">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginPublishPresence (System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; categoryItems, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginPublishPresence(class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; categoryItems, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginPublishPresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginPublishPresence (categoryItems As ICollection(Of PresenceCategory), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPublishPresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^&gt; ^ categoryItems, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryItems" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="categoryItems">The list of <paramref name="categoryItems" /> to be published.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to publish a given list of categories.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Only UserEndpoints can use this API which uses a grammar provided by UCMA to publish. ApplicationEndpoints have 
+            to explicitly specify the container ID and instance ID for their publication.
+            </para>
+          <para>
+            UserEndpoints must already have subscribed to <see cref="T:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" /> session before they can use this Api.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state, or the current state of <see cref="T:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" /> is not "subscribed" or atleast one of the categories to be published is unknown.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="categoryItems" /> passed is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="categoryItems" /> contains a null CategoryItem or a custom category with invalid xml or transformation.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginPublishPresence">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginPublishPresence (System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; categories, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginPublishPresence(class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; categories, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginPublishPresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginPublishPresence (categories As ICollection(Of PresenceCategoryWithMetaData), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPublishPresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ categories, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categories" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="categories">The list of categories to be published.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to publish a given list of categories.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Deleting a publication involves publishing the <see cref="T:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData" /> object again with the 
+            <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ExpiryPolicy" /> set to <see cref="F:Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy.Time" /> and <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Expires" />
+            set to the value zero.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="categories" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="categories" /> contains a null CategoryItem.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdateContainerMembership">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdateContainerMembership (System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation&gt; operations, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateContainerMembership(class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation&gt; operations, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginUpdateContainerMembership(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUpdateContainerMembership (operations As ICollection(Of ContainerUpdateOperation), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateContainerMembership(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::ContainerUpdateOperation ^&gt; ^ operations, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operations" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="operations">The list of container update operations.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to update the container memberships.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="operations" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="operations" /> contains a null <see cref="T:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.CategoryNotificationEventArgs&gt; CategoryNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.CategoryNotificationEventArgs&gt; CategoryNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.CategoryNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event CategoryNotificationReceived As EventHandler(Of CategoryNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::CategoryNotificationEventArgs ^&gt; ^ CategoryNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This event will be removed from future versions. Use the 'PresenceNotificationReceived' event instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.CategoryNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when notification for presence categories is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CategoryPublicationManifest">
+      <MemberSignature Language="C#" Value="public string CategoryPublicationManifest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CategoryPublicationManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.CategoryPublicationManifest" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CategoryPublicationManifest As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CategoryPublicationManifest { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the serialized version of the category publication manifest.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>For application endpoints this property will be set to null.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerManifest">
+      <MemberSignature Language="C#" Value="public string ContainerManifest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContainerManifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.ContainerManifest" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainerManifest As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContainerManifest { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the serialized version of the container manifest.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>For application endpoints this will be set to null.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.ContainerNotificationEventArgs&gt; ContainerNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.ContainerNotificationEventArgs&gt; ContainerNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.ContainerNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ContainerNotificationReceived As EventHandler(Of ContainerNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::ContainerNotificationEventArgs ^&gt; ^ ContainerNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.ContainerNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when notification for container memberships is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelegateNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.DelegatesNotificationEventArgs&gt; DelegateNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.DelegatesNotificationEventArgs&gt; DelegateNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.DelegateNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DelegateNotificationReceived As EventHandler(Of DelegatesNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::DelegatesNotificationEventArgs ^&gt; ^ DelegateNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.DelegatesNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when notification for delegates is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAcknowledgeSubscriber">
+      <MemberSignature Language="C#" Value="public void EndAcknowledgeSubscriber (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAcknowledgeSubscriber(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndAcknowledgeSubscriber(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndAcknowledgeSubscriber (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAcknowledgeSubscriber(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginAcknowledgeSubscriber.
+            </summary>
+        <remarks>
+          <para>
+            PublishSubscribeException is usually thrown when the XML request sent to the server is invalid.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDeletePresence">
+      <MemberSignature Language="C#" Value="public void EndDeletePresence (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDeletePresence(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndDeletePresence(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDeletePresence (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeletePresence(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginDeletePresence.
+            </summary>
+        <remarks>
+          <para>
+            PublishSubscribeException is usually thrown when the XML request sent to the server is invalid.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result or when the result is null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPublishPresence">
+      <MemberSignature Language="C#" Value="public void EndPublishPresence (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndPublishPresence(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndPublishPresence(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndPublishPresence (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndPublishPresence(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginPublishPresence.
+            </summary>
+        <remarks>
+          <para>
+            PublishSubscribeException is usually thrown when the XML request sent to the server is invalid.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the publish operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateContainerMembership">
+      <MemberSignature Language="C#" Value="public void EndUpdateContainerMembership (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdateContainerMembership(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndUpdateContainerMembership(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateContainerMembership (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateContainerMembership(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginUpdateContainerMembership.
+            </summary>
+        <remarks>
+          <para>
+            PublishSubscribeException is usually thrown when the XML request sent to the server is invalid.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the publish operation or an empty container update operation is specified.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.LocalPresentityNotificationEventArgs&gt; PresenceNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.LocalPresentityNotificationEventArgs&gt; PresenceNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.PresenceNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PresenceNotificationReceived As EventHandler(Of LocalPresentityNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::LocalPresentityNotificationEventArgs ^&gt; ^ PresenceNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.LocalPresentityNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when notification for presence categories is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriberNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.SubscriberNotificationEventArgs&gt; SubscriberNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.SubscriberNotificationEventArgs&gt; SubscriberNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.SubscriberNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event SubscriberNotificationReceived As EventHandler(Of SubscriberNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::SubscriberNotificationEventArgs ^&gt; ^ SubscriberNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.SubscriberNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when notification for a pending subscriber is received.
+            </summary>
+        <remarks>
+          <para>
+            Notifications from watchers who are blocked will be suppressed. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

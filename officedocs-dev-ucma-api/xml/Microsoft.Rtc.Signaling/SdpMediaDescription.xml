@@ -1,0 +1,465 @@
+﻿<Type Name="SdpMediaDescription" FullName="Microsoft.Rtc.Signaling.SdpMediaDescription">
+  <TypeSignature Language="C#" Value="public class SdpMediaDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpMediaDescription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SdpMediaDescription" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpMediaDescription" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpMediaDescription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a media section of the SDP.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpMediaDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpMediaDescription();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SdpMediaDescription (Microsoft.Rtc.Signaling.SdpMediaDescription source);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SdpMediaDescription source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.#ctor(Microsoft.Rtc.Signaling.SdpMediaDescription)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (source As SdpMediaDescription)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SdpMediaDescription(Microsoft::Rtc::Signaling::SdpMediaDescription ^ source);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Signaling.SdpMediaDescription" />
+      </Parameters>
+      <Docs>
+        <param name="source">The SdpMediaDescription to copy.</param>
+        <summary>
+            Constructs an copy of the supplied media section. This constructor is private,
+            but the Copy() function may be used to create a copy.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the argument is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpMediaDescription (string mediaName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string mediaName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mediaName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpMediaDescription(System::String ^ mediaName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mediaName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mediaName">The type of media represented by the "m" line; for example, "audio" or "video".</param>
+        <summary>
+            Initializes a new instance of the class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attributes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Rtc.Signaling.SdpAttribute&gt; Attributes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Rtc.Signaling.SdpAttribute&gt; Attributes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.Attributes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Attributes As IList(Of SdpAttribute)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IList&lt;Microsoft::Rtc::Signaling::SdpAttribute ^&gt; ^ Attributes { System::Collections::Generic::IList&lt;Microsoft::Rtc::Signaling::SdpAttribute ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Rtc.Signaling.SdpAttribute&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of "a" lines from the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bandwidth">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SdpBandwidth Bandwidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SdpBandwidth Bandwidth" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.Bandwidth" />
+      <MemberSignature Language="VB.NET" Value="Public Property Bandwidth As SdpBandwidth" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SdpBandwidth ^ Bandwidth { Microsoft::Rtc::Signaling::SdpBandwidth ^ get(); void set(Microsoft::Rtc::Signaling::SdpBandwidth ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SdpBandwidth</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets details of the "b" line from the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>For backward compatibility, this will return only the first b line even if there are multiple lines.
+            If the application can consume multiple b lines, it should use the Bandwidths property instead.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when value is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Bandwidths">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SdpBandwidth&gt; Bandwidths { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SdpBandwidth&gt; Bandwidths" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.Bandwidths" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Bandwidths As Collection(Of SdpBandwidth)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SdpBandwidth ^&gt; ^ Bandwidths { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SdpBandwidth ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SdpBandwidth&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of bandwidths from the SDP. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SdpConnection Connection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SdpConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.Connection" />
+      <MemberSignature Language="VB.NET" Value="Public Property Connection As SdpConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SdpConnection ^ Connection { Microsoft::Rtc::Signaling::SdpConnection ^ get(); void set(Microsoft::Rtc::Signaling::SdpConnection ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SdpConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the details of the "c" line from the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when Connection is set to null. Use Connection.Reset(null)
+            to indicate no "c" line is present.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Rtc.Signaling.SdpMediaDescription Copy ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Signaling.SdpMediaDescription Copy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.Copy" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Copy () As SdpMediaDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Rtc::Signaling::SdpMediaDescription ^ Copy();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SdpMediaDescription</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of SdpMediaDescription with the same values of the current instance.
+            This function performs a deep copy by copying member fields as well.
+            </summary>
+        <returns>Returns a new instance of SdpMediaDescription.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionKey">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SdpEncryptionKey EncryptionKey { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SdpEncryptionKey EncryptionKey" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.EncryptionKey" />
+      <MemberSignature Language="VB.NET" Value="Public Property EncryptionKey As SdpEncryptionKey" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SdpEncryptionKey ^ EncryptionKey { Microsoft::Rtc::Signaling::SdpEncryptionKey ^ get(); void set(Microsoft::Rtc::Signaling::SdpEncryptionKey ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SdpEncryptionKey</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the details of the "k" line from the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when EncryptionKey is set to null. Use EncryptionKey.Reset()
+            to indicate no "k" line is present.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Formats">
+      <MemberSignature Language="C#" Value="public string Formats { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Formats" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.Formats" />
+      <MemberSignature Language="VB.NET" Value="Public Property Formats As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Formats { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets one or more tokens found at the end of the "m" line. When using RTP for a
+            transport, these tokens usually represent a list of payload types.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when value is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when value is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaName">
+      <MemberSignature Language="C#" Value="public string MediaName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MediaName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.MediaName" />
+      <MemberSignature Language="VB.NET" Value="Public Property MediaName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MediaName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of media represented by the "m" line; for example, "audio" and "video."
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when value is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when value is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseAttribute">
+      <MemberSignature Language="C#" Value="protected virtual bool ParseAttribute (Microsoft.Rtc.Signaling.SdpParseStatus parseStatus, string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool ParseAttribute(class Microsoft.Rtc.Signaling.SdpParseStatus parseStatus, string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.ParseAttribute(Microsoft.Rtc.Signaling.SdpParseStatus,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ParseAttribute (parseStatus As SdpParseStatus, name As String, value As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool ParseAttribute(Microsoft::Rtc::Signaling::SdpParseStatus ^ parseStatus, System::String ^ name, System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parseStatus" Type="Microsoft.Rtc.Signaling.SdpParseStatus" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parseStatus">Provides the current line number and a means to set a detailed 
+            error message should parsing fail.</param>
+        <param name="name">Attribute name</param>
+        <param name="value">Attribute value, null if there is no ":" on the line.</param>
+        <summary>
+            Called whenever an attribute should be processed by the parser. A derived class
+            can overload this function and provide customized parsing. The supplied default 
+            function will simply create an instance of SdpAttribute and append it to the list
+            of SdpAttributes. Should a derived class still want the attribute appended, it should
+            call the base implementation.
+            </summary>
+        <returns>Returns false if the attribute is not valid.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Property Port As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Port { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the port where the media should be directed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when Port is less than 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PortCount">
+      <MemberSignature Language="C#" Value="public int PortCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PortCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.PortCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property PortCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int PortCount { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the number of ports in series starting with the value returned by the
+            Port property. Default value if nothing is specified is 1.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when PortCount is less than 1.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeAttributes">
+      <MemberSignature Language="C#" Value="protected virtual void SerializeAttributes (Microsoft.Rtc.Signaling.SdpWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SerializeAttributes(class Microsoft.Rtc.Signaling.SdpWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.SerializeAttributes(Microsoft.Rtc.Signaling.SdpWriter)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SerializeAttributes (writer As SdpWriter)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void SerializeAttributes(Microsoft::Rtc::Signaling::SdpWriter ^ writer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="Microsoft.Rtc.Signaling.SdpWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">SdpWriter instance.</param>
+        <summary>
+            Serializes attributes ("a" lines) onto the supplied SdpWriter.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerializeFormats">
+      <MemberSignature Language="C#" Value="protected virtual void SerializeFormats (Microsoft.Rtc.Signaling.SdpWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SerializeFormats(class Microsoft.Rtc.Signaling.SdpWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.SerializeFormats(Microsoft.Rtc.Signaling.SdpWriter)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SerializeFormats (writer As SdpWriter)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void SerializeFormats(Microsoft::Rtc::Signaling::SdpWriter ^ writer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="Microsoft.Rtc.Signaling.SdpWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">SdpWriter instance.</param>
+        <summary>
+            Serializes supported formats onto the supplied StringBuilder.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportProtocol">
+      <MemberSignature Language="C#" Value="public string TransportProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransportProtocol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpMediaDescription.TransportProtocol" />
+      <MemberSignature Language="VB.NET" Value="Public Property TransportProtocol As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransportProtocol { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the transport protocol specified in the "m" line. For example, "RTP/AVP".
+            The default value "RTP/AVP" is used when serializing if nothing else is specified.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when value is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when value is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (System.IO.TextWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(class System.IO.TextWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpMediaDescription.Write(System.IO.TextWriter)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (writer As TextWriter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Write(System::IO::TextWriter ^ writer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.IO.TextWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">The writer to append this portion of the SDP.</param>
+        <summary>
+            Appends the global section of the SDP to the provided string builder.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.MessageParsingException">Thrown when the global portion of the SDP is not serializable in its current state</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the argument is null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

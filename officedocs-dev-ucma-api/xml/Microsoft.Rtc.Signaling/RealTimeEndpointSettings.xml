@@ -1,0 +1,169 @@
+﻿<Type Name="RealTimeEndpointSettings" FullName="Microsoft.Rtc.Signaling.RealTimeEndpointSettings">
+  <TypeSignature Language="C#" Value="public class RealTimeEndpointSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RealTimeEndpointSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeEndpointSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class RealTimeEndpointSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeEndpointSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents settings for configuring a RealTimeEndpoint
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="EndpointId">
+      <MemberSignature Language="C#" Value="public string EndpointId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpointSettings.EndpointId" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndpointId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Endpoint Id to use. Can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Specifying an endpoint ID can be useful in recovery scenarios where the application wishes to recover an aborted session.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpointSettings.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Additional headers to add to every SIP message sent from this endpoint. Can be empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.OutboundConnectionConfiguration OutboundConnectionConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.OutboundConnectionConfiguration OutboundConnectionConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpointSettings.OutboundConnectionConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutboundConnectionConfiguration As OutboundConnectionConfiguration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ OutboundConnectionConfiguration { Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ get(); void set(Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.OutboundConnectionConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the object containing outbound configuration settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyConnectionContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ConnectionContext ProxyConnectionContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ConnectionContext ProxyConnectionContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpointSettings.ProxyConnectionContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyConnectionContext As ConnectionContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ConnectionContext ^ ProxyConnectionContext { Microsoft::Rtc::Signaling::ConnectionContext ^ get(); void set(Microsoft::Rtc::Signaling::ConnectionContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ConnectionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets connection information for the proxy server.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            You can use automatic configuration or specify a proxy server but not both.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Attempted to enable automatic configuration and configure a proxy server at the same time.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationEnabled">
+      <MemberSignature Language="C#" Value="public bool RegistrationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RegistrationEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpointSettings.RegistrationEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegistrationEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RegistrationEnabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether registration should be enabled for this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportType">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.Rtc.Signaling.SipTransportType&gt; TransportType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Rtc.Signaling.SipTransportType&gt; TransportType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpointSettings.TransportType" />
+      <MemberSignature Language="VB.NET" Value="Public Property TransportType As Nullable(Of SipTransportType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::SipTransportType&gt; TransportType { Nullable&lt;Microsoft::Rtc::Signaling::SipTransportType&gt; get(); void set(Nullable&lt;Microsoft::Rtc::Signaling::SipTransportType&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Rtc.Signaling.SipTransportType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the transport to use with the registration server.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Transport Type is not Tls or Tcp.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

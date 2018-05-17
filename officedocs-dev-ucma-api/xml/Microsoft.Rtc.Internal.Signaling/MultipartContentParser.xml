@@ -1,0 +1,149 @@
+﻿<Type Name="MultipartContentParser" FullName="Microsoft.Rtc.Internal.Signaling.MultipartContentParser">
+  <TypeSignature Language="C#" Value="public struct MultipartContentParser" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MultipartContentParser extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Signaling.MultipartContentParser" />
+  <TypeSignature Language="VB.NET" Value="Public Structure MultipartContentParser" />
+  <TypeSignature Language="C++ CLI" Value="public value class MultipartContentParser" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipartContentParser (byte[] boundary, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] boundary, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.#ctor(System.Byte[],System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (boundary As Byte(), body As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MultipartContentParser(cli::array &lt;System::Byte&gt; ^ boundary, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="boundary" Type="System.Byte[]" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="boundary">To be added.</param>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MultipartContentParser (System.Net.Mime.ContentType contentType, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.#ctor(System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MultipartContentParser(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">To be added.</param>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundary">
+      <MemberSignature Language="C#" Value="public string GetBoundary ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetBoundary() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundary" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBoundary () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetBoundary();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundaryBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBoundaryBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetBoundaryBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundaryBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBoundaryBytes () As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetBoundaryBytes();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoundaryBytes">
+      <MemberSignature Language="C#" Value="public static byte[] GetBoundaryBytes (System.Net.Mime.ContentType contentType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBoundaryBytes(class System.Net.Mime.ContentType contentType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundaryBytes(System.Net.Mime.ContentType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::Byte&gt; ^ GetBoundaryBytes(System::Net::Mime::ContentType ^ contentType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parts">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Internal.Signaling.MultipartItem&gt; Parts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Microsoft.Rtc.Internal.Signaling.MultipartItem&gt; Parts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.Parts" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parts As IEnumerable(Of MultipartItem)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Signaling::MultipartItem&gt; ^ Parts { System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Signaling::MultipartItem&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Internal.Signaling.MultipartItem&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

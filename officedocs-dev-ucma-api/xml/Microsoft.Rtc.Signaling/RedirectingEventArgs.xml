@@ -1,0 +1,190 @@
+﻿<Type Name="RedirectingEventArgs" FullName="Microsoft.Rtc.Signaling.RedirectingEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class RedirectingEventArgs : Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RedirectingEventArgs extends Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RedirectingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RedirectingEventArgs&#xA;Inherits SipResponseReceivedEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RedirectingEventArgs abstract : Microsoft::Rtc::Signaling::SipResponseReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Exposes the redirect target URI and lets the application try the URI 
+            depending upon the State property.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Rtc.Signaling.RedirectAction Action { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.RedirectAction Action" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.Action" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Action As RedirectAction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Rtc::Signaling::RedirectAction Action { Microsoft::Rtc::Signaling::RedirectAction get(); void set(Microsoft::Rtc::Signaling::RedirectAction value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RedirectAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Action associated with the current redirect.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentTarget">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Rtc.Signaling.RealTimeAddress CurrentTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress CurrentTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.CurrentTarget" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CurrentTarget As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Rtc::Signaling::RealTimeAddress ^ CurrentTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the current redirect. Can be null if there is no current target.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAutomaticRedirection">
+      <MemberSignature Language="C#" Value="public bool DisableAutomaticRedirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableAutomaticRedirection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.DisableAutomaticRedirection" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticRedirection As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticRedirection { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value indicating whether the application wants the disable
+            automatic redirection based on the redirect action set in this event arg
+            after returning from the redirect callback handler of the application.
+            If disabled, the application takes the responsibility to store this
+            event arg, set the redirect action later, and call ResumeRedirection.
+            Failure to do so will result in the pending Particpate method hanging. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of headers to add to the next set of targets.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The list of headers can be modified for the next targets that will be tried.
+            The headers will be applied to the INVITE request.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousException">
+      <MemberSignature Language="C#" Value="public Exception PreviousException { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception PreviousException" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.PreviousException" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreviousException As Exception" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Exception ^ PreviousException { Exception ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the previous exception, if any.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResumeRedirection">
+      <MemberSignature Language="C#" Value="public void ResumeRedirection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResumeRedirection() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RedirectingEventArgs.ResumeRedirection" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResumeRedirection ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ResumeRedirection();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resumes redirection work if it was delayed originally. This method can be called only once
+            per redirect event raised. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Targets">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt; Targets { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Signaling.RealTimeAddress&gt; Targets" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.Targets" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Targets As ReadOnlyCollection(Of RealTimeAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ Targets { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the all the redirects.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

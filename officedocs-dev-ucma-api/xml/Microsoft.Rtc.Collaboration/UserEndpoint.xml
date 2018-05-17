@@ -1,0 +1,290 @@
+﻿<Type Name="UserEndpoint" FullName="Microsoft.Rtc.Collaboration.UserEndpoint">
+  <TypeSignature Language="C#" Value="public class UserEndpoint : Microsoft.Rtc.Collaboration.LocalEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserEndpoint extends Microsoft.Rtc.Collaboration.LocalEndpoint" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.UserEndpoint" />
+  <TypeSignature Language="VB.NET" Value="Public Class UserEndpoint&#xA;Inherits LocalEndpoint" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserEndpoint : Microsoft::Rtc::Collaboration::LocalEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.LocalEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            UserEndpoint is a specialization of LocalEndpoint for communication on behalf of information workers. 
+            </summary>
+    <remarks>
+      <para>The owner of a UserEndpoint is represented by an Active Directory User object. This type of endpoint
+            is not meant to be highly available or trusted by other servers. It is rather designed to have all the capabilities
+            that an information worker needs. So unlike an ApplicationEndpoint, it allows the owner to manage her contacts and groups or to
+            use different devices for different modes of communication.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserEndpoint (Microsoft.Rtc.Collaboration.CollaborationPlatform platform, Microsoft.Rtc.Collaboration.UserEndpointSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CollaborationPlatform platform, class Microsoft.Rtc.Collaboration.UserEndpointSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpoint.#ctor(Microsoft.Rtc.Collaboration.CollaborationPlatform,Microsoft.Rtc.Collaboration.UserEndpointSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (platform As CollaborationPlatform, settings As UserEndpointSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpoint(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, Microsoft::Rtc::Collaboration::UserEndpointSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="platform" Type="Microsoft.Rtc.Collaboration.CollaborationPlatform" />
+        <Parameter Name="settings" Type="Microsoft.Rtc.Collaboration.UserEndpointSettings" />
+      </Parameters>
+      <Docs>
+        <param name="platform">The platform object this endpoint is bound to.</param>
+        <param name="settings">Settings to initialize the instance.</param>
+        <summary>
+            Creates a new instance of the UserEndpoint class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when invoked before an auto-provisioned platform has been started.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one or more arguments are not valid.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more arguments are null or empty.</exception>
+        <exception cref="T:System.NotSupportedException">Thrown when the endpoint is created without server name and the platform's transport type is not Tls.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContactGroupServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices ContactGroupServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices ContactGroupServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.ContactGroupServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContactGroupServices As ContactGroupServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ContactsGroups::ContactGroupServices ^ ContactGroupServices { Microsoft::Rtc::Collaboration::ContactsGroups::ContactGroupServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the service which can be used to access or update the contact/group information for this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As NetworkCredential" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::NetworkCredential ^ Credential { System::Net::NetworkCredential ^ get(); void set(System::Net::NetworkCredential ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the credential needed to authenticate the endpoint with servers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This value is initialized with the credential passed through UserEndpointSettings and can subsequently
+            be overwritten if a different set of credentials is to be used. Use CredentialCache.DefaultNetworkCredentials for logged on user.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerPhoneUri">
+      <MemberSignature Language="C#" Value="public override sealed string OwnerPhoneUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerPhoneUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.OwnerPhoneUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerPhoneUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerPhoneUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tel URI of the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            String.Empty is returned if the <see cref="P:Microsoft.Rtc.Collaboration.LocalEndpoint.LocalOwnerPresence" /> has not yet been established.
+            String.Empty will also be returned if a phone number is not found for the user.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerUri">
+      <MemberSignature Language="C#" Value="public override sealed string OwnerUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.OwnerUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that this URI is different from the endpoint URI. This URI is not bound to a specific endpoint but to the owner of the endpoint.
+            The owner of an endpoint can typically be contacted on multiple endpoints through forking or load balancing.
+            
+            This value identifies the owner of the local endpoint and must be set when the LocalEndpoint implementation is instantiated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerVoicemailUri">
+      <MemberSignature Language="C#" Value="public string OwnerVoicemailUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerVoicemailUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.OwnerVoicemailUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerVoicemailUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerVoicemailUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the provisioned owner voicemail URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property will return string.Empty value if the voicemail URI for this user is not available.
+            </para>
+          <para>
+            Administrators can provision a user object with a voicemail URI by enabling the user for integration with Exchange UM.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.PinManagement.UserPinServices PinServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.PinManagement.UserPinServices PinServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.PinServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PinServices As UserPinServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::PinManagement::UserPinServices ^ PinServices { Microsoft::Rtc::Collaboration::PinManagement::UserPinServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PinManagement.UserPinServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the user pin services <see cref="T:Microsoft.Rtc.Collaboration.PinManagement.UserPinServices" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.UserEndpointPresenceServices PresenceServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.UserEndpointPresenceServices PresenceServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.PresenceServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceServices As UserEndpointPresenceServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::UserEndpointPresenceServices ^ PresenceServices { Microsoft::Rtc::Collaboration::UserEndpointPresenceServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.UserEndpointPresenceServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the presence services for this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TelephonyMode">
+      <MemberSignature Language="C#" Value="public string TelephonyMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TelephonyMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.TelephonyMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TelephonyMode As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TelephonyMode { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the telephony mode for the endpoint: None, Uc, Rcc or Dual.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            String.Empty is returned if the <see cref="P:Microsoft.Rtc.Collaboration.LocalEndpoint.LocalOwnerPresence" /> has not yet been established.
+            String.Empty will also be returned if a telephony mode is not found for the user.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UmEnabled">
+      <MemberSignature Language="C#" Value="public bool UmEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UmEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.UmEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UmEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UmEnabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether Unified Messaging is enabled for the user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If the LocalOwnerPresence has not yet been established this property will return false.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,115 @@
+﻿<Type Name="SubscriptionStateChangedEventArgs" FullName="Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SubscriptionStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SubscriptionStateChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class SubscriptionStateChangedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SubscriptionStateChangedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Returns information relevant to a subscription state change.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SubscriptionStateChangedEventArgs (Microsoft.Rtc.Signaling.SubscriptionSignalingState previousSignalingState, Microsoft.Rtc.Signaling.SubscriptionSignalingState newSignalingState, Microsoft.Rtc.Signaling.TransitionReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Signaling.SubscriptionSignalingState previousSignalingState, valuetype Microsoft.Rtc.Signaling.SubscriptionSignalingState newSignalingState, valuetype Microsoft.Rtc.Signaling.TransitionReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs.#ctor(Microsoft.Rtc.Signaling.SubscriptionSignalingState,Microsoft.Rtc.Signaling.SubscriptionSignalingState,Microsoft.Rtc.Signaling.TransitionReason)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (previousSignalingState As SubscriptionSignalingState, newSignalingState As SubscriptionSignalingState, reason As TransitionReason)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SubscriptionStateChangedEventArgs(Microsoft::Rtc::Signaling::SubscriptionSignalingState previousSignalingState, Microsoft::Rtc::Signaling::SubscriptionSignalingState newSignalingState, Microsoft::Rtc::Signaling::TransitionReason reason);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="previousSignalingState" Type="Microsoft.Rtc.Signaling.SubscriptionSignalingState" />
+        <Parameter Name="newSignalingState" Type="Microsoft.Rtc.Signaling.SubscriptionSignalingState" />
+        <Parameter Name="reason" Type="Microsoft.Rtc.Signaling.TransitionReason" />
+      </Parameters>
+      <Docs>
+        <param name="previousSignalingState">Previous state of the SipSubscription.</param>
+        <param name="newSignalingState">Updated state of the SipSubscription, which raises an event.</param>
+        <param name="reason">Indication of whether the event is raised due to client action or server action.</param>
+        <summary>
+            Initializes a new instance of the SubscriptionStateChangedEventArgs class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SubscriptionSignalingState NewState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SubscriptionSignalingState NewState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs.NewState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewState As SubscriptionSignalingState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SubscriptionSignalingState NewState { Microsoft::Rtc::Signaling::SubscriptionSignalingState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SubscriptionSignalingState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the updated state after the change.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SubscriptionSignalingState PreviousState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SubscriptionSignalingState PreviousState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs.PreviousState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreviousState As SubscriptionSignalingState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SubscriptionSignalingState PreviousState { Microsoft::Rtc::Signaling::SubscriptionSignalingState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SubscriptionSignalingState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the signaling state before this change occurs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReasonForChange">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.TransitionReason ReasonForChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.TransitionReason ReasonForChange" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs.ReasonForChange" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReasonForChange As TransitionReason" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::TransitionReason ReasonForChange { Microsoft::Rtc::Signaling::TransitionReason get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TransitionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the reason for change for the transition, either server or client.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

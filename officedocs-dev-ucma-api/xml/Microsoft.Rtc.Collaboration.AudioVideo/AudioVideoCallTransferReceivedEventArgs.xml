@@ -1,0 +1,66 @@
+﻿<Type Name="AudioVideoCallTransferReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallTransferReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class AudioVideoCallTransferReceivedEventArgs : Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioVideoCallTransferReceivedEventArgs extends Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallTransferReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioVideoCallTransferReceivedEventArgs&#xA;Inherits CallTransferReceivedEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoCallTransferReceivedEventArgs : Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the event argument for handling transfer received event. 
+            </summary>
+    <remarks>
+      <para>
+            This event is raised only when the transfer operation is for creating an outgoing Call;
+            the event is raised when the Method parameter in the "Refer" message received indicates 
+            "Invite" or the Method parameter is missing.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall Accept (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall Accept(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallTransferReceivedEventArgs.Accept(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Accept (headers As IEnumerable(Of SignalingHeader)) As AudioVideoCall" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCall ^ Accept(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="headers">The signaling headers to add. Can be null.</param>
+        <summary>
+            Accepts the "Transfer" operation received. 
+            </summary>
+        <returns>
+            The new call will belong to existing conversation (for self-transfer scenario) or a new
+            conversation. The application is responsible for establishing this new call.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the Endpoint associated with the new transfer call is terminating or terminated or when then underlying transfer transaction
+            is not valid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the call is unable to send successful response to the transferor.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

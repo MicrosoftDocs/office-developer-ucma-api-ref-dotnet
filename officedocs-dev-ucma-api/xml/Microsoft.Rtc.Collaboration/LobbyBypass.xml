@@ -1,0 +1,72 @@
+﻿<Type Name="LobbyBypass" FullName="Microsoft.Rtc.Collaboration.LobbyBypass">
+  <TypeSignature Language="C#" Value="public enum LobbyBypass" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LobbyBypass extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LobbyBypass" />
+  <TypeSignature Language="VB.NET" Value="Public Enum LobbyBypass" />
+  <TypeSignature Language="C++ CLI" Value="public enum class LobbyBypass" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents types of users who bypass the lobby.
+            </summary>
+    <remarks>
+      <para>
+            A conference leader can allow specific types of users to bypass the lobby and get admitted directly into the conference although under normal conditions
+            those users are placed in the lobby. As an example, a conference leader may allow participants joining over the phone to bypass the lobby.
+            Note however, if the conference current access level is <see cref="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Locked" />, all new users joining the conference - regardless of any bypass setting -
+            are placed in the conference lobby.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.LobbyBypass Disabled = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.LobbyBypass.Disabled" />
+      <MemberSignature Language="VB.NET" Value="Disabled" />
+      <MemberSignature Language="C++ CLI" Value="Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyBypass</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Lobby bypass is disabled for all participants.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="EnabledForGatewayParticipants">
+      <MemberSignature Language="C#" Value="EnabledForGatewayParticipants" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.LobbyBypass EnabledForGatewayParticipants = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.LobbyBypass.EnabledForGatewayParticipants" />
+      <MemberSignature Language="VB.NET" Value="EnabledForGatewayParticipants" />
+      <MemberSignature Language="C++ CLI" Value="EnabledForGatewayParticipants" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyBypass</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Lobby bypass is enabled for participants joining from a voice gateway. For example, PSTN users will bypass lobby.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

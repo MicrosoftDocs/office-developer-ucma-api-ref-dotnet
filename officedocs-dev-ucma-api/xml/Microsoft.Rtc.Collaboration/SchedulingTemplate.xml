@@ -1,0 +1,77 @@
+﻿<Type Name="SchedulingTemplate" FullName="Microsoft.Rtc.Collaboration.SchedulingTemplate">
+  <TypeSignature Language="C#" Value="public enum SchedulingTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SchedulingTemplate extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.SchedulingTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SchedulingTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public enum class SchedulingTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the method used in scheduling a conference.
+            </summary>
+    <remarks>
+      <para>
+            There are two ways for scheduling conferences. The first depends
+            on properties set by the organizer <see cref="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.OrganizerSupplied" /> . An organizer can change the conference properties to any permissible value.
+            The other scheduling type depends on a template determined by the system administrator <see cref="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.AdministratorSupplied" /> .
+            The organizer cannot supply any configuration other than the conference ID. All other conference properties are automatically set by the system depending on the
+            settings specified by the system administrator.
+            </para>
+      <para>
+            Scheduling conferences using the administrator template is only intended for advanced scenarios. Most applications should use organizer
+            template scheduling.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdministratorSupplied">
+      <MemberSignature Language="C#" Value="AdministratorSupplied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate AdministratorSupplied = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.AdministratorSupplied" />
+      <MemberSignature Language="VB.NET" Value="AdministratorSupplied" />
+      <MemberSignature Language="C++ CLI" Value="AdministratorSupplied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SchedulingTemplate</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The conference was scheduled based on an administrator supplied template.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrganizerSupplied">
+      <MemberSignature Language="C#" Value="OrganizerSupplied" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate OrganizerSupplied = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.OrganizerSupplied" />
+      <MemberSignature Language="VB.NET" Value="OrganizerSupplied" />
+      <MemberSignature Language="C++ CLI" Value="OrganizerSupplied" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SchedulingTemplate</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The conference was scheduled based on an organizer supplied template.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

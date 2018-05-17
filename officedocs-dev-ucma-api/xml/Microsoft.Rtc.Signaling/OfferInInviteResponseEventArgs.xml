@@ -1,0 +1,97 @@
+﻿<Type Name="OfferInInviteResponseEventArgs" FullName="Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class OfferInInviteResponseEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit OfferInInviteResponseEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class OfferInInviteResponseEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class OfferInInviteResponseEventArgs abstract : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Used with the HandleOfferInInviteResponse call in IOfferAnswer.
+            This will expose the media offer from the remote participant and gives
+            the ability to send the media answer in the acknowledgement.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Offer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ContentDescription Offer { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ContentDescription Offer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs.Offer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Offer As ContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::ContentDescription ^ Offer {  public:&#xA;Microsoft::Rtc::Signaling::ContentDescription ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::ContentDescription ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the media description offer from the remote participant.
+            </summary>
+        <value>The offer.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadyToAnswer">
+      <MemberSignature Language="C#" Value="public abstract void ReadyToAnswer (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadyToAnswer(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs.ReadyToAnswer(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReadyToAnswer (signalingHeaders As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReadyToAnswer(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The signaling headers to use in the acknowledgement. Can be null.</param>
+        <summary>
+            Accepts the offer and triggers IOfferAnswer.GetAnswer calls to send the answer. 
+            The application can call this method when it is ready with the answer for the offer 
+            represented in this event arg.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when acknowledgement has already been sent.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingSession Session { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingSession Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs.Session" />
+      <MemberSignature Language="VB.NET" Value="Public Property Session As SignalingSession" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::SignalingSession ^ Session {  public:&#xA;Microsoft::Rtc::Signaling::SignalingSession ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::SignalingSession ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the signaling session associated with this event argument.
+            </summary>
+        <value>The signaling session.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,147 @@
+﻿<Type Name="EndpointSubtype" FullName="Microsoft.Rtc.Collaboration.EndpointSubtype">
+  <TypeSignature Language="C#" Value="public enum EndpointSubtype" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EndpointSubtype extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.EndpointSubtype" />
+  <TypeSignature Language="VB.NET" Value="Public Enum EndpointSubtype" />
+  <TypeSignature Language="C++ CLI" Value="public enum class EndpointSubtype" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Indicates the endpoint sub-type for an endpoint of type "Application". 
+            </summary>
+    <remarks>
+      <para>
+            The sub-type of an endpoint is only meaningful if its type is "Application".
+            
+            The most common sub-type is "attendant". The sub-type is typically used by any application that interacts with an information
+            worker in an automated fashion by for example using voice user interface technologies such as Automated Speech Recognition,
+            Speech Synthesis, touch tones, or even instant messages. An auto-attendant typically consists of multiple instances fronted
+            by a load balancer for high availability purpose. When communicating with an endpoint of sub-type "attendant", the far-end
+            targets the endpoint Uri as opposed to the Application Uri (Owner Uri) when adding a modality. Unlike human beings who can 
+            coordinate the use of multiple endpoints in a communication, an auto-attendant typically requires the multimodal calls of a given
+            conversation to be routed to or originated from the same application instance and endpoint. Advertising that an Application is
+            an auto-attendant is of utmost importance to handle multimodal escalation by information workers.
+            
+            Note that the endpoint sub-type is based on the header parameter actor defined in RFC 3840.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attendant">
+      <MemberSignature Language="C#" Value="Attendant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointSubtype Attendant = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointSubtype.Attendant" />
+      <MemberSignature Language="VB.NET" Value="Attendant" />
+      <MemberSignature Language="C++ CLI" Value="Attendant" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the endpoint provides communication with an application that will act as an intermediary
+            in contacting the principal associated with the device, or a substitute.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Information">
+      <MemberSignature Language="C#" Value="Information" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointSubtype Information = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointSubtype.Information" />
+      <MemberSignature Language="VB.NET" Value="Information" />
+      <MemberSignature Language="C++ CLI" Value="Information" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the endpoint provides communication with an application that will provide information about
+            the principal.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageTaker">
+      <MemberSignature Language="C#" Value="MessageTaker" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointSubtype MessageTaker = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointSubtype.MessageTaker" />
+      <MemberSignature Language="VB.NET" Value="MessageTaker" />
+      <MemberSignature Language="C++ CLI" Value="MessageTaker" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the endpoint provides communication with an application that will take messages 
+            and deliver them to the principal.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointSubtype None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointSubtype.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the endpoint does not have a sub-type.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Principal">
+      <MemberSignature Language="C#" Value="Principal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointSubtype Principal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointSubtype.Principal" />
+      <MemberSignature Language="VB.NET" Value="Principal" />
+      <MemberSignature Language="C++ CLI" Value="Principal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Indicates that the endpoint provides communication with the principal
+            associated with the device. The principal can be a human being or an application. (Advanced)
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

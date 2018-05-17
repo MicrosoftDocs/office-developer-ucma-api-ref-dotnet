@@ -1,0 +1,241 @@
+﻿<Type Name="ISdpMediaNegotiator" FullName="Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator">
+  <TypeSignature Language="C#" Value="public interface ISdpMediaNegotiator" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISdpMediaNegotiator" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISdpMediaNegotiator" />
+  <TypeSignature Language="C++ CLI" Value="public interface class ISdpMediaNegotiator" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CancelNegotiation">
+      <MemberSignature Language="C#" Value="public void CancelNegotiation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CancelNegotiation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.CancelNegotiation" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CancelNegotiation ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void CancelNegotiation();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfirmDialog">
+      <MemberSignature Language="C#" Value="public void ConfirmDialog (object dialogId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ConfirmDialog(object dialogId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.ConfirmDialog(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ConfirmDialog (dialogId As Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ConfirmDialog(System::Object ^ dialogId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogId" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dialogId">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAnswer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SdpContentDescription GenerateAnswer (object dialogId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Collaboration.SdpContentDescription GenerateAnswer(object dialogId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.GenerateAnswer(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GenerateAnswer (dialogId As Object) As SdpContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::SdpContentDescription ^ GenerateAnswer(System::Object ^ dialogId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SdpContentDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogId" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dialogId">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateOffer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SdpContentDescription GenerateOffer (System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext&gt; mediaChannels);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Collaboration.SdpContentDescription GenerateOffer(class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext&gt; mediaChannels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.GenerateOffer(System.Collections.Generic.ICollection{Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GenerateOffer (mediaChannels As ICollection(Of MediaChannelContext)) As SdpContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::SdpContentDescription ^ GenerateOffer(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Internal::Collaboration::Media::MediaChannelContext ^&gt; ^ mediaChannels);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SdpContentDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mediaChannels" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="mediaChannels">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionState SessionState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionState SessionState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.SessionState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionState As SdpSessionState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::Media::SdpSessionState SessionState { Microsoft::Rtc::Internal::Collaboration::Media::SdpSessionState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryLookupSdpDialog">
+      <MemberSignature Language="C#" Value="public bool TryLookupSdpDialog (object dialogId, out Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext dialogNegotiationContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryLookupSdpDialog(object dialogId, [out] class Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp; dialogNegotiationContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.TryLookupSdpDialog(System.Object,Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryLookupSdpDialog (dialogId As Object, ByRef dialogNegotiationContext As SdpDialogNegotiationContext) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryLookupSdpDialog(System::Object ^ dialogId, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDialogNegotiationContext ^ % dialogNegotiationContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogId" Type="System.Object" />
+        <Parameter Name="dialogNegotiationContext" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dialogId">To be added.</param>
+        <param name="dialogNegotiationContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseFinalAnswer">
+      <MemberSignature Language="C#" Value="public bool TryParseFinalAnswer (object dialogId, Microsoft.Rtc.Collaboration.SdpContentDescription answer, out Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext dialogContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryParseFinalAnswer(object dialogId, class Microsoft.Rtc.Collaboration.SdpContentDescription answer, [out] class Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp; dialogContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.TryParseFinalAnswer(System.Object,Microsoft.Rtc.Collaboration.SdpContentDescription,Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryParseFinalAnswer (dialogId As Object, answer As SdpContentDescription, ByRef dialogContext As SdpDialogNegotiationContext) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryParseFinalAnswer(System::Object ^ dialogId, Microsoft::Rtc::Collaboration::SdpContentDescription ^ answer, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDialogNegotiationContext ^ % dialogContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogId" Type="System.Object" />
+        <Parameter Name="answer" Type="Microsoft.Rtc.Collaboration.SdpContentDescription" />
+        <Parameter Name="dialogContext" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dialogId">To be added.</param>
+        <param name="answer">To be added.</param>
+        <param name="dialogContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseOffer">
+      <MemberSignature Language="C#" Value="public bool TryParseOffer (object dialogId, Microsoft.Rtc.Collaboration.SdpContentDescription offer, System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext&gt; mediaChannels, out Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext dialogContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryParseOffer(object dialogId, class Microsoft.Rtc.Collaboration.SdpContentDescription offer, class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext&gt; mediaChannels, [out] class Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp; dialogContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.TryParseOffer(System.Object,Microsoft.Rtc.Collaboration.SdpContentDescription,System.Collections.Generic.ICollection{Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext},Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryParseOffer (dialogId As Object, offer As SdpContentDescription, mediaChannels As ICollection(Of MediaChannelContext), ByRef dialogContext As SdpDialogNegotiationContext) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryParseOffer(System::Object ^ dialogId, Microsoft::Rtc::Collaboration::SdpContentDescription ^ offer, System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Internal::Collaboration::Media::MediaChannelContext ^&gt; ^ mediaChannels, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDialogNegotiationContext ^ % dialogContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogId" Type="System.Object" />
+        <Parameter Name="offer" Type="Microsoft.Rtc.Collaboration.SdpContentDescription" />
+        <Parameter Name="mediaChannels" Type="System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext&gt;" />
+        <Parameter Name="dialogContext" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dialogId">To be added.</param>
+        <param name="offer">To be added.</param>
+        <param name="mediaChannels">To be added.</param>
+        <param name="dialogContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParseProvisionalAnswer">
+      <MemberSignature Language="C#" Value="public bool TryParseProvisionalAnswer (object dialogId, Microsoft.Rtc.Collaboration.SdpContentDescription answer, out Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext dialogContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryParseProvisionalAnswer(object dialogId, class Microsoft.Rtc.Collaboration.SdpContentDescription answer, [out] class Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp; dialogContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.ISdpMediaNegotiator.TryParseProvisionalAnswer(System.Object,Microsoft.Rtc.Collaboration.SdpContentDescription,Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryParseProvisionalAnswer (dialogId As Object, answer As SdpContentDescription, ByRef dialogContext As SdpDialogNegotiationContext) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryParseProvisionalAnswer(System::Object ^ dialogId, Microsoft::Rtc::Collaboration::SdpContentDescription ^ answer, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDialogNegotiationContext ^ % dialogContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogId" Type="System.Object" />
+        <Parameter Name="answer" Type="Microsoft.Rtc.Collaboration.SdpContentDescription" />
+        <Parameter Name="dialogContext" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDialogNegotiationContext&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="dialogId">To be added.</param>
+        <param name="answer">To be added.</param>
+        <param name="dialogContext">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

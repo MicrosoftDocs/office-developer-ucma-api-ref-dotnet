@@ -1,0 +1,97 @@
+﻿<Type Name="IceV19SdpMediaSession&lt;TSessionDescription,TMediaDescription&gt;" FullName="Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpMediaSession&lt;TSessionDescription,TMediaDescription&gt;">
+  <TypeSignature Language="C#" Value="public class IceV19SdpMediaSession&lt;TSessionDescription,TMediaDescription&gt; : Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaSession&lt;TSessionDescription,TMediaDescription&gt; where TSessionDescription : IceV19SdpSessionDescriptionnew() where TMediaDescription : IceV19SdpMediaDescriptionnew()" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IceV19SdpMediaSession`2&lt;.ctor (class Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpSessionDescription) TSessionDescription, .ctor (class Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpMediaDescription) TMediaDescription&gt; extends Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaSession`2&lt;!TSessionDescription, !TMediaDescription&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpMediaSession`2" />
+  <TypeSignature Language="VB.NET" Value="Public Class IceV19SdpMediaSession(Of TSessionDescription, TMediaDescription)&#xA;Inherits SdpMediaSession(Of TSessionDescription, TMediaDescription)" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TSessionDescription, typename TMediaDescription&gt;&#xA; where TSessionDescription : IceV19SdpSessionDescriptiongcnew() where TMediaDescription : IceV19SdpMediaDescriptiongcnew()public ref class IceV19SdpMediaSession : Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaSession&lt;TSessionDescription, TMediaDescription&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TSessionDescription">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpSessionDescription</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+    <TypeParameter Name="TMediaDescription">
+      <Constraints>
+        <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+        <BaseTypeName>Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpMediaDescription</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaSession&lt;TSessionDescription,TMediaDescription&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TSessionDescription">TSessionDescription</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TMediaDescription">TMediaDescription</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <typeparam name="TSessionDescription">To be added.</typeparam>
+    <typeparam name="TMediaDescription">To be added.</typeparam>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IceV19SdpMediaSession (Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpMediaSession`2.#ctor(Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As SdpNegotiatorSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IceV19SdpMediaSession(Microsoft::Rtc::Internal::Collaboration::Media::SdpNegotiatorSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateMediaBinding">
+      <MemberSignature Language="C#" Value="protected override bool ValidateMediaBinding (TMediaDescription mediaDescription, Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext targetMediaChannel, System.Collections.Generic.IList&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt; currentMediaBindings, Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo previousMediaBinding, Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation parsingOperation, out Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode diagnosticsCode, out string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateMediaBinding(!TMediaDescription mediaDescription, class Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext targetMediaChannel, class System.Collections.Generic.IList`1&lt;class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt; currentMediaBindings, class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo previousMediaBinding, valuetype Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation parsingOperation, [out] valuetype Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode&amp; diagnosticsCode, [out] string&amp; errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.IceV19SdpMediaSession`2.ValidateMediaBinding(`1,Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext,System.Collections.Generic.IList{Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo},Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo,Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation,Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode@,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ValidateMediaBinding (mediaDescription As TMediaDescription, targetMediaChannel As MediaChannelContext, currentMediaBindings As IList(Of SdpMediaOfferAnswerInfo), previousMediaBinding As SdpMediaOfferAnswerInfo, parsingOperation As OfferAnswerParsingOperation, ByRef diagnosticsCode As SdpDiagnosticsCode, ByRef errorMessage As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool ValidateMediaBinding(TMediaDescription mediaDescription, Microsoft::Rtc::Internal::Collaboration::Media::MediaChannelContext ^ targetMediaChannel, System::Collections::Generic::IList&lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaOfferAnswerInfo ^&gt; ^ currentMediaBindings, Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaOfferAnswerInfo ^ previousMediaBinding, Microsoft::Rtc::Internal::Collaboration::Media::OfferAnswerParsingOperation parsingOperation, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDiagnosticsCode % diagnosticsCode, [Runtime::InteropServices::Out] System::String ^ % errorMessage);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mediaDescription" Type="TMediaDescription" />
+        <Parameter Name="targetMediaChannel" Type="Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext" />
+        <Parameter Name="currentMediaBindings" Type="System.Collections.Generic.IList&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt;" />
+        <Parameter Name="previousMediaBinding" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo" />
+        <Parameter Name="parsingOperation" Type="Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation" />
+        <Parameter Name="diagnosticsCode" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode&amp;" RefType="out" />
+        <Parameter Name="errorMessage" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="mediaDescription">To be added.</param>
+        <param name="targetMediaChannel">To be added.</param>
+        <param name="currentMediaBindings">To be added.</param>
+        <param name="previousMediaBinding">To be added.</param>
+        <param name="parsingOperation">To be added.</param>
+        <param name="diagnosticsCode">To be added.</param>
+        <param name="errorMessage">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

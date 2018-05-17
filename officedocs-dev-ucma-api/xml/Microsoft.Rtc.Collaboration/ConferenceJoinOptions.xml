@@ -1,0 +1,217 @@
+﻿<Type Name="ConferenceJoinOptions" FullName="Microsoft.Rtc.Collaboration.ConferenceJoinOptions">
+  <TypeSignature Language="C#" Value="public class ConferenceJoinOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceJoinOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceJoinOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceJoinOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceJoinOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains options to customize joining a conference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceJoinOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceJoinOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Instantiates the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdHocConferenceAccessLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceAccessLevel AdHocConferenceAccessLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel AdHocConferenceAccessLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.AdHocConferenceAccessLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdHocConferenceAccessLevel As ConferenceAccessLevel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceAccessLevel AdHocConferenceAccessLevel { Microsoft::Rtc::Collaboration::ConferenceAccessLevel get(); void set(Microsoft::Rtc::Collaboration::ConferenceAccessLevel value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the ad hoc conference access level <see cref="T:Microsoft.Rtc.Collaboration.ConferenceAccessLevel" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property provides a way for the applications to choose the access level to use when creating ad hoc conferences during 
+            conference escalation. Applications are recommended to check for the supported conference access levels and set the value of this
+            property with one of the supported conference access level.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdHocConferenceAutomaticLeaderAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment AdHocConferenceAutomaticLeaderAssignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment AdHocConferenceAutomaticLeaderAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.AdHocConferenceAutomaticLeaderAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdHocConferenceAutomaticLeaderAssignment As AutomaticLeaderAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment AdHocConferenceAutomaticLeaderAssignment { Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment get(); void set(Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the ad hoc automatic leader assignment policy <see cref="T:Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property provides a way for the applications to choose the automatic leader assignment policy to use when creating ad hoc 
+            conferences during conference escalation. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanManageLobby">
+      <MemberSignature Language="C#" Value="public bool CanManageLobby { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CanManageLobby" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.CanManageLobby" />
+      <MemberSignature Language="VB.NET" Value="Public Property CanManageLobby As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CanManageLobby { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the user that the application represents can manage the lobby. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Lobby management is only possible for conference leaders. This property is to be used by applications
+            to advertise that the user they represent is able to manage the lobby through that application when
+            granted the leader role.
+            </para>
+          <para>
+            As an example, an application that enables phone users to join the conference may not render enough
+            DTMF commands to allow the phone user to manage the conference lobby. Therefore, such applications should
+            set this property to false on joining the conference.
+            </para>
+          <para>
+            <see cref="P:Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties.CanManageLobby" />
+          </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JoinMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.JoinMode JoinMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.JoinMode JoinMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.JoinMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property JoinMode As JoinMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::JoinMode JoinMode { Microsoft::Rtc::Collaboration::JoinMode get(); void set(Microsoft::Rtc::Collaboration::JoinMode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.JoinMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the join mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LobbyTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan LobbyTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan LobbyTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.LobbyTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property LobbyTimeout As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan LobbyTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the time out period after which the application is automatically disconnected from the lobby
+            if not admitted into the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application can set this property to <see cref="F:System.TimeSpan.Zero" /> to indicate it requires to be disconnected
+            immediately if it lands in the lobby.
+            </para>
+          <para>
+            Conference leaders are not placed in the lobby.
+            </para>
+          <para>
+            If the application is the organizer of the conference, then it is not placed in the lobby. This includes
+            joining ad-hoc conferences.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a <see cref="T:System.String" /> that represents this object.
+            </summary>
+        <returns>A <see cref="T:System.String" />  that represents this object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

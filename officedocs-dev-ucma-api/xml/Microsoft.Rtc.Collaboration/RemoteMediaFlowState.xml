@@ -1,0 +1,97 @@
+﻿<Type Name="RemoteMediaFlowState" FullName="Microsoft.Rtc.Collaboration.RemoteMediaFlowState">
+  <TypeSignature Language="C#" Value="public enum RemoteMediaFlowState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RemoteMediaFlowState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.RemoteMediaFlowState" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RemoteMediaFlowState" />
+  <TypeSignature Language="C++ CLI" Value="public enum class RemoteMediaFlowState" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Provides hint for the state of the media flow between remote participants of a back to back call. 
+            </summary>
+    <remarks>
+      <para>
+            The state is inferred primarily based on offer/answer renegotiation for audio video calls. If there is no known way to determine when
+            the media can flow between the remote endpoints, this state will remain Unknown. If the state goes to Connected, it will stay 
+            in that state even after the back to back call is terminated. This hint is mainly provided to avoid media clipping for the 
+            scenario where one of the call legs is on a conference and a different conversation contains an audio video call to play 
+            message for the user involved in this back to back call. If the hint changes to Connecting before the back to back call is established,
+            it is recommended that the application wait for the Connected state before playing any content on the conference.
+            
+            This property will remain in Unknown state if no hint can be inferred. Currently, only AudioVideoCall with default media provider supports this.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connected">
+      <MemberSignature Language="C#" Value="Connected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.RemoteMediaFlowState Connected = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.RemoteMediaFlowState.Connected" />
+      <MemberSignature Language="VB.NET" Value="Connected" />
+      <MemberSignature Language="C++ CLI" Value="Connected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.RemoteMediaFlowState</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Media state is Connected.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Connecting">
+      <MemberSignature Language="C#" Value="Connecting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.RemoteMediaFlowState Connecting = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.RemoteMediaFlowState.Connecting" />
+      <MemberSignature Language="VB.NET" Value="Connecting" />
+      <MemberSignature Language="C++ CLI" Value="Connecting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.RemoteMediaFlowState</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Media state is Connecting.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.RemoteMediaFlowState Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.RemoteMediaFlowState.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="C++ CLI" Value="Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.RemoteMediaFlowState</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Media state is unknown.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,90 @@
+﻿<Type Name="PlayerMode" FullName="Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode">
+  <TypeSignature Language="C#" Value="public enum PlayerMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PlayerMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PlayerMode" />
+  <TypeSignature Language="C++ CLI" Value="public enum class PlayerMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            The current mode of the player.
+            </summary>
+    <remarks>
+      <para>
+            In Automatic mode, the player starts and stops automatically, based on the status of the
+            attached AudioVideoFlow instance.
+            </para>
+      <para>
+            The player is started by calling the Start() method, but it will not begin playing until 
+            at least one of the attached AudioVideoFlow instances is in the Active state.
+            </para>
+      <para>
+            The player will automatically stop whenever there is no active AudioVideoFlow attached to it. 
+            </para>
+      <para>
+            In an outbound call to an endpoint that streams early media, 
+            AudioVideoFlow can become Active before the callee accepts the call. 
+            In this case, a player in Automatic mode begins playing as soon as there is an active AudioVideoFlow, so clipping might occur.
+            To avoid this situation, it is recommended that you use Manual mode and wait until the call is established.
+            </para>
+      <para>
+            In Manual mode, the player behaves independently of the attached AudioVideoFlow instance.
+            </para>
+      <para>
+            If the player is in Manual mode, and Start() is called before an AudioVideoFlow is attached, or if the
+            attached AudioVideoFlow is not in the Active state, the player updates its playing index appropriately in real time.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Automatic">
+      <MemberSignature Language="C#" Value="Automatic" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode Automatic = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode.Automatic" />
+      <MemberSignature Language="VB.NET" Value="Automatic" />
+      <MemberSignature Language="C++ CLI" Value="Automatic" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Automatic mode.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Manual">
+      <MemberSignature Language="C#" Value="Manual" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode Manual = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode.Manual" />
+      <MemberSignature Language="VB.NET" Value="Manual" />
+      <MemberSignature Language="C++ CLI" Value="Manual" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Manual mode.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

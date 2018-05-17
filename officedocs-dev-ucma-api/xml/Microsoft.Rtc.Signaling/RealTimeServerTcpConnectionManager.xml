@@ -1,0 +1,116 @@
+﻿<Type Name="RealTimeServerTcpConnectionManager" FullName="Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager">
+  <TypeSignature Language="C#" Value="public class RealTimeServerTcpConnectionManager : Microsoft.Rtc.Signaling.RealTimeServerConnectionManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RealTimeServerTcpConnectionManager extends Microsoft.Rtc.Signaling.RealTimeServerConnectionManager" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager" />
+  <TypeSignature Language="VB.NET" Value="Public Class RealTimeServerTcpConnectionManager&#xA;Inherits RealTimeServerConnectionManager" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeServerTcpConnectionManager : Microsoft::Rtc::Signaling::RealTimeServerConnectionManager" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.RealTimeServerConnectionManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides advanced connection management for using endpoints.
+            This class provides the same functionality as RealTimeConnectionManager
+            and adds the ability to listen for incoming TCP connections.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RealTimeServerTcpConnectionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeServerTcpConnectionManager();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes this instance with default localhost name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RealTimeServerTcpConnectionManager (string localHost);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string localHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (localHost As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeServerTcpConnectionManager(System::String ^ localHost);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localHost" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localHost">The localHost to use in the contact header.</param>
+        <summary>
+            Initializes this instance with given localhost.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            The localHost parameter cannot be used as a host URI.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenForIncomingConnections">
+      <MemberSignature Language="C#" Value="protected override System.Net.IPEndPoint ListenForIncomingConnections (System.Net.IPEndPoint ipEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Net.IPEndPoint ListenForIncomingConnections(class System.Net.IPEndPoint ipEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.ListenForIncomingConnections(System.Net.IPEndPoint)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Net::IPEndPoint ^ ListenForIncomingConnections(System::Net::IPEndPoint ^ ipEndpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipEndpoint" Type="System.Net.IPEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ipEndpoint">The ip endpoint to be used for listening.</param>
+        <summary>
+            This method does the actual S4 listening.
+            </summary>
+        <returns>The listening endpoint.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListeningForIncomingConnections">
+      <MemberSignature Language="C#" Value="protected override void StopListeningForIncomingConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void StopListeningForIncomingConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.StopListeningForIncomingConnections" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopListeningForIncomingConnections ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void StopListeningForIncomingConnections();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method does the actual S4 stop for listening.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,159 @@
+﻿<Type Name="SdpWriter" FullName="Microsoft.Rtc.Signaling.SdpWriter">
+  <TypeSignature Language="C#" Value="public class SdpWriter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpWriter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SdpWriter" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpWriter" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpWriter" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a class that is passed to functions that will serialize the SDP attribute. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AddAttribute">
+      <MemberSignature Language="C#" Value="public void AddAttribute (Microsoft.Rtc.Signaling.SdpAttribute attribute);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAttribute(class Microsoft.Rtc.Signaling.SdpAttribute attribute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpWriter.AddAttribute(Microsoft.Rtc.Signaling.SdpAttribute)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddAttribute (attribute As SdpAttribute)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddAttribute(Microsoft::Rtc::Signaling::SdpAttribute ^ attribute);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attribute" Type="Microsoft.Rtc.Signaling.SdpAttribute" />
+      </Parameters>
+      <Docs>
+        <param name="attribute">Attribute to add to the SDP.</param>
+        <summary>
+            Appends the supplied attribute.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttribute">
+      <MemberSignature Language="C#" Value="public void AddAttribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAttribute(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpWriter.AddAttribute(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddAttribute (name As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddAttribute(System::String ^ name);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The attribute name.</param>
+        <summary>
+            Adds an attribute. This function is used for attributes that
+            have a name portion only, but no value portion.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the name attribute is null. </exception>
+        <exception cref="T:System.ArgumentException">Thrown when the name attribute is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttribute">
+      <MemberSignature Language="C#" Value="public void AddAttribute (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddAttribute(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpWriter.AddAttribute(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddAttribute (name As String, value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddAttribute(System::String ^ name, System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The attribute name.</param>
+        <param name="value">The value of the attribute to append.</param>
+        <summary>
+            Appends an attribute. This function is used for attributes that
+            have a name portion only, but no value portion.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the name attribute is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the name attribute is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFormat">
+      <MemberSignature Language="C#" Value="public void AddFormat (int format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFormat(int32 format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpWriter.AddFormat(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFormat (format As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddFormat(int format);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="format">The value to append.</param>
+        <summary>
+            Appends a format value to the end of an "m" line when building an SDP.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the format attribute does not have a value from 0 to 127.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFormat">
+      <MemberSignature Language="C#" Value="public void AddFormat (string format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFormat(string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpWriter.AddFormat(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFormat (format As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddFormat(System::String ^ format);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="format">Value to append. Multiple values may be specified at once by separating them with a space.</param>
+        <summary>
+            Appends a format value to the end of an "m" line when building an SDP.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the format attribute is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the format attribute is an empty string.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

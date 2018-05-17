@@ -1,0 +1,453 @@
+﻿<Type Name="BackToBackCall" FullName="Microsoft.Rtc.Collaboration.BackToBackCall">
+  <TypeSignature Language="C#" Value="public class BackToBackCall" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BackToBackCall extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.BackToBackCall" />
+  <TypeSignature Language="VB.NET" Value="Public Class BackToBackCall" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BackToBackCall" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Represents a logical SIP network element that resides between two Calls to mediate SIP signaling between both ends of the call.
+            </summary>
+    <remarks>
+      <para> 
+             BackToBackCall is a back-to-back user agent (B2BUA), which divides the communication session between two call legs
+             and mediates all SIP signaling from call establishment to termination between both ends of the call.
+             Common B2BUA usage is for agent anonymization in ACD (automatic call distribution) and support for other mid-way call
+             control features.    
+             </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BackToBackCall (Microsoft.Rtc.Collaboration.BackToBackCallSettings call1Settings, Microsoft.Rtc.Collaboration.BackToBackCallSettings call2Settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.BackToBackCallSettings call1Settings, class Microsoft.Rtc.Collaboration.BackToBackCallSettings call2Settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.#ctor(Microsoft.Rtc.Collaboration.BackToBackCallSettings,Microsoft.Rtc.Collaboration.BackToBackCallSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (call1Settings As BackToBackCallSettings, call2Settings As BackToBackCallSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BackToBackCall(Microsoft::Rtc::Collaboration::BackToBackCallSettings ^ call1Settings, Microsoft::Rtc::Collaboration::BackToBackCallSettings ^ call2Settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="call1Settings" Type="Microsoft.Rtc.Collaboration.BackToBackCallSettings" />
+        <Parameter Name="call2Settings" Type="Microsoft.Rtc.Collaboration.BackToBackCallSettings" />
+      </Parameters>
+      <Docs>
+        <param name="call1Settings">Settings for first call leg.</param>
+        <param name="call2Settings">Settings for second call leg.</param>
+        <summary>
+            Creates an instance of the BackToBackCall class for the specified call legs.
+            </summary>
+        <remarks>
+          <para>
+            BackToBackCall can be used to create a back-to-back channel between an incoming call and a new outgoing call. 
+            </para>
+          <para>
+            Before creating a BackToBackCall instance, create and initialize two CallSettings instances - one for the incoming call and the other for the outgoing idle call.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="call1Settings" /> or <paramref name="call2Settings" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when a combination of <paramref name="call1Settings" /> and <paramref name="call2Settings" /> is not acceptable for BackToBackCall.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.BeginEstablish(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to establish the back-to-back call between two call legs.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if BackToBack call is not in the Idle state when the method is called.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to terminate both call legs of BackToBackCall.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (Microsoft.Rtc.Collaboration.BackToBackCallTerminateOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class Microsoft.Rtc.Collaboration.BackToBackCallTerminateOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.BeginTerminate(Microsoft.Rtc.Collaboration.BackToBackCallTerminateOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (options As BackToBackCallTerminateOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(Microsoft::Rtc::Collaboration::BackToBackCallTerminateOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.BackToBackCallTerminateOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Optional parameter for terminating the BackToBackCall.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to terminate both call legs of BackToBackCall.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="options" /> parameter contains invalid or restricted headers. 
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Call1">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Call Call1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Call Call1" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.Call1" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call1 As Call" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Call ^ Call1 { Microsoft::Rtc::Collaboration::Call ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Call</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the call instance that represents the first call leg of the BackToBackCall.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Call2">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Call Call2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Call Call2" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.Call2" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call2 As Call" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Call ^ Call2 { Microsoft::Rtc::Collaboration::Call ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Call</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the call instance that represents the second call leg of the BackToBackCall.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEstablish">
+      <MemberSignature Language="C#" Value="public void EndEstablish (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEstablish(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.EndEstablish(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndEstablish (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEstablish(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Determines whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the remote side returns a failure response for the establish request operation.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed. This failure could be a failure to establish outgoing callleg 
+            or failure to accept incoming call.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub-operations of this operation failed due to errors such as connection failure or authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Determines whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPassThroughHeaderNames">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetPassThroughHeaderNames ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetPassThroughHeaderNames() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.GetPassThroughHeaderNames" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPassThroughHeaderNames () As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetPassThroughHeaderNames();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of header names that are designated by the application as pass-through headers.
+            </summary>
+        <returns>A collection of pass through header names.</returns>
+        <remarks>
+          <para>
+            All headers whose header name matches one of the names in the pass-through list are copied from
+            the incoming message on one call leg to the corresponding outgoing message on the other call leg. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceCorrelationID">
+      <MemberSignature Language="C#" Value="public long GetTraceCorrelationID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetTraceCorrelationID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.GetTraceCorrelationID" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the trace correlation id for this instance.
+            </summary>
+        <returns>The trace correlation id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteMediaFlowState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.RemoteMediaFlowState RemoteMediaFlowState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.RemoteMediaFlowState RemoteMediaFlowState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.RemoteMediaFlowState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteMediaFlowState As RemoteMediaFlowState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::RemoteMediaFlowState RemoteMediaFlowState { Microsoft::Rtc::Collaboration::RemoteMediaFlowState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.RemoteMediaFlowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the hint to observe the media flow state between remote participants of this back to back call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The state is inferred primarily based on offer/answer renegotiation for audio video calls. If there is no known way to determine when
+            the media can flow between the remote endpoints, this state will remain Unknown. If the state goes to Connected, it will stay 
+            in that state even after the back to back call is terminated. This hint is mainly provided to avoid media clipping for the 
+            scenario where one of the call legs is on a conference and a different conversation contains an audio video call to play 
+            message for the user involved in this back to back call. If the hint changes to Connecting before the back to back call is established,
+            it is recommended that the application wait for the Connected state before playing any content on the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteMediaFlowStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.RemoteMediaFlowStateChangedEventArgs&gt; RemoteMediaFlowStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.RemoteMediaFlowStateChangedEventArgs&gt; RemoteMediaFlowStateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.BackToBackCall.RemoteMediaFlowStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteMediaFlowStateChanged As EventHandler(Of RemoteMediaFlowStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::RemoteMediaFlowStateChangedEventArgs ^&gt; ^ RemoteMediaFlowStateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.RemoteMediaFlowStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the observed state of media flow between the two remote participants changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPassThroughHeaderNames">
+      <MemberSignature Language="C#" Value="public void SetPassThroughHeaderNames (System.Collections.Generic.IEnumerable&lt;string&gt; passThroughHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPassThroughHeaderNames(class System.Collections.Generic.IEnumerable`1&lt;string&gt; passThroughHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.SetPassThroughHeaderNames(System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPassThroughHeaderNames (passThroughHeaders As IEnumerable(Of String))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetPassThroughHeaderNames(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ passThroughHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="passThroughHeaders" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="passThroughHeaders">Enumeration of pass through header names.</param>
+        <summary>
+            Sets the list of header names that must be passed from one call leg to the other call leg.
+            </summary>
+        <remarks>
+          <para>
+            If a restricted header name is specified in the pass-through header list, it will be ignored and will not
+            be passed from one call leg to the other call leg.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when method is invoked and BackToBackCall state is not Idle.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.BackToBackCallState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.BackToBackCallState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As BackToBackCallState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::BackToBackCallState State { Microsoft::Rtc::Collaboration::BackToBackCallState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.BackToBackCallState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of the current state of BackToBackCall.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.BackToBackCallStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.BackToBackCallStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.BackToBackCall.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of BackToBackCallStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::BackToBackCallStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.BackToBackCallStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of the BackToBackCall changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

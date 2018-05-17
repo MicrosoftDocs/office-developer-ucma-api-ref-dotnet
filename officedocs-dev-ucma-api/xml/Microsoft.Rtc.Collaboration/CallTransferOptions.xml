@@ -1,0 +1,188 @@
+﻿<Type Name="CallTransferOptions" FullName="Microsoft.Rtc.Collaboration.CallTransferOptions">
+  <TypeSignature Language="C#" Value="public class CallTransferOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallTransferOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallTransferOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallTransferOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallTransferOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Optional parameters for transfering the call.
+            </summary>
+    <remarks>
+      <para>
+            Used to specify the various transfer options available while initiating a transfer request on a call.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallTransferOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallTransferOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the CallTransferOptions class with CallTransferType set to Attended.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallTransferOptions (Microsoft.Rtc.Collaboration.CallTransferType transferType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Collaboration.CallTransferType transferType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferOptions.#ctor(Microsoft.Rtc.Collaboration.CallTransferType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (transferType As CallTransferType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallTransferOptions(Microsoft::Rtc::Collaboration::CallTransferType transferType);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="transferType" Type="Microsoft.Rtc.Collaboration.CallTransferType" />
+      </Parameters>
+      <Docs>
+        <param name="transferType">Type of transfer</param>
+        <summary>
+            Creates a new instance of the CallTransferOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included with the transfer request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumTransferTime">
+      <MemberSignature Language="C#" Value="public TimeSpan MaximumTransferTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MaximumTransferTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferOptions.MaximumTransferTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumTransferTime As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan MaximumTransferTime { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum call transfer time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            When a transferor tries to transfer a call, a rogue third party application can keep
+            the transfer operation alive for an indefinite time. If the transferee has not sent
+            a final notification within the maximum transfer time then the transfer operation will
+            fail automatically and the call will be terminated.
+            By default, the maximum transfer time is 10 minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if the maximum call transfer time set is less than 1 minute or greater than 30 minutes.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Transferor">
+      <MemberSignature Language="C#" Value="public string Transferor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Transferor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferOptions.Transferor" />
+      <MemberSignature Language="VB.NET" Value="Public Property Transferor As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Transferor { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the transferor address. The application MUST verify (see remarks for more details) the identify of the transferor before setting this property. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value will be used in the outgoing invite request to set the Referred-By header.
+            If this property is not set, the platform will use the local identity to set the Referred-By header.
+            If a server platform and application endpoint are configured to use MTLS, Referred-By header will be signed
+            to ensure that it is not altered by anyone else. The platform will not sign the header if added explicitly by the application.
+            </para>
+          <para>
+            It is important for applications to verify the accuracy of the information given in this property and not
+            simply copy from another source. This may be accomplished by PIN code, logon credentials, or by verifying against a database.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"> Thrown when the value set is null. </exception>
+        <exception cref="T:System.ArgumentException"> Thrown when the string is not a well formed URI string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CallTransferType TransferType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CallTransferType TransferType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferOptions.TransferType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransferType As CallTransferType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CallTransferType TransferType { Microsoft::Rtc::Collaboration::CallTransferType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallTransferType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of call transfer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,975 @@
+﻿<Type Name="RealTimeConnectionManager" FullName="Microsoft.Rtc.Signaling.RealTimeConnectionManager">
+  <TypeSignature Language="C#" Value="public abstract class RealTimeConnectionManager : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RealTimeConnectionManager extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeConnectionManager" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RealTimeConnectionManager&#xA;Implements IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeConnectionManager abstract : IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Provides connection management, message dispatching, and other miscellaneous services to endpoints.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeConnectionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeConnectionManager();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes the instance with default localhost name and no certificates.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the local host name cannot be retrieved for use in the contact header.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeConnectionManager (string localHost);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string localHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (localHost As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeConnectionManager(System::String ^ localHost);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localHost" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localHost">
+            Specifies the local host to be used in contact header. localHost could be 
+            the computer name, the IP address, or the computer's fully qualified domain name.
+            </param>
+        <summary>
+            Initializes a new instance of this class from localHost.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when an argument given is null.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when an argument given is empty, or the localHost parameter cannot be used as a host URI,
+            or the certificate information given is not usable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeConnectionManager (string certificateIssuerName, byte[] certificateSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string certificateIssuerName, unsigned int8[] certificateSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.#ctor(System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (certificateIssuerName As String, certificateSerialNumber As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeConnectionManager(System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="certificateIssuerName" Type="System.String" />
+        <Parameter Name="certificateSerialNumber" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificateIssuerName">The issuer name of the certificate to be used.</param>
+        <param name="certificateSerialNumber">The serial number of the certificate to be used.</param>
+        <summary>
+            Initializes an instance of this class from the certificate information.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the local host name cannot be retrieved for use in the Contact header, or the certificate information given is not usable.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when an argument given is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when an argument given is empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeConnectionManager (string localHost, string certificateIssuerName, byte[] certificateSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string localHost, string certificateIssuerName, unsigned int8[] certificateSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.#ctor(System.String,System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (localHost As String, certificateIssuerName As String, certificateSerialNumber As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeConnectionManager(System::String ^ localHost, System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localHost" Type="System.String" />
+        <Parameter Name="certificateIssuerName" Type="System.String" />
+        <Parameter Name="certificateSerialNumber" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="localHost">
+            Specifies the local host to be used in contact header. localHost could be 
+            the computer name, the IP address, or the computer's fully qualified domain name.
+            </param>
+        <param name="certificateIssuerName">The issuer name of the certificate to be used.</param>
+        <param name="certificateSerialNumber">The serial number of the certificate to be used.</param>
+        <summary>
+            Initializes an instance of this class from localHost and the certificate information.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when an argument given is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when an argument given is empty, or the localHost parameter cannot be used as a host URI, or the certificate information given is not usable.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanLocalHostBeChangedNow">
+      <MemberSignature Language="C#" Value="protected virtual bool CanLocalHostBeChangedNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanLocalHostBeChangedNow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.CanLocalHostBeChangedNow" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CanLocalHostBeChangedNow () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool CanLocalHostBeChangedNow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the value indicating whether localhost can be changed now.  
+            </summary>
+        <returns>True if the local host can be changed now.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanShutdownCoreManagerNow">
+      <MemberSignature Language="C#" Value="protected virtual bool CanShutdownCoreManagerNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool CanShutdownCoreManagerNow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.CanShutdownCoreManagerNow" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CanShutdownCoreManagerNow () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool CanShutdownCoreManagerNow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the value to determine if the core manager can be shutdown now.
+            </summary>
+        <returns>True if the manager can be shutdown.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanUpConnections">
+      <MemberSignature Language="C#" Value="protected virtual void CleanUpConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CleanUpConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.CleanUpConnections" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CleanUpConnections ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void CleanUpConnections();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method is called to cleanup connections.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPoolAdded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.ConnectionPool&gt;&gt; ConnectionPoolAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.CollectionChangedEventArgs`1&lt;class Microsoft.Rtc.Signaling.ConnectionPool&gt;&gt; ConnectionPoolAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeConnectionManager.ConnectionPoolAdded" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionPoolAdded As EventHandler(Of CollectionChangedEventArgs(Of ConnectionPool)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::ConnectionPool ^&gt; ^&gt; ^ ConnectionPoolAdded;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.ConnectionPool&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A connection pool was added.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPoolRemoved">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.ConnectionPool&gt;&gt; ConnectionPoolRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.CollectionChangedEventArgs`1&lt;class Microsoft.Rtc.Signaling.ConnectionPool&gt;&gt; ConnectionPoolRemoved" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeConnectionManager.ConnectionPoolRemoved" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionPoolRemoved As EventHandler(Of CollectionChangedEventArgs(Of ConnectionPool)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::ConnectionPool ^&gt; ^&gt; ^ ConnectionPoolRemoved;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.ConnectionPool&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A connection pool was removed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionThrottlingHighMark">
+      <MemberSignature Language="C#" Value="public int ConnectionThrottlingHighMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionThrottlingHighMark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.ConnectionThrottlingHighMark" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionThrottlingHighMark As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ConnectionThrottlingHighMark { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the high water mark for all connections. When number of outstanding transactions on a connection
+            exceeds the high water mark, the connection is throttled until it goes below the low water mark. When the connection
+            is throttled, send/receive will fail. Responses, however, can be sent to bring the level down. Outstanding
+            outgoing transactions that are pending will timeout. The connection buffer is not processed until the outstanding
+            transactions count falls below the low water mark. This value cannot be set below the low water mark. By default,
+            this value is int.MaxValue. If both water mark levels are set to int.MaxValue, the connection throttling is disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the set value is below low water mark.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionThrottlingLowMark">
+      <MemberSignature Language="C#" Value="public int ConnectionThrottlingLowMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionThrottlingLowMark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.ConnectionThrottlingLowMark" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionThrottlingLowMark As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ConnectionThrottlingLowMark { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the low water mark for all connections. When number of outstanding transactions on a connection
+            exceeds the high water mark, the connection is throttled until it goes below the low water mark. When the connection
+            is throttled, send/receive will fail. Responses, however, can be sent to bring the level down. Outstanding
+            outgoing transactions that are pending will timeout. The connection buffer is not processed until the outstanding
+            transactions count falls below the low water mark. This value cannot be set above the high water mark. By default,
+            this value is int.MaxValue. If both water mark levels are set to int.MaxValue, the connection throttling is disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the set value is above high water mark or negative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CoreManagerIncomingTlsNegotiationFailed">
+      <MemberSignature Language="C#" Value="protected virtual void CoreManagerIncomingTlsNegotiationFailed (Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void CoreManagerIncomingTlsNegotiationFailed(class Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.CoreManagerIncomingTlsNegotiationFailed(Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub CoreManagerIncomingTlsNegotiationFailed (e As IncomingTlsNegotiationFailedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void CoreManagerIncomingTlsNegotiationFailed(Microsoft::Rtc::Internal::Sip::IncomingTlsNegotiationFailedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">The event argument</param>
+        <summary>
+            This event callback is invoked when there is tls negotiation failure for incoming connection.
+            Since this class does not listen, this method will do nothing by default.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecrementThrottleCount">
+      <MemberSignature Language="C#" Value="protected internal virtual void DecrementThrottleCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void DecrementThrottleCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.DecrementThrottleCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub DecrementThrottleCount ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void DecrementThrottleCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Method to be called after the application is notified of the incoming message
+            (Invite, Message etc) that was in internal queue or when it is rejected. 
+            This will decrement the current outstanding count.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableCrlChecks">
+      <MemberSignature Language="C#" Value="public static void DisableCrlChecks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DisableCrlChecks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.DisableCrlChecks" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub DisableCrlChecks ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static void DisableCrlChecks();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables network traffic to validate CRL checks on certificates which can add tens of seconds to call establishment
+            times when the internet connection is not available.
+            </summary>
+        <remarks>
+          <para>
+            Applications should carefully consider security considerations of disabling CRL checks. This will allow calls using certificates that
+            may have been revoked since they were issued. For applications that are inside a data center with no internet connectivity, this may be acceptable.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableIpV6Support">
+      <MemberSignature Language="C#" Value="public virtual void DisableIpV6Support ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisableIpV6Support() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.DisableIpV6Support" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub DisableIpV6Support ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void DisableIpV6Support();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables IPV6 support in the network stack to be compatible with previous versions of the stack.
+            </summary>
+        <remarks>
+          <para>
+            To support only IPV4, it would be better for new applications to set the OutboundConnectionAddressFamilyHint to IPV4Only,
+            and ensure that the stack is only asked to listen on IPV4 addresses.
+            </para>
+          <para>This setting is to make initial porting of applications built on previous versions of the stack easier. To be fully compatible with current versions of the
+            product, applications will need to be updated to support IPV6.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases the resources used by the connection manager. The application can call this method to dispose the connection manager when 
+            it is no longer needed. Once the resources are released, the connection manager and the associated endpoints are
+            not usable. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true =&gt; clean up managed resources</param>
+        <summary>
+            Disposes connection manager.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DnsLoadBalancingDisabled">
+      <MemberSignature Language="C#" Value="public bool DnsLoadBalancingDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DnsLoadBalancingDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.DnsLoadBalancingDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property DnsLoadBalancingDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DnsLoadBalancingDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether DNS load balancing is disabled. By default, DNS load balancing is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Setting this property to true will disable DNS load balancing.
+            </para>
+          <para>
+            When enabled, DNS load balancing will rotate between addresses returned from DNS to find
+            an address to use to reach the destination. If one of the addresses is down, then 
+            alternate addresses will be tried before retrying the original address.
+            </para>
+          <para>
+            It is recommended that this be configured before listening or sending request on the connection manager.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointsCount">
+      <MemberSignature Language="C#" Value="public int EndpointsCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EndpointsCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.EndpointsCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointsCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int EndpointsCount { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the number of endpoints currently supported by this manager.
+            </summary>
+        <value>The number of endpoints.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~RealTimeConnectionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="C++ CLI" Value="!RealTimeConnectionManager ()" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Finalizer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnectionPools">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.ConnectionPool&gt; GetConnectionPools ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Signaling.ConnectionPool&gt; GetConnectionPools() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.GetConnectionPools" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetConnectionPools () As ReadOnlyCollection(Of ConnectionPool)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::ConnectionPool ^&gt; ^ GetConnectionPools();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.ConnectionPool&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of connection pools in this connection manager.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDestinationTuple">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Rtc.Internal.Sip.SipDestinationTuple GetDestinationTuple (Microsoft.Rtc.Signaling.SipTransportType transportType, string host, int port, Microsoft.Rtc.Signaling.AddressFamilyHint familyHint, string tlsTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Internal.Sip.SipDestinationTuple GetDestinationTuple(valuetype Microsoft.Rtc.Signaling.SipTransportType transportType, string host, int32 port, valuetype Microsoft.Rtc.Signaling.AddressFamilyHint familyHint, string tlsTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.GetDestinationTuple(Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,Microsoft.Rtc.Signaling.AddressFamilyHint,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetDestinationTuple (transportType As SipTransportType, host As String, port As Integer, familyHint As AddressFamilyHint, tlsTarget As String) As SipDestinationTuple" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Rtc::Internal::Sip::SipDestinationTuple ^ GetDestinationTuple(Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ host, int port, Microsoft::Rtc::Signaling::AddressFamilyHint familyHint, System::String ^ tlsTarget);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Sip.SipDestinationTuple</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transportType" Type="Microsoft.Rtc.Signaling.SipTransportType" />
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="familyHint" Type="Microsoft.Rtc.Signaling.AddressFamilyHint" />
+        <Parameter Name="tlsTarget" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="transportType">The transport type for the connection.</param>
+        <param name="host">The host name to connect to.</param>
+        <param name="port">The port for the connection.</param>
+        <param name="familyHint">Address family hint.</param>
+        <param name="tlsTarget">The tls target. Used for Tls only.</param>
+        <summary>
+            Get the tuple needed to make the connection.
+            </summary>
+        <returns>The tuple.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalCertificateSerialNumber">
+      <MemberSignature Language="C#" Value="public byte[] GetLocalCertificateSerialNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetLocalCertificateSerialNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.GetLocalCertificateSerialNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLocalCertificateSerialNumber () As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetLocalCertificateSerialNumber();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the serial number of the local certificate used. Can be null.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalMachineFqdn">
+      <MemberSignature Language="C#" Value="public static string GetLocalMachineFqdn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetLocalMachineFqdn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.GetLocalMachineFqdn" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetLocalMachineFqdn () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetLocalMachineFqdn();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the local machine Fqdn.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>The API provided by .Net (Dns.GetHostEntry) does not always get the right 
+            host name when provided with 'localHost' on multi NIC configurations.</para>
+          <para>To prevent issues, applications should get the local host FQDN using this provided API.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Cannot retrieve the local computer name.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingConnectionConnected">
+      <MemberSignature Language="C#" Value="protected virtual void IncomingConnectionConnected (Microsoft.Rtc.Internal.Sip.SipConnection connection, string matchedDomainName, System.Security.Cryptography.X509Certificates.X509Certificate2 remoteCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void IncomingConnectionConnected(class Microsoft.Rtc.Internal.Sip.SipConnection connection, string matchedDomainName, class System.Security.Cryptography.X509Certificates.X509Certificate2 remoteCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.IncomingConnectionConnected(Microsoft.Rtc.Internal.Sip.SipConnection,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub IncomingConnectionConnected (connection As SipConnection, matchedDomainName As String, remoteCertificate As X509Certificate2)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void IncomingConnectionConnected(Microsoft::Rtc::Internal::Sip::SipConnection ^ connection, System::String ^ matchedDomainName, System::Security::Cryptography::X509Certificates::X509Certificate2 ^ remoteCertificate);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="Microsoft.Rtc.Internal.Sip.SipConnection" />
+        <Parameter Name="matchedDomainName" Type="System.String" />
+        <Parameter Name="remoteCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="connection">The SIP connection object.</param>
+        <param name="matchedDomainName">The domain that was matched from the allowed domains list</param>
+        <param name="remoteCertificate">The remote certificate</param>
+        <summary>
+            Handles incoming connection connected event. This class should not get this event
+            since it is not listening but a subclass can. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementThrottleCount">
+      <MemberSignature Language="C#" Value="protected internal virtual void IncrementThrottleCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void IncrementThrottleCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.IncrementThrottleCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub IncrementThrottleCount ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void IncrementThrottleCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Method to be called when the application places an incoming message
+            (Invite, Message etc) in an internal queue. This will increment the current
+            outstanding count.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThrottlingInEffect">
+      <MemberSignature Language="C#" Value="protected internal virtual bool IsThrottlingInEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance bool IsThrottlingInEffect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.IsThrottlingInEffect" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function IsThrottlingInEffect () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual bool IsThrottlingInEffect();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Method that determines if the incoming message should be throttled or not.
+            If throttling is in effect, it should be rejected automatically. 
+            </summary>
+        <returns>True if throttling is in effect. False otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalCertificateIssuerName">
+      <MemberSignature Language="C#" Value="public string LocalCertificateIssuerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalCertificateIssuerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.LocalCertificateIssuerName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalCertificateIssuerName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalCertificateIssuerName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the issuer of the local certificate used. Can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalHostName">
+      <MemberSignature Language="C#" Value="public string LocalHostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalHostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.LocalHostName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalHostName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalHostName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the fully qualified local host name. 
+            This is either the local fully-qualified domain name (FQDN), if the certificate is not used, or the host in the certificate, or
+            the value set by the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHeaderNameLength">
+      <MemberSignature Language="C#" Value="public static int MaxHeaderNameLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxHeaderNameLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.MaxHeaderNameLength" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property MaxHeaderNameLength As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property int MaxHeaderNameLength { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum length for SignalingHeader Name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHeaderValueLength">
+      <MemberSignature Language="C#" Value="public static int MaxHeaderValueLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxHeaderValueLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.MaxHeaderValueLength" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property MaxHeaderValueLength As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property int MaxHeaderValueLength { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum length for SignalingHeader Value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxMessageBodyLength">
+      <MemberSignature Language="C#" Value="public static int MaxMessageBodyLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxMessageBodyLength" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.MaxMessageBodyLength" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property MaxMessageBodyLength As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property int MaxMessageBodyLength { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum length of message body on SIP message
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxParameterCount">
+      <MemberSignature Language="C#" Value="public static int MaxParameterCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 MaxParameterCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.MaxParameterCount" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Property MaxParameterCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property int MaxParameterCount { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum number of parameters allowed on signaling header or URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionDefaultAddressFamilyHint">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutboundConnectionDefaultAddressFamilyHint As Nullable(Of AddressFamilyHint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; get(); void set(Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the address families enabled for making outbound connnections.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            The address family is not supported as a enabled settings.
+            Currently IPv4 must be enabled.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultTlsTuple">
+      <MemberSignature Language="C#" Value="protected virtual void SetDefaultTlsTuple ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetDefaultTlsTuple() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.SetDefaultTlsTuple" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SetDefaultTlsTuple ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void SetDefaultTlsTuple();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Set the default TlsCredentials for the core manager. This might be used by S4 when it needs
+            Tls tuple for outgoing connection and one was not provided to it directly.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalCertificate">
+      <MemberSignature Language="C#" Value="public virtual void SetLocalCertificate (string certificateIssuerName, byte[] certificateSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetLocalCertificate(string certificateIssuerName, unsigned int8[] certificateSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnectionManager.SetLocalCertificate(System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetLocalCertificate (certificateIssuerName As String, certificateSerialNumber As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetLocalCertificate(System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateIssuerName" Type="System.String" />
+        <Parameter Name="certificateSerialNumber" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="certificateIssuerName">The issuer name of the certificate to be used.</param>
+        <param name="certificateSerialNumber">The serial number of the certificate to be used.</param>
+        <summary>
+            Sets the local certificate information. This is used for mutual TLS authentication when needed.
+            If the mutual TLS is not used, there is no need to set these values.
+            The certificate is retrieved from the certificate store on the local computer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StrictDispatching">
+      <MemberSignature Language="C#" Value="public bool StrictDispatching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StrictDispatching" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnectionManager.StrictDispatching" />
+      <MemberSignature Language="VB.NET" Value="Public Property StrictDispatching As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool StrictDispatching { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether incoming messages are routed to the hosted
+            endpoints by this connection manager. By default, this flag is false.
+            This flag is used only when there is only one peer-to-peer endpoint hosted by the
+            connection manager. Normally, incoming messages are routed to the endpoint only
+            when the <see cref="To" /> header URI and epid (if any) match those of the endpoint. If this flag is
+            set, the message is routed to the single peer-to-peer endpoint ignoring the <see cref="To" /> header values.
+            In this case, it is the responsibility of the endpoint or application using the endpoint to 
+            handle the situation appropriately.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

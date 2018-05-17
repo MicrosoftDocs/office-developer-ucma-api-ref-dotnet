@@ -1,0 +1,267 @@
+﻿<Type Name="TimerItem" FullName="Microsoft.Rtc.Signaling.TimerItem">
+  <TypeSignature Language="C#" Value="public class TimerItem" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TimerItem extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.TimerItem" />
+  <TypeSignature Language="VB.NET" Value="Public Class TimerItem" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TimerItem" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines a timer item to set up a timer. When the timer expires, a supplied callback is called.
+            The timer item needs access to a TimerWheel in which the timer item is managed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimerItem (Microsoft.Rtc.Signaling.TimerWheel timerWheel, TimeSpan timeSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.TimerWheel timerWheel, valuetype System.TimeSpan timeSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.#ctor(Microsoft.Rtc.Signaling.TimerWheel,System.TimeSpan)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TimerItem(Microsoft::Rtc::Signaling::TimerWheel ^ timerWheel, TimeSpan timeSpan);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="timerWheel" Type="Microsoft.Rtc.Signaling.TimerWheel" />
+        <Parameter Name="timeSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="timerWheel">
+            The timer wheel associated with this item.
+            </param>
+        <param name="timeSpan">
+            The time span indicating when the timer will expire from now.
+            </param>
+        <summary>
+            Initializes a new instance of the TimerItem class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the timer wheel argument is null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the time span is out of range. The maximum allowed value for a timer span is 65535 seconds (approx 18 hrs).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="public event EventHandler Expired;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Expired" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.TimerItem.Expired" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Expired As EventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ Expired;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the item expires.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStarted">
+      <MemberSignature Language="C#" Value="public bool IsStarted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStarted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.IsStarted" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStarted As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsStarted { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current timer item status.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemainingTime">
+      <MemberSignature Language="C#" Value="public TimeSpan RemainingTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan RemainingTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.RemainingTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemainingTime As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan RemainingTime { TimeSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remaining time span for TimerItem before the TimerItem expires.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the timer by rescheduling the item for a period
+            of time equal to the original timer span.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the configured span in seconds is 0 or greater than UInt16.MaxValue.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (TimeSpan newTimerSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset(valuetype System.TimeSpan newTimerSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Reset(System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset (newTimerSpan As TimeSpan)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset(TimeSpan newTimerSpan);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newTimerSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="newTimerSpan">
+            The new timer span.
+            </param>
+        <summary>
+            Resets the timer by rescheduling the item for the new
+            period of time specified.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the interval is 0 or more than UInt16.MaxValue seconds.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Start" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Start();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enables the timer item by setting the expiry time and
+            adding the item to the queue.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables the timer by removing the item from the timer
+            queue and by resetting the expiry time.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimerSpan">
+      <MemberSignature Language="C#" Value="public TimeSpan TimerSpan { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimerSpan" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.TimerSpan" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimerSpan As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan TimerSpan { TimeSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the timer span value. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wheel">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.TimerWheel Wheel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.TimerWheel Wheel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.Wheel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Wheel As TimerWheel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::TimerWheel ^ Wheel { Microsoft::Rtc::Signaling::TimerWheel ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TimerWheel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the timer wheel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

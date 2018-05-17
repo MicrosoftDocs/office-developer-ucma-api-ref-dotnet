@@ -1,0 +1,44 @@
+﻿<Type Name="IncomingCallDelegate&lt;TCall&gt;" FullName="Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;TCall&gt;">
+  <TypeSignature Language="C#" Value="public delegate void IncomingCallDelegate&lt;TCall&gt;(object sender, CallReceivedEventArgs&lt;TCall&gt; e) where TCall : Call;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed IncomingCallDelegate`1&lt;(class Microsoft.Rtc.Collaboration.Call) TCall&gt; extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.IncomingCallDelegate`1" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub IncomingCallDelegate(Of TCall)(sender As Object, e As CallReceivedEventArgs(Of TCall))" />
+  <TypeSignature Language="C++ CLI" Value="generic &lt;typename TCall&gt;&#xA; where TCall : Callpublic delegate void IncomingCallDelegate(System::Object ^ sender, CallReceivedEventArgs&lt;TCall&gt; ^ e);" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="TCall">
+      <Constraints>
+        <BaseTypeName>Microsoft.Rtc.Collaboration.Call</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.CallReceivedEventArgs&lt;TCall&gt;" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="TCall">A class derived from <see cref="T:Microsoft.Rtc.Collaboration.Call" />.</typeparam>
+    <param name="sender">The sender object.</param>
+    <param name="e">A generic CallReceivedEventArgs that contains the strongly typed call instance.</param>
+    <summary>
+            Represents the delegate signature of a typical handler for an application to handle 
+            an incoming call of type <paramref name="TCall" />.
+            </summary>
+    <remarks>
+      <para>
+            Note that in addition to AudioVideoCall and InstantMessagingCall, an application can implement a custom Call type 
+            for a modality other than audio, video or instant messaging.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,154 @@
+﻿<Type Name="InviteParticipantUpdateEventArgs" FullName="Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs">
+  <TypeSignature Language="C#" Value="public sealed class InviteParticipantUpdateEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InviteParticipantUpdateEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InviteParticipantUpdateEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InviteParticipantUpdateEventArgs sealed : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This class will be removed from future versions. See ConferenceInvitation.EndDeliver for more information")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class will be removed from future versions.
+            Data structure containing the arguments for the <see cref="E:Microsoft.Rtc.Collaboration.Conversation.InviteRemoteParticipantUpdate" /> event.
+            </summary>
+    <remarks>
+      <para>
+            This class was used by Conversation.BeginInviteRemoteParticipants and Conversation.EndInviteRemoteParticipants,
+            both of which are obsolete in UCMA 3.0 Core SDK.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeAddress Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress Address" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ Address { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the invited participant being updated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Exception">
+      <MemberSignature Language="C#" Value="public Exception Exception { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Exception Exception" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs.Exception" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Exception As Exception" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Exception ^ Exception { Exception ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Exception</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets any exception thrown, if any, during the attenpt to send the invitation to this invited participant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property returns null if no exception was thrown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDelivered">
+      <MemberSignature Language="C#" Value="public bool IsDelivered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDelivered" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs.IsDelivered" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDelivered As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDelivered { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the participant received the invitation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Response">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceInvitationResponse Response { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConferenceInvitationResponse Response" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs.Response" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Response As ConferenceInvitationResponse" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceInvitationResponse ^ Response { Microsoft::Rtc::Collaboration::ConferenceInvitationResponse ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationResponse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the invited participant's response to the invitation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a string showing the properties in this event args class.
+            </summary>
+        <returns>A string showing the values of the properties in this event args class.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

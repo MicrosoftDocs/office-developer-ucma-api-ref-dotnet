@@ -1,0 +1,175 @@
+﻿<Type Name="PresenceRelationshipLevel" FullName="Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel">
+  <TypeSignature Language="C#" Value="public enum PresenceRelationshipLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PresenceRelationshipLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PresenceRelationshipLevel" />
+  <TypeSignature Language="C++ CLI" Value="public enum class PresenceRelationshipLevel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            This class indicates the relationship of one presentity to another.
+            </summary>
+    <remarks>
+      <para>The <see cref="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginUpdateContainerMembership(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation},System.AsyncCallback,System.Object)" /> API can be used to
+            assign relationship levels. Managing relationships is primarily of interest to UserEndpoints and less for Application endpoints
+            which would like their presence information available to all.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Blocked">
+      <MemberSignature Language="C#" Value="Blocked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel Blocked = int32(32000)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.Blocked" />
+      <MemberSignature Language="VB.NET" Value="Blocked" />
+      <MemberSignature Language="C++ CLI" Value="Blocked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>32000</MemberValue>
+      <Docs>
+        <summary>
+            Contact is blocked.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Colleagues">
+      <MemberSignature Language="C#" Value="Colleagues" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel Colleagues = int32(200)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.Colleagues" />
+      <MemberSignature Language="VB.NET" Value="Colleagues" />
+      <MemberSignature Language="C++ CLI" Value="Colleagues" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>200</MemberValue>
+      <Docs>
+        <summary>
+            Contact belongs to same company.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Everyone">
+      <MemberSignature Language="C#" Value="Everyone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel Everyone = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.Everyone" />
+      <MemberSignature Language="VB.NET" Value="Everyone" />
+      <MemberSignature Language="C++ CLI" Value="Everyone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No specific relationship level found for contact, default relationship level is Everyone.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="External">
+      <MemberSignature Language="C#" Value="External" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel External = int32(100)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.External" />
+      <MemberSignature Language="VB.NET" Value="External" />
+      <MemberSignature Language="C++ CLI" Value="External" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>100</MemberValue>
+      <Docs>
+        <summary>
+            Contact is external.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Personal">
+      <MemberSignature Language="C#" Value="Personal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel Personal = int32(400)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.Personal" />
+      <MemberSignature Language="VB.NET" Value="Personal" />
+      <MemberSignature Language="C++ CLI" Value="Personal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>400</MemberValue>
+      <Docs>
+        <summary>
+            Contact is personal (friends and family).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel Unknown = int32(-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="C++ CLI" Value="Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>
+            Relationship level cannot be determined or found a containerId, which does not 
+            belong to known relationship level container.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Workgroup">
+      <MemberSignature Language="C#" Value="Workgroup" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel Workgroup = int32(300)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel.Workgroup" />
+      <MemberSignature Language="VB.NET" Value="Workgroup" />
+      <MemberSignature Language="C++ CLI" Value="Workgroup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>300</MemberValue>
+      <Docs>
+        <summary>
+            Contact belongs to same workgroup or team.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

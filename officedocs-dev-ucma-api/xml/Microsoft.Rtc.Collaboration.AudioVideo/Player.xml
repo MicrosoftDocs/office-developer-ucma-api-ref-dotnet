@@ -1,0 +1,738 @@
+﻿<Type Name="Player" FullName="Microsoft.Rtc.Collaboration.AudioVideo.Player">
+  <TypeSignature Language="C#" Value="public class Player" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Player extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.Player" />
+  <TypeSignature Language="VB.NET" Value="Public Class Player" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Player" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The Player class represents an entity capable of playing media. 	
+            </summary>
+    <remarks>
+      <para> The input to a player comes from a media source, which is an instance of a subclass of the MediaSource class.
+            The output from a player goes to one or more AudioVideoFlow instances. A player can
+            attach any AudioVideoFlow instance.
+            </para>
+      <para>
+            The Player class provides a simple, scalable way to play a single prompt to multiple
+            AudioVideoFlow instances. A player can be
+            thought of as a pointer to the media source, which determines the current play position in the media.
+            </para>
+      <para>
+            If multiple players are attached to a media source, a single instance of media will have multiple playing points.
+            This is useful when a single prompt is played to independent AudioVideoFlow instances from
+            the prompt beginning (playing a welcome prompt for an automated server, for example).
+            </para>
+      <para>
+            A player with a single media source and multiple AudioVideoFlow instances can play
+            a prompt with a single play position. All attached AudioVideoFlow 
+            instances receive exactly the same prompt at same time. This is useful for Music on Hold.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Player ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Player();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the Player class. 
+            </summary>
+        <remarks>
+          <para>
+            By default, the player's State is Stopped and its Mode is Automatic.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachFlow">
+      <MemberSignature Language="C#" Value="public void AttachFlow (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.AttachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AttachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioVideoFlow" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" />
+      </Parameters>
+      <Docs>
+        <param name="audioVideoFlow">The AudioVideoFlow instance to be attached.</param>
+        <summary>
+            Attaches an AudioVideoFlow instance to this player.
+            </summary>
+        <remarks>
+          <para>
+            If the player is already started, the AudioVideoFlow will join in a broadcast fashion.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example attaches and detaches a Player by the time AudioVideoFlow changes its state to Active and Terminated.
+                </para>
+          <para> C# Attaching and detaching an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoFlow.StateChanged += delegate(object sender, MediaFlowStateChangedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                if(avFlow.State == MediaFlowState.Active)
+                {
+
+                    Player player = new Player();
+                    player.AttachFlow(avFlow);
+
+                }
+                else if(avFlow.State == MediaFlowState.Terminated)
+                {
+
+                    if (avFlow.Player != null)
+                    {
+                        // As Player accepts multiple AudioVideoFlows, DetachFlow requires an AudioVideoFlow as argument.
+                        avFlow.Player.DetachFlow(avFlow);
+                    }
+
+                }
+            };
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the operation failed, such as for an overloaded system.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is invalid because an unbuffered media source is already being played to another AudioVideoFlow attached to this Player.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioVideoFlows">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow&gt; AudioVideoFlows { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow&gt; AudioVideoFlows" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.AudioVideoFlows" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoFlows As ReadOnlyCollection(Of AudioVideoFlow)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^&gt; ^ AudioVideoFlows { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a read-only collection of AudioVideoFlow instances that are attached to the player.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachFlow">
+      <MemberSignature Language="C#" Value="public void DetachFlow (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.DetachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DetachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioVideoFlow" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" />
+      </Parameters>
+      <Docs>
+        <param name="audioVideoFlow">The AudioVideoFlow instance to be detached.</param>
+        <summary>
+            Detaches an AudioVideoFlow instance from this player.
+            </summary>
+        <remarks>
+          <para>
+            If the specified AudioVideoFlow instance is not attached to this player, DetachFlow merely returns.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example attaches and detaches a Player by the time AudioVideoFlow changes its state to Active and Terminated.
+                </para>
+          <para> C# Attaching and detaching an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoFlow.StateChanged += delegate(object sender, MediaFlowStateChangedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                if(avFlow.State == MediaFlowState.Active)
+                {
+
+                    Player player = new Player();
+                    player.AttachFlow(avFlow);
+
+                }
+                else if(avFlow.State == MediaFlowState.Terminated)
+                {
+
+                    if (avFlow.Player != null)
+                    {
+                        // As Player accepts multiple AudioVideoFlows, DetachFlow requires an AudioVideoFlow as argument.
+                        avFlow.Player.DetachFlow(avFlow);
+                    }
+
+                }
+            };
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode Mode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode Mode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.Mode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Mode As PlayerMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::PlayerMode Mode { Microsoft::Rtc::Collaboration::AudioVideo::PlayerMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the player's current mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Pause" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Pause ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Pause();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Pauses playing the media source. 
+            </summary>
+        <remarks>
+          <para>
+            Pause maintains the current playing position.
+            Pause can be called only on player whose state is Started.
+            To resume recording call Player.Start.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example starts, pause, restarts (by calling Start) and stops the player.  
+                </para>
+          <para> C# Starting, pausing, restarting and stopping a Player.</para>
+          <code> 
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+            player.Pause();
+
+
+
+            player.Start();
+
+
+
+            player.Stop();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the player's State is not Started.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaybackSpeed">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.PlaybackSpeed PlaybackSpeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.PlaybackSpeed PlaybackSpeed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.PlaybackSpeed" />
+      <MemberSignature Language="VB.NET" Value="Public Property PlaybackSpeed As PlaybackSpeed" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::PlaybackSpeed PlaybackSpeed { Microsoft::Rtc::Collaboration::AudioVideo::PlaybackSpeed get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::PlaybackSpeed value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.PlaybackSpeed</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the player's playback speed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to set Player's playback speed two times faster and then starts a Player
+                </para>
+          <para> C# Setting Player's speed to twice times faster.</para>
+          <code> 
+
+            player.PlaybackSpeed = PlaybackSpeed.TwoTimes;
+
+
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if PlaybackSpeed has a value not in the PlaybackSpeed enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSource">
+      <MemberSignature Language="C#" Value="public void RemoveSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveSource() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.RemoveSource" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveSource ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveSource();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes the currently attached media source from this player.
+            </summary>
+        <remarks>
+          <para>
+            If the player is not stopped, RemoveSource stops it.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows a MediaSource being set and removed from a Player
+                </para>
+          <para> C# Setting and removing a MediaSource.</para>
+          <code> 
+
+            // In case no source is set, RemoveSource will be no-op.
+            player.RemoveSource();
+
+
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMode">
+      <MemberSignature Language="C#" Value="public void SetMode (Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMode(valuetype Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.SetMode(Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMode (mode As PlayerMode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetMode(Microsoft::Rtc::Collaboration::AudioVideo::PlayerMode mode);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The new mode.</param>
+        <summary>
+            Sets the player's mode.
+            </summary>
+        <remarks>
+          <para>
+            Setting the mode can affect the state of the player if it is already started. 
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example sets a manual mode to a player and then starts a player.
+                </para>
+          <para> C# Setting manual mode to a player.</para>
+          <code> 
+
+            player.SetMode(PlayerMode.Manual);
+
+
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the mode parameter is not a value in the PlayerMode enumeration.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSource">
+      <MemberSignature Language="C#" Value="public void SetSource (Microsoft.Rtc.Collaboration.AudioVideo.MediaSource source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSource(class Microsoft.Rtc.Collaboration.AudioVideo.MediaSource source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.SetSource(Microsoft.Rtc.Collaboration.AudioVideo.MediaSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSource (source As MediaSource)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetSource(Microsoft::Rtc::Collaboration::AudioVideo::MediaSource ^ source);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Collaboration.AudioVideo.MediaSource" />
+      </Parameters>
+      <Docs>
+        <param name="source">The media source that is to be bound to the player.</param>
+        <summary>
+            Sets the media source for the player.
+            </summary>
+        <remarks>
+          <para>
+            If the player is already started, SetSource stops it.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows a MediaSource being removed and then it sets a new one before starting a player
+                </para>
+          <para> C# Setting and removing a MediaSource.</para>
+          <code> 
+
+            // In case no source is set, RemoveSource will be no-op.
+            player.RemoveSource();
+
+
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">Thrown when the source parameter is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public void Skip (int milliSeconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Skip(int32 milliSeconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Skip(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Skip (milliSeconds As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Skip(int milliSeconds);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="milliSeconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="milliSeconds">The number of milliseconds to skip. The value can be positive (to move forward) or negative (to move backward).</param>
+        <summary>
+            Skips the specified number of milliseconds in the media source. 
+            </summary>
+        <remarks>
+          <para>
+            Skip enables the current play position to be moved. This method can be called in any state. 
+            If user skips beyond the end of the file, Player will stop and a StateChanged event wil be raised.
+            If user skips before the beginning of the file, Player will start playing from the beginning.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example skips Player's current position by one second after start the Player.
+                </para>
+          <para> C# Skipping Player's current position.</para>
+          <code> 
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+            player.Skip(1000);
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when no source is attached or when the source is closed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MediaSource Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.MediaSource Source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.Source" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Source As MediaSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaSource ^ Source { Microsoft::Rtc::Collaboration::AudioVideo::MediaSource ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MediaSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the player's current media source.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Start" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Start();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Starts and resume playing the attached media source.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example starts a player.  
+                </para>
+          <para> C# Starting a Player.</para>
+          <code> 
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is invalid because Player is attached to more than one AudioVideoFlow and is using an unbuffered media source.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the operation failed, such as for an overloaded system.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.PlayerState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.PlayerState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As PlayerState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::PlayerState State { Microsoft::Rtc::Collaboration::AudioVideo::PlayerState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.PlayerState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the player's current state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.PlayerStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.PlayerStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.Player.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of PlayerStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::PlayerStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.PlayerStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised to notify applications that the player state has changed.
+            </summary>
+        <remarks>
+          <para>
+            The StateChanged Event is raised for every state change that occurs on the player, including when the 
+            application causes the state change.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows an app subscribing to a StateChanged event. The event handler detaches all AudioVideoFlow if play is completed.
+                </para>
+          <para> C# Subscribing to StateChanged event.</para>
+          <code> 
+
+            player.StateChanged += delegate(object sender, PlayerStateChangedEventArgs e)
+            {
+                // Detaches all flow once player completes.
+                if (e.TransitionReason == PlayerStateTransitionReason.PlayCompleted)
+                {
+                    foreach (AudioVideoFlow avFlow in player.AudioVideoFlows)
+                    {
+                        player.DetachFlow(avFlow);
+                    }
+                }
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops playing the media source. 
+            </summary>
+        <remarks>
+          <para>
+            Stop resets the current playing position to the beginning of the media source.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example starts, pause, restarts (by calling Start) and stops the player.  
+                </para>
+          <para> C# Starting, pausing, restarting and stopping a Player.</para>
+          <code> 
+
+            player.SetSource(source);
+            player.AttachFlow(audioVideoFlow);
+            player.Start();
+
+
+
+            player.Pause();
+
+
+
+            player.Start();
+
+
+
+            player.Stop();
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

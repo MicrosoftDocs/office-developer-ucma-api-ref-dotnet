@@ -1,0 +1,545 @@
+﻿<Type Name="Participant" FullName="Microsoft.Rtc.Signaling.Participant">
+  <TypeSignature Language="C#" Value="public class Participant" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Participant extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.Participant" />
+  <TypeSignature Language="VB.NET" Value="Public Class Participant" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Participant" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             Contains all the common properties of a participant.
+            
+             </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Participant (Microsoft.Rtc.Signaling.Participant participant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.Participant participant) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.#ctor(Microsoft.Rtc.Signaling.Participant)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Participant(Microsoft::Rtc::Signaling::Participant ^ participant);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="participant" Type="Microsoft.Rtc.Signaling.Participant" />
+      </Parameters>
+      <Docs>
+        <param name="participant">The participant properties to copy from.</param>
+        <summary>
+            Initializes a new instance of the class.
+            </summary>
+        <remarks>
+          <para>
+            This constructor makes a copy of the existing participant object, and registers
+            for property changed events to keep the changing properties of the participant object
+            in sync with the source participant object.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationContext">
+      <MemberSignature Language="C#" Value="public object ApplicationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.ApplicationContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets or gets the applications-specific state associated with the participant.
+            </summary>
+        <value>The applications-specific state associated with the participant.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContactUri">
+      <MemberSignature Language="C#" Value="public string ContactUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContactUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.ContactUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContactUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContactUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the contact URI of the participant, if available. Can be String.Empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The URI is retrieved from the Contact header when present in a message received from 
+            the remote. Before a request or response is received with a Contact header, this property
+            will be String.Empty.
+            </para>
+          <para>
+            In a similar way, the URI may not be available on the participant object representing the local endpoint
+            until a request or response has been sent on the session.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointId">
+      <MemberSignature Language="C#" Value="public string EndpointId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.EndpointId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Ids associated with this participant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The object to compare with.</param>
+        <summary>
+            See if two objects are the same user.
+            </summary>
+        <returns>True if the objects are equal</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Rtc.Signaling.Participant participant, System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class Microsoft.Rtc.Signaling.Participant participant, class System.Collections.Generic.IEqualityComparer`1&lt;class Microsoft.Rtc.Signaling.Participant&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.Equals(Microsoft.Rtc.Signaling.Participant,System.Collections.Generic.IEqualityComparer{Microsoft.Rtc.Signaling.Participant})" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(Microsoft::Rtc::Signaling::Participant ^ participant, System::Collections::Generic::IEqualityComparer&lt;Microsoft::Rtc::Signaling::Participant ^&gt; ^ comparer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant" Type="Microsoft.Rtc.Signaling.Participant" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="participant">The participant object to compare to.</param>
+        <param name="comparer">The comparer to use.</param>
+        <summary>
+            Determines if the two objects identify the same participant.
+            </summary>
+        <returns>Returns true if equal; otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Rtc.Signaling.RealTimeAddress address, System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt; comparer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class Microsoft.Rtc.Signaling.RealTimeAddress address, class System.Collections.Generic.IEqualityComparer`1&lt;class Microsoft.Rtc.Signaling.Participant&gt; comparer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.Equals(Microsoft.Rtc.Signaling.RealTimeAddress,System.Collections.Generic.IEqualityComparer{Microsoft.Rtc.Signaling.Participant})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (address As RealTimeAddress, comparer As IEqualityComparer(Of Participant)) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(Microsoft::Rtc::Signaling::RealTimeAddress ^ address, System::Collections::Generic::IEqualityComparer&lt;Microsoft::Rtc::Signaling::Participant ^&gt; ^ comparer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="comparer" Type="System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to compare to.</param>
+        <param name="comparer">The comparer to use.</param>
+        <summary>
+            Compares the participant to the real-time address.
+            </summary>
+        <returns>Returns true when they are equal; otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeatureParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.NameValuePair&gt; FeatureParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.NameValuePair&gt; FeatureParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.FeatureParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FeatureParameters As IEnumerable(Of NameValuePair)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::NameValuePair ^&gt; ^ FeatureParameters { System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::NameValuePair ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.NameValuePair&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of feature parameters.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a hash value for the current Name object.
+            </summary>
+        <returns>Returns a hash value for the current object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gruu">
+      <MemberSignature Language="C#" Value="public string Gruu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Gruu" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.Gruu" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Gruu As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Gruu { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the GRUU or String.Empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property will return String.Empty if there is no known GRUU for the participant. GRUUs are usually assigned
+            either at registration time or deployment time for applications.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display name of the participant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyPropertyChanged">
+      <MemberSignature Language="C#" Value="protected void NotifyPropertyChanged (Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs e, bool async);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void NotifyPropertyChanged(class Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs e, bool async) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.NotifyPropertyChanged(Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub NotifyPropertyChanged (e As SignalingPropertyChangedEventArgs, async As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void NotifyPropertyChanged(Microsoft::Rtc::Signaling::SignalingPropertyChangedEventArgs ^ e, bool async);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs" />
+        <Parameter Name="async" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="e">The eventargs to use.</param>
+        <param name="async">True if to be raised on another thread.</param>
+        <summary>
+            Raises the property changed event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.Port" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Port As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Port { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the port.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs&gt; PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs&gt; PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.Participant.PropertyChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertyChanged As EventHandler(Of SignalingPropertyChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SignalingPropertyChangedEventArgs ^&gt; ^ PropertyChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more properties of the participant change. 
+            Changed properties will be indicated by the <see cref="T:Microsoft.Rtc.Signaling.ParticipantPropertyChanges" /> flags.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SameEndpointComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt; SameEndpointComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEqualityComparer`1&lt;class Microsoft.Rtc.Signaling.Participant&gt; SameEndpointComparer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.SameEndpointComparer" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SameEndpointComparer As IEqualityComparer(Of Participant)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Collections::Generic::IEqualityComparer&lt;Microsoft::Rtc::Signaling::Participant ^&gt; ^ SameEndpointComparer { System::Collections::Generic::IEqualityComparer&lt;Microsoft::Rtc::Signaling::Participant ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Compares two Participant objects to determine if they represent
+            the same endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SameUserComparer">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt; SameUserComparer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.IEqualityComparer`1&lt;class Microsoft.Rtc.Signaling.Participant&gt; SameUserComparer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.SameUserComparer" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SameUserComparer As IEqualityComparer(Of Participant)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property System::Collections::Generic::IEqualityComparer&lt;Microsoft::Rtc::Signaling::Participant ^&gt; ^ SameUserComparer { System::Collections::Generic::IEqualityComparer&lt;Microsoft::Rtc::Signaling::Participant ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEqualityComparer&lt;Microsoft.Rtc.Signaling.Participant&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Compares to participant objects to determine if they represent the same user.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SipInstance">
+      <MemberSignature Language="C#" Value="public string SipInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SipInstance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.SipInstance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SipInstance As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SipInstance { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the sipInstance parameter, or String.Empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.Participant.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a string representation of the participant.
+            </summary>
+        <returns>Creates a string representation of the participant.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the participant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The property reflects the best known address for contacting the participant
+            and is extracted from the From, To, or Contact headers.
+            It may be a GRUU or a host and port if that is what is available in the headers.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UriParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.NameValuePair&gt; UriParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.NameValuePair&gt; UriParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.UriParameters" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UriParameters As IEnumerable(Of NameValuePair)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::NameValuePair ^&gt; ^ UriParameters { System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::NameValuePair ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.NameValuePair&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a collection of URI parameters. May be empty if the
+            URI cannot be parsed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAtHost">
+      <MemberSignature Language="C#" Value="public string UserAtHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAtHost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.Participant.UserAtHost" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAtHost As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAtHost { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the user and host portion of the URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The string does not contain a port.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

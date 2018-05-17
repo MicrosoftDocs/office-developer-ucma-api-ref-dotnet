@@ -1,0 +1,124 @@
+﻿<Type Name="CallMessageData" FullName="Microsoft.Rtc.Collaboration.CallMessageData">
+  <TypeSignature Language="C#" Value="public class CallMessageData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallMessageData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallMessageData" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallMessageData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallMessageData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents protocol requests and responses relevant to the operation that completed.
+            </summary>
+    <remarks>
+      <para>
+            The SipMessageData property contains more detailed information about the SIP message.
+            </para>
+      <para>
+            The CallMessageData class does additional parsing of the SIP message for convenience of the application.
+            </para>
+      <para />
+    </remarks>
+    <example>
+      <para />
+      <para>
+            The following example shows how to use CallMessageData to get specific headers from the response to the INVITE request:
+            </para>
+      <para> C# Using CallMessageData</para>
+      <code> 
+CallMessageData messageData = call.EndEstablish(result);
+
+// Call succeeded. We can pull out headers we are looking for.
+foreach (SignalingHeader h in messageData.MessageData.SignalingHeaders)
+{
+    if ((h.Name.Equals("Supported", StringComparison.OrdinalIgnoreCase) ||
+         h.Name.Equals("Required", StringComparison.OrdinalIgnoreCase)) &amp;amp;&amp;amp;
+        "x-customfeature".Equals(h.GetValue(), StringComparison.OrdinalIgnoreCase))
+    {
+        Console.WriteLine("Remote supports x-customfeature.");
+        break;
+    }
+}
+
+
+</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptedContentIds">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; AcceptedContentIds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; AcceptedContentIds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageData.AcceptedContentIds" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AcceptedContentIds As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ AcceptedContentIds { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of accepted contentIds parsed from ms-accepted-contentIds header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.DialogContext DialogContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.DialogContext DialogContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageData.DialogContext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DialogContext As DialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DialogContext ^ DialogContext { Microsoft::Rtc::Signaling::DialogContext ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.DialogContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dialog context of the primary session of the established call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipMessageData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageData.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipMessageData ^ MessageData { Microsoft::Rtc::Signaling::SipMessageData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Actual SipMessageData instance which is wrapped by CallMessageData instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>SipMessageData could be of type SipRequestData or SipResponseData.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,185 @@
+﻿<Type Name="AudioChannelTemplate" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate">
+  <TypeSignature Language="C#" Value="public class AudioChannelTemplate : Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioChannelTemplate extends Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioChannelTemplate&#xA;Inherits MediaChannelTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioChannelTemplate : Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Audio Channel Template.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveDirectionSamplingRate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate ReceiveDirectionSamplingRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate ReceiveDirectionSamplingRate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate.ReceiveDirectionSamplingRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReceiveDirectionSamplingRate As AudioSamplingRate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate ReceiveDirectionSamplingRate { Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Sampling Rate for the receive direction.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This restriction prevents the application from enabling audio formats on the send direction
+            of the audio channel which are not enabled on the receive direction. Otherwise, allowing such a
+            configuration might cause a failure in which media from the peer endpoint could not be received.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when assigned value is not defined in enumerated type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SamplingRate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SamplingRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SamplingRate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate.SamplingRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property SamplingRate As AudioSamplingRate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate SamplingRate { Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Sampling Rate of the send and receive streams.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Setting this property applies the same value to both the SendDirectionSamplingRate and
+            ReceiveDirectionSamplingRate properties.</para>
+          <para>
+            The value returned when getting this property is the combination of the SendDirectionSamplingRate
+            and ReceiveDirectionSamplingRate properties.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when assigned value is not defined in enumerated type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendDirectionSamplingRate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SendDirectionSamplingRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SendDirectionSamplingRate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate.SendDirectionSamplingRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property SendDirectionSamplingRate As AudioSamplingRate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate SendDirectionSamplingRate { Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Sampling Rate for the send direction.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This restriction prevents the application from enabling audio formats on the send direction
+            of the audio channel which are not enabled on the receive direction. Otherwise, allowing such a
+            configuration might cause a failure in which media from the peer endpoint could not be received.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example changes SendDirectionSamplingRate and applies it to an AudioVideoFlow.
+                </para>
+          <para> C# Modifying AudioChannelTemplate properties.</para>
+          <code> 
+
+            AudioVideoFlowTemplate templateToApply = new AudioVideoFlowTemplate(audioVideoFlow);
+            AudioChannelTemplate audioChannelTemplate = (AudioChannelTemplate)templateToApply.Audio.GetChannels()[ChannelLabel.AudioMono];
+            audioChannelTemplate.AllowedDirection = MediaChannelDirection.SendOnly;
+            audioChannelTemplate.SendDirectionSamplingRate = AudioSamplingRate.EightKhz;
+
+            // ApplyChanges
+            audioVideoFlow.BeginApplyChanges(
+                templateToApply,
+                new AsyncCallback(delegate(IAsyncResult result)
+                {
+                    try
+                    {
+                        audioVideoFlow.EndApplyChanges(result);
+                    }
+                    catch (RealTimeException e)
+                    {
+                        // handle exception
+                        throw e;
+                    }
+
+                    // ApplyChanges is done, verify changes result..
+                    AudioChannel audioChannel = audioVideoFlow.Audio.GetChannels()[ChannelLabel.AudioMono];
+                    if (audioChannel.Direction == MediaChannelDirection.SendOnly &amp;amp;&amp;amp;
+                        audioChannel.SendDirectionSamplingRate == AudioSamplingRate.EightKhz)
+                    {
+                        // remote side accepted changes as they were
+                    }
+                    else
+                    {
+                        // remote side accepted changes but filtered them more.
+                    }
+                }),
+                this);
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when assigned value is not defined in enumerated type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseHighPerformance">
+      <MemberSignature Language="C#" Value="public bool UseHighPerformance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHighPerformance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate.UseHighPerformance" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseHighPerformance As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseHighPerformance { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether to use only high performance codecs.
+            Setting this property to true disables support for certain high quality but computationally
+            expensive codecs. Default value is false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

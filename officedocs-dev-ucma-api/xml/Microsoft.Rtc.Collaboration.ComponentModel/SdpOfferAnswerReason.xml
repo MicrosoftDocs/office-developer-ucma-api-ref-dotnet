@@ -1,0 +1,113 @@
+﻿<Type Name="SdpOfferAnswerReason" FullName="Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason">
+  <TypeSignature Language="C#" Value="public enum SdpOfferAnswerReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SdpOfferAnswerReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SdpOfferAnswerReason" />
+  <TypeSignature Language="C++ CLI" Value="public enum class SdpOfferAnswerReason" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the reason for requesting an SDP offer/answer from MediaProvider.
+            </summary>
+    <remarks>
+      <para>
+            The OfferAnswerContext class exposes the SdpOfferAnswerReason enumeration through its Reason property. 
+            A MediaProvider implementation can use this reason to identify the reason for the BeginGetOffer, BeginGetAnswer, 
+            or SetAnswer methods.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IncomingCallEstablishment">
+      <MemberSignature Language="C#" Value="IncomingCallEstablishment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason IncomingCallEstablishment = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason.IncomingCallEstablishment" />
+      <MemberSignature Language="VB.NET" Value="IncomingCallEstablishment" />
+      <MemberSignature Language="C++ CLI" Value="IncomingCallEstablishment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The application is accepting an incoming call.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingRenegotiation">
+      <MemberSignature Language="C#" Value="IncomingRenegotiation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason IncomingRenegotiation = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason.IncomingRenegotiation" />
+      <MemberSignature Language="VB.NET" Value="IncomingRenegotiation" />
+      <MemberSignature Language="C++ CLI" Value="IncomingRenegotiation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Media renegotiation is requested by the remote.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingCallEstablishment">
+      <MemberSignature Language="C#" Value="OutgoingCallEstablishment" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason OutgoingCallEstablishment = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason.OutgoingCallEstablishment" />
+      <MemberSignature Language="VB.NET" Value="OutgoingCallEstablishment" />
+      <MemberSignature Language="C++ CLI" Value="OutgoingCallEstablishment" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The application is establishing an outgoing call. 
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutgoingRenegotiation">
+      <MemberSignature Language="C#" Value="OutgoingRenegotiation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason OutgoingRenegotiation = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason.OutgoingRenegotiation" />
+      <MemberSignature Language="VB.NET" Value="OutgoingRenegotiation" />
+      <MemberSignature Language="C++ CLI" Value="OutgoingRenegotiation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Media renegotiation is initiated locally by MediaProvider.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

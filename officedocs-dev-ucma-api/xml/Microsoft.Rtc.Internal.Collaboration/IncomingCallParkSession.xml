@@ -1,0 +1,196 @@
+﻿<Type Name="IncomingCallParkSession" FullName="Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession">
+  <TypeSignature Language="C#" Value="public class IncomingCallParkSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IncomingCallParkSession extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class IncomingCallParkSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class IncomingCallParkSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IncomingCallParkSession (Microsoft.Rtc.Signaling.SessionReceivedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SessionReceivedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.#ctor(Microsoft.Rtc.Signaling.SessionReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (eventArgs As SessionReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IncomingCallParkSession(Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^ eventArgs);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="Microsoft.Rtc.Signaling.SessionReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAccept">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAccept (string orbitNumber, string parkedCallDialog, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAccept(string orbitNumber, string parkedCallDialog, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.BeginAccept(System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (orbitNumber As String, parkedCallDialog As String, signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(System::String ^ orbitNumber, System::String ^ parkedCallDialog, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="orbitNumber" Type="System.String" />
+        <Parameter Name="parkedCallDialog" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="orbitNumber">To be added.</param>
+        <param name="parkedCallDialog">To be added.</param>
+        <param name="signalingHeaders">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendParkNotification">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendParkNotification (string version, string requestId, Microsoft.Rtc.Internal.Collaboration.CallParkNotificationReason notificationReason, string notificationTarget, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendParkNotification(string version, string requestId, valuetype Microsoft.Rtc.Internal.Collaboration.CallParkNotificationReason notificationReason, string notificationTarget, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.BeginSendParkNotification(System.String,System.String,Microsoft.Rtc.Internal.Collaboration.CallParkNotificationReason,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendParkNotification (version As String, requestId As String, notificationReason As CallParkNotificationReason, notificationTarget As String, signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendParkNotification(System::String ^ version, System::String ^ requestId, Microsoft::Rtc::Internal::Collaboration::CallParkNotificationReason notificationReason, System::String ^ notificationTarget, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="version" Type="System.String" />
+        <Parameter Name="requestId" Type="System.String" />
+        <Parameter Name="notificationReason" Type="Microsoft.Rtc.Internal.Collaboration.CallParkNotificationReason" />
+        <Parameter Name="notificationTarget" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="version">To be added.</param>
+        <param name="requestId">To be added.</param>
+        <param name="notificationReason">To be added.</param>
+        <param name="notificationTarget">To be added.</param>
+        <param name="signalingHeaders">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallParkRequestData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Internal.Collaboration.CallParkRequestData CallParkRequestData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Internal.Collaboration.CallParkRequestData CallParkRequestData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.CallParkRequestData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallParkRequestData As CallParkRequestData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::CallParkRequestData ^ CallParkRequestData { Microsoft::Rtc::Internal::Collaboration::CallParkRequestData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.CallParkRequestData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAccept">
+      <MemberSignature Language="C#" Value="public void EndAccept (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAccept(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.EndAccept(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndAccept (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAccept(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendParkNotification">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndSendParkNotification (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndSendParkNotification(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.EndSendParkNotification(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendParkNotification (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendParkNotification(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalingSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingSession SignalingSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingSession SignalingSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.SignalingSession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignalingSession As SignalingSession" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingSession ^ SignalingSession { Microsoft::Rtc::Signaling::SignalingSession ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

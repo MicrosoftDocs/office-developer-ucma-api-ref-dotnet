@@ -1,0 +1,131 @@
+﻿<Type Name="EndpointType" FullName="Microsoft.Rtc.Collaboration.EndpointType">
+  <TypeSignature Language="C#" Value="public enum EndpointType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EndpointType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.EndpointType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum EndpointType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class EndpointType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+             Advertises the type of endpoint in a communication.
+             </summary>
+    <remarks>
+      <para>
+             The endpoint type conveys the nature of the local or remote endpoint. EndpointType can only be set on a local endpoint
+             and read on a remote endpoint.
+             
+             An application is responsible for setting the type of the LocalEndpoint to indicate to remote endpoints of the network how
+             they should communicate with the local endpoint. 
+             
+             On one hand, an endpoint type "user" indicates that the owner of the endpoint is conceptually a human being. Unlike most Applications, a User
+             can participate in a multimodal communication with a given remote participant by using several endpoints at the same time: a desktop 
+             for video, a phone for audio, and a laptop for Application Sharing. Advertising that an endpoint is of type "User" will trigger a remote
+             endpoint communicating with it to target the User Uri (Owner Uri) rather than the endpoint Uri when adding a modality.
+             
+             On the other hand, an endpoint type "application" indicates that the owner of the endpoint is an Application as opposed to a human being.
+             Applications differ from one to the other in the way other endpoints should communicate with them. Hence the need to further refine the Application
+             type by appending a sub-type. The sub-type indicates  if the application is a voicemail or an auto-attendant for example. The endpoint sub-type can
+             be set or read by using the endpoint sub-type property.
+             
+             Other endpoint types include "Gateway" to indicate a Central Office or Private Branch Exchange trunk or "Conference" to indicate a conferencing component
+             such as a media control unit or the Centralized Conferencing Control Protocol (C3P) focus.
+             
+             Note that this value is represented at the protocol level as a Contact header feature tag based on the RFC 3840. 
+            
+             </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="Application" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointType Application = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointType.Application" />
+      <MemberSignature Language="VB.NET" Value="Application" />
+      <MemberSignature Language="C++ CLI" Value="Application" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Represents an endpoint used by an application.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Conference">
+      <MemberSignature Language="C#" Value="Conference" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointType Conference = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointType.Conference" />
+      <MemberSignature Language="VB.NET" Value="Conference" />
+      <MemberSignature Language="C++ CLI" Value="Conference" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Represents an endpoint used by the C3P infrastructure.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gateway">
+      <MemberSignature Language="C#" Value="Gateway" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointType Gateway = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointType.Gateway" />
+      <MemberSignature Language="VB.NET" Value="Gateway" />
+      <MemberSignature Language="C++ CLI" Value="Gateway" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Represents a trunk to communicate with the Central Office or a foreign exchange.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="User" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.EndpointType User = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.EndpointType.User" />
+      <MemberSignature Language="VB.NET" Value="User" />
+      <MemberSignature Language="C++ CLI" Value="User" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Represents an endpoint used by a person. 
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

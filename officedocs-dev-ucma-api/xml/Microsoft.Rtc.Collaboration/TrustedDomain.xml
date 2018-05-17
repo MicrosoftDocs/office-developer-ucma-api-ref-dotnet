@@ -1,0 +1,162 @@
+﻿<Type Name="TrustedDomain" FullName="Microsoft.Rtc.Collaboration.TrustedDomain">
+  <TypeSignature Language="C#" Value="public class TrustedDomain : IEquatable&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrustedDomain extends System.Object implements class System.IEquatable`1&lt;class Microsoft.Rtc.Collaboration.TrustedDomain&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.TrustedDomain" />
+  <TypeSignature Language="VB.NET" Value="Public Class TrustedDomain&#xA;Implements IEquatable(Of TrustedDomain)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TrustedDomain : IEquatable&lt;Microsoft::Rtc::Collaboration::TrustedDomain ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             This class represents a domain and its type. 
+            </summary>
+    <remarks>
+      <para>
+             The domain is used for incoming connection authorization based on SN or SAN fields in the remote certificate.
+             If the domain is fully qualified domain name, then full matching is performed with certicate SN and SAN fields.
+             If the domain name starts with ".", then suffix matching is performed with certificate SN and SAN fields.
+             </para>
+      <para>
+             The domain type (CommunicationServer or Other) is used to determine the interoperability mode 
+             for audio calls with this domain.
+             </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustedDomain (string domainName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string domainName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.TrustedDomain.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (domainName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TrustedDomain(System::String ^ domainName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="domainName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="domainName">Trusted domain to be used for incoming connection authorization.</param>
+        <summary>
+            Creates an instance of a trusted domain.
+            </summary>
+        <remarks>
+          <para>
+            By default, this constructor uses CommunicationServer as domain mode.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrustedDomain (string domainName, Microsoft.Rtc.Collaboration.TrustedDomainMode domainMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string domainName, valuetype Microsoft.Rtc.Collaboration.TrustedDomainMode domainMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.TrustedDomain.#ctor(System.String,Microsoft.Rtc.Collaboration.TrustedDomainMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (domainName As String, domainMode As TrustedDomainMode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TrustedDomain(System::String ^ domainName, Microsoft::Rtc::Collaboration::TrustedDomainMode domainMode);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="domainName" Type="System.String" />
+        <Parameter Name="domainMode" Type="Microsoft.Rtc.Collaboration.TrustedDomainMode" />
+      </Parameters>
+      <Docs>
+        <param name="domainName">The trusted domain.</param>
+        <param name="domainMode">The domain mode to be used.</param>
+        <summary>
+            Creates an instance of a trusted domain with specific domain mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.TrustedDomainMode DomainMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.TrustedDomainMode DomainMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.TrustedDomain.DomainMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DomainMode As TrustedDomainMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::TrustedDomainMode DomainMode { Microsoft::Rtc::Collaboration::TrustedDomainMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.TrustedDomainMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of domain mode for this trusted domain.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DomainName">
+      <MemberSignature Language="C#" Value="public string DomainName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DomainName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.TrustedDomain.DomainName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DomainName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DomainName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of trusted domain name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Rtc.Collaboration.TrustedDomain other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.Rtc.Collaboration.TrustedDomain other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.TrustedDomain.Equals(Microsoft.Rtc.Collaboration.TrustedDomain)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As TrustedDomain) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Collaboration::TrustedDomain ^ other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Rtc.Collaboration.TrustedDomain" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Checks whether the current object is equal to the specified object.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

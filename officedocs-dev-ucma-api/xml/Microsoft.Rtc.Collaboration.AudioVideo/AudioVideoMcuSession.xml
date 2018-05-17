@@ -1,0 +1,1701 @@
+﻿<Type Name="AudioVideoMcuSession" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession">
+  <TypeSignature Language="C#" Value="public class AudioVideoMcuSession : Microsoft.Rtc.Collaboration.McuSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioVideoMcuSession extends Microsoft.Rtc.Collaboration.McuSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioVideoMcuSession&#xA;Inherits McuSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoMcuSession : Microsoft::Rtc::Collaboration::McuSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.McuSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Allows requests to be made to the Audio-Video MCU.
+            </summary>
+    <remarks>
+      <para>
+            This class represents the Audio-Video specific implementation of the media-agnostic McuSession. The class encapsulates
+            operations and events relevant to the Audio-Video MCU.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttendanceAnnouncementsStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AttendanceAnnouncementsStatus As AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current status for attendance announcements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            When attendance announcements are enabled, the conference will announce the names of the participants
+            joining the conference through audio.
+            </para>
+          <para>
+            If a conference supports modifying attendance announcements, a leader can disable attendance announcements 
+            if they overwhelm the conference.
+            </para>
+          <para>
+            The value of this property will be set to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Unsupported" /> if the
+            conference was hosted on a server version prior to Microsoft Lync Server 2010. <see cref="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginModifyAttendanceAnnouncements(Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus,System.AsyncCallback,System.Object)" /></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioMuteAllMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode AudioMuteAllMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode AudioMuteAllMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AudioMuteAllMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioMuteAllMode As MuteAllMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode AudioMuteAllMode { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current audio mute all mode. <see cref="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.MuteAllMode" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioSelfUnmuteAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment AudioSelfUnmuteAssignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment AudioSelfUnmuteAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AudioSelfUnmuteAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioSelfUnmuteAssignment As SelfUnmuteAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment AudioSelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current audio self unmute assignment that is assigned.  <see cref="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SelfUnmuteAssignment" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAddToDefaultRouting">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAddToDefaultRouting (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAddToDefaultRouting(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginAddToDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAddToDefaultRouting (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddToDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint to add.</param>
+        <param name="userCallback">The callback supplied by the application.</param>
+        <param name="state">The state object supplied by the application.</param>
+        <summary>
+            Adds an endpoint to the default MCU routing.
+            </summary>
+        <returns>As async result that references the operation.</returns>
+        <remarks>
+          <para>
+            This operation can only be performed by an application that joins the conference as a trusted user.
+            </para>
+          <para>
+            Adding an endpoint to the MCU default routing means that the endpoint will receive and send media to the rest of the endpoints
+            included in the default routing. 
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio or if the application did not join the conference
+            as a trusted application.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAddToDefaultRouting">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAddToDefaultRouting (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Collaboration.AddToDefaultRoutingOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAddToDefaultRouting(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Collaboration.AddToDefaultRoutingOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginAddToDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AddToDefaultRoutingOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAddToDefaultRouting (endpoint As ParticipantEndpoint, options As AddToDefaultRoutingOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddToDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::AddToDefaultRoutingOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.AddToDefaultRoutingOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint to add.</param>
+        <param name="options">Options to customize sending the command.</param>
+        <param name="userCallback">The callback supplied by the application.</param>
+        <param name="state">The state object supplied by the application.</param>
+        <summary>
+            Adds an endpoint to the default MCU routing.
+            </summary>
+        <returns>As async result that references the operation.</returns>
+        <remarks>
+          <para>
+            This operation can only be performed by an application that joins the conference as a trusted user.
+            </para>
+          <para>
+            Adding an endpoint to the MCU default routing means that the endpoint will receive and send media to the rest of the endpoints
+            included in the default routing. 
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio or if the application did not join the conference
+            as a trusted application.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDialOut">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDialOut (string destinationUri, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDialOut(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDialOut (destinationUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUri" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUri">The URI of the entity to call.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Requests the Audio-Video MCU to initiate an Audio-Video call to the supplied destination URI.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The Audio-Video MCU is requested to initiate a call to the destination URI using audio and video as default media types
+            if the Conversation does not have either audio and video among its active media types. On the other hand, 
+            if the Conversation has only audio or video among active its media types, the dial-out request is sent 
+            with either audio or video only.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied destinationUri is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the supplied destinationUri is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDialOut">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDialOut (string destinationUri, Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions audioVideoMcuDialOutOptions, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions audioVideoMcuDialOutOptions, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDialOut(System.String,Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuDialOutOptions ^ audioVideoMcuDialOutOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUri" Type="System.String" />
+        <Parameter Name="audioVideoMcuDialOutOptions" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUri">The URI of the entity to call.</param>
+        <param name="audioVideoMcuDialOutOptions">Optional parameters to customize the audio-video MCU dial-out request.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Requests the Audio-Video MCU to initiate an Audio-Video call to the supplied destination URI.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The appearance of the dialed-out to endpoint in the conference roster can be customized by supplying a participant URI and
+            display name in the mcuDialOutOptions object. The MCU may not honor the settings if the asserted identity of the dialed-out
+            to endpoint was communicated to the MCU during the dial-out operation.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied destinationUri is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the supplied destinationUri is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDialOut">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDialOut (string destinationUri, Microsoft.Rtc.Collaboration.McuDialOutOptions mcuDialOutOptions, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class Microsoft.Rtc.Collaboration.McuDialOutOptions mcuDialOutOptions, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDialOut(System.String,Microsoft.Rtc.Collaboration.McuDialOutOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::McuDialOutOptions ^ mcuDialOutOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUri" Type="System.String" />
+        <Parameter Name="mcuDialOutOptions" Type="Microsoft.Rtc.Collaboration.McuDialOutOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUri">The URI of the entity to call.</param>
+        <param name="mcuDialOutOptions">Optional parameters to customize the dial-out request.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Requests the Audio-Video MCU to initiate an Audio-Video call to the supplied destination URI.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The appearance of the dialed-out to endpoint in the conference roster can be customized by supplying a participant URI and
+            display name in the mcuDialOutOptions object. The MCU may not honor the settings if the asserted identity of the dialed-out
+            to endpoint was communicated to the MCU during the dial-out operation.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied destinationUri is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the supplied destinationUri is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDisableMuteAllMode">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDisableMuteAllMode (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDisableMuteAllMode(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDisableMuteAllMode(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDisableMuteAllMode (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDisableMuteAllMode(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Disables mute all mode on AudioVideoMcuSession if it was already enabled.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para>
+            If mute all mode was not enabled previously then this operation completes without any changes to the existing
+            mute all mode state on AudioVideoMcuSession.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDisableMuteAllMode">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDisableMuteAllMode (Microsoft.Rtc.Collaboration.AudioVideo.DisableMuteAllModeOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDisableMuteAllMode(class Microsoft.Rtc.Collaboration.AudioVideo.DisableMuteAllModeOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDisableMuteAllMode(Microsoft.Rtc.Collaboration.AudioVideo.DisableMuteAllModeOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDisableMuteAllMode (options As DisableMuteAllModeOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDisableMuteAllMode(Microsoft::Rtc::Collaboration::AudioVideo::DisableMuteAllModeOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.AudioVideo.DisableMuteAllModeOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Optional parameters to disable mute all mode. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Disables mute all on AudioVideoMcuSession if it was already enabled based on given options.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para>
+            If mute all mode was not enabled previously then this operation completes without any changes to the existing
+            mute all state on AudioVideoMcuSession.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEnableMuteAllMode">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEnableMuteAllMode (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEnableMuteAllMode(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginEnableMuteAllMode(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEnableMuteAllMode (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEnableMuteAllMode(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Enables mute all mode on AudioVideoMcuSession.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para>
+            Mute all mode will be enabled but only leaders can unmute themselves.
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment.LeadersOnly" /></para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEnableMuteAllMode">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEnableMuteAllMode (Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEnableMuteAllMode(class Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginEnableMuteAllMode(Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEnableMuteAllMode (options As EnableMuteAllModeOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEnableMuteAllMode(Microsoft::Rtc::Collaboration::AudioVideo::EnableMuteAllModeOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Optional parameters when enabling mute all mode. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Enables mute all mode on AudioVideoMcuSession based on given options.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para>
+            Mute all mode will be enabled based on given enable mute all options <paramref name="options" />.
+            If the options parameter is not specified mute all mode will be enabled but only leaders can unmute themselves.
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment.LeadersOnly" /></para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyAttendanceAnnouncements">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyAttendanceAnnouncements (Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus status, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyAttendanceAnnouncements(valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus status, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginModifyAttendanceAnnouncements(Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginModifyAttendanceAnnouncements (status As AttendanceAnnouncementsStatus, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyAttendanceAnnouncements(Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus status, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="status" Type="Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="status">The new status for attendance announcements.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Enables or disables attendance announcements.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method should be called by conference leaders only.
+            </para>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if set to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Unsupported" /></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyAttendanceAnnouncements">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyAttendanceAnnouncements (Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus status, Microsoft.Rtc.Collaboration.AudioVideo.ModifyAttendanceAnnouncementOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyAttendanceAnnouncements(valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus status, class Microsoft.Rtc.Collaboration.AudioVideo.ModifyAttendanceAnnouncementOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginModifyAttendanceAnnouncements(Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus,Microsoft.Rtc.Collaboration.AudioVideo.ModifyAttendanceAnnouncementOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginModifyAttendanceAnnouncements (status As AttendanceAnnouncementsStatus, options As ModifyAttendanceAnnouncementOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyAttendanceAnnouncements(Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus status, Microsoft::Rtc::Collaboration::AudioVideo::ModifyAttendanceAnnouncementOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="status" Type="Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.AudioVideo.ModifyAttendanceAnnouncementOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="status">The new status for attendance announcements.</param>
+        <param name="options">Options to customize the operation.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Enables or disables attendance announcements.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method should be called by conference leaders only.
+            </para>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if set to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Unsupported" /></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginMute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginMute (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginMute(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginMute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginMute (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginMute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint for which audio should be muted.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Stops audio coming from the supplied participant endpoint from being sent to the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio to mute.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginMute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginMute (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Collaboration.AudioVideo.MuteOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginMute(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Collaboration.AudioVideo.MuteOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginMute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AudioVideo.MuteOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginMute (endpoint As ParticipantEndpoint, options As MuteOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginMute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::AudioVideo::MuteOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.AudioVideo.MuteOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint for which audio should be muted.</param>
+        <param name="options">Options to customize the mute operation. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Stops audio coming from the supplied participant endpoint from being sent to the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio to mute.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRemoveFromDefaultRouting">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRemoveFromDefaultRouting (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRemoveFromDefaultRouting(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginRemoveFromDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRemoveFromDefaultRouting (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRemoveFromDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint to remove.</param>
+        <param name="userCallback">The callback supplied by the application.</param>
+        <param name="state">The state object supplied by the application.</param>
+        <summary>
+            Removes an endpoint from the default MCU routing.
+            </summary>
+        <returns>As async result that references the operation.</returns>
+        <remarks>
+          <para>
+            This operation can only be performed by an application that joins the conference as a trusted user.
+            </para>
+          <para>
+            Removing an endpoint from the MCU default routing means that the endpoint will no longer receive or send any media to the other endpoints.
+            Trusted applications connected to the conference however can further communicate with that endpoint.
+            </para>
+          <para>
+            Removing an endpoint from default routing could be useful to render specific services to the endpoint while in the conference. As an example, 
+            a trusted application can remove the endpoint from the default mix in order to play a help message to that endpoint without disturbing the rest
+            of the conference.
+            </para>
+          <para>
+            An application can specify how long the endpoint is removed from default routing <see cref="P:Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions.Duration" /> or can rely
+            on the default duration implemented by the MCU. The default duration guarantees that an endpoint is not left out of the default mix forever.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio or if the application did not join the conference
+            as a trusted applicaiton.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRemoveFromDefaultRouting">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRemoveFromDefaultRouting (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRemoveFromDefaultRouting(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginRemoveFromDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRemoveFromDefaultRouting (endpoint As ParticipantEndpoint, options As RemoveFromDefaultRoutingOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRemoveFromDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::RemoveFromDefaultRoutingOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint to remove.</param>
+        <param name="options">Options to customize sending the command.</param>
+        <param name="userCallback">The callback supplied by the application.</param>
+        <param name="state">The state object supplied by the application.</param>
+        <summary>
+            Removes an endpoint from the default MCU routing.
+            </summary>
+        <returns>As async result that references the operation.</returns>
+        <remarks>
+          <para>
+            This operation can only be performed by an application that joins the conference as a trusted user.
+            </para>
+          <para>
+            Removing an endpoint from the MCU default routing means that the endpoint will no longer receive or send any media to the other endpoints.
+            Trusted applications connected to the conference however can further communicate with that endpoint.
+            </para>
+          <para>
+            Removing an endpoint from default routing could be useful to render specific services to the endpoint while in the conference. As an example, 
+            a trusted application can remove the endpoint from the default mix in order to play a help message to that endpoint without disturbing the rest
+            of the conference.
+            </para>
+          <para>
+            An application can specify how long the endpoint is removed from default routing <see cref="P:Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions.Duration" /> or can rely
+            on the default duration implemented by the MCU. The default duration guarantees that an endpoint is not left out of the default mix forever.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio or if the application did not join the conference
+            as a trusted applicaiton.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the <paramref name="options" /> parameter contains a duration value which is less than 1 or greater than <see cref="F:System.UInt16.MaxValue" /> seconds.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTransfer">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTransfer (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall call, Microsoft.Rtc.Collaboration.McuTransferOptions mcuTransferOptions, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTransfer(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall call, class Microsoft.Rtc.Collaboration.McuTransferOptions mcuTransferOptions, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginTransfer(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall,Microsoft.Rtc.Collaboration.McuTransferOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTransfer(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCall ^ call, Microsoft::Rtc::Collaboration::McuTransferOptions ^ mcuTransferOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="call" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" />
+        <Parameter Name="mcuTransferOptions" Type="Microsoft.Rtc.Collaboration.McuTransferOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="call">The Audio-Video call to transfer.</param>
+        <param name="mcuTransferOptions">Optional parameters to customize the transfer request.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Transfers an established two party Audio-Video call to the MCU.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The transferred call has to be an established Call that supports transfer.
+            </para>
+          <para>
+            Unless customized using the supplied mcuTransferOptions, the call remote participant URI and display name
+            are used to supply the transfer request with roster information. Note that even if the participant URI and display name are supplied in
+            the mcuTransferOptions, the MCU may override those values with the asserted identity of the transferred endpoint.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the command is null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnmute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnmute (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUnmute(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginUnmute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUnmute (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnmute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint of which audio should be affected.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Enables the audio coming from the supplied participant endpoint to be sent to the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio to mute.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnmute">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnmute (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Collaboration.AudioVideo.UnmuteOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUnmute(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Collaboration.AudioVideo.UnmuteOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginUnmute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AudioVideo.UnmuteOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUnmute (endpoint As ParticipantEndpoint, options As UnmuteOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnmute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::AudioVideo::UnmuteOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.AudioVideo.UnmuteOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint of which audio should be affected.</param>
+        <param name="options">Options to customize the un-mute operation. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Enables the audio coming from the supplied participant endpoint to be sent to the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the parent ConferenceSession is not in a valid state or the conference does not support the corresponding MCU type.
+            Also thrown if the supplied endpoint is not in the MCU or has no audio to mute.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the supplied endpoint is null.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the parent ConferenceSession is reconnecting (FailureReason will be set to InvalidOperationReason.RetryableOperation).
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAddToDefaultRouting">
+      <MemberSignature Language="C#" Value="public void EndAddToDefaultRouting (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAddToDefaultRouting(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndAddToDefaultRouting(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndAddToDefaultRouting (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddToDefaultRouting(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDialOut">
+      <MemberSignature Language="C#" Value="public void EndDialOut (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDialOut(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndDialOut(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDialOut (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDialOut(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDisableMuteAllMode">
+      <MemberSignature Language="C#" Value="public void EndDisableMuteAllMode (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDisableMuteAllMode(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndDisableMuteAllMode(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDisableMuteAllMode (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDisableMuteAllMode(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEnableMuteAllMode">
+      <MemberSignature Language="C#" Value="public void EndEnableMuteAllMode (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEnableMuteAllMode(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndEnableMuteAllMode(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndEnableMuteAllMode (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEnableMuteAllMode(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndModifyAttendanceAnnouncements">
+      <MemberSignature Language="C#" Value="public void EndModifyAttendanceAnnouncements (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndModifyAttendanceAnnouncements(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndModifyAttendanceAnnouncements(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndModifyAttendanceAnnouncements (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndModifyAttendanceAnnouncements(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when the command timed out waiting for a reply.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when the command failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the command failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndMute">
+      <MemberSignature Language="C#" Value="public void EndMute (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndMute(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndMute(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndMute (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndMute(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRemoveFromDefaultRouting">
+      <MemberSignature Language="C#" Value="public void EndRemoveFromDefaultRouting (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndRemoveFromDefaultRouting(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndRemoveFromDefaultRouting(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndRemoveFromDefaultRouting (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRemoveFromDefaultRouting(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTransfer">
+      <MemberSignature Language="C#" Value="public void EndTransfer (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTransfer(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndTransfer(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTransfer (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTransfer(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUnmute">
+      <MemberSignature Language="C#" Value="public void EndUnmute (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUnmute(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndUnmute(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUnmute (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUnmute(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The operation times out if no response was received within three minutes. If a pending response was received, 
+            the wait period is reset back to three minutes.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the operation failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="protected override void HandleParticipantEndpointAttendanceChanged (System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; addedEndpoints, System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; removedEndpoints);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleParticipantEndpointAttendanceChanged(class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint, class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; addedEndpoints, class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint, class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; removedEndpoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.HandleParticipantEndpointAttendanceChanged(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointAttendanceChanged (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addedEndpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt;" />
+        <Parameter Name="removedEndpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="addedEndpoints">Endpoints added to the MCU roster.</param>
+        <param name="removedEndpoints">Endpoints removed from the MCU roster.</param>
+        <summary>
+            Processes added or removed participant endpoints to the MCU.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="protected override void HandleParticipantEndpointPropertiesChanged (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; pmi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleParticipantEndpointPropertiesChanged(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; pmi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.HandleParticipantEndpointPropertiesChanged(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointPropertiesChanged (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointPropertiesChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="pmi" Type="Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Participant endpoint with changed properties.</param>
+        <param name="pmi">Current property values and changed information.</param>
+        <summary>
+            Process updated MCU participant endpoint properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePropertiesChanged">
+      <MemberSignature Language="C#" Value="protected override void HandlePropertiesChanged (Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; pmi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandlePropertiesChanged(class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.McuSessionProperties&gt; pmi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.HandlePropertiesChanged(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandlePropertiesChanged (pmi As PropertyMergeInformation(Of McuSessionProperties))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandlePropertiesChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmi" Type="Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pmi">Current property values and changed information.</param>
+        <summary>
+            Process updated session properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAudioSupported">
+      <MemberSignature Language="C#" Value="public bool IsAudioSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAudioSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsAudioSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAudioSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAudioSupported { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether audio is supported by the MCU for the joined conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMultiViewVideoSupported">
+      <MemberSignature Language="C#" Value="public bool IsMultiViewVideoSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMultiViewVideoSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsMultiViewVideoSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsMultiViewVideoSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsMultiViewVideoSupported { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether multi-view video is supported by the MCU for the joined conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVideoSupported">
+      <MemberSignature Language="C#" Value="public bool IsVideoSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVideoSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsVideoSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsVideoSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsVideoSupported { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether video is supported by the MCU for the joined conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MuteAllMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode MuteAllMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode MuteAllMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.MuteAllMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MuteAllMode As MuteAllMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode MuteAllMode { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed in future. Use AudioMuteAllMode or VideoMuteAllMode.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current mute all mode. <see cref="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.MuteAllMode" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointAttendanceChanged As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of AudioVideoMcuParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointAttendanceChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more participant endpoints join or leave the MCU.
+            </summary>
+        <remarks>
+          <para>
+            A snapshot of the joining or leaving endpoint properties is provided when the event is raised. However, it is possible
+            for an endpoint to change its properties while the event is being raised. The provided snapshot, on the other hand, will not change.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointPropertiesChanged As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of AudioVideoMcuParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointPropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more properties of a participant endpoint change.
+            </summary>
+        <remarks>
+          <para>
+            A snapshot of the changed properties is provided when the event is raised. However, it is possible
+            for an endpoint to change its properties while the event is being raised. The provided snapshot, on the other hand, will not change.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties&gt;&gt; PropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties&gt;&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.PropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of AudioVideoMcuSessionProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuSessionProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more session properties change.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCore">
+      <MemberSignature Language="C#" Value="protected override void ResetCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ResetCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.ResetCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ResetCore ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ResetCore();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Recycles the AudioVideoMcuSession for reuse.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfUnmuteAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment SelfUnmuteAssignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment SelfUnmuteAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SelfUnmuteAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelfUnmuteAssignment As SelfUnmuteAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment SelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed in future. Use AudioSelfUnmuteAssignment or VideoSelfUnmuteAssignment.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current self unmute assignment that is assigned.  <see cref="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SelfUnmuteAssignment" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMediaTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;string&gt; SupportedMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; SupportedMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SupportedMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the media types supported by the MCU.
+            </summary>
+        <value>The Media types supported by the MCU</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParticipantEndpointProperties">
+      <MemberSignature Language="C#" Value="public bool TryGetParticipantEndpointProperties (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, out Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetParticipantEndpointProperties(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, [out] class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&amp; properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As AudioVideoMcuParticipantEndpointProperties) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuParticipantEndpointProperties ^ % properties);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The participant endpoint for which to retrieve properties.</param>
+        <param name="properties">The properties if available, or null.</param>
+        <summary>
+            Gets the properties of the supplied participant endpoint in this MCU.
+            </summary>
+        <returns>True if properties were found for this participant, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VideoSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.VideoSource VideoSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.VideoSource VideoSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.VideoSource" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VideoSource As VideoSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::VideoSource ^ VideoSource { Microsoft::Rtc::Collaboration::AudioVideo::VideoSource ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.VideoSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current video source that is assigned. <see cref="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.VideoSource" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

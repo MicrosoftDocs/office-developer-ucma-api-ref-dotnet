@@ -1,0 +1,184 @@
+﻿<Type Name="IOfferAnswer" FullName="Microsoft.Rtc.Signaling.IOfferAnswer">
+  <TypeSignature Language="C#" Value="public interface IOfferAnswer" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOfferAnswer" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.IOfferAnswer" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IOfferAnswer" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IOfferAnswer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Defines the contract to be implemented by the caller of a signaling session
+            for media offer/answer negotiation. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAnswer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ContentDescription GetAnswer (object sender, Microsoft.Rtc.Signaling.ContentDescription offer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Signaling.ContentDescription GetAnswer(object sender, class Microsoft.Rtc.Signaling.ContentDescription offer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.IOfferAnswer.GetAnswer(System.Object,Microsoft.Rtc.Signaling.ContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAnswer (sender As Object, offer As ContentDescription) As ContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::ContentDescription ^ GetAnswer(System::Object ^ sender, Microsoft::Rtc::Signaling::ContentDescription ^ offer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="offer" Type="Microsoft.Rtc.Signaling.ContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="offer">The offer made by the remote participant.</param>
+        <summary>
+            The method that is called when media description answer is required
+            for an outgoing 200 OK response or an outgoing ACK when the initial 
+            INVITE request had no offer.
+            </summary>
+        <returns>Returns the media description answer.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOffer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ContentDescription GetOffer (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Signaling.ContentDescription GetOffer(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.IOfferAnswer.GetOffer(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOffer (sender As Object) As ContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::ContentDescription ^ GetOffer(System::Object ^ sender);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <summary>
+            The method that is called when media description offer is required
+            for an outgoing INVITE request or an outgoing 200 OK response to 
+            an INVITE request with null offer.
+            </summary>
+        <returns>
+            Returns the media description offer. This can return null to indicate that null offer is made.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleOfferInInviteResponse">
+      <MemberSignature Language="C#" Value="public void HandleOfferInInviteResponse (object sender, Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleOfferInInviteResponse(object sender, class Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInInviteResponse(System.Object,Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub HandleOfferInInviteResponse (sender As Object, e As OfferInInviteResponseEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void HandleOfferInInviteResponse(System::Object ^ sender, Microsoft::Rtc::Signaling::OfferInInviteResponseEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="e">The event argument containing information about the offer.
+            </param>
+        <summary>
+            The method that is called when a media offer is received by the inviter 
+            in response to the original reinvite with a null offer.
+            </summary>
+        <remarks>
+          <para>
+            The application can cache this event argument and start preparing the answer. 
+            When it is ready, it can call the "ReadyToAnswer" method. This will result in 
+            GetAnswer method getting called.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleOfferInReInvite">
+      <MemberSignature Language="C#" Value="public void HandleOfferInReInvite (object sender, Microsoft.Rtc.Signaling.OfferInReInviteEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void HandleOfferInReInvite(object sender, class Microsoft.Rtc.Signaling.OfferInReInviteEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInReInvite(System.Object,Microsoft.Rtc.Signaling.OfferInReInviteEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub HandleOfferInReInvite (sender As Object, e As OfferInReInviteEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void HandleOfferInReInvite(System::Object ^ sender, Microsoft::Rtc::Signaling::OfferInReInviteEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Rtc.Signaling.OfferInReInviteEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="e">
+            The event argument containing information about the offer. The offer can be null. 
+            </param>
+        <summary>
+            The method that is called when media renegotiation (ReInvite) is received.
+            This happens when the remote sends another INVITE request inside an existing INVITE 
+            dialog to renegotiate media description.
+            </summary>
+        <remarks>
+          <para>
+            The application can cache this event argument and start preparing the answer or offer 
+            (if the original offer was empty). When it is ready, it can all "Accept" method 
+            in the event argument. This will result in GetOffer or GetAnswer method call to fetch offer or answer
+            whichever is appropriate. If the application does not like the offer, it can also decline.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnswer">
+      <MemberSignature Language="C#" Value="public void SetAnswer (object sender, Microsoft.Rtc.Signaling.ContentDescription answer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetAnswer(object sender, class Microsoft.Rtc.Signaling.ContentDescription answer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.IOfferAnswer.SetAnswer(System.Object,Microsoft.Rtc.Signaling.ContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetAnswer (sender As Object, answer As ContentDescription)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetAnswer(System::Object ^ sender, Microsoft::Rtc::Signaling::ContentDescription ^ answer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="answer" Type="Microsoft.Rtc.Signaling.ContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="answer">The answer received.</param>
+        <summary>
+            The method that is called when media description response is received
+            in a 200 OK response or ACK message for an INVITE request.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

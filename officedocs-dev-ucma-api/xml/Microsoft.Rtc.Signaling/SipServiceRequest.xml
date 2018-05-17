@@ -1,0 +1,269 @@
+﻿<Type Name="SipServiceRequest" FullName="Microsoft.Rtc.Signaling.SipServiceRequest">
+  <TypeSignature Language="C#" Value="public class SipServiceRequest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SipServiceRequest extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipServiceRequest" />
+  <TypeSignature Language="VB.NET" Value="Public Class SipServiceRequest" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SipServiceRequest" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class is no longer being maintained. Instead of using the methods on this class, developers are advised to use
+            the BeginSendMessage and EndSendMessage methods on the RealTimeEndpoint class.    
+            Sends a service request to the server. It allows a user to add the message body and content type on a service request.
+            Also provides an overload to send a custom "To" Header and accepted Headers.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipServiceRequest (Microsoft.Rtc.Signaling.RealTimeEndpoint requestorEndpoint, System.Net.Mime.ContentType contentType, byte[] messageBody);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint requestorEndpoint, class System.Net.Mime.ContentType contentType, unsigned int8[] messageBody) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipServiceRequest(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ requestorEndpoint, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ messageBody);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requestorEndpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="messageBody" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="requestorEndpoint">SipEndpoint creating the service request.</param>
+        <param name="contentType">The content type for the service request.</param>
+        <param name="messageBody">The message body of the service request.</param>
+        <summary>
+            Initializes a new instance of the SipServiceRequest class. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when contentType is null, but messageBody is not empty( neither null or zero byte array).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipServiceRequest (Microsoft.Rtc.Signaling.SipEndpoint requestorEndpoint, System.Net.Mime.ContentType contentType, byte[] messageBody);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SipEndpoint requestorEndpoint, class System.Net.Mime.ContentType contentType, unsigned int8[] messageBody) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.#ctor(Microsoft.Rtc.Signaling.SipEndpoint,System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipServiceRequest(Microsoft::Rtc::Signaling::SipEndpoint ^ requestorEndpoint, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ messageBody);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requestorEndpoint" Type="Microsoft.Rtc.Signaling.SipEndpoint" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="messageBody" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="requestorEndpoint">SipEndpoint creating the service request.</param>
+        <param name="contentType">The content type for the service request.</param>
+        <param name="messageBody">The message body of the service request.</param>
+        <summary>
+            Initializes a new instance of the SipServiceRequest class. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when contentType is null, but messageBody is not empty( neither null or zero byte array).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginService">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginService (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginService(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.BeginService(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginService (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginService(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Initiates a service request. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginService">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginService (Microsoft.Rtc.Signaling.RealTimeAddress target, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginService(class Microsoft.Rtc.Signaling.RealTimeAddress target, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.BeginService(Microsoft.Rtc.Signaling.RealTimeAddress,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginService (target As RealTimeAddress, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginService(Microsoft::Rtc::Signaling::RealTimeAddress ^ target, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="target">The address to be used in "To" header of the service request.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Initiates a service request. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginService">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginService (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, Microsoft.Rtc.Signaling.RealTimeAddress target, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginService(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class Microsoft.Rtc.Signaling.RealTimeAddress target, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.BeginService(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},Microsoft.Rtc.Signaling.RealTimeAddress,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginService (signalingHeaders As IEnumerable(Of SignalingHeader), target As RealTimeAddress, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginService(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, Microsoft::Rtc::Signaling::RealTimeAddress ^ target, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="target" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">"Accepted" headers that you may want to add in the service request. Can be null.</param>
+        <param name="target">The address to be used in "To" header of the service request.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Initiates a service request.  
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndService">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndService (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndService(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.EndService(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndService (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndService(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the service request and returns the response.
+            </summary>
+        <returns>Returns the response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the remote side returns a failure response for this operation.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Service">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData Service (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, Microsoft.Rtc.Signaling.RealTimeAddress target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Service(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class Microsoft.Rtc.Signaling.RealTimeAddress target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.Service(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},Microsoft.Rtc.Signaling.RealTimeAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Service (signalingHeaders As IEnumerable(Of SignalingHeader), target As RealTimeAddress) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Service(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, Microsoft::Rtc::Signaling::RealTimeAddress ^ target);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="target" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">"Accepted" headers that you may want to add in the service request. Can be null.</param>
+        <param name="target">The address to be used in "To" header of the service request.</param>
+        <summary>
+            Initiates a service request. 
+            </summary>
+        <returns>Returns the response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="target" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="target" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the remote side returns a failure response for this operation.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when the this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

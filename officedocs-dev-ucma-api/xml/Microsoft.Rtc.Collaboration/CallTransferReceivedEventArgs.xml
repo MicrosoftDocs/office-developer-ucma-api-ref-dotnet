@@ -1,0 +1,337 @@
+﻿<Type Name="CallTransferReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class CallTransferReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallTransferReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallTransferReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallTransferReceivedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents information associated with the reception of a transfer.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CallTransferReceivedEventArgs (Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.#ctor(Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (e As CallTransferReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CallTransferReceivedEventArgs(Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs ^ e);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>
+            Copy constructor for dervie class to initialize base class properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Call Accept (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.Call Accept(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.Accept(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Accept (headers As IEnumerable(Of SignalingHeader)) As Call" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Call ^ Accept(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Call</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="headers">The SIP extension headers to add to the response. Can be null.</param>
+        <summary>
+            Accepts the incoming transfer.
+            </summary>
+        <returns>The call targeting the destination URI indicated in the transfer.</returns>
+        <remarks>
+          <para>The call returned by the Accept method is contained in the new Conversation exposed on the event arguments.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the Endpoint associated with the new transfer call is terminating or terminated or when then underlying transfer transaction
+            is no longer valid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the call is unable to send successful response to the transferor.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendTransferNotification">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendTransferNotification (int responseCode, Microsoft.Rtc.Collaboration.CallTransferNotificationOptions notificationOptions, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendTransferNotification(int32 responseCode, class Microsoft.Rtc.Collaboration.CallTransferNotificationOptions notificationOptions, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.BeginSendTransferNotification(System.Int32,Microsoft.Rtc.Collaboration.CallTransferNotificationOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendTransferNotification (responseCode As Integer, notificationOptions As CallTransferNotificationOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendTransferNotification(int responseCode, Microsoft::Rtc::Collaboration::CallTransferNotificationOptions ^ notificationOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="notificationOptions" Type="Microsoft.Rtc.Collaboration.CallTransferNotificationOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The specific response code.</param>
+        <param name="notificationOptions">Optional parameters to include when sending notification. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Sends the transfer notification. This will result in sending Notification to the transferor explicitly.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the endpoint is already terminated, sending transfer notification operation is not allowed or
+            application has not accepted the incoming transfer request by disabling sending implicit transfer notifications yet.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the response code is out of range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decline">
+      <MemberSignature Language="C#" Value="public void Decline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.Decline" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Decline ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Declines the incoming transfer request. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when there is no transaction to decline.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when there was a transport error.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclineWithResponse">
+      <MemberSignature Language="C#" Value="public void DeclineWithResponse (Microsoft.Rtc.Collaboration.CallDeclineOptions declineOptions);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeclineWithResponse(class Microsoft.Rtc.Collaboration.CallDeclineOptions declineOptions) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.DeclineWithResponse(Microsoft.Rtc.Collaboration.CallDeclineOptions)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeclineWithResponse (declineOptions As CallDeclineOptions)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeclineWithResponse(Microsoft::Rtc::Collaboration::CallDeclineOptions ^ declineOptions);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="declineOptions" Type="Microsoft.Rtc.Collaboration.CallDeclineOptions" />
+      </Parameters>
+      <Docs>
+        <param name="declineOptions">Options to use when declining an incoming transfer request.</param>
+        <summary>
+            Declines the incoming transfer.  This will result in sending a failure response.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the response code in <paramref name="declineOptions" /> was not in the expected range.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the given <paramref name="declineOptions" /> parameter contains invalid diagnostics information <see cref="P:Microsoft.Rtc.Collaboration.CallDeclineOptions.DiagnosticsInformation" />.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when there is no transaction to decline.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when there was a transport error.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendTransferNotification">
+      <MemberSignature Language="C#" Value="public void EndSendTransferNotification (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendTransferNotification(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.EndSendTransferNotification(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSendTransferNotification (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendTransferNotification(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending send transfer notification operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is called multiple times using the same asyncResult or
+            when this method is called before the application accepted the incoming transfer request by 
+            disabling sending implicit transfer notifications.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid asyncResult are passed(may be an asyncResult created from some other
+            operation other than BeginSetState).</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when a non-null value is expected for an argument.  The argument name for which a 
+            non-null is expected is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Encompasses SIP error or failure cases encountered while trying to set refer state
+            - SIP Transport error, SIP Authentication and credential related errors.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ImplicitNotificationDisabled">
+      <MemberSignature Language="C#" Value="public bool ImplicitNotificationDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ImplicitNotificationDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.ImplicitNotificationDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property ImplicitNotificationDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ImplicitNotificationDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether to disable implicit transfer notification.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            When an application accepts an incoming transfer and establishes the new transfer call, transfer notifications are sent the transferor,
+            implicitly based on responses from the transfer target. If an application wishes to disable this behavior then it needs to set this flag
+            value before it accepts the incoming transfer request. Also, it needs to send the transfer notifications by explicitly by using 
+            <see cref="T:Microsoft.Rtc.Signaling.ReferNotifier" />.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the value is set after accepting the incoming transfer request.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipRequestData MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipRequestData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipRequestData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipRequestData ^ MessageData { Microsoft::Rtc::Signaling::SipRequestData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipRequestData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the detailed signaling information associated with the transfer received.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewConversation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conversation NewConversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Conversation NewConversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.NewConversation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewConversation As Conversation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ NewConversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conversation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Conversation used to communicate with the destination URI of the transfer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferDestination">
+      <MemberSignature Language="C#" Value="public string TransferDestination { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransferDestination" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.TransferDestination" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransferDestination As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransferDestination { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the destination URI of the transfer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferredBy">
+      <MemberSignature Language="C#" Value="public string TransferredBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransferredBy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.TransferredBy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransferredBy As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransferredBy { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the initiator of the transfer, when present. Otherwise, returns an empty string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

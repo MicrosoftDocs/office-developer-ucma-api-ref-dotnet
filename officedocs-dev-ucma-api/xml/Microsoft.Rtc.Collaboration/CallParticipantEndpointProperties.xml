@@ -1,0 +1,199 @@
+﻿<Type Name="CallParticipantEndpointProperties" FullName="Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties">
+  <TypeSignature Language="C#" Value="public class CallParticipantEndpointProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallParticipantEndpointProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallParticipantEndpointProperties" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallParticipantEndpointProperties" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the properties of the call remote endpoint. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallParticipantEndpointProperties (Microsoft.Rtc.Collaboration.ParticipantEndpoint remoteParticipantEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ParticipantEndpoint remoteParticipantEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.#ctor(Microsoft.Rtc.Collaboration.ParticipantEndpoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (remoteParticipantEndpoint As ParticipantEndpoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ remoteParticipantEndpoint);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="remoteParticipantEndpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="remoteParticipantEndpoint">To be added.</param>
+        <summary>
+            Creates a new instance of the CallParticipantEndpointProperties class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowTransfer">
+      <MemberSignature Language="C#" Value="public bool AllowTransfer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowTransfer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.AllowTransfer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowTransfer As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowTransfer { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the remote endpoint allows being transferred.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedCapabilities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetSupportedCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetSupportedCapabilities() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.GetSupportedCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSupportedCapabilities () As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetSupportedCapabilities();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a snapshot of the list of SIP capabilities supported by the remote endpoint of the call.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCapabilitySupported">
+      <MemberSignature Language="C#" Value="public bool IsCapabilitySupported (string capability);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsCapabilitySupported(string capability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.IsCapabilitySupported(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsCapabilitySupported (capability As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsCapabilitySupported(System::String ^ capability);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="capability" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="capability">Name of the SIP capability whose support by the call remote endpoint needs to be verified.</param>
+        <summary>
+            Gets whether the signaling capability supplied is supported by the remote endpoint.
+            </summary>
+        <returns>True if the remote endpoint supports the capability supplied, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEarlyMediaSupported">
+      <MemberSignature Language="C#" Value="public bool IsEarlyMediaSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEarlyMediaSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.IsEarlyMediaSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEarlyMediaSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEarlyMediaSupported { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether INVITE contains "100rel" or "ms-early-media" headers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value of this property is true if INVITE contains "100rel" or "ms-early-media" headers, and false otherwise.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteParticipantEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ParticipantEndpoint RemoteParticipantEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ParticipantEndpoint RemoteParticipantEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.RemoteParticipantEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteParticipantEndpoint As ParticipantEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ RemoteParticipantEndpoint { Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ParticipantEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote endpoint of the call. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> Note that this property is null when the call is outbound and has not yet been established.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedCapabilities">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; SupportedCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; SupportedCapabilities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties.SupportedCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedCapabilities As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ SupportedCapabilities { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This value will be removed from future versions. Use the method 'GetSupportedCapabilities()' in this class.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of Session Initiation Protocol (SIP) capabilities supported by the remote endpoint of the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,173 @@
+﻿<Type Name="ShareableResourceFilter" FullName="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter">
+  <TypeSignature Language="C#" Value="public abstract class ShareableResourceFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ShareableResourceFilter extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ShareableResourceFilter" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ShareableResourceFilter abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ShareableResourceFilter (Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient client);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient client) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.#ctor(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (client As ApplicationSharingClient)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ShareableResourceFilter(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClient ^ client);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="client" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient" />
+      </Parameters>
+      <Docs>
+        <param name="client">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveFilterType">
+      <MemberSignature Language="C#" Value="public abstract Type ActiveFilterType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ActiveFilterType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.ActiveFilterType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ActiveFilterType As Type" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Type ^ ActiveFilterType { Type ^ get(); void set(Type ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Cleanup">
+      <MemberSignature Language="C#" Value="protected virtual void Cleanup ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Cleanup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.Cleanup" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Cleanup ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Cleanup();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetResources">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource&gt; GetResources ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource&gt; GetResources() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.GetResources" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetResources () As Collection(Of ShareableResource)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResource ^&gt; ^ GetResources();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnResourceFilterChanged">
+      <MemberSignature Language="C#" Value="protected void OnResourceFilterChanged (Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void OnResourceFilterChanged(class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.OnResourceFilterChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub OnResourceFilterChanged (args As ResourceFilterEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void OnResourceFilterChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ResourceFilterEventArgs ^ args);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResourceFilterUpdated">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs&gt; ResourceFilterUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs&gt; ResourceFilterUpdated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.ResourceFilterUpdated" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ResourceFilterUpdated As EventHandler(Of ResourceFilterEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ResourceFilterEventArgs ^&gt; ^ ResourceFilterUpdated;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBackgroundColor">
+      <MemberSignature Language="C#" Value="public abstract void SetBackgroundColor (byte a, byte r, byte g, byte b);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetBackgroundColor(unsigned int8 a, unsigned int8 r, unsigned int8 g, unsigned int8 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.SetBackgroundColor(System.Byte,System.Byte,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetBackgroundColor (a As Byte, r As Byte, g As Byte, b As Byte)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetBackgroundColor(System::Byte a, System::Byte r, System::Byte g, System::Byte b);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Byte" />
+        <Parameter Name="r" Type="System.Byte" />
+        <Parameter Name="g" Type="System.Byte" />
+        <Parameter Name="b" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="a">To be added.</param>
+        <param name="r">To be added.</param>
+        <param name="g">To be added.</param>
+        <param name="b">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

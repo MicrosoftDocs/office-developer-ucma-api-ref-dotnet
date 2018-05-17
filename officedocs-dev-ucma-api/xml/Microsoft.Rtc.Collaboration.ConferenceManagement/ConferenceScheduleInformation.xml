@@ -1,0 +1,700 @@
+﻿<Type Name="ConferenceScheduleInformation" FullName="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation">
+  <TypeSignature Language="C#" Value="public sealed class ConferenceScheduleInformation : System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConferenceScheduleInformation extends System.Object implements class System.Xml.Serialization.IXmlSerializable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConferenceScheduleInformation&#xA;Implements IXmlSerializable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceScheduleInformation sealed : System::Xml::Serialization::IXmlSerializable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Xml.Serialization.IXmlSerializable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents information to be used in scheduling and updating conferences.
+            </summary>
+    <remarks>
+      <para>
+
+            //conference is an object of type Microsoft.Rtc.Collaboration.Conference.
+
+            
+
+            //Convert to scheduling information.
+
+            ConferenceScheduleInformation csi = (ConferenceScheduleInformation) conference;
+
+            
+
+            //Note: explicitly set the phone access enabled property after the conversion to preserve the 
+
+            //original setting.
+
+            
+
+            //If the converted conference has phone information, then it supports phone access.
+
+            csi.PhoneAccessEnabled = (conference.PhoneInformation != null); 
+
+            
+
+            //Change some property
+
+            csi.Description = "New conference description";
+
+            
+
+            userEndpoint.ConferenceServices.BeginUpdateConference(csi,UpdateCallback,userEndpoint.ConferenceServices);
+
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceScheduleInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceScheduleInformation();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the ConferenceScheduleInformation class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceScheduleInformation (Microsoft.Rtc.Collaboration.SchedulingTemplate schedulingTemplate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate schedulingTemplate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.#ctor(Microsoft.Rtc.Collaboration.SchedulingTemplate)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceScheduleInformation(Microsoft::Rtc::Collaboration::SchedulingTemplate schedulingTemplate);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="schedulingTemplate" Type="Microsoft.Rtc.Collaboration.SchedulingTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="schedulingTemplate">The scheduling template used to schedule the conference.</param>
+        <summary>
+            Creates a new instance of the ConferenceScheduleInformation class based on the
+            supplied scheduling template type.
+            </summary>
+        <remarks>
+          <para>
+            There are two ways for scheduling conferences. The first which is the <see cref="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.OrganizerSupplied" /> depends
+            on properties set by the organizer. An organizer can change the conference properties to any value that they have been configured.
+            The other type called <see cref="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.AdministratorSupplied" /> depends on a template determined by the system administrator.
+            The organizer cannot supply any property other than the conference ID. All other properties are automatically set by the system.
+            </para>
+          <para>
+            Scheduling conferences using the administrator template is only intended for advanced scenarios. Most applications should use organizer
+            template scheduling.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccessLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceAccessLevel AccessLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel AccessLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.AccessLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccessLevel As ConferenceAccessLevel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceAccessLevel AccessLevel { Microsoft::Rtc::Collaboration::ConferenceAccessLevel get(); void set(Microsoft::Rtc::Collaboration::ConferenceAccessLevel value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the access level that controls admission into a conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Set this property to control access to the conference.
+            </para>
+          <para>
+            An application should query the access levels available to the organizer before setting this property. <see cref="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferencingCapabilities(System.AsyncCallback,System.Object)" />
+            and <see cref="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.AllowedAccessLevels" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttendanceAnnouncementsStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Property AttendanceAnnouncementsStatus As AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus get(); void set(Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the attendance announcements status for the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            When attendance announcements are enabled, the conference will announce the names of the participants
+            joining the conference through audio.
+            Reading or setting <see cref="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.AttendanceAnnouncementsStatus" /> property causes an  AVMCU to be  provisioned for the conference when not explicitly requested.</para>
+          <para>
+            An application should only set this property to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Enabled" /> if the conference
+            supports modifying the attendance announcements status. <see cref="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsModifyingAttendanceAnnouncements" /></para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if set to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Unsupported" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticLeaderAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment AutomaticLeaderAssignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment AutomaticLeaderAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.AutomaticLeaderAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutomaticLeaderAssignment As AutomaticLeaderAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment AutomaticLeaderAssignment { Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment get(); void set(Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the policy for automatically promoting users joining a conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Leader assignments are applied when users join the conference and results in them being promoted to leader automatically.
+            </para>
+          <para>
+            An application should query the automatic leader assignment options available to organizer before setting this property. See <see cref="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferencingCapabilities(System.AsyncCallback,System.Object)" />
+            and <see cref="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.AllowedAutomaticLeaderAssignments" />. The request will fail if the application attempts to schedule a conference with unpermitted
+            value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceId">
+      <MemberSignature Language="C#" Value="public string ConferenceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConferenceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.ConferenceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConferenceId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ConferenceId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the conference ID of the new conference to schedule, or
+            the ID of the conference to update.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Setting this property is optional on scheduling new conferences. If no value is provided,
+            UCMA will automatically generate a 32 bit GUID to use in scheduling.
+            </para>
+          <para>
+            This property is required on updating an existing conference. 
+            Note that converting a <see cref="T:Microsoft.Rtc.Collaboration.Conference" /> to a 
+            <see cref="T:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation" /> will automatically preserve
+            the conference ID.
+            </para>
+          <para>
+            A conference ID should be unique among the conferences organized by a specific user and should be greater or equal to
+            8 characters and less than or equal to 32 characters in length. Allowed characters are a-z, A-Z and 0-9.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied value is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the length of the supplied string was less than 8 characters or more than 32 characters.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets a longer description of the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the subject is set to a string with characters considered invalid for XML.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiryTime">
+      <MemberSignature Language="C#" Value="public Nullable&lt;DateTime&gt; ExpiryTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTime&gt; ExpiryTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.ExpiryTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpiryTime As Nullable(Of DateTime)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;DateTime&gt; ExpiryTime { Nullable&lt;DateTime&gt; get(); void set(Nullable&lt;DateTime&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTime&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the absolute date and time after which the conference can be deleted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The day and time must be between one year before, and 10 years after, the
+            current date and time on the server.
+            </para>
+          <para>
+            If no value is supplied, expiry time is set to 8 hours.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the supplied date is not within acceptable limits.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPasscodeOptional">
+      <MemberSignature Language="C#" Value="public bool IsPasscodeOptional { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPasscodeOptional" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.IsPasscodeOptional" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsPasscodeOptional As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsPasscodeOptional { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether trusted applications may elect to skip challenging anonymous users for the conference passcode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Some trusted applications like Conferencing Auto Attendant (CAA) allow anonymous users to join conferences. In the case of CAA,
+            PSTN users are allowed to join conferences as anonymous users if they do not have a valid corporate PIN and the conference is
+            scheduled to allow anonymous access. For most of the cases, the conference organizer would want specific users to join and therefore
+            the CAA service should challenge those users for the conference passcode. However, in other conferences, like a shareholder meeting,
+            verifying the passcode may not be required. Setting this property to true, will cause CAA to skip challenging the PSTN user for a passcode.
+            </para>
+          <para>
+            Note that even on setting this property to true, a passcode needs to be provided when scheduling a conference with anonymous access since
+            legacy clients like LiveMeeting do not support optional passcodes. In other words, those legacy clients will always challenge anonymous
+            users for their passcode.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LobbyBypass">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LobbyBypass LobbyBypass { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.LobbyBypass LobbyBypass" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.LobbyBypass" />
+      <MemberSignature Language="VB.NET" Value="Public Property LobbyBypass As LobbyBypass" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LobbyBypass LobbyBypass { Microsoft::Rtc::Collaboration::LobbyBypass get(); void set(Microsoft::Rtc::Collaboration::LobbyBypass value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyBypass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the lobby bypass setting for the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            A conference leader can allow specific types of users to bypass the lobby and get admitted directly into the conference.
+            As an example, a conference leader may allow participants joining over the phone to bypass the lobby.
+            Note however, if the conference current access level is <see cref="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Locked" />, all new users joining the conference - regardless of any bypass setting -
+            are placed in the conference lobby.
+            </para>
+          <para>
+            An application should query the lobby bypass options available to the organizer before setting this property. See <see cref="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferencingCapabilities(System.AsyncCallback,System.Object)" />
+            and <see cref="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.AllowedLobbyBypassSettings" />. The request will fail if the application attempts to schedule a conference with unpermitted value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mcus">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceMcuInformation&gt; Mcus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceMcuInformation&gt; Mcus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.Mcus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Mcus As IList(Of ConferenceMcuInformation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IList&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceMcuInformation ^&gt; ^ Mcus { System::Collections::Generic::IList&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceMcuInformation ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceMcuInformation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of MCU settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrganizerData">
+      <MemberSignature Language="C#" Value="public string OrganizerData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OrganizerData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.OrganizerData" />
+      <MemberSignature Language="VB.NET" Value="Public Property OrganizerData As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OrganizerData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets an arbitrary XML blob set by the organizer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This data is only visible to the organizer.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantData">
+      <MemberSignature Language="C#" Value="public string ParticipantData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParticipantData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.ParticipantData" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParticipantData As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ParticipantData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets an arbitrary XML blob set by the organizer and to be sent to conference
+            attendees upon joining the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Participants">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation&gt; Participants { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IList`1&lt;class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation&gt; Participants" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.Participants" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Participants As IList(Of ConferenceParticipantInformation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IList&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^&gt; ^ Participants { System::Collections::Generic::IList&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of participants, and their roles.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The organizer doesn't need to be added to the participant list.
+            They will automatically be added with a role of <see cref="Leader" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Passcode">
+      <MemberSignature Language="C#" Value="public string Passcode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Passcode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.Passcode" />
+      <MemberSignature Language="VB.NET" Value="Public Property Passcode As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Passcode { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the conference passcode to be used by anonymous users.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            For server versions prior to Microsoft Lync Server 2010, set this property when scheduling confereneces with anonymous access. Note that this propery has to be set even if passcode verification is set to optional 
+            <see cref="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.IsPasscodeOptional" /> since other clients like LiveMeeting do not support optional passcode verification.
+            </para>
+          <para>
+            The passcode is a case-sensitive alpha-numeric string between 4 to 16 characters long. However, for phone enabled conferences <see cref="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.PhoneAccessEnabled" />
+            the passcode has to be numeric only.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if a null value is supplied.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneAccessEnabled">
+      <MemberSignature Language="C#" Value="public bool PhoneAccessEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PhoneAccessEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.PhoneAccessEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property PhoneAccessEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PhoneAccessEnabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether participants can join the conference over the phone.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Setting this property to true means that conference participants can join the conference
+            over the phone through the Conferencing Auto Attendant (CAA) service.
+            </para>
+          <para>
+            Note that this setting is not preserved on converting a <see cref="T:Microsoft.Rtc.Collaboration.Conference" /> object
+            to a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation" /> object. Therefore,
+            on updating a conference that is phone access enabled, this property needs to be set again after the conversion.
+                        //conference is an object of type Microsoft.Rtc.Collaboration.Conference.                        //Convert to scheduling information.            ConferenceScheduleInformation csi = (ConferenceScheduleInformation) conference;                        //Explicitly set the phone access enabled property after the conversion to preserve the             //original setting.                        //If the converted conference has phone information, then it supports phone access.            csi.PhoneAccessEnabled = (conference.PhoneInformation != null);                         //Change some property            csi.Description = "New conference description";                        userEndpoint.ConferenceServices.BeginUpdateConference(csi,UpdateCallback,userEndpoint.ConferenceServices);            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchedulingTemplate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SchedulingTemplate SchedulingTemplate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate SchedulingTemplate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.SchedulingTemplate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SchedulingTemplate As SchedulingTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::SchedulingTemplate SchedulingTemplate { Microsoft::Rtc::Collaboration::SchedulingTemplate get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SchedulingTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the scheduling template used to schedule the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public Property Subject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the subject of the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.GetSchema">
+      <MemberSignature Language="C#" Value="System.Xml.Schema.XmlSchema IXmlSerializable.GetSchema ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Xml.Schema.XmlSchema System.Xml.Serialization.IXmlSerializable.GetSchema() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.System#Xml#Serialization#IXmlSerializable#GetSchema" />
+      <MemberSignature Language="VB.NET" Value="Function GetSchema () As XmlSchema Implements IXmlSerializable.GetSchema" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::Xml::Schema::XmlSchema ^ System.Xml.Serialization.IXmlSerializable.GetSchema() = System::Xml::Serialization::IXmlSerializable::GetSchema;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Xml.Serialization.IXmlSerializable.GetSchema</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.Schema.XmlSchema</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the schema for the serialization.
+            </summary>
+        <returns>null in our case.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.ReadXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.ReadXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.ReadXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)" />
+      <MemberSignature Language="VB.NET" Value="Sub ReadXml (reader As XmlReader) Implements IXmlSerializable.ReadXml" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void System.Xml.Serialization.IXmlSerializable.ReadXml(System::Xml::XmlReader ^ reader) = System::Xml::Serialization::IXmlSerializable::ReadXml;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader">To be added.</param>
+        <summary>
+            Deserializes the conference schedule settings
+            from the XML. Not required.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Xml.Serialization.IXmlSerializable.WriteXml">
+      <MemberSignature Language="C#" Value="void IXmlSerializable.WriteXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void System.Xml.Serialization.IXmlSerializable.WriteXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)" />
+      <MemberSignature Language="VB.NET" Value="Sub WriteXml (writer As XmlWriter) Implements IXmlSerializable.WriteXml" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void System.Xml.Serialization.IXmlSerializable.WriteXml(System::Xml::XmlWriter ^ writer) = System::Xml::Serialization::IXmlSerializable::WriteXml;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">To be added.</param>
+        <summary>
+            Serializes the XML settings
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public long Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Property Version As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long Version { long get(); void set(long value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the revision number of the scheduled conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Setting this property is optional for scheduling new conferences. However, for updating existing conferences, this property has to 
+            be set to the most up to date revision value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

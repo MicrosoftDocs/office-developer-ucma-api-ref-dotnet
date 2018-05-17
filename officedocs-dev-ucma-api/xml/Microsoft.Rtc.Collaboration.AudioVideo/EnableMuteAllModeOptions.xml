@@ -1,0 +1,96 @@
+﻿<Type Name="EnableMuteAllModeOptions" FullName="Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions">
+  <TypeSignature Language="C#" Value="public class EnableMuteAllModeOptions : Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EnableMuteAllModeOptions extends Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class EnableMuteAllModeOptions&#xA;Inherits ConferenceCommandOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class EnableMuteAllModeOptions : Microsoft::Rtc::Collaboration::ConferenceCommandOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ConferenceCommandOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents options that an application can use to customize enabling the 
+            mute-all mode.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EnableMuteAllModeOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; EnableMuteAllModeOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MuteAllModeAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MuteAllModeAssignment MuteAllModeAssignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MuteAllModeAssignment MuteAllModeAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions.MuteAllModeAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public Property MuteAllModeAssignment As MuteAllModeAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllModeAssignment MuteAllModeAssignment { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllModeAssignment get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::MuteAllModeAssignment value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MuteAllModeAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the mute all assignment value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfUnmuteAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment SelfUnmuteAssignment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment SelfUnmuteAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions.SelfUnmuteAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public Property SelfUnmuteAssignment As SelfUnmuteAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment SelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the self-unmute assignment when enabling mute-all mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment.Everyone" /> option will enable mute all mode and allow everyone to unmute themselves at any time.
+            </para>
+          <para>
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment.LeadersOnly" /> 
+            option will enable mute all mode and allow only participants with leader role to unmute themselves at any time.
+            Participants who are not leaders will not be able to unmute themselves. 
+            Only a leader can choose to unmute those participants.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

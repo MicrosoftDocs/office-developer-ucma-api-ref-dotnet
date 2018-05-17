@@ -1,0 +1,330 @@
+﻿<Type Name="ApplicationSharingHost" FullName="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost">
+  <TypeSignature Language="C#" Value="public abstract class ApplicationSharingHost : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ApplicationSharingHost extends Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationSharingHost&#xA;Inherits ApplicationSharingClient" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingHost abstract : Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClient" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ApplicationSharingHost (Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow flow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow flow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.#ctor(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (flow As ApplicationSharingFlow)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ApplicationSharingHost(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlow ^ flow);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flow" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow" />
+      </Parameters>
+      <Docs>
+        <param name="flow">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginActivate">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginActivate (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginActivate(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.BeginActivate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginActivate (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginActivate(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlAllowed">
+      <MemberSignature Language="C#" Value="public abstract bool ControlAllowed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ControlAllowed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlAllowed" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ControlAllowed As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool ControlAllowed { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; ControlChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; ControlChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ControlChanged As EventHandler(Of AttendeeEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ ControlChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; ControlRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; ControlRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ControlRequested As EventHandler(Of AttendeeEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ ControlRequested;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclineControl">
+      <MemberSignature Language="C#" Value="public abstract void DeclineControl (int attendeeId, int reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeclineControl(int32 attendeeId, int32 reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.DeclineControl(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DeclineControl (attendeeId As Integer, reason As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void DeclineControl(int attendeeId, int reason);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attendeeId" Type="System.Int32" />
+        <Parameter Name="reason" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="attendeeId">To be added.</param>
+        <param name="reason">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndActivate">
+      <MemberSignature Language="C#" Value="public abstract void EndActivate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndActivate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.EndActivate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndActivate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndActivate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GrantControl">
+      <MemberSignature Language="C#" Value="public abstract void GrantControl (int attendeeId, out bool userDeclined);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GrantControl(int32 attendeeId, [out] bool&amp; userDeclined) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.GrantControl(System.Int32,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub GrantControl (attendeeId As Integer, ByRef userDeclined As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void GrantControl(int attendeeId, [Runtime::InteropServices::Out] bool % userDeclined);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attendeeId" Type="System.Int32" />
+        <Parameter Name="userDeclined" Type="System.Boolean&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="attendeeId">To be added.</param>
+        <param name="userDeclined">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnControlChanged">
+      <MemberSignature Language="C#" Value="protected virtual void OnControlChanged (Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnControlChanged(class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.OnControlChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnControlChanged (args As AttendeeEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnControlChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnControlRequested">
+      <MemberSignature Language="C#" Value="protected virtual void OnControlRequested (Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnControlRequested(class Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.OnControlRequested(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnControlRequested (args As AttendeeEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnControlRequested(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProbeState">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingState ProbeState ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingState ProbeState() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ProbeState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ProbeState () As ApplicationSharingState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingState ProbeState();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingState</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RevokeControl">
+      <MemberSignature Language="C#" Value="public abstract void RevokeControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RevokeControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.RevokeControl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RevokeControl ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RevokeControl();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPolicyEnableControl">
+      <MemberSignature Language="C#" Value="public abstract void SetPolicyEnableControl (int attendeeId, bool enabled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPolicyEnableControl(int32 attendeeId, bool enabled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.SetPolicyEnableControl(System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPolicyEnableControl (attendeeId As Integer, enabled As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetPolicyEnableControl(int attendeeId, bool enabled);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attendeeId" Type="System.Int32" />
+        <Parameter Name="enabled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="attendeeId">To be added.</param>
+        <param name="enabled">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopSession">
+      <MemberSignature Language="C#" Value="public override void StopSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopSession() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.StopSession" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopSession ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void StopSession();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

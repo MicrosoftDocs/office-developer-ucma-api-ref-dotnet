@@ -1,0 +1,273 @@
+﻿<Type Name="DataCollaborationMediaSession" FullName="Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession">
+  <TypeSignature Language="C#" Value="public class DataCollaborationMediaSession : Microsoft.Rtc.Internal.Collaboration.MediaSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataCollaborationMediaSession extends Microsoft.Rtc.Internal.Collaboration.MediaSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class DataCollaborationMediaSession&#xA;Inherits MediaSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DataCollaborationMediaSession : Microsoft::Rtc::Internal::Collaboration::MediaSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Internal.Collaboration.MediaSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataCollaborationMediaSession (Microsoft.Rtc.Collaboration.Conversation conversation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DataCollaborationMediaSession(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conversation" Type="Microsoft.Rtc.Collaboration.Conversation" />
+      </Parameters>
+      <Docs>
+        <param name="conversation">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginHandleSessionEstablishment">
+      <MemberSignature Language="C#" Value="protected internal override IAsyncResult BeginHandleSessionEstablishment (Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse dialInResponse, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IAsyncResult BeginHandleSessionEstablishment(class Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse dialInResponse, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.BeginHandleSessionEstablishment(Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function BeginHandleSessionEstablishment (dialInResponse As ParticipantCommandResponse, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override IAsyncResult ^ BeginHandleSessionEstablishment(Microsoft::Rtc::Internal::Collaboration::ParticipantCommandResponse ^ dialInResponse, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialInResponse" Type="Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dialInResponse">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginHandleTermination">
+      <MemberSignature Language="C#" Value="protected internal override IAsyncResult BeginHandleTermination (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.IAsyncResult BeginHandleTermination(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.BeginHandleTermination(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function BeginHandleTermination (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override IAsyncResult ^ BeginHandleTermination(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateTransportProvider">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Rtc.Client.Psom.Kernel.ITransportProvider CreateTransportProvider (Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo connectionInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Client.Psom.Kernel.ITransportProvider CreateTransportProvider(class Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo connectionInfo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.CreateTransportProvider(Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Rtc::Client::Psom::Kernel::ITransportProvider ^ CreateTransportProvider(Microsoft::Rtc::Client::Psom::Kernel::ConnectionInfo ^ connectionInfo);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(false)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Client.Psom.Kernel.ITransportProvider</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionInfo" Type="Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo" />
+      </Parameters>
+      <Docs>
+        <param name="connectionInfo">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSessionInitialized">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs&gt; DataSessionInitialized;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs&gt; DataSessionInitialized" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.DataSessionInitialized" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DataSessionInitialized As EventHandler(Of DataSessionInitializedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataSessionInitializedEventArgs ^&gt; ^ DataSessionInitialized;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndHandleSessionEstablishment">
+      <MemberSignature Language="C#" Value="protected internal override System.Collections.Generic.IEnumerable&lt;string&gt; EndHandleSessionEstablishment (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; EndHandleSessionEstablishment(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.EndHandleSessionEstablishment(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function EndHandleSessionEstablishment (result As IAsyncResult) As IEnumerable(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EndHandleSessionEstablishment(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndHandleTermination">
+      <MemberSignature Language="C#" Value="protected internal override void EndHandleTermination (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void EndHandleTermination(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.EndHandleTermination(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub EndHandleTermination (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void EndHandleTermination(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaSessionConfigurationRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs&gt; MediaSessionConfigurationRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs&gt; MediaSessionConfigurationRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.MediaSessionConfigurationRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event MediaSessionConfigurationRequested As EventHandler(Of MediaSessionConfigurationRequestedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::MediaSessionConfigurationRequestedEventArgs ^&gt; ^ MediaSessionConfigurationRequested;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDataSessionInitialized">
+      <MemberSignature Language="C#" Value="protected virtual void OnDataSessionInitialized (Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDataSessionInitialized(class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.OnDataSessionInitialized(Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnDataSessionInitialized (args As DataSessionInitializedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnDataSessionInitialized(Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataSessionInitializedEventArgs ^ args);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnMediaSessionConfigurationRequested">
+      <MemberSignature Language="C#" Value="protected virtual void OnMediaSessionConfigurationRequested (Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs args);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnMediaSessionConfigurationRequested(class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs args) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.OnMediaSessionConfigurationRequested(Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnMediaSessionConfigurationRequested (args As MediaSessionConfigurationRequestedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnMediaSessionConfigurationRequested(Microsoft::Rtc::Internal::Collaboration::DataCollaboration::MediaSessionConfigurationRequestedEventArgs ^ args);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="args" Type="Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="args">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMediaTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; SupportedMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; SupportedMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.SupportedMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,215 @@
+﻿<Type Name="InviteReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class InviteReceivedEventArgs : Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit InviteReceivedEventArgs extends Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class InviteReceivedEventArgs&#xA;Inherits SipRequestReceivedEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InviteReceivedEventArgs abstract : Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class providing access to SIP INVITE related data.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DiversionContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.DiversionContext DiversionContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.DiversionContext DiversionContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.DiversionContext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DiversionContext As DiversionContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::DiversionContext ^ DiversionContext { Microsoft::Rtc::Collaboration::DiversionContext ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.DiversionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the diversion context information, if available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If diversion context information is not available, this property returns null.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="protected Microsoft.Rtc.Collaboration.LocalEndpoint Endpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LocalEndpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Protected Property Endpoint As LocalEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ Endpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); void set(Microsoft::Rtc::Collaboration::LocalEndpoint ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConferenceDialOut">
+      <MemberSignature Language="C#" Value="public bool IsConferenceDialOut { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConferenceDialOut" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.IsConferenceDialOut" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsConferenceDialOut As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsConferenceDialOut { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the incoming call is from an MCU hosting a conference. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If the incoming call is from an MCU, then the application has to join the conference before accepting the call.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsScreened">
+      <MemberSignature Language="C#" Value="public bool IsScreened { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsScreened" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.IsScreened" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsScreened As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsScreened { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the RemoteParticipant was screened against the LocalParticipant's container membership.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBehalfOfParticipant">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationParticipant OnBehalfOfParticipant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConversationParticipant OnBehalfOfParticipant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.OnBehalfOfParticipant" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OnBehalfOfParticipant As ConversationParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ OnBehalfOfParticipant { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the participant on whose behalf the invite was sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteParticipant">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationParticipant RemoteParticipant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConversationParticipant RemoteParticipant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.RemoteParticipant" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteParticipant As ConversationParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ RemoteParticipant { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the participant that sent the invite.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToastMessage">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Rtc.Collaboration.ToastMessage ToastMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ToastMessage ToastMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.ToastMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ToastMessage As ToastMessage" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Rtc::Collaboration::ToastMessage ^ ToastMessage { Microsoft::Rtc::Collaboration::ToastMessage ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ToastMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the toast message from the incoming call. Can be null if it was missing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferredBy">
+      <MemberSignature Language="C#" Value="public string TransferredBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransferredBy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.InviteReceivedEventArgs.TransferredBy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransferredBy As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransferredBy { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the transferor URI, if present in the incoming INVITE
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property gets the Referred-by header value, if present, in the incoming INVITE. 
+            Otherwise, it returns an empty string.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

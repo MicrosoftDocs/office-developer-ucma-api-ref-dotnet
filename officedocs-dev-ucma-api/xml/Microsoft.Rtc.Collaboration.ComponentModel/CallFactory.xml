@@ -1,0 +1,79 @@
+﻿<Type Name="CallFactory" FullName="Microsoft.Rtc.Collaboration.ComponentModel.CallFactory">
+  <TypeSignature Language="C#" Value="public abstract class CallFactory : Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CallFactory extends Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.CallFactory" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CallFactory&#xA;Inherits MediaBasedFactory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallFactory abstract : Microsoft::Rtc::Collaboration::ComponentModel::MediaBasedFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides call creation services to the collaboration platform.
+            </summary>
+    <remarks>
+      <para>
+            By default, the collaboration platform will use an instance that will create specific calls
+            available in the platform to handle media types handled within the collaboration platform.
+            For example, message, audio, video, image are examples of media types that can be handled
+            by InstantMessagingCall and AudioVideoCall. The application can create an instance of derived
+            class and set it on the collaboration platform to handle extended media types that are not 
+            handled by the collaboration platform. The derived class can create extended call types
+            based on information given.
+            </para>
+      <para>
+            Media types supported by a specific call factory should be case-sensitive and in line
+            with the SDP representation for that media type.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CallFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.CallFactory.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CallFactory();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes the instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionType">
+      <MemberSignature Language="C#" Value="public override sealed string ExtensionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtensionType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.CallFactory.ExtensionType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property ExtensionType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtensionType { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the extension type for Call factories.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

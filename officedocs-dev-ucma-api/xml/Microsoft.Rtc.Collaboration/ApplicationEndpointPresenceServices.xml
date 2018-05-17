@@ -1,0 +1,147 @@
+﻿<Type Name="ApplicationEndpointPresenceServices" FullName="Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices">
+  <TypeSignature Language="C#" Value="public class ApplicationEndpointPresenceServices : Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationEndpointPresenceServices extends Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationEndpointPresenceServices&#xA;Inherits LocalEndpointPresenceServices" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationEndpointPresenceServices : Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class provides common presence services for <see cref="T:Microsoft.Rtc.Collaboration.ApplicationEndpoint" />.
+            </summary>
+    <remarks>
+      <para>Presently application endpoints are allowed to republish the contact card instance by modifying the presentity description 
+            and type.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices.Description" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Description As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the description of the presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialPresenceState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceState InitialPresenceState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PresenceState InitialPresenceState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices.InitialPresenceState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InitialPresenceState As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ InitialPresenceState { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the machine state that was published as part of the establish process.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredServiceCapabilities">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.PreferredServiceCapabilities PreferredServiceCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.PreferredServiceCapabilities PreferredServiceCapabilities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices.PreferredServiceCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreferredServiceCapabilities As PreferredServiceCapabilities" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::PreferredServiceCapabilities ^ PreferredServiceCapabilities { Microsoft::Rtc::Collaboration::PreferredServiceCapabilities ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PreferredServiceCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the device capabilities of this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresentityType">
+      <MemberSignature Language="C#" Value="public string PresentityType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PresentityType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices.PresentityType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresentityType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PresentityType { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating the type of the presentity such as "person", "huntgroup", "autoattendant", "automaton".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatePublishedData">
+      <MemberSignature Language="C#" Value="public void UpdatePublishedData (string description, string presentityType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdatePublishedData(string description, string presentityType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices.UpdatePublishedData(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UpdatePublishedData (description As String, presentityType As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void UpdatePublishedData(System::String ^ description, System::String ^ presentityType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="description" Type="System.String" />
+        <Parameter Name="presentityType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="description">The description of this presentity.</param>
+        <param name="presentityType">The presentity such as "person", "huntgroup", "autoattendant", "automaton".</param>
+        <summary>
+            Updates presence data that was automatically published by the endpoint.
+            </summary>
+        <remarks>
+          <para>Publication may be delayed if certain servers are unreachable. This operation involves re-publishing the <see cref="T:Microsoft.Rtc.Collaboration.Presence.ContactCard" /> instance that is published in container 0 with the presentity
+            and description attributes updated with the new values.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if endpoint is established without enabling automatic presence publishing.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

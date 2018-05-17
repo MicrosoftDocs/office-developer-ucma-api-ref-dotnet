@@ -1,0 +1,285 @@
+﻿<Type Name="SdpConnection" FullName="Microsoft.Rtc.Signaling.SdpConnection">
+  <TypeSignature Language="C#" Value="public class SdpConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpConnection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SdpConnection" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains either an IP address or a hostname found in the SDP.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the SdpConnection class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpConnection (Microsoft.Rtc.Signaling.SdpConnection source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SdpConnection source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.#ctor(Microsoft.Rtc.Signaling.SdpConnection)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (source As SdpConnection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpConnection(Microsoft::Rtc::Signaling::SdpConnection ^ source);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Signaling.SdpConnection" />
+      </Parameters>
+      <Docs>
+        <param name="source">The SdpConnection to copy.</param>
+        <summary>
+            Initializes a new instance of the SdpConnection class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the source is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpConnection (System.Net.IPAddress connection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress connection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.#ctor(System.Net.IPAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (connection As IPAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpConnection(System::Net::IPAddress ^ connection);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="connection" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="connection">To be added.</param>
+        <summary>
+            Initializes a new instance of the SdpConnection class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public string HostName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpConnection.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public Property HostName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HostName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the FQDN of the connection. This property will return
+            String.Emtpy if an IP address is present in the SDP. If both
+            and IPAddress and HostName are set, then the HostName is used
+            when serializing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameIPVersion">
+      <MemberSignature Language="C#" Value="public System.Net.Sockets.AddressFamily HostNameIPVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Net.Sockets.AddressFamily HostNameIPVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpConnection.HostNameIPVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Property HostNameIPVersion As AddressFamily" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Sockets::AddressFamily HostNameIPVersion { System::Net::Sockets::AddressFamily get(); void set(System::Net::Sockets::AddressFamily value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Sockets.AddressFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the address family to use if a hostname is specified rather than an IP address.
+            The family found in the IPAddress instance is used, if the IPAddress 
+            property is not null. This value defaults to InterNetwork (IP4).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when it is neither AddressFamily.InterNetwork (IP4) nor InterNetworkV6 (IP6)
+            are defined for an SDP.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IPAddress">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress IPAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress IPAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpConnection.IPAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property IPAddress As IPAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ IPAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the IP address unless a HostName is supplied. This property may be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSet">
+      <MemberSignature Language="C#" Value="public bool IsSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpConnection.IsSet" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSet As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSet { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if the connection has been assigned a value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (System.Net.IPAddress ipAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset(class System.Net.IPAddress ipAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.Reset(System.Net.IPAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset(System::Net::IPAddress ^ ipAddress);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipAddress" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="ipAddress">The IP address to initialize. This parameter may be null.</param>
+        <summary>
+            Sets default values for the connection instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Set">
+      <MemberSignature Language="C#" Value="public void Set (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Set(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.Set(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Set (value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Set(System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">A hostname or a formatted IP address (either IP4 or IP6).</param>
+        <summary>
+            Sets the IPAddress property if the given string is a recognizable address,
+            otherwise sets the HostName property.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the provided name is not a valid IP address or hostname.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a string representation of the SdpConnection instance. This function is useful
+            for tracing or debugging.
+            </summary>
+        <returns>Returns a string representation of the SdpConnection instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrySet">
+      <MemberSignature Language="C#" Value="public bool TrySet (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TrySet(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpConnection.TrySet(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TrySet (value As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TrySet(System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value">The string value to set on the connection.</param>
+        <summary>
+            Sets the IPAddress property if a given string is a recognizable address,
+            otherwise sets the HostName property. Strings that contain spaces, slashes, or control 
+            characters are not accepted.
+            </summary>
+        <returns>Returns true if the supplied value is valid and can be set.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

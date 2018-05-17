@@ -1,0 +1,72 @@
+﻿<Type Name="TerminationCountdownStatus" FullName="Microsoft.Rtc.Collaboration.TerminationCountdownStatus">
+  <TypeSignature Language="C#" Value="public enum TerminationCountdownStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TerminationCountdownStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.TerminationCountdownStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum TerminationCountdownStatus" />
+  <TypeSignature Language="C++ CLI" Value="public enum class TerminationCountdownStatus" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the status of automatic conference termination timer.
+            </summary>
+    <remarks>
+      <para>
+            Conference termination normally will not happen when an authenticated user from
+            within the enterprise is still joined to the conference. If only anonymous 
+            participants are left, the count down timer is started to 
+            shut down the conference.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Started">
+      <MemberSignature Language="C#" Value="Started" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.TerminationCountdownStatus Started = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.TerminationCountdownStatus.Started" />
+      <MemberSignature Language="VB.NET" Value="Started" />
+      <MemberSignature Language="C++ CLI" Value="Started" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.TerminationCountdownStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Automatic termination has been started and is active.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stopped">
+      <MemberSignature Language="C#" Value="Stopped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.TerminationCountdownStatus Stopped = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.TerminationCountdownStatus.Stopped" />
+      <MemberSignature Language="VB.NET" Value="Stopped" />
+      <MemberSignature Language="C++ CLI" Value="Stopped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.TerminationCountdownStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Automatic termination has stopped or has not been started.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,130 @@
+﻿<Type Name="CallTransferNotificationOptions" FullName="Microsoft.Rtc.Collaboration.CallTransferNotificationOptions">
+  <TypeSignature Language="C#" Value="public class CallTransferNotificationOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallTransferNotificationOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallTransferNotificationOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallTransferNotificationOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallTransferNotificationOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Optional parameters for sending explicit transfer notifications.
+            </summary>
+    <remarks>
+      <para>
+            This class is used when an application disables sending of implicit transfer 
+            notifications via setting <see cref="CallTransferReceivedEventArgs.ImplicitNotificationDisabled" /> to true. 
+            Application is then responsible for sending explicit notifications using method <see cref="CallTransferReceivedEventArgs.BeginSendTransferNotification" />.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallTransferNotificationOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferNotificationOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallTransferNotificationOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferNotificationOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included in transfer notification.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemainingSipFragment">
+      <MemberSignature Language="C#" Value="public string RemainingSipFragment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemainingSipFragment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferNotificationOptions.RemainingSipFragment" />
+      <MemberSignature Language="VB.NET" Value="Public Property RemainingSipFragment As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RemainingSipFragment { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the remaining sip fragment to be sent in the NOTIFY message body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value will be used in the outgoing NOTIFY body along with the response code and response text.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseText">
+      <MemberSignature Language="C#" Value="public string ResponseText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferNotificationOptions.ResponseText" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ResponseText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the response text to be sent in the NOTIFY message body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value will be used in the outgoing NOTIFY body.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException"> Thrown when the value set is null. </exception>
+        <exception cref="T:System.ArgumentException"> Thrown when the value set is empty.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,278 @@
+﻿<Type Name="ConferenceParticipantInformation" FullName="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation">
+  <TypeSignature Language="C#" Value="public sealed class ConferenceParticipantInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ConferenceParticipantInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ConferenceParticipantInformation" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceParticipantInformation sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents the information necessary
+            for each participant when scheduling a conference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceParticipantInformation (string uri, Microsoft.Rtc.Collaboration.ConferencingRole role);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri, valuetype Microsoft.Rtc.Collaboration.ConferencingRole role) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.#ctor(System.String,Microsoft.Rtc.Collaboration.ConferencingRole)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String, role As ConferencingRole)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceParticipantInformation(System::String ^ uri, Microsoft::Rtc::Collaboration::ConferencingRole role);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="role" Type="Microsoft.Rtc.Collaboration.ConferencingRole" />
+      </Parameters>
+      <Docs>
+        <param name="uri">
+            The SIP URI of the person to be allowed in the meeting.
+            For authenticated users, this parameter is required.
+            </param>
+        <param name="role">Role requested for the invitee.</param>
+        <summary>
+            Creates a new instance of the ConferenceParticipantInformation class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.Equals(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (obj As ConferenceParticipantInformation) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The target participant instance to compare with.</param>
+        <summary>
+            Gets whether the current participant is equal to the passed participant. 
+            </summary>
+        <returns>True when this instance matched the supplied target instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The target participant instance to compare with.</param>
+        <summary>
+            Gets whether the current participant is equal to the passed participant. 
+            </summary>
+        <returns>True when this instance matched the supplied target instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a hash code for the participant instance.
+            </summary>
+        <returns>The hash code for this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation participant1, object participant2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation participant1, object participant2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.op_Equality(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (participant1 As ConferenceParticipantInformation, participant2 As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^ participant1, System::Object ^ participant2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant1" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation" />
+        <Parameter Name="participant2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participant1">The first participant to compare.</param>
+        <param name="participant2">The instance to compare to.</param>
+        <summary>
+            Gets whether the two participants are equal.
+            </summary>
+        <returns>True if the participants are equal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.Rtc.Signaling.RealTimeAddress (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class Microsoft.Rtc.Signaling.RealTimeAddress op_Implicit(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.op_Implicit(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation)~Microsoft.Rtc.Signaling.RealTimeAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (settings As ConferenceParticipantInformation) As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Microsoft::Rtc::Signaling::RealTimeAddress ^(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^ settings);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The settings instance to convert.</param>
+        <summary>
+            Convert settings to endpoint address.
+            </summary>
+        <returns>The address of the participant.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation participant1, object participant2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation participant1, object participant2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.op_Inequality(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (participant1 As ConferenceParticipantInformation, participant2 As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^ participant1, System::Object ^ participant2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant1" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation" />
+        <Parameter Name="participant2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participant1">The first participant to compare.</param>
+        <param name="participant2">The instance to compare to.</param>
+        <summary>
+            Gets whether the two participants are unequal.
+            </summary>
+        <returns>True if the participants are unequal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Role">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferencingRole Role { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferencingRole Role" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.Role" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Role As ConferencingRole" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferencingRole Role { Microsoft::Rtc::Collaboration::ConferencingRole get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferencingRole</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the role requested for the invitee.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToRealTimeAddress">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Signaling.RealTimeAddress ToRealTimeAddress (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Signaling.RealTimeAddress ToRealTimeAddress(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.ToRealTimeAddress(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ToRealTimeAddress (settings As ConferenceParticipantInformation) As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Signaling::RealTimeAddress ^ ToRealTimeAddress(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceParticipantInformation ^ settings);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The settings instance to convert.</param>
+        <summary>
+            Convert settings to endpoint address.
+            </summary>
+        <returns>The address of the participant.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceParticipantInformation.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the participant's URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,122 @@
+﻿<Type Name="CallProvisionalResponseOptions" FullName="Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions">
+  <TypeSignature Language="C#" Value="public class CallProvisionalResponseOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallProvisionalResponseOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallProvisionalResponseOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallProvisionalResponseOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Optional parameter for sending the provisional response on incoming call.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallProvisionalResponseOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallProvisionalResponseOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.DialogContext DialogContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.DialogContext DialogContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions.DialogContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property DialogContext As DialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DialogContext ^ DialogContext { Microsoft::Rtc::Signaling::DialogContext ^ get(); void set(Microsoft::Rtc::Signaling::DialogContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.DialogContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the dialog context of the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Required only by a Back to back agent.
+            To set the new DialogContext, an application should create a new dialog using <see cref="M:Microsoft.Rtc.Collaboration.Call.GetNewEarlyDialog" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included in the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseText">
+      <MemberSignature Language="C#" Value="public string ResponseText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions.ResponseText" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ResponseText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of response text to send with the provisional response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If this value is not set or set to null or empty then default response text based on the response code parameter will be used.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

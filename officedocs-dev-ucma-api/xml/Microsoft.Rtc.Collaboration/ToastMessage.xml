@@ -1,0 +1,193 @@
+﻿<Type Name="ToastMessage" FullName="Microsoft.Rtc.Collaboration.ToastMessage">
+  <TypeSignature Language="C#" Value="public class ToastMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToastMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ToastMessage" />
+  <TypeSignature Language="VB.NET" Value="Public Class ToastMessage" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ToastMessage" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the toast message that can be sent along with an INVITE.
+            </summary>
+    <remarks>
+      <para>
+            Toast messages can be specified when establishing instant messaging calls or delivering conference invitations.
+            </para>
+      <para />
+    </remarks>
+    <example>
+      <para />
+      <para>
+            This example shows how to establish a call to a Uri with a toast message. 
+            </para>
+      <para> C# Establish call with toast message</para>
+      <code> 
+        call.BeginEstablish(
+            destinationUri,
+            new ToastMessage("Do you have a minute?"),
+            null /*options*/,
+            this.EstablishCompleted,
+            call /*state*/);
+
+
+</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToastMessage (string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ToastMessage.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ToastMessage(System::String ^ message);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="message">The toast message.</param>
+        <summary>
+            Creates a new instance of the ToastMessage class with the given message.
+            </summary>
+        <remarks>
+          <para>A toast message is always created with ContentType of "text/plain".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToastMessage (System.Net.Mime.ContentType contentType, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ToastMessage.#ctor(System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ToastMessage(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">The content type.</param>
+        <param name="body">The body for the toast.</param>
+        <summary>
+            Creates a new instance of the ToastMessage class with the given content type and body.
+            </summary>
+        <remarks>
+          <para>Some clients may not support content types other than "text/plain." 
+            For example, some versions of Microsoft Communicator have this restriction.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Net.Mime.ContentType ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mime.ContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ToastMessage.ContentType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentType As ContentType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Mime::ContentType ^ ContentType { System::Net::Mime::ContentType ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.ContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the MIME content type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBody">
+      <MemberSignature Language="C#" Value="public byte[] GetBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ToastMessage.GetBody" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBody () As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetBody();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the message body. 
+            </summary>
+        <returns>The message body.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTextMessage">
+      <MemberSignature Language="C#" Value="public bool HasTextMessage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasTextMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ToastMessage.HasTextMessage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasTextMessage As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasTextMessage { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the toast message contains plain text.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ToastMessage.Message" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Message { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the text message. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Usable if the content type indicates text message and encoding is supported locally.
+            This property can return String.Empty if the text message does not exist.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

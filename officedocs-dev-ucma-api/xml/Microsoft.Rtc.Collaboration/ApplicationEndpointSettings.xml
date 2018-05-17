@@ -1,0 +1,485 @@
+﻿<Type Name="ApplicationEndpointSettings" FullName="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings">
+  <TypeSignature Language="C#" Value="public class ApplicationEndpointSettings : Microsoft.Rtc.Collaboration.LocalEndpointSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationEndpointSettings extends Microsoft.Rtc.Collaboration.LocalEndpointSettings" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationEndpointSettings&#xA;Inherits LocalEndpointSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationEndpointSettings : Microsoft::Rtc::Collaboration::LocalEndpointSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.LocalEndpointSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the settings needed to initialize an ApplicationEndpoint. 
+            </summary>
+    <remarks>
+      <para>For manually provisioned endpoints, the application creates an instance 
+            of this class and populates it.</para>
+      <para>For auto-provisioned endpoints, an instance of the ApplicationEndpointSettings class is automatically created and passed into the event handler registered through <see cref="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.RegisterForApplicationEndpointSettings(System.EventHandler{Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs})" />.
+            The application can then customize the settings it needs to and create the ApplicationEndpoint.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationEndpointSettings (string ownerUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointSettings(System::String ^ ownerUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the owner of the endpoint.</param>
+        <summary>
+            Creates a new instance of the ApplicationEndpointSettings class.
+            </summary>
+        <remarks>
+          <para>
+            The endpoint type is set to "Application" and EndpointSubtype to "Attendant" by default.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more arguments are null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationEndpointSettings (string ownerUri, Microsoft.Rtc.Signaling.ConnectionContext proxyConnectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, class Microsoft.Rtc.Signaling.ConnectionContext proxyConnectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.#ctor(System.String,Microsoft.Rtc.Signaling.ConnectionContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, proxyConnectionContext As ConnectionContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointSettings(System::String ^ ownerUri, Microsoft::Rtc::Signaling::ConnectionContext ^ proxyConnectionContext);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="proxyConnectionContext" Type="Microsoft.Rtc.Signaling.ConnectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the owner of the endpoint.</param>
+        <param name="proxyConnectionContext">The proxy connection information to use as the first hop instead of a direct connection to the other endpoint.</param>
+        <summary>
+            Creates a new instance of the ApplicationEndpointSettings class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if one or more arguments are null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if one or more arguments are not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationEndpointSettings (string ownerUri, string proxyHost, int proxyPort);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, string proxyHost, int32 proxyPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.#ctor(System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, proxyHost As String, proxyPort As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointSettings(System::String ^ ownerUri, System::String ^ proxyHost, int proxyPort);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="proxyHost" Type="System.String" />
+        <Parameter Name="proxyPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the owner of the endpoint.</param>
+        <param name="proxyHost">The proxy host to use as the first hop instead of a direct connection to the other endpoint.</param>
+        <param name="proxyPort">The port to use for connecting to a proxy.</param>
+        <summary>
+            Creates a new instance of the ApplicationEndpointSettings class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if one or more arguments are null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if one or more arguments are not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticPresencePublicationEnabled">
+      <MemberSignature Language="C#" Value="public bool AutomaticPresencePublicationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticPresencePublicationEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutomaticPresencePublicationEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticPresencePublicationEnabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether presence information will be published automatically on behalf of the endpoint as 
+            part of the establishment process.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If set to true a <see cref="T:Microsoft.Rtc.Collaboration.Presence.ContactCard" /> instance will be published in container 0 automatically during the establishment process.
+            The instance will have the <see cref="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.IsAutomatedService" /> property set 
+            to true along with presentity type, description, if provided, phone numbers, <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.PersistentOnline" /> and
+            any specified endpoint capabilities.  
+            </para>
+          <para>Publication failure during endpoint establishment will be reflected through <see cref="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationState" /> and <see cref="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationStateChanged" />.
+            Endpoint establishment will be allowed to proceed inspite of publication failure. Retries will continue in the background and the application will be notified upon success.
+            </para>
+          <para>
+            The default value is false. Applications can override this default value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultRoutingEndpoint">
+      <MemberSignature Language="C#" Value="public bool IsDefaultRoutingEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefaultRoutingEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.IsDefaultRoutingEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsDefaultRoutingEndpoint As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDefaultRoutingEndpoint { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the flag that indicates whether this endpoint is marked as default endpoint to handle
+            incoming requests that are not routable to other endpoints.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Default routing endpoint is meant for handling all requests received by the collaboration platform
+            for which a matching endpoint could not be found. Common usages of this type of endpoint include:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>handling of incoming requests targetting a trusted service (i.e. using GRUU supplied in the platform as destination uri),</description>
+            </item>
+            <item>
+              <description>processing incoming calls for endpoints that have already been terminated (e.g. to play back 
+            "service unavailable" announcements),</description>
+            </item>
+            <item>
+              <description>handling calls coming from different remote sip peers 
+            (Communication Server or Others) destined to one unique service and thus relaxing a strict platform 
+            routing logic based on the destination-owner uri matching.</description>
+            </item>
+          </list>
+          <para>
+            For a given instance of the CollaborationPlatform, only one endpoint can be a maked as 
+            default routing endpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaEdgeAuthenticationService">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ConnectionContext MediaEdgeAuthenticationService { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ConnectionContext MediaEdgeAuthenticationService" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.MediaEdgeAuthenticationService" />
+      <MemberSignature Language="VB.NET" Value="Public Property MediaEdgeAuthenticationService As ConnectionContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ConnectionContext ^ MediaEdgeAuthenticationService { Microsoft::Rtc::Signaling::ConnectionContext ^ get(); void set(Microsoft::Rtc::Signaling::ConnectionContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ConnectionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the connection context for the service that grants communication permissions via a media edge service
+            deployed in the perimeter network.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that this is an advanced API that is meant to be used only when an endpoint's proxy host is an edge server
+            rather than a front end server.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when given value is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDisplayName">
+      <MemberSignature Language="C#" Value="public string OwnerDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.OwnerDisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerDisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerDisplayName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display name of the owner.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerPhoneUri">
+      <MemberSignature Language="C#" Value="public string OwnerPhoneUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerPhoneUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.OwnerPhoneUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property OwnerPhoneUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerPhoneUri { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the tel URI of the endpoint. Optional.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The URI representing the telephone number corresponding to the owner of this endpoint.
+            This should be a tel URI following the E.164 format (e.g. tel:+14255553333). 
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the value being set is not a valid URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Presence">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings Presence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings Presence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.Presence" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Presence As ApplicationEndpointPresenceSettings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ApplicationEndpointPresenceSettings ^ Presence { Microsoft::Rtc::Collaboration::ApplicationEndpointPresenceSettings ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the presence-related settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            It encapsulates information that will be published when <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" /> 
+            is set to true and some initial settings to be used when remote presentities are subscribed to.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvisioningDataQueryDisabled">
+      <MemberSignature Language="C#" Value="public bool ProvisioningDataQueryDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProvisioningDataQueryDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProvisioningDataQueryDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProvisioningDataQueryDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProvisioningDataQueryDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether to query for the provisioning data when the endpoint is established.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, the value is set to false and hence by default we will query for provisioning data on start up.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyCertificateSubject">
+      <MemberSignature Language="C#" Value="public string ProxyCertificateSubject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProxyCertificateSubject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyCertificateSubject" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProxyCertificateSubject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProxyCertificateSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the subject of the certificate to expect from the proxy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> This is used only if the endpoint is configured with a proxy and CollaborationPlatform has been configured to use MTLS.
+            It needs to be set only when the subject of the certificate expected from the proxy differs from the proxy host specified.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyHost">
+      <MemberSignature Language="C#" Value="public string ProxyHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProxyHost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyHost" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProxyHost As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProxyHost { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the proxy host to use as the first hop instead of a direct connection to the other endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> 
+            This property enables the application to be able to send messages to other endpoints (which may
+            not reachable directly) via the proxy.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProxyPort">
+      <MemberSignature Language="C#" Value="public int ProxyPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ProxyPort" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyPort" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProxyPort As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ProxyPort { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the port to use for connecting to a proxy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEndpointType">
+      <MemberSignature Language="C#" Value="public void SetEndpointType (Microsoft.Rtc.Collaboration.EndpointType endpointType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEndpointType(valuetype Microsoft.Rtc.Collaboration.EndpointType endpointType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.SetEndpointType(Microsoft.Rtc.Collaboration.EndpointType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetEndpointType(Microsoft::Rtc::Collaboration::EndpointType endpointType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointType" Type="Microsoft.Rtc.Collaboration.EndpointType" />
+      </Parameters>
+      <Docs>
+        <param name="endpointType">The user agent's type.</param>
+        <summary>
+            Sets the type of user agent that this endpoint represents.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEndpointType">
+      <MemberSignature Language="C#" Value="public void SetEndpointType (Microsoft.Rtc.Collaboration.EndpointType endpointType, Microsoft.Rtc.Collaboration.EndpointSubtype endpointSubtype);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEndpointType(valuetype Microsoft.Rtc.Collaboration.EndpointType endpointType, valuetype Microsoft.Rtc.Collaboration.EndpointSubtype endpointSubtype) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.SetEndpointType(Microsoft.Rtc.Collaboration.EndpointType,Microsoft.Rtc.Collaboration.EndpointSubtype)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetEndpointType(Microsoft::Rtc::Collaboration::EndpointType endpointType, Microsoft::Rtc::Collaboration::EndpointSubtype endpointSubtype);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpointType" Type="Microsoft.Rtc.Collaboration.EndpointType" />
+        <Parameter Name="endpointSubtype" Type="Microsoft.Rtc.Collaboration.EndpointSubtype" />
+      </Parameters>
+      <Docs>
+        <param name="endpointType">The user agent's type.</param>
+        <param name="endpointSubtype">The user agent's subtype. Only permissible if the EndpointType is "Application".</param>
+        <summary>
+            Sets the type of user agent that this endpoint represents.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown if the EndpointSubtype is not compatible with the EndpointType.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseRegistration">
+      <MemberSignature Language="C#" Value="public bool UseRegistration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseRegistration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.UseRegistration" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseRegistration As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseRegistration { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether registration is required for this endpoint. The default value is false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Can be set to true only if the proxy is specified and the transport type is MTLS.
+            It must be set to true if application wants to publish presence categories with expiry policy equal to <see cref="F:Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy.Endpoint" /> or <see cref="F:Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy.User" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1162 @@
+﻿<Type Name="CollaborationPlatform" FullName="Microsoft.Rtc.Collaboration.CollaborationPlatform">
+  <TypeSignature Language="C#" Value="public class CollaborationPlatform" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CollaborationPlatform extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CollaborationPlatform" />
+  <TypeSignature Language="VB.NET" Value="Public Class CollaborationPlatform" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CollaborationPlatform" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an instance of the SIP stack.
+            </summary>
+    <remarks>
+      <para>It is responsible for managing connections between servers (connection pooling, connection throttling), 
+            establishing trust with other servers and providing media-specific extensibility to all the endpoints bound to it. 
+            </para>
+      <para>When auto-provisioned, the platform is also responsible for reading provisioning data and channeling the data for endpoints
+            and the application to consume.</para>
+      <para>When instantiated with <see cref="T:Microsoft.Rtc.Collaboration.ClientPlatformSettings" /> the platform is in client mode.
+            When instantiated with <see cref="T:Microsoft.Rtc.Collaboration.ServerPlatformSettings" /> or <see cref="T:Microsoft.Rtc.Collaboration.ProvisionedApplicationPlatformSettings" /> the platform is in server mode. 
+            In client mode the platform can only be used to create UserEndpoints. 
+            In server mode it can be used to create both UserEndpoints and ApplicationEndpoints. The server mode enables connection sharing 
+            across endpoints, better connection recovery and privileged operations among other things.</para>
+      <para>
+            An application typically uses only one instance per process but it is not uncommon to use two platform
+            instances in a single process (for example, in gateway scenarios.)
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollaborationPlatform (Microsoft.Rtc.Collaboration.ClientPlatformSettings platformSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ClientPlatformSettings platformSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.#ctor(Microsoft.Rtc.Collaboration.ClientPlatformSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (platformSettings As ClientPlatformSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CollaborationPlatform(Microsoft::Rtc::Collaboration::ClientPlatformSettings ^ platformSettings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="platformSettings" Type="Microsoft.Rtc.Collaboration.ClientPlatformSettings" />
+      </Parameters>
+      <Docs>
+        <param name="platformSettings">The settings with which to initialize the instance.</param>
+        <summary>
+            Creates a new instance of the CollaborationPlatform class with client settings.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the settings object is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollaborationPlatform (Microsoft.Rtc.Collaboration.ProvisionedApplicationPlatformSettings platformSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ProvisionedApplicationPlatformSettings platformSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.#ctor(Microsoft.Rtc.Collaboration.ProvisionedApplicationPlatformSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (platformSettings As ProvisionedApplicationPlatformSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CollaborationPlatform(Microsoft::Rtc::Collaboration::ProvisionedApplicationPlatformSettings ^ platformSettings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="platformSettings" Type="Microsoft.Rtc.Collaboration.ProvisionedApplicationPlatformSettings" />
+      </Parameters>
+      <Docs>
+        <param name="platformSettings">The settings with which to initialize the instance.</param>
+        <summary>
+            Creates a new instance of the CollaborationPlatform class with settings to automatically provision a server platform.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the settings object is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CollaborationPlatform (Microsoft.Rtc.Collaboration.ServerPlatformSettings platformSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ServerPlatformSettings platformSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.#ctor(Microsoft.Rtc.Collaboration.ServerPlatformSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (platformSettings As ServerPlatformSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CollaborationPlatform(Microsoft::Rtc::Collaboration::ServerPlatformSettings ^ platformSettings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="platformSettings" Type="Microsoft.Rtc.Collaboration.ServerPlatformSettings" />
+      </Parameters>
+      <Docs>
+        <param name="platformSettings">The settings with which to initialize the instance.</param>
+        <summary>
+            Creates a new instance of the CollaborationPlatform class with server settings.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when one of the settings is invalid.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the settings object is null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.TlsFailureException">Thrown when the certificate is invalid or otherwise unusable.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveGruu">
+      <MemberSignature Language="C#" Value="public string ActiveGruu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ActiveGruu" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.ActiveGruu" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveGruu As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ActiveGruu { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the trusted GRUU of the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The GRUU is used automatically for privileged commands for applications
+            that require it. It is only used when using the Server model with 
+            ApplicationEndpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveListeningIPEndpoint">
+      <MemberSignature Language="C#" Value="public System.Net.IPEndPoint ActiveListeningIPEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPEndPoint ActiveListeningIPEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.ActiveListeningIPEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveListeningIPEndpoint As IPEndPoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPEndPoint ^ ActiveListeningIPEndpoint { System::Net::IPEndPoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the active listening endpoint in use. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTrustedDomain">
+      <MemberSignature Language="C#" Value="public bool AddTrustedDomain (Microsoft.Rtc.Collaboration.TrustedDomain trustedDomainEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool AddTrustedDomain(class Microsoft.Rtc.Collaboration.TrustedDomain trustedDomainEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.AddTrustedDomain(Microsoft.Rtc.Collaboration.TrustedDomain)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddTrustedDomain (trustedDomainEntry As TrustedDomain) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool AddTrustedDomain(Microsoft::Rtc::Collaboration::TrustedDomain ^ trustedDomainEntry);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trustedDomainEntry" Type="Microsoft.Rtc.Collaboration.TrustedDomain" />
+      </Parameters>
+      <Docs>
+        <param name="trustedDomainEntry">The new entry to be added.</param>
+        <summary>
+            Adds a new entry into the list of trusted domains.
+            </summary>
+        <returns>Returns True if the entry was added. False, if the entry already exists.</returns>
+        <remarks>
+          <para>For auto-provisioned platforms all the trusted servers in the topology are automatically
+            added to this list.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the argument passed is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedAuthenticationProtocol">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipAuthenticationProtocols AllowedAuthenticationProtocol { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SipAuthenticationProtocols AllowedAuthenticationProtocol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.AllowedAuthenticationProtocol" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowedAuthenticationProtocol As SipAuthenticationProtocols" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipAuthenticationProtocols AllowedAuthenticationProtocol { Microsoft::Rtc::Signaling::SipAuthenticationProtocols get(); void set(Microsoft::Rtc::Signaling::SipAuthenticationProtocols value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipAuthenticationProtocols</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the authentication protocol to be used for client endpoints.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationTopologyData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ApplicationTopologyData ApplicationTopologyData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ApplicationTopologyData ApplicationTopologyData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.ApplicationTopologyData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationTopologyData As ApplicationTopologyData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ApplicationTopologyData ^ ApplicationTopologyData { Microsoft::Rtc::Collaboration::ApplicationTopologyData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ApplicationTopologyData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets topology related data for this instance of the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property will be populated only after an auto-provisioned CollaborationPlatform
+            has successfully started up.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUserAgent">
+      <MemberSignature Language="C#" Value="public string ApplicationUserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.ApplicationUserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationUserAgent As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationUserAgent { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the application user agent string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property can be used to build the overall UserAgent string for each endpoint.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioVideoSettings">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings AudioVideoSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings AudioVideoSettings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.AudioVideoSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property AudioVideoSettings As AudioVideoSettings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoSettings ^ AudioVideoSettings { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoSettings ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets audio and video settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginChangeCertificate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginChangeCertificate (System.Security.Cryptography.X509Certificates.X509Certificate certificate, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginChangeCertificate(class System.Security.Cryptography.X509Certificates.X509Certificate certificate, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.BeginChangeCertificate(System.Security.Cryptography.X509Certificates.X509Certificate,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginChangeCertificate (certificate As X509Certificate, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginChangeCertificate(System::Security::Cryptography::X509Certificates::X509Certificate ^ certificate, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="certificate">The new certificate.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Dynamically changes the certificate to be used. 
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>For auto-provisioned platforms this method need not be used since certificate changes are automatically applied.</para>
+          <para>In order to change the certficate, the platform needs to stop listening,
+            change the certificate, and start listening again. While this does not affect existing connections,
+            there could be a temporary problem in accepting new incoming connections.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the platform is not in the correct state to change the certificate.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more of the arguments are null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.TlsFailureException">Thrown when the certificate is invalid or otherwise unusable.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginChangeCertificate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginChangeCertificate (string certificateIssuerName, byte[] certificateSerialNumber, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginChangeCertificate(string certificateIssuerName, unsigned int8[] certificateSerialNumber, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.BeginChangeCertificate(System.String,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginChangeCertificate (certificateIssuerName As String, certificateSerialNumber As Byte(), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginChangeCertificate(System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="certificateIssuerName" Type="System.String" />
+        <Parameter Name="certificateSerialNumber" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="certificateIssuerName">The issuer name for the new certificate.</param>
+        <param name="certificateSerialNumber">The serial number for the new certificate.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Dynamically changes the certificate to be used. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>For auto-provisioned platforms this method need not be used since certificate changes are automatically applied.</para>
+          <para>In order to change the certficate, the platform needs to stop listening,
+            change the certificate, and start listening again. While this does not affect existing connections,
+            there could be a temporary problem in accepting new incoming connections.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the platform is not in the correct state to change the certificate.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when one of more arguments are null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one or more of the arguments are invalid.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.TlsFailureException">Thrown when the certificate is invalid or unusable.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginShutdown">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginShutdown (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginShutdown(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.BeginShutdown(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginShutdown (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginShutdown(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Shuts down the platform and all known endpoints.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>When it is shut down, the platform terminates all the endpoints and frees all its resources. 
+            The platform cannot be used after this completes.</para>
+          <para>This operation should never throw.</para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The example shows how to shutdown a platform. The example assumes that a platform was previously started successfully.  Applications can always
+            attempt to shutdown a platform without error even if it is already shut down.
+            </para>
+          <para> C# Platform uninitialization</para>
+          <code> 
+
+        platform.BeginShutdown(this.PlatformShutdownCompleted, platform /*state*/);
+
+
+        private void PlatformShutdownCompleted(IAsyncResult result)
+        {
+            // Platform shutdown never throws, but EndShutdown needs to be called
+            // to ensure resources are freed.
+            CollaborationPlatform platform = result.AsyncState as CollaborationPlatform;
+            platform.EndShutdown(result);
+            Console.WriteLine("Platform shutdown completed.");
+
+        }
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStartup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginStartup (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginStartup(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.BeginStartup(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginStartup (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginStartup(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Initializes the platform object.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Once the platform is started up it can be used to create endpoints.
+            In case of auto-provisioned CollaborationPlatform the provisioning information for
+            the application is fetched during startup. It also subscribes to changes in
+            provisioning information such as addition or removal of application
+            endpoint owners, changes to configured certificate, etc.</para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to start a server platform that uses auto-provisioning. 
+            The example assumes the server has been configured to support provisioning of the application.
+            
+            </para>
+          <para> C# Server platform initialization with provisioning</para>
+          <code> 
+
+        private void PlatformStartupCompleted(IAsyncResult result)
+        {
+            try
+            {
+                CollaborationPlatform platform = result.AsyncState as CollaborationPlatform;
+                platform.EndStartup(result);
+                Console.WriteLine("Platform started.");
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Platform startup failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Put any clean up code here.
+
+            }
+        }
+
+        private void Platform_ApplicationEndpointOwnerDiscovered(
+            object sender/*platform*/,
+            ApplicationEndpointSettingsDiscoveredEventArgs e)
+        {
+            try
+            {
+                CollaborationPlatform platform = sender as CollaborationPlatform;
+
+                // A new endpoint was added. The configured settings can be retrieved.
+                ApplicationEndpointSettings settings = e.ApplicationEndpointSettings;
+
+                // Customize additional settings if required
+                settings.OwnerPhoneUri = "tel:+14255553333";
+
+                ApplicationEndpoint endpoint = new ApplicationEndpoint(platform, settings);
+                
+                // Save the active endpoint in the list.
+                m_endpoints.Add(endpoint);
+
+                // Register event handlers
+                endpoint.RegisterForIncomingCall&amp;lt;InstantMessagingCall&amp;gt;(this.InstantMessagingCallReceived);
+                endpoint.StateChanged += this.Endpoint_StateChanged;
+                endpoint.OwnerPropertiesChanged += this.Endpoint_OwnerPropertiesChanged;
+
+                endpoint.BeginEstablish(this.EndpointEstablishCompleted, endpoint/*state*/);
+            }
+            catch (InvalidOperationException)
+            {
+                // Platform was shutdown on another thread
+
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Could not establish endpoint. Platform was not in a valid state.");
+            }
+        }
+
+        private void Endpoint_StateChanged(object sender /*endpoint*/, LocalEndpointStateChangedEventArgs e)
+        {
+            // When the endpoint is terminated because of a contact being deleted,
+            // the application receives Terminating and Terminated state changes.
+            Console.WriteLine("Endpoint state changed from {0} to {1}", e.PreviousState.ToString(), e.State.ToString());
+        }
+
+        private void Endpoint_OwnerPropertiesChanged(object sender /*endpoint*/, ApplicationEndpointOwnerPropertiesChangedEventArgs e)
+        {
+            // When owner properties data for the endpoint changes the OwnerPropertiesChanged event is raised,
+            // so find out what has changed.
+        }
+
+        private void EndpointEstablishCompleted(IAsyncResult result)
+        {
+            try
+            {
+                LocalEndpoint endpoint = result.AsyncState as LocalEndpoint;
+                endpoint.EndEstablish(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Failed to establish endpoint: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+
+            }
+        }
+
+
+</code>
+          <para>
+            The following example shows how to start a server platform that uses auto-provisioning. 
+            The example assumes the server has been configured to support provisioning of the application.
+            
+            </para>
+          <para> C# Server platform initialization with provisioning</para>
+          <code> 
+
+        private void PlatformStartupCompleted(IAsyncResult result)
+        {
+            try
+            {
+                CollaborationPlatform platform = result.AsyncState as CollaborationPlatform;
+                platform.EndStartup(result);
+                Console.WriteLine("Platform started.");
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Platform startup failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Put any clean up code here.
+
+            }
+        }
+
+
+</code>
+          <para>
+            The following example shows how to start a server platform that uses auto-provisioning. 
+            The example assumes the server has been configured to support provisioning of the application.
+            
+            </para>
+          <para> C# Server platform initialization with provisioning</para>
+          <code> 
+
+        private void PlatformStartupCompleted(IAsyncResult result)
+        {
+            try
+            {
+                CollaborationPlatform platform = result.AsyncState as CollaborationPlatform;
+                platform.EndStartup(result);
+                Console.WriteLine("Platform started.");
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Platform startup failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Put any clean up code here.
+
+            }
+        }
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the platform has already been started or has been terminated.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionAuthorizationRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs&gt; ConnectionAuthorizationRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs&gt; ConnectionAuthorizationRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.CollaborationPlatform.ConnectionAuthorizationRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionAuthorizationRequested As EventHandler(Of ConnectionAuthorizationRequestedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::ConnectionAuthorizationRequestedEventArgs ^&gt; ^ ConnectionAuthorizationRequested;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a connection is established and authorization by the application is needed.
+            </summary>
+        <remarks>
+          <para>
+            If this event is not registered for, the platform will apply default connection authorization logic.
+            For Tls connections, the trusted domains list is used for default connection authorization.
+            </para>
+          <para>
+            Until connections are authorized, application data will not be sent or received on this connection.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeConnectionManager ConnectionManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnectionManager ConnectionManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.ConnectionManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionManager As RealTimeConnectionManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ ConnectionManager { Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection manager used by the platform. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This can be used for advanced scenarios such as setting the connection pool size, 
+            or message throttling limits. Also see <see cref="T:Microsoft.Rtc.Signaling.RealTimeConnectionManager" /></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentMessageThrottlingCount">
+      <MemberSignature Language="C#" Value="public int CurrentMessageThrottlingCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentMessageThrottlingCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.CurrentMessageThrottlingCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentMessageThrottlingCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int CurrentMessageThrottlingCount { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current count of incoming messages (Invite, in-dialog messages, etc) that are 
+            waiting in internal queues (thread pool queue or conversation queue).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAudioVideoProviderEnabled">
+      <MemberSignature Language="C#" Value="public bool DefaultAudioVideoProviderEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultAudioVideoProviderEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.DefaultAudioVideoProviderEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultAudioVideoProviderEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DefaultAudioVideoProviderEnabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether whether the default audio/video provider is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndChangeCertificate">
+      <MemberSignature Language="C#" Value="public void EndChangeCertificate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndChangeCertificate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.EndChangeCertificate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndChangeCertificate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndChangeCertificate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.ConnectionFailureException">Thrown when listening failed on the active IP EndPoint.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when the start or stop operation timed out.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation failed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndShutdown">
+      <MemberSignature Language="C#" Value="public void EndShutdown (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndShutdown(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.EndShutdown(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndShutdown (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndShutdown(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStartup">
+      <MemberSignature Language="C#" Value="public void EndStartup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndStartup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.EndStartup(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndStartup (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndStartup(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the platform is already started or terminated.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.TlsFailureException">Thrown when the certificate is invalid or otherwise unusable.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.ConnectionFailureException">Thrown when the platform could not listen on any of the configured IP endpoints. Check if some other process is already using the port.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ProvisioningFailureException">Thrown when provisioning data could not be retrieved or was unusable.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when this operation failed for other reasons.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTrustedDomains">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt; GetTrustedDomains ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Collaboration.TrustedDomain&gt; GetTrustedDomains() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.GetTrustedDomains" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTrustedDomains () As ReadOnlyCollection(Of TrustedDomain)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Collaboration::TrustedDomain ^&gt; ^ GetTrustedDomains();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of trusted domains.
+            </summary>
+        <returns>List of trusted domains set on platform.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantMessagingSettings">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate InstantMessagingSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate InstantMessagingSettings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.InstantMessagingSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property InstantMessagingSettings As InstantMessagingFlowTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingFlowTemplate ^ InstantMessagingSettings { Microsoft::Rtc::Collaboration::InstantMessagingFlowTemplate ^ get(); void set(Microsoft::Rtc::Collaboration::InstantMessagingFlowTemplate ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the global configuration settings for an InstantMessaging Flow instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListeningIPAddress">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress ListeningIPAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress ListeningIPAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.ListeningIPAddress" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListeningIPAddress As IPAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ ListeningIPAddress { System::Net::IPAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the IP address on which to listen.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Localhost">
+      <MemberSignature Language="C#" Value="public string Localhost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Localhost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.Localhost" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Localhost As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Localhost { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the FQDN of the machine where the application is deployed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionDefaultAddressFamilyHint">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutboundConnectionDefaultAddressFamilyHint As Nullable(Of AddressFamilyHint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets which address families the platform should use by default.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvisioningFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ProvisioningFailedEventArgs&gt; ProvisioningFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ProvisioningFailedEventArgs&gt; ProvisioningFailed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.CollaborationPlatform.ProvisioningFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProvisioningFailed As EventHandler(Of ProvisioningFailedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ProvisioningFailedEventArgs ^&gt; ^ ProvisioningFailed;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ProvisioningFailedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a failure occurs while applying or accessing provisioning information.
+            </summary>
+        <remarks>
+          <para>Even when this event occurs, all efforts will be made to keep application running with current 
+            provisioning information. The application should surface the failure for the administrator to take corrective action.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterForApplicationEndpointSettings">
+      <MemberSignature Language="C#" Value="public void RegisterForApplicationEndpointSettings (EventHandler&lt;Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs&gt; applicationEndpointSettingsDiscoveredDelegate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterForApplicationEndpointSettings(class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs&gt; applicationEndpointSettingsDiscoveredDelegate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.RegisterForApplicationEndpointSettings(System.EventHandler{Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterForApplicationEndpointSettings (applicationEndpointSettingsDiscoveredDelegate As EventHandler(Of ApplicationEndpointSettingsDiscoveredEventArgs))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterForApplicationEndpointSettings(EventHandler&lt;Microsoft::Rtc::Collaboration::ApplicationEndpointSettingsDiscoveredEventArgs ^&gt; ^ applicationEndpointSettingsDiscoveredDelegate);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationEndpointSettingsDiscoveredDelegate" Type="System.EventHandler&lt;Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="applicationEndpointSettingsDiscoveredDelegate">Delegate to handle discovered application endpoint settings.</param>
+        <summary>
+            Registers a delegate to receive discovered application endpoint settings.
+            </summary>
+        <remarks>
+          <para>Upon registering a handler, the application will receive the endpoint settings
+            for which endpoints have not been created yet. In the handler, the application can choose to create
+            endpoints right away using the settings or ignore the settings if it wants to handle them
+            in a different handler it registers.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if the CollaborationPlatform instance was not created with ProvisionedApplicationPlatformSettings.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when parameters are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterPlatformExtension">
+      <MemberSignature Language="C#" Value="public void RegisterPlatformExtension (Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterPlatformExtension(class Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.RegisterPlatformExtension(Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterPlatformExtension (extension As MediaBasedFactory)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterPlatformExtension(Microsoft::Rtc::Collaboration::ComponentModel::MediaBasedFactory ^ extension);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory" />
+      </Parameters>
+      <Docs>
+        <param name="extension">The extension to register.</param>
+        <summary>
+            Registers an extension with the platform.
+            </summary>
+        <remarks>
+          <para>
+            Extensions such as call factories that support specific media types can be registered only
+            if there is no existing extension for that media type. 
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the extension cannot be combined with already configured extensions.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveTrustedDomain">
+      <MemberSignature Language="C#" Value="public bool RemoveTrustedDomain (Microsoft.Rtc.Collaboration.TrustedDomain trustedDomainEntry);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveTrustedDomain(class Microsoft.Rtc.Collaboration.TrustedDomain trustedDomainEntry) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.RemoveTrustedDomain(Microsoft.Rtc.Collaboration.TrustedDomain)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveTrustedDomain (trustedDomainEntry As TrustedDomain) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveTrustedDomain(Microsoft::Rtc::Collaboration::TrustedDomain ^ trustedDomainEntry);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trustedDomainEntry" Type="Microsoft.Rtc.Collaboration.TrustedDomain" />
+      </Parameters>
+      <Docs>
+        <param name="trustedDomainEntry">The entry to be removed.</param>
+        <summary>
+            Removes an existing entry from the trusted domains list.
+            </summary>
+        <returns>Returns True if it was removed. False, if the entry does not exist.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the argument passed is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TopologyConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.TopologyConfiguration TopologyConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.TopologyConfiguration TopologyConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.TopologyConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TopologyConfiguration As TopologyConfiguration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::TopologyConfiguration ^ TopologyConfiguration { Microsoft::Rtc::Collaboration::TopologyConfiguration ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.TopologyConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the object to access various topology configuration data.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This property will be populated only after an auto-provisioned CollaborationPlatform
+            has successfully started up.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transport">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipTransportType Transport { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SipTransportType Transport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CollaborationPlatform.Transport" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Transport As SipTransportType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipTransportType Transport { Microsoft::Rtc::Signaling::SipTransportType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipTransportType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the transport type to use.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The default transport type is TLS. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterForApplicationEndpointSettings">
+      <MemberSignature Language="C#" Value="public void UnregisterForApplicationEndpointSettings (EventHandler&lt;Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs&gt; applicationEndpointSettingsDiscoveredDelegate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnregisterForApplicationEndpointSettings(class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs&gt; applicationEndpointSettingsDiscoveredDelegate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.UnregisterForApplicationEndpointSettings(System.EventHandler{Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnregisterForApplicationEndpointSettings (applicationEndpointSettingsDiscoveredDelegate As EventHandler(Of ApplicationEndpointSettingsDiscoveredEventArgs))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void UnregisterForApplicationEndpointSettings(EventHandler&lt;Microsoft::Rtc::Collaboration::ApplicationEndpointSettingsDiscoveredEventArgs ^&gt; ^ applicationEndpointSettingsDiscoveredDelegate);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationEndpointSettingsDiscoveredDelegate" Type="System.EventHandler&lt;Microsoft.Rtc.Collaboration.ApplicationEndpointSettingsDiscoveredEventArgs&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="applicationEndpointSettingsDiscoveredDelegate">Delegate to handle discovered application endpoint settings.</param>
+        <summary>
+            Unregisters a delegate to receive discovered application endpoint settings.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if the CollaborationPlatform instance was not created with ProvisionedApplicationPlatformSettings.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when parameters are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterPlatformExtension">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory UnregisterPlatformExtension (string extensionType, string mediaType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory UnregisterPlatformExtension(string extensionType, string mediaType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CollaborationPlatform.UnregisterPlatformExtension(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function UnregisterPlatformExtension (extensionType As String, mediaType As String) As MediaBasedFactory" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ComponentModel::MediaBasedFactory ^ UnregisterPlatformExtension(System::String ^ extensionType, System::String ^ mediaType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extensionType" Type="System.String" />
+        <Parameter Name="mediaType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extensionType">The extension type to remove.</param>
+        <param name="mediaType">A media type that the extension supports.</param>
+        <summary>
+            Unregisters an extension from the platform.
+            </summary>
+        <returns>The extension that was removed, otherwise null if there was nothing to remove.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

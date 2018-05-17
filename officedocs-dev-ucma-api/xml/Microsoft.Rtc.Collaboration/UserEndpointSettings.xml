@@ -1,0 +1,278 @@
+﻿<Type Name="UserEndpointSettings" FullName="Microsoft.Rtc.Collaboration.UserEndpointSettings">
+  <TypeSignature Language="C#" Value="public class UserEndpointSettings : Microsoft.Rtc.Collaboration.LocalEndpointSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserEndpointSettings extends Microsoft.Rtc.Collaboration.LocalEndpointSettings" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.UserEndpointSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class UserEndpointSettings&#xA;Inherits LocalEndpointSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserEndpointSettings : Microsoft::Rtc::Collaboration::LocalEndpointSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.LocalEndpointSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the settings needed to initialize a User endpoint.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserEndpointSettings (string ownerUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user who owns this endpoint.</param>
+        <summary>
+            Creates a new UserEndpointSettings object.
+            </summary>
+        <remarks>
+          <para>The server name and port are discovered using DNS queries automatically if the transport is Tls. 
+            This constructor is not supported when UserEndpoint is created with a platform configured for Tcp transport.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when arguments are null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one or more arguments are not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserEndpointSettings (string ownerUri, Microsoft.Rtc.Signaling.ConnectionContext serverConnectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, class Microsoft.Rtc.Signaling.ConnectionContext serverConnectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String,Microsoft.Rtc.Signaling.ConnectionContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, serverConnectionContext As ConnectionContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri, Microsoft::Rtc::Signaling::ConnectionContext ^ serverConnectionContext);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="serverConnectionContext" Type="Microsoft.Rtc.Signaling.ConnectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user that owns this endpoint.</param>
+        <param name="serverConnectionContext">The server where the endpoint is registered.</param>
+        <summary>
+            Creates a new instance of the UserEndpointSettings class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more arguments are null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserEndpointSettings (string ownerUri, string serverName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, string serverName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, serverName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri, System::String ^ serverName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="serverName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user that owns this endpoint.</param>
+        <param name="serverName">The server where the endpoint is registered.</param>
+        <summary>
+            Creates a new instance of the UserEndpointSettings class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more arguments are null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserEndpointSettings (string ownerUri, string serverName, int serverPort);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, string serverName, int32 serverPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, serverName As String, serverPort As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri, System::String ^ serverName, int serverPort);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="serverName" Type="System.String" />
+        <Parameter Name="serverPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user who owns this endpoint.</param>
+        <param name="serverName">The server where the endpoint is registered.</param>
+        <param name="serverPort">The port on the server to connect to.</param>
+        <summary>
+            Creates a new UserEndpointSettings object
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when arguments are null or empty.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one or more arguments are not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticPresencePublicationEnabled">
+      <MemberSignature Language="C#" Value="public bool AutomaticPresencePublicationEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutomaticPresencePublicationEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutomaticPresencePublicationEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticPresencePublicationEnabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the boolean value representing whether presence subcription and publishing of basic presence information should be done automatically as part of the establish process for the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Publication failure during endpoint establishment will be reflected through <see cref="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationState" /> and <see cref="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationStateChanged" />.
+            Subscription failure during endpoint establishment will be reflected through <see cref="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.CurrentState" /> and <see cref="E:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriptionStateChange" />
+            Endpoint establishment will be allowed to proceed inspite of publication or subscription failure. Retries will continue in the background and the application will be notified upon success.
+            </para>
+          <para> The default value is false.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Credential">
+      <MemberSignature Language="C#" Value="public System.Net.NetworkCredential Credential { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.NetworkCredential Credential" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.Credential" />
+      <MemberSignature Language="VB.NET" Value="Public Property Credential As NetworkCredential" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::NetworkCredential ^ Credential { System::Net::NetworkCredential ^ get(); void set(System::Net::NetworkCredential ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.NetworkCredential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the credential needed to authenticate the endpoint with servers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Use CredentialCache.DefaultNetworkCredentials for logged on user.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointId">
+      <MemberSignature Language="C#" Value="public string EndpointId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.EndpointId" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndpointId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the EPID to use for the endpoint. Optional.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Presence">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.UserPresenceSettings Presence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.UserPresenceSettings Presence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.Presence" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Presence As UserPresenceSettings" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::UserPresenceSettings ^ Presence { Microsoft::Rtc::Collaboration::UserPresenceSettings ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.UserPresenceSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the optional presence information that will be published when <see cref="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" /> 
+            is set to true.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointOnline" /> will be published if  <see cref="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" /> 
+            is set to true. Configurable parameters include a user presence state and endpoint capabilities.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerName">
+      <MemberSignature Language="C#" Value="public string ServerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ServerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.ServerName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ServerName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the server being used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerPort">
+      <MemberSignature Language="C#" Value="public int ServerPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ServerPort" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.ServerPort" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerPort As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ServerPort { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the port of the server being used.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

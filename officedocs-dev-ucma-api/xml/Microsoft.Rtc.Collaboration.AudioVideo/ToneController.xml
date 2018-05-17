@@ -1,0 +1,502 @@
+﻿<Type Name="ToneController" FullName="Microsoft.Rtc.Collaboration.AudioVideo.ToneController">
+  <TypeSignature Language="C#" Value="public class ToneController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ToneController extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.ToneController" />
+  <TypeSignature Language="VB.NET" Value="Public Class ToneController" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ToneController" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ToneController class handles telephony tone communication between an AudioVideoFlow instance and a remote application.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ToneController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ToneController();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the ToneController class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachFlow">
+      <MemberSignature Language="C#" Value="public void AttachFlow (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.AttachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AttachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioVideoFlow" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" />
+      </Parameters>
+      <Docs>
+        <param name="audioVideoFlow">The AudioVideoFlow instance to be attached.</param>
+        <summary>
+            Attaches an AudioVideoFlow instance.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example attaches and detaches a ToneController by the time AudioVideoFlow changes its state to Active and Terminated.
+                </para>
+          <para> C# Attaching and detaching an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoFlow.StateChanged += delegate(object sender, MediaFlowStateChangedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                if(avFlow.State == MediaFlowState.Active)
+                {
+
+                    ToneController toneController = new ToneController();
+                    toneController.AttachFlow(avFlow);
+
+                }
+                else if(avFlow.State == MediaFlowState.Terminated)
+                {
+
+                    if (avFlow.ToneController != null)
+                    {
+                        avFlow.ToneController.DetachFlow();
+                    }
+
+                }
+            };
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow argument is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when another AudioVideoFlow instance is already attached or when the specified AudioVideoFlow instance is already attached to another ToneController.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioVideoFlow">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow AudioVideoFlow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow AudioVideoFlow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.AudioVideoFlow" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoFlow As AudioVideoFlow" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ AudioVideoFlow { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the attached AudioVideoFlow instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachFlow">
+      <MemberSignature Language="C#" Value="public void DetachFlow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachFlow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.DetachFlow" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DetachFlow ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DetachFlow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Detaches the AudioVideoFlow instance.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example attaches and detaches a ToneController by the time AudioVideoFlow changes its state to Active and Terminated.
+                </para>
+          <para> C# Attaching and detaching an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoFlow.StateChanged += delegate(object sender, MediaFlowStateChangedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                if(avFlow.State == MediaFlowState.Active)
+                {
+
+                    ToneController toneController = new ToneController();
+                    toneController.AttachFlow(avFlow);
+
+                }
+                else if(avFlow.State == MediaFlowState.Terminated)
+                {
+
+                    if (avFlow.ToneController != null)
+                    {
+                        avFlow.ToneController.DetachFlow();
+                    }
+
+                }
+            };
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingFaxDetected">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.IncomingFaxDetectedEventArgs&gt; IncomingFaxDetected;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.IncomingFaxDetectedEventArgs&gt; IncomingFaxDetected" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.IncomingFaxDetected" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event IncomingFaxDetected As EventHandler(Of IncomingFaxDetectedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::IncomingFaxDetectedEventArgs ^&gt; ^ IncomingFaxDetected;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.IncomingFaxDetectedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a fax tone is detected.
+            </summary>
+        <remarks>
+          <para>
+            A fax tone can be received in three different ways:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>
+                A SIP re-INVITE has an a=image channel. The event is raised when AudioVideoFlow.State is Active. 
+                </description>
+            </item>
+            <item>
+              <description>
+                An out-of-band fax tone (CNG tone) is received. The event is raised when AudioVideoFlow.State is Active, AudioVideoFlow.ToneEnabled is true, and AudioVideoFlow.HoldType is None.
+                </description>
+            </item>
+            <item>
+              <description>
+                An inband audio fax tone is received. The event is raised when AudioVideoFlow.State is Active, AudioVideoFlow.ToneEnabled is true, AudioVideoFlow.HoldType is None, AudioChannel.Direction is ReceiveOnly or SendReceive, and Audio is not muted.
+                </description>
+            </item>
+          </list>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to subscribe to IncomingFaxDetected event.
+                </para>
+          <para> C# Subscribing to IncomingFaxDetected event.</para>
+          <code> 
+
+            toneController.IncomingFaxDetected += delegate(object sender, IncomingFaxDetectedEventArgs args)
+            {
+                // fax is detected, if app knows how to handle it's time to transfer the call to a fax provider.
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTone">
+      <MemberSignature Language="C#" Value="public int MaxTone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTone" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.MaxTone" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxTone As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxTone { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets maximum tone that can be sent or received.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The maximum tone is Flash in the ToneId enumeration, and the value of this tone is 16.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinTone">
+      <MemberSignature Language="C#" Value="public int MinTone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinTone" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.MinTone" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MinTone As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MinTone { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the minimum tone that can be sent or received.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The minimum tone is Tone0 in the ToneId enumeration, and the value of this tone is 0.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (Microsoft.Rtc.Collaboration.AudioVideo.ToneId tone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(valuetype Microsoft.Rtc.Collaboration.AudioVideo.ToneId tone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.Send(Microsoft.Rtc.Collaboration.AudioVideo.ToneId)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Send (tone As ToneId)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Send(Microsoft::Rtc::Collaboration::AudioVideo::ToneId tone);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tone" Type="Microsoft.Rtc.Collaboration.AudioVideo.ToneId" />
+      </Parameters>
+      <Docs>
+        <param name="tone">The tone to be sent.</param>
+        <summary>
+            Sends the specified tone at 50% volume.
+            </summary>
+        <remarks>
+          <para>
+            Tones will be sent only when all three of the conditions are true.
+            - An active AudioVideoFlow is attached.
+            - AudioVideoFlow.ToneEnabled is equal to true.
+            - AudioVideoFlow.HoldType equals to None.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to send a tone through ToneController.
+                </para>
+          <para> C# Sending a tone through ToneController.</para>
+          <code> 
+
+            toneController.AttachFlow(audioVideoFlow);
+            toneController.Send(ToneId.Tone0);
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when tone argument is out of range (less than MinTone or greater than MaxTone), or when volume is negative or larger than 100.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (int tone);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(int32 tone) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.Send(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Send (tone As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Send(int tone);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tone" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="tone">The tone to be sent.</param>
+        <summary>
+            Sends the specified tone at 50% volume.
+            </summary>
+        <remarks>
+          <para>
+            Tones will be sent only when all three of the conditions are true.
+            - An active AudioVideoFlow is attached.
+            - AudioVideoFlow.ToneEnabled is equal to true.
+            - AudioVideoFlow.HoldType equals to None.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when tone argument is out of range (less than MinTone or greater than MaxTone).</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (Microsoft.Rtc.Collaboration.AudioVideo.ToneId tone, float volume);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(valuetype Microsoft.Rtc.Collaboration.AudioVideo.ToneId tone, float32 volume) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.Send(Microsoft.Rtc.Collaboration.AudioVideo.ToneId,System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Send (tone As ToneId, volume As Single)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Send(Microsoft::Rtc::Collaboration::AudioVideo::ToneId tone, float volume);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tone" Type="Microsoft.Rtc.Collaboration.AudioVideo.ToneId" />
+        <Parameter Name="volume" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="tone">The tone to be sent.</param>
+        <param name="volume">The volume, as a percent, of the tone to be sent. This value must be between 50.0 and 100.0, inclusive.</param>
+        <summary>
+            Sends the specified tone at the specified volume.
+            </summary>
+        <remarks>
+          <para>The minimum volume corresponds to 50 (%) and the maximum volume corresponds to 100 (%). 
+            This range of values corresponds to -32 through 0 in decibels (dB), where 0 dB is the maximum
+            volume level. To convert from decibels 
+            to the percentage value that is expected by this method, add 63 to the decibel value and divide by 0.63.
+            For example, to send a tone with volume level -10 dB, specify 84.1 (-10 + 63)/0.63.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the tone is out of range (less than MinTone or greater than MaxTone), or when volume is negative or larger than 100.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (int tone, float volume);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(int32 tone, float32 volume) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.Send(System.Int32,System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Send (tone As Integer, volume As Single)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Send(int tone, float volume);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="tone" Type="System.Int32" />
+        <Parameter Name="volume" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="tone">The tone to be sent.</param>
+        <param name="volume">The volume, as a percent, of the tone to be sent. This value must be between 0 and 100, inclusive.</param>
+        <summary>
+            Sends the specified tone at the specified volume.
+            </summary>
+        <remarks>
+          <para>The minimum volume corresponds to 50 (%) and the maximum volume corresponds to 100 (%). 
+            This range of values corresponds to -32 through 0 in decibels (dB), where 0 dB is the maximum
+            volume level. To convert from decibels 
+            to the percentage value that is expected by this method, add 63 to the decibel value and divide by 0.63.
+            For example, to send a tone with volume level -10 dB, specify 84.1 (-10 + 63)/0.63.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the tone is out of range (less than MinTone or greater than MaxTone), or when volume is negative or larger than 100.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToneReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.ToneControllerEventArgs&gt; ToneReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.ToneControllerEventArgs&gt; ToneReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.ToneController.ToneReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ToneReceived As EventHandler(Of ToneControllerEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::ToneControllerEventArgs ^&gt; ^ ToneReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.ToneControllerEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a ToneController receives a tone.
+            </summary>
+        <remarks>
+          <para>
+            Tones will be received only when all three of the following conditions are true:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>An active AudioVideoFlow is attached.</description>
+            </item>
+            <item>
+              <description>AudioVideoFlow.ToneEnabled is equal to true.</description>
+            </item>
+            <item>
+              <description>AudioVideoFlow.HoldType is None or RemoteEndpointAllowTones.</description>
+            </item>
+          </list>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to subscribe to the ToneReceived event.
+                </para>
+          <para> C# Subscribing to ToneReceived event.</para>
+          <code> 
+
+            toneController.ToneReceived += delegate(object sender, ToneControllerEventArgs args)
+            {
+                ToneId tone = (ToneId)args.Tone;
+                float volume = args.Volume;
+
+                // Do whatever it needs.
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

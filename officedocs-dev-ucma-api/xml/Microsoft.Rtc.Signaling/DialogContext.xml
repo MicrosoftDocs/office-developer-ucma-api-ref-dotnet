@@ -1,0 +1,275 @@
+﻿<Type Name="DialogContext" FullName="Microsoft.Rtc.Signaling.DialogContext">
+  <TypeSignature Language="C#" Value="public class DialogContext : IEquatable&lt;Microsoft.Rtc.Signaling.DialogContext&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DialogContext extends System.Object implements class System.IEquatable`1&lt;class Microsoft.Rtc.Signaling.DialogContext&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.DialogContext" />
+  <TypeSignature Language="VB.NET" Value="Public Class DialogContext&#xA;Implements IEquatable(Of DialogContext)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DialogContext : IEquatable&lt;Microsoft::Rtc::Signaling::DialogContext ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Rtc.Signaling.DialogContext&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Contains information related to a dialog.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DialogContext (string callID, string fromTag, bool incoming);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string callID, string fromTag, bool incoming) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DialogContext.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (callID As String, fromTag As String, incoming As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; DialogContext(System::String ^ callID, System::String ^ fromTag, bool incoming);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="callID" Type="System.String" />
+        <Parameter Name="fromTag" Type="System.String" />
+        <Parameter Name="incoming" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="callID">The call ID for the dialog.</param>
+        <param name="fromTag">The tag from the From header.</param>
+        <param name="incoming">Is the dialog initially incoming.</param>
+        <summary>
+            Constructs the object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationContext">
+      <MemberSignature Language="C#" Value="public object ApplicationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DialogContext.ApplicationContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object which holds application information associated with this context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallID">
+      <MemberSignature Language="C#" Value="public string CallID { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CallID" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DialogContext.CallID" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallID As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CallID { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the call ID for the dialog.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Rtc.Signaling.DialogContext obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.Rtc.Signaling.DialogContext obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DialogContext.Equals(Microsoft.Rtc.Signaling.DialogContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (obj As DialogContext) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Signaling::DialogContext ^ obj);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="Microsoft.Rtc.Signaling.DialogContext" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The target object to compare with.</param>
+        <summary>
+            Returns true if the current object is equal to the passed object. 
+            </summary>
+        <returns>Returns true when this instance matched the supplied target instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DialogContext.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The target object object to compare with.</param>
+        <summary>
+            Returns true if the current object is equal to the passed object. 
+            </summary>
+        <returns>Returns true when this instance matched the supplied target instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DialogContext.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a hash code for the object.
+            </summary>
+        <returns>Returns the hash code for this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalTag">
+      <MemberSignature Language="C#" Value="public string LocalTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalTag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DialogContext.LocalTag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalTag As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalTag { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tag for the local client.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Rtc.Signaling.DialogContext obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Rtc.Signaling.DialogContext obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DialogContext.op_Equality(Microsoft.Rtc.Signaling.DialogContext,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (obj1 As DialogContext, obj2 As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Signaling::DialogContext ^ obj1, System::Object ^ obj2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="Microsoft.Rtc.Signaling.DialogContext" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">The first object to compare.</param>
+        <param name="obj2">The object to compare to.</param>
+        <summary>
+            Returns true if the two objects are equal.
+            </summary>
+        <returns>Returns true if the objects are equal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Rtc.Signaling.DialogContext obj1, object obj2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Rtc.Signaling.DialogContext obj1, object obj2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DialogContext.op_Inequality(Microsoft.Rtc.Signaling.DialogContext,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (obj1 As DialogContext, obj2 As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Signaling::DialogContext ^ obj1, System::Object ^ obj2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj1" Type="Microsoft.Rtc.Signaling.DialogContext" />
+        <Parameter Name="obj2" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj1">The first object to compare.</param>
+        <param name="obj2">The object to compare to.</param>
+        <summary>
+            Returns true if the two objects are unequal.
+            </summary>
+        <returns>Returns true if the instances are unequal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteTag">
+      <MemberSignature Language="C#" Value="public string RemoteTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemoteTag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DialogContext.RemoteTag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteTag As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RemoteTag { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tag for the remote client.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

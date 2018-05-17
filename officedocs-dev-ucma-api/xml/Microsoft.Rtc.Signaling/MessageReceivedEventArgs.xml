@@ -1,0 +1,307 @@
+﻿<Type Name="MessageReceivedEventArgs" FullName="Microsoft.Rtc.Signaling.MessageReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class MessageReceivedEventArgs : Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MessageReceivedEventArgs extends Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.MessageReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MessageReceivedEventArgs&#xA;Inherits SipRequestReceivedEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MessageReceivedEventArgs abstract : Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the argument for relay events.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MessageReceivedEventArgs (Microsoft.Rtc.Signaling.SipRequestData requestData, Microsoft.Rtc.Signaling.Participant participant, Microsoft.Rtc.Signaling.MessageType messageType);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SipRequestData requestData, class Microsoft.Rtc.Signaling.Participant participant, valuetype Microsoft.Rtc.Signaling.MessageType messageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.#ctor(Microsoft.Rtc.Signaling.SipRequestData,Microsoft.Rtc.Signaling.Participant,Microsoft.Rtc.Signaling.MessageType)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MessageReceivedEventArgs(Microsoft::Rtc::Signaling::SipRequestData ^ requestData, Microsoft::Rtc::Signaling::Participant ^ participant, Microsoft::Rtc::Signaling::MessageType messageType);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requestData" Type="Microsoft.Rtc.Signaling.SipRequestData" />
+        <Parameter Name="participant" Type="Microsoft.Rtc.Signaling.Participant" />
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+      </Parameters>
+      <Docs>
+        <param name="requestData">The SIP requestData</param>
+        <param name="participant">The participant</param>
+        <param name="messageType">The message type</param>
+        <summary>
+            Initializes the new instance of the class. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Rtc.Signaling.RealTimeConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.Connection" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Connection As RealTimeConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Rtc::Signaling::RealTimeConnection ^ Connection { Microsoft::Rtc::Signaling::RealTimeConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection associated with this message. This can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Net.Mime.ContentType ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mime.ContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.ContentType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentType As ContentType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Mime::ContentType ^ ContentType { System::Net::Mime::ContentType ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.ContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the MIME type of the relay message. Can be null if the message has no content type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAutomaticResponse">
+      <MemberSignature Language="C#" Value="public bool DisableAutomaticResponse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableAutomaticResponse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.DisableAutomaticResponse" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticResponse As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticResponse { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the response is handled.
+            If true, the application is responsible for sending
+            the response. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBody">
+      <MemberSignature Language="C#" Value="public byte[] GetBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.GetBody" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBody () As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetBody();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves the body of the message.
+            </summary>
+        <returns>Returns the raw byte data of the message body.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTextBody">
+      <MemberSignature Language="C#" Value="public bool HasTextBody { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasTextBody" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.HasTextBody" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasTextBody As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasTextBody { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates whether the TextBody field has been filled out.
+            </summary>
+        <value>True if the TextBody is available, otherwise false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.MessageType MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.MessageType MessageType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.MessageType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageType As MessageType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::MessageType MessageType { Microsoft::Rtc::Signaling::MessageType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message type of the body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Participant">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.Participant Participant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.Participant Participant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.Participant" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Participant As Participant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::Participant ^ Participant { Microsoft::Rtc::Signaling::Participant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.Participant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the participant that generated this message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponse">
+      <MemberSignature Language="C#" Value="public void SendResponse (int responseCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResponse(int32 responseCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.SendResponse(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendResponse (responseCode As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendResponse(int responseCode);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The response code to be sent.</param>
+        <summary>
+            Sends a response to this message with specified response code.
+            This method is optional for message received events.
+            If the application does not call SendResponse in MessageReceived handlers, the platform will
+            automatically respond with ResponseCode.Succeeded.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when in an invalid state or when a response has already been sent.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponse">
+      <MemberSignature Language="C#" Value="public abstract void SendResponse (int responseCode, System.Net.Mime.ContentType contentType, string msgBody, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendResponse(int32 responseCode, class System.Net.Mime.ContentType contentType, string msgBody, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.SendResponse(System.Int32,System.Net.Mime.ContentType,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SendResponse(int responseCode, System::Net::Mime::ContentType ^ contentType, System::String ^ msgBody, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="msgBody" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The response code to be sent.</param>
+        <param name="contentType">Content type of the response body.</param>
+        <param name="msgBody">The body of the message.</param>
+        <param name="signalingHeaders">Headers required for this message. Can be null.</param>
+        <summary>
+            Sends response to this message with a specified body and specified headers. 
+            This method is optional for message received events.
+            If the application does not call SendResponse in MessageReceived handlers, the platform will
+            automatically respond with ResponseCode.Succeeded.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when in an invalid state, or a response has already been sent.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBody">
+      <MemberSignature Language="C#" Value="public string TextBody { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TextBody" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageReceivedEventArgs.TextBody" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextBody As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TextBody { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the body in the form of a string if
+            the content was easily convertable.
+            </summary>
+        <value>The body as a string.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

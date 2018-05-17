@@ -1,0 +1,74 @@
+﻿<Type Name="SendInstantMessageResult" FullName="Microsoft.Rtc.Collaboration.SendInstantMessageResult">
+  <TypeSignature Language="C#" Value="public class SendInstantMessageResult" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SendInstantMessageResult extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.SendInstantMessageResult" />
+  <TypeSignature Language="VB.NET" Value="Public Class SendInstantMessageResult" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SendInstantMessageResult" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the result of sending an instant message to remote participants in a conversation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeliveryFailures">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.MessageDeliveryFailureData&gt; DeliveryFailures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.MessageDeliveryFailureData&gt; DeliveryFailures" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SendInstantMessageResult.DeliveryFailures" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeliveryFailures As Collection(Of MessageDeliveryFailureData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MessageDeliveryFailureData ^&gt; ^ DeliveryFailures { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MessageDeliveryFailureData ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.MessageDeliveryFailureData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of failure notification data. Each notification data identifies the remote participant who failed to receive the message and the response code.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The collection returned is never null but it is populated only when the BeginSendInstantMessage method is configured to handle delivery notifications.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageId">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessageId MessageId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessageId MessageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SendInstantMessageResult.MessageId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageId As InstantMessageId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessageId ^ MessageId { Microsoft::Rtc::Collaboration::InstantMessageId ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessageId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message id associated with this message as retrieved from tentative acceptance response. Can be Null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This value is populated only when the application disabled the BeginSendInstantMessage method from waiting for delivery notification message and the message
+            received a tentative acceptance response.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

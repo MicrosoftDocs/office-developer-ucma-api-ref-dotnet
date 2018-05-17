@@ -1,0 +1,78 @@
+﻿<Type Name="UserPresenceSettings" FullName="Microsoft.Rtc.Collaboration.UserPresenceSettings">
+  <TypeSignature Language="C#" Value="public class UserPresenceSettings : Microsoft.Rtc.Collaboration.PresenceSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserPresenceSettings extends Microsoft.Rtc.Collaboration.PresenceSettings" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.UserPresenceSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class UserPresenceSettings&#xA;Inherits PresenceSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserPresenceSettings : Microsoft::Rtc::Collaboration::PresenceSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.PresenceSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the automatic presence publishing information and settings for <see cref="T:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView" />.
+            </summary>
+    <remarks>
+      <para>
+            Publishing presence information during endpoint establishment is an optional operation and will only be done 
+            when <see cref="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" /> is set to true.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UserPresenceSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserPresenceSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; UserPresenceSettings();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an object of type UserPresenceSettings.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPresenceState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceState UserPresenceState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PresenceState UserPresenceState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserPresenceSettings.UserPresenceState" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserPresenceState As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserPresenceState { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); void set(Microsoft::Rtc::Collaboration::Presence::PresenceState ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the user state that will be published as part of the establish operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> This is only published when <see cref="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" /> is 
+            set to true.</para>
+          <para> This property is set to null by default and therefore no user state is published. Applications are advised to set it to
+            a valid value.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">When an incorrect value is supplied.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

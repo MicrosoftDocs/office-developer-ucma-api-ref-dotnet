@@ -1,0 +1,213 @@
+﻿<Type Name="RemotePresentityNotification" FullName="Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification">
+  <TypeSignature Language="C#" Value="public class RemotePresentityNotification" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RemotePresentityNotification extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification" />
+  <TypeSignature Language="VB.NET" Value="Public Class RemotePresentityNotification" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RemotePresentityNotification" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents the presence information of a remote presentity.
+            </summary>
+    <remarks>
+      <para> 
+            This is used as a parameter in <see cref="T:Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs" /> denoting the presence data of a single target.
+            When a property representing the strongly typed categories of <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.ContactCard" />, <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.ServiceCapabilities" />,
+            <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.AggregatedPresenceState" />, <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.OutOfOfficeNote" /> and <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.PersonalNote" /> is null,
+            either there have been no notifications for that property or there were exceptions when parsing their entries in the
+            notification.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AggregatedPresenceState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceState AggregatedPresenceState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PresenceState AggregatedPresenceState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.AggregatedPresenceState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AggregatedPresenceState As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ AggregatedPresenceState { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the overall availability of this presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; Categories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; Categories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.Categories" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Categories As Collection(Of PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ Categories { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of rich presence categories for the target.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContactCard">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ContactCard ContactCard { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.ContactCard ContactCard" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.ContactCard" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContactCard As ContactCard" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ContactCard ^ ContactCard { Microsoft::Rtc::Collaboration::Presence::ContactCard ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ContactCard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the contact card of the remote presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This contact card instance is an aggregate of all contact card instances in the notification. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutOfOfficeNote">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.Note OutOfOfficeNote { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.Note OutOfOfficeNote" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.OutOfOfficeNote" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutOfOfficeNote As Note" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::Note ^ OutOfOfficeNote { Microsoft::Rtc::Collaboration::Presence::Note ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.Note</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets any out-of-office note published by this presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersonalNote">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.Note PersonalNote { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.Note PersonalNote" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.PersonalNote" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PersonalNote As Note" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::Note ^ PersonalNote { Microsoft::Rtc::Collaboration::Presence::Note ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.Note</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets any personal note published by this presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresentityUri">
+      <MemberSignature Language="C#" Value="public string PresentityUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PresentityUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.PresentityUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresentityUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PresentityUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the target URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceCapabilities">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.Services ServiceCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.Services ServiceCapabilities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.ServiceCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServiceCapabilities As Services" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::Services ^ ServiceCapabilities { Microsoft::Rtc::Collaboration::Presence::Services ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.Services</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the capabilities.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceNetwork">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SourceNetwork SourceNetwork { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.SourceNetwork SourceNetwork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification.SourceNetwork" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceNetwork As SourceNetwork" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::SourceNetwork SourceNetwork { Microsoft::Rtc::Collaboration::SourceNetwork get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SourceNetwork</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source network for this presence data notification.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

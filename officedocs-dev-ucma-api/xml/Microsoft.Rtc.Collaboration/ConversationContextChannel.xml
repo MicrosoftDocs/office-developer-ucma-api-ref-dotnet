@@ -1,0 +1,354 @@
+﻿<Type Name="ConversationContextChannel" FullName="Microsoft.Rtc.Collaboration.ConversationContextChannel">
+  <TypeSignature Language="C#" Value="public class ConversationContextChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConversationContextChannel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConversationContextChannel" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationContextChannel" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConversationContextChannel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a channel to communicate with a custom application running on remote endpoint.
+            </summary>
+    <remarks>
+      <para>When the remote endpoint is Office Communicator this
+            activates the contextual conversation window on the remote.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationContextChannel (Microsoft.Rtc.Collaboration.Conversation conversation, Microsoft.Rtc.Collaboration.ParticipantEndpoint remoteEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation, class Microsoft.Rtc.Collaboration.ParticipantEndpoint remoteEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.#ctor(Microsoft.Rtc.Collaboration.Conversation,Microsoft.Rtc.Collaboration.ParticipantEndpoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConversationContextChannel(Microsoft::Rtc::Collaboration::Conversation ^ conversation, Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ remoteEndpoint);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conversation" Type="Microsoft.Rtc.Collaboration.Conversation" />
+        <Parameter Name="remoteEndpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="conversation">The conversation with which the channel is associated.</param>
+        <param name="remoteEndpoint">The remote endpoint with which the channel communicates.</param>
+        <summary>
+            Create a ConversationContextChannel.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the given <paramref name="remoteEndpoint" /> parameter is null
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the conversation is already terminating or terminated.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (Guid applicationId, Microsoft.Rtc.Collaboration.ConversationContextChannelEstablishOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(valuetype System.Guid applicationId, class Microsoft.Rtc.Collaboration.ConversationContextChannelEstablishOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.BeginEstablish(System.Guid,Microsoft.Rtc.Collaboration.ConversationContextChannelEstablishOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (applicationId As Guid, options As ConversationContextChannelEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Guid applicationId, Microsoft::Rtc::Collaboration::ConversationContextChannelEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationId" Type="System.Guid" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConversationContextChannelEstablishOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="applicationId">The unique application guid.</param>
+        <param name="options">Optional parameters.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Establishes the channel.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendData">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendData (System.Net.Mime.ContentType contentType, byte[] contentBody, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendData(class System.Net.Mime.ContentType contentType, unsigned int8[] contentBody, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.BeginSendData(System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendData(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ contentBody, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="contentBody" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">To be added.</param>
+        <param name="contentBody">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>
+            Sends message to remote endpoint with the given content.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>
+            Terminates the channel.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conversation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conversation Conversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Conversation Conversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationContextChannel.Conversation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As Conversation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ Conversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conversation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conversation that the ConversationContextChannel is tied to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelDataReceivedEventArgs&gt; DataReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ConversationContextChannelDataReceivedEventArgs&gt; DataReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConversationContextChannel.DataReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DataReceived As EventHandler(Of ConversationContextChannelDataReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConversationContextChannelDataReceivedEventArgs ^&gt; ^ DataReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelDataReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when data is received from the remote endpoint.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEstablish">
+      <MemberSignature Language="C#" Value="public void EndEstablish (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEstablish(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.EndEstablish(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndEstablish (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEstablish(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the remote side returns a failure response for the establish request operation.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendData">
+      <MemberSignature Language="C#" Value="public void EndSendData (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendData(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.EndSendData(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSendData (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendData(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ParticipantEndpoint RemoteEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ParticipantEndpoint RemoteEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationContextChannel.RemoteEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpoint As ParticipantEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ RemoteEndpoint { Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ParticipantEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote endpoint of the ConversationContextChannel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationContextChannelState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConversationContextChannelState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationContextChannel.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ConversationContextChannelState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationContextChannelState State { Microsoft::Rtc::Collaboration::ConversationContextChannelState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationContextChannelState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the state of the ConversationContextChannel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ConversationContextChannelStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConversationContextChannel.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of ConversationContextChannelStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConversationContextChannelStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of the ConversationContextChannel changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

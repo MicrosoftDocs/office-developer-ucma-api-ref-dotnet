@@ -1,0 +1,311 @@
+﻿<Type Name="UserEndpointPresenceServices" FullName="Microsoft.Rtc.Collaboration.UserEndpointPresenceServices">
+  <TypeSignature Language="C#" Value="public class UserEndpointPresenceServices : Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UserEndpointPresenceServices extends Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices" />
+  <TypeSignature Language="VB.NET" Value="Public Class UserEndpointPresenceServices&#xA;Inherits LocalEndpointPresenceServices" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserEndpointPresenceServices : Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class provides common presence services for <see cref="T:Microsoft.Rtc.Collaboration.UserEndpoint" />.
+            </summary>
+    <remarks>
+      <para>
+            Applications are allowed to publish the user and endpoint presence states and also update any privacy preferences. Any published user states
+            can also be deleted.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginDeleteUserPresenceState">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDeleteUserPresenceState (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDeleteUserPresenceState(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.BeginDeleteUserPresenceState(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDeleteUserPresenceState (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeleteUserPresenceState(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to delete all maunally published User presence states.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            User PresenceState is typically published by the client, when user manually set the PresenceState in UI.
+            This method allows application to delete all manual user PresenceState publication and reset the presence state 
+            to depend only on application's automatic presence state publications.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdatePresenceState">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdatePresenceState (Microsoft.Rtc.Collaboration.Presence.PresenceState newState, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdatePresenceState(class Microsoft.Rtc.Collaboration.Presence.PresenceState newState, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.BeginUpdatePresenceState(Microsoft.Rtc.Collaboration.Presence.PresenceState,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUpdatePresenceState (newState As PresenceState, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdatePresenceState(Microsoft::Rtc::Collaboration::Presence::PresenceState ^ newState, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newState" Type="Microsoft.Rtc.Collaboration.Presence.PresenceState" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="newState">New user state for the endpoint, must be of type <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.UserState" /> or <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.EndpointState" />.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to publish the user or endpoint presence state.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not in the "registered" state, or the current state of <see cref="T:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" /> is not "subscribed".</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="newState" /> passed is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="newState" /> is not of type <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.UserState" />
+            or <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.EndpointState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdatePrivacyPreference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdatePrivacyPreference (Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference privacyPreference, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdatePrivacyPreference(valuetype Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference privacyPreference, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.BeginUpdatePrivacyPreference(Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUpdatePrivacyPreference (privacyPreference As PrivacyModePreference, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdatePrivacyPreference(Microsoft::Rtc::Collaboration::Presence::PrivacyModePreference privacyPreference, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="privacyPreference" Type="Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="privacyPreference">Value indicating what the local owner's privacy preference would be.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to set the local owner preferred privacy mode.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is not a user endpoint or subscribed to this session.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDeleteUserPresenceState">
+      <MemberSignature Language="C#" Value="public void EndDeleteUserPresenceState (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDeleteUserPresenceState(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.EndDeleteUserPresenceState(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDeleteUserPresenceState (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeleteUserPresenceState(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation started by BeginDeleteUserPresenceState
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdatePresenceState">
+      <MemberSignature Language="C#" Value="public void EndUpdatePresenceState (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdatePresenceState(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.EndUpdatePresenceState(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdatePresenceState (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdatePresenceState(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation started by BeginUpdatePresenceState
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdatePrivacyPreference">
+      <MemberSignature Language="C#" Value="public void EndUpdatePrivacyPreference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdatePrivacyPreference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.EndUpdatePrivacyPreference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdatePrivacyPreference (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdatePrivacyPreference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation initiated by BeginUpdatePrivacyPreference.
+            </summary>
+        <remarks>
+          <para>
+            PublishSubscribeException is usually thrown when the request sent to the server is invalid.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the publish operation or an empty container update operation is specified.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPresenceRelationshipLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel GetPresenceRelationshipLevel (Microsoft.Rtc.Signaling.RealTimeAddress uri, Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel GetPresenceRelationshipLevel(class Microsoft.Rtc.Signaling.RealTimeAddress uri, valuetype Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.GetPresenceRelationshipLevel(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Collaboration.SourceNetwork)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Presence::PresenceRelationshipLevel GetPresenceRelationshipLevel(Microsoft::Rtc::Signaling::RealTimeAddress ^ uri, Microsoft::Rtc::Collaboration::SourceNetwork sourceNetwork);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="sourceNetwork" Type="Microsoft.Rtc.Collaboration.SourceNetwork" />
+      </Parameters>
+      <Docs>
+        <param name="uri">URI of the UC entity.</param>
+        <param name="sourceNetwork">Network type that this entity belongs to.</param>
+        <summary>
+            Retrieves the highest container membership match for a UC entity.
+            </summary>
+        <returns>The highest container that this entity belongs to.</returns>
+        <remarks>
+          <para>Matching will be performed in the following order:</para>
+          <para>1) Exact URI match</para>
+          <para>2) Best domain match</para>
+          <para>3) Source network type match</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="uri" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivacyMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PrivacyMode PrivacyMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.PrivacyMode PrivacyMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.PrivacyMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrivacyMode As PrivacyMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PrivacyMode PrivacyMode { Microsoft::Rtc::Collaboration::Presence::PrivacyMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PrivacyMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the local owner's current privacy mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivacyModePreference">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference PrivacyModePreference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference PrivacyModePreference" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointPresenceServices.PrivacyModePreference" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PrivacyModePreference As PrivacyModePreference" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PrivacyModePreference PrivacyModePreference { Microsoft::Rtc::Collaboration::Presence::PrivacyModePreference get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PrivacyModePreference</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the local owner's privacy preference
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,46 @@
+﻿<Type Name="UnhandledExceptionManager" FullName="Microsoft.Rtc.Signaling.UnhandledExceptionManager">
+  <TypeSignature Language="C#" Value="public static class UnhandledExceptionManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit UnhandledExceptionManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.UnhandledExceptionManager" />
+  <TypeSignature Language="VB.NET" Value="Public Class UnhandledExceptionManager" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UnhandledExceptionManager abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides a way for the application to register for a handler to catch any unhandled
+            exceptions uncaught from a worker thread initiated by the platform.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="VerifyAndIgnoreUnhandledThreadPoolException">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Signaling.UnhandledThreadPoolExceptionHandler VerifyAndIgnoreUnhandledThreadPoolException;" />
+      <MemberSignature Language="ILAsm" Value=".field public static class Microsoft.Rtc.Signaling.UnhandledThreadPoolExceptionHandler VerifyAndIgnoreUnhandledThreadPoolException" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.UnhandledExceptionManager.VerifyAndIgnoreUnhandledThreadPoolException" />
+      <MemberSignature Language="VB.NET" Value="Public Shared VerifyAndIgnoreUnhandledThreadPoolException As UnhandledThreadPoolExceptionHandler " />
+      <MemberSignature Language="C++ CLI" Value="public: static Microsoft::Rtc::Signaling::UnhandledThreadPoolExceptionHandler ^ VerifyAndIgnoreUnhandledThreadPoolException;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.UnhandledThreadPoolExceptionHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Unhandled exception handler delegate. The application should return true to ignore the exception
+            and false to rethrow in the worker thread.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

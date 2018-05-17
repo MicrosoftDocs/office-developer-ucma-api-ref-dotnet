@@ -1,0 +1,93 @@
+﻿<Type Name="WmaFileSink" FullName="Microsoft.Rtc.Collaboration.AudioVideo.WmaFileSink">
+  <TypeSignature Language="C#" Value="public class WmaFileSink : Microsoft.Rtc.Collaboration.AudioVideo.MediaSink" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WmaFileSink extends Microsoft.Rtc.Collaboration.AudioVideo.MediaSink" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.WmaFileSink" />
+  <TypeSignature Language="VB.NET" Value="Public Class WmaFileSink&#xA;Inherits MediaSink" />
+  <TypeSignature Language="C++ CLI" Value="public ref class WmaFileSink : Microsoft::Rtc::Collaboration::AudioVideo::MediaSink" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.AudioVideo.MediaSink</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The WmaFileSink class is used for recording to a WMA file.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WmaFileSink (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.WmaFileSink.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (filename As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; WmaFileSink(System::String ^ filename);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">The filename of the file to be recorded to.</param>
+        <summary>
+            Creates a new instance of the WmaFileSink class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Thrown when WMA support is not available.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the filename argument is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodingFormat">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.WmaEncodingFormat EncodingFormat { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.WmaEncodingFormat EncodingFormat" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.WmaFileSink.EncodingFormat" />
+      <MemberSignature Language="VB.NET" Value="Public Property EncodingFormat As WmaEncodingFormat" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::WmaEncodingFormat EncodingFormat { Microsoft::Rtc::Collaboration::AudioVideo::WmaEncodingFormat get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::WmaEncodingFormat value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.WmaEncodingFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the encoding format.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the recorder is not in the Stopped state.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when WmaEncodingFormat is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public string Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.WmaFileSink.Filename" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Filename As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Filename { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the filename of the WMA file.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

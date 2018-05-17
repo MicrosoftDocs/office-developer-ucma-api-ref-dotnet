@@ -1,0 +1,95 @@
+﻿<Type Name="AttendanceAnnouncementsStatus" FullName="Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus">
+  <TypeSignature Language="C#" Value="public enum AttendanceAnnouncementsStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AttendanceAnnouncementsStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum AttendanceAnnouncementsStatus" />
+  <TypeSignature Language="C++ CLI" Value="public enum class AttendanceAnnouncementsStatus" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the different states for attendance announcements in a conference.
+            </summary>
+    <remarks>
+      <para>
+            When attendance announcements are enabled, the conference will announce the names of the participants
+            joining the conference through audio.
+            </para>
+      <para>
+            An application should set this property to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Enabled" /> only if the conference
+            supports modifying the attendance announcements status. See <see cref="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsModifyingAttendanceAnnouncements" />.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Disabled">
+      <MemberSignature Language="C#" Value="Disabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus Disabled = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Disabled" />
+      <MemberSignature Language="VB.NET" Value="Disabled" />
+      <MemberSignature Language="C++ CLI" Value="Disabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Attendance announcements are disabled.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="Enabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus Enabled = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Enabled" />
+      <MemberSignature Language="C++ CLI" Value="Enabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Attendance announcements are enabled.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unsupported">
+      <MemberSignature Language="C#" Value="Unsupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus Unsupported = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Unsupported" />
+      <MemberSignature Language="VB.NET" Value="Unsupported" />
+      <MemberSignature Language="C++ CLI" Value="Unsupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The conference does not support modifying attendance announcements.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

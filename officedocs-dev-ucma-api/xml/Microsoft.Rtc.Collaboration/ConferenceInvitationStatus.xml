@@ -1,0 +1,144 @@
+﻿<Type Name="ConferenceInvitationStatus" FullName="Microsoft.Rtc.Collaboration.ConferenceInvitationStatus">
+  <TypeSignature Language="C#" Value="public enum ConferenceInvitationStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConferenceInvitationStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceInvitationStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ConferenceInvitationStatus" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ConferenceInvitationStatus" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This enum will be removed from future versions. See ConferenceInvitation.EndDeliver for more information")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This enumerated type will be removed from future versions. Instead use BeginDeliver and EndDeliver methods on ConferenceInvitation.
+            Represents the possible responses to a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" />.
+            </summary>
+    <remarks>
+      <para>
+            The values in this enumeration were used by Conversation.BeginInviteRemoteParticipants and Conversation.EndInviteRemoteParticipants,
+            both of which will be removed from future versions. Instead, the BeginDeliver and EndDeliver methods on the ConferenceInvitation class should be used.
+            ConferenceInvitation.EndDeliver throws an exception if a conference invitation cannot be delivered, eliminating the  
+            need for the members of this enumerated type.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accepted">
+      <MemberSignature Language="C#" Value="Accepted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationStatus Accepted = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceInvitationStatus.Accepted" />
+      <MemberSignature Language="VB.NET" Value="Accepted" />
+      <MemberSignature Language="C++ CLI" Value="Accepted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Invitation was accepted.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Declined">
+      <MemberSignature Language="C#" Value="Declined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationStatus Declined = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceInvitationStatus.Declined" />
+      <MemberSignature Language="VB.NET" Value="Declined" />
+      <MemberSignature Language="C++ CLI" Value="Declined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Invitation was declined.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DialOutRequested">
+      <MemberSignature Language="C#" Value="DialOutRequested" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationStatus DialOutRequested = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceInvitationStatus.DialOutRequested" />
+      <MemberSignature Language="VB.NET" Value="DialOutRequested" />
+      <MemberSignature Language="C++ CLI" Value="DialOutRequested" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Invitation was declined with a request for dial out from the MCU.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationStatus None = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceInvitationStatus.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Not set.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotSupported">
+      <MemberSignature Language="C#" Value="NotSupported" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationStatus NotSupported = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceInvitationStatus.NotSupported" />
+      <MemberSignature Language="VB.NET" Value="NotSupported" />
+      <MemberSignature Language="C++ CLI" Value="NotSupported" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Invitations are not supported by the remote client.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

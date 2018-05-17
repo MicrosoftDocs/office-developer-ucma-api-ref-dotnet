@@ -1,0 +1,251 @@
+﻿<Type Name="ConnectionPool" FullName="Microsoft.Rtc.Signaling.ConnectionPool">
+  <TypeSignature Language="C#" Value="public class ConnectionPool" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionPool extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ConnectionPool" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConnectionPool" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConnectionPool" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a connection pool. Each pool is identified
+            by a destination tuple that consists of the hostname, the listening port of that host, 
+            and the transport type (TCP or TLS). The pool consists of 0 or more connections
+            at any time and can grow to a maximum number of connections set by the application.
+            The connection pool only represents outgoing connections and is not used to represent
+            incoming connections as they are not used for pooling.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConnectionAdded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; ConnectionAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.CollectionChangedEventArgs`1&lt;class Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; ConnectionAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ConnectionPool.ConnectionAdded" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionAdded As EventHandler(Of CollectionChangedEventArgs(Of RealTimeConnection)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^&gt; ^ ConnectionAdded;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the connection is added to the pool.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeConnectionManager ConnectionManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnectionManager ConnectionManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.ConnectionManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionManager As RealTimeConnectionManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ ConnectionManager { Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection manager for this pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionRemoved">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; ConnectionRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.CollectionChangedEventArgs`1&lt;class Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; ConnectionRemoved" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ConnectionPool.ConnectionRemoved" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionRemoved As EventHandler(Of CollectionChangedEventArgs(Of RealTimeConnection)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^&gt; ^ ConnectionRemoved;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the connection is removed from the pool.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the number of connections currently in the pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConnections">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt; GetConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Signaling.RealTimeConnection&gt; GetConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionPool.GetConnections" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetConnections () As ReadOnlyCollection(Of RealTimeConnection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^ GetConnections();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of connections currently in this connection pool.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public string HostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HostName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the host name for this pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumNumberOfConnections">
+      <MemberSignature Language="C#" Value="public int MaximumNumberOfConnections { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumNumberOfConnections" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.MaximumNumberOfConnections" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumNumberOfConnections As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumNumberOfConnections { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pool size. This indicates the maximum number of connections desired in the pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the value given is negative or zero.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.Port" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Port As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Port { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote port.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public string ProtocolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.ProtocolName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProtocolName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProtocolName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the protocol, TCP or TLS.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionPool.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts to a string representation of the instance.
+            </summary>
+        <returns>The string representation of the instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

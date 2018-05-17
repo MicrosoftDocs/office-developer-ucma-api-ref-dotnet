@@ -1,0 +1,112 @@
+﻿<Type Name="ConferenceCommandOptions" FullName="Microsoft.Rtc.Collaboration.ConferenceCommandOptions">
+  <TypeSignature Language="C#" Value="public abstract class ConferenceCommandOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConferenceCommandOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ConferenceCommandOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceCommandOptions abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents common options that an application can set to customize a specific conference command.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConferenceCommandOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceCommandOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ConferenceCommandOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom headers to be included in the outgoing command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Applications should not add any restricted headers including contact header to this list.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Issuer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationParticipant Issuer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConversationParticipant Issuer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandOptions.Issuer" />
+      <MemberSignature Language="VB.NET" Value="Public Property Issuer As ConversationParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ Issuer { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); void set(Microsoft::Rtc::Collaboration::ConversationParticipant ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the issuer of the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Trusted applications can issue commands within the context of other conference users who are connected 
+            to the conference (either connected to the focus or to the MCU with one or more modalities). 
+            </para>
+          <para>
+            As an example, a PSTN user connected to the audio-video MCU is unable to issue any commands to the focus.
+            However, a trusted application such as the personal virtual assistant (PVA) can issue commands within 
+            the context of that PSTN user to the focus. The focus will execute this command within the authorization
+            context of that PSTN user.
+            </para>
+          <para>
+            Setting this property is recommended when the trusted application is executing commands in the context of 
+            other users to avoid any elevation of privilege.
+            </para>
+          <para>
+            In order to issue a command within the context of another conference user, the application must join the conference
+            as a trusted application. This requires an application endpoint to be established with a trusted service GRUU. Additionally,
+            the conversation should join the conference as a trusted application by setting <see cref="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.JoinMode" /> to <see cref="F:Microsoft.Rtc.Collaboration.JoinMode.TrustedParticipant" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

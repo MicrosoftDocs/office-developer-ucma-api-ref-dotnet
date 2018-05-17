@@ -1,0 +1,60 @@
+﻿<Type Name="PresenceSubscriptionStateChangedEventArgs" FullName="Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class PresenceSubscriptionStateChangedEventArgs : Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PresenceSubscriptionStateChangedEventArgs extends Microsoft.Rtc.Signaling.StateChangedEventArgs`1&lt;valuetype Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class PresenceSubscriptionStateChangedEventArgs&#xA;Inherits StateChangedEventArgs(Of CollaborationSubscriptionState)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class PresenceSubscriptionStateChangedEventArgs : Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Collaboration::Presence::CollaborationSubscriptionState&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents changes in the subscription state of the presence session for this endpoint owner.
+            </summary>
+    <remarks>
+      <para>
+            This event argument is returned by the <see cref="E:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriptionStateChange" /></para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReasonForChange">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.SubscriptionStateTransitionReason ReasonForChange { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.SubscriptionStateTransitionReason ReasonForChange" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs.ReasonForChange" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReasonForChange As SubscriptionStateTransitionReason" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::SubscriptionStateTransitionReason ReasonForChange { Microsoft::Rtc::Collaboration::Presence::SubscriptionStateTransitionReason get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future Versions.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.SubscriptionStateTransitionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the reason for the subscription state change.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

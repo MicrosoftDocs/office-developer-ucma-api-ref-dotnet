@@ -1,0 +1,906 @@
+﻿<Type Name="PresenceState" FullName="Microsoft.Rtc.Collaboration.Presence.PresenceState">
+  <TypeSignature Language="C#" Value="public class PresenceState : Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PresenceState extends Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PresenceState" />
+  <TypeSignature Language="VB.NET" Value="Public Class PresenceState&#xA;Inherits PresenceCategory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class PresenceState : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PresenceCategory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents the state presence category and denotes the availability of a presentity.
+            </summary>
+    <remarks>
+      <para>UserEndpoints are strongly advised to use the <see cref="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginPublishPresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.AsyncCallback,System.Object)" />
+            API so that the instance is published in appropriate containers that allow the aggregation script to react accordingly.
+            </para>
+      <para>Application endpoints usually prefer to skip any aggregation logic and publish their aggregate state directly 
+            since they don't do any watcher management.</para>
+      <para>When subscribing to remote presentities, this category is automated requested for.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PresenceState (Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceState(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData" />
+      </Parameters>
+      <Docs>
+        <param name="category">To be added.</param>
+        <summary>
+            Creates an instance of the PresenceState class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="category" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when category.Name is anything other than PresenceCategoryNames.State or the XML representing category.Category provided is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PresenceState (Microsoft.Rtc.Collaboration.Presence.PresenceStateType stateType, int availability, Microsoft.Rtc.Collaboration.Presence.PresenceActivity activity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Collaboration.Presence.PresenceStateType stateType, int32 availability, class Microsoft.Rtc.Collaboration.Presence.PresenceActivity activity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceStateType,System.Int32,Microsoft.Rtc.Collaboration.Presence.PresenceActivity)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (stateType As PresenceStateType, availability As Integer, activity As PresenceActivity)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceState(Microsoft::Rtc::Collaboration::Presence::PresenceStateType stateType, int availability, Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ activity);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stateType" Type="Microsoft.Rtc.Collaboration.Presence.PresenceStateType" />
+        <Parameter Name="availability" Type="System.Int32" />
+        <Parameter Name="activity" Type="Microsoft.Rtc.Collaboration.Presence.PresenceActivity" />
+      </Parameters>
+      <Docs>
+        <param name="stateType">Type of presence state(MachineState/AggregateMachineState/AggregateState/UserState) instance being created.</param>
+        <param name="availability">Availability value.</param>
+        <param name="activity">Activity token for this availability.</param>
+        <summary>
+            Creates an instance of the PresenceState(MachineState/AggregateMachineState/AggregateState/UserState) class.
+            </summary>
+        <remarks>
+          <para>A presence state type of CalendarState or PresenceState cannot be created with this constructor.
+            For PresenceState use the constructor which specifically takes phone uri as one of its parameters.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="stateType" /> is unknown, <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.CalendarState" /> or <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.PhoneState" />.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PresenceState (int availability, Microsoft.Rtc.Collaboration.Presence.PresenceActivity activity, Microsoft.Rtc.Collaboration.Presence.PhoneCallType phoneCallType, string phoneUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 availability, class Microsoft.Rtc.Collaboration.Presence.PresenceActivity activity, valuetype Microsoft.Rtc.Collaboration.Presence.PhoneCallType phoneCallType, string phoneUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.#ctor(System.Int32,Microsoft.Rtc.Collaboration.Presence.PresenceActivity,Microsoft.Rtc.Collaboration.Presence.PhoneCallType,System.String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceState(int availability, Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ activity, Microsoft::Rtc::Collaboration::Presence::PhoneCallType phoneCallType, System::String ^ phoneUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="availability" Type="System.Int32" />
+        <Parameter Name="activity" Type="Microsoft.Rtc.Collaboration.Presence.PresenceActivity" />
+        <Parameter Name="phoneCallType" Type="Microsoft.Rtc.Collaboration.Presence.PhoneCallType" />
+        <Parameter Name="phoneUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="availability">Availability value.</param>
+        <param name="activity">Activity token for this availability.</param>
+        <param name="phoneCallType">Whether Phone state is for RCC, VoIP or PSTN calls.</param>
+        <param name="phoneUri">The tel URI for the presence state.</param>
+        <summary>
+            Creates an instance of the phone state category.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="phoneUri" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Activity">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceActivity Activity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PresenceActivity Activity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.Activity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Activity As PresenceActivity" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ Activity { Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ get(); void set(Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceActivity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the activity token.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Availability">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceAvailability Availability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.PresenceAvailability Availability" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.Availability" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Availability As PresenceAvailability" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceAvailability Availability { Microsoft::Rtc::Collaboration::Presence::PresenceAvailability get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceAvailability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the availability for presence state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This is typically used in application UI to show the availability of user.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailabilityValue">
+      <MemberSignature Language="C#" Value="public long AvailabilityValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 AvailabilityValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.AvailabilityValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property AvailabilityValue As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long AvailabilityValue { long get(); void set(long value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the numeric value of availability of presence State, returns -1 if availability value is unknown.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AvailabilityValueUnknown">
+      <MemberSignature Language="C#" Value="public const long AvailabilityValueUnknown = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int64 AvailabilityValueUnknown = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceState.AvailabilityValueUnknown" />
+      <MemberSignature Language="VB.NET" Value="Public Const AvailabilityValueUnknown As Long  = -1" />
+      <MemberSignature Language="C++ CLI" Value="public: long AvailabilityValueUnknown = -1;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>
+            Constant with value -1, represents the unknown availability value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpiryPolicy">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.CreateExpiryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Determines the expiry policy for this category.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceId">
+      <MemberSignature Language="C#" Value="protected override long CreateInstanceId (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int64 CreateInstanceId(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <summary>
+            Determines the instance id for this category.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            To determine the instance id for the state category, the state type is required as the instance id
+            is a function of the state type. In some cases such as PhoneState, the instance is already determined
+            at the time of construction of the object so there is no need to determine its value again.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.DeviceType DeviceType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.DeviceType DeviceType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.DeviceType" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeviceType As DeviceType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::DeviceType DeviceType { Microsoft::Rtc::Collaboration::Presence::DeviceType get(); void set(Microsoft::Rtc::Collaboration::Presence::DeviceType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.DeviceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the device type for MachineState/AggregateState/AggregateMachineState.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the operation is invalid for the given state type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointAway">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState EndpointAway { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState EndpointAway" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointAway" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EndpointAway As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ EndpointAway { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MachineState is Away.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Availability is 15500 and activity is "away".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointIdle">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState EndpointIdle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState EndpointIdle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointIdle" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EndpointIdle As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ EndpointIdle { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MachineState is Idle-Online.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Availability is 5000 and activity is "idle".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointLocation">
+      <MemberSignature Language="C#" Value="public string EndpointLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndpointLocation As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the endpoint location with values such as "home", "office", "mobile", or custom location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointOnline">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState EndpointOnline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState EndpointOnline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointOnline" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EndpointOnline As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ EndpointOnline { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MachineState is Online.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Availability is 3500 and activity is "online".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategoryDataXml">
+      <MemberSignature Language="C#" Value="public override string GetCategoryDataXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCategoryDataXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.GetCategoryDataXml" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns this instance of PresenceState as a serialized xml.
+            </summary>
+        <returns>XML representation of this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsManual">
+      <MemberSignature Language="C#" Value="public bool IsManual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsManual" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.IsManual" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsManual As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsManual { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether this presence is set manually or automatically.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            <see cref="F:Microsoft.Rtc.Collaboration.Presence.PresenceStateType.UserState" /> will generally have this flag set to true, while other state types will have flag set to 
+            false. </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastActive">
+      <MemberSignature Language="C#" Value="public DateTime LastActive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime LastActive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.LastActive" />
+      <MemberSignature Language="VB.NET" Value="Public Property LastActive As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime LastActive { DateTime get(); void set(DateTime value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the last active time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Returns DateTime.MinValue if this property is not applicable for this presence state type.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" /> is not AggregateState.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MeetingLocation">
+      <MemberSignature Language="C#" Value="public string MeetingLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeetingLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.MeetingLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeetingLocation As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MeetingLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the meeting location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" /> is not AggregateState.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MeetingSubject">
+      <MemberSignature Language="C#" Value="public string MeetingSubject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MeetingSubject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.MeetingSubject" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeetingSubject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MeetingSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the meeting subject.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" /> is not AggregateState.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PersistentOnline">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState PersistentOnline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState PersistentOnline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.PersistentOnline" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property PersistentOnline As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ PersistentOnline { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Aggregate Presence State is Online, only used as presence for applications like BOT.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Availability is 3500 and activity is "online".</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneInACall">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState PhoneInACall (string phoneUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Collaboration.Presence.PresenceState PhoneInACall(string phoneUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.PhoneInACall(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PhoneInACall (phoneUri As String) As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Collaboration::Presence::PresenceState ^ PhoneInACall(System::String ^ phoneUri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="phoneUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="phoneUri">The tel URI for the presence state.</param>
+        <summary>
+            Returns the phone state as on-the-phone.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            Availability is 6500 and activity is "on-the-phone". 
+            Application could use this state to set phoneState for an outgoing VoIP call.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneInAConference">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState PhoneInAConference (string phoneUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Collaboration.Presence.PresenceState PhoneInAConference(string phoneUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.PhoneInAConference(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PhoneInAConference (phoneUri As String) As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Collaboration::Presence::PresenceState ^ PhoneInAConference(System::String ^ phoneUri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="phoneUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="phoneUri">The tel URI for the presence state.</param>
+        <summary>
+            Returns the phone state as in-a-conference.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            Availability is 7000 and activity is "in-a-conference". 
+            Applications can use this state to set phoneState for an outgoing VoIP call.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExpiryTime">
+      <MemberSignature Language="C#" Value="public void SetExpiryTime (int expiryTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetExpiryTime(int32 expiryTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.SetExpiryTime(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetExpiryTime (expiryTime As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetExpiryTime(int expiryTime);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="expiryTime" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="expiryTime">Expiry duration in seconds.</param>
+        <summary>
+            Allows the userstate to be active for a specified number of seconds.
+            </summary>
+        <remarks>
+          <para>Setting expiry time to a valid value results in a user state time based publication which would
+            be active for <paramref name="expiryTime" /> seconds.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when expiry time is not between 1 and Int32.MaxValue seconds.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartTime">
+      <MemberSignature Language="C#" Value="public DateTime StartTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime StartTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StartTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartTime As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime StartTime { DateTime get(); void set(DateTime value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the start time from which this state will be active.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceStateType StateType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.PresenceStateType StateType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StateType As PresenceStateType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceStateType StateType { Microsoft::Rtc::Collaboration::Presence::PresenceStateType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceStateType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the state type representing this presence state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeZoneAbbreviation">
+      <MemberSignature Language="C#" Value="public string TimeZoneAbbreviation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TimeZoneAbbreviation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneAbbreviation" />
+      <MemberSignature Language="VB.NET" Value="Public Property TimeZoneAbbreviation As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TimeZoneAbbreviation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the time zone abbreviation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>A 'null' value is returned if the the <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" /> is not
+            AggregateState, AggregateEndpointState or EndpointState.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the operation is invalid for the given state type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeZoneBias">
+      <MemberSignature Language="C#" Value="public long TimeZoneBias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 TimeZoneBias" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneBias" />
+      <MemberSignature Language="VB.NET" Value="Public Property TimeZoneBias As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long TimeZoneBias { long get(); void set(long value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the time zone bias.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>A value of long.MinValue if the <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" /> is not
+            AggregateState, AggregateEndpointState or EndpointState</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeZoneName">
+      <MemberSignature Language="C#" Value="public string TimeZoneName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TimeZoneName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneName" />
+      <MemberSignature Language="VB.NET" Value="Public Property TimeZoneName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TimeZoneName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the time zone name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>A 'null' value is returned if the the <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" /> is not
+            AggregateState, AggregateEndpointState or EndpointState.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAvailable">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserAvailable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserAvailable" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserAvailable As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserAvailable { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is Available, Availability is 3500 and activity is "online".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAway">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserAway { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserAway" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserAway" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserAway As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserAway { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is Away, Availability is 15500 and activity is "away".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserBeRightBack">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserBeRightBack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserBeRightBack" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserBeRightBack" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserBeRightBack As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserBeRightBack { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is BeRightBack, Availability is 12500 and activity is "be-right-back".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserBusy">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserBusy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserBusy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserBusy" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserBusy As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserBusy { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is Busy, Availability is 6500 and activity is "busy".
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>A time bound userstate is published which is active for 24 hours.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDoNotDisturb">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserDoNotDisturb { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserDoNotDisturb" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserDoNotDisturb" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserDoNotDisturb As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserDoNotDisturb { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is DoNotDisturb, Availability is 9500.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Availability of 9500 is mapped to container 2 and 6900 into container 3(urgent-interruptions-only). A time bound user
+            state is published which is active for 24 hours.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserOffline">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserOffline { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserOffline" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserOffline" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserOffline As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserOffline { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is Offline, Availability is 18000.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserOffWork">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.Presence.PresenceState UserOffWork { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Collaboration.Presence.PresenceState UserOffWork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserOffWork" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserOffWork As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserOffWork { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            User state is OffWork, Availability is 15500 with activity is "off-work".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

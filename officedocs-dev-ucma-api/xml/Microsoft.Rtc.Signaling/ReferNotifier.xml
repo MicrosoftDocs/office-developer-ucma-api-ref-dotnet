@@ -1,0 +1,297 @@
+﻿<Type Name="ReferNotifier" FullName="Microsoft.Rtc.Signaling.ReferNotifier">
+  <TypeSignature Language="C#" Value="public abstract class ReferNotifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ReferNotifier extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ReferNotifier" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ReferNotifier" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ReferNotifier abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Lets the application set the various Refer states indicating progress.
+            This is used by the application that is receiving the Refer request.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginSetState">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginSetState (Microsoft.Rtc.Signaling.ReferState referState, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSetState(valuetype Microsoft.Rtc.Signaling.ReferState referState, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.BeginSetState(Microsoft.Rtc.Signaling.ReferState,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginSetState(Microsoft::Rtc::Signaling::ReferState referState, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referState" Type="Microsoft.Rtc.Signaling.ReferState" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="referState">The refer State value to set</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Sets the Refer state. This will result in sending Notification to the referrer.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid session state to set the refer state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSetState">
+      <MemberSignature Language="C#" Value="public abstract IAsyncResult BeginSetState (int responseCode, string responseText, string remainingSipFragment, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSetState(int32 responseCode, string responseText, string remainingSipFragment, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.BeginSetState(System.Int32,System.String,System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginSetState (responseCode As Integer, responseText As String, remainingSipFragment As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginSetState(int responseCode, System::String ^ responseText, System::String ^ remainingSipFragment, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="responseText" Type="System.String" />
+        <Parameter Name="remainingSipFragment" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The specific response code</param>
+        <param name="responseText">The response text. Can be null.</param>
+        <param name="remainingSipFragment">The remaining SIP fragment</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Sets the Refer state. This will result in sending Notification to the referrer.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the endpoint is already terminated or when the refer state transition is not allowed
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the response code is out of range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSetState">
+      <MemberSignature Language="C#" Value="public abstract void EndSetState (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSetState(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.EndSetState(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndSetState (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndSetState(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending setState operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferTarget">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeAddress ReferTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress ReferTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferNotifier.ReferTarget" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferTarget As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ ReferTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the session target object that contains the Refer target.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Session">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingSession Session { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingSession Session" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferNotifier.Session" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Session As SignalingSession" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingSession ^ Session { Microsoft::Rtc::Signaling::SignalingSession ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the signaling session associated with this instance.
+            </summary>
+        <value>The session.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetState">
+      <MemberSignature Language="C#" Value="public void SetState (Microsoft.Rtc.Signaling.ReferState referState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetState(valuetype Microsoft.Rtc.Signaling.ReferState referState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.SetState(Microsoft.Rtc.Signaling.ReferState)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetState(Microsoft::Rtc::Signaling::ReferState referState);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referState" Type="Microsoft.Rtc.Signaling.ReferState" />
+      </Parameters>
+      <Docs>
+        <param name="referState">The refer State value to set</param>
+        <summary>
+            Synchronously sets the refer state. This will result in sending Notification to the referrer.
+            </summary>
+        <remarks>
+          <para>
+            This method is not recommended for UI threads or scalable server applications.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetState">
+      <MemberSignature Language="C#" Value="public void SetState (int responseCode, string responseText, string remainingSipFragment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetState(int32 responseCode, string responseText, string remainingSipFragment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.SetState(System.Int32,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetState (responseCode As Integer, responseText As String, remainingSipFragment As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetState(int responseCode, System::String ^ responseText, System::String ^ remainingSipFragment);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="responseText" Type="System.String" />
+        <Parameter Name="remainingSipFragment" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The specific response code</param>
+        <param name="responseText">The response text. Can be null.</param>
+        <param name="remainingSipFragment">The remaining SIP fragment</param>
+        <summary>
+            Synchronously sets the Refer state. This will result in sending Notification to the referrer.
+            </summary>
+        <remarks>
+          <para>
+            This method is not recommended for UI threads or scalable server applications.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the endpoint is already terminated or when the refer state transition is not allowed
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the response code is out of range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ReferState State { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.ReferState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferNotifier.State" />
+      <MemberSignature Language="VB.NET" Value="Public Property State As ReferState" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::ReferState State {  public:&#xA;Microsoft::Rtc::Signaling::ReferState get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::ReferState value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ReferState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current state of this Refer information.
+            There is no state changed event for this state since the state
+            changes are due to method calls made by the application only.
+            </summary>
+        <value>
+            Gets the current state of this Refer information.
+            There is no state changed event for this state since the state
+            changes are due to method calls made by the application only.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionTerminated">
+      <MemberSignature Language="C#" Value="public abstract event EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; SubscriptionTerminated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; SubscriptionTerminated" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ReferNotifier.SubscriptionTerminated" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event SubscriptionTerminated As EventHandler(Of SipRequestReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ SubscriptionTerminated;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event raised when the refer subscription is terminated by the remote with unsubscribe message.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

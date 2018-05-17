@@ -1,0 +1,154 @@
+﻿<Type Name="ConnectionAuthorizationRequestedEventArgs" FullName="Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs">
+  <TypeSignature Language="C#" Value="public class ConnectionAuthorizationRequestedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConnectionAuthorizationRequestedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConnectionAuthorizationRequestedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConnectionAuthorizationRequestedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents information needed to authorize a connection.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ConnectionAuthorizationAction Action { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.ConnectionAuthorizationAction Action" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs.Action" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Action As ConnectionAuthorizationAction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ConnectionAuthorizationAction Action { Microsoft::Rtc::Signaling::ConnectionAuthorizationAction get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ConnectionAuthorizationAction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the action that the application should perform.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="public void Allow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Allow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs.Allow" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Allow ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Allow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Authorize the connection.
+            </summary>
+        <remarks>
+          <para>
+            Calling authorize indicates that the application allows the connection and no further
+            checks are required.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs.Connection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Connection As RealTimeConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnection ^ Connection { Microsoft::Rtc::Signaling::RealTimeConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection that needs an authorization check.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DelayAuthorization">
+      <MemberSignature Language="C#" Value="public void DelayAuthorization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DelayAuthorization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs.DelayAuthorization" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DelayAuthorization ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DelayAuthorization();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Puts the connection in a pending state to allow authorization later.
+            </summary>
+        <remarks>
+          <para>
+            By calling this method, applications can release the current thread
+            and do an asynchronous authorization (by looking up in a database for example).
+            The application must ensure that all code paths result in a call to Allow, or Deny with
+            the connection process or a memory leak will result.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deny">
+      <MemberSignature Language="C#" Value="public void Deny ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deny() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs.Deny" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deny ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Deny();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disconnects the connection.
+            </summary>
+        <remarks>
+          <para>
+            Connections that are disconnected will cause corresponding outgoing
+            requests to fail with OperationFailureException and reason
+            ConnectionAuthorizationFailed.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

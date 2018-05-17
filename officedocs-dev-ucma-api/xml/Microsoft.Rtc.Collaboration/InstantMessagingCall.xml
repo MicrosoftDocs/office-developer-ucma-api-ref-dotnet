@@ -1,0 +1,561 @@
+﻿<Type Name="InstantMessagingCall" FullName="Microsoft.Rtc.Collaboration.InstantMessagingCall">
+  <TypeSignature Language="C#" Value="public class InstantMessagingCall : Microsoft.Rtc.Collaboration.Call" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstantMessagingCall extends Microsoft.Rtc.Collaboration.Call" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InstantMessagingCall" />
+  <TypeSignature Language="VB.NET" Value="Public Class InstantMessagingCall&#xA;Inherits Call" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InstantMessagingCall : Microsoft::Rtc::Collaboration::Call" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Call</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            InstantMessagingCall is the class that supports instant messaging-based communication. 
+            </summary>
+    <remarks>
+      <para>      
+            Instant messaging communication is realtime, text-based communication. 
+            InstantMessagingCall is an implementation of the abstract <see cref="T:Microsoft.Rtc.Collaboration.Call" /> class. It implements 
+            signaling for instant messaging calls. Actual text messages are exchanged on an instance of <see cref="T:Microsoft.Rtc.Collaboration.InstantMessagingFlow" />, 
+            which is created at the time when the call is established.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstantMessagingCall (Microsoft.Rtc.Collaboration.Conversation conversation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; InstantMessagingCall(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conversation" Type="Microsoft.Rtc.Collaboration.Conversation" />
+      </Parameters>
+      <Docs>
+        <param name="conversation">Conversation that contains this call.</param>
+        <summary>
+            Creates a new instance of the InstantMessagingCall class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="conversation" /> parameter is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoAcceptNeeded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AutoAcceptNeededEventArgs&gt; AutoAcceptNeeded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AutoAcceptNeededEventArgs&gt; AutoAcceptNeeded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingCall.AutoAcceptNeeded" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event AutoAcceptNeeded As EventHandler(Of AutoAcceptNeededEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AutoAcceptNeededEventArgs ^&gt; ^ AutoAcceptNeeded;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AutoAcceptNeededEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the call needs to be automatically accepted by the application.
+            </summary>
+        <remarks>
+          <para>
+            The implementation for this event handler should use a lock object 
+            to eliminate a possible race condition between this event being 
+            raised on the application's event thread and the application calling
+            BeginAccept(), Decline(), etc on the application's main thread (or 
+            any other thread.)
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (Microsoft.Rtc.Collaboration.ToastMessage toastMessage, Microsoft.Rtc.Collaboration.CallEstablishOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(class Microsoft.Rtc.Collaboration.ToastMessage toastMessage, class Microsoft.Rtc.Collaboration.CallEstablishOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.BeginEstablish(Microsoft.Rtc.Collaboration.ToastMessage,Microsoft.Rtc.Collaboration.CallEstablishOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Collaboration::ToastMessage ^ toastMessage, Microsoft::Rtc::Collaboration::CallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toastMessage" Type="Microsoft.Rtc.Collaboration.ToastMessage" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.CallEstablishOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="toastMessage">A short message which can be displayed to the recipient upon receipt. Can be null.</param>
+        <param name="options">Optional parameters to establish the call.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the operation of establishing the instant messaging call on existing Conversation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            <paramref name="toastMessage" /> specifies the message that is displayed on the client when the callee is notified of an incoming call.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the
+            <paramref name="options" /> parameter contains invalid or restricted signaling headers, or when 
+            the call is used as a third party call controller with custom MIME parts or with early media support.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the call is not in a valid state to perform this operation or does not have valid media provider to bind to.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (string destinationUri, Microsoft.Rtc.Collaboration.ToastMessage toastMessage, Microsoft.Rtc.Collaboration.CallEstablishOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(string destinationUri, class Microsoft.Rtc.Collaboration.ToastMessage toastMessage, class Microsoft.Rtc.Collaboration.CallEstablishOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.BeginEstablish(System.String,Microsoft.Rtc.Collaboration.ToastMessage,Microsoft.Rtc.Collaboration.CallEstablishOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::ToastMessage ^ toastMessage, Microsoft::Rtc::Collaboration::CallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUri" Type="System.String" />
+        <Parameter Name="toastMessage" Type="Microsoft.Rtc.Collaboration.ToastMessage" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.CallEstablishOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUri">Destination URI of the remote participant</param>
+        <param name="toastMessage">A short message that can be displayed to the recipient upon receipt. Can be null.</param>
+        <param name="options">Optional parameters to establish the call.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the operation of establishing the instant messaging call with the remote participant.
+            </summary>
+        <returns>Returns an IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            <paramref name="toastMessage" /> specifies the message that is displayed on the client when the callee is notified of an incoming call.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            This example shows how to establish a call to a Uri with a toast message. This example assumes that the platform and endpoints
+            have already been initialized.
+            </para>
+          <para> C# Establish call with toast message</para>
+          <code> 
+        call.BeginEstablish(
+            destinationUri,
+            new ToastMessage("Do you have a minute?"),
+            null /*options*/,
+            this.EstablishCompleted,
+            call /*state*/);
+
+        private void EstablishCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+                call.EndEstablish(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call establish failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+
+        }
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="destinationUri" /> parameter is null, empty or invalid SIP URI or tel URI, or when the
+            <paramref name="options" /> parameter contains invalid or restricted signaling headers, or when 
+            the call is used as a third-party call controller with custom MIME parts or with early media support.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the call is not in a valid state to perform this operation or does not have valid media provider to bind to.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMediaType">
+      <MemberSignature Language="C#" Value="public override string DefaultMediaType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultMediaType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingCall.DefaultMediaType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property DefaultMediaType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DefaultMediaType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the default media type for this call.  
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            For InstantMessagingCall, default mediaType is Message.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when an application attempts to set property.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Flow">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingFlow Flow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessagingFlow Flow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingCall.Flow" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Flow As InstantMessagingFlow" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingFlow ^ Flow { Microsoft::Rtc::Collaboration::InstantMessagingFlow ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an InstantMessagingFlow for this call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleFlowConfigurationRequested">
+      <MemberSignature Language="C#" Value="protected override bool HandleFlowConfigurationRequested (Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow mediaFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HandleFlowConfigurationRequested(class Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow mediaFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.HandleFlowConfigurationRequested(Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool HandleFlowConfigurationRequested(Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow ^ mediaFlow);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mediaFlow" Type="Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow" />
+      </Parameters>
+      <Docs>
+        <param name="mediaFlow">Newly created MediaFlow.</param>
+        <summary>
+            Handles the FlowConfigurationRequested event raising.
+            </summary>
+        <returns>If true, raises the InstantMessagingFlowConfigurationRequested event when a new flow is created.</returns>
+        <remarks>
+          <para>
+            Invokes the InstantMessagingFlowConfigurationRequested event when new flow is created.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleForwardReceived">
+      <MemberSignature Language="C#" Value="protected override void HandleForwardReceived (Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleForwardReceived(class Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.HandleForwardReceived(Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleForwardReceived (e As CallForwardReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleForwardReceived(Microsoft::Rtc::Collaboration::CallForwardReceivedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+            The event argment created for handling the "Forwarded" operation.
+            </param>
+        <summary>
+            Handles the forward response.
+            </summary>
+        <remarks>
+          <para>
+            A method that must be implemented by the derived class to handle the forward response
+            received for a call. 
+            The derived class can either ignore this operation if the call should not be forwarded
+            or expose a strongly typed event so that the application can access a new call by 
+            accepting it. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleStateChange">
+      <MemberSignature Language="C#" Value="protected override void HandleStateChange (Microsoft.Rtc.Collaboration.CallStateChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleStateChange(class Microsoft.Rtc.Collaboration.CallStateChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.HandleStateChange(Microsoft.Rtc.Collaboration.CallStateChangedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleStateChange (e As CallStateChangedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleStateChange(Microsoft::Rtc::Collaboration::CallStateChangedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.CallStateChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">The event argument describing the state change.</param>
+        <summary>
+            Indicates a state change to the derived call.
+            </summary>
+        <remarks>
+          <para> 
+            This allows derived classes to see a state change before a public event is raised. 
+            The derived class need to override this method and should not make any blocking call in it.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTransferNotificationReceived">
+      <MemberSignature Language="C#" Value="protected override void HandleTransferNotificationReceived (Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleTransferNotificationReceived(class Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.HandleTransferNotificationReceived(Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleTransferNotificationReceived (e As TransferStateChangedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleTransferNotificationReceived(Microsoft::Rtc::Collaboration::TransferStateChangedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">The event argument describing the notification received.</param>
+        <summary>
+            Handles the received notifications.
+            </summary>
+        <remarks>
+          <para>
+            A method that must be implemented by the derived class to handle the notifications
+            received for a transfer operation sent.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleTransferReceived">
+      <MemberSignature Language="C#" Value="protected override void HandleTransferReceived (Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleTransferReceived(class Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.HandleTransferReceived(Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleTransferReceived (e As CallTransferReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleTransferReceived(Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+            EventArg created for handling the transfer operation. 
+            </param>
+        <summary>
+            Handles the transfer received event.
+            </summary>
+        <remarks>
+          <para>
+            A method must be implemented by the derived class to handle the transfer received event.
+            The subclass is responsible for either exposing it to the application or raising a strongly 
+            typed eventArg. The derived class is expected to downcast the right generic type and expose the event.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantMessagingFlowConfigurationRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessagingFlowConfigurationRequestedEventArgs&gt; InstantMessagingFlowConfigurationRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.InstantMessagingFlowConfigurationRequestedEventArgs&gt; InstantMessagingFlowConfigurationRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingCall.InstantMessagingFlowConfigurationRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event InstantMessagingFlowConfigurationRequested As EventHandler(Of InstantMessagingFlowConfigurationRequestedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InstantMessagingFlowConfigurationRequestedEventArgs ^&gt; ^ InstantMessagingFlowConfigurationRequested;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessagingFlowConfigurationRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when <see cref="T:Microsoft.Rtc.Collaboration.InstantMessagingFlow" /> is created. Applications can use this event handler to 
+            register for flow related event handlers and optionally set flow configuration.
+            </summary>
+        <remarks>
+          <para>
+            It is recommended that the application register an event handler for this event to 
+            apply specific configuration settings on the flow object. Applications which wish to 
+            configure the flow for the initial SDP negotiation must do so in the event handler
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following examples shows how to register events in the flow configuration requested handler.
+            </para>
+          <para> C# FlowConfigurationRequested on InstantMessagingCall</para>
+          <code> 
+_imCall1.InstantMessagingFlowConfigurationRequested +=
+    this.FlowConfigurationRequested;
+
+
+private void FlowConfigurationRequested(
+    object sender,
+    InstantMessagingFlowConfigurationRequestedEventArgs e)
+{
+    // Register to receive messages.
+    e.Flow.MessageReceived += this.MessageReceived;
+
+    // Register to receive composing state changes.
+    e.Flow.RemoteComposingStateChanged += this.ComposingStateChanged;
+
+    // Register to receive delivery notifications
+    e.Flow.DeliveryNotificationReceived += this.DeliveryNotificationReceived;
+}
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="IsImmediateAutoAcceptNeeded">
+      <MemberSignature Language="C#" Value="public bool IsImmediateAutoAcceptNeeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsImmediateAutoAcceptNeeded" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingCall.IsImmediateAutoAcceptNeeded" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsImmediateAutoAcceptNeeded As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsImmediateAutoAcceptNeeded { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the call should be automatically accepted.
+            immediately upon receipt.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If the value is true, the <see cref="E:Microsoft.Rtc.Collaboration.InstantMessagingCall.AutoAcceptNeeded" /> event will not be raised.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProcessIncomingInviteHeaders">
+      <MemberSignature Language="C#" Value="protected override void ProcessIncomingInviteHeaders (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ProcessIncomingInviteHeaders(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingCall.ProcessIncomingInviteHeaders(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessIncomingInviteHeaders (headers As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ProcessIncomingInviteHeaders(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="headers">List of headers on the incoming INVITE.</param>
+        <summary>
+            Checks the interesting headers for the call and initializes the needed call properties.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMediaTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; SupportedMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; SupportedMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingCall.SupportedMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of supported Media names, which are acceptable m-lines in SDP offer/answer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> 
+            For InstantMessagingCall, Message is the only supported MediaType.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,154 @@
+﻿<Type Name="ConferenceJoinInformation" FullName="Microsoft.Rtc.Collaboration.ConferenceJoinInformation">
+  <TypeSignature Language="C#" Value="public class ConferenceJoinInformation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceJoinInformation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceJoinInformation" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceJoinInformation" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceJoinInformation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This will be removed from future versions. Use 'ConferenceJoinOptions' instead")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            This class will be removed from future versions. Instead, use <see cref="T:Microsoft.Rtc.Collaboration.ConferenceJoinOptions" /> to customize joining a conference.
+            Contains information to customize joining a conference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceJoinInformation (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary conferenceSummary);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary conferenceSummary) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceJoinInformation.#ctor(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceJoinInformation(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceSummary ^ conferenceSummary);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conferenceSummary" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSummary">The scheduled conference to join.</param>
+        <summary>
+            Creates a new instance of the ConferenceJoinInformation class using the specified conference summary object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied conference summary instance is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceJoinInformation (Microsoft.Rtc.Signaling.RealTimeAddress conferenceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeAddress conferenceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceJoinInformation.#ctor(Microsoft.Rtc.Signaling.RealTimeAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (conferenceAddress As RealTimeAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceJoinInformation(Microsoft::Rtc::Signaling::RealTimeAddress ^ conferenceAddress);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conferenceAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceAddress">Address of the conference to join.</param>
+        <summary>
+            Creates a new instance of the ConferenceJoinInformation class using the specified conference address.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied conferenceAddress is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceAddress">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeAddress ConferenceAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress ConferenceAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinInformation.ConferenceAddress" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceAddress As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ ConferenceAddress { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference address to join.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrustedJoin">
+      <MemberSignature Language="C#" Value="public bool IsTrustedJoin { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrustedJoin" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceJoinInformation.IsTrustedJoin" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsTrustedJoin As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsTrustedJoin { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether to join the conference as a trusted application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An endpoint supporting privileged operations is required to join as a trusted application.
+            </para>
+          <para>
+            Trusted applications always join conference as trusted leaders and they are able to carry out privileged operations.
+            A trusted application appears as a hidden participant in the roster.
+            <see cref="P:Microsoft.Rtc.Collaboration.ConversationParticipant.RosterVisibility" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceJoinInformation.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Provides a string that describes the object.
+            </summary>
+        <returns>A string that describes the object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

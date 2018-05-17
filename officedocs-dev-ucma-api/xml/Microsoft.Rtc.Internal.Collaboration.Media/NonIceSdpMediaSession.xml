@@ -1,0 +1,81 @@
+﻿<Type Name="NonIceSdpMediaSession" FullName="Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession">
+  <TypeSignature Language="C#" Value="public sealed class NonIceSdpMediaSession : Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaSession&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionDescription,Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit NonIceSdpMediaSession extends Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaSession`2&lt;class Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionDescription, class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class NonIceSdpMediaSession&#xA;Inherits SdpMediaSession(Of SdpSessionDescription, SdpMediaDescription)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class NonIceSdpMediaSession sealed : Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaSession&lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpSessionDescription ^, Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaDescription ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaSession&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionDescription,Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TSessionDescription">Microsoft.Rtc.Internal.Collaboration.Media.SdpSessionDescription</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TMediaDescription">Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NonIceSdpMediaSession (Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession.#ctor(Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As SdpNegotiatorSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; NonIceSdpMediaSession(Microsoft::Rtc::Internal::Collaboration::Media::SdpNegotiatorSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValidateMediaBinding">
+      <MemberSignature Language="C#" Value="protected override bool ValidateMediaBinding (Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription mediaDescription, Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext targetMediaChannel, System.Collections.Generic.IList&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt; currentMediaBindings, Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo previousMediaBinding, Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation parsingOperation, out Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode diagnosticsCode, out string errorMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool ValidateMediaBinding(class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription mediaDescription, class Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext targetMediaChannel, class System.Collections.Generic.IList`1&lt;class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt; currentMediaBindings, class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo previousMediaBinding, valuetype Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation parsingOperation, [out] valuetype Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode&amp; diagnosticsCode, [out] string&amp; errorMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession.ValidateMediaBinding(Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription,Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext,System.Collections.Generic.IList{Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo},Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo,Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation,Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode@,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ValidateMediaBinding (mediaDescription As SdpMediaDescription, targetMediaChannel As MediaChannelContext, currentMediaBindings As IList(Of SdpMediaOfferAnswerInfo), previousMediaBinding As SdpMediaOfferAnswerInfo, parsingOperation As OfferAnswerParsingOperation, ByRef diagnosticsCode As SdpDiagnosticsCode, ByRef errorMessage As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool ValidateMediaBinding(Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaDescription ^ mediaDescription, Microsoft::Rtc::Internal::Collaboration::Media::MediaChannelContext ^ targetMediaChannel, System::Collections::Generic::IList&lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaOfferAnswerInfo ^&gt; ^ currentMediaBindings, Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaOfferAnswerInfo ^ previousMediaBinding, Microsoft::Rtc::Internal::Collaboration::Media::OfferAnswerParsingOperation parsingOperation, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDiagnosticsCode % diagnosticsCode, [Runtime::InteropServices::Out] System::String ^ % errorMessage);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mediaDescription" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription" />
+        <Parameter Name="targetMediaChannel" Type="Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext" />
+        <Parameter Name="currentMediaBindings" Type="System.Collections.Generic.IList&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt;" />
+        <Parameter Name="previousMediaBinding" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo" />
+        <Parameter Name="parsingOperation" Type="Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation" />
+        <Parameter Name="diagnosticsCode" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode&amp;" RefType="out" />
+        <Parameter Name="errorMessage" Type="System.String&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="mediaDescription">To be added.</param>
+        <param name="targetMediaChannel">To be added.</param>
+        <param name="currentMediaBindings">To be added.</param>
+        <param name="previousMediaBinding">To be added.</param>
+        <param name="parsingOperation">To be added.</param>
+        <param name="diagnosticsCode">To be added.</param>
+        <param name="errorMessage">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

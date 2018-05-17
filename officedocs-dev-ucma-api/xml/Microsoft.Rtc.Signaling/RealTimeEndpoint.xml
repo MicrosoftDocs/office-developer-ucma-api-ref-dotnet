@@ -1,0 +1,1345 @@
+﻿<Type Name="RealTimeEndpoint" FullName="Microsoft.Rtc.Signaling.RealTimeEndpoint">
+  <TypeSignature Language="C#" Value="public abstract class RealTimeEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract RealTimeEndpoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RealTimeEndpoint" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeEndpoint abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an identifiable endpoint from which you can publish
+            or subscribe to data using data sessions or send and receive invitations using signaling sessions.
+            Each such endpoint is uniquely identified by a URI and an endpoint ID, or a GRUU URI. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeEndpoint (string uri, string epid);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string uri, string epid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (uri As String, epid As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeEndpoint(System::String ^ uri, System::String ^ epid);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This constructor is obsolete. Please use public constructors taking a settings object instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="epid" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">
+            The URI of the owning identity of this endpoint.
+            </param>
+        <param name="epid">The epid to use. Can be null or empty in which case it is auto generated.</param>
+        <summary>
+            Constructor when URI is supplied.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when an argument is invalid or unable to generate an EPID for this endpoint.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when epid string length is too long.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeEndpoint (string ownerUri, string epid, bool disallowParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string ownerUri, string epid, bool disallowParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.#ctor(System.String,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (ownerUri As String, epid As String, disallowParameters As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeEndpoint(System::String ^ ownerUri, System::String ^ epid, bool disallowParameters);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This constructor is obsolete. Please use public constructors taking a settings object instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="epid" Type="System.String" />
+        <Parameter Name="disallowParameters" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">
+            The URI of the owning identity of this endpoint.
+            </param>
+        <param name="epid">The epid to use. Can be null or empty in which case it is auto generated.</param>
+        <param name="disallowParameters">True to check and throw if parameters exist.</param>
+        <summary>
+            Constructor when URI is supplied.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when an argument is invalid or unable to generate an EPID for this endpoint.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when epid string length is too long.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeEndpoint (string uri, Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName, bool useAutomaticConfiguration, int serverPort, string endpointId, bool useExclusiveConnectionForRegistration, bool retryOnRefreshFailure);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string uri, valuetype Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName, bool useAutomaticConfiguration, int32 serverPort, string endpointId, bool useExclusiveConnectionForRegistration, bool retryOnRefreshFailure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Boolean,System.Int32,System.String,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (uri As String, transportType As SipTransportType, serverName As String, useAutomaticConfiguration As Boolean, serverPort As Integer, endpointId As String, useExclusiveConnectionForRegistration As Boolean, retryOnRefreshFailure As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeEndpoint(System::String ^ uri, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName, bool useAutomaticConfiguration, int serverPort, System::String ^ endpointId, bool useExclusiveConnectionForRegistration, bool retryOnRefreshFailure);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This constructor is obsolete. Please use public constructors taking a settings object instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="transportType" Type="Microsoft.Rtc.Signaling.SipTransportType" />
+        <Parameter Name="serverName" Type="System.String" />
+        <Parameter Name="useAutomaticConfiguration" Type="System.Boolean" />
+        <Parameter Name="serverPort" Type="System.Int32" />
+        <Parameter Name="endpointId" Type="System.String" />
+        <Parameter Name="useExclusiveConnectionForRegistration" Type="System.Boolean" />
+        <Parameter Name="retryOnRefreshFailure" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="uri">
+              The URI of the user identifying the endpoint.
+            </param>
+        <param name="transportType">
+              The type of transport to be used to connect to the server.
+            </param>
+        <param name="serverName">
+              The name of the server to be used.
+            </param>
+        <param name="useAutomaticConfiguration">
+              Use a DNS configured server.
+            </param>
+        <param name="serverPort">The port to be used to connect to the server. User 0 to use default.</param>
+        <param name="endpointId">The epid to use. Can be null.</param>
+        <param name="useExclusiveConnectionForRegistration">Indicates if the connection used for registration should not be shared with other exclusive connections.</param>
+        <param name="retryOnRefreshFailure">To be added.</param>
+        <summary>
+            Creates a new instance of SipEndpoint. This endpoint is server-based.
+            By default, use port 5060 for TCP and 5061 for TLS. To use a
+            port other than these, the caller should set the ServerPort property before
+            trying to register.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">One of the arguments is not valid.</exception>
+        <exception cref="T:System.ArgumentNullException">The serverName parameter is a string type with a value null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFeatureParameter">
+      <MemberSignature Language="C#" Value="public void AddFeatureParameter (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFeatureParameter(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.AddFeatureParameter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFeatureParameter (name As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddFeatureParameter(System::String ^ name);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the parameter.</param>
+        <summary>
+            Adds a feature parameter. See rfc 3840.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if name is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the name is empty or already exists in collection.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.MessageParsingException">Thrown if the value passed is not a valid header parameter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFeatureParameter">
+      <MemberSignature Language="C#" Value="public void AddFeatureParameter (string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFeatureParameter(string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.AddFeatureParameter(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFeatureParameter (name As String, value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddFeatureParameter(System::String ^ name, System::String ^ value);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the parameter.</param>
+        <param name="value">The value.</param>
+        <summary>
+            Adds a feature parameter. See rfc 3840.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if name is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the name is empty or already exists in collection.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.MessageParsingException">Thrown if the name/value pair is not a valid header parameter.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSipExtension">
+      <MemberSignature Language="C#" Value="public void AddSipExtension (string extension);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSipExtension(string extension) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.AddSipExtension(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddSipExtension (extension As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddSipExtension(System::String ^ extension);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extension" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="extension">The extension to add.</param>
+        <summary>
+            Adds an extension to the list of supported extensions for Invite.
+            If an incoming Invite message has a required header that does not exist 
+            in this list, it will be automatically rejected with 420. Once an item is 
+            added to this list, it cannot be removed. 
+            This list does not affect outgoing Invites for which the application is responsible
+            for adding any necessary headers such as "Supported" or "Require" headers for specific 
+            SIP extensions.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if extension is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the extension is empty or already exists in collection.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationContext">
+      <MemberSignature Language="C#" Value="public object ApplicationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplicationContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the application context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUserAgent">
+      <MemberSignature Language="C#" Value="public string ApplicationUserAgent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplicationUserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationUserAgent As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationUserAgent { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the application user agent string. This is appended to the user agent header.
+            </summary>
+        <value>The application user agent string.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            The user agent string is not formed correctly.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyRouteSetRecoverySettings">
+      <MemberSignature Language="C#" Value="public void ApplyRouteSetRecoverySettings (Microsoft.Rtc.Signaling.RouteSetRecoverySettings routeSetRecoverySettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyRouteSetRecoverySettings(class Microsoft.Rtc.Signaling.RouteSetRecoverySettings routeSetRecoverySettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplyRouteSetRecoverySettings(Microsoft.Rtc.Signaling.RouteSetRecoverySettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void ApplyRouteSetRecoverySettings(Microsoft::Rtc::Signaling::RouteSetRecoverySettings ^ routeSetRecoverySettings);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeSetRecoverySettings" Type="Microsoft.Rtc.Signaling.RouteSetRecoverySettings" />
+      </Parameters>
+      <Docs>
+        <param name="routeSetRecoverySettings">To be added.</param>
+        <summary>
+            Applies the specified route set recovery settings to the endpoint.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendMessage (Microsoft.Rtc.Signaling.MessageType messageType, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, Microsoft.Rtc.Signaling.SendMessageOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class Microsoft.Rtc.Signaling.SendMessageOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.SendMessageOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, Microsoft::Rtc::Signaling::SendMessageOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Signaling.SendMessageOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The message type.</param>
+        <param name="sessionTarget">Target to send the message.</param>
+        <param name="options">Options to customize the behavior of send message.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from others.</param>
+        <summary>
+            Sends a message. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown if one of the SignalingHeader in signalingHeaders collection have null or restricted header.
+            </exception>
+        <exception cref="T:System.NotSupportedException">
+            Attempting to specify a connection context sending a message on a SipEndpoint.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendMessage (Microsoft.Rtc.Signaling.MessageType messageType, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, System.Net.Mime.ContentType contentType, byte[] body, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The message type.</param>
+        <param name="sessionTarget">Target to send the message.</param>
+        <param name="contentType">Content type describing the body. If null the body must be null. If no encoding is specified, UTF8 is assumed.</param>
+        <param name="body">The body for the data.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from others.</param>
+        <summary>
+            Sends a message to another endpoint. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when arguments are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendMessage (Microsoft.Rtc.Signaling.MessageType messageType, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, System.Net.Mime.ContentType contentType, byte[] body, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The message type.</param>
+        <param name="sessionTarget">Target to send the message.</param>
+        <param name="contentType">Content type describing the body. If null text/plain, UTF-8 is assumed.</param>
+        <param name="body">The body for the data.</param>
+        <param name="signalingHeaders">The headers provided for this message. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from others.</param>
+        <summary>
+            Sends a message. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown if one of the SignalingHeader in signalingHeaders collection have null or restricted header.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Terminates the endpoint and cleans up active sessions and resources.
+            The endpoint is no longer usable.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeConnectionManager ConnectionManager { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnectionManager ConnectionManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ConnectionManager" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionManager As RealTimeConnectionManager" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ ConnectionManager {  public:&#xA;Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the connection manager.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDomain">
+      <MemberSignature Language="C#" Value="public string DefaultDomain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultDomain" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultDomain" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultDomain As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultDomain { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the default domain of the endpoint URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPeerToPeerEndpointConnectionManager">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager DefaultPeerToPeerEndpointConnectionManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager DefaultPeerToPeerEndpointConnectionManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultPeerToPeerEndpointConnectionManager" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultPeerToPeerEndpointConnectionManager As RealTimeServerTcpConnectionManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::RealTimeServerTcpConnectionManager ^ DefaultPeerToPeerEndpointConnectionManager { Microsoft::Rtc::Signaling::RealTimeServerTcpConnectionManager ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the default connection manager for SipPeerToPeerEndpoint. This can be null if it was never used.
+            This connection manager is used if SipPeerToPeerEndpoint is created without passing a connection manager.
+            The application is responsible for disposing this object when it is no longer needed. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSipEndpointConnectionManager">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Signaling.RealTimeClientConnectionManager DefaultSipEndpointConnectionManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Microsoft.Rtc.Signaling.RealTimeClientConnectionManager DefaultSipEndpointConnectionManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultSipEndpointConnectionManager" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultSipEndpointConnectionManager As RealTimeClientConnectionManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::RealTimeClientConnectionManager ^ DefaultSipEndpointConnectionManager { Microsoft::Rtc::Signaling::RealTimeClientConnectionManager ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeClientConnectionManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the default connection manager for SipEndpoint. This can be null if it was never used.
+            This connection manager is used if SipEndpoint is created without passing a connection manager.
+            The application is responsible for disposing this object when it is no longer needed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredSessionTimerInterval">
+      <MemberSignature Language="C#" Value="public int DesiredSessionTimerInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DesiredSessionTimerInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DesiredSessionTimerInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property DesiredSessionTimerInterval As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DesiredSessionTimerInterval { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the desired session timer interval of the application.
+            This is used only for the initial Invite or Response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The value must be greater than or equal to the MinimumSessionTimerInterval.
+            
+            The session timer needs to be enabled for this setting to take effect.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when setting a value out of the expected range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAutomaticRetryForRetryAfter">
+      <MemberSignature Language="C#" Value="public bool DisableAutomaticRetryForRetryAfter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableAutomaticRetryForRetryAfter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DisableAutomaticRetryForRetryAfter" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticRetryForRetryAfter As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticRetryForRetryAfter { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the endpoint should retry requests for failed responses
+            that contain retry-after header. By default, this is false and hence the platform will retry once
+            more for such requests. If the applications wants to disable this automatic retry behavior, this property can be
+            set to true. Typically, this might be needed for an application whose primary task is to perform back
+            to back operation for two sessions where automatic retry might interfere with the ability to offer quick feedback
+            via the back to back session so that the remote can take corrective measures.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisplayName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the user name preferred by the application for the local user.
+            This name will be used as the display name of the user in outgoing messages.
+            This property indicates the display name to use in outgoing messages.
+            </summary>
+        <value>The display name string.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointUri">
+      <MemberSignature Language="C#" Value="public virtual string EndpointUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.EndpointUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EndpointUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EndpointUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that the endpoint URI is used to communicate with this specific endpoint and cannot be used to communicate with another
+            endpoint of the current endpoint owner.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndSendMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndSendMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.EndSendMessage(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendMessage (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending SendMessage operation to complete.
+            </summary>
+        <returns>The response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error.  The response code in
+            the exception should give more information about the error.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous Terminate operation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFeatureParameterValue">
+      <MemberSignature Language="C#" Value="public string GetFeatureParameterValue (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetFeatureParameterValue(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.GetFeatureParameterValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFeatureParameterValue (name As String) As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetFeatureParameterValue(System::String ^ name);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the parameter.</param>
+        <summary>
+            Gets the value of the given parameter. 
+            </summary>
+        <returns>
+            Returns null, if the parameter does not exist. 
+            Returns the value of the parameter, if it exists (can be String.Empty).
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedSipExtensions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; GetSupportedSipExtensions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; GetSupportedSipExtensions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.GetSupportedSipExtensions" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSupportedSipExtensions () As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ GetSupportedSipExtensions();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of extensions supported by this endpoint. By default, this 
+            list is populated with extensions understood by the platform. The application
+            can add other extensions it can support. Incoming Invite messages will be 
+            automatically rejected with 420 response if it contains a Requires header with option-tag that is
+            not present in this list.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceCorrelationID">
+      <MemberSignature Language="C#" Value="public long GetTraceCorrelationID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetTraceCorrelationID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.GetTraceCorrelationID" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the trace correlation id for this instance.
+            </summary>
+        <returns>The trace correlation id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gruu">
+      <MemberSignature Language="C#" Value="public string Gruu { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Gruu" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.Gruu" />
+      <MemberSignature Language="VB.NET" Value="Public Property Gruu As String" />
+      <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ Gruu {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the GRUU of the endpoint, if any. Can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ID for this endpoint. The same URI may be used
+            on different endpoints. The ID is unique across all 
+            endpoints having the same URI. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSessionTimerSupported">
+      <MemberSignature Language="C#" Value="public bool IsSessionTimerSupported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSessionTimerSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.IsSessionTimerSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsSessionTimerSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSessionTimerSupported { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the default policy used for the session timer. This value is inherited by 
+            incoming/outgoing sessions unless an incoming session requires it. The application
+            can override the policy per session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSessionConnectDuration">
+      <MemberSignature Language="C#" Value="public int MaximumSessionConnectDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumSessionConnectDuration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.MaximumSessionConnectDuration" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumSessionConnectDuration As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumSessionConnectDuration { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum duration in minutes to wait for final response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The value must between 1 and 30 minutes, or 0 to turn off the feature.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when setting a value out of the expected range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; MessageReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; MessageReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeEndpoint.MessageReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event MessageReceived As EventHandler(Of MessageReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::MessageReceivedEventArgs ^&gt; ^ MessageReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a message is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSessionTimerInterval">
+      <MemberSignature Language="C#" Value="public int MinimumSessionTimerInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumSessionTimerInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.MinimumSessionTimerInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property MinimumSessionTimerInterval As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MinimumSessionTimerInterval { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the minimum session interval. Any session-expires interval less than this value in messages
+            will not be accepted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The number of seconds that is the minimum allowed value for the session expiration.
+            The allowed values are between 90 and the DesiredSessionTimerInterval.
+            
+            The session timer needs to be enabled for this setting to take effect.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when setting a value out of the expected range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionDefaultAddressFamilyHint">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutboundConnectionDefaultAddressFamilyHint As Nullable(Of AddressFamilyHint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address family default for making outbound connnections.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerUri">
+      <MemberSignature Language="C#" Value="public string OwnerUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.OwnerUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the owner of the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that this URI is different from the endpoint URI. This URI is not bound to a specific endpoint but to the owner of the endpoint.
+            The owner of an endpoint can typically be contacted on multiple endpoints through forking or load balancing.
+            
+            This value identifies the owner of the local endpoint and must be set when the RealTimeEndpoint implementation is instantiated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterForPageModeMessages">
+      <MemberSignature Language="C#" Value="protected void RegisterForPageModeMessages ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RegisterForPageModeMessages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.RegisterForPageModeMessages" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RegisterForPageModeMessages ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void RegisterForPageModeMessages();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Register for page mode messages.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReliableProvisionalResponsePolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ExtensionFeatureSupport ReliableProvisionalResponsePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.ExtensionFeatureSupport ReliableProvisionalResponsePolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ReliableProvisionalResponsePolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReliableProvisionalResponsePolicy As ExtensionFeatureSupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ExtensionFeatureSupport ReliableProvisionalResponsePolicy { Microsoft::Rtc::Signaling::ExtensionFeatureSupport get(); void set(Microsoft::Rtc::Signaling::ExtensionFeatureSupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ExtensionFeatureSupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the default policy for supporting 100rel extension feature. If an application supports this
+            then the remote can ask for this when sending provisional responses which will result in PRACK message
+            geting sent to acknowledge the response. An application should set this to set the policy globally for all 
+            sessions created. For outgoing session, ExtensionFeatureSupport.Required is not recommended since it is not
+            meaningful and it likely to be rejected by the remote side with 420 (BadExtension) response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveFeatureParameter">
+      <MemberSignature Language="C#" Value="public bool RemoveFeatureParameter (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveFeatureParameter(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.RemoveFeatureParameter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveFeatureParameter (name As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveFeatureParameter(System::String ^ name);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the parameter.</param>
+        <summary>
+            Removes a feature parameter matching the name if it exists.
+            </summary>
+        <returns>Returns true if the parameter was removed, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteSetRecoveryMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RouteSetRecoveryMode RouteSetRecoveryMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.RouteSetRecoveryMode RouteSetRecoveryMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.RouteSetRecoveryMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RouteSetRecoveryMode As RouteSetRecoveryMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RouteSetRecoveryMode RouteSetRecoveryMode { Microsoft::Rtc::Signaling::RouteSetRecoveryMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RouteSetRecoveryMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the mode used for recovery of the session's route set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData SendMessage (Microsoft.Rtc.Signaling.MessageType messageType, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, System.Net.Mime.ContentType contentType, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.SendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The message type.</param>
+        <param name="sessionTarget">The URI of the target to send the message.</param>
+        <param name="contentType">The content type describing the body. If null text/plain, UTF-8 is assumed.</param>
+        <param name="body">The body for the data.</param>
+        <summary>
+            Synchronously sends a message. The endpoint should be in the Connected state.
+            This method is not recommended for a UI thread.
+            </summary>
+        <returns>The response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is passed for a required argument.  The argument name for the required argument
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error.  The response code in 
+            the exception should give more information about the error.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData SendMessage (Microsoft.Rtc.Signaling.MessageType messageType, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, System.Net.Mime.ContentType contentType, byte[] body, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.SendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The message type.</param>
+        <param name="sessionTarget">The target to send the message.</param>
+        <param name="contentType">The content type describing the body. If null text/plain, UTF-8 is assumed.</param>
+        <param name="body">The body for the data.</param>
+        <param name="signalingHeaders">The headers provided for this message. Can be null.</param>
+        <summary>
+            Synchronously sends a message. The session should be in connected state.
+            This method is not recommended for a UI thread.
+            </summary>
+        <returns>The response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is passed for a required argument.  The argument name for the required argument
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error.  The response code in 
+            the exception should give more information about the error.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SessionReceivedEventArgs&gt; SessionReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SessionReceivedEventArgs&gt; SessionReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeEndpoint.SessionReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event SessionReceived As EventHandler(Of SessionReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^&gt; ^ SessionReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SessionReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a new invitation is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.Terminate" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Terminate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Terminates the endpoint and cleans up active sessions and resources. 
+            The endpoint is no longer usable.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation of the object.
+            </summary>
+        <returns>Returns the string representation of the object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterForPageModeMessages">
+      <MemberSignature Language="C#" Value="protected void UnregisterForPageModeMessages ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void UnregisterForPageModeMessages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.UnregisterForPageModeMessages" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub UnregisterForPageModeMessages ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void UnregisterForPageModeMessages();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Unregister for pagemode messages
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public virtual string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the identity owning this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Applications should start migrating their applications to use
+            either OwnerUri for addressing the application or EndpointURI for targeting
+            the endpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public string UserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.UserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAgent As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAgent { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the user agent string used for messages. This includes the platform's header followed by
+            the header supplied by the application, if any.
+            </summary>
+        <value>The user agent string.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,137 @@
+﻿<Type Name="AudioVideoMcuRouting" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuRouting">
+  <TypeSignature Language="C#" Value="public class AudioVideoMcuRouting" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioVideoMcuRouting extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuRouting" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioVideoMcuRouting" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoMcuRouting" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the controls that can be used to configure audio routing at the audio-video MCU between participants.
+            </summary>
+    <remarks>
+      <para>
+            A trusted application can control the routing of audio and DTMF to and from one of its calls that are connected to the audio-video MCU.
+            An <see cref="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" /> can have zero or more outgoing audio routes to other endpoints connected to the MCU. 
+            The application can also have zero or more incoming audio routes from other endpoints. 
+            </para>
+      <para>
+            Controlling audio routes enables developers to write applications that provide conference services by joining the conference as a trusted participant and hence not visible
+            to normal clients like Microsoft Lync 2010. An example of such service is the Conferencing Announcement Service (CAS). CAS will establish outgoing
+            routes to several PSTN users to announce that other users have joined or left the conference (since PSTN users do not have a GUI interface to monitor the roster).
+            </para>
+      <para>
+            Whenever an normal user joins the audio-video MCU, she is placed in the audio-video MCU default routing where all other participants communicate with each other.
+            A trusted application can isolate that user from the audio-video Mcu default routing to play an exclusive announcement (like a help message that could take several seconds)
+            <see cref="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginRemoveFromDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" /> and
+            <see cref="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginAddToDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />.
+            </para>
+      <para>
+            A trusted application can also establish an <see cref="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" /> outside of the audio-video MCU default routing by setting <see cref="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialInOptions.RemoveFromDefaultRouting" />.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginUpdateAudioRoutes">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdateAudioRoutes (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.AudioVideo.OutgoingAudioRoute&gt; outgoingRoutes, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.AudioVideo.IncomingAudioRoute&gt; incomingRoutes, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateAudioRoutes(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.OutgoingAudioRoute&gt; outgoingRoutes, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.IncomingAudioRoute&gt; incomingRoutes, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuRouting.BeginUpdateAudioRoutes(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.AudioVideo.OutgoingAudioRoute},System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.AudioVideo.IncomingAudioRoute},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUpdateAudioRoutes (outgoingRoutes As IEnumerable(Of OutgoingAudioRoute), incomingRoutes As IEnumerable(Of IncomingAudioRoute), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateAudioRoutes(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::AudioVideo::OutgoingAudioRoute ^&gt; ^ outgoingRoutes, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::AudioVideo::IncomingAudioRoute ^&gt; ^ incomingRoutes, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outgoingRoutes" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.AudioVideo.OutgoingAudioRoute&gt;" />
+        <Parameter Name="incomingRoutes" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.AudioVideo.IncomingAudioRoute&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="outgoingRoutes">
+            A list of outgoing routes to other endpoints connected to the MCU.
+            </param>
+        <param name="incomingRoutes">
+            A list of incoming audio routes from other endpoints connected to the MCU.
+            </param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Updates routing of outgoing audio to and the incoming audio 
+            from other endpoints that are connected to the audio-video MCU.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method updates the existing routing (outgoing or incoming) that has been setup for a call. If the parent <see cref="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" /> was established within the audio-video MCU default
+            routing, the first call to this method actually removes the parent <see cref="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" /> from the audio-video MCU default routing and setups up the requested routes.
+            Subsequent calls to this method add or remove routes to the ones that have been already established. As an example, if the application already called this method to add an outgoing
+            route to endpoint A and then calls the method again to add another route to endpoint B by supplying an outgoing route in <paramref name="outgoingRoutes" />, the audio-video MCU will route any media from the parent
+            <see cref="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" /> to both A and B.
+            </para>
+          <para>
+            The parent <see cref="T:Microsoft.Rtc.Collaboration.Conversation" /> has to be 
+            connected to a conference as a trusted application.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when both the <paramref name="outgoingRoutes" /> and <paramref name="incomingRoutes" /> instances do not include any details.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the call or conference session are not valid. Also thrown when the platform is unable to build
+            a request for the supplied routes. This could happen if all the supplied remote sinks\source have left the 
+            conference before the request was sent.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateAudioRoutes">
+      <MemberSignature Language="C#" Value="public void EndUpdateAudioRoutes (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdateAudioRoutes(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuRouting.EndUpdateAudioRoutes(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateAudioRoutes (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateAudioRoutes(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous join operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the MCU fails the routing commands 
+            with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown the operation timed out waiting for a reply.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown under other failure conditions.
+            </exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

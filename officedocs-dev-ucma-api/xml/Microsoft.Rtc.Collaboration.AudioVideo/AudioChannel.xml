@@ -1,0 +1,135 @@
+﻿<Type Name="AudioChannel" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel">
+  <TypeSignature Language="C#" Value="public class AudioChannel : Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioChannel extends Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioChannel&#xA;Inherits MediaChannel" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioChannel : Microsoft::Rtc::Collaboration::AudioVideo::MediaChannel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an audio channel.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReceiveDirectionSamplingRate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate ReceiveDirectionSamplingRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate ReceiveDirectionSamplingRate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel.ReceiveDirectionSamplingRate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveDirectionSamplingRate As AudioSamplingRate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate ReceiveDirectionSamplingRate { Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the audio sampling rate(s) currently in effect on the receive direction of the channel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This value may change during the lifetime of the call; use the AudioVideoFlow's ConfigurationChanged
+            event to requery the current value of this property.</para>
+          <para>If the property value is the combination of both AudioSamplingRate.EightKhz and AudioSamplingRate.SixteenKhz,
+            media may be received from the peer in either narrowband (8Khz) or wideband (16Khz) formats,
+            and the application cannot assume which will be used.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamplingRate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SamplingRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SamplingRate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel.SamplingRate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SamplingRate As AudioSamplingRate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate SamplingRate { Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the audio sampling rate(s) currently in effect on the channel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This value may change during the lifetime of the call; use the AudioVideoFlow's ConfigurationChanged
+            event to requery the current value of this property.</para>
+          <para>If the property value is the combination of both AudioSamplingRate.EightKhz and AudioSamplingRate.SixteenKhz,
+            media may be exchanged with the peer in either narrowband (8Khz) or wideband (16Khz) formats,
+            and the application cannot assume which will be used.</para>
+          <para>The value of this property combines the sampling rates of the send and receive directions:
+            the application is recommended to consult the SendDirectionSamplingRate and ReceiveDirectionSamplingRate
+            properties instead, as they provide more accurate information.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendDirectionSamplingRate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SendDirectionSamplingRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate SendDirectionSamplingRate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel.SendDirectionSamplingRate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SendDirectionSamplingRate As AudioSamplingRate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate SendDirectionSamplingRate { Microsoft::Rtc::Collaboration::AudioVideo::AudioSamplingRate get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioSamplingRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the audio sampling rate(s) currently in effect on the send direction of the channel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This value may change during the lifetime of the call; use the AudioVideoFlow's ConfigurationChanged
+            event to requery the current value of this property.</para>
+          <para>If the property value is the combination of both AudioSamplingRate.EightKhz and AudioSamplingRate.SixteenKhz,
+            media may be sent to the peer in either narrowband (8Khz) or wideband (16Khz) formats,
+            and the application cannot assume which will be used.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseHighPerformance">
+      <MemberSignature Language="C#" Value="public bool UseHighPerformance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseHighPerformance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel.UseHighPerformance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UseHighPerformance As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseHighPerformance { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the AudioChannel instance is selecting codecs based on their high performance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

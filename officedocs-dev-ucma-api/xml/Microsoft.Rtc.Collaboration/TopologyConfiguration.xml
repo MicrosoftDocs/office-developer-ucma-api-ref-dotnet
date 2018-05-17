@@ -1,0 +1,92 @@
+﻿<Type Name="TopologyConfiguration" FullName="Microsoft.Rtc.Collaboration.TopologyConfiguration">
+  <TypeSignature Language="C#" Value="public abstract class TopologyConfiguration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TopologyConfiguration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.TopologyConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TopologyConfiguration" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TopologyConfiguration abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents various topology configuration data.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TopologyConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.TopologyConfiguration.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; TopologyConfiguration();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplicationTopologyData">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ApplicationTopologyData&gt; GetApplicationTopologyData (string applicationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ApplicationTopologyData&gt; GetApplicationTopologyData(string applicationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.TopologyConfiguration.GetApplicationTopologyData(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetApplicationTopologyData (applicationId As String) As Collection(Of ApplicationTopologyData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ApplicationTopologyData ^&gt; ^ GetApplicationTopologyData(System::String ^ applicationId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ApplicationTopologyData&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="applicationId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="applicationId">The id of the application.</param>
+        <summary>
+            Gets the topology data of all the deployed instances of the specified application.
+            </summary>
+        <returns>The topology data for all instances of the application.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrusted">
+      <MemberSignature Language="C#" Value="public abstract bool IsTrusted (string gruu);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsTrusted(string gruu) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.TopologyConfiguration.IsTrusted(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsTrusted (gruu As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool IsTrusted(System::String ^ gruu);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gruu" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="gruu">The GRUU to be checked.</param>
+        <summary>
+            Checks if the specified GRUU is trusted in the topology.
+            </summary>
+        <returns>True if gruu is trusted.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

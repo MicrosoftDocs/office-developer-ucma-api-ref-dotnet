@@ -1,0 +1,245 @@
+﻿<Type Name="Note" FullName="Microsoft.Rtc.Collaboration.Presence.Note">
+  <TypeSignature Language="C#" Value="public class Note : Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Note extends Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.Note" />
+  <TypeSignature Language="VB.NET" Value="Public Class Note&#xA;Inherits PresenceCategory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Note : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PresenceCategory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents the note presence category. It contains a message left to watchers such as a personal note 
+            or an Out-of-Office (OOF) note from Exchange.
+            </summary>
+    <remarks>
+      <para>When subscribing to remote presentities, this category is automated requested for.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Note (Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Note(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData" />
+      </Parameters>
+      <Docs>
+        <param name="category">To be added.</param>
+        <summary>
+            Create an instance of of the Note class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="category" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">If category.Name is anything other than the PresenceCategoryNames.Note or the xml representing category.Category provided is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Note (string personalNoteMessage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string personalNoteMessage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (personalNoteMessage As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Note(System::String ^ personalNoteMessage);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="personalNoteMessage" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="personalNoteMessage">Message in the personal note.</param>
+        <summary>
+            Create an instance of of the Note class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="personalNoteMessage" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Note (string outOfOfficeMessage, string smtpAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string outOfOfficeMessage, string smtpAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (outOfOfficeMessage As String, smtpAddress As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Note(System::String ^ outOfOfficeMessage, System::String ^ smtpAddress);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="outOfOfficeMessage" Type="System.String" />
+        <Parameter Name="smtpAddress" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="outOfOfficeMessage">An out-of-office (OOF) message.</param>
+        <param name="smtpAddress">SMTP address associated with the OOF message.</param>
+        <summary>
+            Create an instance of of the Note class.
+            </summary>
+        <remarks>
+          <para>The <paramref name="smtpAddress" /> is used to determine the instance id of the Note message during
+            publication and is not published with the note.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="outOfOfficeMessage" /> or <paramref name="smtpAddress" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="smtpAddress" /> is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpiryPolicy">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.CreateExpiryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the expiry policy for this category.
+            </summary>
+        <returns>The expiry policy created.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceId">
+      <MemberSignature Language="C#" Value="protected override long CreateInstanceId (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int64 CreateInstanceId(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <summary>
+            Returns the instance id of the first message.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategoryDataXml">
+      <MemberSignature Language="C#" Value="public override string GetCategoryDataXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCategoryDataXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.GetCategoryDataXml" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns Note as a serialized xml.
+            </summary>
+        <returns>XML representation of this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public string Message { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Note.Message" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Message { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message in the note.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoteType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.NoteType NoteType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.NoteType NoteType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Note.NoteType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NoteType As NoteType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::NoteType NoteType { Microsoft::Rtc::Collaboration::Presence::NoteType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.NoteType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of the note.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>By default this is set to <see cref="F:Microsoft.Rtc.Collaboration.Presence.NoteType.Personal" />.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishTime">
+      <MemberSignature Language="C#" Value="public DateTime PublishTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime PublishTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Note.PublishTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublishTime As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime PublishTime { DateTime get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the time when this note was initially published.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,251 @@
+﻿<Type Name="InstantMessageReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class InstantMessageReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstantMessageReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class InstantMessageReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InstantMessageReceivedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Gets the data in an incoming message from the conversation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.Connection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Connection As RealTimeConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnection ^ Connection { Microsoft::Rtc::Signaling::RealTimeConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection associated with this message. Can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentType">
+      <MemberSignature Language="C#" Value="public System.Net.Mime.ContentType ContentType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.Mime.ContentType ContentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.ContentType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentType As ContentType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Mime::ContentType ^ ContentType { System::Net::Mime::ContentType ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.Mime.ContentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the MIME type of the relay message. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Can be null if the message has no content type.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBody">
+      <MemberSignature Language="C#" Value="public byte[] GetBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.GetBody" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBody () As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetBody();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the body of the message.
+            </summary>
+        <returns>Returns the raw byte data of the message body.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTextBody">
+      <MemberSignature Language="C#" Value="public bool HasTextBody { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasTextBody" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.HasTextBody" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasTextBody As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasTextBody { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the TextBody field has been filled out.
+            </summary>
+        <value>True if the TextBody is available, otherwise false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsContentTypeSupportedLocally">
+      <MemberSignature Language="C#" Value="public bool IsContentTypeSupportedLocally { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsContentTypeSupportedLocally" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.IsContentTypeSupportedLocally" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsContentTypeSupportedLocally As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsContentTypeSupportedLocally { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the message content type is locally supported by the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Determined from the list of supported types configured.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipRequestData MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipRequestData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipRequestData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipRequestData ^ MessageData { Microsoft::Rtc::Signaling::SipRequestData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipRequestData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the SIP Request message received. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property is useful for the application who are 
+            interested in accessing headers in the incoming  SIP message.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageId">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessageId MessageId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessageId MessageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.MessageId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageId As InstantMessageId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessageId ^ MessageId { Microsoft::Rtc::Collaboration::InstantMessageId ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessageId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message ID for this message. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If MessageId is null, the application does not need to send a message delivery notification.
+            Otherwise the application must send a message delivery notification for success or failure.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sender">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationParticipant Sender { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConversationParticipant Sender" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.Sender" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Sender As ConversationParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ Sender { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the sender of the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            In a conference conversation, a message can arrive before the participant joins the conference. 
+            This can cause a participant to appear in the conversation, even though the participant is not a conference member 
+             at the time of message received event.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextBody">
+      <MemberSignature Language="C#" Value="public string TextBody { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TextBody" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs.TextBody" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextBody As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TextBody { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the body as a string.
+            </summary>
+        <value>The body as a string.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

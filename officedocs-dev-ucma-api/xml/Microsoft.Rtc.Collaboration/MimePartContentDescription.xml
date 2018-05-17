@@ -1,0 +1,474 @@
+﻿<Type Name="MimePartContentDescription" FullName="Microsoft.Rtc.Collaboration.MimePartContentDescription">
+  <TypeSignature Language="C#" Value="public class MimePartContentDescription : Microsoft.Rtc.Signaling.ContentDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MimePartContentDescription extends Microsoft.Rtc.Signaling.ContentDescription" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.MimePartContentDescription" />
+  <TypeSignature Language="VB.NET" Value="Public Class MimePartContentDescription&#xA;Inherits ContentDescription" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MimePartContentDescription : Microsoft::Rtc::Signaling::ContentDescription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.ContentDescription</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a part of a MIME body of a SIP message. 
+            A part can represent SDP part or a custom part or a mime/alternative part or a mime/mixed part of a mime body.
+            </summary>
+    <remarks>
+      <para>
+            If a MIME body is represented in the form of a tree with parent and child 
+            nodes, this class would represent a node in the tree. For example, the root 
+            represents the entire MIME part and the child nodes represent parts contained 
+            immediately inside the outer MIME part. 
+            </para>
+      <para>
+            Thus, an intermediate node in the tree will always represent a mime/alternative 
+            or a mime/mixed part. The leaves of the tree represent other content types 
+            including SDP or a custom part such as text/plain.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MimePartContentDescription (System.Net.Mime.ContentType contentType, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.#ctor(System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; MimePartContentDescription(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">The content type for this MIME part. Can be null.</param>
+        <param name="body">The body of this MIME part. Can be null.</param>
+        <summary>
+            Creates a new instance of the MimePartContentDescription class.
+            </summary>
+        <remarks>
+          <para>
+            Initializes class, supplying content type and body. These parameters can be null.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (Microsoft.Rtc.Collaboration.MimePartContentDescription part);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(class Microsoft.Rtc.Collaboration.MimePartContentDescription part) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.Add(Microsoft.Rtc.Collaboration.MimePartContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (part As MimePartContentDescription)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(Microsoft::Rtc::Collaboration::MimePartContentDescription ^ part);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="part" Type="Microsoft.Rtc.Collaboration.MimePartContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="part">The MIME part to add.</param>
+        <summary>
+            Adds one MIME part to the end of the child MIME part list.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the argument supplied is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the MIME part is neither MIME/mixed nor MIME/alternative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.MimePartContentDescription&gt; Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.MimePartContentDescription&gt; Children" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.Children" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Children As Collection(Of MimePartContentDescription)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MimePartContentDescription ^&gt; ^ Children { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MimePartContentDescription ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.MimePartContentDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a collection of MIME parts contained in a MIME/mixed or MIME/alternative body.
+            This collection is empty when the Content-Type of the MIME part differs from multipart/mixed or multipart/alternative.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionHeader">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingHeader ContentDispositionHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingHeader ContentDispositionHeader" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionHeader" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentDispositionHeader As SignalingHeader" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentDispositionHeader { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); void set(Microsoft::Rtc::Signaling::SignalingHeader ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Content-Disposition header of the MIME part.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionType">
+      <MemberSignature Language="C#" Value="public string ContentDispositionType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentDispositionType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentDispositionType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContentDispositionType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Content-Disposition of the MIME part.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionType_Alert">
+      <MemberSignature Language="C#" Value="public const string ContentDispositionType_Alert;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContentDispositionType_Alert" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Alert" />
+      <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Alert As String " />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Alert;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the MIME part is a custom ring tone to alert the user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionType_Icon">
+      <MemberSignature Language="C#" Value="public const string ContentDispositionType_Icon;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContentDispositionType_Icon" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Icon" />
+      <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Icon As String " />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Icon;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the MIME part should be displayed to the user as an icon.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionType_Inline">
+      <MemberSignature Language="C#" Value="public const string ContentDispositionType_Inline;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContentDispositionType_Inline" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Inline" />
+      <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Inline As String " />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Inline;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the MIME part should be displayed automatically.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionType_Render">
+      <MemberSignature Language="C#" Value="public const string ContentDispositionType_Render;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContentDispositionType_Render" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Render" />
+      <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Render As String " />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Render;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the MIME part should be displayed to the user.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDispositionType_Session">
+      <MemberSignature Language="C#" Value="public const string ContentDispositionType_Session;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string ContentDispositionType_Session" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Session" />
+      <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Session As String " />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Session;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates that the MIME part describes a communication session.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentId">
+      <MemberSignature Language="C#" Value="public string ContentId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContentId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Content-ID of the MIME part. Can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentIdHeader">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingHeader ContentIdHeader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingHeader ContentIdHeader" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentIdHeader" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentIdHeader As SignalingHeader" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentIdHeader { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); void set(Microsoft::Rtc::Signaling::SignalingHeader ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Content-ID header of the MIME part. Can be null when the Content-ID header is missing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTypeHeader">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingHeader ContentTypeHeader { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingHeader ContentTypeHeader" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentTypeHeader" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentTypeHeader As SignalingHeader" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentTypeHeader { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Content-Type header of the MIME part.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHandlingRequired">
+      <MemberSignature Language="C#" Value="public bool IsHandlingRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHandlingRequired" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.IsHandlingRequired" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsHandlingRequired As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsHandlingRequired { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the handling of the MIME part is required.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.MimePartContentDescription Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.MimePartContentDescription Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As MimePartContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::MimePartContentDescription ^ Parent { Microsoft::Rtc::Collaboration::MimePartContentDescription ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.MimePartContentDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the parent of the MIME part. The parent MIME part can be null when the MIME part is the top node.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecomputeBody">
+      <MemberSignature Language="C#" Value="protected override void RecomputeBody ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RecomputeBody() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.RecomputeBody" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RecomputeBody ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void RecomputeBody();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Recomputes the body of this instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (Microsoft.Rtc.Collaboration.MimePartContentDescription part);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Remove(class Microsoft.Rtc.Collaboration.MimePartContentDescription part) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.Remove(Microsoft.Rtc.Collaboration.MimePartContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Remove (part As MimePartContentDescription) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(Microsoft::Rtc::Collaboration::MimePartContentDescription ^ part);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="part" Type="Microsoft.Rtc.Collaboration.MimePartContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="part">The MIME part to remove.</param>
+        <summary>
+            Removes the first occurrence of a MIME part from the list of child MIME parts.
+            </summary>
+        <returns>True if the MIME part is successfully removed; otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the argument supplied is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public bool RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.RemoveAt(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RemoveAt (index As Integer) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveAt(int index);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The zero-based index of the MIME part to remove.</param>
+        <summary>
+            Removes the MIME part located at the specified index of the list of child MIME parts.
+            </summary>
+        <returns>True if the MIME part is successfully removed; otherwise, false.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the index is less than zero, or when the index is greater than or equal to the number of child MIME parts.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalingHeaders">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; SignalingHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; SignalingHeaders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.SignalingHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SignalingHeaders As IEnumerable(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ SignalingHeaders { System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of signaling headers including Content-Id, Content-Type, and Content-Disposition.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

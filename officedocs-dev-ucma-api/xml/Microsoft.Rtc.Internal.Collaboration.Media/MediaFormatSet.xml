@@ -1,0 +1,122 @@
+﻿<Type Name="MediaFormatSet" FullName="Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet">
+  <TypeSignature Language="C#" Value="public abstract class MediaFormatSet" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MediaFormatSet extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaFormatSet" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaFormatSet abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MediaFormatSet ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MediaFormatSet();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalPayloadTypeList">
+      <MemberSignature Language="C#" Value="public abstract int[] LocalPayloadTypeList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] LocalPayloadTypeList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet.LocalPayloadTypeList" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LocalPayloadTypeList As Integer()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property cli::array &lt;int&gt; ^ LocalPayloadTypeList { cli::array &lt;int&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalPTime">
+      <MemberSignature Language="C#" Value="public abstract Nullable&lt;int&gt; LocalPTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; LocalPTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet.LocalPTime" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LocalPTime As Nullable(Of Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Nullable&lt;int&gt; LocalPTime { Nullable&lt;int&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalSdpMediaFormats">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaFormat[] LocalSdpMediaFormats { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaFormat[] LocalSdpMediaFormats" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet.LocalSdpMediaFormats" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LocalSdpMediaFormats As SdpMediaFormat()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property cli::array &lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaFormat&gt; ^ LocalSdpMediaFormats { cli::array &lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaFormat&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaFormat[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegotiateMediaFormats">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet NegotiateMediaFormats (Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription peerSdpMediaDescription);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet NegotiateMediaFormats(class Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription peerSdpMediaDescription) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet.NegotiateMediaFormats(Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NegotiateMediaFormats (peerSdpMediaDescription As SdpMediaDescription) As MediaFormatSet" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::Media::MediaFormatSet ^ NegotiateMediaFormats(Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaDescription ^ peerSdpMediaDescription);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.Media.MediaFormatSet</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="peerSdpMediaDescription" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription" />
+      </Parameters>
+      <Docs>
+        <param name="peerSdpMediaDescription">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

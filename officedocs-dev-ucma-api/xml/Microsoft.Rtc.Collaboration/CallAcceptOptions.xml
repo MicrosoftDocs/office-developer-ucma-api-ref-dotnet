@@ -1,0 +1,180 @@
+﻿<Type Name="CallAcceptOptions" FullName="Microsoft.Rtc.Collaboration.CallAcceptOptions">
+  <TypeSignature Language="C#" Value="public class CallAcceptOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallAcceptOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallAcceptOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallAcceptOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallAcceptOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Optional parameters for accepting the incoming call.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallAcceptOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallAcceptOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallAcceptOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the CallAcceptOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcceptedContentIds">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; AcceptedContentIds { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; AcceptedContentIds" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallAcceptOptions.AcceptedContentIds" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AcceptedContentIds As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ AcceptedContentIds { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of accepted contentIds on the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If the incoming call contains the custom MIME parts, the party being called should specify 
+            the IDs of accepted mime parts by adding them to AcceptedIds collection. The header's name will be
+            "MS-CONTENT-ACCEPTED-CID" and will contain a comma-separated list of accepted content IDs.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DialogContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.DialogContext DialogContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.DialogContext DialogContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallAcceptOptions.DialogContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property DialogContext As DialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DialogContext ^ DialogContext { Microsoft::Rtc::Signaling::DialogContext ^ get(); void set(Microsoft::Rtc::Signaling::DialogContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.DialogContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the dialog context of the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Required only for back-to-back agent handles the call forking on the 
+            other call leg, otherwise application should not use this property.
+            </para>
+          <para>
+            To set a new DialogContext, application should create a new dialog using <see cref="M:Microsoft.Rtc.Collaboration.Call.GetNewEarlyDialog" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallAcceptOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included in the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RedirectDueToBandwidthPolicyEnabled">
+      <MemberSignature Language="C#" Value="public bool RedirectDueToBandwidthPolicyEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RedirectDueToBandwidthPolicyEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallAcceptOptions.RedirectDueToBandwidthPolicyEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property RedirectDueToBandwidthPolicyEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RedirectDueToBandwidthPolicyEnabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether to redirect the call when recommended by the bandwidth policy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, if an incoming call fails bandwidth allocation then it will be declined.
+            If the application wants this call to be redirected via PSTN then it needs to enable this setting this property to true
+            before accepting the call.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsReplaces">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CapabilitySupport SupportsReplaces { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CapabilitySupport SupportsReplaces" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallAcceptOptions.SupportsReplaces" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportsReplaces As CapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CapabilitySupport SupportsReplaces { Microsoft::Rtc::Collaboration::CapabilitySupport get(); void set(Microsoft::Rtc::Collaboration::CapabilitySupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the call supports the replaces header.
+            </summary>
+        <value>The default value is <see cref="F:Microsoft.Rtc.Collaboration.CapabilitySupport.Default" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,196 @@
+﻿<Type Name="SendMessageOptions" FullName="Microsoft.Rtc.Signaling.SendMessageOptions">
+  <TypeSignature Language="C#" Value="public class SendMessageOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SendMessageOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SendMessageOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class SendMessageOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SendMessageOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents options for customizing message send behavior.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SendMessageOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SendMessageOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SendMessageOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ConnectionContext ConnectionContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ConnectionContext ConnectionContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendMessageOptions.ConnectionContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionContext As ConnectionContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ConnectionContext ^ ConnectionContext { Microsoft::Rtc::Signaling::ConnectionContext ^ get(); void set(Microsoft::Rtc::Signaling::ConnectionContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ConnectionContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the connection context to use for this session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If the connection context is null, the default algorithm
+            will be used to make a connection if needed for this session.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDescription">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ContentDescription ContentDescription { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ContentDescription ContentDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendMessageOptions.ContentDescription" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentDescription As ContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ContentDescription ^ ContentDescription { Microsoft::Rtc::Signaling::ContentDescription ^ get(); void set(Microsoft::Rtc::Signaling::ContentDescription ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the content of the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendMessageOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Rtc.Signaling.IOptionsWithHeaders.Headers</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be 
+            included in the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. 
+            Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalIdentityDisplayName">
+      <MemberSignature Language="C#" Value="public string LocalIdentityDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalIdentityDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendMessageOptions.LocalIdentityDisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalIdentityDisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalIdentityDisplayName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of display name for local identity, if overridden by the application. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalIdentityUri">
+      <MemberSignature Language="C#" Value="public string LocalIdentityUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalIdentityUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SendMessageOptions.LocalIdentityUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalIdentityUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalIdentityUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the local identity URI, if overridden by the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLocalIdentity">
+      <MemberSignature Language="C#" Value="public void SetLocalIdentity (string uri, string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLocalIdentity(string uri, string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SendMessageOptions.SetLocalIdentity(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetLocalIdentity (uri As String, displayName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetLocalIdentity(System::String ^ uri, System::String ^ displayName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">URI representing the local identity.</param>
+        <param name="displayName">DisplayName for local Identity. Can be null.</param>
+        <summary>
+            Sets the value of local identitiy URI for the message to be used in the From header.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when an empty string is passed for uri, but displayName is non-empty.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

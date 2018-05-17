@@ -1,0 +1,763 @@
+﻿<Type Name="InstantMessagingFlow" FullName="Microsoft.Rtc.Collaboration.InstantMessagingFlow">
+  <TypeSignature Language="C#" Value="public class InstantMessagingFlow : Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstantMessagingFlow extends Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InstantMessagingFlow" />
+  <TypeSignature Language="VB.NET" Value="Public Class InstantMessagingFlow&#xA;Inherits MediaFlow" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InstantMessagingFlow : Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the media in and InstantMessagingCall.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginSendFailureDeliveryNotification">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendFailureDeliveryNotification (Microsoft.Rtc.Collaboration.InstantMessageId messageId, int responseCode, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendFailureDeliveryNotification(class Microsoft.Rtc.Collaboration.InstantMessageId messageId, int32 responseCode, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendFailureDeliveryNotification(Microsoft.Rtc.Collaboration.InstantMessageId,System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendFailureDeliveryNotification (messageId As InstantMessageId, responseCode As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendFailureDeliveryNotification(Microsoft::Rtc::Collaboration::InstantMessageId ^ messageId, int responseCode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageId" Type="Microsoft.Rtc.Collaboration.InstantMessageId" />
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageId">Identifies the message.</param>
+        <param name="responseCode">The response code for this delivery notification.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to report that a message was not delivered to its final destination. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method should be called only by the applications that do not directly consume message but serve 
+            as proxy (like Communicator Web Access) for delivering the received message to a remote entity.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when flow configured for <see cref="F:Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode.ConsumedLocally" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendInstantMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendInstantMessage (string textBody, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendInstantMessage(string textBody, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendInstantMessage(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendInstantMessage (textBody As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendInstantMessage(System::String ^ textBody, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="textBody" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="textBody">Text body.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Send a text message in the conversation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            When a message is sent, some remote clients, including IM MCU, can send a tentative acceptance response (202) followed later by a delivery 
+            notification message (BeNotify). If the message receives tentative acceptance, it will carry a unique message id assigned to this message.
+            The delivery notification received later will carry this message id so that it can be correlated to this message.
+            </para>
+          <para>
+            If the message receives a tentative acceptance response, then this method will wait for the delivery notification message before completing this operation.
+            This will make it unnecessary for an application to keep track of the message id to correlate with delivery notification received later.
+            If the application wants to complete the operation as soon as the tentative response is received, it can do so by ensuring that the property
+            WaitingForDeliveryNotificationDisabled on the flow template is set to true. This can be either done globally using InstantMessagingSettings of the
+            collaboration platform or by using Initialize method in InstantMessagingFlow during configuration. In that case, the application is responsible 
+            for correlating the message id with the delivery notification received later. The deprecated BeginSendMessage method's behavior is equivalent to
+            calling this new BeginSendInstantMessage method when WaitingForDeliveryNotificationDisabled is set to true on this flow settings.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is passed for a required parameter. The parameter
+            name that is required is included in the exception message.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the provider is in the invalid state to send a message.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendInstantMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendInstantMessage (System.Net.Mime.ContentType contentType, byte[] body, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendInstantMessage(class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendInstantMessage(System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendInstantMessage(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">The content type.</param>
+        <param name="body">The message body.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Send an instant message in the conversation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            When a message is sent, some remote clients, including IM MCU, can send a tentative acceptance response (202) followed later by a delivery 
+            notification message (BeNotify). If the message receives tentative acceptance, it will carry a unique message id assigned to this message.
+            The delivery notification received later will carry this message id so that it can be correlated to this message.
+            </para>
+          <para>
+            If the message receives a tentative acceptance response, then this method will wait for the delivery notification message before completing this operation.
+            This will make it unnecessary for an application to keep track of the message id to correlate with delivery notification received later.
+            If the application wants to complete the operation as soon as the tentative response is received, it can do so by ensuring that the property
+            WaitingForDeliveryNotificationDisabled on the flow template is set to true. This can be either done globally using InstantMessagingSettings of the
+            collaboration platform or by using Initialize method in InstantMessagingFlow during configuration. In that case, the application is responsible 
+            for correlating the message id with the delivery notification received later. The deprecated BeginSendMessage method's behavior is equivalent to
+            calling this new BeginSendInstantMessage method when WaitingForDeliveryNotificationDisabled is set to true on this flow settings.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is passed for a required parameter. The parameter
+            name that is required is included in the exception message.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the provider is in invalid state to send a message.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendSuccessDeliveryNotification">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendSuccessDeliveryNotification (Microsoft.Rtc.Collaboration.InstantMessageId messageId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendSuccessDeliveryNotification(class Microsoft.Rtc.Collaboration.InstantMessageId messageId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendSuccessDeliveryNotification(Microsoft.Rtc.Collaboration.InstantMessageId,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendSuccessDeliveryNotification (messageId As InstantMessageId, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendSuccessDeliveryNotification(Microsoft::Rtc::Collaboration::InstantMessageId ^ messageId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageId" Type="Microsoft.Rtc.Collaboration.InstantMessageId" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageId">Identifies the message.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to report that a message was successfully delivered to its final destination. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method should be called only by the applications that do not directly consume message but serve 
+            as proxy (like Communicator Web Access) for delivering the received message to a remote entity.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when flowSetting is configured for <see cref="F:Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode.ConsumedLocally" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingCall Call { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessagingCall Call" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.Call" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call As InstantMessagingCall" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingCall ^ Call { Microsoft::Rtc::Collaboration::InstantMessagingCall ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingCall</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the InstantMessagingCall associated with this flow. Can be null if the call type is not InstantMessagingCall.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComposingTimeoutValue">
+      <MemberSignature Language="C#" Value="public int ComposingTimeoutValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ComposingTimeoutValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.ComposingTimeoutValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComposingTimeoutValue As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ComposingTimeoutValue { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value (in seconds) for the composing timeout. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This is used to control the timeout value
+            used to revert the local composing state to Idle. If an application sets LocalComposingState
+            to Composing, it is automatically reverted to Idle if the application does not set the LocalComposingState
+            to Composing again within this idle timeout. Note that it might take a few more seconds after this timeout
+            value for the actual state to go to Idle.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeliveryNotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs&gt; DeliveryNotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs&gt; DeliveryNotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.DeliveryNotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event DeliveryNotificationReceived As EventHandler(Of DeliveryNotificationReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::DeliveryNotificationReceivedEventArgs ^&gt; ^ DeliveryNotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a message delivery notification is received.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            This example demonstrates how to receive delivery notifications from the 
+            remote application. This code assumes that FlowConfigurationRequested event was
+            registered on the call.
+            </para>
+          <para> C# Receiving delivery notifications</para>
+          <code> 
+
+        private void FlowConfigurationRequested(
+            object sender,
+            InstantMessagingFlowConfigurationRequestedEventArgs e)
+        {
+
+            // Register to receive delivery notifications
+            e.Flow.DeliveryNotificationReceived += this.DeliveryNotificationReceived;
+
+        }        
+
+            // Register to receive delivery notifications
+            e.Flow.DeliveryNotificationReceived += this.DeliveryNotificationReceived;
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendFailureDeliveryNotification">
+      <MemberSignature Language="C#" Value="public void EndSendFailureDeliveryNotification (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendFailureDeliveryNotification(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.EndSendFailureDeliveryNotification(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSendFailureDeliveryNotification (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendFailureDeliveryNotification(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Gets the results of sending a delivery notification.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same instance of asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendInstantMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SendInstantMessageResult EndSendInstantMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.SendInstantMessageResult EndSendInstantMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.EndSendInstantMessage(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendInstantMessage (result As IAsyncResult) As SendInstantMessageResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::SendInstantMessageResult ^ EndSendInstantMessage(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SendInstantMessageResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Gets the results of the SendInstantMessage operation.
+            </summary>
+        <returns>The message id from the provisional response, if any, received Or the list of participants failed to receive the message.
+            By default, the message id will not be populated unless the application configured the flow property WaitingForDeliveryNotificationDisabled appropriately.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same instance of asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error response. 
+            The SipResponseData in the exception should give additional information.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.ServerPolicyException">
+            A server policy setting does not allow the sending of the message.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation failed.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when the operation timed out while waiting for a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendSuccessDeliveryNotification">
+      <MemberSignature Language="C#" Value="public void EndSendSuccessDeliveryNotification (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendSuccessDeliveryNotification(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.EndSendSuccessDeliveryNotification(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSendSuccessDeliveryNotification (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendSuccessDeliveryNotification(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Gets the results of sending a delivery notification.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same instance of asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(class Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.Initialize(Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (template As InstantMessagingFlowTemplate)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Initialize(Microsoft::Rtc::Collaboration::InstantMessagingFlowTemplate ^ template);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="template"> Settings for the flow. </param>
+        <summary>
+            Optionally overwrites settings of the flow.
+            </summary>
+        <remarks>
+          <para>
+            Can only be called by an application from within the FlowConfigurationRequested event handler.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalComposingState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ComposingState LocalComposingState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ComposingState LocalComposingState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.LocalComposingState" />
+      <MemberSignature Language="VB.NET" Value="Public Property LocalComposingState As ComposingState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ComposingState LocalComposingState { Microsoft::Rtc::Collaboration::ComposingState get(); void set(Microsoft::Rtc::Collaboration::ComposingState value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComposingState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the local composing state. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Setting the state will automatically send "Composing" notifications
+            to remote participants. Once set to "Composing", automatic refresh
+            of the "Composing" state occurs every 5 seconds until a message is sent
+            or the state is set explicitly to "Idle".
+            If a message is sent, it is not necessary to set to
+            <see cref="Idle" /> since the composing state will be automatically
+            reset to <see cref="Idle" />.
+            Note that the RemoteComposingStateChanged event will not be raised when this property is set.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            This example shows how to set the composing state. This sample assumes that the InstantMessagingCall
+            has been established and the flow configured.
+            </para>
+          <para> C# Setting composing state</para>
+          <code> 
+        private void SendMessageCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+                SendInstantMessageResult imResult = call.Flow.EndSendInstantMessage(result);
+                if (imResult.DeliveryFailures.Count &amp;gt; 0)
+                {
+                    // One or more recipients did not receive the message.
+                    foreach (MessageDeliveryFailureData failure in imResult.DeliveryFailures)
+                    {
+                        Console.WriteLine("Message not received by {0} ({1})", failure.Recipient.Uri, failure.ResponseCode);
+                    }
+                }
+                else if (imResult.MessageId != null)
+                {
+                    Console.WriteLine("Message response was tentative with message id {0}", imResult.MessageId.MessageId);
+
+                }
+                else
+                {
+                    Console.WriteLine("Message received by all participants.");
+                }
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Message send failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+
+        }
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageConsumptionMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode MessageConsumptionMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode MessageConsumptionMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.MessageConsumptionMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageConsumptionMode As InstantMessageConsumptionMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode MessageConsumptionMode { Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message consumption mode for this flow as configured in the flow settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs&gt; MessageReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs&gt; MessageReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.MessageReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event MessageReceived As EventHandler(Of InstantMessageReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InstantMessageReceivedEventArgs ^&gt; ^ MessageReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a message is received.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            This example demonstrates how to receive messages from the 
+            remote application. This code assumes that FlowConfigurationRequested event was
+            registered on the call.
+            </para>
+          <para> C# Receiving messages</para>
+          <code> 
+
+        private void FlowConfigurationRequested(
+            object sender,
+            InstantMessagingFlowConfigurationRequestedEventArgs e)
+        {
+
+            // Register to receive messages.
+            e.Flow.MessageReceived += this.MessageReceived;
+
+        }        
+
+        private void MessageReceived(
+            object sender,
+            InstantMessageReceivedEventArgs e)
+        {
+            // Assumes only text messages are received.
+            Console.WriteLine("Message with content type {0} received: Text: {1}", e.ContentType.ToString(), e.TextBody);
+
+        }
+
+
+</code>
+          <para>
+            This example demonstrates how to receive messages from the 
+            remote application. This code assumes that FlowConfigurationRequested event was
+            registered on the call.
+            </para>
+          <para> C# Receiving messages</para>
+          <code />
+          <para>
+            This example demonstrates how to receive messages from the 
+            remote application. This code assumes that FlowConfigurationRequested event was
+            registered on the call.
+            </para>
+          <para> C# Receiving messages</para>
+          <code> 
+
+        private void FlowConfigurationRequested(
+            object sender,
+            InstantMessagingFlowConfigurationRequestedEventArgs e)
+        {
+
+            // Register to receive messages.
+            e.Flow.MessageReceived += this.MessageReceived;
+
+        }        
+
+        private void MessageReceived(
+            object sender,
+            InstantMessageReceivedEventArgs e)
+        {
+            // Assumes only text messages are received.
+            Console.WriteLine("Message with content type {0} received: Text: {1}", e.ContentType.ToString(), e.TextBody);
+
+            if (e.MessageId != null)
+            {
+                // We are expected to send a delivery notification.
+
+                // Invoke some method to transmit the message via another mechanism.
+                // Delivery does not have to be completed before the event handler returns.
+                object[] state = new object[] { sender /* the flow */, e.MessageId };
+
+                m_proxy.BeginSendMessageToClient(
+                    e.TextBody,
+                    this.SendMessageToClientCompleted,
+                    state);
+            }
+
+        }
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessagingFlowPropertiesChangedEventArgs&gt; PropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.InstantMessagingFlowPropertiesChangedEventArgs&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.PropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of InstantMessagingFlowPropertiesChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InstantMessagingFlowPropertiesChangedEventArgs ^&gt; ^ PropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessagingFlowPropertiesChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when instant messaging flow properties changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteComposingStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ComposingStateChangedEventArgs&gt; RemoteComposingStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ComposingStateChangedEventArgs&gt; RemoteComposingStateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.RemoteComposingStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteComposingStateChanged As EventHandler(Of ComposingStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ComposingStateChangedEventArgs ^&gt; ^ RemoteComposingStateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ComposingStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the composing state for a remote participant changes.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            This example demonstrates how to detect changes in the composing state of the 
+            remote application. This code assumes that FlowConfigurationRequested event was
+            registered on the call.
+            </para>
+          <para> C# Receiving composing state changes</para>
+          <code> 
+
+        private void FlowConfigurationRequested(
+            object sender,
+            InstantMessagingFlowConfigurationRequestedEventArgs e)
+        {
+
+            // Register to receive composing state changes.
+            e.Flow.RemoteComposingStateChanged += this.ComposingStateChanged;
+
+        }        
+
+        private void ComposingStateChanged(
+            object sender,
+            ComposingStateChangedEventArgs e)
+        {
+            Console.WriteLine("Participant: {0} Composing state: {1}", e.Participant.Uri, e.ComposingState);
+
+        }
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedRemoteMediaCapabilities">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingMediaCapabilities SupportedRemoteMediaCapabilities { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessagingMediaCapabilities SupportedRemoteMediaCapabilities" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.SupportedRemoteMediaCapabilities" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedRemoteMediaCapabilities As InstantMessagingMediaCapabilities" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingMediaCapabilities ^ SupportedRemoteMediaCapabilities { Microsoft::Rtc::Collaboration::InstantMessagingMediaCapabilities ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingMediaCapabilities</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instant messaging media capabilities supported by all the remote participants.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property can return null value if the remote media capabilities are not available.
+            </para>
+          <para>
+            This property returns the capabilities of all the remote participants in the conversation.
+            </para>
+          <para>
+            Applications can check the value of the <see cref="P:Microsoft.Rtc.Collaboration.InstantMessagingMediaCapabilities.SupportedFormats" /> to 
+            check whether the remote supports a particular content type format before sending an instant message.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
