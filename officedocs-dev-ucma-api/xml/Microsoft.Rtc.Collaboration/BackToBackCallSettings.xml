@@ -1,0 +1,161 @@
+﻿<Type Name="BackToBackCallSettings" FullName="Microsoft.Rtc.Collaboration.BackToBackCallSettings">
+  <TypeSignature Language="C#" Value="public class BackToBackCallSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BackToBackCallSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.BackToBackCallSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class BackToBackCallSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BackToBackCallSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the settings for one call leg for a BackToBackCall instance.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BackToBackCallSettings (Microsoft.Rtc.Collaboration.Call call);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Call call) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCallSettings.#ctor(Microsoft.Rtc.Collaboration.Call)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BackToBackCallSettings(Microsoft::Rtc::Collaboration::Call ^ call);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="call" Type="Microsoft.Rtc.Collaboration.Call" />
+      </Parameters>
+      <Docs>
+        <param name="call">Instance of the call for the call leg, should be either Incoming or in Idle state.</param>
+        <summary>
+            Creates an instance of BackToBackCallSettings using given call instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BackToBackCallSettings (Microsoft.Rtc.Collaboration.Call call, string destinationUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Call call, string destinationUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCallSettings.#ctor(Microsoft.Rtc.Collaboration.Call,System.String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; BackToBackCallSettings(Microsoft::Rtc::Collaboration::Call ^ call, System::String ^ destinationUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="call" Type="Microsoft.Rtc.Collaboration.Call" />
+        <Parameter Name="destinationUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="call">Instance of the call for the call leg, should be Idle state.</param>
+        <param name="destinationUri">Uri to be used as destination Uri to establish the call.</param>
+        <summary>
+            Creates an istance of BackToBackCallSettings using given call instance and destinationUri.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="call" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="destinationUri" /> is not null and <paramref name="call" /> is not an Idle call.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Call Call { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Call Call" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCallSettings.Call" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call As Call" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Call ^ Call { Microsoft::Rtc::Collaboration::Call ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Call</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the instance of the call associated with the call leg.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallAcceptOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CallAcceptOptions CallAcceptOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.CallAcceptOptions CallAcceptOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCallSettings.CallAcceptOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property CallAcceptOptions As CallAcceptOptions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CallAcceptOptions ^ CallAcceptOptions { Microsoft::Rtc::Collaboration::CallAcceptOptions ^ get(); void set(Microsoft::Rtc::Collaboration::CallAcceptOptions ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallAcceptOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of options to be used to accept an incoming call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the associated call is an outgoing call.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CallEstablishOptions">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CallEstablishOptions CallEstablishOptions { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.CallEstablishOptions CallEstablishOptions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCallSettings.CallEstablishOptions" />
+      <MemberSignature Language="VB.NET" Value="Public Property CallEstablishOptions As CallEstablishOptions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CallEstablishOptions ^ CallEstablishOptions { Microsoft::Rtc::Collaboration::CallEstablishOptions ^ get(); void set(Microsoft::Rtc::Collaboration::CallEstablishOptions ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallEstablishOptions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the options to be used to establish an outgoing call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the associated call is an incoming call.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUri">
+      <MemberSignature Language="C#" Value="public string DestinationUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DestinationUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCallSettings.DestinationUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DestinationUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DestinationUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of the destination URI to be used to establish the outgoing call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

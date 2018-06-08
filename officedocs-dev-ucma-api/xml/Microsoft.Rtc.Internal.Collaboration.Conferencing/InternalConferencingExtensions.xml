@@ -1,0 +1,365 @@
+﻿<Type Name="InternalConferencingExtensions" FullName="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions">
+  <TypeSignature Language="C#" Value="public static class InternalConferencingExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit InternalConferencingExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module InternalConferencingExtensions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InternalConferencingExtensions abstract sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginSendCommand">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginSendCommand (this Microsoft.Rtc.Collaboration.McuSession mcuSession, Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand command, Microsoft.Rtc.Collaboration.ConferenceCommandOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginSendCommand(class Microsoft.Rtc.Collaboration.McuSession mcuSession, class Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand command, class Microsoft.Rtc.Collaboration.ConferenceCommandOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.BeginSendCommand(Microsoft.Rtc.Collaboration.McuSession,Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand,Microsoft.Rtc.Collaboration.ConferenceCommandOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginSendCommand(Microsoft::Rtc::Collaboration::McuSession ^ mcuSession, Microsoft::Rtc::Internal::Collaboration::Conferencing::Commands::ConferenceCommand ^ command, Microsoft::Rtc::Collaboration::ConferenceCommandOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mcuSession" Type="Microsoft.Rtc.Collaboration.McuSession" RefType="this" />
+        <Parameter Name="command" Type="Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="mcuSession">To be added.</param>
+        <param name="command">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSetEndpointRecording">
+      <MemberSignature Language="C#" Value="public static IAsyncResult BeginSetEndpointRecording (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, bool isRecording, Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginSetEndpointRecording(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, bool isRecording, class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.BeginSetEndpointRecording(Microsoft.Rtc.Collaboration.ConferenceSession,System.Boolean,Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginSetEndpointRecording(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession, bool isRecording, Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+        <Parameter Name="isRecording" Type="System.Boolean" />
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <param name="isRecording">To be added.</param>
+        <param name="endpoint">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendCommand">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.ConferenceCommandResponse EndSendCommand (this Microsoft.Rtc.Collaboration.McuSession mcuSession, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Collaboration.ConferenceCommandResponse EndSendCommand(class Microsoft.Rtc.Collaboration.McuSession mcuSession, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.EndSendCommand(Microsoft.Rtc.Collaboration.McuSession,System.IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::ConferenceCommandResponse ^ EndSendCommand(Microsoft::Rtc::Collaboration::McuSession ^ mcuSession, IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceCommandResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mcuSession" Type="Microsoft.Rtc.Collaboration.McuSession" RefType="this" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="mcuSession">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSetEndpointRecording">
+      <MemberSignature Language="C#" Value="public static void EndSetEndpointRecording (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndSetEndpointRecording(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.EndSetEndpointRecording(Microsoft.Rtc.Collaboration.ConferenceSession,System.IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EndSetEndpointRecording(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession, IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCccpAdmissionPolicy">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Collaboration.ConferenceAccessLevel GetCccpAdmissionPolicy (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel GetCccpAdmissionPolicy(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetCccpAdmissionPolicy(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::ConferenceAccessLevel GetCccpAdmissionPolicy(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConferenceAttendanceType">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Internal.Collaboration.Conferencing.ConferenceAttendanceType GetConferenceAttendanceType (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Internal.Collaboration.Conferencing.ConferenceAttendanceType GetConferenceAttendanceType(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetConferenceAttendanceType(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Internal::Collaboration::Conferencing::ConferenceAttendanceType GetConferenceAttendanceType(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.Conferencing.ConferenceAttendanceType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDialogContext">
+      <MemberSignature Language="C#" Value="public static Microsoft.Rtc.Signaling.DialogContext GetDialogContext (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Signaling.DialogContext GetDialogContext(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetDialogContext(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Signaling::DialogContext ^ GetDialogContext(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.DialogContext</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIsAnonymousDialOutAllowed">
+      <MemberSignature Language="C#" Value="public static bool GetIsAnonymousDialOutAllowed (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsAnonymousDialOutAllowed(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetIsAnonymousDialOutAllowed(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool GetIsAnonymousDialOutAllowed(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetJoinUrl">
+      <MemberSignature Language="C#" Value="public static string GetJoinUrl (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetJoinUrl(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetJoinUrl(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetJoinUrl(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalCaaUri">
+      <MemberSignature Language="C#" Value="public static string GetLocalCaaUri (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetLocalCaaUri(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetLocalCaaUri(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetLocalCaaUri(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetServerMode">
+      <MemberSignature Language="C#" Value="public static Nullable&lt;long&gt; GetServerMode (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Nullable`1&lt;int64&gt; GetServerMode(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetServerMode(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Nullable&lt;long&gt; GetServerMode(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int64&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTelemetryId">
+      <MemberSignature Language="C#" Value="public static string GetTelemetryId (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTelemetryId(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetTelemetryId(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetTelemetryId(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAcpMcuSessionSupport">
+      <MemberSignature Language="C#" Value="public static void SetAcpMcuSessionSupport (this Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, bool isSupported);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAcpMcuSessionSupport(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, bool isSupported) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.SetAcpMcuSessionSupport(Microsoft.Rtc.Collaboration.ConferenceSession,System.Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetAcpMcuSessionSupport(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession, bool isSupported);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" RefType="this" />
+        <Parameter Name="isSupported" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <param name="isSupported">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEndpointRecording">
+      <MemberSignature Language="C#" Value="public static void SetEndpointRecording (this Microsoft.Rtc.Collaboration.ConferenceJoinOptions options, bool isRecording);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetEndpointRecording(class Microsoft.Rtc.Collaboration.ConferenceJoinOptions options, bool isRecording) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.SetEndpointRecording(Microsoft.Rtc.Collaboration.ConferenceJoinOptions,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetEndpointRecording (options As ConferenceJoinOptions, isRecording As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetEndpointRecording(Microsoft::Rtc::Collaboration::ConferenceJoinOptions ^ options, bool isRecording);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConferenceJoinOptions" RefType="this" />
+        <Parameter Name="isRecording" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="options">To be added.</param>
+        <param name="isRecording">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

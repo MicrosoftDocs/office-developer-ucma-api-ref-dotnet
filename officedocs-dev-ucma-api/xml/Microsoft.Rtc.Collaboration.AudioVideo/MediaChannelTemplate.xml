@@ -1,0 +1,117 @@
+﻿<Type Name="MediaChannelTemplate" FullName="Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate">
+  <TypeSignature Language="C#" Value="public abstract class MediaChannelTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MediaChannelTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaChannelTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaChannelTemplate abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Media Channel Template.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowedDirection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection AllowedDirection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection AllowedDirection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate.AllowedDirection" />
+      <MemberSignature Language="VB.NET" Value="Public Property AllowedDirection As MediaChannelDirection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection AllowedDirection { Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the stream allowed direction.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example changes AllowedDirection and applies it to an AudioVideoFlow.
+                </para>
+          <para> C# Modifying AudioChannelTemplate properties.</para>
+          <code> 
+
+            AudioVideoFlowTemplate templateToApply = new AudioVideoFlowTemplate(audioVideoFlow);
+            AudioChannelTemplate audioChannelTemplate = (AudioChannelTemplate)templateToApply.Audio.GetChannels()[ChannelLabel.AudioMono];
+            audioChannelTemplate.AllowedDirection = MediaChannelDirection.SendOnly;
+            audioChannelTemplate.SendDirectionSamplingRate = AudioSamplingRate.EightKhz;
+
+            // ApplyChanges
+            audioVideoFlow.BeginApplyChanges(
+                templateToApply,
+                new AsyncCallback(delegate(IAsyncResult result)
+                {
+                    try
+                    {
+                        audioVideoFlow.EndApplyChanges(result);
+                    }
+                    catch (RealTimeException e)
+                    {
+                        // handle exception
+                        throw e;
+                    }
+
+                    // ApplyChanges is done, verify changes result..
+                    AudioChannel audioChannel = audioVideoFlow.Audio.GetChannels()[ChannelLabel.AudioMono];
+                    if (audioChannel.Direction == MediaChannelDirection.SendOnly &amp;amp;&amp;amp;
+                        audioChannel.SendDirectionSamplingRate == AudioSamplingRate.EightKhz)
+                    {
+                        // remote side accepted changes as they were
+                    }
+                    else
+                    {
+                        // remote side accepted changes but filtered them more.
+                    }
+                }),
+                this);
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when assigned value is not defined in enumerated type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelTemplate.Label" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Label As ChannelLabel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::ChannelLabel Label { Microsoft::Rtc::Collaboration::AudioVideo::ChannelLabel get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Rtc.Collaboration.AudioVideo.IMediaChannel.Label</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Stream Label.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

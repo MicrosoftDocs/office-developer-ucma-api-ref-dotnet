@@ -1,0 +1,212 @@
+﻿<Type Name="TlsFailureReason" FullName="Microsoft.Rtc.Signaling.TlsFailureReason">
+  <TypeSignature Language="C#" Value="public enum TlsFailureReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TlsFailureReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.TlsFailureReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum TlsFailureReason" />
+  <TypeSignature Language="C++ CLI" Value="public enum class TlsFailureReason" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Indicates possible reasons for TLS failure. 
+            Only common failures are given specific values.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CertificateExpired">
+      <MemberSignature Language="C#" Value="CertificateExpired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason CertificateExpired = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.CertificateExpired" />
+      <MemberSignature Language="VB.NET" Value="CertificateExpired" />
+      <MemberSignature Language="C++ CLI" Value="CertificateExpired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The certificate presented by the remote has expired.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IncorrectNameInRemoteCertificate">
+      <MemberSignature Language="C#" Value="IncorrectNameInRemoteCertificate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason IncorrectNameInRemoteCertificate = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.IncorrectNameInRemoteCertificate" />
+      <MemberSignature Language="VB.NET" Value="IncorrectNameInRemoteCertificate" />
+      <MemberSignature Language="C++ CLI" Value="IncorrectNameInRemoteCertificate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            The target name specified in certificate is incorrect.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalCertificateNotFound">
+      <MemberSignature Language="C#" Value="LocalCertificateNotFound" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason LocalCertificateNotFound = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.LocalCertificateNotFound" />
+      <MemberSignature Language="VB.NET" Value="LocalCertificateNotFound" />
+      <MemberSignature Language="C++ CLI" Value="LocalCertificateNotFound" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The local certificate specified was not found in the local computer store.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason Other = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.Other" />
+      <MemberSignature Language="VB.NET" Value="Other" />
+      <MemberSignature Language="C++ CLI" Value="Other" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Some other reason. See Error Code for specific failure.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteCertificateInvalidUsage">
+      <MemberSignature Language="C#" Value="RemoteCertificateInvalidUsage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason RemoteCertificateInvalidUsage = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.RemoteCertificateInvalidUsage" />
+      <MemberSignature Language="VB.NET" Value="RemoteCertificateInvalidUsage" />
+      <MemberSignature Language="C++ CLI" Value="RemoteCertificateInvalidUsage" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            The remote certificate does not have the required enhanced key usage.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteCertificateRevoked">
+      <MemberSignature Language="C#" Value="RemoteCertificateRevoked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason RemoteCertificateRevoked = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.RemoteCertificateRevoked" />
+      <MemberSignature Language="VB.NET" Value="RemoteCertificateRevoked" />
+      <MemberSignature Language="C++ CLI" Value="RemoteCertificateRevoked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            The remote certificate was revoked.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteDisconnected">
+      <MemberSignature Language="C#" Value="RemoteDisconnected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason RemoteDisconnected = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.RemoteDisconnected" />
+      <MemberSignature Language="VB.NET" Value="RemoteDisconnected" />
+      <MemberSignature Language="C++ CLI" Value="RemoteDisconnected" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            The remote disconnected while TLS negotiation was in progress.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TlsNegotiationFailure">
+      <MemberSignature Language="C#" Value="TlsNegotiationFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason TlsNegotiationFailure = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.TlsNegotiationFailure" />
+      <MemberSignature Language="VB.NET" Value="TlsNegotiationFailure" />
+      <MemberSignature Language="C++ CLI" Value="TlsNegotiationFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The Tls negotiation failed. Either the local certificate is unusable or the remote does not trust it.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UntrustedRemoteCertificate">
+      <MemberSignature Language="C#" Value="UntrustedRemoteCertificate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.TlsFailureReason UntrustedRemoteCertificate = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TlsFailureReason.UntrustedRemoteCertificate" />
+      <MemberSignature Language="VB.NET" Value="UntrustedRemoteCertificate" />
+      <MemberSignature Language="C++ CLI" Value="UntrustedRemoteCertificate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.TlsFailureReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The certificate presented by the remote was not trusted.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

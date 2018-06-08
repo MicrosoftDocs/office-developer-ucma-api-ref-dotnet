@@ -1,0 +1,233 @@
+﻿<Type Name="InstantMessagingFlowTemplate" FullName="Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate">
+  <TypeSignature Language="C#" Value="public class InstantMessagingFlowTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InstantMessagingFlowTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public Class InstantMessagingFlowTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InstantMessagingFlowTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents settings for an InstantMessagingFlow instance.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstantMessagingFlowTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; InstantMessagingFlowTemplate();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the InstantMessagingFlowTemplate class with default values. 
+            </summary>
+        <remarks>
+          <para>Default value for MessageConsumptionMode is ConsumedLocally. 
+            Default value for SupportedFormats is PlainText.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstantMessagingFlowTemplate (Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.#ctor(Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (source As InstantMessagingFlowTemplate)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; InstantMessagingFlowTemplate(Microsoft::Rtc::Collaboration::InstantMessagingFlowTemplate ^ source);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="source">The source template.</param>
+        <summary>
+            Creates a new instance of the InstantMessagingFlowTemplate class with values from the specified flow template.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public InstantMessagingFlowTemplate (Microsoft.Rtc.Collaboration.InstantMessagingFormat supportedFormats);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Collaboration.InstantMessagingFormat supportedFormats) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.#ctor(Microsoft.Rtc.Collaboration.InstantMessagingFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (supportedFormats As InstantMessagingFormat)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; InstantMessagingFlowTemplate(Microsoft::Rtc::Collaboration::InstantMessagingFormat supportedFormats);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="supportedFormats" Type="Microsoft.Rtc.Collaboration.InstantMessagingFormat" />
+      </Parameters>
+      <Docs>
+        <param name="supportedFormats"> Flags that define IM formats that are supported. </param>
+        <summary>
+            Creates a new instance of the InstantMessagingFlowTemplate class with given Supported Formats. 
+            </summary>
+        <remarks>
+          <para>Default value for MessageConsumptionMode is ConsumedLocally.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComposingTimeoutValue">
+      <MemberSignature Language="C#" Value="public int ComposingTimeoutValue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ComposingTimeoutValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.ComposingTimeoutValue" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComposingTimeoutValue As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ComposingTimeoutValue { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value (in seconds) for the composing timeout. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This is used to control the timeout value used for all instant messaging 
+            flows. The default value is 3 seconds. The maximum value is 30 seconds. 
+            The local composing state indicated by the IM flow goes back to Idle if 
+            the application does not set the local compositing state within this 
+            time period. If the application expects the composing state from a web 
+            client which can cause some roundtrip delay, then it is recommended that 
+            this time out value is increased.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageConsumptionMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode MessageConsumptionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode MessageConsumptionMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.MessageConsumptionMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property MessageConsumptionMode As InstantMessageConsumptionMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode MessageConsumptionMode { Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode get(); void set(Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value indicating the consumption mode of the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Represents the setting for an application to indicate how it intends to handle instant messages.
+            The incoming messages are handled according to the following conditions: If the application consumes 
+            messages locally, incoming messages are automatically acknowledged with a 200 response code. 
+            If the application proxies the messages, the incoming
+            messages are automatically acknowledged with a 202 response code (if the remote supports message delivery 
+            notificiations) or the response is delayed. The application is responsible for sending delivery notification 
+            later for every message received. By default, the value is InstantMessageConsumptionMode.ConsumedLocally.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedFormats">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingFormat SupportedFormats { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.InstantMessagingFormat SupportedFormats" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.SupportedFormats" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportedFormats As InstantMessagingFormat" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingFormat SupportedFormats { Microsoft::Rtc::Collaboration::InstantMessagingFormat get(); void set(Microsoft::Rtc::Collaboration::InstantMessagingFormat value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the list of ContentTypes supported by the IM Flow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToastFormatSupport">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CapabilitySupport ToastFormatSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CapabilitySupport ToastFormatSupport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.ToastFormatSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property ToastFormatSupport As CapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CapabilitySupport ToastFormatSupport { Microsoft::Rtc::Collaboration::CapabilitySupport get(); void set(Microsoft::Rtc::Collaboration::CapabilitySupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets toast format support value
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            When an application says it supports toast format then it is an indication to the remote side that 
+            it need not send the text message associated with the toast message again in rich text format.
+            By default, application endpoint will support toast format since it does not require the 
+            remote participant to send the text message again.
+            <see cref="T:Microsoft.Rtc.Collaboration.ToastMessage" /></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitingForDeliveryNotificationDisabled">
+      <MemberSignature Language="C#" Value="public bool WaitingForDeliveryNotificationDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WaitingForDeliveryNotificationDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate.WaitingForDeliveryNotificationDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property WaitingForDeliveryNotificationDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool WaitingForDeliveryNotificationDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value to control whether the BeginSendInstantMessage operation will wait for delivery notifications before completion.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

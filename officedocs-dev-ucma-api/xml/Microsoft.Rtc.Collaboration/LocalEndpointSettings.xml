@@ -1,0 +1,453 @@
+﻿<Type Name="LocalEndpointSettings" FullName="Microsoft.Rtc.Collaboration.LocalEndpointSettings">
+  <TypeSignature Language="C#" Value="public abstract class LocalEndpointSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LocalEndpointSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LocalEndpointSettings" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LocalEndpointSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LocalEndpointSettings abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the base type for settings needed to initialize an LocalEndpoint. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LocalEndpointSettings (string ownerUri);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string ownerUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointSettings.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (ownerUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; LocalEndpointSettings(System::String ^ ownerUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the owner of this endpoint.</param>
+        <summary>
+            Initializes LocalEndpointSettings object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown if one or more arguments are null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LocalEndpointSettings (string ownerUri, Microsoft.Rtc.Signaling.ConnectionContext serverConnectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string ownerUri, class Microsoft.Rtc.Signaling.ConnectionContext serverConnectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointSettings.#ctor(System.String,Microsoft.Rtc.Signaling.ConnectionContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (ownerUri As String, serverConnectionContext As ConnectionContext)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; LocalEndpointSettings(System::String ^ ownerUri, Microsoft::Rtc::Signaling::ConnectionContext ^ serverConnectionContext);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="serverConnectionContext" Type="Microsoft.Rtc.Signaling.ConnectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the owner of this endpoint.</param>
+        <param name="serverConnectionContext">
+            The server connection information.
+            </param>
+        <summary>
+            Initializes LocalEndpointSettings object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more arguments are null or empty</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one or more arguments are not valid</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LocalEndpointSettings (string ownerUri, string serverName, int serverPort);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string ownerUri, string serverName, int32 serverPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointSettings.#ctor(System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (ownerUri As String, serverName As String, serverPort As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; LocalEndpointSettings(System::String ^ ownerUri, System::String ^ serverName, int serverPort);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Please use constructor that takes ConnectionContext instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="serverName" Type="System.String" />
+        <Parameter Name="serverPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the owner of this endpoint.</param>
+        <param name="serverName">Server host name.</param>
+        <param name="serverPort">Server port.</param>
+        <summary>
+            Initializes LocalEndpointSettings object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdditionalHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; AdditionalHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; AdditionalHeaders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.AdditionalHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AdditionalHeaders As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ AdditionalHeaders { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the collection of additional headers that should be placed on every SIP message sent
+            by the endpoint.  This may be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointSubtype">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.EndpointSubtype EndpointSubtype { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.EndpointSubtype EndpointSubtype" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.EndpointSubtype" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndpointSubtype As EndpointSubtype" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::EndpointSubtype EndpointSubtype {  public:&#xA;Microsoft::Rtc::Collaboration::EndpointSubtype get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::EndpointSubtype value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The subtype of the user agent that this endpoint represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.EndpointType EndpointType { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.EndpointType EndpointType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.EndpointType" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndpointType As EndpointType" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::EndpointType EndpointType {  public:&#xA;Microsoft::Rtc::Collaboration::EndpointType get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::EndpointType value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of user agent that this endpoint represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointUserAgent">
+      <MemberSignature Language="C#" Value="public string EndpointUserAgent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointUserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.EndpointUserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndpointUserAgent As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointUserAgent { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the endpoint user agent string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This string is used to build the overall UserAgent string for the endpoint. 
+            This needs to be set only if each endpoint's user agent string is different.
+            If all endpoints in the application have the same user agent string, only set the application 
+            user agent string in CollaborationPlatform. 
+            The overall UserAgent string is formed by combining a default user agent string with
+            CollaborationPlatform.ApplicationUserAgent and LocalEndpoint.EndpointUserAgent</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutsideCorporateNetwork">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; IsOutsideCorporateNetwork { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; IsOutsideCorporateNetwork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.IsOutsideCorporateNetwork" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsOutsideCorporateNetwork As Nullable(Of Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;bool&gt; IsOutsideCorporateNetwork { Nullable&lt;bool&gt; get(); void set(Nullable&lt;bool&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the endpoint registers inside or outside the corporate network.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If the app sets the value it overrides the default
+            behavior of retrieving the value from the registration response.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRegisterRetries">
+      <MemberSignature Language="C#" Value="public int MaxRegisterRetries { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRegisterRetries" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.MaxRegisterRetries" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxRegisterRetries As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxRegisterRetries { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum number of times that the endpoint should try to recover from registration refresh failure.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This setting is only used for registered endpoints.</para>
+          <para>After initial registration an endpoint's registration needs to be refreshed periodically
+            or when connection failures happen. This setting dictates how many times the endpoint
+            should retry registration upon encountering failures. When no more retries are left
+            the endpoint is terminated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.OutboundConnectionConfiguration OutboundConnectionConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.OutboundConnectionConfiguration OutboundConnectionConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.OutboundConnectionConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutboundConnectionConfiguration As OutboundConnectionConfiguration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ OutboundConnectionConfiguration { Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ get(); void set(Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.OutboundConnectionConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the object containing outbound configuration settings.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerUri">
+      <MemberSignature Language="C#" Value="public string OwnerUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.OwnerUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the owner of this endpoint. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceBasedScreeningDisabled">
+      <MemberSignature Language="C#" Value="public bool PresenceBasedScreeningDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PresenceBasedScreeningDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.PresenceBasedScreeningDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property PresenceBasedScreeningDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PresenceBasedScreeningDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether calls should used be screened based on presence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If enabled, incoming calls are screened based on the user's state as perceived by the
+            remote participant. It is only applicable for registered endpoints.
+            </para>
+          <para>
+            The default value is false.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvisioningDataDisabled">
+      <MemberSignature Language="C#" Value="public bool ProvisioningDataDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProvisioningDataDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.ProvisioningDataDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property ProvisioningDataDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProvisioningDataDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future Versions. Please use ApplicationEndpointSettings.ProvisioningDataQueryDisabled instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether to query for the provisioning data when the endpoint is established.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, the value is set to false and hence by default we will query for provisioning data on start up.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishingQoeMetricsDisabled">
+      <MemberSignature Language="C#" Value="public bool PublishingQoeMetricsDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PublishingQoeMetricsDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.PublishingQoeMetricsDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property PublishingQoeMetricsDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PublishingQoeMetricsDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the endpoint will try to publish quality metrics for the audio calls.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If set to true then the media quality metrics will not be published to the QoE server. Otherwise, by default,
+            the media quality metrics will be published.
+            </para>
+          <para>
+            The default value is false. Applications can override this default value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMethods">
+      <MemberSignature Language="C#" Value="public string RegisterMethods { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegisterMethods" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.RegisterMethods" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegisterMethods As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RegisterMethods { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the methods supported by a registered endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This is an advanced setting and most applications do not need to set it. 
+            Only applications that know exactly which SIP methods they support should set it. 
+            If it is empty, support for all the required SIP methods are advertised in the register request.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMimePartContentTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Net.Mime.ContentType&gt; SupportedMimePartContentTypes { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Net.Mime.ContentType&gt; SupportedMimePartContentTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointSettings.SupportedMimePartContentTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportedMimePartContentTypes As IEnumerable(Of ContentType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ SupportedMimePartContentTypes { System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ get(); void set(System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Net.Mime.ContentType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the list of content types that can be supported by the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The content type of any MIME part with handling="required" should be in this list.
+            Otherwise, incoming calls will be rejected automatically.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

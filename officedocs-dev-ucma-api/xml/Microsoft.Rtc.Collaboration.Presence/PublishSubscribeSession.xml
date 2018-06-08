@@ -1,0 +1,307 @@
+﻿<Type Name="PublishSubscribeSession" FullName="Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession">
+  <TypeSignature Language="C#" Value="public abstract class PublishSubscribeSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PublishSubscribeSession extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PublishSubscribeSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class PublishSubscribeSession abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The PublishSubscribeSession class provides a simplified wrapper to establish and terminate subscription and to process the
+            <see cref="T:Microsoft.Rtc.Signaling.SipSubscription" /> events. It also handles service requests asynchronously.
+            </summary>
+    <remarks>
+      <para>
+            This is the base class for the <see cref="T:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" /> and <see cref="T:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices" /> classes.
+            <see cref="T:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" /> provides common operations to create, refresh, and terminate subscriptions. It internally creates
+            and manages a <see cref="T:Microsoft.Rtc.Signaling.SipSubscription" /> dialog to the Microsoft Communications Server server.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginRefresh">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginRefresh (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginRefresh(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginRefresh(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to refresh the underlying subscription.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked before the subscription is established.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSubscribe">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginSubscribe (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSubscribe(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginSubscribe(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BeginSubscribe (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual IAsyncResult ^ BeginSubscribe(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to subscribe to the presence session.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>UCMA allows subscription to be reused. Hence, the application can re-subscribe to the same subscription
+            after it has been unsubscribed.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription is not in a valid state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnsubscribe">
+      <MemberSignature Language="C#" Value="public virtual IAsyncResult BeginUnsubscribe (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginUnsubscribe(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginUnsubscribe(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function BeginUnsubscribe (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual IAsyncResult ^ BeginUnsubscribe(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to unsubscribe the underlying subscription.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>If no underlying subscription exists, then this operation completes immediately.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState CurrentState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState CurrentState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.CurrentState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentState As CollaborationSubscriptionState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::CollaborationSubscriptionState CurrentState { Microsoft::Rtc::Collaboration::Presence::CollaborationSubscriptionState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the state of the subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRefresh">
+      <MemberSignature Language="C#" Value="public virtual void EndRefresh (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndRefresh(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.EndRefresh(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndRefresh (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndRefresh(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the Refresh Operation initiated by BeginRefresh.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSubscribe">
+      <MemberSignature Language="C#" Value="public virtual void EndSubscribe (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndSubscribe(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.EndSubscribe(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndSubscribe (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndSubscribe(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the Subscribe operation initiated by BeginSubscribe.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the endpoint or session is in an invalid state during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUnsubscribe">
+      <MemberSignature Language="C#" Value="public virtual void EndUnsubscribe (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EndUnsubscribe(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.EndUnsubscribe(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndUnsubscribe (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndUnsubscribe(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation started by BeginUnsubscribe method.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the argument passed is null or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when this method is invoked multiple times using the same result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSubscriptionActive">
+      <MemberSignature Language="C#" Value="public bool IsSubscriptionActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSubscriptionActive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.IsSubscriptionActive" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSubscriptionActive As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSubscriptionActive { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future versions. Use the property 'CurrentState' instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the session has an active underlying subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriberEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LocalEndpoint SubscriberEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LocalEndpoint SubscriberEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriberEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriberEndpoint As LocalEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ SubscriberEndpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the endpoint that the subscription belongs to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionStateChange">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs&gt; SubscriptionStateChange;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs&gt; SubscriptionStateChange" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriptionStateChange" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event SubscriptionStateChange As EventHandler(Of PresenceSubscriptionStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::PresenceSubscriptionStateChangedEventArgs ^&gt; ^ SubscriptionStateChange;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when there are changes in the underlying subscription state.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

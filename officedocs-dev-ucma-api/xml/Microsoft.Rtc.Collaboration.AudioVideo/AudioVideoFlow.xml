@@ -1,0 +1,829 @@
+﻿<Type Name="AudioVideoFlow" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow">
+  <TypeSignature Language="C#" Value="public sealed class AudioVideoFlow : Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AudioVideoFlow extends Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AudioVideoFlow&#xA;Inherits MediaFlow" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoFlow sealed : Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            AudioVideoFlow represents media connection with single remote participant.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Audio">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioControl Audio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.AudioControl Audio" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.Audio" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Audio As AudioControl" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioControl ^ Audio { Microsoft::Rtc::Collaboration::AudioVideo::AudioControl ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an audio control.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginApplyChanges">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginApplyChanges (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate template, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginApplyChanges(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate template, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.BeginApplyChanges(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginApplyChanges (template As AudioVideoFlowTemplate, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginApplyChanges(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlowTemplate ^ template, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="template">The template to be used as a reference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Applies changes from the specified template.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This method cannot be used to change the AudioVideoFlow's hold status.
+            Call BeginHold to put the AudioVideoFlow on hold, and BeginRetrieve to unhold.
+            The value of the template's HoldType property must be equal to either None or the current
+            value of the AudioVideoFlow HoldStatus property. A value of None will not change the
+            AudioVideoFlow's hold status.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example applies changes to an AudioVideoFlow.
+                </para>
+          <para> C# Modifying AudioChannelTemplate properties.</para>
+          <code> 
+
+            AudioVideoFlowTemplate templateToApply = new AudioVideoFlowTemplate(audioVideoFlow);
+            AudioChannelTemplate audioChannelTemplate = (AudioChannelTemplate)templateToApply.Audio.GetChannels()[ChannelLabel.AudioMono];
+            audioChannelTemplate.AllowedDirection = MediaChannelDirection.SendOnly;
+            audioChannelTemplate.SendDirectionSamplingRate = AudioSamplingRate.EightKhz;
+
+            // ApplyChanges
+            audioVideoFlow.BeginApplyChanges(
+                templateToApply,
+                new AsyncCallback(delegate(IAsyncResult result)
+                {
+                    try
+                    {
+                        audioVideoFlow.EndApplyChanges(result);
+                    }
+                    catch (RealTimeException e)
+                    {
+                        // handle exception
+                        throw e;
+                    }
+
+                    // ApplyChanges is done, verify changes result..
+                    AudioChannel audioChannel = audioVideoFlow.Audio.GetChannels()[ChannelLabel.AudioMono];
+                    if (audioChannel.Direction == MediaChannelDirection.SendOnly &amp;amp;&amp;amp;
+                        audioChannel.SendDirectionSamplingRate == AudioSamplingRate.EightKhz)
+                    {
+                        // remote side accepted changes as they were
+                    }
+                    else
+                    {
+                        // remote side accepted changes but filtered them more.
+                    }
+                }),
+                this);
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state,
+            or when the template has no channels,
+            or when the template's HoldType property is not equal to either None or the AudioVideoFlow's current HoldStatus,
+            or when there is already an asynchronous operation in progress.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the template argument is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginApplyChanges">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginApplyChanges (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate template, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginApplyChanges(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate template, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.BeginApplyChanges(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginApplyChanges (template As AudioVideoFlowTemplate, headers As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginApplyChanges(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlowTemplate ^ template, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate" />
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="template">The template to be used as a reference.</param>
+        <param name="headers">The signaling headers.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Applies changes from the specified template.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This method cannot be used to change the AudioVideoFlow's hold status.
+            Call BeginHold to put the AudioVideoFlow on hold, and BeginRetrieve to unhold.
+            The value of the template's HoldType property must be equal to either None or the current
+            value of the AudioVideoFlow HoldStatus property. A value of None will not change the
+            AudioVideoFlow's hold status.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state,
+            or when the template has no channels,
+            or when the template's HoldType property is not equal to either None or the AudioVideoFlow's current HoldStatus,
+            or when there is already an asynchronous operation in progress.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the template argument is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginHold">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginHold (Microsoft.Rtc.Collaboration.AudioVideo.HoldType holdType, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginHold(valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType holdType, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.BeginHold(Microsoft.Rtc.Collaboration.AudioVideo.HoldType,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginHold(Microsoft::Rtc::Collaboration::AudioVideo::HoldType holdType, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="holdType" Type="Microsoft.Rtc.Collaboration.AudioVideo.HoldType" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="holdType">The type of hold to be used.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins to hold the AudioVideoFlow.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example puts the call on hold.
+                </para>
+          <para> C# Putting a call on hold.</para>
+          <code> 
+
+            audioVideoFlow.BeginHold(
+                HoldType.BothEndpoints, 
+                new AsyncCallback(delegate(IAsyncResult result)
+                {
+                    try
+                    {
+                        audioVideoFlow.EndHold(result);
+                    }
+                    catch (RealTimeException e)
+                    {
+                        // handle exception
+                        throw e;
+                    }
+
+                    // audioVideoFlow is now on hold
+                }),
+                this);
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is already an asynchronous operation in progress.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the holdType argument value is not a value in the HoldType enumerated type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginHold">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginHold (Microsoft.Rtc.Collaboration.AudioVideo.HoldType holdType, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginHold(valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType holdType, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.BeginHold(Microsoft.Rtc.Collaboration.AudioVideo.HoldType,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginHold(Microsoft::Rtc::Collaboration::AudioVideo::HoldType holdType, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="holdType" Type="Microsoft.Rtc.Collaboration.AudioVideo.HoldType" />
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="holdType">The type of hold to be used.</param>
+        <param name="headers">The signaling headers.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins to hold the AudioVideoFlow.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is already an asynchronous operation in progress.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when holdType argument value is None or is not a value in the HoldType enumerated type.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRetrieve">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRetrieve (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRetrieve(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.BeginRetrieve(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRetrieve (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRetrieve(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins to retrieve the AudioVideoFlow.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example retrieves an AudioVideoFlow from a hold state.
+                </para>
+          <para> C# Retrieving a call.</para>
+          <code> 
+
+            if (audioVideoFlow.HoldStatus != HoldType.None)
+            {
+                audioVideoFlow.BeginRetrieve(
+                    new AsyncCallback(delegate(IAsyncResult result)
+                {
+                    try
+                    {
+                        audioVideoFlow.EndRetrieve(result);
+                    }
+                    catch (RealTimeException e)
+                    {
+                        // handle exception
+                        throw e;
+                    }
+
+                    // audioVideoFlow is now retrieved.
+                }),
+                this);
+            }
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is already an asynchronous operation in progress.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRetrieve">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRetrieve (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRetrieve(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.BeginRetrieve(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRetrieve (headers As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRetrieve(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="headers">The signaling headers.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins to retrieve the AudioVideoFlow.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is already an asynchronous operation in progress.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall Call { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall Call" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.Call" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call As AudioVideoCall" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCall ^ Call { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCall ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the AudioVideoCall associated with this flow. Can be null if the call type is not AudioVideoCall.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Property value may be null if the application implements a custom Call class.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigurationChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowConfigurationChangedEventArgs&gt; ConfigurationChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowConfigurationChangedEventArgs&gt; ConfigurationChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.ConfigurationChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConfigurationChanged As EventHandler(Of AudioVideoFlowConfigurationChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlowConfigurationChangedEventArgs ^&gt; ^ ConfigurationChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowConfigurationChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised by an AudioVideoFlow instance when any configuration has changed.
+            </summary>
+        <remarks>
+          <para>Configuration changes occur when there is a change in the media flow that causes renegotiation to occur. Such a change
+            can be the result of actions by the AudioVideoFlow instance, actions by the remote user, or by changes in the state
+            of the media flow.
+            </para>
+          <para>
+            AudioVideoFlow-related changes that can cause renegotiation:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>Calls to BeginHold and EndHold (which affect HoldStatus) </description>
+            </item>
+            <item>
+              <description>Calls to BeginRetrieve and EndRetrieve (which affect HoldStatus) </description>
+            </item>
+            <item>
+              <description>Calls to BeginApplyChanges and EndApplyChanges (which affect the TonePolicy and ToneEnabled
+            properties on the AudioVideoFlow instance; the AllowedDirection, Direction, SamplingRate, and HighPerformance properties
+            on the associated media channel ) </description>
+            </item>
+          </list>
+          <para>
+            Changes from the remote endpoint that can cause renegotiation:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>Changes to Direction property on the media channel</description>
+            </item>
+            <item>
+              <description>Changes to the ToneEnabled property on the AudioVideoFlow instance</description>
+            </item>
+          </list>
+          <para>
+            Internal configuration changes that can cause renegotiation:
+            </para>
+          <list type="bullet">
+            <item>
+              <description>A change in the State property on the media flow (Idle to Active, Idle to Terminated,
+            or Active to Terminated)</description>
+            </item>
+            <item>
+              <description>The remote endpoint terminated the call.</description>
+            </item>
+            <item>
+              <description>A user terminated the call.</description>
+            </item>
+          </list>
+          <para>
+            Configuration changes that do not involve renegotiation, and so do not cause ConfigurationChanged to be raised: 
+            </para>
+          <list type="bullet">
+            <item>
+              <description>Attaching or detaching a device </description>
+            </item>
+            <item>
+              <description>Muting or unmuting the audio </description>
+            </item>
+          </list>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example subscribes to AudioVideoFlowConfigurationRequested,
+            and when event is received it disconnects the call if audio channel direction is 
+            different than SendReceive or Inactive.
+                </para>
+          <para> C# Subscribing to AudioVideoFlowConfigurationRequested.</para>
+          <code> 
+
+            audioVideoFlow.ConfigurationChanged += delegate(object sender, AudioVideoFlowConfigurationChangedEventArgs arg)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                // check directions
+                AudioChannel audioChannel = (AudioChannel)avFlow.Audio.GetChannels()[ChannelLabel.AudioMono];
+                if ((audioChannel.Direction != MediaChannelDirection.SendReceive)
+                    &amp;amp;&amp;amp; (audioChannel.Direction != MediaChannelDirection.Inactive))
+                {
+                    AudioVideoCall call = avFlow.Call;
+                    call.EndTerminate(call.BeginTerminate(null, null));
+                }
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="EncryptionPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MediaEncryption EncryptionPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MediaEncryption EncryptionPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.EncryptionPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EncryptionPolicy As MediaEncryption" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaEncryption EncryptionPolicy { Microsoft::Rtc::Collaboration::AudioVideo::MediaEncryption get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MediaEncryption</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current encryption policy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndApplyChanges">
+      <MemberSignature Language="C#" Value="public void EndApplyChanges (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndApplyChanges(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.EndApplyChanges(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndApplyChanges (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndApplyChanges(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="result" /> argument is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the <paramref name="result" /> argument is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndHold">
+      <MemberSignature Language="C#" Value="public void EndHold (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndHold(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.EndHold(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndHold (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndHold(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="result" /> argument is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> argument is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRetrieve">
+      <MemberSignature Language="C#" Value="public void EndRetrieve (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndRetrieve(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.EndRetrieve(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndRetrieve (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRetrieve(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="result" /> argument is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> argument is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HoldStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.HoldType HoldStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType HoldStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.HoldStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HoldStatus As HoldType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::HoldType HoldStatus { Microsoft::Rtc::Collaboration::AudioVideo::HoldType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.HoldType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current hold status.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate template);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate template) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.Initialize(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize (template As AudioVideoFlowTemplate)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Initialize(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlowTemplate ^ template);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="template" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowTemplate" />
+      </Parameters>
+      <Docs>
+        <param name="template">The template to use.</param>
+        <summary>
+            Copies the properties from the template to the AudioVideoFlow instance.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example initializes and AudioVideoFlow turning tone support off.
+                </para>
+          <para> C# Initializing an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoCall.AudioVideoFlowConfigurationRequested += delegate(object sender, AudioVideoFlowConfigurationRequestedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                AudioVideoFlowTemplate template = new AudioVideoFlowTemplate(avFlow);
+                template.TonePolicy = TonePolicy.NotSupported;
+
+                avFlow.Initialize(template);
+            };
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method is not called within the context of the AudioVideoCall
+            FlowCreated event, or when the AudioVideoFlow is not in the Idle state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the template argument is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Player">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.Player Player { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.Player Player" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.Player" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Player As Player" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::Player ^ Player { Microsoft::Rtc::Collaboration::AudioVideo::Player ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.Player</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the player currently attached to this AudioVideoFlow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recorder">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.Recorder Recorder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.Recorder Recorder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.Recorder" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Recorder As Recorder" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::Recorder ^ Recorder { Microsoft::Rtc::Collaboration::AudioVideo::Recorder ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.Recorder</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recorder currently attached to this AudioVideoFlow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeechRecognitionConnector">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector SpeechRecognitionConnector { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector SpeechRecognitionConnector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.SpeechRecognitionConnector" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SpeechRecognitionConnector As SpeechRecognitionConnector" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SpeechRecognitionConnector ^ SpeechRecognitionConnector { Microsoft::Rtc::Collaboration::AudioVideo::SpeechRecognitionConnector ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the speech recognition connector attached to this AudioVideoFlow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeechSynthesisConnector">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SpeechSynthesisConnector SpeechSynthesisConnector { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.SpeechSynthesisConnector SpeechSynthesisConnector" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.SpeechSynthesisConnector" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SpeechSynthesisConnector As SpeechSynthesisConnector" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SpeechSynthesisConnector ^ SpeechSynthesisConnector { Microsoft::Rtc::Collaboration::AudioVideo::SpeechSynthesisConnector ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SpeechSynthesisConnector</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the speech synthesis connector attached to this AudioVideoFlow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToneController">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.ToneController ToneController { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.ToneController ToneController" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.ToneController" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToneController As ToneController" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::ToneController ^ ToneController { Microsoft::Rtc::Collaboration::AudioVideo::ToneController ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.ToneController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ToneController currently attached to this AudioVideoFlow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToneEnabled">
+      <MemberSignature Language="C#" Value="public bool ToneEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ToneEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.ToneEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToneEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ToneEnabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether tone is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TonePolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.TonePolicy TonePolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.TonePolicy TonePolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow.TonePolicy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TonePolicy As TonePolicy" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::TonePolicy TonePolicy { Microsoft::Rtc::Collaboration::AudioVideo::TonePolicy get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.TonePolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the AudioVideoFlow's tone policy.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

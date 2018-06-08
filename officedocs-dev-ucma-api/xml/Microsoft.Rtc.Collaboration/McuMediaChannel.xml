@@ -1,0 +1,232 @@
+﻿<Type Name="McuMediaChannel" FullName="Microsoft.Rtc.Collaboration.McuMediaChannel">
+  <TypeSignature Language="C#" Value="public class McuMediaChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit McuMediaChannel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.McuMediaChannel" />
+  <TypeSignature Language="VB.NET" Value="Public Class McuMediaChannel" />
+  <TypeSignature Language="C++ CLI" Value="public ref class McuMediaChannel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a media for an MCU or Endpoint.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public McuMediaChannel (string mediaType, Microsoft.Rtc.Collaboration.McuMediaChannelStatus status);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string mediaType, valuetype Microsoft.Rtc.Collaboration.McuMediaChannelStatus status) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuMediaChannel.#ctor(System.String,Microsoft.Rtc.Collaboration.McuMediaChannelStatus)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mediaType As String, status As McuMediaChannelStatus)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; McuMediaChannel(System::String ^ mediaType, Microsoft::Rtc::Collaboration::McuMediaChannelStatus status);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mediaType" Type="System.String" />
+        <Parameter Name="status" Type="Microsoft.Rtc.Collaboration.McuMediaChannelStatus" />
+      </Parameters>
+      <Docs>
+        <param name="mediaType">The name or type of media from MediaType class constants</param>
+        <param name="status">The status of the media.</param>
+        <summary>
+            Constructs the medium.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.McuMediaChannel Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.McuMediaChannel Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuMediaChannel.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As McuMediaChannel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::McuMediaChannel ^ Clone();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.McuMediaChannel</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Make a copy we can modify
+            </summary>
+        <returns>Copy of the current object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayText">
+      <MemberSignature Language="C#" Value="public string DisplayText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuMediaChannel.DisplayText" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisplayText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the description of the media stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCccpXml">
+      <MemberSignature Language="C#" Value="protected internal virtual void GetCccpXml (System.Xml.XmlWriter writer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void GetCccpXml(class System.Xml.XmlWriter writer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuMediaChannel.GetCccpXml(System.Xml.XmlWriter)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub GetCccpXml (writer As XmlWriter)" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void GetCccpXml(System::Xml::XmlWriter ^ writer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writer" Type="System.Xml.XmlWriter" />
+      </Parameters>
+      <Docs>
+        <param name="writer">The object used to serialized the XML.</param>
+        <summary>
+            Gets the serialized Medium object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuMediaChannel.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the identifier that uniquely identifies this media stream.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public string Label { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuMediaChannel.Label" />
+      <MemberSignature Language="VB.NET" Value="Public Property Label As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Label { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the label of this channel. Label is a standard text string to describe the purpose of this stream (e.g. "main audio").
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaSourceId">
+      <MemberSignature Language="C#" Value="public string MediaSourceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MediaSourceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuMediaChannel.MediaSourceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MediaSourceId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MediaSourceId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the media source id associated with this mcu media channel. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If media source id is not present, this property will return an empty string.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaType">
+      <MemberSignature Language="C#" Value="public string MediaType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MediaType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuMediaChannel.MediaType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MediaType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MediaType { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the media type of the media.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.McuMediaChannelStatus Status { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.McuMediaChannelStatus Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuMediaChannel.Status" />
+      <MemberSignature Language="VB.NET" Value="Public Property Status As McuMediaChannelStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::McuMediaChannelStatus Status { Microsoft::Rtc::Collaboration::McuMediaChannelStatus get(); void set(Microsoft::Rtc::Collaboration::McuMediaChannelStatus value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.McuMediaChannelStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the media direction that is currently negotiated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,96 @@
+﻿<Type Name="SignalingPropertyChangedEventArgs" FullName="Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class SignalingPropertyChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignalingPropertyChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class SignalingPropertyChangedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignalingPropertyChangedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Returns information indicating which properties have changed.  
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignalingPropertyChangedEventArgs (Type changeType, int propertyChanges);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Type changeType, int32 propertyChanges) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs.#ctor(System.Type,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (changeType As Type, propertyChanges As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingPropertyChangedEventArgs(Type ^ changeType, int propertyChanges);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="changeType" Type="System.Type" />
+        <Parameter Name="propertyChanges" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="changeType">The type of the enum used for the flags.</param>
+        <param name="propertyChanges">A bit field indicating which properties have changed.</param>
+        <summary>
+            Initializes a new instance of the class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangedProperties">
+      <MemberSignature Language="C#" Value="public int ChangedProperties { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChangedProperties" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs.ChangedProperties" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChangedProperties As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ChangedProperties { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an enumeration of type ChangeType encoded as an integer indicating which properties have changed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public Type ChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type ChangeType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingPropertyChangedEventArgs.ChangeType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ChangeType As Type" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Type ^ ChangeType { Type ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the enumeration type represented by the ChangedProperties property.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

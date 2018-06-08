@@ -1,0 +1,1519 @@
+﻿<Type Name="Conversation" FullName="Microsoft.Rtc.Collaboration.Conversation">
+  <TypeSignature Language="C#" Value="public class Conversation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Conversation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Conversation" />
+  <TypeSignature Language="VB.NET" Value="Public Class Conversation" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Conversation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a multi-party, multi-modal call contexts between a local participant and one or more remote participants.
+            </summary>
+    <remarks>
+      <para>
+            A conversation involving more than two participants uses a conference. Typically, 
+            a conversation can either start as a conference or start as a two party conversation 
+            and then get escalated to a conference when a new participant needs to be added 
+            or a modality requiring a multi-point controller unit (MCU) needs to be added.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Conversation (Microsoft.Rtc.Collaboration.LocalEndpoint localEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.LocalEndpoint localEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Conversation(Microsoft::Rtc::Collaboration::LocalEndpoint ^ localEndpoint);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localEndpoint" Type="Microsoft.Rtc.Collaboration.LocalEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="localEndpoint">The endpoint to which this conversation belongs.</param>
+        <summary>
+            Creates a new instance of the Conversation class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="localEndpoint" /> parameter is null.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the user tries to create more than one conversation out of a conference type endpoint,
+            or when the <paramref name="localEndpoint" /> is in terminating or terminated state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Conversation (Microsoft.Rtc.Collaboration.LocalEndpoint localEndpoint, Microsoft.Rtc.Collaboration.ConversationSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.LocalEndpoint localEndpoint, class Microsoft.Rtc.Collaboration.ConversationSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint,Microsoft.Rtc.Collaboration.ConversationSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Conversation(Microsoft::Rtc::Collaboration::LocalEndpoint ^ localEndpoint, Microsoft::Rtc::Collaboration::ConversationSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localEndpoint" Type="Microsoft.Rtc.Collaboration.LocalEndpoint" />
+        <Parameter Name="settings" Type="Microsoft.Rtc.Collaboration.ConversationSettings" />
+      </Parameters>
+      <Docs>
+        <param name="localEndpoint">The endpoint to which this conversation belongs.</param>
+        <param name="settings">The settings to use to initialize the conversation.</param>
+        <summary>
+            Creates a new instance of the Conversation class, with given settings.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="localEndpoint" /> or <paramref name="settings" /> parameter is null.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            User tries to create more than one conversation out of a conference type LocalEndpoint 
+            
+            Supplied <paramref name="settings" /> value contains an ID value that is already assigned to 
+            a different conversation in the given LocalEndpoint
+            <paramref name="localEndpoint" /> is in Terminating or Terminated state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveMediaTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; ActiveMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; ActiveMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.ActiveMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveMediaTypes As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ ActiveMediaTypes { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future versions. Use method 'GetActiveMediaTypes()'")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of active media types for this conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property will be removed from future versions. Instead use method <see cref="M:Microsoft.Rtc.Collaboration.Conversation.GetActiveMediaTypes" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationContext">
+      <MemberSignature Language="C#" Value="public object ApplicationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.ApplicationContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the application-specific context for this conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property is useful for the application
+            to retrieve conversation-specific application context.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEscalateToConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEscalateToConference (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEscalateToConference(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginEscalateToConference(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEscalateToConference (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEscalateToConference(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to escalate the conversation to a conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The conversation must already be joined to a conference before calling this method.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the conversation is not in a proper state for conference escalation
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInviteRemoteParticipants">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInviteRemoteParticipants (System.Collections.Generic.IEnumerable&lt;string&gt; destinationUris, Microsoft.Rtc.Collaboration.ToastMessage toastMessage, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInviteRemoteParticipants(class System.Collections.Generic.IEnumerable`1&lt;string&gt; destinationUris, class Microsoft.Rtc.Collaboration.ToastMessage toastMessage, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginInviteRemoteParticipants(System.Collections.Generic.IEnumerable{System.String},Microsoft.Rtc.Collaboration.ToastMessage,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInviteRemoteParticipants(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ destinationUris, Microsoft::Rtc::Collaboration::ToastMessage ^ toastMessage, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future versions. See ConferenceInvitation.BeginDeliver for more information")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUris" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="toastMessage" Type="Microsoft.Rtc.Collaboration.ToastMessage" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUris">A enumeration of URIs to which invitations to the conference will be sent.</param>
+        <param name="toastMessage">A short message that can be displayed to the recipient upon receipt. This parameter can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            This method will be removed from future versions. Instead, use ConferenceInvitation.BeginDeliver().
+            Begins an asynchronous operation to invite remote participants to the conversationâ€™s conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Sends a conference invitation to each of the <paramref name="destinationUris" />.
+            </para>
+          <para>
+            The conversation must already be joined to a conference before calling this method.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if any of the method parameters fail validation.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the conversation does not have a valid conference session.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginInviteRemoteParticipants">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginInviteRemoteParticipants (System.Collections.Generic.IEnumerable&lt;string&gt; destinationUris, System.Collections.Generic.IEnumerable&lt;string&gt; mediaTypes, Microsoft.Rtc.Collaboration.ToastMessage toastMessage, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInviteRemoteParticipants(class System.Collections.Generic.IEnumerable`1&lt;string&gt; destinationUris, class System.Collections.Generic.IEnumerable`1&lt;string&gt; mediaTypes, class Microsoft.Rtc.Collaboration.ToastMessage toastMessage, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginInviteRemoteParticipants(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},Microsoft.Rtc.Collaboration.ToastMessage,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInviteRemoteParticipants(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ destinationUris, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ mediaTypes, Microsoft::Rtc::Collaboration::ToastMessage ^ toastMessage, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future versions. See ConferenceInvitation.BeginDeliver for more information")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationUris" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="mediaTypes" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="toastMessage" Type="Microsoft.Rtc.Collaboration.ToastMessage" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUris">A enumeration of URIs to which invitations to the conference will be sent.</param>
+        <param name="mediaTypes">An enumeration of media types to be added to the invitation.</param>
+        <param name="toastMessage">A short message which can be displayed to the recipient upon receipt. This parameter can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            This method will be removed from future versions. For more information, see ConferenceInvitation.BeginDeliver().
+            Begins an asynchronous operation to invite remote participants to the conversationâ€™s conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Sends a conference invitation to each of the <paramref name="destinationUris" />.
+            </para>
+          <para>
+            The conversation must already be joined to a conference before calling this method.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if any of the method parameters fail validation.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the conversation does not have a valid conference session.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to terminate the conversation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Terminates the conversation by first terminating all the calls, the conference session and conference invitations
+            associated with this conversation.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to terminate a conversation. Every conversation needs to be terminated to ensure
+            that no memory leaks are introduced. This is true even if the conversation had no calls or conferences active.
+            
+            </para>
+          <para> C# Resuming previous conversation</para>
+          <code> 
+ConversationSettings settings = new ConversationSettings();
+settings.Subject = _previousSubject;
+settings.Id = _previousConversationId;
+settings.Priority = ConversationPriority.Normal;
+
+_conversation1 = new Conversation(_endpoint1, settings);
+            #endregion SpecifyConversationSettings
+
+            #region CreateIMCall
+_imCall1 = new InstantMessagingCall(_conversation1);
+
+_conversation1.BeginTerminate(
+    this.ConversationTerminated,
+    _conversation1 /*state*/);
+                #endregion TerminateConversation
+
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "IM Call 2 did not shut down.");
+                _imCall2 = null;
+
+                if (_conversation2 != null)
+                {
+                    _conversation2.BeginTerminate(
+                        this.ConversationTerminated,
+                        _conversation2 /*state*/);
+                }
+            }
+
+            if (_endpoint1 != null)
+            {
+                _endpoint1.BeginTerminate(
+                    result =&amp;gt;
+                    {
+                        _endpoint1.EndTerminate(result);
+                        shutdownCompleted.Set();
+                    },
+                    null);
+
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Endpoint 1 shutdown did not complete.");
+                _endpoint1 = null;
+            }
+
+            if (_endpoint2 != null)
+            {
+                _endpoint2.BeginTerminate(
+                    result =&amp;gt;
+                    {
+                        _endpoint2.EndTerminate(result);
+                        shutdownCompleted.Set();
+                    },
+                    null);
+
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Endpoint 2 shutdown did not complete.");
+                _endpoint2 = null;
+            }
+
+            if (_platform1 != null)
+            {
+                _platform1.BeginShutdown(
+                    result =&amp;gt;
+                    {
+                        _platform1.EndShutdown(result);
+                        shutdownCompleted.Set();
+                    },
+                        null);
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Platform 1 shutdown did not complete.");
+                _platform1 = null;
+            }
+
+            if (_platform2 != null)
+            {
+                _platform2.BeginShutdown(
+                    result =&amp;gt;
+                    {
+                        _platform2.EndShutdown(result);
+                        shutdownCompleted.Set();
+                    },
+                        null);
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Platform 1 shutdown did not complete.");
+                _platform2 = null;
+            }
+        }
+
+         private void EstablishCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+                call.EndEstablish(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call establish failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+            m_call1Established.Set();
+        }
+
+        private void IncomingCallReceived(
+            object sender,
+            CallReceivedEventArgs&amp;lt;InstantMessagingCall&amp;gt; e)
+        {
+            _imCall2 = e.Call;
+            _conversation2 = e.Call.Conversation;
+
+            try
+            {
+                //e.Call.InstantMessagingFlowConfigurationRequested += this.FlowConfigurationRequested;
+
+                // Accept the call. This will cause FlowConfigurationRequested to be raised.
+                e.Call.BeginAccept(this.AcceptCompleted, e.Call);
+            }
+            catch (InvalidOperationException)
+            {
+                // Call got disconnected before it could be accepted
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call was disconnected.");
+            }
+        }
+
+        private void AcceptCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+
+                call.EndAccept(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call accept failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+            m_call2Established.Set();
+        }
+
+       #region IMFlowConfigurationRequested
+
+private void FlowConfigurationRequested(
+    object sender,
+    InstantMessagingFlowConfigurationRequestedEventArgs e)
+{
+    // Register to receive messages.
+    e.Flow.MessageReceived += this.MessageReceived;
+
+    // Register to receive composing state changes.
+    e.Flow.RemoteComposingStateChanged += this.ComposingStateChanged;
+
+    // Register to receive delivery notifications
+    e.Flow.DeliveryNotificationReceived += this.DeliveryNotificationReceived;
+}
+
+private void ConversationTerminated(IAsyncResult result)
+{
+    // No need for exception handling since Terminate will not fail.
+    Conversation conversation = result.AsyncState as Conversation;
+
+    conversation.EndTerminate(result);
+}
+        #endregion ConversationTerminatedCallback
+
+        [TearDown]
+        public void TearDown()
+        {
+            AutoResetEvent shutdownCompleted = new AutoResetEvent(false);
+
+            if (_imCall1 != null)
+            {
+                _imCall1.BeginTerminate(
+                    result =&amp;gt;
+                    {
+                        _imCall1.EndTerminate(result);
+                        shutdownCompleted.Set();
+                    },
+                    null);
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "IM Call 1 did not shut down.");
+                _imCall1 = null;
+                _conversation1 = null;
+            }
+
+            if (_imCall2 != null)
+            {
+                _imCall2.BeginTerminate(
+                    result =&amp;gt;
+                    {
+                        _imCall2.EndTerminate(result);
+                        shutdownCompleted.Set();
+                    },
+                    null);
+                #region TerminateConversation
+_conversation1.BeginTerminate(
+    this.ConversationTerminated,
+    _conversation1 /*state*/);
+                #endregion TerminateConversation
+
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "IM Call 2 did not shut down.");
+                _imCall2 = null;
+
+                if (_conversation2 != null)
+                {
+                    _conversation2.BeginTerminate(
+                        this.ConversationTerminated,
+                        _conversation2 /*state*/);
+                }
+            }
+
+            if (_endpoint1 != null)
+            {
+                _endpoint1.BeginTerminate(
+                    result =&amp;gt;
+                    {
+                        _endpoint1.EndTerminate(result);
+                        shutdownCompleted.Set();
+                    },
+                    null);
+
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Endpoint 1 shutdown did not complete.");
+                _endpoint1 = null;
+            }
+
+            if (_endpoint2 != null)
+            {
+                _endpoint2.BeginTerminate(
+                    result =&amp;gt;
+                    {
+                        _endpoint2.EndTerminate(result);
+                        shutdownCompleted.Set();
+                    },
+                    null);
+
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Endpoint 2 shutdown did not complete.");
+                _endpoint2 = null;
+            }
+
+            if (_platform1 != null)
+            {
+                _platform1.BeginShutdown(
+                    result =&amp;gt;
+                    {
+                        _platform1.EndShutdown(result);
+                        shutdownCompleted.Set();
+                    },
+                        null);
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Platform 1 shutdown did not complete.");
+                _platform1 = null;
+            }
+
+            if (_platform2 != null)
+            {
+                _platform2.BeginShutdown(
+                    result =&amp;gt;
+                    {
+                        _platform2.EndShutdown(result);
+                        shutdownCompleted.Set();
+                    },
+                        null);
+                TestUtilities.Helper.AssertEvent(shutdownCompleted, "Platform 1 shutdown did not complete.");
+                _platform2 = null;
+            }
+        }
+
+         private void EstablishCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+                call.EndEstablish(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call establish failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+            m_call1Established.Set();
+        }
+
+        private void IncomingCallReceived(
+            object sender,
+            CallReceivedEventArgs&amp;lt;InstantMessagingCall&amp;gt; e)
+        {
+            _imCall2 = e.Call;
+            _conversation2 = e.Call.Conversation;
+
+            try
+            {
+                //e.Call.InstantMessagingFlowConfigurationRequested += this.FlowConfigurationRequested;
+
+                // Accept the call. This will cause FlowConfigurationRequested to be raised.
+                e.Call.BeginAccept(this.AcceptCompleted, e.Call);
+            }
+            catch (InvalidOperationException)
+            {
+                // Call got disconnected before it could be accepted
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call was disconnected.");
+            }
+        }
+
+        private void AcceptCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+
+                call.EndAccept(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call accept failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+            m_call2Established.Set();
+        }
+
+       #region IMFlowConfigurationRequested
+
+private void FlowConfigurationRequested(
+    object sender,
+    InstantMessagingFlowConfigurationRequestedEventArgs e)
+{
+    // Register to receive messages.
+    e.Flow.MessageReceived += this.MessageReceived;
+
+    // Register to receive composing state changes.
+    e.Flow.RemoteComposingStateChanged += this.ComposingStateChanged;
+
+    // Register to receive delivery notifications
+    e.Flow.DeliveryNotificationReceived += this.DeliveryNotificationReceived;
+}
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (Microsoft.Rtc.Collaboration.ConversationTerminateOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class Microsoft.Rtc.Collaboration.ConversationTerminateOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginTerminate(Microsoft.Rtc.Collaboration.ConversationTerminateOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (options As ConversationTerminateOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(Microsoft::Rtc::Collaboration::ConversationTerminateOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConversationTerminateOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Optional parameters to be applied when terminating the conversation. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to terminate the conversation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Terminates the conversation by first terminating all the calls, the conference session and conference invitations
+            associated with this conversation.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="options" /> has invalid diagnostics information..
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdateProperties">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdateProperties (Microsoft.Rtc.Collaboration.ConversationProperties conversationProperties, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateProperties(class Microsoft.Rtc.Collaboration.ConversationProperties conversationProperties, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginUpdateProperties(Microsoft.Rtc.Collaboration.ConversationProperties,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateProperties(Microsoft::Rtc::Collaboration::ConversationProperties ^ conversationProperties, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conversationProperties" Type="Microsoft.Rtc.Collaboration.ConversationProperties" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conversationProperties">The new conversation properties to be updated.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to update the properties of the conversation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Sends a conversation property update message.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="conversationProperties" /> value is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="conversationProperties" /> has no property to update.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the <paramref name="conversationProperties" /> has an invalid property to update.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Calls">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Call&gt; Calls { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Call&gt; Calls" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Calls" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Calls As Collection(Of Call)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Call ^&gt; ^ Calls { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Call ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Call&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of established calls in this conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceSession ConferenceSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConferenceSession ConferenceSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.ConferenceSession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceSession As ConferenceSession" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceSession ^ ConferenceSession { Microsoft::Rtc::Collaboration::ConferenceSession ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference session for this conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This exposes a conference session whose behavior is based on the state of the conversation. For an established
+            conversation, the conference session will use an adhoc conference. For a conversation that is escalated by a remote
+            participant, the conference session uses the conference information sent by the remote via a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEscalateToConference">
+      <MemberSignature Language="C#" Value="public void EndEscalateToConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEscalateToConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndEscalateToConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndEscalateToConference (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEscalateToConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndInviteRemoteParticipants">
+      <MemberSignature Language="C#" Value="public void EndInviteRemoteParticipants (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndInviteRemoteParticipants(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndInviteRemoteParticipants(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndInviteRemoteParticipants (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndInviteRemoteParticipants(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future versions. See ConferenceInvitation.EndDeliver for more information")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when the delivery of the invitation failed for every remote participant to which it was addressed.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LocalEndpoint Endpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LocalEndpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Endpoint As LocalEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ Endpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the endpoint associated with this conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateProperties">
+      <MemberSignature Language="C#" Value="public void EndUpdateProperties (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdateProperties(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndUpdateProperties(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateProperties (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateProperties(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EscalateToConferenceRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.EscalateToConferenceRequestedEventArgs&gt; EscalateToConferenceRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.EscalateToConferenceRequestedEventArgs&gt; EscalateToConferenceRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.EscalateToConferenceRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event EscalateToConferenceRequested As EventHandler(Of EscalateToConferenceRequestedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::EscalateToConferenceRequestedEventArgs ^&gt; ^ EscalateToConferenceRequested;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.EscalateToConferenceRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the existing remote participant requests to escalate the conversation into conference.
+            </summary>
+        <remarks>
+          <para>
+            The platform will automatically accept the escalation request.
+            The application is responsible for joining the conference in the conversation using 
+            the <see cref="P:Microsoft.Rtc.Collaboration.Conversation.ConferenceSession" /> property. The application cannot
+            create a new conference of its own once this event has been raised.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveMediaTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;string&gt; GetActiveMediaTypes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;string&gt; GetActiveMediaTypes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetActiveMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetActiveMediaTypes () As Collection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetActiveMediaTypes();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a snapshot of active mediatypes of all remote participants and the local participant.
+            </summary>
+        <returns>Active media types for the conversation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConversationContextChannels">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationContextChannel&gt; GetConversationContextChannels ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ConversationContextChannel&gt; GetConversationContextChannels() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetConversationContextChannels" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetConversationContextChannels () As Collection(Of ConversationContextChannel)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationContextChannel ^&gt; ^ GetConversationContextChannels();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationContextChannel&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a snapshot of context channels tied to the conversation.
+            </summary>
+        <returns>ConversationContextChannels for the conversation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLobbyParticipants">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; GetLobbyParticipants ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; GetLobbyParticipants() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetLobbyParticipants" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLobbyParticipants () As Collection(Of ConversationParticipant)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ GetLobbyParticipants();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the collection of lobby participants.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            This method returns an empty list for peer-to-peer scenarios.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteParticipantsCount">
+      <MemberSignature Language="C#" Value="public int GetRemoteParticipantsCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRemoteParticipantsCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetRemoteParticipantsCount" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRemoteParticipantsCount () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int GetRemoteParticipantsCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current number of remote participants participating in this conversation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            In conferencing scenarios, the number returned will reflect all the participants with roster visibility <see cref="F:Microsoft.Rtc.Collaboration.ConferencingRosterVisibility.Visible" /> 
+            This includes participants who may be in the lobby.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceCorrelationID">
+      <MemberSignature Language="C#" Value="public long GetTraceCorrelationID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetTraceCorrelationID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetTraceCorrelationID" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the trace correlation id for this instance.
+            </summary>
+        <returns>The trace correlation id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conversation identifier.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonate">
+      <MemberSignature Language="C#" Value="public void Impersonate (string uri, string phoneUri, string displayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Impersonate(string uri, string phoneUri, string displayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.Impersonate(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Impersonate (uri As String, phoneUri As String, displayName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Impersonate(System::String ^ uri, System::String ^ phoneUri, System::String ^ displayName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="phoneUri" Type="System.String" />
+        <Parameter Name="displayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">The URI of the user to impersonate. Required.</param>
+        <param name="phoneUri">The tel URI of the user to impersonate. Optional.</param>
+        <param name="displayName">The display name of the user to impersonate. Optional.</param>
+        <summary>
+            Impersonate as a different user. 
+            </summary>
+        <remarks>
+          <para>
+            This is allowed only when using an <see cref="T:Microsoft.Rtc.Collaboration.ApplicationEndpoint" />.
+            The method can only be called when the conversation state is <see cref="F:Microsoft.Rtc.Collaboration.ConversationState.Idle" /> or <see cref="F:Microsoft.Rtc.Collaboration.ConversationState.Incoming" />.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="phoneUri" /> parameter value is invalid.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked on a <see cref="T:Microsoft.Rtc.Collaboration.UserEndpoint" /> or if the current state of the conversation
+            is neither <see cref="F:Microsoft.Rtc.Collaboration.ConversationState.Idle" /> nor <see cref="F:Microsoft.Rtc.Collaboration.ConversationState.Incoming" />.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InviteRemoteParticipantUpdate">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs&gt; InviteRemoteParticipantUpdate;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs&gt; InviteRemoteParticipantUpdate" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.InviteRemoteParticipantUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event InviteRemoteParticipantUpdate As EventHandler(Of InviteParticipantUpdateEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InviteParticipantUpdateEventArgs ^&gt; ^ InviteRemoteParticipantUpdate;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This event will be removed from future versions. See ConferenceInvitation.EndDeliver for more information")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the remote participant sends a response to the conference invitation.
+            </summary>
+        <remarks>
+          <para>
+            Multiple remote participants can be invited to a conference. This event will be raised each time a response to
+            the conference invitation is received from one of the invited remote participants.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LobbyParticipantAttendanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs&gt; LobbyParticipantAttendanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs&gt; LobbyParticipantAttendanceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.LobbyParticipantAttendanceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event LobbyParticipantAttendanceChanged As EventHandler(Of LobbyParticipantAttendanceChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::LobbyParticipantAttendanceChangedEventArgs ^&gt; ^ LobbyParticipantAttendanceChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more participants join or leave the conference lobby.
+            </summary>
+        <remarks>
+          <para>
+            This event is only raised in conferencing scenarios.
+            </para>
+          <para>
+            For lobby participants who are admitted to the conference, a <see cref="E:Microsoft.Rtc.Collaboration.Conversation.LobbyParticipantAttendanceChanged" /> will be
+            raised indicating that the participant is removed from the lobby participant list with the <see cref="F:Microsoft.Rtc.Collaboration.LobbyRemovalReason.Admitted" /> as the removal reason.
+            Then another <see cref="E:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipantAttendanceChanged" /> will be raised for the same participant indicating that this
+            participant has been added to the conference.
+            </para>
+          <para>
+            As for participants who leave the lobby, a <see cref="E:Microsoft.Rtc.Collaboration.Conversation.LobbyParticipantAttendanceChanged" /> will be raised indicating that 
+            the participant is removed from the lobby participant list with the <see cref="F:Microsoft.Rtc.Collaboration.LobbyRemovalReason.LeftLobby" /> as the removal reason.
+            For this case, the platform does not raise another <see cref="E:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipantAttendanceChanged" /> event.
+            </para>
+          <para>
+            A conference leader can admit or deny lobby participants access into the conference by calling <see cref="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginAdmitLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},System.AsyncCallback,System.Object)" />
+            and <see cref="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginDenyLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},System.AsyncCallback,System.Object)" /></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalParticipant">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationParticipant LocalParticipant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConversationParticipant LocalParticipant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.LocalParticipant" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalParticipant As ConversationParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ LocalParticipant { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the local participant of this conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantPropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&gt; ParticipantPropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&gt; ParticipantPropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.ParticipantPropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantPropertiesChanged As EventHandler(Of ParticipantPropertiesChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantPropertiesChangedEventArgs ^&gt; ^ ParticipantPropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more properties of the participant change(s).
+            </summary>
+        <remarks>
+          <para>
+            The event handler will be raised for both local as well as remote participant property changes.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public string Priority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Priority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Priority" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Priority As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Priority { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the priority of the conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationProperties&gt;&gt; PropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.ConversationProperties&gt;&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.PropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of ConversationProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConversationProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more properties are changed in the conversation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteParticipantAttendanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantAttendanceChangedEventArgs&gt; RemoteParticipantAttendanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantAttendanceChangedEventArgs&gt; RemoteParticipantAttendanceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipantAttendanceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteParticipantAttendanceChanged As EventHandler(Of ParticipantAttendanceChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantAttendanceChangedEventArgs ^&gt; ^ RemoteParticipantAttendanceChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantAttendanceChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more remote participants join or leave the conversation.
+            </summary>
+        <remarks>
+          <para>
+            For conferencing scenarios, this event is only raised for participants who have been admitted into the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteParticipants">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; RemoteParticipants { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; RemoteParticipants" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipants" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteParticipants As Collection(Of ConversationParticipant)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ RemoteParticipants { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of remote participants.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            In conferencing scenarios, the returned collection does not include any lobby participants.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConversationState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ConversationState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationState State { Microsoft::Rtc::Collaboration::ConversationState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current state of the conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationState&gt;&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.StateChangedEventArgs`1&lt;valuetype Microsoft.Rtc.Collaboration.ConversationState&gt;&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of StateChangedEventArgs(Of ConversationState)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConversationState&gt; ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationState&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of the conversation changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Subject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the subject of the conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

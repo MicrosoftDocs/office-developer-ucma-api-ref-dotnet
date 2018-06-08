@@ -1,0 +1,571 @@
+﻿<Type Name="ContactCard" FullName="Microsoft.Rtc.Collaboration.Presence.ContactCard">
+  <TypeSignature Language="C#" Value="public class ContactCard : Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContactCard extends Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.ContactCard" />
+  <TypeSignature Language="VB.NET" Value="Public Class ContactCard&#xA;Inherits PresenceCategory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ContactCard : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PresenceCategory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents the contact card presence category which provides a details about a presentity such as display name,
+            physical and email address, work information, personal web urls and phone numbers among others. Information on whether this 
+            presentity is an automaton or a regular user can also be found here.
+            </summary>
+    <remarks>
+      <para>When subscribing to remote presentities, this category is automated requested for.</para>
+      <para>Bots or automatons whose presence rarely changes and would like watchers on Lync or UCMA 3.0 based endpoints can
+            publish their contact card instance with <see cref="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.IsAutomatedService" /> set to true.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContactCard (Microsoft.Rtc.Collaboration.Presence.ContactCard contactCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Presence.ContactCard contactCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContactCard.#ctor(Microsoft.Rtc.Collaboration.Presence.ContactCard)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ContactCard(Microsoft::Rtc::Collaboration::Presence::ContactCard ^ contactCard);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contactCard" Type="Microsoft.Rtc.Collaboration.Presence.ContactCard" />
+      </Parameters>
+      <Docs>
+        <param name="contactCard">To be added.</param>
+        <summary>Create an instance of the ContactCard class.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="contactCard" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="contactCard" /> has an invalid inner xml.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContactCard (Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContactCard.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ContactCard(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData" />
+      </Parameters>
+      <Docs>
+        <param name="category">The category as received in the presence notification.</param>
+        <summary>
+            Creates an instance of the ContactCard class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="category" /> or category.Category are null.</exception>
+        <exception cref="T:System.ArgumentException">If category.Name is anything other than the ContactCard.Name or the xml representing category.Category provided is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContactCard (long instanceId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContactCard.#ctor(System.Int64)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (instanceId As Long)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ContactCard(long instanceId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">The instance ID of the ContactCard.</param>
+        <summary>Create an instance of the ContactCard class.</summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="instanceId" /> is not between 0 and UInt32.MaxValue.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Company">
+      <MemberSignature Language="C#" Value="public string Company { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Company" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.Company" />
+      <MemberSignature Language="VB.NET" Value="Public Property Company As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Company { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the name of the company that the Presentity belongs to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpiryPolicy">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContactCard.CreateExpiryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an expiry policy.
+            </summary>
+        <returns>The expiry policy created.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceId">
+      <MemberSignature Language="C#" Value="protected override long CreateInstanceId (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int64 CreateInstanceId(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContactCard.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <summary>
+            Returns the instance id
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Department">
+      <MemberSignature Language="C#" Value="public string Department { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Department" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.Department" />
+      <MemberSignature Language="VB.NET" Value="Public Property Department As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Department { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the department that the presentity belongs to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or Sets the description of the Presentity
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayName">
+      <MemberSignature Language="C#" Value="public string DisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.DisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisplayName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the display name on the contact card.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailAddress">
+      <MemberSignature Language="C#" Value="public string EmailAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EmailAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.EmailAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property EmailAddress As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EmailAddress { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presentity's Email Id.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategoryDataXml">
+      <MemberSignature Language="C#" Value="public override string GetCategoryDataXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCategoryDataXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContactCard.GetCategoryDataXml" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns this instance of contact card as a serialized xml.
+            </summary>
+        <returns>XML representation of this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IconUri">
+      <MemberSignature Language="C#" Value="public string IconUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string IconUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.IconUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IconUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ IconUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the icon uri of the PIC or federated contact.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property will be null, if there is no icon uri published. Users hosted on Microsoft Lync
+            Server do not publish icon uri.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long InstanceId { long get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance id of the contact card.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This is a required parameter if the application wants to publish this category.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAllowedToShowPhoto">
+      <MemberSignature Language="C#" Value="public bool IsAllowedToShowPhoto { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAllowedToShowPhoto" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.IsAllowedToShowPhoto" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsAllowedToShowPhoto As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAllowedToShowPhoto { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the boolean value representing whether this presentity's photo should be displayed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAutomatedService">
+      <MemberSignature Language="C#" Value="public bool IsAutomatedService { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAutomatedService" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.IsAutomatedService" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsAutomatedService As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAutomatedService { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or Sets the value that indicates if presentity is a bot or automaton whose presence information rarely changes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>By default this value is set to false.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="JobTitle">
+      <MemberSignature Language="C#" Value="public string JobTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string JobTitle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.JobTitle" />
+      <MemberSignature Language="VB.NET" Value="Public Property JobTitle As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ JobTitle { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presentity's Title.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfficeLocation">
+      <MemberSignature Language="C#" Value="public string OfficeLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OfficeLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.OfficeLocation" />
+      <MemberSignature Language="VB.NET" Value="Public Property OfficeLocation As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OfficeLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presentity's office.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PersonalWebUrl">
+      <MemberSignature Language="C#" Value="public string PersonalWebUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PersonalWebUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.PersonalWebUrl" />
+      <MemberSignature Language="VB.NET" Value="Public Property PersonalWebUrl As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PersonalWebUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the url of the personal SharePoint site.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>It is the application's responsibility to ensure that this is a well formed web url and is a valid internal 
+            site.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneNumbers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.PhoneNumber&gt; PhoneNumbers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PhoneNumber&gt; PhoneNumbers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.PhoneNumbers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneNumbers As Collection(Of PhoneNumber)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::PhoneNumber ^&gt; ^ PhoneNumbers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::PhoneNumber ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.PhoneNumber&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or Sets the presentity's phone numbers
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotoHashValue">
+      <MemberSignature Language="C#" Value="public string PhotoHashValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhotoHashValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.PhotoHashValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhotoHashValue As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PhotoHashValue { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the photo hash value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            A change in the hash value indicates that the photo has changed and has to be refetched.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhotoUri">
+      <MemberSignature Language="C#" Value="public string PhotoUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhotoUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.PhotoUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property PhotoUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PhotoUri { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the uri indicating the web url of the photo.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Applications are advised to provide a valid web address and ensure that the photo size is 
+            within limitations otherwise Microsoft Lync 2010 may not honor it.
+            The photo size limit recommended can be obtained by the "MaxPhotoSizeKb" property in 
+            Microsoft.Rtc.Collaboration.Presence.ProvisioningData.EndpointConfiguration.Properties.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown if the value is an invalid web address.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PhysicalAddress">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ContactPhysicalAddress PhysicalAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.ContactPhysicalAddress PhysicalAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.PhysicalAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property PhysicalAddress As ContactPhysicalAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ContactPhysicalAddress ^ PhysicalAddress { Microsoft::Rtc::Collaboration::Presence::ContactPhysicalAddress ^ get(); void set(Microsoft::Rtc::Collaboration::Presence::ContactPhysicalAddress ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ContactPhysicalAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the address of the Presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresentityType">
+      <MemberSignature Language="C#" Value="public string PresentityType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PresentityType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContactCard.PresentityType" />
+      <MemberSignature Language="VB.NET" Value="Public Property PresentityType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PresentityType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or Sets the type of the Presentity (automaton/person/huntgroup/autoattendant).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

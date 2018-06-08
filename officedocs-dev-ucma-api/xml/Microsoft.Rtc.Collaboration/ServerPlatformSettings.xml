@@ -1,0 +1,482 @@
+﻿<Type Name="ServerPlatformSettings" FullName="Microsoft.Rtc.Collaboration.ServerPlatformSettings">
+  <TypeSignature Language="C#" Value="public class ServerPlatformSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServerPlatformSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ServerPlatformSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class ServerPlatformSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ServerPlatformSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the settings typically used for creating a server platform instance. 
+            </summary>
+    <remarks>
+      <para>Among other things a CollaborationPlatform in server mode must be configured with a port on which the application
+            will listen for incoming connections. While it possible to use TCP connections, MTLS connections are highly recommended for security reasons.</para>
+      <para>To configure the plaftorm for MTLS, initialize ServerPlatformSettings with a certificate to use. Also, to perform trusted operations such as impersonation
+            the platform must be configured with a trusted Gruu(Globally Routable User Agent Uri). A trusted Gruu is a special Gruu assigned to an application and corresponds
+            to a Trusted Service object in the Active Directory. Refer to the docs on how to provision a trusted application.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerPlatformSettings (string applicationUserAgent, string localhost, int port, string gruu);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string applicationUserAgent, string localhost, int32 port, string gruu) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.#ctor(System.String,System.String,System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (applicationUserAgent As String, localhost As String, port As Integer, gruu As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerPlatformSettings(System::String ^ applicationUserAgent, System::String ^ localhost, int port, System::String ^ gruu);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="applicationUserAgent" Type="System.String" />
+        <Parameter Name="localhost" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="gruu" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="applicationUserAgent">The part of the user agent string that identifies the application. Can be null.</param>
+        <param name="localhost">The FQDN of the machine where the application is deployed.</param>
+        <param name="port">The port on which to listen for incoming connections.</param>
+        <param name="gruu">The trusted GRUU for the application. </param>
+        <summary>
+            Creates a new instance of the ServerPlatformSettings class.
+            </summary>
+        <remarks>
+          <para>
+            Initializes the settings used for creating a platform that uses a server model.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the GRUU specified is not a valid GRUU.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the port value is out of range.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerPlatformSettings (string applicationUserAgent, string localhost, int port, string gruu, System.Security.Cryptography.X509Certificates.X509Certificate certificate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string applicationUserAgent, string localhost, int32 port, string gruu, class System.Security.Cryptography.X509Certificates.X509Certificate certificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.#ctor(System.String,System.String,System.Int32,System.String,System.Security.Cryptography.X509Certificates.X509Certificate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (applicationUserAgent As String, localhost As String, port As Integer, gruu As String, certificate As X509Certificate)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerPlatformSettings(System::String ^ applicationUserAgent, System::String ^ localhost, int port, System::String ^ gruu, System::Security::Cryptography::X509Certificates::X509Certificate ^ certificate);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="applicationUserAgent" Type="System.String" />
+        <Parameter Name="localhost" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="gruu" Type="System.String" />
+        <Parameter Name="certificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate" />
+      </Parameters>
+      <Docs>
+        <param name="applicationUserAgent">The part of the user agent string that identifies the application. Can be null.</param>
+        <param name="localhost">The FQDN of the machine where the application is deployed.</param>
+        <param name="port">The port to listen for incoming connections.</param>
+        <param name="gruu">The trusted GRUU for the application. </param>
+        <param name="certificate">The certificate to use.</param>
+        <summary>
+            Creates a new instance of the ServerPlatformSettings class.
+            </summary>
+        <remarks>
+          <para>
+            Initializes the setting used for creating a platform that uses a server model with a certificate.
+The certificate should be installed in the local computer certificate store.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the GRUU specified is not a valid GRUU.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the port value is out of range.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServerPlatformSettings (string applicationUserAgent, string localhost, int port, string gruu, string certificateIssuerName, byte[] certificateSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string applicationUserAgent, string localhost, int32 port, string gruu, string certificateIssuerName, unsigned int8[] certificateSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (applicationUserAgent As String, localhost As String, port As Integer, gruu As String, certificateIssuerName As String, certificateSerialNumber As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerPlatformSettings(System::String ^ applicationUserAgent, System::String ^ localhost, int port, System::String ^ gruu, System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="applicationUserAgent" Type="System.String" />
+        <Parameter Name="localhost" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="gruu" Type="System.String" />
+        <Parameter Name="certificateIssuerName" Type="System.String" />
+        <Parameter Name="certificateSerialNumber" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="applicationUserAgent">The part of the user agent string that identifies the application. Can be null.</param>
+        <param name="localhost">The fqdn of the machine where the application is deployed.</param>
+        <param name="port">The port to listen for incoming connections.</param>
+        <param name="gruu">The trusted GRUU for the application. </param>
+        <param name="certificateIssuerName">The certificate issuer name.</param>
+        <param name="certificateSerialNumber">The certificate serial number.</param>
+        <summary>
+            Creates a new instance of the ServerPlatformSettings class.
+            </summary>
+        <remarks>
+          <para>
+            Initializes the setting used for creating a platform that uses a server model with a certificate.
+The certificate should be installed in the local computer certificate store.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the GRUU specified is not a valid GRUU.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the port value is out of range.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationUserAgent">
+      <MemberSignature Language="C#" Value="public string ApplicationUserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ApplicationUserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.ApplicationUserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationUserAgent As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationUserAgent { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the part of the user agent string that identifies the application. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This string makes up part of the UserAgent string on the Local Endpoint.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CertificateIssuerName">
+      <MemberSignature Language="C#" Value="public string CertificateIssuerName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CertificateIssuerName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.CertificateIssuerName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CertificateIssuerName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CertificateIssuerName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the certificate issuer name to be used for TLS.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultAudioVideoProviderEnabled">
+      <MemberSignature Language="C#" Value="public bool DefaultAudioVideoProviderEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DefaultAudioVideoProviderEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.DefaultAudioVideoProviderEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultAudioVideoProviderEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DefaultAudioVideoProviderEnabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the default audio/video provider is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            For applications that do not support audio or video, the default setting of loading the audio video media
+            stack consumes memory unnecessarily. Applications can set this property to false, to not load the media stack
+            for better performance.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCertificateSerialNumber">
+      <MemberSignature Language="C#" Value="public byte[] GetCertificateSerialNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetCertificateSerialNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.GetCertificateSerialNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCertificateSerialNumber () As Byte()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetCertificateSerialNumber();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the certificate serial number used for MTLS communications.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gruu">
+      <MemberSignature Language="C#" Value="public string Gruu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Gruu" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.Gruu" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Gruu As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Gruu { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the trusted Gruu for the application. Can be null.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This GRUU is used for privileged operations on application endpoints or for
+            application endpoints which do not register and hence do not have a GRUU.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IpV6SupportDisabled">
+      <MemberSignature Language="C#" Value="public bool IpV6SupportDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IpV6SupportDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.IpV6SupportDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IpV6SupportDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IpV6SupportDisabled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListeningIPAddress">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress ListeningIPAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress ListeningIPAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.ListeningIPAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property ListeningIPAddress As IPAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ ListeningIPAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the IP address on which to listen.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If no listening addresses are set, application will listen on all IP addresses.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the operating system does not support the address family of the address passed in.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the address family is not Internetwork or InternetworkV6.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the enabled address families and the listening addresses don't match.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ListeningPort">
+      <MemberSignature Language="C#" Value="public int ListeningPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ListeningPort" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.ListeningPort" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListeningPort As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ListeningPort { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the port to listen for incoming connections.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Localhost">
+      <MemberSignature Language="C#" Value="public string Localhost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Localhost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.Localhost" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Localhost As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Localhost { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the FQDN of the machine where the application is deployed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionConfiguration">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.OutboundConnectionConfiguration OutboundConnectionConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.OutboundConnectionConfiguration OutboundConnectionConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.OutboundConnectionConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutboundConnectionConfiguration As OutboundConnectionConfiguration" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ OutboundConnectionConfiguration { Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ get(); void set(Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.OutboundConnectionConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryListeningIPAddress">
+      <MemberSignature Language="C#" Value="public System.Net.IPAddress SecondaryListeningIPAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPAddress SecondaryListeningIPAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.SecondaryListeningIPAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property SecondaryListeningIPAddress As IPAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ SecondaryListeningIPAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the secondary IP address on which to listen.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If no listening addresses are set, application will listen on all IP addresses.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the operating system does not support the address family of the address passed in.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the address family is not Internetwork or InternetworkV6.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when the enabled address families and the listening addresses don't match.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedDomainModeForTcp">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.TrustedDomainMode TrustedDomainModeForTcp { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.TrustedDomainMode TrustedDomainModeForTcp" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.TrustedDomainModeForTcp" />
+      <MemberSignature Language="VB.NET" Value="Public Property TrustedDomainModeForTcp As TrustedDomainMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::TrustedDomainMode TrustedDomainModeForTcp { Microsoft::Rtc::Collaboration::TrustedDomainMode get(); void set(Microsoft::Rtc::Collaboration::TrustedDomainMode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.TrustedDomainMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of trusted domain Mode for Tcp connections. The default value is <see cref="TrustedDomainMode.Other" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrustedDomains">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt; TrustedDomains { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.TrustedDomain&gt; TrustedDomains" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.TrustedDomains" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TrustedDomains As Collection(Of TrustedDomain)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::TrustedDomain ^&gt; ^ TrustedDomains { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::TrustedDomain ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the list of trusted domains.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If this is not set, incoming connections are not allowed
+            from any machine except from those destinations to which an outgoing connection has been made.
+            </para>
+          <para>
+            This represents the list of computers that are allowed to
+            make incoming connections when mutual TLS is used. The subject or alternate subjects in the 
+            certificate are matched against this list. Only computers that have a matching entry in this list
+            will be allowed to make incoming connections.
+            </para>
+          <para>
+            This can be set even while listening and will affect future incoming connections. 
+            The domain check is done based on suffix match. So, it is important to use "." at the beginning for domains. 
+            For example, ".microsoft.com" rather than "microsoft.com". If there is no leading period, then 
+            it is assumed to be a FQDN and a complete match will be performed.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

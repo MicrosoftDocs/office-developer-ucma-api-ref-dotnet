@@ -1,0 +1,181 @@
+﻿<Type Name="CustomPresenceCategory" FullName="Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory">
+  <TypeSignature Language="C#" Value="public class CustomPresenceCategory : Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomPresenceCategory extends Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory" />
+  <TypeSignature Language="VB.NET" Value="Public Class CustomPresenceCategory&#xA;Inherits PresenceCategory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CustomPresenceCategory : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PresenceCategory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            CustomPresenceCategory represents category data as an XML string in its simplest form.
+            </summary>
+    <remarks>
+      <para>Applications that wish to publish an instance of <see cref="T:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory" /> can supply the instance id by
+            setting the <see cref="P:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.InstanceId" />. In the event that they don't assign a valid value and a well-known category is being published,
+            UCMA 3.0 will attempt to determine the value itself during the publication operation. In the event it cannot an ArgumentException
+            will be raised during publication. Well known categories include note, state, alerts, routing, rccOptions, calendarData, device,
+            userproperties and userinformation. Similarly the expiry policy is automatically set if the category is any of the categories listed
+            above.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CustomPresenceCategory (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (categoryName As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CustomPresenceCategory(System::String ^ categoryName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Name of the category.</param>
+        <summary>
+            Creates a new instance of the CustomPresenceCategory class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomPresenceCategory (string categoryName, string dataXml);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string categoryName, string dataXml) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (categoryName As String, dataXml As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CustomPresenceCategory(System::String ^ categoryName, System::String ^ dataXml);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+        <Parameter Name="dataXml" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">Name of the category.</param>
+        <param name="dataXml">XML string containing the category data XML.</param>
+        <summary>
+            Creates a new instance of the CustomPresenceCategory class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="dataXml" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateExpiryPolicy">
+      <MemberSignature Language="C#" Value="protected override Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy CreateExpiryPolicy() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.CreateExpiryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an expiry policy.
+            </summary>
+        <returns>The expiry policy created.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInstanceId">
+      <MemberSignature Language="C#" Value="protected override long CreateInstanceId (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int64 CreateInstanceId(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The endpoint for which the category will be published.</param>
+        <summary>
+            Returns the instanceId based on the category type.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>Instance IDs for UserState-time  based publication, phone state, calendar state and
+            calendar data cannot be determined as extra information such as mailbox address etc., needs to be determined.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategoryDataXml">
+      <MemberSignature Language="C#" Value="public override string GetCategoryDataXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCategoryDataXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.GetCategoryDataXml" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the XML string represented by this category.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.CustomPresenceCategory.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public Property InstanceId As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long InstanceId { long get(); void set(long value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the instance id of the category
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This is a required parameter only for the contact card category.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,287 @@
+﻿<Type Name="AudioVideoMcuSessionProperties" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties">
+  <TypeSignature Language="C#" Value="public class AudioVideoMcuSessionProperties : Microsoft.Rtc.Collaboration.McuSessionProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioVideoMcuSessionProperties extends Microsoft.Rtc.Collaboration.McuSessionProperties" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioVideoMcuSessionProperties&#xA;Inherits McuSessionProperties" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoMcuSessionProperties : Microsoft::Rtc::Collaboration::McuSessionProperties" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.McuSessionProperties</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents properties for the AudioVideoMcuSession.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AttendanceAnnouncementsStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AttendanceAnnouncementsStatus As AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current status for attendance announcements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            When attendance announcements are enabled, the conference will announce the names of the participants
+            joining the conference through audio.
+            </para>
+          <para>
+            If a conference supports modifying attendance announcements, a leader can disable attendance announcements 
+            if they overwhelm the conference.
+            </para>
+          <para>
+            The value of this property will be set to <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Disabled" /> if the
+            conference was hosted on a server version prior to Microsoft Lync Server 2010. <see cref="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginModifyAttendanceAnnouncements(Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus,System.AsyncCallback,System.Object)" /></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioMuteAllMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode AudioMuteAllMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode AudioMuteAllMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.AudioMuteAllMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioMuteAllMode As MuteAllMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode AudioMuteAllMode { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current mute all mode of the AudioVideoMcu session for audio medium.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioSelfUnmuteAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment AudioSelfUnmuteAssignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment AudioSelfUnmuteAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.AudioSelfUnmuteAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioSelfUnmuteAssignment As SelfUnmuteAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment AudioSelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current self unmute assignment on AudioVideoMcuSession to the participants for audio medium.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public override object Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Clone () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ Clone();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Implements ICloneable.Clone()
+            </summary>
+        <returns>Returns a deep copy of this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MuteAllMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode MuteAllMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode MuteAllMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.MuteAllMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MuteAllMode As MuteAllMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode MuteAllMode { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future versions. Use AudioMuteAllMode")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current mute all mode of the AudioVideoMcu session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelfUnmuteAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment SelfUnmuteAssignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment SelfUnmuteAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.SelfUnmuteAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelfUnmuteAssignment As SelfUnmuteAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment SelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future versions. Use AudioSelfUnmuteAssignment")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current self unmute assignment on AudioVideoMcuSession to the participants.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAudio">
+      <MemberSignature Language="C#" Value="public bool SupportsAudio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAudio" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.SupportsAudio" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportsAudio As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsAudio { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the MCU supports audio.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsMultiViewVideo">
+      <MemberSignature Language="C#" Value="public bool SupportsMultiViewVideo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsMultiViewVideo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.SupportsMultiViewVideo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsMultiViewVideo As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsMultiViewVideo { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the MCU supports multi-view video.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsVideo">
+      <MemberSignature Language="C#" Value="public bool SupportsVideo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsVideo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.SupportsVideo" />
+      <MemberSignature Language="VB.NET" Value="Public Property SupportsVideo As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsVideo { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the MCU supports video.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VideoSource">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.VideoSource VideoSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.VideoSource VideoSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties.VideoSource" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VideoSource As VideoSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::VideoSource ^ VideoSource { Microsoft::Rtc::Collaboration::AudioVideo::VideoSource ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.VideoSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current video source of audio video mcu session. This property can return null when video source is not set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.VideoSourceMode.Everyone" />.
+            In this video swithcing mode, video of the participant, whose speech is perceived to be dominant by the audio video MCU at a specific moment, will be shown.
+            </para>
+          <para>
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.VideoSourceMode.PresentersOnly" />.
+            In this video swithcing mode, video of the presenter, whose speech is perceived to be dominant by the audio video MCU at a specific moment, will be shown.
+            </para>
+          <para>
+            <see cref="F:Microsoft.Rtc.Collaboration.AudioVideo.VideoSourceMode.PreferredSpeakers" />.
+            In this video switching mode, video of the selected participant(s) will shown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

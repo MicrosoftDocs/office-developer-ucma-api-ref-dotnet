@@ -1,0 +1,143 @@
+﻿<Type Name="MediaSource" FullName="Microsoft.Rtc.Collaboration.AudioVideo.MediaSource">
+  <TypeSignature Language="C#" Value="public abstract class MediaSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MediaSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaSource" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaSource abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The MediaSource class is the base class for all media sources and provides an encapsulation for all media.
+            </summary>
+    <remarks>
+      <para>
+            MediaSource has a one-to-many relationship with Player in that one MediaSource can be attached to one or more Players,
+            but Player can be attached to only one MediaSource.
+            MediaSource.Close() must be called after the application is finished using the object. If Close() is not called, the underlying unmanaged object will not be disposed, causing a memory leak for the application.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginPrepareSource">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginPrepareSource (Microsoft.Rtc.Collaboration.AudioVideo.MediaSourceOpenMode mode, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginPrepareSource(valuetype Microsoft.Rtc.Collaboration.AudioVideo.MediaSourceOpenMode mode, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.BeginPrepareSource(Microsoft.Rtc.Collaboration.AudioVideo.MediaSourceOpenMode,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginPrepareSource (mode As MediaSourceOpenMode, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPrepareSource(Microsoft::Rtc::Collaboration::AudioVideo::MediaSourceOpenMode mode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Microsoft.Rtc.Collaboration.AudioVideo.MediaSourceOpenMode" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The open mode.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Prepares the media source. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            An application must call this method before any Player begins playing a MediaSource.
+            The application must also call EndPrepareSource.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the mode argument is not a value in the MediaSourceOpenMode enumerated type.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the audio/video platform is not initialized.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.Close" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Close ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Close();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Closes the source. 
+            </summary>
+        <remarks>
+          <para>
+            The source can no longer be used after it has been closed.
+            This method must be called after the application is finished using the object. If Close() is not called, the underlying unmanaged object will not be disposed, causing a memory leak for the application.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public abstract int Duration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Duration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.Duration" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Duration As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Duration { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the duration, in milliseconds, of the source.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPrepareSource">
+      <MemberSignature Language="C#" Value="public void EndPrepareSource (IAsyncResult ar);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndPrepareSource(class System.IAsyncResult ar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.EndPrepareSource(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndPrepareSource (ar As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndPrepareSource(IAsyncResult ^ ar);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ar" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="ar">The IAsyncResult object returned by BeginPrepareSource.</param>
+        <summary>
+            Ends the operation initiated by BeginPrepareSource.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

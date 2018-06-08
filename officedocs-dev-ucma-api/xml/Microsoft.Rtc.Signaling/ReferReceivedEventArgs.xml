@@ -1,0 +1,151 @@
+﻿<Type Name="ReferReceivedEventArgs" FullName="Microsoft.Rtc.Signaling.ReferReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class ReferReceivedEventArgs : Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReferReceivedEventArgs extends Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ReferReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ReferReceivedEventArgs&#xA;Inherits SipRequestReceivedEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ReferReceivedEventArgs : Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the argument for the Refer state changed event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ReferNotifier Accept (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.ReferNotifier Accept(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferReceivedEventArgs.Accept(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Accept (signalingHeaders As IEnumerable(Of SignalingHeader)) As ReferNotifier" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::ReferNotifier ^ Accept(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ReferNotifier</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The signaling headers to add. Can be null.</param>
+        <summary>
+            Accepts the Refer operation. This will result in sending the 202 response.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">There is no transaction to accept.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">The operation failed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Decline">
+      <MemberSignature Language="C#" Value="public void Decline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferReceivedEventArgs.Decline" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Decline ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Declines the Refer operation. This will result in sending a default failure response.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeclineWithResponse">
+      <MemberSignature Language="C#" Value="public void DeclineWithResponse (int responseCode, string responseText, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeclineWithResponse(int32 responseCode, string responseText, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferReceivedEventArgs.DeclineWithResponse(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeclineWithResponse (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeclineWithResponse(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="responseText" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The response code. It must be a failure response code.</param>
+        <param name="responseText">The response text, can be null.</param>
+        <param name="signalingHeaders">The signaling headers to add. Can be null.</param>
+        <summary>
+            Declines the Refer operation. This will result in sending a failure response.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The response code was not in the correct range.</exception>
+        <exception cref="T:System.InvalidOperationException">There is no transaction to decline.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">The operation failed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Method">
+      <MemberSignature Language="C#" Value="public string Method { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Method" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferReceivedEventArgs.Method" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Method As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Method { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the action to perform. If null or empty, the request
+            should perform an INVITE. This is retrieved from the method=
+            URI parameter on the Refer-To header if required.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferTarget">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeAddress ReferTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress ReferTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferReceivedEventArgs.ReferTarget" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferTarget As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ ReferTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Refer target.
+            </summary>
+        <value>The target value.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

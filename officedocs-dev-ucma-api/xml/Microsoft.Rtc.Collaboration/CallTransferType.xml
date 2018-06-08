@@ -1,0 +1,69 @@
+﻿<Type Name="CallTransferType" FullName="Microsoft.Rtc.Collaboration.CallTransferType">
+  <TypeSignature Language="C#" Value="public enum CallTransferType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CallTransferType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallTransferType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CallTransferType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class CallTransferType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Type of call transfer - Attended or Unattended.
+            </summary>
+    <remarks>
+      <para>In Unattended type, the call is terminated as soon as the transfer request is accepted by the remote participant.</para>
+      <para>In Attended type, the call monitors the success/failure notifications from the remote regarding how the transfer is being carried out. </para>
+      <para>If the transfer succeeds, this call is terminated otherwise,  the call state is not affected.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Attended">
+      <MemberSignature Language="C#" Value="Attended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.CallTransferType Attended = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.CallTransferType.Attended" />
+      <MemberSignature Language="VB.NET" Value="Attended" />
+      <MemberSignature Language="C++ CLI" Value="Attended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallTransferType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Attended.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unattended">
+      <MemberSignature Language="C#" Value="Unattended" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.CallTransferType Unattended = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.CallTransferType.Unattended" />
+      <MemberSignature Language="VB.NET" Value="Unattended" />
+      <MemberSignature Language="C++ CLI" Value="Unattended" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallTransferType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Unattended.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,2244 @@
+﻿<Type Name="ConferenceSession" FullName="Microsoft.Rtc.Collaboration.ConferenceSession">
+  <TypeSignature Language="C#" Value="public class ConferenceSession : Microsoft.Rtc.Signaling.IOfferAnswer, Microsoft.Rtc.Signaling.ISipSubscriptionProcessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceSession extends System.Object implements class Microsoft.Rtc.Signaling.IOfferAnswer, class Microsoft.Rtc.Signaling.ISipSubscriptionProcessor" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceSession&#xA;Implements IOfferAnswer, ISipSubscriptionProcessor" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceSession : Microsoft::Rtc::Signaling::IOfferAnswer, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Rtc.Signaling.IOfferAnswer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Rtc.Signaling.ISipSubscriptionProcessor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            ConferenceSession enables an application to join a conference and perform other operations related to an activated conference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AccessLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceAccessLevel AccessLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel AccessLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.AccessLevel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AccessLevel As ConferenceAccessLevel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceAccessLevel AccessLevel { Microsoft::Rtc::Collaboration::ConferenceAccessLevel get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference access level.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property is updated after joining the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioVideoMcuSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession AudioVideoMcuSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession AudioVideoMcuSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.AudioVideoMcuSession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoMcuSession As AudioVideoMcuSession" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuSession ^ AudioVideoMcuSession { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuSession ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the audio-video MCU session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value can be null if the application has unregistered the factory for the audio media type.
+            Applications interested in AudioVideoMcuSession events typically register for these events before joining the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticLeaderAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment AutomaticLeaderAssignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment AutomaticLeaderAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.AutomaticLeaderAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutomaticLeaderAssignment As AutomaticLeaderAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment AutomaticLeaderAssignment { Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the automatic leader assignment applied to attendees joining this conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEject">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEject (Microsoft.Rtc.Collaboration.ConversationParticipant participant, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEject(class Microsoft.Rtc.Collaboration.ConversationParticipant participant, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginEject(Microsoft.Rtc.Collaboration.ConversationParticipant,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEject (participant As ConversationParticipant, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEject(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant" Type="Microsoft.Rtc.Collaboration.ConversationParticipant" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participant">The participant to eject.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Ejects all endpoints of a participant from the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the participant argument was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEject">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEject (Microsoft.Rtc.Collaboration.ConversationParticipant participant, Microsoft.Rtc.Collaboration.EjectOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEject(class Microsoft.Rtc.Collaboration.ConversationParticipant participant, class Microsoft.Rtc.Collaboration.EjectOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginEject(Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Collaboration.EjectOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEject (participant As ConversationParticipant, options As EjectOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEject(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, Microsoft::Rtc::Collaboration::EjectOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant" Type="Microsoft.Rtc.Collaboration.ConversationParticipant" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.EjectOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participant">The participant to eject.</param>
+        <param name="options">Options to customize ejecting a participant.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Ejects all endpoints of a participant from the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the participant argument was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetExtendedProperties">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetExtendedProperties (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetExtendedProperties(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginGetExtendedProperties(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetExtendedProperties (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetExtendedProperties(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets the extended properties of the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The conference extended properties include information about accessing the conference using a phone. See <see cref="T:Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties" />.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the operation is not valid at the given conference session state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginJoin">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginJoin (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginJoin(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginJoin (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginJoin(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future versions. Use BeginJoin(ConferenceJoinOptions options,AsyncCallback userCallback, object state) or BeginJoin(string conferenceUri,ConferenceJoinOptions options,AsyncCallback userCallback, object state)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            This method will be removed from future versions. Instead, use <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(Microsoft.Rtc.Collaboration.ConferenceJoinOptions,System.AsyncCallback,System.Object)" /> to join a conference.
+            Creates and joins an ad-hoc conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Joining a conference is required to receive roster events on the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceSession" />
+            and <see cref="T:Microsoft.Rtc.Collaboration.McuSession" /> derivatives.
+            </para>
+          <para>
+            The platform schedules a conference valid for 8 hours with an MCU for all the available MCU factories.
+            However, the audio-video MCU will only be scheduled if inband provisioning data for the endpoint is available
+            and indicates that the endpoint owner is provisioned for audio.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginJoin">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginJoin (Microsoft.Rtc.Collaboration.ConferenceJoinInformation information, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginJoin(class Microsoft.Rtc.Collaboration.ConferenceJoinInformation information, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(Microsoft.Rtc.Collaboration.ConferenceJoinInformation,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginJoin (information As ConferenceJoinInformation, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginJoin(Microsoft::Rtc::Collaboration::ConferenceJoinInformation ^ information, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future versions. Use BeginJoin(ConferenceJoinOptions options,AsyncCallback userCallback, object state) or BeginJoin(string conferenceUri,ConferenceJoinOptions options,AsyncCallback userCallback, object state)")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="information" Type="Microsoft.Rtc.Collaboration.ConferenceJoinInformation" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="information">Information to customize the join operation.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            This method will be removed from future versions. Instead, use <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(System.String,Microsoft.Rtc.Collaboration.ConferenceJoinOptions,System.AsyncCallback,System.Object)" /> to join a conference.
+            Joins a conference based on the provided join information.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Joining a conference is required to receive roster events on the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceSession" />
+            and <see cref="T:Microsoft.Rtc.Collaboration.McuSession" /> implementations.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the information argument was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginJoin">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginJoin (Microsoft.Rtc.Collaboration.ConferenceJoinOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginJoin(class Microsoft.Rtc.Collaboration.ConferenceJoinOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(Microsoft.Rtc.Collaboration.ConferenceJoinOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginJoin (options As ConferenceJoinOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginJoin(Microsoft::Rtc::Collaboration::ConferenceJoinOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConferenceJoinOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options to customize joining a conference. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Joins a conference based on the provided join options.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Joining a conference is required to receive roster events on the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceSession" />
+            and <see cref="T:Microsoft.Rtc.Collaboration.McuSession" /> implementations.
+            </para>
+          <para>
+            An endpoint supporting privileged operations is required to join as a trusted application.
+            </para>
+          <para>
+            Applications can customize joining a conference by passing a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceJoinOptions" /> instance.
+            </para>
+          <para>
+            If the parent <see cref="P:Microsoft.Rtc.Collaboration.ConferenceSession.Conversation" /> instance has already received and accepted a conference invitation, or received an MCU dial-out, then calling this method
+            will join the application to the specific conference it was invited.
+            </para>
+          <para>
+            If, however, the application was not invited to a conference through a conference invitation or an MCU dial-out, then the platform organizes an ad-hoc conference,
+            and the application is joined to that conference.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginJoin">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginJoin (Microsoft.Rtc.Collaboration.MeetNowOptions meetNowOptions, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginJoin(class Microsoft.Rtc.Collaboration.MeetNowOptions meetNowOptions, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(Microsoft.Rtc.Collaboration.MeetNowOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginJoin(Microsoft::Rtc::Collaboration::MeetNowOptions ^ meetNowOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="meetNowOptions" Type="Microsoft.Rtc.Collaboration.MeetNowOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="meetNowOptions">Options to customize joining a conference. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Creates and joins an ad hoc conference conference with the widest possible audience.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Applications can customize joining a conference by passing a <see cref="T:Microsoft.Rtc.Collaboration.MeetNowOptions" /> instance.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginJoin">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginJoin (string conferenceUri, Microsoft.Rtc.Collaboration.ConferenceJoinOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginJoin(string conferenceUri, class Microsoft.Rtc.Collaboration.ConferenceJoinOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginJoin(System.String,Microsoft.Rtc.Collaboration.ConferenceJoinOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginJoin (conferenceUri As String, options As ConferenceJoinOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginJoin(System::String ^ conferenceUri, Microsoft::Rtc::Collaboration::ConferenceJoinOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceUri" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConferenceJoinOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceUri">The URI of the conference to join.</param>
+        <param name="options">Options to customize joining a conference. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Joins a conference based on the provided conference URI and join options.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Joining a conference is required to receive roster events on the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceSession" />
+            and <see cref="T:Microsoft.Rtc.Collaboration.McuSession" /> implementations.
+            </para>
+          <para>
+            An endpoint supporting privileged operations is required to join as a trusted application.
+            </para>
+          <para>
+            Applications can customize joining a conference by passing a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceJoinOptions" /> instance.
+            </para>
+          <para>
+            An application may land in the lobby depending on how it joined the conference and the current conference settings. An application joining
+            a conference as trusted will never land in the conference lobby.
+            </para>
+          <para>
+            When an application lands in the lobby, the <see cref="P:Microsoft.Rtc.Collaboration.Conversation.State" /> will be transitioned to <see cref="F:Microsoft.Rtc.Collaboration.ConversationState.InLobby" /> and the
+            <see cref="P:Microsoft.Rtc.Collaboration.ConferenceSession.State" /> will be also transitioned to <see cref="F:Microsoft.Rtc.Collaboration.ConferenceSessionState.InLobby" />. The <paramref name="userCallback" /> will
+            not be invoked until the application has either been admitted into the conference by a leader, removed from the lobby by a leader or left the lobby.
+            </para>
+          <para>
+            If the application was admitted into the conference, the <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndJoin(System.IAsyncResult)" /> method will not throw any exceptions. The <see cref="P:Microsoft.Rtc.Collaboration.Conversation.State" />
+            will be transitioned to <see cref="F:Microsoft.Rtc.Collaboration.ConversationState.Conferenced" /> and the <see cref="P:Microsoft.Rtc.Collaboration.ConferenceSession.State" /> will be transitioned to <see cref="F:Microsoft.Rtc.Collaboration.ConferenceSessionState.Connected" />.
+            On the other hand, if the application was removed from the lobby by a conference leader, the <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndJoin(System.IAsyncResult)" /> method will throw a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException" />
+            with <see cref="P:Microsoft.Rtc.Collaboration.ConferenceFailureException.Reason" /> set to set to <see cref="F:Microsoft.Rtc.Collaboration.CommandFailureReasons.UserDenied" /> or <see cref="F:Microsoft.Rtc.Collaboration.CommandFailureReasons.UserRemoved" />.
+            </para>
+          <para>
+            When an application leaves the lobby by calling <see cref="M:Microsoft.Rtc.Collaboration.Conversation.BeginTerminate(System.AsyncCallback,System.Object)" />, then the <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndJoin(System.IAsyncResult)" /> method
+            will throw an <see cref="T:Microsoft.Rtc.Signaling.OperationFailureException" />. An <see cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException" /> will be thrown if the application lobby wait period expired.
+            </para>
+          <para>
+            Lobby participants receive limited information about the conference, therefore not all the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceSession" /> properties are populated while in the lobby.
+            Also, lobby participants do not receive any information about other participants in the conference or waiting in the lobby and they are not able to
+            perform any operations on the conference like modifying the conference access level.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the operation is not valid at the given conference session state or if the application attempted to join a difference
+            conference after it received a conference invitation or an Mcu dial-out.
+            </exception>
+        <exception cref="T:System.ArgumentException">Thrown when the supplied <paramref name="conferenceUri" /> is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLockConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginLockConference (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginLockConference(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginLockConference(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginLockConference (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginLockConference(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Locks the joined conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            Any attendees joining a conference after it gets locked are placed into the conference lobby.
+            Participants placed in the conference lobby are not visible to applications built on UCMA 2.0. However, if admitted into the conference by
+            a conference leader, they become visible to the application.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginLockConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginLockConference (Microsoft.Rtc.Collaboration.LockConferenceOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginLockConference(class Microsoft.Rtc.Collaboration.LockConferenceOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginLockConference(Microsoft.Rtc.Collaboration.LockConferenceOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginLockConference (options As LockConferenceOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginLockConference(Microsoft::Rtc::Collaboration::LockConferenceOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.LockConferenceOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options to customize locking the conference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Locks the joined conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            Any attendees joining a conference after it gets locked are placed into the conference lobby.
+            Participants placed in the conference lobby are not visible to applications built on UCMA 2.0. However, if admitted into the conference by 
+            a conference leader, they become visible to the application.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyConferenceConfiguration">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyConferenceConfiguration (Microsoft.Rtc.Collaboration.ConferenceAccessLevel accessLevel, Microsoft.Rtc.Collaboration.LobbyBypass lobbyBypass, Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment automaticLeaderAssignment, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyConferenceConfiguration(valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel accessLevel, valuetype Microsoft.Rtc.Collaboration.LobbyBypass lobbyBypass, valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment automaticLeaderAssignment, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginModifyConferenceConfiguration(Microsoft.Rtc.Collaboration.ConferenceAccessLevel,Microsoft.Rtc.Collaboration.LobbyBypass,Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyConferenceConfiguration(Microsoft::Rtc::Collaboration::ConferenceAccessLevel accessLevel, Microsoft::Rtc::Collaboration::LobbyBypass lobbyBypass, Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment automaticLeaderAssignment, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessLevel" Type="Microsoft.Rtc.Collaboration.ConferenceAccessLevel" />
+        <Parameter Name="lobbyBypass" Type="Microsoft.Rtc.Collaboration.LobbyBypass" />
+        <Parameter Name="automaticLeaderAssignment" Type="Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="accessLevel">The new access level.</param>
+        <param name="lobbyBypass">New lobby bypass setting.</param>
+        <param name="automaticLeaderAssignment">The new automatic leader assignment setting.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Modifies conference configuration.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            A conference leader can allow specific types of users to bypass the lobby and get admitted directly into the conference although under normal conditions
+            those users are placed in the lobby. As an example, a conference leader may allow participants joining over the phone to bypass the lobby.
+            Note however, if the conference current access level is <see cref="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Locked" />, all new users joining the conference - regardless of any bypass setting -
+            are placed in the conference lobby.
+            </para>
+          <para>
+            Conference access level determines which users are admitted into the conference or placed in the lobby. When a conference is first activated
+            (by the first user attempting to the join the conference), the initial access level applied is whatever level that was set by the organizer (i.e. at scheduling time).
+            Any changes to the access level performed by this method are lost after the conference is deactivated.
+            </para>
+          <para>
+            Applications should call the <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetAllowedAccessLevels" /> method before calling this method
+            to retrieve the allowed access levels the conference could be changed to.
+            </para>
+          <para>
+            Note: An application may not wish to change all configuration settings at once. In this case it can use the properties on conference session to 
+            get the current cached value of the setting to prevent the setting from being changed. In some cases where two leaders are making changes in a 
+            short time interval, it may be possible that the cached version of the setting does not reflect the most current value at the server, 
+            and could overwrite the value as set by another leader.  The setting would have to then be reapplied.
+            </para>
+          <para>
+            This operation can only be performed by a conference leader.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the operation is not valid in the current conference session state or the joined conference is one that
+            has been migrated from earlier server version and is running in compatibility mode.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when an argument passed has an invalid value.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyConferenceConfiguration">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyConferenceConfiguration (Microsoft.Rtc.Collaboration.ConferenceAccessLevel accessLevel, Microsoft.Rtc.Collaboration.LobbyBypass lobbyBypass, Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment automaticLeaderAssignment, Microsoft.Rtc.Collaboration.ModifyConferenceConfigurationOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyConferenceConfiguration(valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel accessLevel, valuetype Microsoft.Rtc.Collaboration.LobbyBypass lobbyBypass, valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment automaticLeaderAssignment, class Microsoft.Rtc.Collaboration.ModifyConferenceConfigurationOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginModifyConferenceConfiguration(Microsoft.Rtc.Collaboration.ConferenceAccessLevel,Microsoft.Rtc.Collaboration.LobbyBypass,Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment,Microsoft.Rtc.Collaboration.ModifyConferenceConfigurationOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyConferenceConfiguration(Microsoft::Rtc::Collaboration::ConferenceAccessLevel accessLevel, Microsoft::Rtc::Collaboration::LobbyBypass lobbyBypass, Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment automaticLeaderAssignment, Microsoft::Rtc::Collaboration::ModifyConferenceConfigurationOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessLevel" Type="Microsoft.Rtc.Collaboration.ConferenceAccessLevel" />
+        <Parameter Name="lobbyBypass" Type="Microsoft.Rtc.Collaboration.LobbyBypass" />
+        <Parameter Name="automaticLeaderAssignment" Type="Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ModifyConferenceConfigurationOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="accessLevel">The new access level.</param>
+        <param name="lobbyBypass">New lobby bypass setting.</param>
+        <param name="automaticLeaderAssignment">The new automatic leader assignment setting.</param>
+        <param name="options">Options to customize the operation. Could be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Modifies conference configuration.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            A conference leader can allow specific types of users to bypass the lobby and get admitted directly into the conference although under normal conditions
+            those users are placed in the lobby. As an example, a conference leader may allow participants joining over the phone to bypass the lobby.
+            Note however, if the conference current access level is <see cref="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Locked" />, all new users joining the conference - regardless of any bypass setting -
+            are placed in the conference lobby.
+            </para>
+          <para>
+            Conference access level determines which users are admitted into the conference or placed in the lobby. When a conference is first activated
+            (by the first user attempting to the join the conference), the initial access level applied is whatever level that was set by the organizer (i.e. at scheduling time).
+            Any changes to the access level performed by this method are lost after the conference is deactivated.
+            </para>
+          <para>
+            Applications should call the <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetAllowedAccessLevels" /> methodbefore calling this method
+            to retrieve the allowed access levels the conference could be changed to.
+            </para>
+          <para>
+            Note: An application may not wish to change all configuration settings at once. In this case it can use the properties on conference session to 
+            get the current cached value of the setting to prevent the setting from being changed. In some cases where two leaders are making changes in a 
+            short time interval, it may be possible that the cached version of the setting does not reflect the most current value at the server, 
+            and could overwrite the value as set by another leader.  The setting would have to then be reapplied.
+            </para>
+          <para>
+            This operation can only be performed by a conference leader.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the operation is not valid in the current conference session state or the joined conference is one that
+            has been migrated from earlier server version and is running in compatibility mode.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when an argument passed has an invalid value.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyRole">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyRole (Microsoft.Rtc.Collaboration.ConversationParticipant participant, Microsoft.Rtc.Collaboration.ConferencingRole role, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyRole(class Microsoft.Rtc.Collaboration.ConversationParticipant participant, valuetype Microsoft.Rtc.Collaboration.ConferencingRole role, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginModifyRole(Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Collaboration.ConferencingRole,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginModifyRole (participant As ConversationParticipant, role As ConferencingRole, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyRole(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, Microsoft::Rtc::Collaboration::ConferencingRole role, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant" Type="Microsoft.Rtc.Collaboration.ConversationParticipant" />
+        <Parameter Name="role" Type="Microsoft.Rtc.Collaboration.ConferencingRole" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participant">The participant for which the role should be changed.</param>
+        <param name="role">The desired role for the participant.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Modifies the role of a participant in the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the participant argument was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginModifyRole">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginModifyRole (Microsoft.Rtc.Collaboration.ConversationParticipant participant, Microsoft.Rtc.Collaboration.ConferencingRole role, Microsoft.Rtc.Collaboration.ModifyRoleOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginModifyRole(class Microsoft.Rtc.Collaboration.ConversationParticipant participant, valuetype Microsoft.Rtc.Collaboration.ConferencingRole role, class Microsoft.Rtc.Collaboration.ModifyRoleOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginModifyRole(Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Collaboration.ConferencingRole,Microsoft.Rtc.Collaboration.ModifyRoleOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginModifyRole (participant As ConversationParticipant, role As ConferencingRole, options As ModifyRoleOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyRole(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, Microsoft::Rtc::Collaboration::ConferencingRole role, Microsoft::Rtc::Collaboration::ModifyRoleOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participant" Type="Microsoft.Rtc.Collaboration.ConversationParticipant" />
+        <Parameter Name="role" Type="Microsoft.Rtc.Collaboration.ConferencingRole" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ModifyRoleOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participant">The participant for which the role should be changed.</param>
+        <param name="role">The desired role for the participant.</param>
+        <param name="options">Options to customize the operation. Could be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Modifies the role of a participant in the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for conference leaders only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the participant argument was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminateConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminateConference (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminateConference(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginTerminateConference(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminateConference (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminateConference(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Terminates the conference and forces all participants to leave if performed by a conference leader.
+            Otherwise it causes the participant to leave the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Unless ejecting all participants is required, the recommended way of 
+            leaving a conference is using the <see cref="M:Microsoft.Rtc.Collaboration.Conversation.BeginTerminate(Microsoft.Rtc.Collaboration.ConversationTerminateOptions,System.AsyncCallback,System.Object)" /> method.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnlockConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnlockConference (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUnlockConference(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginUnlockConference(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUnlockConference (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnlockConference(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Unlocks a conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnlockConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnlockConference (Microsoft.Rtc.Collaboration.UnlockConferenceOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUnlockConference(class Microsoft.Rtc.Collaboration.UnlockConferenceOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginUnlockConference(Microsoft.Rtc.Collaboration.UnlockConferenceOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUnlockConference (options As UnlockConferenceOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnlockConference(Microsoft::Rtc::Collaboration::UnlockConferenceOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.UnlockConferenceOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">Options to customize unlocking a conference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Unlocks a conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for conference leaders only.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceUri">
+      <MemberSignature Language="C#" Value="public string ConferenceUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConferenceUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.ConferenceUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ConferenceUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Conversation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conversation Conversation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Conversation Conversation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.Conversation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As Conversation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ Conversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conversation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conversation that owns this conference session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disclaimer">
+      <MemberSignature Language="C#" Value="public string Disclaimer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Disclaimer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.Disclaimer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Disclaimer As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Disclaimer { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the disclaimer that should be presented to the user prior to joining.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Some administrators may wish to configure a message that clients can display before the join.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisclaimerTitle">
+      <MemberSignature Language="C#" Value="public string DisclaimerTitle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisclaimerTitle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.DisclaimerTitle" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DisclaimerTitle As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisclaimerTitle { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the disclaimer title used to schedule the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEject">
+      <MemberSignature Language="C#" Value="public void EndEject (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndEject(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndEject(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndEject (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEject(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous eject operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when ejecting a participant timed out waiting for a reply.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when ejecting a participant failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when ejecting a participant failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetExtendedProperties">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties EndGetExtendedProperties (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties EndGetExtendedProperties(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndGetExtendedProperties(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetExtendedProperties (result As IAsyncResult) As ConferenceSessionExtendedProperties" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ConferenceSessionExtendedProperties ^ EndGetExtendedProperties(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to complete.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown for other failures including when the lobby wait period is set to zero in <see cref="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.LobbyTimeout" />.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when joining a conference failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndJoin">
+      <MemberSignature Language="C#" Value="public void EndJoin (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndJoin(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndJoin(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndJoin (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndJoin(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous join operation to complete.
+            </summary>
+        <remarks>
+          <para>
+            The conference session state will transition to <see cref="F:Microsoft.Rtc.Collaboration.ConferenceSessionState.Connected" /> if the join operation is successful. If unsuccessful, the conference session
+            cleans up its state and transitions to <see cref="F:Microsoft.Rtc.Collaboration.ConferenceSessionState.Idle" />.
+            </para>
+          <para>
+            The method will throw an <see cref="T:Microsoft.Rtc.Signaling.OperationFailureException" /> if the lobby wait period was set to zero in <see cref="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.LobbyTimeout" />.
+            </para>
+          <para>
+            If the participant was placed in the lobby and then denied access or removed from the conference, a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException" /> will be thrown with
+            <see cref="P:Microsoft.Rtc.Collaboration.ConferenceFailureException.Reason" /> set to <see cref="F:Microsoft.Rtc.Collaboration.CommandFailureReasons.UserDenied" /> or <see cref="F:Microsoft.Rtc.Collaboration.CommandFailureReasons.UserRemoved" />.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when joining a conference timed out waiting for a reply or if the participant was placed
+            in the lobby for a period larger than that set in <see cref="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.LobbyTimeout" />.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">
+            Thrown when joining a conference failed with a Centralized Conference Control Protocol (C3P) body in the response or when the participant is placed in the lobby and
+            then was denied access or removed from the conference by a leader.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureRequestException">
+            Thrown when the participant was disconnected from the lobby due to a reason other than being denied access or removed from the conference by a leader.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown for other failures including when the lobby wait period is set to zero in <see cref="P:Microsoft.Rtc.Collaboration.ConferenceJoinOptions.LobbyTimeout" />.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when joining a conference failed without a C3P body in the response.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndLockConference">
+      <MemberSignature Language="C#" Value="public void EndLockConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndLockConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndLockConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndLockConference (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndLockConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to lock the conference to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when locking the conference timed out waiting for a reply.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when locking the conference failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when locking the conference failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndModifyConferenceConfiguration">
+      <MemberSignature Language="C#" Value="public void EndModifyConferenceConfiguration (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndModifyConferenceConfiguration(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndModifyConferenceConfiguration(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndModifyConferenceConfiguration (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndModifyConferenceConfiguration(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when operation timed out waiting for a reply.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when the operation failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndModifyRole">
+      <MemberSignature Language="C#" Value="public void EndModifyRole (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndModifyRole(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndModifyRole(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndModifyRole (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndModifyRole(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to modify the participant role to complete."
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when modifying the role timed out waiting for a reply.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when modifying the role failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when modifying the role failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminateConference">
+      <MemberSignature Language="C#" Value="public void EndTerminateConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminateConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndTerminateConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminateConference (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminateConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous termination operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUnlockConference">
+      <MemberSignature Language="C#" Value="public void EndUnlockConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUnlockConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.EndUnlockConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUnlockConference (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUnlockConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to unlock the conference to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when unlocking the conference timed out waiting for a reply.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when unlocking the conference failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when unlocking the conference failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllowedAccessLevels">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceAccessLevel&gt; GetAllowedAccessLevels ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel&gt; GetAllowedAccessLevels() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetAllowedAccessLevels" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAllowedAccessLevels () As Collection(Of ConferenceAccessLevel)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConferenceAccessLevel&gt; ^ GetAllowedAccessLevels();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceAccessLevel&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a snapshot of the allowed admission policies in the conference.
+            </summary>
+        <returns>
+            The collection of allowed access levels that the conference could be changed to.
+            </returns>
+        <remarks>
+          <para>
+            Applications should call this method before attempting to modify the conference admission policy.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllowedAutomaticLeaderAssignments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment&gt; GetAllowedAutomaticLeaderAssignments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment&gt; GetAllowedAutomaticLeaderAssignments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetAllowedAutomaticLeaderAssignments" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAllowedAutomaticLeaderAssignments () As Collection(Of AutomaticLeaderAssignment)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment&gt; ^ GetAllowedAutomaticLeaderAssignments();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the allowed automatic leader assignments for the conference.
+            </summary>
+        <returns>The allowed automatic leader assignments for the conference.</returns>
+        <remarks>
+          <para>
+            An empty collection is returned for conferences hosted on a server version prior to Microsoft Lync Server 2010.
+            </para>
+          <para>
+            Call this method after joining the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllowedLobbyBypassValues">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.LobbyBypass&gt; GetAllowedLobbyBypassValues ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;valuetype Microsoft.Rtc.Collaboration.LobbyBypass&gt; GetAllowedLobbyBypassValues() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetAllowedLobbyBypassValues" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAllowedLobbyBypassValues () As Collection(Of LobbyBypass)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::LobbyBypass&gt; ^ GetAllowedLobbyBypassValues();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.LobbyBypass&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the allowed lobby bypass values for the conference.
+            </summary>
+        <returns>The allowed lobby bypass values for the conference.</returns>
+        <remarks>
+          <para>
+            An empty collection is returned for conferences hosted on a server version prior to Microsoft Lync Server 2010.
+            </para>
+          <para>
+            Call this method after joining the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLocalParticipantEndpoints">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt; GetLocalParticipantEndpoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt; GetLocalParticipantEndpoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetLocalParticipantEndpoints" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLocalParticipantEndpoints () As Collection(Of ParticipantEndpoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^&gt; ^ GetLocalParticipantEndpoints();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a snapshot collection of the endpoints used by the local participant to communicate with the focus.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            If the local participant joined the conference from another endpoint,
+            the returned collection will include that endpoint in addition to the local endpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMcuInformation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.McuInformation GetMcuInformation (string mcuType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.McuInformation GetMcuInformation(string mcuType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetMcuInformation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMcuInformation (mcuType As String) As McuInformation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::McuInformation ^ GetMcuInformation(System::String ^ mcuType);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.McuInformation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mcuType" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="mcuType">The MCU type we are interested in.</param>
+        <summary>
+            Gets the MCU information (including MCU URI) for the provided MCU type.
+            </summary>
+        <returns>The MCU information object or null if no match is found.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied mcuType is null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteParticipantEndpoints">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt; GetRemoteParticipantEndpoints ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt; GetRemoteParticipantEndpoints() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetRemoteParticipantEndpoints" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRemoteParticipantEndpoints () As Collection(Of ParticipantEndpoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^&gt; ^ GetRemoteParticipantEndpoints();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a snapshot collection of the endpoints used by the remote participants to communicate with the focus.
+            </summary>
+        <returns>Returns a snapshot collection of the endpoints used by the remote participants in this conference.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceCorrelationID">
+      <MemberSignature Language="C#" Value="public long GetTraceCorrelationID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetTraceCorrelationID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.GetTraceCorrelationID" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the trace correlation id for this instance.
+            </summary>
+        <returns>The trace correlation id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostingNetwork">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SourceNetwork HostingNetwork { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.SourceNetwork HostingNetwork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.HostingNetwork" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostingNetwork As SourceNetwork" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::SourceNetwork HostingNetwork { Microsoft::Rtc::Collaboration::SourceNetwork get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SourceNetwork</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets information about where the conference is being hosted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantMessagingMcuSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessagingMcuSession InstantMessagingMcuSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessagingMcuSession InstantMessagingMcuSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.InstantMessagingMcuSession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstantMessagingMcuSession As InstantMessagingMcuSession" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingMcuSession ^ InstantMessagingMcuSession { Microsoft::Rtc::Collaboration::InstantMessagingMcuSession ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessagingMcuSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instant messaging MCU session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value can be null if the application has unregistered the factory for the message media type.
+            Applications interested in InstantMessagingMcuSession events should register for these events before joining the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTrustedJoin">
+      <MemberSignature Language="C#" Value="public bool IsTrustedJoin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTrustedJoin" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.IsTrustedJoin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsTrustedJoin As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsTrustedJoin { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the conference was joined as a trusted application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An endpoint supporting privileged operations is required to join as a trusted application.
+            </para>
+          <para>
+            Trusted applications always join conference as trusted leaders and they are able to carry out privileged operations.
+            A trusted application appears as a hidden participant in the roster.
+            <see cref="P:Microsoft.Rtc.Collaboration.ConversationParticipant.RosterVisibility" />.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LobbyBypass">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LobbyBypass LobbyBypass { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.LobbyBypass LobbyBypass" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.LobbyBypass" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LobbyBypass As LobbyBypass" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LobbyBypass LobbyBypass { Microsoft::Rtc::Collaboration::LobbyBypass get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyBypass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current lobby bypass policy applied to the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LobbyManager">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LobbyManager LobbyManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LobbyManager LobbyManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.LobbyManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LobbyManager As LobbyManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LobbyManager ^ LobbyManager { Microsoft::Rtc::Collaboration::LobbyManager ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object that allows leaders to manage lobby participants.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Only conference leaders can perform lobby management operations.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.IOfferAnswer.GetAnswer">
+      <MemberSignature Language="C#" Value="Microsoft.Rtc.Signaling.ContentDescription IOfferAnswer.GetAnswer (object sender, Microsoft.Rtc.Signaling.ContentDescription offer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Rtc.Signaling.ContentDescription Microsoft.Rtc.Signaling.IOfferAnswer.GetAnswer(object sender, class Microsoft.Rtc.Signaling.ContentDescription offer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#IOfferAnswer#GetAnswer(System.Object,Microsoft.Rtc.Signaling.ContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Function GetAnswer (sender As Object, offer As ContentDescription) As ContentDescription Implements IOfferAnswer.GetAnswer" />
+      <MemberSignature Language="C++ CLI" Value=" virtual Microsoft::Rtc::Signaling::ContentDescription ^ Microsoft.Rtc.Signaling.IOfferAnswer.GetAnswer(System::Object ^ sender, Microsoft::Rtc::Signaling::ContentDescription ^ offer) = Microsoft::Rtc::Signaling::IOfferAnswer::GetAnswer;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.IOfferAnswer.GetAnswer(System.Object,Microsoft.Rtc.Signaling.ContentDescription)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="offer" Type="Microsoft.Rtc.Signaling.ContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="offer">The offer made by the remote participant.</param>
+        <summary>
+            The method that is called when media description answer is required
+            for an outgoing 200 OK response or an outgoing ACK when the initial
+            INVITE request had no offer.
+            </summary>
+        <returns>The media description answer.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.IOfferAnswer.GetOffer">
+      <MemberSignature Language="C#" Value="Microsoft.Rtc.Signaling.ContentDescription IOfferAnswer.GetOffer (object sender);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class Microsoft.Rtc.Signaling.ContentDescription Microsoft.Rtc.Signaling.IOfferAnswer.GetOffer(object sender) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#IOfferAnswer#GetOffer(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Function GetOffer (sender As Object) As ContentDescription Implements IOfferAnswer.GetOffer" />
+      <MemberSignature Language="C++ CLI" Value=" virtual Microsoft::Rtc::Signaling::ContentDescription ^ Microsoft.Rtc.Signaling.IOfferAnswer.GetOffer(System::Object ^ sender) = Microsoft::Rtc::Signaling::IOfferAnswer::GetOffer;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.IOfferAnswer.GetOffer(System.Object)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <summary>
+            The method that is called when media description offer is required
+            for an outgoing INVITE request or an outgoing 200 OK response to
+            an INVITE request with null offer.
+            </summary>
+        <returns>
+            The media description offer. This can return null to indicate that null offer is made.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInInviteResponse">
+      <MemberSignature Language="C#" Value="void IOfferAnswer.HandleOfferInInviteResponse (object sender, Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInInviteResponse(object sender, class Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#IOfferAnswer#HandleOfferInInviteResponse(System.Object,Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Sub HandleOfferInInviteResponse (sender As Object, e As OfferInInviteResponseEventArgs) Implements IOfferAnswer.HandleOfferInInviteResponse" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInInviteResponse(System::Object ^ sender, Microsoft::Rtc::Signaling::OfferInInviteResponseEventArgs ^ e) = Microsoft::Rtc::Signaling::IOfferAnswer::HandleOfferInInviteResponse;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInInviteResponse(System.Object,Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Rtc.Signaling.OfferInInviteResponseEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="e">The event argument containing information about the offer.
+            </param>
+        <summary>
+            The method that is called when a media offer is received by the inviter
+            in response to the original reinvite with a null offer.
+            </summary>
+        <remarks>
+          <para>
+            The application can cache this event argument and start preparing the answer.
+            When it is ready, it can call the "Accept" method in the event argument to let the
+            platform call the GetAnswer method.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInReInvite">
+      <MemberSignature Language="C#" Value="void IOfferAnswer.HandleOfferInReInvite (object sender, Microsoft.Rtc.Signaling.OfferInReInviteEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInReInvite(object sender, class Microsoft.Rtc.Signaling.OfferInReInviteEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#IOfferAnswer#HandleOfferInReInvite(System.Object,Microsoft.Rtc.Signaling.OfferInReInviteEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Sub HandleOfferInReInvite (sender As Object, e As OfferInReInviteEventArgs) Implements IOfferAnswer.HandleOfferInReInvite" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInReInvite(System::Object ^ sender, Microsoft::Rtc::Signaling::OfferInReInviteEventArgs ^ e) = Microsoft::Rtc::Signaling::IOfferAnswer::HandleOfferInReInvite;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.IOfferAnswer.HandleOfferInReInvite(System.Object,Microsoft.Rtc.Signaling.OfferInReInviteEventArgs)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="Microsoft.Rtc.Signaling.OfferInReInviteEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="e">
+            The event argument containing information about the offer. The offer can be null.
+            </param>
+        <summary>
+            The method that is called when media renegotiation (ReInvite) is received.
+            This happens when the remote sends another INVITE request inside an existing INVITE
+            dialog to renegotiate media description.
+            </summary>
+        <remarks>
+          <para>
+            The application can cache this event argument and start preparing the answer or offer
+            (if the original offer was empty). When it is ready, it can all "Accept" method
+            in the event argument to let the platform call the GetOffer or GetAnswer method to fetch offer or answer
+            whichever is appropriate. If the application does not like the offer, it can also decline.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.IOfferAnswer.SetAnswer">
+      <MemberSignature Language="C#" Value="void IOfferAnswer.SetAnswer (object sender, Microsoft.Rtc.Signaling.ContentDescription answer);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.IOfferAnswer.SetAnswer(object sender, class Microsoft.Rtc.Signaling.ContentDescription answer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#IOfferAnswer#SetAnswer(System.Object,Microsoft.Rtc.Signaling.ContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Sub SetAnswer (sender As Object, answer As ContentDescription) Implements IOfferAnswer.SetAnswer" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.IOfferAnswer.SetAnswer(System::Object ^ sender, Microsoft::Rtc::Signaling::ContentDescription ^ answer) = Microsoft::Rtc::Signaling::IOfferAnswer::SetAnswer;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.IOfferAnswer.SetAnswer(System.Object,Microsoft.Rtc.Signaling.ContentDescription)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="answer" Type="Microsoft.Rtc.Signaling.ContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="sender">The object instance that is making this call.</param>
+        <param name="answer">The answer received.</param>
+        <summary>
+            The method that is called when media description response is received
+            in a 200 OK response or ACK message for an INVITE request.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetExtensionHeaders">
+      <MemberSignature Language="C#" Value="void ISipSubscriptionProcessor.GetExtensionHeaders (Microsoft.Rtc.Signaling.SipSubscription.RequestType requestType, out System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; extensionHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetExtensionHeaders(valuetype Microsoft.Rtc.Signaling.SipSubscription/RequestType requestType, [out] class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt;&amp; extensionHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#ISipSubscriptionProcessor#GetExtensionHeaders(Microsoft.Rtc.Signaling.SipSubscription.RequestType,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader}@)" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetExtensionHeaders(Microsoft::Rtc::Signaling::SipSubscription::RequestType requestType, [Runtime::InteropServices::Out] System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ % extensionHeaders) = Microsoft::Rtc::Signaling::ISipSubscriptionProcessor::GetExtensionHeaders;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetExtensionHeaders(Microsoft.Rtc.Signaling.SipSubscription.RequestType,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader}@)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestType" Type="Microsoft.Rtc.Signaling.SipSubscription+RequestType" />
+        <Parameter Name="extensionHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="requestType">Type of request</param>
+        <param name="extensionHeaders">Headers to add.</param>
+        <summary>
+            Gets the headers to add to the SUBSCRIBE request.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetMessageBody">
+      <MemberSignature Language="C#" Value="void ISipSubscriptionProcessor.GetMessageBody (Microsoft.Rtc.Signaling.SipSubscription.RequestType requestType, out System.Net.Mime.ContentType contentType, out byte[] messageBody);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetMessageBody(valuetype Microsoft.Rtc.Signaling.SipSubscription/RequestType requestType, [out] class System.Net.Mime.ContentType&amp; contentType, [out] unsigned int8[]&amp; messageBody) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#ISipSubscriptionProcessor#GetMessageBody(Microsoft.Rtc.Signaling.SipSubscription.RequestType,System.Net.Mime.ContentType@,System.Byte[]@)" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetMessageBody(Microsoft::Rtc::Signaling::SipSubscription::RequestType requestType, [Runtime::InteropServices::Out] System::Net::Mime::ContentType ^ % contentType, [Runtime::InteropServices::Out] cli::array &lt;System::Byte&gt; ^ % messageBody) = Microsoft::Rtc::Signaling::ISipSubscriptionProcessor::GetMessageBody;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetMessageBody(Microsoft.Rtc.Signaling.SipSubscription.RequestType,System.Net.Mime.ContentType@,System.Byte[]@)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestType" Type="Microsoft.Rtc.Signaling.SipSubscription+RequestType" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType&amp;" RefType="out" />
+        <Parameter Name="messageBody" Type="System.Byte[]&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="requestType">Type of SUBSCRIBE request</param>
+        <param name="contentType">To be added.</param>
+        <param name="messageBody">To be added.</param>
+        <summary>
+            Generates a message body and content type for the
+            SUBSCRIBE request to the focus.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessErrorResponse">
+      <MemberSignature Language="C#" Value="void ISipSubscriptionProcessor.ProcessErrorResponse (Microsoft.Rtc.Signaling.SipResponseData message);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessErrorResponse(class Microsoft.Rtc.Signaling.SipResponseData message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#ISipSubscriptionProcessor#ProcessErrorResponse(Microsoft.Rtc.Signaling.SipResponseData)" />
+      <MemberSignature Language="VB.NET" Value="Sub ProcessErrorResponse (message As SipResponseData) Implements ISipSubscriptionProcessor.ProcessErrorResponse" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessErrorResponse(Microsoft::Rtc::Signaling::SipResponseData ^ message) = Microsoft::Rtc::Signaling::ISipSubscriptionProcessor::ProcessErrorResponse;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessErrorResponse(Microsoft.Rtc.Signaling.SipResponseData)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Microsoft.Rtc.Signaling.SipResponseData" />
+      </Parameters>
+      <Docs>
+        <param name="message">The SUBSCRIBE request?</param>
+        <summary>
+            Called when the subscribe failed(?)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessNotification">
+      <MemberSignature Language="C#" Value="void ISipSubscriptionProcessor.ProcessNotification (Microsoft.Rtc.Signaling.SipMessageData message);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessNotification(class Microsoft.Rtc.Signaling.SipMessageData message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#ISipSubscriptionProcessor#ProcessNotification(Microsoft.Rtc.Signaling.SipMessageData)" />
+      <MemberSignature Language="VB.NET" Value="Sub ProcessNotification (message As SipMessageData) Implements ISipSubscriptionProcessor.ProcessNotification" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessNotification(Microsoft::Rtc::Signaling::SipMessageData ^ message) = Microsoft::Rtc::Signaling::ISipSubscriptionProcessor::ProcessNotification;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessNotification(Microsoft.Rtc.Signaling.SipMessageData)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Microsoft.Rtc.Signaling.SipMessageData" />
+      </Parameters>
+      <Docs>
+        <param name="message">The SipMessage of the NOTIFY/BENOTIFY</param>
+        <summary>
+            Process notifications from the subscription.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.SubscriptionStateChanged">
+      <MemberSignature Language="C#" Value="void ISipSubscriptionProcessor.SubscriptionStateChanged (Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs eventArg);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.SubscriptionStateChanged(class Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs eventArg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.Microsoft#Rtc#Signaling#ISipSubscriptionProcessor#SubscriptionStateChanged(Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Sub SubscriptionStateChanged (eventArg As SubscriptionStateChangedEventArgs) Implements ISipSubscriptionProcessor.SubscriptionStateChanged" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.SubscriptionStateChanged(Microsoft::Rtc::Signaling::SubscriptionStateChangedEventArgs ^ eventArg) = Microsoft::Rtc::Signaling::ISipSubscriptionProcessor::SubscriptionStateChanged;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.SubscriptionStateChanged(Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArg" Type="Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArg">The event args for the state change</param>
+        <summary>
+            The subscription state changed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.Rtc.Signaling.RealTimeAddress (Microsoft.Rtc.Collaboration.ConferenceSession session);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class Microsoft.Rtc.Signaling.RealTimeAddress op_Implicit(class Microsoft.Rtc.Collaboration.ConferenceSession session) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.op_Implicit(Microsoft.Rtc.Collaboration.ConferenceSession)~Microsoft.Rtc.Signaling.RealTimeAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (session As ConferenceSession) As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Microsoft::Rtc::Signaling::RealTimeAddress ^(Microsoft::Rtc::Collaboration::ConferenceSession ^ session);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="session" Type="Microsoft.Rtc.Collaboration.ConferenceSession" />
+      </Parameters>
+      <Docs>
+        <param name="session">The session to convert.</param>
+        <summary>
+            Converts this conference session to the address of the joined conference for later rejoin.
+            </summary>
+        <returns>The address of the conference or null if the supplied session has an empty conference URI.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied session is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Organizer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConversationParticipant Organizer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConversationParticipant Organizer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.Organizer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Organizer As ConversationParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ Organizer { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConversationParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the participant who organized the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property is set after joining the conference.
+            </para>
+          <para>
+            The property will be only populated when the platform joins a Microsoft Lync Server 2010 server or later.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantData">
+      <MemberSignature Language="C#" Value="public string ParticipantData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParticipantData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.ParticipantData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ParticipantData As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ParticipantData { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an XML blob set by the conference organizer to send to participants when they join.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value could be String.Empty if there is no data.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceSession.ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointAttendanceChanged As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of ConferenceParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConferenceParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointAttendanceChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more participant endpoints join or leave the focus.
+            </summary>
+        <remarks>
+          <para>
+            A single participant can have more than one endpoint on the focus.
+            A snapshot of the joining or leaving endpoint properties is provided when the event is raised. However, it is possible
+            for an endpoint to change its properties while the event is being raised. The provided snapshot, on the other hand, will not change.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceSession.ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointPropertiesChanged As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of ConferenceParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConferenceParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointPropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more properties of a participant endpoint change.
+            </summary>
+        <remarks>
+          <para>
+            A snapshot of the changed properties is provided when the event is raised. However, it is possible
+            for an endpoint to change its properties while the event is being raised. The provided snapshot, on the other hand, will not change.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceSessionProperties&gt;&gt; PropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Collaboration.ConferenceSessionProperties&gt;&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceSession.PropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of ConferenceSessionProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConferenceSessionProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceSessionProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more properties of the conference session change.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordingPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceRecordingPolicy RecordingPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceRecordingPolicy RecordingPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.RecordingPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RecordingPolicy As ConferenceRecordingPolicy" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceRecordingPolicy RecordingPolicy { Microsoft::Rtc::Collaboration::ConferenceRecordingPolicy get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceRecordingPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recording policy set by the administrator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            It is the responsibility of the recording client to honor this policy
+            as it is not enforced by the server.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SchedulingTemplate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SchedulingTemplate SchedulingTemplate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate SchedulingTemplate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.SchedulingTemplate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SchedulingTemplate As SchedulingTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::SchedulingTemplate SchedulingTemplate { Microsoft::Rtc::Collaboration::SchedulingTemplate get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SchedulingTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the scheduling template used to schedule the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceSessionState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceSessionState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ConferenceSessionState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceSessionState State { Microsoft::Rtc::Collaboration::ConferenceSessionState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceSessionState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the state of the conference session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceSessionState&gt;&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.StateChangedEventArgs`1&lt;valuetype Microsoft.Rtc.Collaboration.ConferenceSessionState&gt;&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceSession.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of StateChangedEventArgs(Of ConferenceSessionState)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConferenceSessionState&gt; ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceSessionState&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the conference session state changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSession.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Subject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference subject.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminationCountdownStatusChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.TerminationCountdownStatusChangedEventArgs&gt; TerminationCountdownStatusChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.TerminationCountdownStatusChangedEventArgs&gt; TerminationCountdownStatusChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceSession.TerminationCountdownStatusChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event TerminationCountdownStatusChanged As EventHandler(Of TerminationCountdownStatusChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::TerminationCountdownStatusChangedEventArgs ^&gt; ^ TerminationCountdownStatusChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.TerminationCountdownStatusChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the automatic conference termination status changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a System.String that represents this object.
+            </summary>
+        <returns>A System.String that represents this object</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetMcuSession&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetMcuSession&lt;T&gt; (out T existingMcuSession) where T : Microsoft.Rtc.Collaboration.McuSession;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetMcuSession&lt;(class Microsoft.Rtc.Collaboration.McuSession) T&gt;([out] !!T&amp; existingMcuSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.TryGetMcuSession``1(``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetMcuSession(Of T As McuSession) (ByRef existingMcuSession As T) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename T&gt;&#xA; where T : Microsoft::Rtc::Collaboration::McuSession bool TryGetMcuSession([Runtime::InteropServices::Out] T % existingMcuSession);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Microsoft.Rtc.Collaboration.McuSession</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="existingMcuSession" Type="T&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Type of the McuSession required.</typeparam>
+        <param name="existingMcuSession">Retrieved MCU session.</param>
+        <summary>
+            Attempts to retrieve an McuSession of type <paramref name="T" />.
+            </summary>
+        <returns>True if the MCU session exists.</returns>
+        <remarks>
+          <para>
+            An McuSession instance is instantiated for all available McuSession factories. If the joined conference
+            does not support a specific MCU type, the corresponding MCU session state is set to Terminated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParticipantEndpointProperties">
+      <MemberSignature Language="C#" Value="public bool TryGetParticipantEndpointProperties (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, out Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetParticipantEndpointProperties(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, [out] class Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&amp; properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As ConferenceParticipantEndpointProperties) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Collaboration::ConferenceParticipantEndpointProperties ^ % properties);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.ConferenceParticipantEndpointProperties&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">The participant endpoint to get properties for.</param>
+        <param name="properties">The properties object or null if the participant is not in the conference.</param>
+        <summary>
+            Gets the properties for the given participant endpoint.
+            </summary>
+        <returns>True if properties are found, otherwise false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

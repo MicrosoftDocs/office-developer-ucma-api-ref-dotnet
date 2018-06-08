@@ -1,0 +1,437 @@
+﻿<Type Name="RealTimeConnection" FullName="Microsoft.Rtc.Signaling.RealTimeConnection">
+  <TypeSignature Language="C#" Value="public class RealTimeConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RealTimeConnection extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeConnection" />
+  <TypeSignature Language="VB.NET" Value="Public Class RealTimeConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an outgoing connection used by the endpoints. The connection itself
+            does not know with which endpoint it is associated. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ApplicationContext">
+      <MemberSignature Language="C#" Value="public object ApplicationContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ApplicationContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.ApplicationContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the application context object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionPool">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ConnectionPool ConnectionPool { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ConnectionPool ConnectionPool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.ConnectionPool" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionPool As ConnectionPool" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ConnectionPool ^ ConnectionPool { Microsoft::Rtc::Signaling::ConnectionPool ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ConnectionPool</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection pool for this connection. 
+            This can be null if the connection does not belong to a pool.
+            For example, incoming connections do not belong to a pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionThrottlingHighMark">
+      <MemberSignature Language="C#" Value="public int ConnectionThrottlingHighMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionThrottlingHighMark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.ConnectionThrottlingHighMark" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionThrottlingHighMark As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ConnectionThrottlingHighMark { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the high water mark for this connection. When number of outstanding transactions on this connection
+            exceeds the high water mark, the connection is throttled until it goes below the low water mark. When the connection
+            is throttled, send/receive will fail. Responses, however, can be sent to bring the level down. Outstanding
+            outgoing transactions that are pending will timeout. The connection buffer is not processed until the outstanding
+            transactions count falls below the low water mark. This value cannot be set below the low water mark. By default,
+            this value is int.MaxValue. If both water mark levels are set to int.MaxValue, the connection throttling is disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the set value is below low water mark.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionThrottlingLowMark">
+      <MemberSignature Language="C#" Value="public int ConnectionThrottlingLowMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ConnectionThrottlingLowMark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.ConnectionThrottlingLowMark" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionThrottlingLowMark As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ConnectionThrottlingLowMark { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the low water mark for this connection. When number of outstanding transactions on this connection
+            exceeds the high water mark, the connection is throttled until it goes below the low water mark. When the connection
+            is throttled, send/receive will fail. Responses, however, can be sent to bring the level down. Outstanding
+            outgoing transactions that are pending will timeout. The connection buffer is not processed until the outstanding
+            transactions count falls below the low water mark. This value cannot be set above the high water mark. By default,
+            this value is int.MaxValue. If both water mark levels are set to int.MaxValue, the connection throttling is disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the set value is above high water mark or negative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan ConnectionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.ConnectionTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConnectionTimeout As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan ConnectionTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the connection idle timeout value.
+            If the connection is idle for the duration specified by this value,
+            the connection will be disconnected. To disable,
+            the value can be set to TimeSpan.Zero.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the value given is negative.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the connection manager is not the server connection manager.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Disconnect">
+      <MemberSignature Language="C#" Value="public void Disconnect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Disconnect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnection.Disconnect" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Disconnect ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Disconnect();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disconnects a connection that is currently connected. If the connection does not exist, or it is not connected, 
+            this method does nothing.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnected">
+      <MemberSignature Language="C#" Value="public bool IsConnected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConnected" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.IsConnected" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsConnected As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsConnected { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating whether the connection is connected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnectionThrottled">
+      <MemberSignature Language="C#" Value="public bool IsConnectionThrottled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConnectionThrottled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.IsConnectionThrottled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsConnectionThrottled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsConnectionThrottled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating if the connection is throttled. If throttling is enabled, then a connection can 
+            be throttling based on the load. The application can refrain from sending more traffic using this 
+            connection until this connection gets out of throttling mode. For example, a signaling session caches a connection
+            it uses for outgoing messages. If the corresponding connection is throttled, the application can refrain from 
+            sending more messages on that session until the connection is no longer throttled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIncomingConnection">
+      <MemberSignature Language="C#" Value="public bool IsIncomingConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIncomingConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.IsIncomingConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsIncomingConnection As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsIncomingConnection { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating if the connection is incoming or outgoing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalEndpoint">
+      <MemberSignature Language="C#" Value="public System.Net.IPEndPoint LocalEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPEndPoint LocalEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.LocalEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalEndpoint As IPEndPoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPEndPoint ^ LocalEndpoint { System::Net::IPEndPoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the local endpoint of this connection. This is valid only when the connection is connected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchingDomainName">
+      <MemberSignature Language="C#" Value="public string MatchingDomainName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MatchingDomainName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.MatchingDomainName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchingDomainName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MatchingDomainName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the domain string from the allowed domains list that matched the certificate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The matching domain will never be available for outbound connections
+            as the allowed domain list does not apply.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProtocolName">
+      <MemberSignature Language="C#" Value="public string ProtocolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ProtocolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.ProtocolName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProtocolName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProtocolName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the protocol used for this connection, TCP or TLS.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefCount">
+      <MemberSignature Language="C#" Value="public int RefCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 RefCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.RefCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RefCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RefCount { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current reference count. This indicates the number of components (page mode message, signaling session, subscription etc.)
+            across endpoints that are currently caching and using this connection. The reference count is used only for outgoing shared connections
+            in a pool.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 RemoteCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 RemoteCertificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.RemoteCertificate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteCertificate As X509Certificate2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::X509Certificates::X509Certificate2 ^ RemoteCertificate { System::Security::Cryptography::X509Certificates::X509Certificate2 ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote certificate used for this connection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndpoint">
+      <MemberSignature Language="C#" Value="public System.Net.IPEndPoint RemoteEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Net.IPEndPoint RemoteEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeConnection.RemoteEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpoint As IPEndPoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPEndPoint ^ RemoteEndpoint { System::Net::IPEndPoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote endpoint of this connection. This is valid only when the connection is connected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrottlingStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; ThrottlingStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; ThrottlingStateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeConnection.ThrottlingStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ThrottlingStateChanged As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ThrottlingStateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when there is a change in connection throttling state. 
+            When this event is raised, the application can check the property
+            IsConnectionThrottled to determine if the connection is throttled or not.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeConnection.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts to a string representation of the instance. The local or remote endpoint addresses can be Unknown
+            if the connection is not in connected state.
+            </summary>
+        <returns>The string representation of the instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

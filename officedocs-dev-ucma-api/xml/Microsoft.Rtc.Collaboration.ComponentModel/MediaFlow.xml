@@ -1,0 +1,236 @@
+﻿<Type Name="MediaFlow" FullName="Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow">
+  <TypeSignature Language="C#" Value="public abstract class MediaFlow" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MediaFlow extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaFlow" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaFlow abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the basic flow for consuming media.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MediaFlow (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.#ctor(Microsoft.Rtc.Collaboration.CallDialogContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (signalingContext As CallDialogContext)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MediaFlow(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">The signaling context.</param>
+        <summary>
+            Creates a new instance of a flow for a specific dialog context
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Call">
+      <MemberSignature Language="C#" Value="protected Microsoft.Rtc.Collaboration.Call Call { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Call Call" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.Call" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Call As Call" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Microsoft::Rtc::Collaboration::Call ^ Call { Microsoft::Rtc::Collaboration::Call ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Call</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Call associated with this flow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Deriving classes can expose strongly typed Calls.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MakeCallback">
+      <MemberSignature Language="C#" Value="protected void MakeCallback (AsyncCallback callback, IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void MakeCallback(class System.AsyncCallback callback, class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.MakeCallback(System.AsyncCallback,System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub MakeCallback (callback As AsyncCallback, result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void MakeCallback(AsyncCallback ^ callback, IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Callback to invoke.</param>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Invokes a specified call using the application's queue for the events.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseEvent&lt;TEventArg&gt;">
+      <MemberSignature Language="C#" Value="protected void RaiseEvent&lt;TEventArg&gt; (EventHandler&lt;TEventArg&gt; handler, object sender, TEventArg e) where TEventArg : EventArgs;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseEvent&lt;(class System.EventArgs) TEventArg&gt;(class System.EventHandler`1&lt;!!TEventArg&gt; handler, object sender, !!TEventArg e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseEvent(Of TEventArg As EventArgs) (handler As EventHandler(Of TEventArg), sender As Object, e As TEventArg)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename TEventArg&gt;&#xA; where TEventArg : EventArgs void RaiseEvent(EventHandler&lt;TEventArg&gt; ^ handler, System::Object ^ sender, TEventArg e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TEventArg">
+          <Constraints>
+            <BaseTypeName>System.EventArgs</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="handler" Type="System.EventHandler&lt;TEventArg&gt;" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="TEventArg" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TEventArg">The event argument type.</typeparam>
+        <param name="handler">The event handler.</param>
+        <param name="sender">sender for the event.</param>
+        <param name="e">The event argument.</param>
+        <summary>
+            Raises a generic event with a specific event argument type.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignalingContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CallDialogContext SignalingContext { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.CallDialogContext SignalingContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.SignalingContext" />
+      <MemberSignature Language="VB.NET" Value="Public Property SignalingContext As CallDialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::CallDialogContext ^ SignalingContext {  public:&#xA;Microsoft::Rtc::Collaboration::CallDialogContext ^ get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::CallDialogContext ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallDialogContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of associated SignalingContext for the flow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The derived class should use the protected set methhod to update the signalingContext,
+            if the same instance of the flow is used, but the underlying signaling session is updated. 
+            It is mainly required for an escalation scenario.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.MediaFlowState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.MediaFlowState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As MediaFlowState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::MediaFlowState State { Microsoft::Rtc::Collaboration::MediaFlowState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.MediaFlowState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the MediaFlowState for the flow.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.MediaFlowStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.MediaFlowStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of MediaFlowStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::MediaFlowStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.MediaFlowStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of MediaFlow has changed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryUpdateFlowState">
+      <MemberSignature Language="C#" Value="protected bool TryUpdateFlowState (Microsoft.Rtc.Collaboration.MediaFlowState state, out Microsoft.Rtc.Collaboration.MediaFlowState previousState);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool TryUpdateFlowState(valuetype Microsoft.Rtc.Collaboration.MediaFlowState state, [out] valuetype Microsoft.Rtc.Collaboration.MediaFlowState&amp; previousState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow.TryUpdateFlowState(Microsoft.Rtc.Collaboration.MediaFlowState,Microsoft.Rtc.Collaboration.MediaFlowState@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function TryUpdateFlowState (state As MediaFlowState, ByRef previousState As MediaFlowState) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; bool TryUpdateFlowState(Microsoft::Rtc::Collaboration::MediaFlowState state, [Runtime::InteropServices::Out] Microsoft::Rtc::Collaboration::MediaFlowState % previousState);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="Microsoft.Rtc.Collaboration.MediaFlowState" />
+        <Parameter Name="previousState" Type="Microsoft.Rtc.Collaboration.MediaFlowState&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="state">New state of the flow.</param>
+        <param name="previousState">Previous state of the flow, before the update.</param>
+        <summary>
+            Updates the MediaFlow's state.
+            </summary>
+        <returns>Returns true, if state is updated on this method call.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

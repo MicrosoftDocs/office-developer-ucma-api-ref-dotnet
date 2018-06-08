@@ -1,0 +1,163 @@
+﻿<Type Name="PreferredServiceCapabilities" FullName="Microsoft.Rtc.Collaboration.PreferredServiceCapabilities">
+  <TypeSignature Language="C#" Value="public class PreferredServiceCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PreferredServiceCapabilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PreferredServiceCapabilities" />
+  <TypeSignature Language="VB.NET" Value="Public Class PreferredServiceCapabilities" />
+  <TypeSignature Language="C++ CLI" Value="public ref class PreferredServiceCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Specifies what should be the initial device capabilities of the endpoint.
+            </summary>
+    <remarks>
+      <para>
+             The default behavior is to publish positive capability support for Instant messaging (IM) if supported by the
+             endpoint. Default support for audio and video capabilities are implied and will not be published unless explicitly
+             asked so by the application.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PreferredServiceCapabilities ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PreferredServiceCapabilities.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; PreferredServiceCapabilities();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of the PreferredServiceCapabilities class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationSharingSupport">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CapabilitySupport ApplicationSharingSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CapabilitySupport ApplicationSharingSupport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PreferredServiceCapabilities.ApplicationSharingSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property ApplicationSharingSupport As CapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CapabilitySupport ApplicationSharingSupport { Microsoft::Rtc::Collaboration::CapabilitySupport get(); void set(Microsoft::Rtc::Collaboration::CapabilitySupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presence endpoint application sharing capability of the presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, this property is set to CapabilitySupport.Default is set and the behavior is to 
+            publish the Application Sharing service/device capabilities if supported by the platform.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioSupport">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CapabilitySupport AudioSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CapabilitySupport AudioSupport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PreferredServiceCapabilities.AudioSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property AudioSupport As CapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CapabilitySupport AudioSupport { Microsoft::Rtc::Collaboration::CapabilitySupport get(); void set(Microsoft::Rtc::Collaboration::CapabilitySupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presence endpoint audio capability of the presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, this property is set to CapabilitySupport.Default and the behavior is to not
+            publish the Audio service/device capabilities for compatibility with Microsoft Lync 2010. This will not 
+            block Audio calls, which can still be received or sent if supported by the platform.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantMessagingSupport">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CapabilitySupport InstantMessagingSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CapabilitySupport InstantMessagingSupport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PreferredServiceCapabilities.InstantMessagingSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property InstantMessagingSupport As CapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CapabilitySupport InstantMessagingSupport { Microsoft::Rtc::Collaboration::CapabilitySupport get(); void set(Microsoft::Rtc::Collaboration::CapabilitySupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presence endpoint IM (text) capability of the presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, this property is set to CapabilitySupport.Default is set and the behaviour is to 
+            publish the IM service/device capabilities if supported by the platform.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VideoSupport">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CapabilitySupport VideoSupport { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CapabilitySupport VideoSupport" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PreferredServiceCapabilities.VideoSupport" />
+      <MemberSignature Language="VB.NET" Value="Public Property VideoSupport As CapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CapabilitySupport VideoSupport { Microsoft::Rtc::Collaboration::CapabilitySupport get(); void set(Microsoft::Rtc::Collaboration::CapabilitySupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the presence endpoint video capability of the presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            By default, this property is set to CapabilitySupport.Default is set and the behavior is to not
+            publish the Video service/device capabilities for compatibility with Microsoft Lync 2010. This will not 
+            block Audio calls, which can still be received or sent if supported by the platform.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

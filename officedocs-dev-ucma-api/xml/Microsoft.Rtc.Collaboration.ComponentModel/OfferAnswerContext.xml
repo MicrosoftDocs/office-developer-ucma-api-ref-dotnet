@@ -1,0 +1,285 @@
+﻿<Type Name="OfferAnswerContext" FullName="Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext">
+  <TypeSignature Language="C#" Value="public class OfferAnswerContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OfferAnswerContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext" />
+  <TypeSignature Language="VB.NET" Value="Public Class OfferAnswerContext" />
+  <TypeSignature Language="C++ CLI" Value="public ref class OfferAnswerContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a container for the information from the call, which is required by MediaProvider to identify the call.
+            </summary>
+    <remarks>
+      <para>
+            OfferAnswerContext is passed as the identity for the call to the MediaProvider APIs.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OfferAnswerContext (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, Microsoft.Rtc.Internal.Collaboration.MediaRelayToken token, Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason reason);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, class Microsoft.Rtc.Internal.Collaboration.MediaRelayToken token, valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason reason) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.#ctor(Microsoft.Rtc.Collaboration.CallDialogContext,Microsoft.Rtc.Internal.Collaboration.MediaRelayToken,Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (signalingContext As CallDialogContext, token As MediaRelayToken, reason As SdpOfferAnswerReason)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; OfferAnswerContext(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^ token, Microsoft::Rtc::Collaboration::ComponentModel::SdpOfferAnswerReason reason);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="token" Type="Microsoft.Rtc.Internal.Collaboration.MediaRelayToken" />
+        <Parameter Name="reason" Type="Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">SignalingContext for the corresponding call dialog.</param>
+        <param name="token">The media relay token to be used by the MediaProviders.</param>
+        <param name="reason">The reason for SDP offer/answer negotiation.</param>
+        <summary>
+            Creates a new instance of the OfferAnswerContext class.
+            </summary>
+        <remarks>
+          <para>
+            The OfferAnswerContext class provides a way to pass information back and forth between a Call and the MediaProviders.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OfferAnswerContext (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, Microsoft.Rtc.Internal.Collaboration.MediaRelayToken token, Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason reason, Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint stackHint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, class Microsoft.Rtc.Internal.Collaboration.MediaRelayToken token, valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason reason, valuetype Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint stackHint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.#ctor(Microsoft.Rtc.Collaboration.CallDialogContext,Microsoft.Rtc.Internal.Collaboration.MediaRelayToken,Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason,Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (signalingContext As CallDialogContext, token As MediaRelayToken, reason As SdpOfferAnswerReason, stackHint As NetworkStackHint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; OfferAnswerContext(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^ token, Microsoft::Rtc::Collaboration::ComponentModel::SdpOfferAnswerReason reason, Microsoft::Rtc::Collaboration::ComponentModel::NetworkStackHint stackHint);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="token" Type="Microsoft.Rtc.Internal.Collaboration.MediaRelayToken" />
+        <Parameter Name="reason" Type="Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason" />
+        <Parameter Name="stackHint" Type="Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">SignalingContext for the corresponding call dialog.</param>
+        <param name="token">The media relay token to be used by the MediaProviders.</param>
+        <param name="reason">The reason for SDP offer/answer negotiation.</param>
+        <param name="stackHint">
+            Indicates if signaling stack is configured for IPV4 or IPV6 or both currently. 
+            Can be used as a hint to configure media stacks.</param>
+        <summary>
+            Creates a new instance of the OfferAnswerContext class.
+            </summary>
+        <remarks>
+          <para>
+            The OfferAnswerContext class provides a way to pass information back and forth between a Call and the MediaProviders.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallDialogContext">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CallDialogContext CallDialogContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.CallDialogContext CallDialogContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.CallDialogContext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallDialogContext As CallDialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CallDialogContext ^ CallDialogContext { Microsoft::Rtc::Collaboration::CallDialogContext ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CallDialogContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value of associated SignalingContext.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialOfferMediaTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; InitialOfferMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; InitialOfferMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.InitialOfferMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InitialOfferMediaTypes As IEnumerable(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ InitialOfferMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a list of the call's default media types. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            MediaProvider can use the media types returned by this property to initialize the flow.
+            This property will be set only for the initial outgoing offer and will be null for all other 
+            cases.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEarlyDialog">
+      <MemberSignature Language="C#" Value="public bool IsEarlyDialog { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEarlyDialog" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.IsEarlyDialog" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEarlyDialog As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEarlyDialog { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this OfferAnswerContext 
+            belongs to a provisonal request or a final request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPrimarySession">
+      <MemberSignature Language="C#" Value="public bool IsPrimarySession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPrimarySession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.IsPrimarySession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPrimarySession As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsPrimarySession { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the signaling session associated with 
+            this OfferAnswerContext is a primary signaling session of the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            During escalation, SDP negotiation will occur on the secondary session. 
+            This flag will be set to false in that case.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ParticipantEndpoint LocalEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ParticipantEndpoint LocalEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.LocalEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalEndpoint As ParticipantEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ LocalEndpoint { Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ParticipantEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the LocalEndpoint of the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason Reason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As SdpOfferAnswerReason" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ComponentModel::SdpOfferAnswerReason Reason { Microsoft::Rtc::Collaboration::ComponentModel::SdpOfferAnswerReason get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.SdpOfferAnswerReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the reason for SDP offer/answer negotiation as a value in the SdpOfferAnswerReason enumeration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ParticipantEndpoint RemoteEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ParticipantEndpoint RemoteEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.RemoteEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpoint As ParticipantEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ RemoteEndpoint { Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ParticipantEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the RemoteEndpoint for the offer answer context.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StackHint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint StackHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint StackHint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext.StackHint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StackHint As NetworkStackHint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ComponentModel::NetworkStackHint StackHint { Microsoft::Rtc::Collaboration::ComponentModel::NetworkStackHint get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ComponentModel.NetworkStackHint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current signaling stack address configuration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

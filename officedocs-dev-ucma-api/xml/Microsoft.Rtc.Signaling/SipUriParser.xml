@@ -1,0 +1,1199 @@
+﻿<Type Name="SipUriParser" FullName="Microsoft.Rtc.Signaling.SipUriParser">
+  <TypeSignature Language="C#" Value="public sealed class SipUriParser" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SipUriParser extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipUriParser" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SipUriParser" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SipUriParser sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides means to parse a sip URI.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipUriParser (Microsoft.Rtc.Signaling.SipUriParser source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SipUriParser source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.#ctor(Microsoft.Rtc.Signaling.SipUriParser)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (source As SipUriParser)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipUriParser(Microsoft::Rtc::Signaling::SipUriParser ^ source);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+      </Parameters>
+      <Docs>
+        <param name="source">The existing instance to copy.</param>
+        <summary>
+            Creates a new instance of the parser given an existing instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipUriParser (string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipUriParser(System::String ^ value);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="value"> the whole URI string </param>
+        <summary>
+            Creates an instance of SipUriParser from a given string.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if value is not a valid string to form SipUri.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipUriParser (string scheme, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scheme As String, value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipUriParser(System::String ^ scheme, System::String ^ value);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">The URI scheme string.</param>
+        <param name="value">The whole URI string excluding '&lt;scheme&gt;:' </param>
+        <summary>
+            Initializes an instance of SipUriParser.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if scheme or value is not a valid string to form SipUri.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipUriParser (string scheme, string userInfo, string host);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string userInfo, string host) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scheme As String, userInfo As String, host As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipUriParser(System::String ^ scheme, System::String ^ userInfo, System::String ^ host);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="userInfo" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">The URI scheme string.</param>
+        <param name="userInfo">The user:port@ component.</param>
+        <param name="host">The host component.</param>
+        <summary>
+            Initializes an instance of SipUriParser.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if any of the parameter is not valid string to form SipUri.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipUriParser (string scheme, string userInfo, string host, int port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string userInfo, string host, int32 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.#ctor(System.String,System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scheme As String, userInfo As String, host As String, port As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipUriParser(System::String ^ scheme, System::String ^ userInfo, System::String ^ host, int port);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="userInfo" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">The URI scheme string.</param>
+        <param name="userInfo">The user:port@ component.</param>
+        <param name="host">The host component.</param>
+        <param name="port">The port component.</param>
+        <summary>
+            Initializes an instance of SipUriParser.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if any of the parameter is not valid string to form SipUri.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipUriParser (string scheme, string userInfo, string host, int port, string parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string scheme, string userInfo, string host, int32 port, string parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.#ctor(System.String,System.String,System.String,System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (scheme As String, userInfo As String, host As String, port As Integer, parameters As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipUriParser(System::String ^ scheme, System::String ^ userInfo, System::String ^ host, int port, System::String ^ parameters);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="scheme" Type="System.String" />
+        <Parameter Name="userInfo" Type="System.String" />
+        <Parameter Name="host" Type="System.String" />
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="parameters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="scheme">URI scheme string.</param>
+        <param name="userInfo">The user:port@ component.</param>
+        <param name="host">The host component.</param>
+        <param name="port">The port component.</param>
+        <param name="parameters">The URI parameters.</param>
+        <summary>
+            Initializes an instance of SipUriParser.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown if any of the parameter is not valid string to form SipUri.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AbsoluteUri">
+      <MemberSignature Language="C#" Value="public string AbsoluteUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AbsoluteUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.AbsoluteUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AbsoluteUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AbsoluteUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the absolute URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHeader">
+      <MemberSignature Language="C#" Value="public void AddHeader (Microsoft.Rtc.Signaling.SignalingHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHeader(class Microsoft.Rtc.Signaling.SignalingHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.AddHeader(Microsoft.Rtc.Signaling.SignalingHeader)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddHeader (header As SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddHeader(Microsoft::Rtc::Signaling::SignalingHeader ^ header);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="Microsoft.Rtc.Signaling.SignalingHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">Instance of the header to add.</param>
+        <summary>
+            Add a header to the URI.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddParameter">
+      <MemberSignature Language="C#" Value="public void AddParameter (Microsoft.Rtc.Signaling.SipUriParameter param);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddParameter(class Microsoft.Rtc.Signaling.SipUriParameter param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.AddParameter(Microsoft.Rtc.Signaling.SipUriParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddParameter (param As SipUriParameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddParameter(Microsoft::Rtc::Signaling::SipUriParameter ^ param);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="param" Type="Microsoft.Rtc.Signaling.SipUriParameter" />
+      </Parameters>
+      <Docs>
+        <param name="param">Instance of the parameter to add.</param>
+        <summary>
+            Add a parameter to the URI.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Authority">
+      <MemberSignature Language="C#" Value="public string Authority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Authority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.Authority" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Authority As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Authority { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the authority.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckHostName">
+      <MemberSignature Language="C#" Value="public static UriHostNameType CheckHostName (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.UriHostNameType CheckHostName(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.CheckHostName(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CheckHostName (name As String) As UriHostNameType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static UriHostNameType CheckHostName(System::String ^ name);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriHostNameType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The host string.</param>
+        <summary>
+            Returns the UriHostNameType enum member for a host name specified as a string.
+            </summary>
+        <returns>Returns the host name enum given a host name string.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareEqual">
+      <MemberSignature Language="C#" Value="public static bool CompareEqual (Microsoft.Rtc.Signaling.SipUriParser uri1, Microsoft.Rtc.Signaling.SipUriParser uri2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CompareEqual(class Microsoft.Rtc.Signaling.SipUriParser uri1, class Microsoft.Rtc.Signaling.SipUriParser uri2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.CompareEqual(Microsoft.Rtc.Signaling.SipUriParser,Microsoft.Rtc.Signaling.SipUriParser)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompareEqual (uri1 As SipUriParser, uri2 As SipUriParser) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool CompareEqual(Microsoft::Rtc::Signaling::SipUriParser ^ uri1, Microsoft::Rtc::Signaling::SipUriParser ^ uri2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri1" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+        <Parameter Name="uri2" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+      </Parameters>
+      <Docs>
+        <param name="uri1">The first URI.</param>
+        <param name="uri2">The second URI.</param>
+        <summary>
+            Compares two URIs for equality.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompareEqual">
+      <MemberSignature Language="C#" Value="public static bool CompareEqual (Microsoft.Rtc.Signaling.SipUriParser uri1, Microsoft.Rtc.Signaling.SipUriParser uri2, bool ignoreCaseForUserPart);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool CompareEqual(class Microsoft.Rtc.Signaling.SipUriParser uri1, class Microsoft.Rtc.Signaling.SipUriParser uri2, bool ignoreCaseForUserPart) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.CompareEqual(Microsoft.Rtc.Signaling.SipUriParser,Microsoft.Rtc.Signaling.SipUriParser,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompareEqual (uri1 As SipUriParser, uri2 As SipUriParser, ignoreCaseForUserPart As Boolean) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool CompareEqual(Microsoft::Rtc::Signaling::SipUriParser ^ uri1, Microsoft::Rtc::Signaling::SipUriParser ^ uri2, bool ignoreCaseForUserPart);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri1" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+        <Parameter Name="uri2" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+        <Parameter Name="ignoreCaseForUserPart" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="uri1">The first URI.</param>
+        <param name="uri2">The second URI.</param>
+        <param name="ignoreCaseForUserPart">True to indicate that user part comparison should ignore case. False, otherwise.</param>
+        <summary>
+            Compares two URIs for equality.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj"> The URI. </param>
+        <summary>
+            Compares two URIs for equality.
+            </summary>
+        <returns>Returns true if equal; otherwise false. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindHeader">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingHeader FindHeader (string headerName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SignalingHeader FindHeader(string headerName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.FindHeader(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindHeader (headerName As String) As SignalingHeader" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SignalingHeader ^ FindHeader(System::String ^ headerName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingHeader</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="headerName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="headerName">Name of the header to find.</param>
+        <summary>
+            Return the header specific header matching with name. Return null if no matching header found.  
+            </summary>
+        <returns>
+            Return the header specific header matching with name. Return null if no matching header found.  
+            </returns>
+        <remarks>
+          <para>
+            If multiple headers with same name exist in the URI, 
+            then it will return the first matching header only. User should use the GetHeaders() function to enumerate 
+            all headers.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindParameter">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipUriParameter FindParameter (string parameterName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipUriParameter FindParameter(string parameterName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.FindParameter(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FindParameter (parameterName As String) As SipUriParameter" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipUriParameter ^ FindParameter(System::String ^ parameterName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipUriParameter</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parameterName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="parameterName">Name of the parameter to find.</param>
+        <summary>
+            Return the header specific parameter matching with name. Return null if no matching parameter found.
+            </summary>
+        <returns>
+            Return the header specific parameter matching with name. Return null if no matching parameter found.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a hash value for the current Name object.
+            </summary>
+        <returns>Returns a hash value for the current object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; GetHeaders ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; GetHeaders() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.GetHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHeaders () As IEnumerable(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ GetHeaders();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the header collection of the URI.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SipUriParameter&gt; GetParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SipUriParameter&gt; GetParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.GetParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetParameters () As IEnumerable(Of SipUriParameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SipUriParameter ^&gt; ^ GetParameters();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SipUriParameter&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a collection of sip URI parameters. May be null if the
+            URI cannot be parsed.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public string Host { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Host" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.Host" />
+      <MemberSignature Language="VB.NET" Value="Public Property Host As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Host { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the host part of the URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostAndPort">
+      <MemberSignature Language="C#" Value="public string HostAndPort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostAndPort" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.HostAndPort" />
+      <MemberSignature Language="VB.NET" Value="Public Property HostAndPort As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HostAndPort { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the host and port together.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostNameType">
+      <MemberSignature Language="C#" Value="public UriHostNameType HostNameType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.UriHostNameType HostNameType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.HostNameType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostNameType As UriHostNameType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property UriHostNameType HostNameType { UriHostNameType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UriHostNameType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the host name type for the host specified in URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGruuUri">
+      <MemberSignature Language="C#" Value="public bool IsGruuUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGruuUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.IsGruuUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsGruuUri As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsGruuUri { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the GRUU parameter in URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLooseRouter">
+      <MemberSignature Language="C#" Value="public bool IsLooseRouter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLooseRouter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.IsLooseRouter" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsLooseRouter As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsLooseRouter { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the loose router parameter (lr).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPhoneUri">
+      <MemberSignature Language="C#" Value="public bool IsPhoneUri ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPhoneUri() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.IsPhoneUri" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPhoneUri () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsPhoneUri();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Helper function to determine whether the URI of this parser is a phone URI. A URI is a phone URI if it has a 
+            "tel:" scheme or if it has "sip:" scheme with the parameter 'user=phone'
+            </summary>
+        <returns>
+            Returns true if the URI of this parser is a phone URI, otherwise returns false.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPortSet">
+      <MemberSignature Language="C#" Value="public bool IsPortSet { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPortSet" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.IsPortSet" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPortSet As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsPortSet { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if the port is set. Note that the 'Port' property
+            returns 0 if even if the port is not set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUniversalNamingConvention">
+      <MemberSignature Language="C#" Value="public bool IsUniversalNamingConvention { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUniversalNamingConvention" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.IsUniversalNamingConvention" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsUniversalNamingConvention As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsUniversalNamingConvention { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Boolean value indicating whether the path is in universal naming convention (UNC) format. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MethodParameter">
+      <MemberSignature Language="C#" Value="public string MethodParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MethodParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.MethodParameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property MethodParameter As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MethodParameter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the method parameter (method).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MulticastAddressParameter">
+      <MemberSignature Language="C#" Value="public string MulticastAddressParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MulticastAddressParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.MulticastAddressParameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property MulticastAddressParameter As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MulticastAddressParameter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the multicast address parameter (maddr).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Rtc.Signaling.SipUriParser uri1, Microsoft.Rtc.Signaling.SipUriParser uri2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Rtc.Signaling.SipUriParser uri1, class Microsoft.Rtc.Signaling.SipUriParser uri2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.op_Equality(Microsoft.Rtc.Signaling.SipUriParser,Microsoft.Rtc.Signaling.SipUriParser)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (uri1 As SipUriParser, uri2 As SipUriParser) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Signaling::SipUriParser ^ uri1, Microsoft::Rtc::Signaling::SipUriParser ^ uri2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri1" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+        <Parameter Name="uri2" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+      </Parameters>
+      <Docs>
+        <param name="uri1"> The first URI. </param>
+        <param name="uri2"> The second URI. </param>
+        <summary>
+            Compares two URIs for equality.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Implicit">
+      <MemberSignature Language="C#" Value="public static implicit operator Microsoft.Rtc.Signaling.SipUriParser (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class Microsoft.Rtc.Signaling.SipUriParser op_Implicit(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.op_Implicit(System.String)~Microsoft.Rtc.Signaling.SipUriParser" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Widening Operator CType (uri As String) As SipUriParser" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Microsoft::Rtc::Signaling::SipUriParser ^(System::String ^ uri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipUriParser</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">The URI string.</param>
+        <summary>
+            Returns the implicit conversion operator from a string to a SipUriParser object.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Rtc.Signaling.SipUriParser uri1, Microsoft.Rtc.Signaling.SipUriParser uri2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Rtc.Signaling.SipUriParser uri1, class Microsoft.Rtc.Signaling.SipUriParser uri2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.op_Inequality(Microsoft.Rtc.Signaling.SipUriParser,Microsoft.Rtc.Signaling.SipUriParser)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (uri1 As SipUriParser, uri2 As SipUriParser) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Signaling::SipUriParser ^ uri1, Microsoft::Rtc::Signaling::SipUriParser ^ uri2);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri1" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+        <Parameter Name="uri2" Type="Microsoft.Rtc.Signaling.SipUriParser" />
+      </Parameters>
+      <Docs>
+        <param name="uri1"> The first URI. </param>
+        <param name="uri2"> The second URI.</param>
+        <summary>
+            Compares two URIs for inequality.
+            </summary>
+        <returns>Returns true if equal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpaquePart">
+      <MemberSignature Language="C#" Value="public string OpaquePart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OpaquePart" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.OpaquePart" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OpaquePart As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OpaquePart { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the opaque part of URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpaqueUriParameter">
+      <MemberSignature Language="C#" Value="public string OpaqueUriParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OpaqueUriParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.OpaqueUriParameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property OpaqueUriParameter As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OpaqueUriParameter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the OpaqueUriParameter for URI
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Password">
+      <MemberSignature Language="C#" Value="public string Password { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Password" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.Password" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Password As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Password { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the password.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public int Port { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Port" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.Port" />
+      <MemberSignature Language="VB.NET" Value="Public Property Port As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Port { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets and sets the port number.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Query">
+      <MemberSignature Language="C#" Value="public string Query { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Query" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.Query" />
+      <MemberSignature Language="VB.NET" Value="Public Property Query As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Query { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the query of the absolute URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHeader">
+      <MemberSignature Language="C#" Value="public void RemoveHeader (Microsoft.Rtc.Signaling.SignalingHeader header);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveHeader(class Microsoft.Rtc.Signaling.SignalingHeader header) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.RemoveHeader(Microsoft.Rtc.Signaling.SignalingHeader)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveHeader (header As SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveHeader(Microsoft::Rtc::Signaling::SignalingHeader ^ header);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="header" Type="Microsoft.Rtc.Signaling.SignalingHeader" />
+      </Parameters>
+      <Docs>
+        <param name="header">Instance of the header to remove.</param>
+        <summary>
+            Remove a header from the URI.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveParameter">
+      <MemberSignature Language="C#" Value="public void RemoveParameter (Microsoft.Rtc.Signaling.SipUriParameter param);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveParameter(class Microsoft.Rtc.Signaling.SipUriParameter param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.RemoveParameter(Microsoft.Rtc.Signaling.SipUriParameter)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveParameter (param As SipUriParameter)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveParameter(Microsoft::Rtc::Signaling::SipUriParameter ^ param);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="param" Type="Microsoft.Rtc.Signaling.SipUriParameter" />
+      </Parameters>
+      <Docs>
+        <param name="param">Instance of the parameter to remove.</param>
+        <summary>
+            Remove a parameter from the URI.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scheme">
+      <MemberSignature Language="C#" Value="public string Scheme { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Scheme" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.Scheme" />
+      <MemberSignature Language="VB.NET" Value="Public Property Scheme As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Scheme { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the URI scheme as a string.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToLiveParameter">
+      <MemberSignature Language="C#" Value="public int TimeToLiveParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TimeToLiveParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.TimeToLiveParameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property TimeToLiveParameter As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int TimeToLiveParameter { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the time to live (TTL) parameter (ttl).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the URI as a string.
+            </summary>
+        <returns>Returns the string representation of the URI.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportParameter">
+      <MemberSignature Language="C#" Value="public string TransportParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TransportParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.TransportParameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property TransportParameter As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransportParameter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value of the transport parameter (transport).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryParse">
+      <MemberSignature Language="C#" Value="public static bool TryParse (string uri, out Microsoft.Rtc.Signaling.SipUriParser parser);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string uri, [out] class Microsoft.Rtc.Signaling.SipUriParser&amp; parser) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipUriParser.TryParse(System.String,Microsoft.Rtc.Signaling.SipUriParser@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryParse (uri As String, ByRef parser As SipUriParser) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryParse(System::String ^ uri, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::SipUriParser ^ % parser);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="parser" Type="Microsoft.Rtc.Signaling.SipUriParser&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="uri">The URI string. </param>
+        <param name="parser">The URI object corresponding to the URI string.</param>
+        <summary>
+            Creates a URI object from a URI string. 
+            </summary>
+        <returns>Returns true if a valid URI can be formed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public string User { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.User" />
+      <MemberSignature Language="VB.NET" Value="Public Property User As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ User { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the User part of the Uri.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAtHost">
+      <MemberSignature Language="C#" Value="public string UserAtHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAtHost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.UserAtHost" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAtHost As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAtHost { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the 'user@host' part of the URI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserInfo">
+      <MemberSignature Language="C#" Value="public string UserInfo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.UserInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserInfo As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserInfo { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the User and password with '@' suffix.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserParameter">
+      <MemberSignature Language="C#" Value="public string UserParameter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserParameter" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipUriParser.UserParameter" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserParameter As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserParameter { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the user parameter (user).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

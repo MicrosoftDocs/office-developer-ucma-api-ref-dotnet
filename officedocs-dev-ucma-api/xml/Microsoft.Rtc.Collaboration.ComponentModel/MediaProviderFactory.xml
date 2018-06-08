@@ -1,0 +1,73 @@
+﻿<Type Name="MediaProviderFactory" FullName="Microsoft.Rtc.Collaboration.ComponentModel.MediaProviderFactory">
+  <TypeSignature Language="C#" Value="public abstract class MediaProviderFactory : Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MediaProviderFactory extends Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.MediaProviderFactory" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaProviderFactory&#xA;Inherits MediaBasedFactory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaProviderFactory abstract : Microsoft::Rtc::Collaboration::ComponentModel::MediaBasedFactory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ComponentModel.MediaBasedFactory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides media provider creation services to the collaboration platform.
+            </summary>
+    <remarks>
+      <para>
+            By default, the collaboration platform will use an instance of this class that will
+            create default media providers. The application is responsible for creating an instance of
+            the derived class and set it on the collaboration platform. The derived class is responsible
+            for creating a media provider for given media types. This is used for extensibility of media
+            providers.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MediaProviderFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProviderFactory.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MediaProviderFactory();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes the instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionType">
+      <MemberSignature Language="C#" Value="public override sealed string ExtensionType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtensionType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProviderFactory.ExtensionType" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property ExtensionType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtensionType { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the extension type for MediaProvider factories.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

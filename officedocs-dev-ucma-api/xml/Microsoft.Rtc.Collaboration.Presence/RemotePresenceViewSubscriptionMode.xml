@@ -1,0 +1,87 @@
+﻿<Type Name="RemotePresenceViewSubscriptionMode" FullName="Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode">
+  <TypeSignature Language="C#" Value="public enum RemotePresenceViewSubscriptionMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RemotePresenceViewSubscriptionMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RemotePresenceViewSubscriptionMode" />
+  <TypeSignature Language="C++ CLI" Value="public enum class RemotePresenceViewSubscriptionMode" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the subscription mode for RemotePresenceView to fetch presence information.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode Default = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="C++ CLI" Value="Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            All remote presentities in a RemotePresenceView will have persistence subscription, 
+            but could be downgraded to polling if subscription limit is reached for presentity or its an automated service.
+            This is the recommended mode for applications who wish to have persistent subscription.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Persistent">
+      <MemberSignature Language="C#" Value="Persistent" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode Persistent = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Persistent" />
+      <MemberSignature Language="VB.NET" Value="Persistent" />
+      <MemberSignature Language="C++ CLI" Value="Persistent" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            All remote presentities in RemotePresenceView will have persistent subscription.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Polling">
+      <MemberSignature Language="C#" Value="Polling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode Polling = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode.Polling" />
+      <MemberSignature Language="VB.NET" Value="Polling" />
+      <MemberSignature Language="C++ CLI" Value="Polling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            All remote presentities in RemotePresenceView will be polled with specified polling interval.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

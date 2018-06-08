@@ -1,0 +1,120 @@
+﻿<Type Name="ApplicationEndpointPresenceSettings" FullName="Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings">
+  <TypeSignature Language="C#" Value="public class ApplicationEndpointPresenceSettings : Microsoft.Rtc.Collaboration.PresenceSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ApplicationEndpointPresenceSettings extends Microsoft.Rtc.Collaboration.PresenceSettings" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationEndpointPresenceSettings&#xA;Inherits PresenceSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationEndpointPresenceSettings : Microsoft::Rtc::Collaboration::PresenceSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.PresenceSettings</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the automatic presence publishing information and settings for <see cref="T:Microsoft.Rtc.Collaboration.Presence.RemotePresenceView" />.
+            </summary>
+    <remarks>
+      <para>
+            Publishing presence information during endpoint establishment is an optional operation and will only be done 
+            when <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" /> is set to true.
+            The properties <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings.PresentityType" /> and <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings.Description" /> get published as a part of the <see cref="T:Microsoft.Rtc.Collaboration.Presence.ContactCard" />
+            instance published into container 0 .
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationEndpointPresenceSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointPresenceSettings();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of ApplicationEndpointPresenceSettings.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the description of the presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitialPresenceState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceState InitialPresenceState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PresenceState InitialPresenceState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings.InitialPresenceState" />
+      <MemberSignature Language="VB.NET" Value="Public Property InitialPresenceState As PresenceState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ InitialPresenceState { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); void set(Microsoft::Rtc::Collaboration::Presence::PresenceState ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the aggregate state that will be published as part of the establish operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para> This is only published when <see cref="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" /> is set to true.</para>
+          <para> The default value is PresenceState.PersistentOnline. Only aggregate state values can be supplied.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresentityType">
+      <MemberSignature Language="C#" Value="public string PresentityType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PresentityType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings.PresentityType" />
+      <MemberSignature Language="VB.NET" Value="Public Property PresentityType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PresentityType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value indicating the type of the presentity such as "person", "huntgroup", "autoattendant", "automaton".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

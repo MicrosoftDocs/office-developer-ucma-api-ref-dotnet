@@ -1,0 +1,163 @@
+﻿<Type Name="CallForwardReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class CallForwardReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallForwardReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallForwardReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallForwardReceivedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents information received when a call is forwarded by the remote endpoint.
+            </summary>
+    <remarks>
+      <para>
+            At most one forward destination URI will be honored.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CallForwardReceivedEventArgs (Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs.#ctor(Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (e As CallForwardReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; CallForwardReceivedEventArgs(Microsoft::Rtc::Collaboration::CallForwardReceivedEventArgs ^ e);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">To be added.</param>
+        <summary>
+            Copy constructor for the derived class to initialize.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accept">
+      <MemberSignature Language="C#" Value="public void Accept ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Accept() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs.Accept" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Accept ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Accept();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Accepts the forward of the call specified in ForwardDestination.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Decline">
+      <MemberSignature Language="C#" Value="public void Decline ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Decline() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs.Decline" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Decline ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Declines the forward of the call.
+            </summary>
+        <remarks>
+          <para>Call Establish will fail, if forward is declined.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardActionTaken">
+      <MemberSignature Language="C#" Value="public bool ForwardActionTaken { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ForwardActionTaken" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs.ForwardActionTaken" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ForwardActionTaken As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ForwardActionTaken { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating that redirect action is taken on eventarg.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardDestination">
+      <MemberSignature Language="C#" Value="public string ForwardDestination { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ForwardDestination" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs.ForwardDestination" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ForwardDestination As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ForwardDestination { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the destination URI indicated in the forward response message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipResponseData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipResponseData ^ MessageData { Microsoft::Rtc::Signaling::SipResponseData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the detailed signaling information associated with the forward.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

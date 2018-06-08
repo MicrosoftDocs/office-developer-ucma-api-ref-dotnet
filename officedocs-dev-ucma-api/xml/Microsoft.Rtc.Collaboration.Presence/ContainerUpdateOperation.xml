@@ -1,0 +1,228 @@
+﻿<Type Name="ContainerUpdateOperation" FullName="Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation">
+  <TypeSignature Language="C#" Value="public class ContainerUpdateOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContainerUpdateOperation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation" />
+  <TypeSignature Language="VB.NET" Value="Public Class ContainerUpdateOperation" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ContainerUpdateOperation" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The ContainerUpdateOperation class is used to update the memberships for a specific container. 
+            Each update can be comprised of several operations.
+            </summary>
+    <remarks>
+      <para>
+            All operations to be performed for a particular container can be specified using this class. Operations include 
+            adding or removing URIs, domains and network type flags.
+            The server can reject the service request in case conflicting operations are set such as adding and removing the same URI 
+            in the same container update operation. If the service request is successful, and the endpoint has subscribed for
+            notifications, the summary of memberships set on a particular container is returned as a <see cref="T:Microsoft.Rtc.Collaboration.Presence.ContainerMembership" /> object.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ContainerUpdateOperation (int containerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 containerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (containerId As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ContainerUpdateOperation(int containerId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="containerId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="containerId">ID of the container being updated.</param>
+        <summary>
+            Creates a new instance of the ContainerUpdateOperation class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="containerId" /> is not between 0 and Int16.MaxValue.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddDomain">
+      <MemberSignature Language="C#" Value="public void AddDomain (string domain);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddDomain(string domain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.AddDomain(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddDomain (domain As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddDomain(System::String ^ domain);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domain" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="domain">The domain to be added.</param>
+        <summary>
+            Add a domain name to a container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSourceNetwork">
+      <MemberSignature Language="C#" Value="public void AddSourceNetwork (Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddSourceNetwork(valuetype Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.AddSourceNetwork(Microsoft.Rtc.Collaboration.SourceNetwork)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddSourceNetwork(Microsoft::Rtc::Collaboration::SourceNetwork sourceNetwork);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceNetwork" Type="Microsoft.Rtc.Collaboration.SourceNetwork" />
+      </Parameters>
+      <Docs>
+        <param name="sourceNetwork">The source network to be added.</param>
+        <summary>
+            Add source network flags to be set on a container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUri">
+      <MemberSignature Language="C#" Value="public void AddUri (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddUri(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.AddUri(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddUri (uri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddUri(System::String ^ uri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">The URI to be added.</param>
+        <summary>
+            Adds a URI to a container.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="uri" /> is not a valid sip URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public int ContainerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainerId As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ContainerId { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the container ID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteDomain">
+      <MemberSignature Language="C#" Value="public void DeleteDomain (string domain);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteDomain(string domain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.DeleteDomain(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeleteDomain (domain As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeleteDomain(System::String ^ domain);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="domain" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="domain">The domain to be removed.</param>
+        <summary>
+            Removes a domain name from a container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteSourceNetwork">
+      <MemberSignature Language="C#" Value="public void DeleteSourceNetwork (Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteSourceNetwork(valuetype Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.DeleteSourceNetwork(Microsoft.Rtc.Collaboration.SourceNetwork)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeleteSourceNetwork(Microsoft::Rtc::Collaboration::SourceNetwork sourceNetwork);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sourceNetwork" Type="Microsoft.Rtc.Collaboration.SourceNetwork" />
+      </Parameters>
+      <Docs>
+        <param name="sourceNetwork">The source network to be removed.</param>
+        <summary>
+            Removes a source network flag from a container.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteUri">
+      <MemberSignature Language="C#" Value="public void DeleteUri (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DeleteUri(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation.DeleteUri(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DeleteUri (uri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeleteUri(System::String ^ uri);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">URI to be removed.</param>
+        <summary>
+            Removes a URI from a container.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="uri" /> is not a valid sip URI.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,171 @@
+﻿<Type Name="MediaChannel" FullName="Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel">
+  <TypeSignature Language="C#" Value="public abstract class MediaChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MediaChannel extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaChannel" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaChannel abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a media channel base class. Objects that identify a media channel must extend this class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowedDirection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection AllowedDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection AllowedDirection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel.AllowedDirection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedDirection As MediaChannelDirection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection AllowedDirection { Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the channel direction policy: the channel direction value to be negotiated and also
+            the "maximum" value to be negotiated with the remote participant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection Direction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel.Direction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Direction As MediaChannelDirection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection Direction { Microsoft::Rtc::Collaboration::AudioVideo::MediaChannelDirection get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MediaChannelDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current channel direction.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example disconnects the call if media channel direction changes to some value 
+            different than SendReceive or Inactive.
+                </para>
+          <para> C# Verifying MediaChannel's properties.</para>
+          <code> 
+
+            audioVideoFlow.ConfigurationChanged += delegate(object sender, AudioVideoFlowConfigurationChangedEventArgs arg)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                // check directions
+                AudioChannel audioChannel = (AudioChannel)avFlow.Audio.GetChannels()[ChannelLabel.AudioMono];
+                if ((audioChannel.Direction != MediaChannelDirection.SendReceive)
+                    &amp;amp;&amp;amp; (audioChannel.Direction != MediaChannelDirection.Inactive))
+                {
+                    AudioVideoCall call = avFlow.Call;
+                    call.EndTerminate(call.BeginTerminate(null, null));
+                }
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Enabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Enabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the channel is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypted">
+      <MemberSignature Language="C#" Value="public bool Encrypted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Encrypted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel.Encrypted" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Encrypted As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Encrypted { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the channel is encrypted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Encrypted is true if and only if the channel is encrypted, and false otherwise.
+            An instance of a MediaChannel subclass can be encrypted only when the associated AudioVideoFlow instance is active;
+            that is, when the State property on the AudioVideoFlow instance is Active.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Label">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel Label { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel Label" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaChannel.Label" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Label As ChannelLabel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::ChannelLabel Label { Microsoft::Rtc::Collaboration::AudioVideo::ChannelLabel get(); };" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Microsoft.Rtc.Collaboration.AudioVideo.IMediaChannel.Label</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the channel label.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

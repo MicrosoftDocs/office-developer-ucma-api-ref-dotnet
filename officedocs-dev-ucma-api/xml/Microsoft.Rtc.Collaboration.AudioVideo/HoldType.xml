@@ -1,0 +1,146 @@
+﻿<Type Name="HoldType" FullName="Microsoft.Rtc.Collaboration.AudioVideo.HoldType">
+  <TypeSignature Language="C#" Value="public enum HoldType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed HoldType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.HoldType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum HoldType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class HoldType" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Defines the type of hold AudioVideoFlow should use.
+            </summary>
+    <remarks>
+      <para>
+            Acts as a flag.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BothEndpoints">
+      <MemberSignature Language="C#" Value="BothEndpoints" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType BothEndpoints = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.HoldType.BothEndpoints" />
+      <MemberSignature Language="VB.NET" Value="BothEndpoints" />
+      <MemberSignature Language="C++ CLI" Value="BothEndpoints" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.HoldType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Stop both outgoing send and incoming receive streams.
+            Media will not be sent to the remote endpoint.
+            Media received from the remote endpoint will be discarded.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.HoldType.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.HoldType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Keep send and receive active.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndpoint">
+      <MemberSignature Language="C#" Value="RemoteEndpoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType RemoteEndpoint = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.HoldType.RemoteEndpoint" />
+      <MemberSignature Language="VB.NET" Value="RemoteEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="RemoteEndpoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.HoldType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Stop only the incoming receive stream direction.
+            Media received from the remote endpoint will be discarded.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndpointAllowTones">
+      <MemberSignature Language="C#" Value="RemoteEndpointAllowTones" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType RemoteEndpointAllowTones = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.HoldType.RemoteEndpointAllowTones" />
+      <MemberSignature Language="VB.NET" Value="RemoteEndpointAllowTones" />
+      <MemberSignature Language="C++ CLI" Value="RemoteEndpointAllowTones" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.HoldType</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Stop only the incoming receive stream direction while still allowing DTMF tones
+            to be received and recognized by an attached ToneController object.
+            Other media received from the remote endpoint will be discarded.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEndpointMusicOnHold">
+      <MemberSignature Language="C#" Value="RemoteEndpointMusicOnHold" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.AudioVideo.HoldType RemoteEndpointMusicOnHold = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.AudioVideo.HoldType.RemoteEndpointMusicOnHold" />
+      <MemberSignature Language="VB.NET" Value="RemoteEndpointMusicOnHold" />
+      <MemberSignature Language="C++ CLI" Value="RemoteEndpointMusicOnHold" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.HoldType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Stop only the incoming receive stream direction and indicate to the remote
+            endpoint to expect music or similar media while on hold.
+            The application is responsible for playing the music using a Player object attached
+            to the AudioVideoFlow.
+            Media received from the remote endpoint will be discarded.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

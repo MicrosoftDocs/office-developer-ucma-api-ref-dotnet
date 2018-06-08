@@ -1,0 +1,122 @@
+﻿<Type Name="TransferStateChangedEventArgs" FullName="Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class TransferStateChangedEventArgs : Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Signaling.ReferState&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TransferStateChangedEventArgs extends Microsoft.Rtc.Signaling.StateChangedEventArgs`1&lt;valuetype Microsoft.Rtc.Signaling.ReferState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class TransferStateChangedEventArgs&#xA;Inherits StateChangedEventArgs(Of ReferState)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TransferStateChangedEventArgs : Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Signaling::ReferState&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Signaling.ReferState&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">Microsoft.Rtc.Signaling.ReferState</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the information associated with the status of a transfer accepted by the remote endpoint.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipMessageData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipMessageData ^ MessageData { Microsoft::Rtc::Signaling::SipMessageData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the NOTIFY message received for the implicit subscription created for a transfer request sent earlier in this call.
+            </summary>
+        <value>The specific message data either received on Notify request or Response.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemainingSipFragment">
+      <MemberSignature Language="C#" Value="public string RemainingSipFragment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RemainingSipFragment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs.RemainingSipFragment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemainingSipFragment As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RemainingSipFragment { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the rest of the SIP fragment body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public int StatusCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 StatusCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs.StatusCode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StatusCode As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int StatusCode { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the status code received in the SIP fragment contained in the SIP NOTIFY. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If the value is 0, there was no status code available.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusText">
+      <MemberSignature Language="C#" Value="public string StatusText { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string StatusText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs.StatusText" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StatusText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ StatusText { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the status text received in the SIP fragment contained in the SIP NOTIFY. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If the string is Empty, there was no status text available.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

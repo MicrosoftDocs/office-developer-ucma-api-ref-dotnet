@@ -1,0 +1,817 @@
+﻿<Type Name="ConferenceServices" FullName="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices">
+  <TypeSignature Language="C#" Value="public class ConferenceServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceServices" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceServices" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class performs several conference management operations
+            including scheduling a conference, modifying and deleting a scheduled conference.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginCancelConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCancelConference (string conferenceId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginCancelConference(string conferenceId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginCancelConference(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginCancelConference (conferenceId As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginCancelConference(System::String ^ conferenceId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceId" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceId">The ID of the conference to delete.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Deletes a conference scheduled by the endpoint owner.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for existing conferences scheduled by the endpoint owner only.
+            </para>
+          <para>
+            This operation will only delete conferences that were scheduled with settings coming from the organizer.<see cref="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.OrganizerSupplied" />.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the conference ID is not specified or invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCancelConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCancelConference (string conferenceId, Microsoft.Rtc.Collaboration.SchedulingTemplate schedulingTemplate, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginCancelConference(string conferenceId, valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate schedulingTemplate, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginCancelConference(System.String,Microsoft.Rtc.Collaboration.SchedulingTemplate,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginCancelConference(System::String ^ conferenceId, Microsoft::Rtc::Collaboration::SchedulingTemplate schedulingTemplate, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceId" Type="System.String" />
+        <Parameter Name="schedulingTemplate" Type="Microsoft.Rtc.Collaboration.SchedulingTemplate" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceId">The ID of the conference to delete.</param>
+        <param name="schedulingTemplate">The template used in scheduling the conference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Deletes a conference scheduled by the endpoint owner.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This operation is allowed by the server for existing conferences scheduled by the endpoint owner only.
+            </para>
+          <para>
+            In order to delete a conference scheduled based on an administrator template, <paramref name="schedulingTemplate" /> should be set to
+            <see cref="F:Microsoft.Rtc.Collaboration.SchedulingTemplate.AdministratorSupplied" />. Note that most UCMA applications should not cancel such conferences as this is 
+            an advanced scenario.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the conference ID is not specified or invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginCheckPasscodeIsOptional">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginCheckPasscodeIsOptional (Microsoft.Rtc.Signaling.RealTimeAddress conferenceAddress, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginCheckPasscodeIsOptional(class Microsoft.Rtc.Signaling.RealTimeAddress conferenceAddress, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginCheckPasscodeIsOptional(Microsoft.Rtc.Signaling.RealTimeAddress,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginCheckPasscodeIsOptional (conferenceAddress As RealTimeAddress, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginCheckPasscodeIsOptional(Microsoft::Rtc::Signaling::RealTimeAddress ^ conferenceAddress, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceAddress">The conference address to check.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets whether the conference passcode is optional.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This method requires an endpoint that supports privileged operations.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request or when the endpoint does not support privileged operations.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown if the supplied conference address was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetConference (string conferenceId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetConference(string conferenceId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConference(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetConference (conferenceId As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetConference(System::String ^ conferenceId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceId" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceId">The ID of the conference to retrieve information for.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets the conference information of a conference scheduled by the endpoint owner.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for existing conferences scheduled by the endpoint owner only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the conference ID is not specified or invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetConferenceSummaries">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetConferenceSummaries (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetConferenceSummaries(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferenceSummaries(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetConferenceSummaries (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetConferenceSummaries(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets a list of basic conference information for conferences scheduled by the endpoint owner.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is only allowed by the server for existing conferences scheduled by the endpoint owner.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetConferenceSummaries">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetConferenceSummaries (Microsoft.Rtc.Collaboration.SchedulingTemplate schedulingTemplate, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetConferenceSummaries(valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate schedulingTemplate, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferenceSummaries(Microsoft.Rtc.Collaboration.SchedulingTemplate,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetConferenceSummaries(Microsoft::Rtc::Collaboration::SchedulingTemplate schedulingTemplate, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="schedulingTemplate" Type="Microsoft.Rtc.Collaboration.SchedulingTemplate" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="schedulingTemplate">The template used in scheduling the conference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets a list of basic conference information for conferences scheduled using the supplied
+            scheduling template.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is only allowed by the server for existing conferences scheduled by the endpoint owner.</para>
+          <para>Microsoft Lync Server 2010 allows one administrator-supplied conference per user.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetConferenceUriByPhoneConferenceId">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetConferenceUriByPhoneConferenceId (string phoneConferenceId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetConferenceUriByPhoneConferenceId(string phoneConferenceId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferenceUriByPhoneConferenceId(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetConferenceUriByPhoneConferenceId (phoneConferenceId As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetConferenceUriByPhoneConferenceId(System::String ^ phoneConferenceId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="phoneConferenceId" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="phoneConferenceId">The key used to lookup a conference URI.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Translates a phone conference ID to a conference URI.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This method requires an endpoint that supports privileged operations.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request or when the endpoint does not support privileged operations.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if the supplied phone conference ID string was null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetConferencingCapabilities">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetConferencingCapabilities (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetConferencingCapabilities(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginGetConferencingCapabilities(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetConferencingCapabilities (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetConferencingCapabilities(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets the conferencing options that are available to the endpoint owner.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Most of the conferencing options available to the endpoint owner are retrieved by calling this method.
+            The rest of the options are retrieved in the meeting policy section of the endpoint provisioning data.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginScheduleConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginScheduleConference (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation information, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginScheduleConference(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation information, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginScheduleConference(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginScheduleConference (information As ConferenceScheduleInformation, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginScheduleConference(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceScheduleInformation ^ information, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="information" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="information">Information used to schedule the conference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Initiates the scheduling of a conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied information instance is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdateConference">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdateConference (Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation information, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateConference(class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation information, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginUpdateConference(Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUpdateConference (information As ConferenceScheduleInformation, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateConference(Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceScheduleInformation ^ information, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="information" Type="Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceScheduleInformation" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="information">Information used to update the existing conference. The conference ID property should be set to the ID of the conference to be modified.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Updates an existing conference scheduled by the endpoint owner.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This operation is allowed by the server for existing conferences scheduled by the endpoint owner only.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the information instance passed was null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the information instance passed does not contain a conference ID.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginVerifyPasscode">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginVerifyPasscode (Microsoft.Rtc.Signaling.RealTimeAddress conferenceAddress, string passcode, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginVerifyPasscode(class Microsoft.Rtc.Signaling.RealTimeAddress conferenceAddress, string passcode, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.BeginVerifyPasscode(Microsoft.Rtc.Signaling.RealTimeAddress,System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginVerifyPasscode (conferenceAddress As RealTimeAddress, passcode As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginVerifyPasscode(Microsoft::Rtc::Signaling::RealTimeAddress ^ conferenceAddress, System::String ^ passcode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="passcode" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceAddress">The conference address.</param>
+        <param name="passcode">The passcode to verify.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Gets whether the supplied passcode is valid for the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This method requires an endpoint that supports privileged operations.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method failed to issue the request or when the endpoint does not support privileged operations.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the supplied conference address or passcode were null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the supplied passcode was empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCancelConference">
+      <MemberSignature Language="C#" Value="public void EndCancelConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndCancelConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndCancelConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndCancelConference (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndCancelConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous cancel operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when deleting a conference failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when deleting a conference failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndCheckPasscodeIsOptional">
+      <MemberSignature Language="C#" Value="public bool EndCheckPasscodeIsOptional (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EndCheckPasscodeIsOptional(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndCheckPasscodeIsOptional(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndCheckPasscodeIsOptional (result As IAsyncResult) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool EndCheckPasscodeIsOptional(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation of checking the passcode to complete.
+            </summary>
+        <returns>True if the passcode is optional, false if the passcode is required.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when retrieving conference passcode setting failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when retrieving conference passcode setting failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetConference">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conference EndGetConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.Conference EndGetConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndGetConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetConference (result As IAsyncResult) As Conference" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Conference ^ EndGetConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation of getting conference information to complete.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when retrieving conference information failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when retrieving conference information  failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetConferenceSummaries">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary&gt; EndGetConferenceSummaries (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary&gt; EndGetConferenceSummaries(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndGetConferenceSummaries(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetConferenceSummaries (result As IAsyncResult) As Collection(Of ConferenceSummary)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceSummary ^&gt; ^ EndGetConferenceSummaries(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceSummary&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation of getting conference summaries to complete.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when retrieving conferences summary information failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when retrieving conferences summary information failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetConferenceUriByPhoneConferenceId">
+      <MemberSignature Language="C#" Value="public string EndGetConferenceUriByPhoneConferenceId (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string EndGetConferenceUriByPhoneConferenceId(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndGetConferenceUriByPhoneConferenceId(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetConferenceUriByPhoneConferenceId (result As IAsyncResult) As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ EndGetConferenceUriByPhoneConferenceId(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation of translating a phone conference ID to a conference URI to complete.
+            </summary>
+        <returns>The conference URI.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when retrieving the conference URI failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when retrieving the conference URI failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetConferencingCapabilities">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferencingCapabilities EndGetConferencingCapabilities (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.ConferencingCapabilities EndGetConferencingCapabilities(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndGetConferencingCapabilities(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetConferencingCapabilities (result As IAsyncResult) As ConferencingCapabilities" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ConferencingCapabilities ^ EndGetConferencingCapabilities(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferencingCapabilities</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation of getting conferencing options to complete.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when retrieving conferencing capabilities failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when retrieving conferencing capabilities failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndScheduleConference">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conference EndScheduleConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.Conference EndScheduleConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndScheduleConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndScheduleConference (result As IAsyncResult) As Conference" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Conference ^ EndScheduleConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous scheduling operation to complete.
+            </summary>
+        <returns>Information about the scheduled conference.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when scheduling a conference failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when scheduling a conference failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateConference">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Conference EndUpdateConference (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.Conference EndUpdateConference(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndUpdateConference(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndUpdateConference (result As IAsyncResult) As Conference" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Conference ^ EndUpdateConference(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conference</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous update operation to complete.
+            </summary>
+        <returns>Information about the updated conference.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when updating a conference failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when updating a conference failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndVerifyPasscode">
+      <MemberSignature Language="C#" Value="public bool EndVerifyPasscode (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EndVerifyPasscode(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.EndVerifyPasscode(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndVerifyPasscode (result As IAsyncResult) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool EndVerifyPasscode(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation of verifying the passcode to complete.
+            </summary>
+        <returns>True if the passcode is valid, false if the passcode is invalid.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when verifying conference passcode failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when verifying conference passcode setting failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateAnonymousUri">
+      <MemberSignature Language="C#" Value="public static string GenerateAnonymousUri ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateAnonymousUri() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.GenerateAnonymousUri" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateAnonymousUri () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GenerateAnonymousUri();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates an anonymous URI.
+            </summary>
+        <returns>A unique, anonymous URI.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateConferenceId">
+      <MemberSignature Language="C#" Value="public static string GenerateConferenceId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateConferenceId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.GenerateConferenceId" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateConferenceId () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GenerateConferenceId();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a syntactically valid conference ID.
+            </summary>
+        <returns>The generated conference ID</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateConferenceId">
+      <MemberSignature Language="C#" Value="public static string GenerateConferenceId (int conferenceIdLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateConferenceId(int32 conferenceIdLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.GenerateConferenceId(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateConferenceId (conferenceIdLength As Integer) As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GenerateConferenceId(int conferenceIdLength);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conferenceIdLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceIdLength">The length of the generated conference ID, has to be between 8 and 32 characters.</param>
+        <summary>
+            Generates a syntactically valid conference ID.
+            </summary>
+        <returns>The generated conference ID</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateNumericPasscode">
+      <MemberSignature Language="C#" Value="public static string GenerateNumericPasscode (int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GenerateNumericPasscode(int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.GenerateNumericPasscode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateNumericPasscode (length As Integer) As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GenerateNumericPasscode(int length);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="length">The length.</param>
+        <summary>
+            Generates a numeric conference passcode of the given length.
+            </summary>
+        <returns>The numeric passcode.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the length requested is not between 3 and 10 digits, inclusive.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneratePasscode">
+      <MemberSignature Language="C#" Value="public static string GeneratePasscode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GeneratePasscode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.GeneratePasscode" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GeneratePasscode () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GeneratePasscode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a conference passcode for use in the conference.
+            </summary>
+        <returns>The conference passcode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PoolName">
+      <MemberSignature Language="C#" Value="public string PoolName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PoolName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices.PoolName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PoolName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PoolName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the pool name for building pool targeted requests.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

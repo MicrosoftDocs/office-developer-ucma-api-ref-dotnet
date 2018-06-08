@@ -1,0 +1,129 @@
+﻿<Type Name="RemotePresentityNotificationData" FullName="Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData">
+  <TypeSignature Language="C#" Value="public class RemotePresentityNotificationData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RemotePresentityNotificationData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData" />
+  <TypeSignature Language="VB.NET" Value="Public Class RemotePresentityNotificationData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RemotePresentityNotificationData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Obsolete("This class will be removed from future versions.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents the presence of a remote user.
+            </summary>
+    <remarks>
+      <para>
+            If PresenceData is null, the remote user is a rich presence client; otherwise the remote user is a Microsoft Office Communicator 2005 client or a Public Cloud user.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Categories">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; Categories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; Categories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData.Categories" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Categories As Collection(Of PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ Categories { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of rich presence categories for the target.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PidfDocument PresenceData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PidfDocument PresenceData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData.PresenceData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceData As PidfDocument" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PidfDocument ^ PresenceData { Microsoft::Rtc::Collaboration::Presence::PidfDocument ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PidfDocument</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the presence for Communicator 2005 clients or Public Cloud targets.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceNetwork">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SourceNetwork SourceNetwork { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.SourceNetwork SourceNetwork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData.SourceNetwork" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceNetwork As SourceNetwork" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::SourceNetwork SourceNetwork { Microsoft::Rtc::Collaboration::SourceNetwork get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SourceNetwork</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the source network for this presence data notification.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote presentity uri.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Application should use RealTimeAddress class for uri comparison, instead of string comparison.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

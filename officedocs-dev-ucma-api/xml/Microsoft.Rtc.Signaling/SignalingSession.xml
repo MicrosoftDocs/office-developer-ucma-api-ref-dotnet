@@ -1,0 +1,2788 @@
+﻿<Type Name="SignalingSession" FullName="Microsoft.Rtc.Signaling.SignalingSession">
+  <TypeSignature Language="C#" Value="public class SignalingSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignalingSession extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SignalingSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class SignalingSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignalingSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents an Invite based two party session. The session is normally used for offer answer negotiation and signaling call control. 
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignalingSession (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As RealTimeEndpoint, sessionTarget As RealTimeAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSession(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Endpoint which is creating this SignalingSession.</param>
+        <param name="sessionTarget">The target for this session.</param>
+        <summary>
+            Initializes a signaling session with endpoint and session target. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint has been terminated.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignalingSession (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint, Microsoft.Rtc.Signaling.SignalingSessionSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint, class Microsoft.Rtc.Signaling.SignalingSessionSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.SignalingSessionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As RealTimeEndpoint, settings As SignalingSessionSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSession(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint, Microsoft::Rtc::Signaling::SignalingSessionSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="settings" Type="Microsoft.Rtc.Signaling.SignalingSessionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Endpoint which is creating this SignalingSession.</param>
+        <param name="settings">Additonal settings used to configure the session.</param>
+        <summary>
+            Creates a new instances of SignalingSession with endpoint and the supplied settings.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignalingSession (Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint, Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, string callId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint endpoint, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, string callId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As RealTimeEndpoint, sessionTarget As RealTimeAddress, callId As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSession(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::String ^ callId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="sessionTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="callId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">Endpoint which is creating this SignalingSession.</param>
+        <param name="sessionTarget">The target for this session.</param>
+        <param name="callId">The session ID. </param>
+        <summary>
+            Creates a signaling session with a specified session ID. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint has been terminated.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAccept">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAccept (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAccept(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginAccept(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.
+            </param>
+        <param name="state">
+            A user-provided object that distinguishes this particular 
+            asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Accept the session.
+            </summary>
+        <returns>
+            An IAsyncResult that references the asynchronous operation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the session does not allow the operation.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAccept">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAccept (Microsoft.Rtc.Signaling.SignalingSessionAcceptOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAccept(class Microsoft.Rtc.Signaling.SignalingSessionAcceptOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginAccept(Microsoft.Rtc.Signaling.SignalingSessionAcceptOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (options As SignalingSessionAcceptOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(Microsoft::Rtc::Signaling::SignalingSessionAcceptOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Signaling.SignalingSessionAcceptOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            Optional parameters to customize the accept behavior.
+            </param>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.
+            </param>
+        <param name="state">
+            A user-provided object that distinguishes this particular 
+            asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Accept the session with options specified.
+            </summary>
+        <returns>
+            An IAsyncResult that references the asynchronous operation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the session does not allow the operation or the dialog context
+            has been used in a previous transaction.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="options" /> parameter contains invalid or restricted signaling headers. 
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginEstablish(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.
+            </param>
+        <param name="state">
+            A user-provided object that distinguishes this particular 
+            asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Establish the session.
+            </summary>
+        <returns>
+            An IAsyncResult that references the asynchronous operation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the session does not allow the operation.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (Microsoft.Rtc.Signaling.SignalingSessionEstablishOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(class Microsoft.Rtc.Signaling.SignalingSessionEstablishOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginEstablish(Microsoft.Rtc.Signaling.SignalingSessionEstablishOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (options As SignalingSessionEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Signaling::SignalingSessionEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="options" Type="Microsoft.Rtc.Signaling.SignalingSessionEstablishOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="options">
+            Optional parameters to customize the establish behavior.
+            </param>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.
+            </param>
+        <param name="state">
+            A user-provided object that distinguishes this particular 
+            asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Establish the session with options specified.
+            </summary>
+        <returns>
+            An IAsyncResult that references the asynchronous operation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the session does not allow the operation.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="options" /> parameter contains invalid or restricted signaling headers. 
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginParticipate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginParticipate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginParticipate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginParticipate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginParticipate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginParticipate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Participates in a session. This method needs to be called (for both outgoing and incoming messages) 
+            to establish the session. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method is now deprecated in favor of the BeginEstablish and BeginAccept APIs.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to Participate.</exception>
+        <exception cref="T:System.ArgumentException">        
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when some other failure occurs.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginParticipate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginParticipate (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginParticipate(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginParticipate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginParticipate (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginParticipate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The collection of signaling headers. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Participates in a session. This method needs to be called (for both outgoing and incoming messages) 
+            to establish the session. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method is now deprecated in favor of the BeginEstablish and BeginAccept APIs.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to Participate.
+            </exception>
+        <exception cref="T:System.ArgumentException">        
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when some other failure occurs.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRefer">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRefer (Microsoft.Rtc.Signaling.RealTimeAddress referTarget, Microsoft.Rtc.Signaling.ReferStatus referStatus, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRefer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="referStatus" Type="Microsoft.Rtc.Signaling.ReferStatus" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="referTarget">The Refer target URI.</param>
+        <param name="referStatus">The ReferStatus object provided by the caller to signal Refer state changes.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Refers a URI to the remote participant. 
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The platform supports multiple Refer operations at the same time. Some clients may
+            not support parallel Refer operations. Until the first notification is received, 
+            the capability of the remote client is not known. For this reason, the first Refer
+            operation is special in the sense the subsequent Refer operations are queued until
+            first notify is received to learn the capability of the remote client. If the remote
+            supports parallel Refer operations, the queued Refer operations are all released.
+            If the remote does not support parallel Refer operations, the Refer operations are 
+            carried out one at a time. When the terminating notify is received, the next Refer
+            operation is started. For this reason, calling synchronous method to send Refer or waiting
+            on the operation to complete (EndRefer) before the callback is called are highly discouraged.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is an invalid state to send a Refer.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when arguments are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRefer">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRefer (Microsoft.Rtc.Signaling.RealTimeAddress referTarget, Microsoft.Rtc.Signaling.ReferStatus referStatus, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRefer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="referStatus" Type="Microsoft.Rtc.Signaling.ReferStatus" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="referTarget">RealTimeAddress that contains the refer URI</param>
+        <param name="referStatus">The refer status object provided by the caller to signal refer state change</param>
+        <param name="signalingHeaders">Headers required for this refer. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Refers a URI to the remote participant.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The platform supports multiple Refer operations at the same time. Some clients may
+            not support parallel Refer operations. Until the first notification is received, 
+            the capability of the remote client is not known. For this reason, the first Refer
+            operation is special in the sense the subsequent Refer operations are queued until
+            first notify is received to learn the capability of the remote client. If the remote
+            supports parallel Refer operations, the queued Refer operations are all released.
+            If the remote does not support parallel Refer operations, the Refer operations are 
+            carried out one at a time. When the terminating notify is received, the next Refer
+            operation is started. For this reason, calling synchronous method to send Refer or waiting
+            on the operation to complete (EndRefer) before the callback is called are highly discouraged.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the refer status object is not Idle or is already used by another session.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRefer">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRefer (Microsoft.Rtc.Signaling.RealTimeAddress referTarget, Microsoft.Rtc.Signaling.ReferStatus referStatus, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, System.Net.Mime.ContentType contentType, byte[] body, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRefer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="referStatus" Type="Microsoft.Rtc.Signaling.ReferStatus" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="referTarget">RealTimeAddress that contains the refer URI</param>
+        <param name="referStatus">The refer status object provided by the caller to signal refer state change</param>
+        <param name="signalingHeaders">Headers required for this refer. Can be null.</param>
+        <param name="contentType">Content type describing the body. Can be null if body is null.</param>
+        <param name="body">The body for the data. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Refers a URI to the remote participant.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The platform supports multiple Refer operations at the same time. Some clients may
+            not support parallel Refer operations. Until the first notification is received, 
+            the capability of the remote client is not known. For this reason, the first Refer
+            operation is special in the sense the subsequent Refer operations are queued until
+            first notify is received to learn the capability of the remote client. If the remote
+            supports parallel Refer operations, the queued Refer operations are all released.
+            If the remote does not support parallel Refer operations, the Refer operations are 
+            carried out one at a time. When the terminating notify is received, the next Refer
+            operation is started. For this reason, calling synchronous method to send Refer or waiting
+            on the operation to complete (EndRefer) before the callback is called are highly discouraged.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the refer status object is not Idle or is already used by another session.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRenegotiateDescription">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRenegotiateDescription (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRenegotiateDescription(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRenegotiateDescription(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRenegotiateDescription (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRenegotiateDescription(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Renegotiates the media description.
+            Only one negotiation can be outstanding at any time.
+            The session should be in the Connected state for this method to work.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>In an early dialog, BeginRenegotiateDescription is intended to send only SDP-bearing messages.
+            As such, this method does not differentiate between a call to BeginRenegotiateDescription with a provided SDP session description
+            and a call without an SDP session description. Both will conflict with incoming SDP-bearing UPDATE messages.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to renegotiate.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when called in a temporary invalid state, and the operation can be retried.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when there is no media description available.</exception>
+        <exception cref="T:System.Exception">
+            Thrown by the application when generating media (interface IOfferAnswer) is not handled by the platform.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRenegotiateDescription">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRenegotiateDescription (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRenegotiateDescription(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRenegotiateDescription(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRenegotiateDescription (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRenegotiateDescription(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">Headers required for this renegotiate. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Renegotiates the media description with the specified participant.
+            Only one negotiation can be outstanding with any participant at any time.
+            The participant should be part of the session for this method to succeed.
+            The participant cannot be a local participant.
+            A given topology may not allow the exchange of descriptions with certain participants.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>In an early dialog, BeginRenegotiateDescription is intended to send only SDP-bearing messages.
+            As such, this method does not differentiate between a call to BeginRenegotiateDescription with a provided SDP session description
+            and a call without an SDP session description. Both will conflict with incoming SDP-bearing UPDATE messages.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when called in an invalid state, a renegotiate operation is already outstanding,
+            or a null media description is specified via GetMediaOffer().</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when called in a temporary invalid state, and the operation can be retried.
+            </exception>
+        <exception cref="T:System.Exception">
+            Exceptions thrown by the application while generating media (interface IOfferAnswer) are not handled by the platform.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRenegotiateDescription">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRenegotiateDescription (Microsoft.Rtc.Signaling.SipDialogContext dialogContext, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRenegotiateDescription(class Microsoft.Rtc.Signaling.SipDialogContext dialogContext, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRenegotiateDescription(Microsoft.Rtc.Signaling.SipDialogContext,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRenegotiateDescription (dialogContext As SipDialogContext, signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRenegotiateDescription(Microsoft::Rtc::Signaling::SipDialogContext ^ dialogContext, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dialogContext" Type="Microsoft.Rtc.Signaling.SipDialogContext" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="dialogContext">The dialog to renegotiate on.</param>
+        <param name="signalingHeaders">Headers to include in the renegotiation request. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Renegotiates the media description.
+            Only one negotiation can be outstanding at any time.
+            The session should be in the Connected state for this method to work.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>In an early dialog, BeginRenegotiateDescription is intended to send only SDP-bearing messages.
+            As such, this method does not differentiate between a call to BeginRenegotiateDescription with a provided SDP session description
+            and a call without an SDP session description. Both will conflict with incoming SDP-bearing UPDATE messages.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to renegotiate or the dialog context
+            has been used in a previous transaction.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeInvalidOperationException">
+            Thrown when called in a temporary invalid state, and the operation can be retried.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when there is no media description available.</exception>
+        <exception cref="T:System.Exception">
+            Thrown by the application when generating media (interface IOfferAnswer) is not handled by the platform.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendMessage (Microsoft.Rtc.Signaling.MessageType messageType, System.Net.Mime.ContentType contentType, byte[] body, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The type of the message body (message or info).</param>
+        <param name="contentType">The content type describing the body. Can be null if body is null and if null text/plain, UTF-8 is assumed.</param>
+        <param name="body">The body for the data.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Sends a message. The session should be in the Connected state.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is in an invalid state to send the message.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when arguments are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendMessage (Microsoft.Rtc.Signaling.MessageType messageType, System.Net.Mime.ContentType contentType, byte[] body, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">Type of the body of the message</param>
+        <param name="contentType">Content type describing the body. Can be null if body is null and if null text/plain, UTF-8 is assumed.</param>
+        <param name="body">The body for the data. Can be null.</param>
+        <param name="signalingHeaders">Headers provided for this invite. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Send message to participant specified. Participant who is not part of the session
+            is ignored.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when a body is specified without a content type with media type. MessageType is
+            not Message or Info.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendProvisionalResponse">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendProvisionalResponse (int responseCode, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendProvisionalResponse(int32 responseCode, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendProvisionalResponse(System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendProvisionalResponse (responseCode As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendProvisionalResponse(int responseCode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The redirection response code to use.</param>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.
+            </param>
+        <param name="state">
+            A user-provided object that distinguishes this particular
+            asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Sends a provisional response.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the session does not allow the operation.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendProvisionalResponse">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendProvisionalResponse (int responseCode, Microsoft.Rtc.Signaling.SendProvisionalResponseOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendProvisionalResponse(int32 responseCode, class Microsoft.Rtc.Signaling.SendProvisionalResponseOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendProvisionalResponse(System.Int32,Microsoft.Rtc.Signaling.SendProvisionalResponseOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendProvisionalResponse (responseCode As Integer, options As SendProvisionalResponseOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendProvisionalResponse(int responseCode, Microsoft::Rtc::Signaling::SendProvisionalResponseOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Signaling.SendProvisionalResponseOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The redirection response code to use.</param>
+        <param name="options">
+            Optional parameters to specify how the provisional
+            response should be sent.
+            </param>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.
+            </param>
+        <param name="state">
+            A user-provided object that distinguishes this particular
+            asynchronous operation from other asynchronous operations.
+            </param>
+        <summary>
+            Sends a provisional response.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the state of the session does not allow the operation or the dialog context
+            has been used in a previous transaction.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendReliableProvisionalResponse">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendReliableProvisionalResponse (int responseCode, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendReliableProvisionalResponse(int32 responseCode, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendReliableProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendReliableProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendReliableProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="needEarlyMediaSupport" Type="System.Boolean" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The provisonal response code in the range 101-199.</param>
+        <param name="signalingHeaders">The custom signaling headers to add the response. Can be null.</param>
+        <param name="needEarlyMediaSupport">The bool indicating whether the provisional response need to send media description.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            This method can be used to send a reliable provisional response with option to send answer for early media. If the inviter supports 100rel and
+            the local policy is not unsupported, this method will wait for the PRACK. Otherwise, this method will not require 100rel. Any application
+            that supports 100rel is recommended to use this method for sending provisional response. SendProvisional method can be used only when the 
+            application knows for sure that the remote does not require 100rel.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not a provisional response code.</exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the session is not in incoming state. 
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendReliableProvisionalResponse">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendReliableProvisionalResponse (int responseCode, string responseText, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendReliableProvisionalResponse(int32 responseCode, string responseText, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendReliableProvisionalResponse(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendReliableProvisionalResponse (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendReliableProvisionalResponse(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="responseText" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="needEarlyMediaSupport" Type="System.Boolean" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The provisional response code in the range 101-199.</param>
+        <param name="responseText">Reason phrase send out with the response. If null or empty default reason phrase will be generated.</param>
+        <param name="signalingHeaders">The custom signaling headers to add the response. Can be null.</param>
+        <param name="needEarlyMediaSupport">The flag indicating whether the provisional response need to send media description.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            This method can be used to send a reliable provisional response with option to send answer for early media. If the inviter supports 100rel and
+            the local policy is not unsupported, this method will wait for the PRACK. Otherwise, this method will not require 100rel. Any application
+            that supports 100rel is recommended to use this method for sending provisional response. SendProvisional method can be used only when the 
+            application knows for sure that the remote does not require 100rel.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not a provisional response code.</exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the sesssion is not in incoming state. 
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Terminates the session asynchronously.
+            The session will be no longer usable.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginTerminate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The collection of signaling headers to attach to any message that is sent. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Terminates the session asynchronously.
+            The session will be no longer usable.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CallId">
+      <MemberSignature Language="C#" Value="public string CallId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CallId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.CallId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CallId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the session ID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeConnection Connection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.Connection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Connection As RealTimeConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnection ^ Connection { Microsoft::Rtc::Signaling::RealTimeConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the connection used by this signaling session.
+            For incoming sessions, this property can be used to determine the address of the inviter.
+            For outgoing sessions, this property can be used to retrieve information about the connection used.
+            This property can return null if the connection does not exist at the moment. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredSessionTimerInterval">
+      <MemberSignature Language="C#" Value="public int DesiredSessionTimerInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DesiredSessionTimerInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.DesiredSessionTimerInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property DesiredSessionTimerInterval As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DesiredSessionTimerInterval { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the application's desired session timer interval (in seconds).
+            This is used only for the initial invite or response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The value must be greater than or equal to the MinimumSessionExpiresInterval.
+            
+            The session timer needs to be enabled for this setting to take effect.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when setting a value out of the expected range.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAccept">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData EndAccept (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipMessageData EndAccept(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndAccept(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndAccept (result As IAsyncResult) As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndAccept(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">
+            The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending accept operation to complete.
+            </summary>
+        <returns>Returns SIP message (200 response or ACK request)</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEstablish">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData EndEstablish (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipMessageData EndEstablish(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndEstablish(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndEstablish (result As IAsyncResult) As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndEstablish(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous
+            operation.</param>
+        <summary>
+            Waits for the pending establish operation to complete.
+            </summary>
+        <returns>Returns SIP message (200 response or ACK request)</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndParticipate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData EndParticipate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipMessageData EndParticipate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndParticipate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndParticipate (result As IAsyncResult) As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndParticipate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending participate operation to complete.
+            </summary>
+        <returns>Returns SIP message (200 response or ACK request)</returns>
+        <remarks>
+          <para>
+            This method is now deprecated in favor of the BeginEstablish and BeginAccept APIs which have extended functionality.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Endpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeEndpoint Endpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeEndpoint Endpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.Endpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Endpoint As RealTimeEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeEndpoint ^ Endpoint { Microsoft::Rtc::Signaling::RealTimeEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the endpoint associated with the session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRefer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndRefer (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndRefer(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndRefer(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndRefer (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndRefer(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending refer operation to complete.
+            </summary>
+        <returns>The response data received for the refer request.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRenegotiateDescription">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndRenegotiateDescription (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndRenegotiateDescription(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndRenegotiateDescription(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndRenegotiateDescription (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndRenegotiateDescription(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending renegotiate operation to complete.
+            </summary>
+        <returns>Returns the SIP response data associated with the operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the remote side returns a failure response for this operation.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when any of the sub operations of this operation failed due to invalid object state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndSendMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndSendMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndSendMessage(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendMessage (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending SendMessage operation to complete.
+            </summary>
+        <returns>Returns the response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when EndSendMessage is called multiple times using the same asyncResult.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error. 
+            The SipResponseData in the exception should give additional information.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when some other unknown errors occur.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.ServerPolicyException">
+            A server policy setting does not allow the sending of the message.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendProvisionalResponse">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData EndSendProvisionalResponse (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipMessageData EndSendProvisionalResponse(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndSendProvisionalResponse(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendProvisionalResponse (result As IAsyncResult) As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndSendProvisionalResponse(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous
+            operation.</param>
+        <summary>
+            Waits for the send provisional operation to complete.
+            </summary>
+        <returns>
+            Returns the PRACK message data, if the inviter supports reliable response. 
+            Can be null if the inviter does not support reliable response.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendReliableProvisionalResponse">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipRequestData EndSendReliableProvisionalResponse (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipRequestData EndSendReliableProvisionalResponse(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndSendReliableProvisionalResponse(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendReliableProvisionalResponse (result As IAsyncResult) As SipRequestData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipRequestData ^ EndSendReliableProvisionalResponse(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipRequestData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending SendProvisionalResponse operation to complete.
+            </summary>
+        <returns>
+            Returns the PRACK message data, if the inviter supports reliable response. 
+            Can be null if the inviter does not support reliable response.
+            </returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when SendProvisionalResponse is called multiple times using the same asyncResult.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the pending Terminate operation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromTag">
+      <MemberSignature Language="C#" Value="public string FromTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FromTag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.FromTag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FromTag As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FromTag { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tag used in the "From" header. This property may return null if not available.
+            For outgoing sessions, this property may not be available until the state is Alerted
+            or Connected. For incoming sessions, the property may be available right away.
+            This property can be null after the session is terminated. The application is responsible
+            for caching the tag if it requires it after the session is disconnected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNewEarlyDialog">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipDialogContext GetNewEarlyDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipDialogContext GetNewEarlyDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.GetNewEarlyDialog" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNewEarlyDialog () As SipDialogContext" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipDialogContext ^ GetNewEarlyDialog();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipDialogContext</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new dialog context.
+            </summary>
+        <returns>A new dialog context for this session.</returns>
+        <remarks>
+          <para>
+            New dialog contexts can only be created on sessions that have 
+            received a session through the SessionReceived event. I.e. the 
+            UAS side of an INVITE request.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not a received session in incoming or connecting state.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceCorrelationID">
+      <MemberSignature Language="C#" Value="public long GetTraceCorrelationID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetTraceCorrelationID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.GetTraceCorrelationID" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the trace correlation id for this instance.
+            </summary>
+        <returns>The trace correlation id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvitationAccepted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.InvitationAcceptedEventArgs&gt; InvitationAccepted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.InvitationAcceptedEventArgs&gt; InvitationAccepted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.InvitationAccepted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event InvitationAccepted As EventHandler(Of InvitationAcceptedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::InvitationAcceptedEventArgs ^&gt; ^ InvitationAccepted;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.InvitationAcceptedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the remote has accepted the invite.
+            Typically, this happens when a successful response is received.
+            This event is optional for an application. Applications that
+            want to send headers in the acknowledgement can register for
+            this event. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvitationCompleted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; InvitationCompleted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; InvitationCompleted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.InvitationCompleted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event InvitationCompleted As EventHandler(Of SipRequestReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ InvitationCompleted;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the invite process completes.
+            Typically, this happens when the inviter acknowledges a successful response.
+            This event is optional for an application. Applications that 
+            want to access headers in the acknowledgement can register for 
+            this event. Note that EndParticipate for the incoming side also exposes the
+            Ack message. This event is provided for convenience.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsIncoming">
+      <MemberSignature Language="C#" Value="public bool IsIncoming { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsIncoming" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.IsIncoming" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsIncoming As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsIncoming { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the session was initially received in the RealTimeEndpoint SessionReceived event.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSessionTimerSupported">
+      <MemberSignature Language="C#" Value="public bool IsSessionTimerSupported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSessionTimerSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.IsSessionTimerSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsSessionTimerSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSessionTimerSupported { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value indicating if the session supports a session timer.
+            The default value of this property is inherited from the endpoint. 
+            An application can override this property per session. If the session 
+            is already using a session timer, this flag will only affect the behavior
+            when the next session refresh occurs. If the flag is turned on after the
+            session is connected, the application needs to call ReNegotiateMediaDescription
+            to enable the session timer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when trying to set the property to false when session timer feature of 
+            the remote participant is required.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalParticipant">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingParticipant LocalParticipant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingParticipant LocalParticipant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.LocalParticipant" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalParticipant As SignalingParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingParticipant ^ LocalParticipant { Microsoft::Rtc::Signaling::SignalingParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the local participant of the session. This is helpful to
+            get the URI of the local participant which can differ from the URI
+            of the endpoint, particularly for incoming sessions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; MessageReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; MessageReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.MessageReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event MessageReceived As EventHandler(Of MessageReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::MessageReceivedEventArgs ^&gt; ^ MessageReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a message is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumSessionExpiresInterval">
+      <MemberSignature Language="C#" Value="public int MinimumSessionExpiresInterval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MinimumSessionExpiresInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.MinimumSessionExpiresInterval" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MinimumSessionExpiresInterval As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MinimumSessionExpiresInterval { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the minimum session expires interval value (in seconds) currently used by this session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This setting is inherited from the endpoint when the session is created and cannot be changed.
+            When the session is established, it will reflect the negotiated value for the session.
+            
+            The session timer needs to be enabled for this setting to take effect.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OfferAnswerNegotiation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.IOfferAnswer OfferAnswerNegotiation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.IOfferAnswer OfferAnswerNegotiation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.OfferAnswerNegotiation" />
+      <MemberSignature Language="VB.NET" Value="Public Property OfferAnswerNegotiation As IOfferAnswer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::IOfferAnswer ^ OfferAnswerNegotiation { Microsoft::Rtc::Signaling::IOfferAnswer ^ get(); void set(Microsoft::Rtc::Signaling::IOfferAnswer ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.IOfferAnswer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the offer answer negotiation callback interface implemented by the caller.
+            </summary>
+        <value>The value of the property.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Participate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData Participate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipMessageData Participate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Participate" />
+      <MemberSignature Language="VB.NET" Value="Public Function Participate () As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ Participate();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronously participates in a session. This method is not recommended for UI threads
+            or scalable server applications.
+            </summary>
+        <returns>Returns SIP message data th</returns>
+        <remarks>
+          <para>
+            This method is now deprecated in favor of the BeginEstablish and BeginAccept APIs.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to Participate.</exception>
+        <exception cref="T:System.ArgumentException">        
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when a non-null value is expected for an argument. 
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when an exception is thrown by the application while generating offer/answer that is not handled by the platform.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Participate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData Participate (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipMessageData Participate(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Participate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Participate (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ Participate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The signaling headers to add. Can be null.</param>
+        <summary>
+            Synchronously participates in a session. This method is not recommended for UI threads
+            or scalable server applications.
+            </summary>
+        <returns>Returns the Sip message (200 response or ACK request)</returns>
+        <remarks>
+          <para>
+            This method is now deprecated in favor of the BeginEstablish and BeginAccept APIs.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to accept, or when Accept is called
+            again while another Accept is pending.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when some other failure occurs.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvisionalResponseReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs&gt; ProvisionalResponseReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs&gt; ProvisionalResponseReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.ProvisionalResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ProvisionalResponseReceived As EventHandler(Of SipResponseReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipResponseReceivedEventArgs ^&gt; ^ ProvisionalResponseReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the session received any provisional response (101-199).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Redirecting">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.RedirectingEventArgs&gt; Redirecting;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.RedirectingEventArgs&gt; Redirecting" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.Redirecting" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event Redirecting As EventHandler(Of RedirectingEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RedirectingEventArgs ^&gt; ^ Redirecting;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.RedirectingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a redirect request is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData Refer (Microsoft.Rtc.Signaling.RealTimeAddress referTarget, Microsoft.Rtc.Signaling.ReferStatus referStatus);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Refer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Refer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Refer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="referStatus" Type="Microsoft.Rtc.Signaling.ReferStatus" />
+      </Parameters>
+      <Docs>
+        <param name="referTarget">
+            The session target object containing the Refer URI.
+            </param>
+        <param name="referStatus">
+            The ReferStatus object that is used to signal Refer state changes.
+            </param>
+        <summary>
+            Synchronously transfers the current session to a different real-time address. This method will
+            wait until the transfer is completed. It is not recommended for a UI thread.
+            </summary>
+        <returns>The response data received for the refer request.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is in an invalid state to send a Refer request.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when arguments are null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the server or remote participant returns an error.  The response code in the
+            exception should give more information.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Refer">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData Refer (Microsoft.Rtc.Signaling.RealTimeAddress referTarget, Microsoft.Rtc.Signaling.ReferStatus referStatus, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Refer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Refer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Refer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="referTarget" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="referStatus" Type="Microsoft.Rtc.Signaling.ReferStatus" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="referTarget">The session target object containing the address of the Refer target.</param>
+        <param name="referStatus">The Refer status object that is used to signal Refer state changes.</param>
+        <param name="signalingHeaders">Headers required for this Refer.</param>
+        <summary>
+            Synchronously transfers the current session to a different real-time address. This method will
+            wait until the transfer is completed. It is not recommended for a UI thread.
+            </summary>
+        <returns>The response data received for the refer request. Can be null.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="referTarget" /> or <paramref name="referStatus" /> parameters are null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="referTarget" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReferReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.ReferReceivedEventArgs&gt; ReferReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.ReferReceivedEventArgs&gt; ReferReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.ReferReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ReferReceived As EventHandler(Of ReferReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::ReferReceivedEventArgs ^&gt; ^ ReferReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.ReferReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a new Refer is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReInviteReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; ReInviteReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; ReInviteReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.ReInviteReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ReInviteReceived As EventHandler(Of SipRequestReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ ReInviteReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the remote sends a re-invite.
+            This event is optional for an application. Applications that
+            want to access headers in the re-invite can register for
+            this event. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReliableProvisionalResponsePolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ExtensionFeatureSupport ReliableProvisionalResponsePolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.ExtensionFeatureSupport ReliableProvisionalResponsePolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.ReliableProvisionalResponsePolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReliableProvisionalResponsePolicy As ExtensionFeatureSupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ExtensionFeatureSupport ReliableProvisionalResponsePolicy { Microsoft::Rtc::Signaling::ExtensionFeatureSupport get(); void set(Microsoft::Rtc::Signaling::ExtensionFeatureSupport value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ExtensionFeatureSupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the default policy for supporting 100rel extension feature. If an application supports this
+            then the remote can ask for this when sending provisional responses which will result in a PRACK message
+            getting sent to acknowledge the response. An application should set this before sending Invite or else it may not have 
+            any effect.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when remote requires it but value is Unsupported.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteParticipant">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingParticipant RemoteParticipant { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingParticipant RemoteParticipant" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.RemoteParticipant" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteParticipant As SignalingParticipant" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingParticipant ^ RemoteParticipant { Microsoft::Rtc::Signaling::SignalingParticipant ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingParticipant</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote participant of the session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenegotiateDescription">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData RenegotiateDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData RenegotiateDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.RenegotiateDescription" />
+      <MemberSignature Language="VB.NET" Value="Public Function RenegotiateDescription () As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ RenegotiateDescription();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronously renegotiates the media description. This method will wait until the media
+            description is renegotiated. It is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the SIP response data associated with the operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to renegotiate.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when the server or remote participant returns an error.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenegotiateDescription">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData RenegotiateDescription (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData RenegotiateDescription(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.RenegotiateDescription(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RenegotiateDescription (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ RenegotiateDescription(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">Headers required for this renegotiate. Can be null.</param>
+        <summary>
+            Synchronously renegotiates the media description. This method will wait until the media
+            description is renegotiated. It is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the SIP response data associated with the operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is not in a valid state to renegotiate.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when there is no media description available.</exception>
+        <exception cref="T:System.Exception">
+            Exceptions thrown by the application while generating media (interface IOfferAnswer) are not handled by the platform.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RenegotiationToRefreshNeeded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; RenegotiationToRefreshNeeded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; RenegotiationToRefreshNeeded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.RenegotiationToRefreshNeeded" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RenegotiationToRefreshNeeded As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ RenegotiationToRefreshNeeded;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the session is enabled for a session timer, 
+            the local endpoint is the refresher, and the remote does not support the  
+            UPDATE method. The application is responsible for calling
+            BeginRenegotiateDescription to keep the session alive.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestOrResponseReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.RequestOrResponseReceivedEventArgs&gt; RequestOrResponseReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.RequestOrResponseReceivedEventArgs&gt; RequestOrResponseReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.RequestOrResponseReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RequestOrResponseReceived As EventHandler(Of RequestOrResponseReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RequestOrResponseReceivedEventArgs ^&gt; ^ RequestOrResponseReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.RequestOrResponseReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a request or response is received.
+            </summary>
+        <remarks>
+          <para>
+            Applications can used this event to search all requests and responses
+            for certain headers or other message characteristics.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteSetStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RouteSetStatus RouteSetStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.RouteSetStatus RouteSetStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.RouteSetStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RouteSetStatus As RouteSetStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RouteSetStatus RouteSetStatus { Microsoft::Rtc::Signaling::RouteSetStatus get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RouteSetStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the status of the dialog's route set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The route set represents set of servers/proxies 
+            via which the dialog's messages will be routed. The session's state
+            must be Connected and the route set must be Healthy for messages 
+            to be routed successfully.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteSetStatusChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt; RouteSetStatusChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt; RouteSetStatusChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.RouteSetStatusChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RouteSetStatusChanged As EventHandler(Of RouteSetStatusChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RouteSetStatusChangedEventArgs ^&gt; ^ RouteSetStatusChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of the route set of the session changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData SendMessage (Microsoft.Rtc.Signaling.MessageType messageType, System.Net.Mime.ContentType contentType, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[])" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">Type of the body (message or info).</param>
+        <param name="contentType">Content type describing the body. If null text/plain, UTF-8 is assumed.</param>
+        <param name="body">Body for the data.</param>
+        <summary>
+            Synchronously sends a message. The session should be in the Connected state.
+            This method is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is an invalid state to send message.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error. 
+            The SipResponseData in the exception should give additional information.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when some other unknown errors occur.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.ServerPolicyException">
+            A server policy setting does not allow the sending of the message.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData SendMessage (Microsoft.Rtc.Signaling.MessageType messageType, System.Net.Mime.ContentType contentType, byte[] body, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="messageType">The type of the body (message or info).</param>
+        <param name="contentType">the content type describing the body. Can be null if body is null and if null text/plain, UTF-8 is assumed.</param>
+        <param name="body">the body for the data.</param>
+        <param name="signalingHeaders">A collection of headers provided for this message. Can be null.</param>
+        <summary>
+            Synchronously sends a message. The session should be in the Connected state.
+            This method is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the response data.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the session is in an invalid state to send a message.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when invalid arguments are passed.</exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when null is supplied for a required argument. The argument name which is required is 
+            is part of the exception message.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error. 
+            The SipResponseData in the exception should give additional information.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when some other unknown errors occur.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.ServerPolicyException">
+            A server policy setting does not allow the sending of the message.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendProvisionalResponse">
+      <MemberSignature Language="C#" Value="public void SendProvisionalResponse (int responseCode, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendProvisionalResponse(int32 responseCode, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The provisional response code.</param>
+        <param name="signalingHeaders">The collection of signaling headers. Can be null.</param>
+        <summary>
+            Sends a provisional response synchronously.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not provisional.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendProvisionalResponse">
+      <MemberSignature Language="C#" Value="public void SendProvisionalResponse (int responseCode, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendProvisionalResponse(int32 responseCode, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="needEarlyMediaSupport" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The provisional response code.</param>
+        <param name="signalingHeaders">The collection of signaling headers. Can be null.</param>
+        <param name="needEarlyMediaSupport">True to indicate that the application wants to send offer/answer in the response.</param>
+        <summary>
+            Sends a provisional response synchronously with optional support for early media. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not provisional.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendProvisionalResponse">
+      <MemberSignature Language="C#" Value="public void SendProvisionalResponse (int responseCode, string responseText, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendProvisionalResponse(int32 responseCode, string responseText, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, bool needEarlyMediaSupport) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendProvisionalResponse(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="responseText" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="needEarlyMediaSupport" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The provisional response code.</param>
+        <param name="responseText">Reason phrase to send out with the response. If null or empty default reason phrase will be generated.</param>
+        <param name="signalingHeaders">The collection of signaling headers. Can be null.</param>
+        <param name="needEarlyMediaSupport">True to indicate that the application wants to send offer/answer in the response.</param>
+        <summary>
+            Sends a provisional response synchronously with optional support for early media. 
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not provisional.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionTarget">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeAddress SessionTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress SessionTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.SessionTarget" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionTarget As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ SessionTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the target of this session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionTimerInterval">
+      <MemberSignature Language="C#" Value="public int SessionTimerInterval { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SessionTimerInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.SessionTimerInterval" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionTimerInterval As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int SessionTimerInterval { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the session timer interval (in seconds) currently used. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SignalingState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As SignalingState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingState State { Microsoft::Rtc::Signaling::SignalingState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the state of this session.
+            </summary>
+        <value>The state value.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SignalingStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SignalingStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of SignalingStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SignalingStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SignalingStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the state of the session changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Terminate" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Terminate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronously terminates the session.
+            </summary>
+        <remarks>
+          <para>
+            The session will be no longer usable.
+            </para>
+          <para>
+            This method is not recommended for UI threads or scalable server applications.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Terminate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Terminate (signalingHeaders As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The signaling headers to attach to any message that is sent. Can be null.</param>
+        <summary>
+            Synchronously terminates the session.
+            </summary>
+        <remarks>
+          <para>
+            The session will be no longer usable.
+            </para>
+          <para>
+            This method is not recommended for UI threads or scalable server applications.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminatedByRemote">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; TerminatedByRemote;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; TerminatedByRemote" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.TerminatedByRemote" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event TerminatedByRemote As EventHandler(Of SipRequestReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ TerminatedByRemote;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the remote side terminates the session by sending a Bye or Cancel
+            message. This event is optional for an application.
+            This event is useful only if the application is interested in accessing
+            the headers in the Bye or Cancel message for custom scenarios.
+            </summary>
+        <remarks>
+          <para>In the case of a Bye message with headers, there is no way to 
+            access a 200 OK message using this event. Bye messages are sent only when an
+            application calls either of the overloaded SignalingSession.BeginTerminate methods,
+            so if an application needs access to
+            the 200 OK message, use the value returned by either of these methods.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateWithRedirection">
+      <MemberSignature Language="C#" Value="public void TerminateWithRedirection (Microsoft.Rtc.Signaling.RealTimeAddress redirectAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateWithRedirection(class Microsoft.Rtc.Signaling.RealTimeAddress redirectAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRedirection(Microsoft.Rtc.Signaling.RealTimeAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRedirection (redirectAddress As RealTimeAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRedirection(Microsoft::Rtc::Signaling::RealTimeAddress ^ redirectAddress);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="redirectAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="redirectAddress">The redirect address to use.</param>
+        <summary>
+            Terminates an incoming session by redirecting the inviter with an address.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the address given represents the local or remote endpoint.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the session is in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation fails.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateWithRedirection">
+      <MemberSignature Language="C#" Value="public void TerminateWithRedirection (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt; redirectAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateWithRedirection(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.RealTimeAddress&gt; redirectAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRedirection(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.RealTimeAddress})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRedirection (redirectAddresses As IEnumerable(Of RealTimeAddress))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRedirection(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ redirectAddresses);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="redirectAddresses" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="redirectAddresses">The collection of redirect addresses to use.</param>
+        <summary>
+            Terminates an incoming session by redirecting (with response code 302) the inviter with a list of addresses.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the address is not formed correctly.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the session is in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation fails.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateWithRedirection">
+      <MemberSignature Language="C#" Value="public void TerminateWithRedirection (int responseCode, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt; redirectAddresses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateWithRedirection(int32 responseCode, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.RealTimeAddress&gt; redirectAddresses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRedirection(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.RealTimeAddress})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRedirection (responseCode As Integer, redirectAddresses As IEnumerable(Of RealTimeAddress))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRedirection(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ redirectAddresses);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="redirectAddresses" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">The redirection response code to use.</param>
+        <param name="redirectAddresses">The collection of redirect addresses to use.</param>
+        <summary>
+            Terminates an incoming session by redirecting the inviter (with specific redirect response code given)
+            with a list of addresses.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the address is not formed correctly.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not a redirection code.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the session is in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation fails.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminateWithRejection">
+      <MemberSignature Language="C#" Value="public void TerminateWithRejection (int responseCode, string responseText, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TerminateWithRejection(int32 responseCode, string responseText, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRejection(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRejection (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRejection(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="responseText" Type="System.String" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">Failure response code.</param>
+        <param name="responseText">The text to indicate the reason. Can be null.</param>
+        <param name="signalingHeaders">The signaling headers to add. Can be null.</param>
+        <summary>
+            Terminates a session by rejecting the incoming invite. This method can be called only 
+            for an incoming session before participating in it.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the response code is not in the proper range.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when called in an invalid state.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurs while sending.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToTag">
+      <MemberSignature Language="C#" Value="public string ToTag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ToTag" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.ToTag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToTag As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToTag { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tag used in the "To" header. This property might return null if not available.
+            For both outgoing and incoming sessions, this property may not available 
+            until the session is connected.
+            This property can be null after the session is terminated. The application is responsible
+            for caching the tag if it requires it after the session is disconnected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCancelRenegotiateDescription">
+      <MemberSignature Language="C#" Value="public bool TryCancelRenegotiateDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryCancelRenegotiateDescription() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TryCancelRenegotiateDescription" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryCancelRenegotiateDescription () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryCancelRenegotiateDescription();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Tries to cancel a pending renegotiation. Returns if cancel is either sent or setup to be sent. 
+            This method does not guarantee that renegotiation will not receive a final response since there is 
+            possibility that a final response is on the way before cancel message can reach the remote.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCancelRenegotiateDescription">
+      <MemberSignature Language="C#" Value="public bool TryCancelRenegotiateDescription (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryCancelRenegotiateDescription(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TryCancelRenegotiateDescription(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryCancelRenegotiateDescription (signalingHeaders As IEnumerable(Of SignalingHeader)) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryCancelRenegotiateDescription(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">The signaling headers to use in the Cancel SIP message. Can be null.</param>
+        <summary>
+            Tries to cancel a pending renegotiation. Returns if cancel is either sent or setup to be sent. 
+            This method does not guarantee that renegotiation will not receive a final response since there is 
+            possibility that a final response is on the way before cancel message can reach the remote.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

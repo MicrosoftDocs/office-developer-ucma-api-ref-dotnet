@@ -1,0 +1,385 @@
+﻿<Type Name="DataCollaborationMcuSession" FullName="Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession">
+  <TypeSignature Language="C#" Value="public class DataCollaborationMcuSession : Microsoft.Rtc.Collaboration.McuSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataCollaborationMcuSession extends Microsoft.Rtc.Collaboration.McuSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class DataCollaborationMcuSession&#xA;Inherits McuSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DataCollaborationMcuSession : Microsoft::Rtc::Collaboration::McuSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.McuSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DataCollaborationMcuSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; DataCollaborationMcuSession();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSetMediaPermissions">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSetMediaPermissions (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt; mediaPermissions, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSetMediaPermissions(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt; mediaPermissions, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.BeginSetMediaPermissions(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSetMediaPermissions (mediaPermissions As IEnumerable(Of MediaPermission), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSetMediaPermissions(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^&gt; ^ mediaPermissions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mediaPermissions" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="mediaPermissions">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSetMediaPermissions">
+      <MemberSignature Language="C#" Value="public void EndSetMediaPermissions (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSetMediaPermissions(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.EndSetMediaPermissions(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSetMediaPermissions (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSetMediaPermissions(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="protected override void HandleParticipantEndpointAttendanceChanged (System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; addedEndpoints, System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; removedEndpoints);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleParticipantEndpointAttendanceChanged(class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint, class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; addedEndpoints, class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpoint, class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; removedEndpoints) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HandleParticipantEndpointAttendanceChanged(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointAttendanceChanged (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addedEndpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt;" />
+        <Parameter Name="removedEndpoints" Type="System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="addedEndpoints">To be added.</param>
+        <param name="removedEndpoints">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="protected override void HandleParticipantEndpointPropertiesChanged (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; pmi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandleParticipantEndpointPropertiesChanged(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; pmi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HandleParticipantEndpointPropertiesChanged(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointPropertiesChanged (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointPropertiesChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="pmi" Type="Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <param name="pmi">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlePropertiesChanged">
+      <MemberSignature Language="C#" Value="protected override void HandlePropertiesChanged (Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; pmi);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void HandlePropertiesChanged(class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.McuSessionProperties&gt; pmi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HandlePropertiesChanged(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandlePropertiesChanged (pmi As PropertyMergeInformation(Of McuSessionProperties))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandlePropertiesChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pmi" Type="Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pmi">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasContent">
+      <MemberSignature Language="C#" Value="public bool HasContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasContent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HasContent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasContent As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasContent { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasContentInMeeting">
+      <MemberSignature Language="C#" Value="public bool HasContentInMeeting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasContentInMeeting" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HasContentInMeeting" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasContentInMeeting As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasContentInMeeting { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPresentedContent">
+      <MemberSignature Language="C#" Value="public bool HasPresentedContent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPresentedContent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HasPresentedContent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasPresentedContent As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasPresentedContent { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasWacConectivity">
+      <MemberSignature Language="C#" Value="public bool HasWacConectivity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasWacConectivity" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.HasWacConectivity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasWacConectivity As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool HasWacConectivity { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MediaPermissions">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt; MediaPermissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt; MediaPermissions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.MediaPermissions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MediaPermissions As ReadOnlyCollection(Of MediaPermission)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^&gt; ^ MediaPermissions { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointAttendanceChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs`1&lt;class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.ParticipantEndpointAttendanceChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointAttendanceChanged As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of DataCollaborationMcuParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataCollaborationMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointAttendanceChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantEndpointPropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&gt;&gt; ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.ParticipantEndpointPropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointPropertiesChanged As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of DataCollaborationMcuParticipantEndpointProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataCollaborationMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointPropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSessionProperties&gt;&gt; PropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs`1&lt;class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSessionProperties&gt;&gt; PropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.PropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of DataCollaborationMcuSessionProperties)) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataCollaborationMcuSessionProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSessionProperties&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCore">
+      <MemberSignature Language="C#" Value="protected override void ResetCore ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ResetCore() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.ResetCore" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ResetCore ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ResetCore();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMediaTypes">
+      <MemberSignature Language="C#" Value="public override System.Collections.Generic.IEnumerable&lt;string&gt; SupportedMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; SupportedMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.SupportedMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetParticipantEndpointProperties">
+      <MemberSignature Language="C#" Value="public bool TryGetParticipantEndpointProperties (Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, out Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties properties);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetParticipantEndpointProperties(class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, [out] class Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&amp; properties) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As DataCollaborationMcuParticipantEndpointProperties) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataCollaborationMcuParticipantEndpointProperties ^ % properties);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMcuParticipantEndpointProperties&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="endpoint">To be added.</param>
+        <param name="properties">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

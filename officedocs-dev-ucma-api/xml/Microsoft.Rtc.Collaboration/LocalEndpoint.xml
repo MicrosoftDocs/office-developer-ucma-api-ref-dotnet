@@ -1,0 +1,1387 @@
+﻿<Type Name="LocalEndpoint" FullName="Microsoft.Rtc.Collaboration.LocalEndpoint">
+  <TypeSignature Language="C#" Value="public abstract class LocalEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LocalEndpoint extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LocalEndpoint" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LocalEndpoint" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LocalEndpoint abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an endpoint used by the current application to communicate and collaborate with other endpoints.
+            </summary>
+    <remarks>
+      <para>Conceptually, one can think of LocalEndpoint as a "device" to communicate or collaborate with other endpoints of the network. Similar
+            to the way a phone is owned by someone and used for making voice calls, a LocalEndpoint is owned by a User or an Application
+            and used for collaborating and communicating with other users and applications.
+            
+            The LocalEndpoint and its owner each have a dedicated address or Universal Resource Identifier (URI). It is thus possible to communicate with
+            a specific endpoint or with its owner (through one of its endpoints) depending on the URI that is requested by the initiator of communication.
+            
+            A LocalEndpoint can be used to manage the owner's Contacts and Groups, its Presence data, and to subscribe to the Presence of other applications
+            and users. It can also be used to schedule, update and cancel conferences or participate in communications that can be multi-modal and multi-party.
+            
+            The state of the LocalEndpoint indicates whether the endpoint can receive incoming traffic or not. A LocalEndpoint may register against
+            a server if it represents a user or it represents a service which publishes endpoint bound presence. When the registration fails, an application can retry to establish the endpoint. 
+            When the automatic registration refresh fails, the
+            LocalEndpoint will try to re-establish the endpoint and indicate when the re-registration is successful through a State transition.
+            </para>
+      <para>
+            LocalEndpoint has two concrete implementations: <see cref="T:Microsoft.Rtc.Collaboration.UserEndpoint" /> and <see cref="T:Microsoft.Rtc.Collaboration.ApplicationEndpoint" />.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginEstablish(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Establishes the endpoint so that it can receive incoming calls and conference invitations.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Registration, querying for in-band provisioning data, getting Media Relay Tokens, and automatic presence publication and subscription
+            are some of the operations performed during endpoint establishment. For ApplicationEndpoints all the operations
+            are optional while for UserEndpoints the last two operations are optional.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows how to establish an application endpoint. The example assumes that a CollaborationPlatform object has been 
+            started as a server platform. Application endpoints cannot be used with client platforms.
+            </para>
+          <para> C# ApplicationEndpoint initialization</para>
+          <code> 
+        try
+        {
+            ApplicationEndpointSettings settings = new ApplicationEndpointSettings("sip:myapplication@contoso.com");
+
+            ApplicationEndpoint endpoint = new ApplicationEndpoint(platform, settings);
+
+            // Customize settings if required
+            settings.OwnerPhoneUri = "tel:+14255553333";
+
+            // Register event handlers
+            endpoint.StateChanged += this.Endpoint_StateChanged;
+            endpoint.RegisterForIncomingCall&amp;lt;InstantMessagingCall&amp;gt;(this.InstantMessagingCallReceived);
+
+            endpoint.BeginEstablish(this.EndpointEstablishCompleted, endpoint /*state*/);
+        }
+        catch (InvalidOperationException)
+        {
+            // Platform was shutdown on another thread
+
+            // TODO: Replace with error handling code.
+            Console.WriteLine("Could not establish endpoint. Platform was not in a valid state.");
+        }
+
+        private void EndpointEstablishCompleted(IAsyncResult result)
+        {
+            try
+            {
+                LocalEndpoint endpoint = result.AsyncState as LocalEndpoint;
+                endpoint.EndEstablish(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Failed to establish endpoint: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+
+            }
+        }
+
+
+</code>
+          <para>
+            The following example shows how to establish an application endpoint. The example assumes that a CollaborationPlatform object has been 
+            started as a server platform. Application endpoints cannot be used with client platforms.
+            </para>
+          <para> C# ApplicationEndpoint initialization</para>
+          <code> 
+        try
+        {
+            UserEndpointSettings settings = new UserEndpointSettings(userName, serverName);
+
+            // Customize settings if required
+            settings.Credential = credential;
+
+            UserEndpoint endpoint = new UserEndpoint(platform, settings);
+
+            // Register event handlers
+            endpoint.StateChanged += this.Endpoint_StateChanged;
+            endpoint.RegisterForIncomingCall&amp;lt;InstantMessagingCall&amp;gt;(this.InstantMessagingCallReceived);
+
+            endpoint.BeginEstablish(this.EndpointEstablishCompleted, endpoint /*state*/);
+        }
+        catch (InvalidOperationException)
+        {
+            // Platform was shutdown on another thread
+
+            // TODO: Replace with error handling code.
+            Console.WriteLine("Could not establish endpoint. Platform was not in a valid state.");
+        }
+
+        private void EndpointEstablishCompleted(IAsyncResult result)
+        {
+            try
+            {
+                LocalEndpoint endpoint = result.AsyncState as LocalEndpoint;
+                endpoint.EndEstablish(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with error handling code.
+                Console.WriteLine("Failed to establish endpoint: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+
+            }
+        }
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Thrown when the state of the platform or endpoint is not correct for this operation.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginEstablish">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginEstablish (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; additionalHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginEstablish(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; additionalHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginEstablish(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (additionalHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="additionalHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="additionalHeaders">Collection of signaling headers to be included with Register request. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Establishes the endpoint so that it can receive incoming calls and conference invitations.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            Registration, querying for in-band provisioning data, getting Media Relay Tokens, and automatic presence publication and subscription
+            are some of the operations performed during endpoint establishment. For ApplicationEndpoints all the operations
+            are optional while for UserEndpoints the last two operations are optional.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the state of the platform or endpoint is not right for this operation</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one of the additional headers is a restricted header.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetProvisioningData">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetProvisioningData (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetProvisioningData(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginGetProvisioningData(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetProvisioningData (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetProvisioningData(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Queries the latest provisioning data (advanced).
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Normally, an application can retrieve the cached ProvisioningData value from
+            the endpoint using the <see cref="M:Microsoft.Rtc.Collaboration.LocalEndpoint.GetProvisioningData" /> method. The cache is renewed periodically. The application should use this 
+            method when it believes that the cached provisioning data is stale or empty. Unlike other methods on the endpoint
+            this method can be invoked even without establishing the endpoint.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the object is not in correct state to refresh provisioning data.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Terminates the local endpoint after cleaning up all communication and collaboration resources.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            The local endpoint is no longer usable after this operation is invoked.
+            
+            Note that this operation never throws.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceInvitationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationReceivedEventArgs&gt; ConferenceInvitationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ConferenceInvitationReceivedEventArgs&gt; ConferenceInvitationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.LocalEndpoint.ConferenceInvitationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConferenceInvitationReceived As EventHandler(Of ConferenceInvitationReceivedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConferenceInvitationReceivedEventArgs ^&gt; ^ ConferenceInvitationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationReceivedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when an invitation to a conference is received.
+            </summary>
+        <remarks>
+          <para>
+            Upon receiving an invitation to a conference, the application is responsible for accepting the invitation before joining the conference.
+            Otherwise it should decline the invitation.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices ConferenceServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices ConferenceServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.ConferenceServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceServices As ConferenceServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceServices ^ ConferenceServices { Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object to list and organize Conferences for the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            ConferenceServices enables listing the conferences scheduled by the local endpoint owner and also enables scheduling new conferences, 
+            and modifying and canceling these conferences.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultDomain">
+      <MemberSignature Language="C#" Value="public string DefaultDomain { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DefaultDomain" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.DefaultDomain" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultDomain As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultDomain { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the default domain for the endpoint URI. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The default domain represents the host part of the owner URI. It can be used to convert a tel URI or a phone number into a SIP URI.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndEstablish">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndEstablish (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndEstablish(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.EndEstablish(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndEstablish (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndEstablish(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Determines whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <returns>The SIP response from the operation.</returns>
+        <remarks>
+          <para>
+            If the operation does not throw, the local endpoint is successfully established.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when endpoint is in invalid state be established or if retrieval of in-band provisioning data fails.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RegisterException">Thrown when the Register operation failed with the message text indicating the reason.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.AuthenticationException">Thrown when a general authentication-related problem occurred.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when server did not respond to Register request.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when this operation failed for other reasons.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetProvisioningData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ProvisioningData EndGetProvisioningData (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.Presence.ProvisioningData EndGetProvisioningData(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.EndGetProvisioningData(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetProvisioningData (result As IAsyncResult) As ProvisioningData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Presence::ProvisioningData ^ EndGetProvisioningData(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ProvisioningData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Determines whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <returns>The provisioning data corresponding to the URI of the endpoint.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when a bad notification message is encountered.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when this operation failed for other reasons.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointSubtype">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.EndpointSubtype EndpointSubtype { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.EndpointSubtype EndpointSubtype" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointSubtype" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointSubtype As EndpointSubtype" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::EndpointSubtype EndpointSubtype { Microsoft::Rtc::Collaboration::EndpointSubtype get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointSubtype</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the subtype of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            EndpointSubtype is mostly meaningful when the local endpoint is owned by an automaton (the EndpointType is "application").
+            
+            By default, the EndpointSubtype is "attendant" as this is the most common type of automaton (Interactive Voice Response system,
+            Instant Messaging robot). When the EndpointType is "user", the EndpointSubtype should be null.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.EndpointType EndpointType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.EndpointType EndpointType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointType As EndpointType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::EndpointType EndpointType { Microsoft::Rtc::Collaboration::EndpointType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.EndpointType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the type of user agent that this endpoint represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointUri">
+      <MemberSignature Language="C#" Value="public string EndpointUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that the endpoint URI is used to communicate with this specific endpoint and cannot be used to communicate with another
+            endpoint of the current endpoint owner.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Determines whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetConversations">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Conversation&gt; GetConversations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Conversation&gt; GetConversations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.GetConversations" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetConversations () As Collection(Of Conversation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Conversation ^&gt; ^ GetConversations();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Conversation&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a snapshot of the conversations managed by the local endpoint.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+          <para>
+            The local endpoint keeps up with all the Conversations received or initiated by the owner off of this endpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetProvisioningData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ProvisioningData GetProvisioningData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.Presence.ProvisioningData GetProvisioningData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.GetProvisioningData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetProvisioningData () As ProvisioningData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Presence::ProvisioningData ^ GetProvisioningData();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ProvisioningData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the latest Provisioning Data from the endpoint cache.
+            </summary>
+        <returns>
+            ProvisioningData object or null if no provisioning data is available.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleSignalingSession">
+      <MemberSignature Language="C#" Value="protected virtual bool HandleSignalingSession (Microsoft.Rtc.Signaling.SessionReceivedEventArgs sessionReceivedEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HandleSignalingSession(class Microsoft.Rtc.Signaling.SessionReceivedEventArgs sessionReceivedEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.HandleSignalingSession(Microsoft.Rtc.Signaling.SessionReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool HandleSignalingSession(Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^ sessionReceivedEventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionReceivedEventArgs" Type="Microsoft.Rtc.Signaling.SessionReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sessionReceivedEventArgs">
+            Information about the incoming signaling session received.
+            </param>
+        <summary>
+            Intercepts an incoming signaling session before it is processed by the local endpoint (advanced).
+            </summary>
+        <returns>Returns true if the session was intercepted and handled by the application. </returns>
+        <remarks>
+          <para>
+            An application that intercepts an incoming signaling session must indicate whether it expects the local endpoint
+            to handle it or not by returning false or true.
+            
+            An application that needs to process custom incoming signaling sessions must first create a derivative of 
+            ApplicationEndpoint or UserEndpoint and override this method.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InnerEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeEndpoint InnerEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeEndpoint InnerEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.InnerEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InnerEndpoint As RealTimeEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeEndpoint ^ InnerEndpoint { Microsoft::Rtc::Signaling::RealTimeEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the inner endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The application should not register for session received event from innerendpoint as it will clash with handling of the event at the platform level.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOutsideCorporateNetwork">
+      <MemberSignature Language="C#" Value="public bool IsOutsideCorporateNetwork { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOutsideCorporateNetwork" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.IsOutsideCorporateNetwork" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOutsideCorporateNetwork As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOutsideCorporateNetwork { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the endpoint registers inside or outside the corporate network.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The default value is false. The default value will be returned if the application has not overridden the value in 
+            LocalEndpointSettings and the value was not present in the registration response.
+            
+            Note that Application is typically expected to have its endpoints only register inside the corporate network whereas User
+            (that is mobile) is expected to register from either inside or outside the corporate network.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalOwnerPresence">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence LocalOwnerPresence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence LocalOwnerPresence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.LocalOwnerPresence" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalOwnerPresence As LocalOwnerPresence" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ LocalOwnerPresence { Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object used to publish the Presence data of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The local endpoint must be registered to publish Presence data.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRegisterRetries">
+      <MemberSignature Language="C#" Value="public int MaxRegisterRetries { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxRegisterRetries" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.MaxRegisterRetries" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxRegisterRetries As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxRegisterRetries { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the maximum number of times that the endpoint should try to recover from registration refresh failure.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>This setting is only used for registered endpoints.</para>
+          <para>After initial registration an endpoint's registration needs to be refreshed periodically
+            or when connection failures happen. This setting dictates how many times the endpoint
+            should retry registration upon encountering failures. When no more retries are left
+            the endpoint is terminated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutboundConnectionDefaultAddressFamilyHint">
+      <MemberSignature Language="C#" Value="public Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype Microsoft.Rtc.Signaling.AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OutboundConnectionDefaultAddressFamilyHint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutboundConnectionDefaultAddressFamilyHint As Nullable(Of AddressFamilyHint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address family default for making outbound connnections.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDisplayName">
+      <MemberSignature Language="C#" Value="public virtual string OwnerDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerDisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property OwnerDisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ OwnerDisplayName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display name of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value is optional. Base class implementation returns the 
+            value from InnerEndpoint. Auto-provisioned ApplicationEndpoint
+            returns the value from provisioning info so that the value is
+            consistent.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerPhoneUri">
+      <MemberSignature Language="C#" Value="public abstract string OwnerPhoneUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerPhoneUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerPhoneUri" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OwnerPhoneUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ OwnerPhoneUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the phone URI of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value is not always present and may not be set if the Application only supports instant messaging and no voice for example. 
+            For ApplicationEndpoints it has to be set explicitly in ApplicationEndpointSettings. 
+            For UserEndpoints it is automatically retrieved through presence. Hence LocalOwnerPresence must be established before it can be populated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerUri">
+      <MemberSignature Language="C#" Value="public virtual string OwnerUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property OwnerUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that this URI is different from the endpoint URI. This URI is not bound to a specific endpoint but to the owner of the endpoint.
+            The owner of an endpoint can typically be contacted on multiple endpoints through forking or load balancing.
+            
+            This value identifies the owner of the local endpoint and must be set when the LocalEndpoint implementation is instantiated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneContext">
+      <MemberSignature Language="C#" Value="public string PhoneContext { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhoneContext" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PhoneContext" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneContext As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PhoneContext { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the phone context associated with the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The phone context represents the  dialing rules associated with the dial plan to which belongs the owner of the local endpoint.
+            
+            The Phone context associated with the owner is retrieved from in-band provisioning data. If in-band provisioning data is not available,
+            this property returns default phone context.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Platform">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CollaborationPlatform Platform { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.CollaborationPlatform Platform" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.Platform" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Platform As CollaborationPlatform" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CollaborationPlatform ^ Platform { Microsoft::Rtc::Collaboration::CollaborationPlatform ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CollaborationPlatform</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the platform that this endpoint is bound to.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceBasedScreeningDisabled">
+      <MemberSignature Language="C#" Value="public bool PresenceBasedScreeningDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PresenceBasedScreeningDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceBasedScreeningDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceBasedScreeningDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PresenceBasedScreeningDisabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether Presence screening is disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If Presence Screening is enabled, incoming calls and conference invitations are screened based on the local owner's perceived
+            Presence state by the remote participant. Typically, if the local owner's presence state perceived by the Remote Participant is
+            Dot Not Disturb, incoming calls and conference invitations will get rejected.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices PresenceServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices PresenceServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceServices As LocalEndpointPresenceServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices ^ PresenceServices { Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>        
+            Gets the class instance, which provides services related to subscription to remote presentities.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvisioningDataDisabled">
+      <MemberSignature Language="C#" Value="public bool ProvisioningDataDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProvisioningDataDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.ProvisioningDataDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProvisioningDataDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProvisioningDataDisabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future Versions. Please use ApplicationEndpoint.ProvisioningDataQueryDisabled instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether querying provisioning data has been disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishingQoeMetricsDisabled">
+      <MemberSignature Language="C#" Value="public bool PublishingQoeMetricsDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PublishingQoeMetricsDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PublishingQoeMetricsDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublishingQoeMetricsDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PublishingQoeMetricsDisabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the platform will try to publish quality metrics for the audio calls.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterForIncomingCall&lt;TCall&gt;">
+      <MemberSignature Language="C#" Value="public void RegisterForIncomingCall&lt;TCall&gt; (Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;TCall&gt; incomingCallDelegate) where TCall : Microsoft.Rtc.Collaboration.Call;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterForIncomingCall&lt;(class Microsoft.Rtc.Collaboration.Call) TCall&gt;(class Microsoft.Rtc.Collaboration.IncomingCallDelegate`1&lt;!!TCall&gt; incomingCallDelegate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.RegisterForIncomingCall``1(Microsoft.Rtc.Collaboration.IncomingCallDelegate{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterForIncomingCall(Of TCall As Call) (incomingCallDelegate As IncomingCallDelegate(Of TCall))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TCall&gt;&#xA; where TCall : Microsoft::Rtc::Collaboration::Call void RegisterForIncomingCall(Microsoft::Rtc::Collaboration::IncomingCallDelegate&lt;TCall&gt; ^ incomingCallDelegate);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TCall">
+          <Constraints>
+            <BaseTypeName>Microsoft.Rtc.Collaboration.Call</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="incomingCallDelegate" Type="Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;TCall&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TCall">The <see cref="T:Microsoft.Rtc.Collaboration.Call" />-derived type to be handled.</typeparam>
+        <param name="incomingCallDelegate">The delegate method to handle the call.</param>
+        <summary>
+            Registers a delegate to handle incoming calls for a specific modality.
+            </summary>
+        <remarks>
+          <para>
+            The use of generics enable the communication framework to be extended to support custom modalities other than audio, video or instant messaging.
+            
+            Only one delegate can be registered per <paramref name="TCall" /> type.  
+            Subsequent calls to this method will overwrite the previously set delegate.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            This example demonstrates how to perform basic processing of in incoming call.
+            This example assumes that the endpoint has already been established.
+            </para>
+          <para> C# Receiving and accepting an incoming call</para>
+          <code> 
+
+        // Register for incoming calls on receiving endpoint.
+        endpoint2.RegisterForIncomingCall&amp;lt;InstantMessagingCall&amp;gt;(
+            this.IncomingCallReceived);
+
+
+        private void IncomingCallReceived(
+            object sender,
+            CallReceivedEventArgs&amp;lt;InstantMessagingCall&amp;gt; e)
+        {
+
+            try
+            {
+                e.Call.InstantMessagingFlowConfigurationRequested += this.FlowConfigurationRequested;
+
+                // Accept the call. This will cause FlowConfigurationRequested to be raised.
+                e.Call.BeginAccept(this.AcceptCompleted, e.Call);
+            }
+            catch (InvalidOperationException)
+            {
+                // Call got disconnected before it could be accepted
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call was disconnected.");
+            }
+        }
+
+        private void AcceptCompleted(IAsyncResult result)
+        {
+            try
+            {
+                InstantMessagingCall call = result.AsyncState as InstantMessagingCall;
+
+                call.EndAccept(result);
+            }
+            catch (RealTimeException exception)
+            {
+                // TODO: Replace with exception handling code.
+                Console.WriteLine("Call accept failed: {0}", exception.Message);
+            }
+            finally
+            {
+                // TODO: Add clean up code here.
+            }
+
+        }
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMethods">
+      <MemberSignature Language="C#" Value="public string RegisterMethods { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegisterMethods" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.RegisterMethods" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RegisterMethods As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RegisterMethods { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the SIP methods that the local endpoint supports and can receive upon registration.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>If it is empty, support for all the required SIP methods are advertised in the register request.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemotePresence">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.RemotePresence RemotePresence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.RemotePresence RemotePresence" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.RemotePresence" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemotePresence As RemotePresence" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::RemotePresence ^ RemotePresence { Microsoft::Rtc::Collaboration::Presence::RemotePresence ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future Versions. Please see RemotePresenceView and PresenceServices instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.RemotePresence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets an object to subscribe to or query the Presence of remote Users and Applications. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The local endpoint must be registered to subscribe to the Presence of a remote User or Application.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RepublishingRequired">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.RePublishingRequiredEventArgs&gt; RepublishingRequired;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.RePublishingRequiredEventArgs&gt; RepublishingRequired" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.LocalEndpoint.RepublishingRequired" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RepublishingRequired As EventHandler(Of RePublishingRequiredEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::RePublishingRequiredEventArgs ^&gt; ^ RepublishingRequired;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.RePublishingRequiredEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the server indicates that the Presence publication of the local endpoint owner is stale.
+            </summary>
+        <remarks>
+          <para> During a registration refresh, the server may indicate to the endpoint that the local owner should republish its Presence state
+            partially or in full. This condition usually happens when the local endpoint could not refresh its registration against the same registrar
+            and was directed to another available registrar.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LocalEndpointState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.LocalEndpointState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As LocalEndpointState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpointState State { Microsoft::Rtc::Collaboration::LocalEndpointState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpointState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the state of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Note that in advanced scenarios, a local endpoint in "Idle" state can be used to manage conferences of a user for
+            example. It is generally recommended for the local endpoint state to be "Established" to communicate and 
+            collaborate. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.LocalEndpointStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.LocalEndpointStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.LocalEndpoint.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of LocalEndpointStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::LocalEndpointStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.LocalEndpointStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the local endpoint state changes.
+            </summary>
+        <remarks>
+          <para>
+            An application must register for this event to know when the endpoint state gets signed out or fails to refresh the registration against
+            a server.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMimePartContentTypes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Net.Mime.ContentType&gt; SupportedMimePartContentTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;class System.Net.Mime.ContentType&gt; SupportedMimePartContentTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.SupportedMimePartContentTypes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedMimePartContentTypes As IEnumerable(Of ContentType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ SupportedMimePartContentTypes { System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Net.Mime.ContentType&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of M/MIME content types that are supported by the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The content type of any M/MIME part whose handling is required should be in this list. Otherwise, incoming calls will 
+            be rejected automatically.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SyncRoot">
+      <MemberSignature Language="C#" Value="protected object SyncRoot { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object SyncRoot" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.SyncRoot" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property SyncRoot As Object" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("A derived class should implement its own synchronization root object")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Synchronization object for locking instances.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterForIncomingCall&lt;TCall&gt;">
+      <MemberSignature Language="C#" Value="public void UnregisterForIncomingCall&lt;TCall&gt; (Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;TCall&gt; incomingCallDelegate) where TCall : Microsoft.Rtc.Collaboration.Call;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnregisterForIncomingCall&lt;(class Microsoft.Rtc.Collaboration.Call) TCall&gt;(class Microsoft.Rtc.Collaboration.IncomingCallDelegate`1&lt;!!TCall&gt; incomingCallDelegate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.UnregisterForIncomingCall``1(Microsoft.Rtc.Collaboration.IncomingCallDelegate{``0})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnregisterForIncomingCall(Of TCall As Call) (incomingCallDelegate As IncomingCallDelegate(Of TCall))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TCall&gt;&#xA; where TCall : Microsoft::Rtc::Collaboration::Call void UnregisterForIncomingCall(Microsoft::Rtc::Collaboration::IncomingCallDelegate&lt;TCall&gt; ^ incomingCallDelegate);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TCall">
+          <Constraints>
+            <BaseTypeName>Microsoft.Rtc.Collaboration.Call</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="incomingCallDelegate" Type="Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;TCall&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TCall">The call type.</typeparam>
+        <param name="incomingCallDelegate">The delegate method to remove.</param>
+        <summary>
+            Removes a previously registered delegate that was handling incoming calls of a specific modality.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAgent">
+      <MemberSignature Language="C#" Value="public string UserAgent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAgent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.UserAgent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAgent As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAgent { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the user agent string that will be used in messages sent and received by the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>So the final string looks like "UCMAUserAgent ApplicationUserAgent EndpointUserAgent" with a blank space separating each part.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

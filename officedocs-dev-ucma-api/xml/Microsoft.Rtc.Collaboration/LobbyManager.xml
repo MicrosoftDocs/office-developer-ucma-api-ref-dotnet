@@ -1,0 +1,272 @@
+﻿<Type Name="LobbyManager" FullName="Microsoft.Rtc.Collaboration.LobbyManager">
+  <TypeSignature Language="C#" Value="public class LobbyManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LobbyManager extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LobbyManager" />
+  <TypeSignature Language="VB.NET" Value="Public Class LobbyManager" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LobbyManager" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents operations that a conference leader can perform with 
+            respect to the lobby and lobby participants.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginAdmitLobbyParticipants">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAdmitLobbyParticipants (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAdmitLobbyParticipants(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginAdmitLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAdmitLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAdmitLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lobbyParticipants" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lobbyParticipants">A list of the lobby participants to admit into the conference.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Admits lobby participants into the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Only conference leaders are allowed to perform this operation.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="lobbyParticipants" /> is set to null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="lobbyParticipants" /> is an empty collection or contains a null member.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAdmitLobbyParticipants">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAdmitLobbyParticipants (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, Microsoft.Rtc.Collaboration.LobbyAdmitOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAdmitLobbyParticipants(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, class Microsoft.Rtc.Collaboration.LobbyAdmitOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginAdmitLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},Microsoft.Rtc.Collaboration.LobbyAdmitOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAdmitLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), options As LobbyAdmitOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAdmitLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, Microsoft::Rtc::Collaboration::LobbyAdmitOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lobbyParticipants" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.LobbyAdmitOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lobbyParticipants">A list of the lobby participants to admit into the conference.</param>
+        <param name="options">Options to customize admitting lobby participants. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Admits lobby participants into the conference.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Only conference leaders are allowed to perform this operation.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="lobbyParticipants" /> is set to null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="lobbyParticipants" /> is an empty collection or contains a null member.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDenyLobbyParticipants">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDenyLobbyParticipants (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDenyLobbyParticipants(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginDenyLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDenyLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDenyLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lobbyParticipants" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lobbyParticipants">
+            A list of lobby participants to remove from the lobby.
+            </param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Denies lobby participants admission into conference and removes them from the lobby.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Only conference leaders can perform this operation.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="lobbyParticipants" /> is set to null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the <paramref name="lobbyParticipants" /> is an empty list.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDenyLobbyParticipants">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDenyLobbyParticipants (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, Microsoft.Rtc.Collaboration.LobbyDenyOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDenyLobbyParticipants(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; lobbyParticipants, class Microsoft.Rtc.Collaboration.LobbyDenyOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginDenyLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},Microsoft.Rtc.Collaboration.LobbyDenyOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDenyLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), options As LobbyDenyOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDenyLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, Microsoft::Rtc::Collaboration::LobbyDenyOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lobbyParticipants" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.LobbyDenyOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="lobbyParticipants">
+            A list of lobby participants to remove from the lobby.
+            </param>
+        <param name="options">Options to denying participants admission into the conference. Could be set to null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Denies lobby participants admission into conference and removes them from the lobby.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Only conference leaders can perform this operation.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is not valid at the given conference session state.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="lobbyParticipants" /> is set to null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the <paramref name="lobbyParticipants" /> is an empty list.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ConferenceSession">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceSession ConferenceSession { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConferenceSession ConferenceSession" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LobbyManager.ConferenceSession" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceSession As ConferenceSession" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceSession ^ ConferenceSession { Microsoft::Rtc::Collaboration::ConferenceSession ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceSession</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the conference session object that owns the lobby manager instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAdmitLobbyParticipants">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LobbyOperationResponse EndAdmitLobbyParticipants (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.LobbyOperationResponse EndAdmitLobbyParticipants(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.EndAdmitLobbyParticipants(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndAdmitLobbyParticipants (result As IAsyncResult) As LobbyOperationResponse" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::LobbyOperationResponse ^ EndAdmitLobbyParticipants(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyOperationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to complete.
+            </summary>
+        <returns>A response to the command indicating with participants were successfully admitted into the lobby and those participants who were not including the failure reason.</returns>
+        <remarks>
+          <para>
+            An exception is thrown when the server fails to process the command as a whole. If, however, the server
+            fails to process the command for one user (or more), no exception will be thrown but the returned 
+            <see cref="T:Microsoft.Rtc.Collaboration.Conferencing.LobbyAccessCommandResponse" /> object will indicate that processing failed for that user.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException"> Thrown when the operation times out while waiting for a response.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when admitting the participants failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when admitting participant\s failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDenyLobbyParticipants">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LobbyOperationResponse EndDenyLobbyParticipants (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.LobbyOperationResponse EndDenyLobbyParticipants(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.EndDenyLobbyParticipants(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndDenyLobbyParticipants (result As IAsyncResult) As LobbyOperationResponse" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::LobbyOperationResponse ^ EndDenyLobbyParticipants(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LobbyOperationResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the pending asynchronous operation to complete.
+            </summary>
+        <returns>A response to the command indicating with participants were successfully denied access into the conference and those participants who were not successfully denied including the failure reason.</returns>
+        <remarks>
+          <para>
+            An exception is thrown when the server fails to process the command as a whole. If, however, the server
+            fails to process the command for one user (or more), no exception will be thrown but the returned 
+            <see cref="T:Microsoft.Rtc.Collaboration.Conferencing.LobbyAccessCommandResponse" /> object will indicate that processing failed for that user.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when the operation times out while waiting for a response.</exception>
+        <exception cref="T:Microsoft.Rtc.Collaboration.ConferenceFailureException">Thrown when admitting the participants failed with a Centralized Conference Control Protocol (C3P) body in the response.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when admitting participant\s failed without a C3P body in the response.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

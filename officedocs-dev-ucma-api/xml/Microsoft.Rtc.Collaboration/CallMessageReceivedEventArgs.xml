@@ -1,0 +1,181 @@
+﻿<Type Name="CallMessageReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class CallMessageReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallMessageReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallMessageReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallMessageReceivedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the information associated with a message received on Call.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ContentDescription">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.ContentDescription ContentDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.ContentDescription ContentDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.ContentDescription" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentDescription As ContentDescription" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ContentDescription ^ ContentDescription { Microsoft::Rtc::Signaling::ContentDescription ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.ContentDescription</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Content Description from the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAutomaticResponse">
+      <MemberSignature Language="C#" Value="public bool DisableAutomaticResponse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableAutomaticResponse" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.DisableAutomaticResponse" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticResponse As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticResponse { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether a response will be sent by the applicationor not.
+            If true, the application is responsible for sending
+            the response. 
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.MessageType MessageType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.MessageType MessageType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.MessageType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageType As MessageType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::MessageType MessageType { Microsoft::Rtc::Signaling::MessageType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.MessageType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message type of the body.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipRequestData RequestData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipRequestData RequestData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.RequestData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestData As SipRequestData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipRequestData ^ RequestData { Microsoft::Rtc::Signaling::SipRequestData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipRequestData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the SIP request data for the event. This can be null in some instances.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponse">
+      <MemberSignature Language="C#" Value="public void SendResponse (int responseCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResponse(int32 responseCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.SendResponse(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendResponse (responseCode As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendResponse(int responseCode);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">Response code to use.</param>
+        <summary>
+            Sends response to the incoming message request with the given response code.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when value is set to be less than 
+            <see cref="F:Microsoft.Rtc.Signaling.ResponseCode.MinimumResponseCode" /> or greater than <see cref="F:Microsoft.Rtc.Signaling.ResponseCode.MaximumResponseCode" /></exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when in an invalid state or when a response has already been sent.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendResponse">
+      <MemberSignature Language="C#" Value="public void SendResponse (int responseCode, Microsoft.Rtc.Signaling.ContentDescription contentDescription, Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions options);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResponse(int32 responseCode, class Microsoft.Rtc.Signaling.ContentDescription contentDescription, class Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions options) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.SendResponse(System.Int32,Microsoft.Rtc.Signaling.ContentDescription,Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendResponse(int responseCode, Microsoft::Rtc::Signaling::ContentDescription ^ contentDescription, Microsoft::Rtc::Collaboration::CallSendMessageResponseOptions ^ options);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+        <Parameter Name="contentDescription" Type="Microsoft.Rtc.Signaling.ContentDescription" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">Response code to use.</param>
+        <param name="contentDescription">Content deescription to send.</param>
+        <param name="options">Call message response options to use. Can be null.</param>
+        <summary>
+            Sends response to the incoming message request with the given response code and options.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when value is set to be less than 200 or greater than 699.</exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when <paramref name="options" /> contains invalid diagnostics information. <see cref="P:Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions.DiagnosticsInformation" />.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when in an invalid state or when a response has already been sent.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when a transport error occurred while sending a response.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

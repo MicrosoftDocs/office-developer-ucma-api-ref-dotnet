@@ -1,0 +1,120 @@
+﻿<Type Name="ConferenceInvitationStateChangedEventArgs" FullName="Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ConferenceInvitationStateChangedEventArgs : Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationState&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceInvitationStateChangedEventArgs extends Microsoft.Rtc.Signaling.StateChangedEventArgs`1&lt;valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationState&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceInvitationStateChangedEventArgs&#xA;Inherits StateChangedEventArgs(Of ConferenceInvitationState)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceInvitationStateChangedEventArgs : Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConferenceInvitationState&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationState&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">Microsoft.Rtc.Collaboration.ConferenceInvitationState</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            ConferenceInvitationStateChangedEventArgs is the event argument for the <see cref="E:Microsoft.Rtc.Collaboration.ConferenceInvitation.StateChanged" /> event.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AcceptedBy">
+      <MemberSignature Language="C#" Value="public string AcceptedBy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string AcceptedBy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs.AcceptedBy" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AcceptedBy As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AcceptedBy { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The URI of the endpoint that accepted the invitation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData MessageData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipMessageData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipMessageData ^ MessageData { Microsoft::Rtc::Signaling::SipMessageData ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the <see cref="T:Microsoft.Rtc.Signaling.SipMessageData" /> received on the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" /> that caused the state transition.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property can be null if the state transition is not due to an incoming message.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a string showing the values of the properties in this event arguments class.
+            </summary>
+        <returns>A string showing the values of the properties in this event arguments class.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransitionReason">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceInvitationStateTransitionReason TransitionReason { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceInvitationStateTransitionReason TransitionReason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs.TransitionReason" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransitionReason As ConferenceInvitationStateTransitionReason" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceInvitationStateTransitionReason TransitionReason { Microsoft::Rtc::Collaboration::ConferenceInvitationStateTransitionReason get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceInvitationStateTransitionReason</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the reason for the <see cref="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" /> state transition.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

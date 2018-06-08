@@ -1,0 +1,1034 @@
+﻿<Type Name="RealTimeServerConnectionManager" FullName="Microsoft.Rtc.Signaling.RealTimeServerConnectionManager">
+  <TypeSignature Language="C#" Value="public abstract class RealTimeServerConnectionManager : Microsoft.Rtc.Signaling.RealTimeConnectionManager" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RealTimeServerConnectionManager extends Microsoft.Rtc.Signaling.RealTimeConnectionManager" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RealTimeServerConnectionManager&#xA;Inherits RealTimeConnectionManager" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeServerConnectionManager abstract : Microsoft::Rtc::Signaling::RealTimeConnectionManager" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.RealTimeConnectionManager</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the server-class connection manager that enables
+            listening for incoming connections.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeServerConnectionManager ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeServerConnectionManager();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes this instance with default localhost name.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeServerConnectionManager (string localHost);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string localHost) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (localHost As String)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeServerConnectionManager(System::String ^ localHost);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localHost" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localHost">The local host to use for contact header.</param>
+        <summary>
+            Initializes this instance with given localhost.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RealTimeServerConnectionManager (string localHost, string certificateIssuerName, byte[] certificateSerialNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string localHost, string certificateIssuerName, unsigned int8[] certificateSerialNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.#ctor(System.String,System.String,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (localHost As String, certificateIssuerName As String, certificateSerialNumber As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeServerConnectionManager(System::String ^ localHost, System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="localHost" Type="System.String" />
+        <Parameter Name="certificateIssuerName" Type="System.String" />
+        <Parameter Name="certificateSerialNumber" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="localHost">The local host to be used in contact header.</param>
+        <param name="certificateIssuerName">The issuer name of the certificate to be used.</param>
+        <param name="certificateSerialNumber">The serial number of the certificate to be used.</param>
+        <summary>
+            Initializes this instance with given localhost and certificate information.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            An argument given was empty or The local host parameter cannot be used as a host URI or the certificate information 
+            given is not usable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStartListening">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginStartListening (int port, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginStartListening(int32 port, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.BeginStartListening(System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginStartListening (port As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginStartListening(int port, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port that should be used for all addresses.</param>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular 
+            asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Starts listening on default addresses on the specified port.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>If 0 is passed for port, a port is randomly chosen and attempted. An exception may be raised if the same port
+            is not available on all interfaces. This is generally useful only in testing when two applications are in the same process.</para>
+          <para>
+            It is recommended that an explicit port be chosen instead of 0. The address and port
+            need to be known and configured by other applications in order to communicate. This is not practical when it is randomly chosen.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStartListening">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginStartListening (int port, System.Collections.Generic.IEnumerable&lt;System.Net.IPAddress&gt; addresses, Microsoft.Rtc.Signaling.StartListeningOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginStartListening(int32 port, class System.Collections.Generic.IEnumerable`1&lt;class System.Net.IPAddress&gt; addresses, class Microsoft.Rtc.Signaling.StartListeningOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.BeginStartListening(System.Int32,System.Collections.Generic.IEnumerable{System.Net.IPAddress},Microsoft.Rtc.Signaling.StartListeningOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginStartListening (port As Integer, addresses As IEnumerable(Of IPAddress), options As StartListeningOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginStartListening(int port, System::Collections::Generic::IEnumerable&lt;System::Net::IPAddress ^&gt; ^ addresses, Microsoft::Rtc::Signaling::StartListeningOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Int32" />
+        <Parameter Name="addresses" Type="System.Collections.Generic.IEnumerable&lt;System.Net.IPAddress&gt;" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Signaling.StartListeningOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port that should be used for all addresses.</param>
+        <param name="addresses">A list of addresses to listen on, or null to listen on all available addresses.</param>
+        <param name="options">Options to use, or null to use the defaults.</param>
+        <param name="userCallback">
+            The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous operation 
+            from other asynchronous operations.</param>
+        <summary>
+            Starts listening on default addresses on the specified port.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>If 0 is passed for port, a port is randomly chosen and attempted. An exception may be raised if the same port
+            is not available on all interfaces. This is generally useful only in testing when two applications are in the same process.</para>
+          <para>
+            It is recommended that an explicit port be chosen instead of 0. The address and port
+            need to be known and configured by other applications in order to communicate. This is not practical when it is randomly chosen.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginStopListening">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginStopListening (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginStopListening(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.BeginStopListening(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginStopListening (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginStopListening(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">
+            A user-provided object that distinguishes this particular asynchronous 
+            operation from other asynchronous operations.</param>
+        <summary>
+            Starts an operation to stop listening on all addresses.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This overload stops listening on all addresses.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint never listened or already stopped listening.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when the endpoint stopped listening and timed out.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation failed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CanLocalHostBeChangedNow">
+      <MemberSignature Language="C#" Value="protected override bool CanLocalHostBeChangedNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanLocalHostBeChangedNow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.CanLocalHostBeChangedNow" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CanLocalHostBeChangedNow () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool CanLocalHostBeChangedNow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Set the local host.
+            </summary>
+        <returns>True if the local host can be set.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CanShutdownCoreManagerNow">
+      <MemberSignature Language="C#" Value="protected override bool CanShutdownCoreManagerNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool CanShutdownCoreManagerNow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.CanShutdownCoreManagerNow" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CanShutdownCoreManagerNow () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool CanShutdownCoreManagerNow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the value to determine if the core manager can be shut down now.
+            </summary>
+        <returns>True if the manager can be shutdown.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanUpConnections">
+      <MemberSignature Language="C#" Value="protected override void CleanUpConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CleanUpConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.CleanUpConnections" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CleanUpConnections ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CleanUpConnections();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method is called to clean up connections.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionAuthorizationRequested">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs&gt; ConnectionAuthorizationRequested;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs&gt; ConnectionAuthorizationRequested" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.ConnectionAuthorizationRequested" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionAuthorizationRequested As EventHandler(Of ConnectionAuthorizationRequestedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::ConnectionAuthorizationRequestedEventArgs ^&gt; ^ ConnectionAuthorizationRequested;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.ConnectionAuthorizationRequestedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when an incoming or outgoing connection becomes connected.
+            </summary>
+        <remarks>
+          <para>
+            Applications can use this event to add extra authorization to the connection
+            before messages are sent or received.  State can be stored in the
+            Connection.ApplicationContext property.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CoreManagerIncomingTlsNegotiationFailed">
+      <MemberSignature Language="C#" Value="protected override void CoreManagerIncomingTlsNegotiationFailed (Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void CoreManagerIncomingTlsNegotiationFailed(class Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs e) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.CoreManagerIncomingTlsNegotiationFailed(Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub CoreManagerIncomingTlsNegotiationFailed (e As IncomingTlsNegotiationFailedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void CoreManagerIncomingTlsNegotiationFailed(Microsoft::Rtc::Internal::Sip::IncomingTlsNegotiationFailedEventArgs ^ e);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Microsoft.Rtc.Internal.Sip.IncomingTlsNegotiationFailedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">The event argument</param>
+        <summary>
+            This event callback is invoked when there is tls negotiation failure for incoming connection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentMessageThrottlingCount">
+      <MemberSignature Language="C#" Value="public int CurrentMessageThrottlingCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CurrentMessageThrottlingCount" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.CurrentMessageThrottlingCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentMessageThrottlingCount As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int CurrentMessageThrottlingCount { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the current count of incoming messages (Invite, page mode messages, in-dialog messages, etc) that are 
+            waiting in internal queues (thread pool queue or session queue) for reporting to the application.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecrementThrottleCount">
+      <MemberSignature Language="C#" Value="protected internal override void DecrementThrottleCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void DecrementThrottleCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.DecrementThrottleCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub DecrementThrottleCount ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void DecrementThrottleCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Method to be called after the application is notified of the incoming message
+            (Invite, Message etc) that was in internal queue. This will decrement the current
+            outstanding count.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultIncomingConnectionTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DefaultIncomingConnectionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultIncomingConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.DefaultIncomingConnectionTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultIncomingConnectionTimeout As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan DefaultIncomingConnectionTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the default time-out value for any incoming connections.
+            Any incoming connection that is idle for the duration specified by 
+            this value will be disconnected. This value does not affect existing
+            connections.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value given is negative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultMaximumNumberOfConnectionsPerPool">
+      <MemberSignature Language="C#" Value="public int DefaultMaximumNumberOfConnectionsPerPool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultMaximumNumberOfConnectionsPerPool" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.DefaultMaximumNumberOfConnectionsPerPool" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultMaximumNumberOfConnectionsPerPool As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DefaultMaximumNumberOfConnectionsPerPool { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pool size used for connection pools.
+            This property can be used to globally control the pool size used for new connection pools.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value given is negative or zero.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOutgoingConnectionTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DefaultOutgoingConnectionTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultOutgoingConnectionTimeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.DefaultOutgoingConnectionTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultOutgoingConnectionTimeout As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan DefaultOutgoingConnectionTimeout { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the default outgoing connection timeout value.
+            If the connection is idle for the duration specified by this value,
+            the connection will be disconnected. To disable,
+            the value can be set to TimeSpan.Zero
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The value given is negative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableIpV6Support">
+      <MemberSignature Language="C#" Value="public override void DisableIpV6Support ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void DisableIpV6Support() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.DisableIpV6Support" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub DisableIpV6Support ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override void DisableIpV6Support();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables IPV6 support in the network stack to be compatible with previous versions of the stack.
+            </summary>
+        <remarks>
+          <para>
+            To support only IPV4, it would be better for new applications to set the OutboundConnectionAddressFamilyHint to IPV4Only,
+            and ensure that the stack is only asked to listen on IPV4 addresses.
+            </para>
+          <para>This setting is to make initial porting of applications built on previous versions of the stack easier. To be fully compatible with current versions of the
+            product, applications will need to be updated to support IPV6.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void Dispose(bool disposing);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True =&gt; clean up managed resources.</param>
+        <summary>
+            Dispose implementation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStartListening">
+      <MemberSignature Language="C#" Value="public void EndStartListening (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndStartListening(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.EndStartListening(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndStartListening (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndStartListening(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the start listening operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.ConnectionFailureException">
+            The address and port are already in use. Inner exception will contain the socket exception and error code.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndStopListening">
+      <MemberSignature Language="C#" Value="public void EndStopListening (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndStopListening(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.EndStopListening(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndStopListening (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndStopListening(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Waits for the stop listening operation to complete.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIncomingConnections">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt; GetIncomingConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class Microsoft.Rtc.Signaling.RealTimeConnection&gt; GetIncomingConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.GetIncomingConnections" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetIncomingConnections () As ReadOnlyCollection(Of RealTimeConnection)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^ GetIncomingConnections();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the list of incoming connections.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetListeningAddresses">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Net.IPAddress&gt; GetListeningAddresses ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class System.Net.IPAddress&gt; GetListeningAddresses() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.GetListeningAddresses" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetListeningAddresses () As ReadOnlyCollection(Of IPAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;System::Net::IPAddress ^&gt; ^ GetListeningAddresses();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("This API is obsolete. Applications must remember the passed listening addresses or query them using .Net framework APIs.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.Net.IPAddress&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the collection of listening addresses.
+            </summary>
+        <returns>The collection of listening addresses.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOutgoingConnectionCount">
+      <MemberSignature Language="C#" Value="public int GetOutgoingConnectionCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetOutgoingConnectionCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.GetOutgoingConnectionCount" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOutgoingConnectionCount () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; int GetOutgoingConnectionCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the total number of outgoing connections in the connection pools.
+            </summary>
+        <returns>The count of outgoing connections.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingConnectionAdded">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs&gt; IncomingConnectionAdded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs&gt; IncomingConnectionAdded" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IncomingConnectionAdded" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event IncomingConnectionAdded As EventHandler(Of IncomingConnectionAddedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::IncomingConnectionAddedEventArgs ^&gt; ^ IncomingConnectionAdded;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a new incoming connection is added.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingConnectionConnected">
+      <MemberSignature Language="C#" Value="protected override void IncomingConnectionConnected (Microsoft.Rtc.Internal.Sip.SipConnection connection, string matchedDomainName, System.Security.Cryptography.X509Certificates.X509Certificate2 remoteCertificate);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void IncomingConnectionConnected(class Microsoft.Rtc.Internal.Sip.SipConnection connection, string matchedDomainName, class System.Security.Cryptography.X509Certificates.X509Certificate2 remoteCertificate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IncomingConnectionConnected(Microsoft.Rtc.Internal.Sip.SipConnection,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub IncomingConnectionConnected (connection As SipConnection, matchedDomainName As String, remoteCertificate As X509Certificate2)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void IncomingConnectionConnected(Microsoft::Rtc::Internal::Sip::SipConnection ^ connection, System::String ^ matchedDomainName, System::Security::Cryptography::X509Certificates::X509Certificate2 ^ remoteCertificate);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connection" Type="Microsoft.Rtc.Internal.Sip.SipConnection" />
+        <Parameter Name="matchedDomainName" Type="System.String" />
+        <Parameter Name="remoteCertificate" Type="System.Security.Cryptography.X509Certificates.X509Certificate2" />
+      </Parameters>
+      <Docs>
+        <param name="connection">The SIP connection object.</param>
+        <param name="matchedDomainName">The domain that was matched from the allowed domains list</param>
+        <param name="remoteCertificate">The remote certificate</param>
+        <summary>
+            Handles incoming connection connected event. This class should not get this event
+            since it is not listening but a subclass can. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingConnectionRemoved">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.IncomingConnectionRemovedEventArgs&gt; IncomingConnectionRemoved;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.IncomingConnectionRemovedEventArgs&gt; IncomingConnectionRemoved" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IncomingConnectionRemoved" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event IncomingConnectionRemoved As EventHandler(Of IncomingConnectionRemovedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::IncomingConnectionRemovedEventArgs ^&gt; ^ IncomingConnectionRemoved;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.IncomingConnectionRemovedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when a new incoming connection is removed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncomingTlsNegotiationFailed">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.IO.ErrorEventArgs&gt; IncomingTlsNegotiationFailed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.IO.ErrorEventArgs&gt; IncomingTlsNegotiationFailed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IncomingTlsNegotiationFailed" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event IncomingTlsNegotiationFailed As EventHandler(Of ErrorEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::IO::ErrorEventArgs ^&gt; ^ IncomingTlsNegotiationFailed;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.IO.ErrorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the TLS negotiation fails for an incoming connection.
+            The failure may be due to an invalid local certificate, or remote not trusting the
+            local certificate, or some other reason.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IncrementThrottleCount">
+      <MemberSignature Language="C#" Value="protected internal override void IncrementThrottleCount ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void IncrementThrottleCount() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IncrementThrottleCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub IncrementThrottleCount ()" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void IncrementThrottleCount();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Method to be called when the application places an incoming message
+            (Invite, Message etc) in an internal queue. This will increment the current
+            outstanding count.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsListening">
+      <MemberSignature Language="C#" Value="public bool IsListening { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsListening" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IsListening" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsListening As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsListening { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating whether listening is enabled or not.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsThrottlingInEffect">
+      <MemberSignature Language="C#" Value="protected internal override bool IsThrottlingInEffect ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsThrottlingInEffect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.IsThrottlingInEffect" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function IsThrottlingInEffect () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override bool IsThrottlingInEffect();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Method that determines if the incoming message should be throttled or not.
+            If throttling is in effect, it should be rejected automatically. 
+            Otherwise, it can be processed in placed in some queue (thread pool or internal).
+            Once the application is notified, DecrementThrottleCount should be called.
+            If rejected due to throttling, DecrementThrottleCount can be called right away.
+            </summary>
+        <returns>True if throttling is in effect. False otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenForIncomingConnections">
+      <MemberSignature Language="C#" Value="protected abstract System.Net.IPEndPoint ListenForIncomingConnections (System.Net.IPEndPoint ipEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Net.IPEndPoint ListenForIncomingConnections(class System.Net.IPEndPoint ipEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.ListenForIncomingConnections(System.Net.IPEndPoint)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract System::Net::IPEndPoint ^ ListenForIncomingConnections(System::Net::IPEndPoint ^ ipEndpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Net.IPEndPoint</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipEndpoint" Type="System.Net.IPEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ipEndpoint">The ip endpoint to be used for listening.</param>
+        <summary>
+            This method does the actual S4 listening.
+            </summary>
+        <returns>The listening endpoint.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListeningAborted">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;System.IO.ErrorEventArgs&gt; ListeningAborted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.IO.ErrorEventArgs&gt; ListeningAborted" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.ListeningAborted" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ListeningAborted As EventHandler(Of ErrorEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;System::IO::ErrorEventArgs ^&gt; ^ ListeningAborted;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.IO.ErrorEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the listening is aborted either due to application calling StopListening
+            or when an internal failure occurs such as failure to accept an incoming connection.
+            The exception in the event argument can be null if the application called StopListening.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListeningAddressesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; ListeningAddressesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; ListeningAddressesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.ListeningAddressesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ListeningAddressesChanged As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ListeningAddressesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when one or more items are added or removed from the list of listening addresses.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListeningPort">
+      <MemberSignature Language="C#" Value="public int ListeningPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ListeningPort" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.ListeningPort" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListeningPort As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ListeningPort { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the listening port. 
+            </summary>
+        <value>The listening port or 0 if not set.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageThrottlingHighMark">
+      <MemberSignature Language="C#" Value="public int MessageThrottlingHighMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MessageThrottlingHighMark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.MessageThrottlingHighMark" />
+      <MemberSignature Language="VB.NET" Value="Public Property MessageThrottlingHighMark As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MessageThrottlingHighMark { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value that controls the high water mark limit for outstanding incoming messages
+            (Invite, page mode messages, in-dialog messages, etc) that are maintained in internal queue including
+            thread pool queue and not seen by the application yet. If the current number of outstanding incoming
+            messages is higher than this value, new incoming messages are automatically rejected until the value
+            goes under the lower water mark. To reduce the value below the current lower water mark, the lower water 
+            mark value should be changed first. By default, this value is int.MaxValue. If both low and high water
+            mark values are int.MaxValue, water mark checks are disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageThrottlingLowMark">
+      <MemberSignature Language="C#" Value="public int MessageThrottlingLowMark { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MessageThrottlingLowMark" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.MessageThrottlingLowMark" />
+      <MemberSignature Language="VB.NET" Value="Public Property MessageThrottlingLowMark As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MessageThrottlingLowMark { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value that controls the low water mark limit for outstanding incoming messages
+            (Invite, page mode messages, in-dialog messages, etc) that are maintained in internal queue including
+            thread pool queue and not seen by the application yet. If the current number of outstanding incoming
+            messages is lower than this value, new incoming messages are automatically processed again if they
+            processing was stopped due to high water mark. By default, this value is int.MaxValue. If both low and high water
+            mark values are int.MaxValue, water mark checks are disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListening">
+      <MemberSignature Language="C#" Value="public void StartListening (System.Net.IPEndPoint ipEndpoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartListening(class System.Net.IPEndPoint ipEndpoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.StartListening(System.Net.IPEndPoint)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void StartListening(System::Net::IPEndPoint ^ ipEndpoint);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ipEndpoint" Type="System.Net.IPEndPoint" />
+      </Parameters>
+      <Docs>
+        <param name="ipEndpoint">The IP endpoint to be used for listening.</param>
+        <summary>
+            Starts listening on the specified address and port.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the connection manager is already listening, 
+            or no interface is available.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.ConnectionFailureException">Thrown when unable to listen. Common reason is due to a port that is already in use.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListening">
+      <MemberSignature Language="C#" Value="public void StopListening ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopListening() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.StopListening" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopListening ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopListening();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops listening for new connections.  
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint never listened or already stopped listening.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when the endpoint stopped listening and timed out.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when the operation failed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListeningForIncomingConnections">
+      <MemberSignature Language="C#" Value="protected abstract void StopListeningForIncomingConnections ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void StopListeningForIncomingConnections() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerConnectionManager.StopListeningForIncomingConnections" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub StopListeningForIncomingConnections ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void StopListeningForIncomingConnections();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method does the actual S4 stop for listening.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

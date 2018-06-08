@@ -1,0 +1,624 @@
+﻿<Type Name="SipSubscription" FullName="Microsoft.Rtc.Signaling.SipSubscription">
+  <TypeSignature Language="C#" Value="public class SipSubscription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SipSubscription extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipSubscription" />
+  <TypeSignature Language="VB.NET" Value="Public Class SipSubscription" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SipSubscription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides low-level subscription and notification. Users of this class need to 
+            pass the ISubscriptionProcessor interface to interact with the subscription.
+            It automatically refreshes the subscription, 15 minutes before the expiry. Users of SipSubscription can 
+            also refresh the subscription themselves.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipSubscription (Microsoft.Rtc.Signaling.RealTimeEndpoint subscriber, Microsoft.Rtc.Signaling.RealTimeAddress targetAddress, string eventPackageName, Microsoft.Rtc.Signaling.ISipSubscriptionProcessor processorInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint subscriber, class Microsoft.Rtc.Signaling.RealTimeAddress targetAddress, string eventPackageName, class Microsoft.Rtc.Signaling.ISipSubscriptionProcessor processorInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String,Microsoft.Rtc.Signaling.ISipSubscriptionProcessor)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (subscriber As RealTimeEndpoint, targetAddress As RealTimeAddress, eventPackageName As String, processorInterface As ISipSubscriptionProcessor)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipSubscription(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ subscriber, Microsoft::Rtc::Signaling::RealTimeAddress ^ targetAddress, System::String ^ eventPackageName, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor ^ processorInterface);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subscriber" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="targetAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="eventPackageName" Type="System.String" />
+        <Parameter Name="processorInterface" Type="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor" />
+      </Parameters>
+      <Docs>
+        <param name="subscriber">The RealTimeEndpoint for the subscriber.</param>
+        <param name="targetAddress">The target address to be used in the <see cref="To" /> header of the subscription request.</param>
+        <param name="eventPackageName">The event package.</param>
+        <param name="processorInterface">The Subscription Processor interface.</param>
+        <summary>
+            Creates the SipSubscription object and initializes the values.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the eventPackageName or subscriber is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the eventPackageName parameter is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipSubscription (Microsoft.Rtc.Signaling.RealTimeEndpoint subscriber, Microsoft.Rtc.Signaling.RealTimeAddress targetAddress, string eventPackageName, Microsoft.Rtc.Signaling.ISipSubscriptionProcessor processorInterface, bool isQueryOnly);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint subscriber, class Microsoft.Rtc.Signaling.RealTimeAddress targetAddress, string eventPackageName, class Microsoft.Rtc.Signaling.ISipSubscriptionProcessor processorInterface, bool isQueryOnly) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String,Microsoft.Rtc.Signaling.ISipSubscriptionProcessor,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (subscriber As RealTimeEndpoint, targetAddress As RealTimeAddress, eventPackageName As String, processorInterface As ISipSubscriptionProcessor, isQueryOnly As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipSubscription(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ subscriber, Microsoft::Rtc::Signaling::RealTimeAddress ^ targetAddress, System::String ^ eventPackageName, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor ^ processorInterface, bool isQueryOnly);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subscriber" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="targetAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="eventPackageName" Type="System.String" />
+        <Parameter Name="processorInterface" Type="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor" />
+        <Parameter Name="isQueryOnly" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="subscriber">The RealTimeEndpoint for the subscriber.</param>
+        <param name="targetAddress">The target address to be used in the <see cref="To" /> header of the subscription request.</param>
+        <param name="eventPackageName">The event package.</param>
+        <param name="processorInterface">The Subscription Processor interface.</param>
+        <param name="isQueryOnly">Indicates if this subscription is query only; this will add the Expires=0 header on request and no retry on failure.</param>
+        <summary>
+            Creates the SipSubscription object and initializes the values.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when any parameter passed is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the eventPackageName parameter is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipSubscription (Microsoft.Rtc.Signaling.RealTimeEndpoint subscriber, Microsoft.Rtc.Signaling.RealTimeAddress targetAddress, string eventPackageName, Microsoft.Rtc.Signaling.ISipSubscriptionProcessor processorInterface, bool isQueryOnly, string localIdentityUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint subscriber, class Microsoft.Rtc.Signaling.RealTimeAddress targetAddress, string eventPackageName, class Microsoft.Rtc.Signaling.ISipSubscriptionProcessor processorInterface, bool isQueryOnly, string localIdentityUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String,Microsoft.Rtc.Signaling.ISipSubscriptionProcessor,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (subscriber As RealTimeEndpoint, targetAddress As RealTimeAddress, eventPackageName As String, processorInterface As ISipSubscriptionProcessor, isQueryOnly As Boolean, localIdentityUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipSubscription(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ subscriber, Microsoft::Rtc::Signaling::RealTimeAddress ^ targetAddress, System::String ^ eventPackageName, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor ^ processorInterface, bool isQueryOnly, System::String ^ localIdentityUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="subscriber" Type="Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+        <Parameter Name="targetAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="eventPackageName" Type="System.String" />
+        <Parameter Name="processorInterface" Type="Microsoft.Rtc.Signaling.ISipSubscriptionProcessor" />
+        <Parameter Name="isQueryOnly" Type="System.Boolean" />
+        <Parameter Name="localIdentityUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="subscriber">The RealTimeEndpoint for the subscriber.</param>
+        <param name="targetAddress">The target address to be used in the <see cref="To" /> header of the subscription request.</param>
+        <param name="eventPackageName">The event package.</param>
+        <param name="processorInterface">The Subscription Processor interface.</param>
+        <param name="isQueryOnly">Indicates if this subscription is query only; this will add the Expires=0 header on request and no retry on failure.</param>
+        <param name="localIdentityUri">The local identity URI to use in "From" headers.</param>
+        <summary>
+            Creates the SipSubscription object and initializes the values.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the eventPackageName or subscriber is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the eventPackageName parameter is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRefresh">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRefresh (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefresh(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginRefresh(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Creates a transaction async result to refresh an existing subscription and puts the workitem in queue.
+            Refresh is allowed only if the current subscription state is valid.
+            Multiple simultaneous refreshes are allowed, but not recommended for the application.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the current subscription signaling state is not Subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendUpdateMessage">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendUpdateMessage (System.Net.Mime.ContentType contentType, byte[] messageBody, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendUpdateMessage(class System.Net.Mime.ContentType contentType, unsigned int8[] messageBody, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginSendUpdateMessage(System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendUpdateMessage(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ messageBody, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" />
+        <Parameter Name="messageBody" Type="System.Byte[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contentType">The content type to send with the update message.</param>
+        <param name="messageBody">The message body to send with the update message </param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Send an update message on existing subscription dialog, this is useful where server allows the change in the semantics of existing subscription 
+            dialog especially used for LS batch subscriptions.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the endpoint is terminating.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSubscribe">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSubscribe (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSubscribe(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginSubscribe(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSubscribe (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSubscribe(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Creates an subscribe request body and puts the workItem in queue to invoke Subscribe.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Multiple subscription for the event "vnd-microsoft-roaming-self" are not allowed from same endpoint, so establishing another subscription session for this event will cause InvalidOperationException.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if event package is "vnd-microsoft-roaming-self" and RealTimeEndpoint already have a subscription for this event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminate">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginTerminate (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTerminate(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginTerminate(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            If a subscription exists, then terminate the subscription; else completed as no operation.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SubscriptionSignalingState CurrentState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SubscriptionSignalingState CurrentState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.CurrentState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentState As SubscriptionSignalingState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SubscriptionSignalingState CurrentState { Microsoft::Rtc::Signaling::SubscriptionSignalingState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SubscriptionSignalingState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current signaling state of the subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRefresh">
+      <MemberSignature Language="C#" Value="public void EndRefresh (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndRefresh(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndRefresh(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndRefresh (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRefresh(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the pending refresh operation.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the parameter is null. The IAsyncResult is a required parameter.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the IAsyncResult object is created by a Begin method for a different operation</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when End is called multiple times.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendUpdateMessage">
+      <MemberSignature Language="C#" Value="public void EndSendUpdateMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSendUpdateMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndSendUpdateMessage(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSendUpdateMessage (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendUpdateMessage(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the pending Subscription Update operation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSubscribe">
+      <MemberSignature Language="C#" Value="public void EndSubscribe (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSubscribe(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndSubscribe(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSubscribe (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSubscribe(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the pending asynchronous subscribe operation.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the parameter was null. The IAsyncResult is a required parameter.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the IAsyncResult object was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when End was called multiple times.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminate">
+      <MemberSignature Language="C#" Value="public void EndTerminate (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndTerminate(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndTerminate(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the pending terminate operation.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the parameter is null. The IAsyncResult is a required parameter.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the IAsyncResult object is created by a Begin method for a different operation</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when End was called multiple times.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EventPackage">
+      <MemberSignature Language="C#" Value="public string EventPackage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EventPackage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.EventPackage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EventPackage As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EventPackage { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the event package, for which this subscription is created.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTraceCorrelationID">
+      <MemberSignature Language="C#" Value="public long GetTraceCorrelationID ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int64 GetTraceCorrelationID() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.GetTraceCorrelationID" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the trace correlation id for this instance.
+            </summary>
+        <returns>The trace correlation id.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActive">
+      <MemberSignature Language="C#" Value="public bool IsActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsActive" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.IsActive" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsActive As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsActive { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if current state is subscribed or refreshing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsQueryOnly">
+      <MemberSignature Language="C#" Value="public bool IsQueryOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsQueryOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.IsQueryOnly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsQueryOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsQueryOnly { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true or false. When IsQueryOnly is set to true, Expires 0 header would be automatically added on the underlying subscription. The default value is false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Refresh() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.Refresh" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Refresh ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronous version of BeginRefresh and EndRefresh.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the current subscription signaling state is not Subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subscribe">
+      <MemberSignature Language="C#" Value="public void Subscribe ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Subscribe() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.Subscribe" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Subscribe ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Subscribe();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronous version of BeginSubscribe and EndSubscribe.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the Subscribe/BeginSubscribe operation to this SipSubscription has already been called.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriberEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeEndpoint SubscriberEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeEndpoint SubscriberEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.SubscriberEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriberEndpoint As RealTimeEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeEndpoint ^ SubscriberEndpoint { Microsoft::Rtc::Signaling::RealTimeEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the endpoint of the subscriber who creates this subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RealTimeAddress Target { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.RealTimeAddress Target" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.Target" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Target As RealTimeAddress" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ Target { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RealTimeAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the target to be used in the "To" header in the Subscribe request.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Terminate">
+      <MemberSignature Language="C#" Value="public void Terminate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Terminate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.Terminate" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Terminate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronous version of BeginTerminate and EndTerminate.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeRemainingToRefresh">
+      <MemberSignature Language="C#" Value="public TimeSpan TimeRemainingToRefresh { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan TimeRemainingToRefresh" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.TimeRemainingToRefresh" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimeRemainingToRefresh As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan TimeRemainingToRefresh { TimeSpan get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the time span remaining to expire this subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the string representation for the SipSubscription object, 
+            which basically contains endpointId, event, and the current subscription state.
+            </summary>
+        <returns>Returns the string representation for the SipSubscription object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

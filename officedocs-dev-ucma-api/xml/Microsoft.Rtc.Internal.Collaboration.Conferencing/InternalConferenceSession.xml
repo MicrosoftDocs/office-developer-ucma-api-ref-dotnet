@@ -1,0 +1,128 @@
+﻿<Type Name="InternalConferenceSession" FullName="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession">
+  <TypeSignature Language="C#" Value="public class InternalConferenceSession : Microsoft.Rtc.Collaboration.ConferenceSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InternalConferenceSession extends Microsoft.Rtc.Collaboration.ConferenceSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession" />
+  <TypeSignature Language="VB.NET" Value="Public Class InternalConferenceSession&#xA;Inherits ConferenceSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class InternalConferenceSession : Microsoft::Rtc::Collaboration::ConferenceSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ConferenceSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginSendCommand">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSendCommand (Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand command, Microsoft.Rtc.Collaboration.ConferenceCommandOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendCommand(class Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand command, class Microsoft.Rtc.Collaboration.ConferenceCommandOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.BeginSendCommand(Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand,Microsoft.Rtc.Collaboration.ConferenceCommandOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSendCommand (command As ConferenceCommand, options As ConferenceCommandOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendCommand(Microsoft::Rtc::Internal::Collaboration::Conferencing::Commands::ConferenceCommand ^ command, Microsoft::Rtc::Collaboration::ConferenceCommandOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="command">To be added.</param>
+        <param name="options">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSetUserAccess">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginSetUserAccess (string participantUri, bool granted, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSetUserAccess(string participantUri, bool granted, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.BeginSetUserAccess(System.String,System.Boolean,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginSetUserAccess (participantUri As String, granted As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSetUserAccess(System::String ^ participantUri, bool granted, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="participantUri" Type="System.String" />
+        <Parameter Name="granted" Type="System.Boolean" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="participantUri">To be added.</param>
+        <param name="granted">To be added.</param>
+        <param name="userCallback">To be added.</param>
+        <param name="state">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendCommand">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceCommandResponse EndSendCommand (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.ConferenceCommandResponse EndSendCommand(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.EndSendCommand(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndSendCommand (result As IAsyncResult) As ConferenceCommandResponse" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ConferenceCommandResponse ^ EndSendCommand(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceCommandResponse</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSetUserAccess">
+      <MemberSignature Language="C#" Value="public void EndSetUserAccess (IAsyncResult asyncResult);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndSetUserAccess(class System.IAsyncResult asyncResult) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.EndSetUserAccess(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndSetUserAccess (asyncResult As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSetUserAccess(IAsyncResult ^ asyncResult);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="asyncResult" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="asyncResult">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

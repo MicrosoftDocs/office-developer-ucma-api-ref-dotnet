@@ -1,0 +1,136 @@
+﻿<Type Name="ConferenceAccessLevel" FullName="Microsoft.Rtc.Collaboration.ConferenceAccessLevel">
+  <TypeSignature Language="C#" Value="public enum ConferenceAccessLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ConferenceAccessLevel extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceAccessLevel" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ConferenceAccessLevel" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ConferenceAccessLevel" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Represents the access levels used to control access to a conference.
+            </summary>
+    <remarks>
+      <para>
+            The conference access level defines which users are immediately admitted into the conference
+            without being placed into the lobby. A conference organizer or leader
+            can select specific types of user to bypass the conference lobby <see cref="T:Microsoft.Rtc.Collaboration.LobbyBypass" />.
+            However, users are always placed in the lobby (except the organizer) if the conference access level
+            was set to <see cref="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Locked" />.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Everyone">
+      <MemberSignature Language="C#" Value="Everyone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel Everyone = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Everyone" />
+      <MemberSignature Language="VB.NET" Value="Everyone" />
+      <MemberSignature Language="C++ CLI" Value="Everyone" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Everyone is admitted into the conference.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Invited">
+      <MemberSignature Language="C#" Value="Invited" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel Invited = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Invited" />
+      <MemberSignature Language="VB.NET" Value="Invited" />
+      <MemberSignature Language="C++ CLI" Value="Invited" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Only invited participants from the same company are admitted into the conference.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Locked">
+      <MemberSignature Language="C#" Value="Locked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel Locked = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Locked" />
+      <MemberSignature Language="VB.NET" Value="Locked" />
+      <MemberSignature Language="C++ CLI" Value="Locked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Only the organizer is admitted into the conference.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Not initialized.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SameEnterprise">
+      <MemberSignature Language="C#" Value="SameEnterprise" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel SameEnterprise = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.SameEnterprise" />
+      <MemberSignature Language="VB.NET" Value="SameEnterprise" />
+      <MemberSignature Language="C++ CLI" Value="SameEnterprise" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Only the participants from the same company are admitted into the conference.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

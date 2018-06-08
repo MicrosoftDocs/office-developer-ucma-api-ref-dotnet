@@ -1,0 +1,301 @@
+﻿<Type Name="RegistrationTransitionReason" FullName="Microsoft.Rtc.Signaling.RegistrationTransitionReason">
+  <TypeSignature Language="C#" Value="public enum RegistrationTransitionReason" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed RegistrationTransitionReason extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RegistrationTransitionReason" />
+  <TypeSignature Language="VB.NET" Value="Public Enum RegistrationTransitionReason" />
+  <TypeSignature Language="C++ CLI" Value="public enum class RegistrationTransitionReason" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Indicates possible reasons for state transitions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Authentication">
+      <MemberSignature Language="C#" Value="Authentication" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason Authentication = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.Authentication" />
+      <MemberSignature Language="VB.NET" Value="Authentication" />
+      <MemberSignature Language="C++ CLI" Value="Authentication" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            A fatal authentication error occurred. Examples may be clocks are out of sync
+            on the client and server when using Kerberos, or a server could not be contacted.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionDropped">
+      <MemberSignature Language="C#" Value="ConnectionDropped" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason ConnectionDropped = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.ConnectionDropped" />
+      <MemberSignature Language="VB.NET" Value="ConnectionDropped" />
+      <MemberSignature Language="C++ CLI" Value="ConnectionDropped" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            A connection disconnect occurred.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionFailure">
+      <MemberSignature Language="C#" Value="ConnectionFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason ConnectionFailure = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.ConnectionFailure" />
+      <MemberSignature Language="VB.NET" Value="ConnectionFailure" />
+      <MemberSignature Language="C++ CLI" Value="ConnectionFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Unable to connect to a remote computer due to DNS or 
+            network issues. May possibly reprompt for server name, or peer address
+            and port number as appropriate.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Credentials">
+      <MemberSignature Language="C#" Value="Credentials" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason Credentials = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.Credentials" />
+      <MemberSignature Language="VB.NET" Value="Credentials" />
+      <MemberSignature Language="C++ CLI" Value="Credentials" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            If credentials were specified, there is an invalid password, or other problems with the credentials.
+            If default credentials were used, credentials are required. The application supplies new 
+            credentials to try again.  This may mean prompting the user, depending on the application.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            No reason or unknown reason.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredRegistrarChanged">
+      <MemberSignature Language="C#" Value="PreferredRegistrarChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason PreferredRegistrarChanged = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.PreferredRegistrarChanged" />
+      <MemberSignature Language="VB.NET" Value="PreferredRegistrarChanged" />
+      <MemberSignature Language="C++ CLI" Value="PreferredRegistrarChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>11</MemberValue>
+      <Docs>
+        <summary>
+            The preferred registrar for the user changed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterationRefresh">
+      <MemberSignature Language="C#" Value="RegisterationRefresh" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason RegisterationRefresh = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.RegisterationRefresh" />
+      <MemberSignature Language="VB.NET" Value="RegisterationRefresh" />
+      <MemberSignature Language="C++ CLI" Value="RegisterationRefresh" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Registration is refreshed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="Timeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason Timeout = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.Timeout" />
+      <MemberSignature Language="VB.NET" Value="Timeout" />
+      <MemberSignature Language="C++ CLI" Value="Timeout" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            There was a timeout during initialization.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TooManyActiveEndpoint">
+      <MemberSignature Language="C#" Value="TooManyActiveEndpoint" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason TooManyActiveEndpoint = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.TooManyActiveEndpoint" />
+      <MemberSignature Language="VB.NET" Value="TooManyActiveEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="TooManyActiveEndpoint" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The number of active endpoints exceeds the limit.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UnauthorizedAccess">
+      <MemberSignature Language="C#" Value="UnauthorizedAccess" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason UnauthorizedAccess = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.UnauthorizedAccess" />
+      <MemberSignature Language="VB.NET" Value="UnauthorizedAccess" />
+      <MemberSignature Language="C++ CLI" Value="UnauthorizedAccess" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The credentials may be valid but are for a different URI. The application may wish
+            to reprompt for credentials and the URI, or fail based on its requirements.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserChanged">
+      <MemberSignature Language="C#" Value="UserChanged" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason UserChanged = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.UserChanged" />
+      <MemberSignature Language="VB.NET" Value="UserChanged" />
+      <MemberSignature Language="C++ CLI" Value="UserChanged" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            The user has been changed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserMoved">
+      <MemberSignature Language="C#" Value="UserMoved" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason UserMoved = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.UserMoved" />
+      <MemberSignature Language="VB.NET" Value="UserMoved" />
+      <MemberSignature Language="C++ CLI" Value="UserMoved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            The user has been moved.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserServicesUnavailable">
+      <MemberSignature Language="C#" Value="UserServicesUnavailable" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Signaling.RegistrationTransitionReason UserServicesUnavailable = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.RegistrationTransitionReason.UserServicesUnavailable" />
+      <MemberSignature Language="VB.NET" Value="UserServicesUnavailable" />
+      <MemberSignature Language="C++ CLI" Value="UserServicesUnavailable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationTransitionReason</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>
+            The user services cluster became unavailable.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

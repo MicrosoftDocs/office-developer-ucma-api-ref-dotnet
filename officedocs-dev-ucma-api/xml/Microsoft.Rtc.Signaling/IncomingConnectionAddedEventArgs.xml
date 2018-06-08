@@ -1,0 +1,70 @@
+﻿<Type Name="IncomingConnectionAddedEventArgs" FullName="Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs">
+  <TypeSignature Language="C#" Value="public class IncomingConnectionAddedEventArgs : Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IncomingConnectionAddedEventArgs extends Microsoft.Rtc.Signaling.CollectionChangedEventArgs`1&lt;class Microsoft.Rtc.Signaling.RealTimeConnection&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class IncomingConnectionAddedEventArgs&#xA;Inherits CollectionChangedEventArgs(Of RealTimeConnection)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class IncomingConnectionAddedEventArgs : Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">Microsoft.Rtc.Signaling.RealTimeConnection</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains event information for connections being added.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MatchingDomainName">
+      <MemberSignature Language="C#" Value="public string MatchingDomainName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MatchingDomainName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs.MatchingDomainName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatchingDomainName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MatchingDomainName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the domain string from the allowed domains list that matched the certificate.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteCertificate">
+      <MemberSignature Language="C#" Value="public System.Security.Cryptography.X509Certificates.X509Certificate2 RemoteCertificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Security.Cryptography.X509Certificates.X509Certificate2 RemoteCertificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.IncomingConnectionAddedEventArgs.RemoteCertificate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteCertificate As X509Certificate2" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::X509Certificates::X509Certificate2 ^ RemoteCertificate { System::Security::Cryptography::X509Certificates::X509Certificate2 ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Security.Cryptography.X509Certificates.X509Certificate2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote certificate used for this connection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

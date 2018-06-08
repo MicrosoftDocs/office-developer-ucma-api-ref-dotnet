@@ -1,0 +1,99 @@
+﻿<Type Name="AudioControlTemplate" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioControlTemplate">
+  <TypeSignature Language="C#" Value="public class AudioControlTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioControlTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioControlTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioControlTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioControlTemplate" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Audio Control Template.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetChannels">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel,Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate&gt; GetChannels ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IDictionary`2&lt;valuetype Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel, class Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate&gt; GetChannels() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioControlTemplate.GetChannels" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetChannels () As IDictionary(Of ChannelLabel, AudioChannelTemplate)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IDictionary&lt;Microsoft::Rtc::Collaboration::AudioVideo::ChannelLabel, Microsoft::Rtc::Collaboration::AudioVideo::AudioChannelTemplate ^&gt; ^ GetChannels();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel,Microsoft.Rtc.Collaboration.AudioVideo.AudioChannelTemplate&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets audio channels.
+            </summary>
+        <returns>Dictionary with with an AudioChannelTemplate indexed by its ChannelLabel</returns>
+        <remarks>
+          <para>
+            Returns a read-only dictionary of the channels held by AudioControlTemplate.
+            Any modification of the Dictionary will not have an effect,
+            as the returned object is a copy of the original.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example creates an AudioVideoFlowTemplate based on an AudioVideoFlow, modifies AudioChannelTemplate properties and apply its changes to the AudioVideoFlow.
+                </para>
+          <para> C# Modifying AudioChannelTemplate properties.</para>
+          <code> 
+
+            AudioVideoFlowTemplate templateToApply = new AudioVideoFlowTemplate(audioVideoFlow);
+            AudioChannelTemplate audioChannelTemplate = (AudioChannelTemplate)templateToApply.Audio.GetChannels()[ChannelLabel.AudioMono];
+            audioChannelTemplate.AllowedDirection = MediaChannelDirection.SendOnly;
+            audioChannelTemplate.SendDirectionSamplingRate = AudioSamplingRate.EightKhz;
+
+            // ApplyChanges
+            audioVideoFlow.BeginApplyChanges(
+                templateToApply,
+                new AsyncCallback(delegate(IAsyncResult result)
+                {
+                    try
+                    {
+                        audioVideoFlow.EndApplyChanges(result);
+                    }
+                    catch (RealTimeException e)
+                    {
+                        // handle exception
+                        throw e;
+                    }
+
+                    // ApplyChanges is done, verify changes result..
+                    AudioChannel audioChannel = audioVideoFlow.Audio.GetChannels()[ChannelLabel.AudioMono];
+                    if (audioChannel.Direction == MediaChannelDirection.SendOnly &amp;amp;&amp;amp;
+                        audioChannel.SendDirectionSamplingRate == AudioSamplingRate.EightKhz)
+                    {
+                        // remote side accepted changes as they were
+                    }
+                    else
+                    {
+                        // remote side accepted changes but filtered them more.
+                    }
+                }),
+                this);
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

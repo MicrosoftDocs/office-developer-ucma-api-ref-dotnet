@@ -1,0 +1,903 @@
+﻿<Type Name="MediaProvider" FullName="Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider">
+  <TypeSignature Language="C#" Value="public abstract class MediaProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract MediaProvider extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaProvider" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MediaProvider abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the class, which facilitates SDP offer/answer negotiation for the <see cref="T:Microsoft.Rtc.Collaboration.Call" />.
+            </summary>
+    <remarks>
+      <para>
+            MediaProvider is the link between the signaling and Media APIs. It facilitates offer/answer negotiation on the signaling 
+            session and notifies the Call when a media flow is created.
+            </para>
+      <para>
+            MediaProvider follows RFC-3264 - An Offer/Answer Model with the Session Description Protocol (SDP).
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MediaProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MediaProvider();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of the MediaProvider class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetAnswer">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult BeginGetAnswer (Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, Microsoft.Rtc.Collaboration.SdpOffer offer, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginGetAnswer(class Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, class Microsoft.Rtc.Collaboration.SdpOffer offer, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginGetAnswer(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext,Microsoft.Rtc.Collaboration.SdpOffer,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract IAsyncResult ^ BeginGetAnswer(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ offerAnswerContext, Microsoft::Rtc::Collaboration::SdpOffer ^ offer, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offerAnswerContext" Type="Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext" />
+        <Parameter Name="offer" Type="Microsoft.Rtc.Collaboration.SdpOffer" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="offerAnswerContext">The OfferAnswer context for the corresponding call.</param>
+        <param name="offer">The incoming offer.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to get the sdp answer from MediaProvider.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetOffer">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult BeginGetOffer (Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt; lastLocalOutgoingSdps, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginGetOffer(class Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.SdpContentDescription&gt; lastLocalOutgoingSdps, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginGetOffer(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext,System.Collections.ObjectModel.Collection{Microsoft.Rtc.Collaboration.SdpContentDescription},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract IAsyncResult ^ BeginGetOffer(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ offerAnswerContext, System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::SdpContentDescription ^&gt; ^ lastLocalOutgoingSdps, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offerAnswerContext" Type="Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext" />
+        <Parameter Name="lastLocalOutgoingSdps" Type="System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="offerAnswerContext">The OfferAnswerContext for the corresponding call.</param>
+        <param name="lastLocalOutgoingSdps">
+            Last outgoing local SDPs, which can be null if this method is invoked for an initial offer.
+            </param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to get the sdp offer from MediaProvider.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>The last local outgoing SDP can be either the last outgoing offer or answer. An outgoing offer can contain multiple SDP session descriptions.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSdpRenegotiation">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginSdpRenegotiation (Microsoft.Rtc.Collaboration.CallDialogContext callDialog, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginSdpRenegotiation(class Microsoft.Rtc.Collaboration.CallDialogContext callDialog, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginSdpRenegotiation(Microsoft.Rtc.Collaboration.CallDialogContext,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function BeginSdpRenegotiation (callDialog As CallDialogContext, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginSdpRenegotiation(Microsoft::Rtc::Collaboration::CallDialogContext ^ callDialog, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callDialog" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callDialog">SignalingContext for the corresponding call dialog.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins SDP renegotiation for a given callDialog.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para> If any incoming SDP renegotiation is in progress when this method is being invoked, 
+            the requested SDP renegotiation will begin after the pending renegotiation is finished.</para>
+          <para>MediaProvider should expect that the BeginGetOffer method will be called after BeginSdpRenegotiation has started.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="callDialog" /> is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when <paramref name="callDialog" /> contains a dialog, which can not be renegotiated, 
+            typical example is MediaProvider is trying to renegotiate an early dialog after dialog is confirmed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginSendMessage">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginSendMessage (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, Microsoft.Rtc.Signaling.MessageType messageType, Microsoft.Rtc.Signaling.ContentDescription message, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; messageHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginSendMessage(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.ContentDescription message, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; messageHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginSendMessage(Microsoft.Rtc.Collaboration.CallDialogContext,Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.ContentDescription,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::ContentDescription ^ message, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ messageHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="messageType" Type="Microsoft.Rtc.Signaling.MessageType" />
+        <Parameter Name="message" Type="Microsoft.Rtc.Signaling.ContentDescription" />
+        <Parameter Name="messageHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">The signaling context for the session to send the message.</param>
+        <param name="messageType">The type of message to send.</param>
+        <param name="message">The actual message, consisting of its contentType and message body.</param>
+        <param name="messageHeaders">Additional headers to be sent with the message.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to send a message on a specific CallDialogContext.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when a body is specified without a content type with media type. Thrown if messageType is other than Message, Info or Options</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the call is in an invalid state.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="signalingContext" /> is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminateCall">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginTerminateCall (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginTerminateCall(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginTerminateCall(Microsoft.Rtc.Collaboration.CallDialogContext,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function BeginTerminateCall (signalingContext As CallDialogContext, headers As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginTerminateCall(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">The signaling context for the corresponding call.</param>
+        <param name="headers">Additional headers to be sent out with the call terminating BYE message.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to terminate the Call.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="signalingContext" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="headers" /> contain a restricted or invalid header.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminateCall">
+      <MemberSignature Language="C#" Value="protected IAsyncResult BeginTerminateCall (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, Microsoft.Rtc.Signaling.DiagnosticsInformation diagnosticsInformation, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginTerminateCall(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers, class Microsoft.Rtc.Signaling.DiagnosticsInformation diagnosticsInformation, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginTerminateCall(Microsoft.Rtc.Collaboration.CallDialogContext,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},Microsoft.Rtc.Signaling.DiagnosticsInformation,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginTerminateCall(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers, Microsoft::Rtc::Signaling::DiagnosticsInformation ^ diagnosticsInformation, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="diagnosticsInformation" Type="Microsoft.Rtc.Signaling.DiagnosticsInformation" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">The signaling context for the corresponding call.</param>
+        <param name="headers">Additional headers to be sent out with the call terminating BYE message.</param>
+        <param name="diagnosticsInformation">Diagnostics information to use when terminating the call.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to terminate the Call with specific diagnostic information.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="signalingContext" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">
+            Throw when <paramref name="diagnosticsInformation" /> is specified and the <paramref name="headers" /> parameter contains
+            diagnostics headers.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginTerminateMedia">
+      <MemberSignature Language="C#" Value="protected abstract IAsyncResult BeginTerminateMedia (Microsoft.Rtc.Collaboration.CallDialogContext callDialogContext, bool isTerminatingSignalingSession, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.IAsyncResult BeginTerminateMedia(class Microsoft.Rtc.Collaboration.CallDialogContext callDialogContext, bool isTerminatingSignalingSession, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.BeginTerminateMedia(Microsoft.Rtc.Collaboration.CallDialogContext,System.Boolean,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract IAsyncResult ^ BeginTerminateMedia(Microsoft::Rtc::Collaboration::CallDialogContext ^ callDialogContext, bool isTerminatingSignalingSession, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callDialogContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="isTerminatingSignalingSession" Type="System.Boolean" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callDialogContext">The signaling context for the session on which media should be terminated.</param>
+        <param name="isTerminatingSignalingSession">A Boolean flag that indicates whether the underlying SignalingSession will be terminated after terminating the media session.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to terminate media session for a given CallDialogContext.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            This method terminates the MediaSession on the call.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetAnswer">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.Rtc.Collaboration.SdpAnswer EndGetAnswer (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Collaboration.SdpAnswer EndGetAnswer(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.EndGetAnswer(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function EndGetAnswer (result As IAsyncResult) As SdpAnswer" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Collaboration::SdpAnswer ^ EndGetAnswer(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SdpAnswer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the operation started by BeginGetAnswer.
+            </summary>
+        <returns>The answer to send out. If a null answer is returned, the call will be terminated with InternalServerError.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.OfferAnswerException">
+            Thrown when the given offer was not acceptable.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetOffer">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.Rtc.Collaboration.SdpOffer EndGetOffer (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Collaboration.SdpOffer EndGetOffer(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.EndGetOffer(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function EndGetOffer (result As IAsyncResult) As SdpOffer" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Collaboration::SdpOffer ^ EndGetOffer(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SdpOffer</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the operation started by BeginGetOffer.
+            </summary>
+        <returns>The offer to be sent out. If a null offer is returned, the call will be terminated.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.OfferAnswerException">
+            Thrown when the offer to send out cannot be created.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSdpRenegotiation">
+      <MemberSignature Language="C#" Value="protected void EndSdpRenegotiation (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EndSdpRenegotiation(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.EndSdpRenegotiation(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub EndSdpRenegotiation (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void EndSdpRenegotiation(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation started by the BeginSdpRenegotiation method.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error and error response code 
+            can not be mapped to <see cref="T:Microsoft.Rtc.Collaboration.SdpAnswerStatus" />.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSendMessage">
+      <MemberSignature Language="C#" Value="protected Microsoft.Rtc.Signaling.SipResponseData EndSendMessage (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndSendMessage(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.EndSendMessage(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function EndSendMessage (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation started by the BeginSendMessage.
+            </summary>
+        <returns>The response to the message send request.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.FailureResponseException">
+            Thrown when the server or remote participant returns an error.  The response code in
+            the exception should give more information about the error
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminateCall">
+      <MemberSignature Language="C#" Value="protected void EndTerminateCall (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void EndTerminateCall(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.EndTerminateCall(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub EndTerminateCall (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void EndTerminateCall(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation started by BeginTerminateCall.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same instance of asyncResult.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndTerminateMedia">
+      <MemberSignature Language="C#" Value="protected abstract void EndTerminateMedia (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void EndTerminateMedia(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.EndTerminateMedia(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub EndTerminateMedia (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void EndTerminateMedia(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation started by BeginTerminateMedia.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FipsCompliantMediaEncryptionRequired">
+      <MemberSignature Language="C#" Value="protected Nullable&lt;bool&gt; FipsCompliantMediaEncryptionRequired { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; FipsCompliantMediaEncryptionRequired" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.FipsCompliantMediaEncryptionRequired" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property FipsCompliantMediaEncryptionRequired As Nullable(Of Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property Nullable&lt;bool&gt; FipsCompliantMediaEncryptionRequired { Nullable&lt;bool&gt; get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether FIPS-compliant encryption should be used to secure media.
+            If null, the MediaProvider should interpret a default value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleMessage">
+      <MemberSignature Language="C#" Value="protected virtual bool HandleMessage (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs eventArg);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HandleMessage(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, class Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs eventArg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.HandleMessage(Microsoft.Rtc.Collaboration.CallDialogContext,Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function HandleMessage (signalingContext As CallDialogContext, eventArg As CallMessageReceivedEventArgs) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool HandleMessage(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, Microsoft::Rtc::Collaboration::CallMessageReceivedEventArgs ^ eventArg);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="eventArg" Type="Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="signalingContext">The SignalingContext for the session on which the message was received.</param>
+        <param name="eventArg">The CallMessageReceivedEventArgs that contains the message.</param>
+        <summary>
+            Handles the message.
+            </summary>
+        <returns>true if media provider is handling the session message, and false otherwise.</returns>
+        <remarks>
+          <para>
+            This method is invoked by the call when it receives the message on the underlying signaling session.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEarlyMediaPreferred">
+      <MemberSignature Language="C#" Value="public bool IsEarlyMediaPreferred { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEarlyMediaPreferred" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.IsEarlyMediaPreferred" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsEarlyMediaPreferred As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:  property bool IsEarlyMediaPreferred {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether incoming call must perform early media 
+            renegotiation before sending a 200-OK response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEscalationSupported">
+      <MemberSignature Language="C#" Value="public bool IsEscalationSupported { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEscalationSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.IsEscalationSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsEscalationSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:  property bool IsEscalationSupported {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the media provider supports the 
+            escalation from a two-party call to conferencing.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMcuSupported">
+      <MemberSignature Language="C#" Value="public bool IsMcuSupported { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMcuSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.IsMcuSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsMcuSupported As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:  property bool IsMcuSupported {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the media provider 
+            supports behaving as an MCU.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseEvent&lt;T&gt;">
+      <MemberSignature Language="C#" Value="protected void RaiseEvent&lt;T&gt; (Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, EventHandler&lt;T&gt; eventHandler, object sender, T eventArgs) where T : EventArgs;" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseEvent&lt;(class System.EventArgs) T&gt;(class Microsoft.Rtc.Collaboration.CallDialogContext signalingContext, class System.EventHandler`1&lt;!!T&gt; eventHandler, object sender, !!T eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.RaiseEvent``1(Microsoft.Rtc.Collaboration.CallDialogContext,System.EventHandler{``0},System.Object,``0)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub RaiseEvent(Of T As EventArgs) (signalingContext As CallDialogContext, eventHandler As EventHandler(Of T), sender As Object, eventArgs As T)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename T&gt;&#xA; where T : EventArgs void RaiseEvent(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, EventHandler&lt;T&gt; ^ eventHandler, System::Object ^ sender, T eventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>System.EventArgs</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="signalingContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="eventHandler" Type="System.EventHandler&lt;T&gt;" />
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="eventArgs" Type="T" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the event.</typeparam>
+        <param name="signalingContext">The signaling context of the call.</param>
+        <param name="eventHandler">The event handler for the event to be raised.</param>
+        <param name="sender">The event sender.</param>
+        <param name="eventArgs">Event arguments.</param>
+        <summary>
+            Raises the specified event.
+            </summary>
+        <remarks>
+          <para>
+            This method is a helper function that can be used to raise events.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseFlowConfigurationRequestedHandler">
+      <MemberSignature Language="C#" Value="protected void RaiseFlowConfigurationRequestedHandler (Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, Microsoft.Rtc.Collaboration.ComponentModel.FlowConfigurationRequestedEventArgs flowEventArg);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void RaiseFlowConfigurationRequestedHandler(class Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, class Microsoft.Rtc.Collaboration.ComponentModel.FlowConfigurationRequestedEventArgs flowEventArg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.RaiseFlowConfigurationRequestedHandler(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext,Microsoft.Rtc.Collaboration.ComponentModel.FlowConfigurationRequestedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void RaiseFlowConfigurationRequestedHandler(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ offerAnswerContext, Microsoft::Rtc::Collaboration::ComponentModel::FlowConfigurationRequestedEventArgs ^ flowEventArg);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offerAnswerContext" Type="Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext" />
+        <Parameter Name="flowEventArg" Type="Microsoft.Rtc.Collaboration.ComponentModel.FlowConfigurationRequestedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="offerAnswerContext">The OfferAnswer context for the call on which the flow is created.</param>
+        <param name="flowEventArg">EventArgs that contain the newly created flow object.</param>
+        <summary>
+            Raises the FlowConfigurationRequested event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnswer">
+      <MemberSignature Language="C#" Value="protected abstract void SetAnswer (Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext context, Microsoft.Rtc.Collaboration.SdpOffer originalOffer, Microsoft.Rtc.Collaboration.SdpAnswer answer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetAnswer(class Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext context, class Microsoft.Rtc.Collaboration.SdpOffer originalOffer, class Microsoft.Rtc.Collaboration.SdpAnswer answer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.SetAnswer(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext,Microsoft.Rtc.Collaboration.SdpOffer,Microsoft.Rtc.Collaboration.SdpAnswer)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub SetAnswer (context As OfferAnswerContext, originalOffer As SdpOffer, answer As SdpAnswer)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void SetAnswer(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ context, Microsoft::Rtc::Collaboration::SdpOffer ^ originalOffer, Microsoft::Rtc::Collaboration::SdpAnswer ^ answer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext" />
+        <Parameter Name="originalOffer" Type="Microsoft.Rtc.Collaboration.SdpOffer" />
+        <Parameter Name="answer" Type="Microsoft.Rtc.Collaboration.SdpAnswer" />
+      </Parameters>
+      <Docs>
+        <param name="context">The Call context for the corresponding call.</param>
+        <param name="originalOffer">The original offer.</param>
+        <param name="answer">The incoming answer.</param>
+        <summary>
+            Sets the incoming answer on MediaProvider.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Collaboration.OfferAnswerException">
+            Thrown when the answer is not acceptable.  
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetIncomingCallOffer">
+      <MemberSignature Language="C#" Value="protected virtual void SetIncomingCallOffer (Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, Microsoft.Rtc.Collaboration.SdpOffer offer);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetIncomingCallOffer(class Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext offerAnswerContext, class Microsoft.Rtc.Collaboration.SdpOffer offer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.SetIncomingCallOffer(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext,Microsoft.Rtc.Collaboration.SdpOffer)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void SetIncomingCallOffer(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ offerAnswerContext, Microsoft::Rtc::Collaboration::SdpOffer ^ offer);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offerAnswerContext" Type="Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext" />
+        <Parameter Name="offer" Type="Microsoft.Rtc.Collaboration.SdpOffer" />
+      </Parameters>
+      <Docs>
+        <param name="offerAnswerContext">The OfferAnswerContext. </param>
+        <param name="offer">The initial offer.</param>
+        <summary>
+            Sets the initial offer on the MediaProvider.
+            </summary>
+        <remarks>
+          <para> The Call invokes this method when a media provider is bound to the incoming call.
+            The existing behavior for accepting the call is not changed; it will continue to send the same offer.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SrtpEncryption">
+      <MemberSignature Language="C#" Value="protected string SrtpEncryption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SrtpEncryption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.SrtpEncryption" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property SrtpEncryption As String" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::String ^ SrtpEncryption { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value that determines how the client makes and receives encrypted audio/video calls.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The value is one of "SupportEncryption", "RequireEncryption", or "DoNotSupportEncryption".
+            </para>
+          <para>
+            The default value is "SupportEncryption".
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedMediaTypes">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;string&gt; SupportedMediaTypes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; SupportedMediaTypes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.SupportedMediaTypes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a list of the supported media names that are acceptable in an m= line in an SDP offer/answer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetPortRange">
+      <MemberSignature Language="C#" Value="protected bool TryGetPortRange (string mediaType, out int minPort, out int maxPort);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool TryGetPortRange(string mediaType, [out] int32&amp; minPort, [out] int32&amp; maxPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.TryGetPortRange(System.String,System.Int32@,System.Int32@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function TryGetPortRange (mediaType As String, ByRef minPort As Integer, ByRef maxPort As Integer) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; bool TryGetPortRange(System::String ^ mediaType, [Runtime::InteropServices::Out] int % minPort, [Runtime::InteropServices::Out] int % maxPort);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mediaType" Type="System.String" />
+        <Parameter Name="minPort" Type="System.Int32&amp;" RefType="out" />
+        <Parameter Name="maxPort" Type="System.Int32&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="mediaType">The media type for which port range is requested.</param>
+        <param name="minPort">To be added.</param>
+        <param name="maxPort">To be added.</param>
+        <summary>
+            Tries to get the port range defined for the media type.
+            </summary>
+        <returns>Returns true if port range was found for the media type specified.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdatePrimarySessionContext">
+      <MemberSignature Language="C#" Value="protected virtual void UpdatePrimarySessionContext (Microsoft.Rtc.Collaboration.CallDialogContext oldContext, Microsoft.Rtc.Collaboration.CallDialogContext newContext);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void UpdatePrimarySessionContext(class Microsoft.Rtc.Collaboration.CallDialogContext oldContext, class Microsoft.Rtc.Collaboration.CallDialogContext newContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.UpdatePrimarySessionContext(Microsoft.Rtc.Collaboration.CallDialogContext,Microsoft.Rtc.Collaboration.CallDialogContext)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub UpdatePrimarySessionContext (oldContext As CallDialogContext, newContext As CallDialogContext)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void UpdatePrimarySessionContext(Microsoft::Rtc::Collaboration::CallDialogContext ^ oldContext, Microsoft::Rtc::Collaboration::CallDialogContext ^ newContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="oldContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+        <Parameter Name="newContext" Type="Microsoft.Rtc.Collaboration.CallDialogContext" />
+      </Parameters>
+      <Docs>
+        <param name="oldContext">The original primary signaling context of the call.</param>
+        <param name="newContext">The updated primary signaling context of the call.</param>
+        <summary>
+            Updates the context of the primary session.
+            </summary>
+        <remarks>
+          <para>
+            This method is invoked when the primary session for a call is changed, and is used primarily in escalation scenarios,
+            when the call's primary session is switched after the escalation is complete.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VoiceDiffService">
+      <MemberSignature Language="C#" Value="protected int VoiceDiffService { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 VoiceDiffService" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider.VoiceDiffService" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property VoiceDiffService As Integer" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property int VoiceDiffService { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets provisioned value for voice diff service.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+             This is a QoS value to be included as part of IP header for signaling packets. The default value is 0.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

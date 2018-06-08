@@ -1,0 +1,82 @@
+﻿<Type Name="LobbyParticipantAttendanceChangedEventArgs" FullName="Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class LobbyParticipantAttendanceChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LobbyParticipantAttendanceChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class LobbyParticipantAttendanceChangedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LobbyParticipantAttendanceChangedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents information about participants who land into the conference lobby
+            and participants who were admitted into the conference from the lobby or who left the lobby.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Added">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; Added { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant&gt; Added" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs.Added" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Added As Collection(Of ConversationParticipant)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ Added { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of participants who just joined the lobby.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Removed">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Collaboration.LobbyRemovalReason&gt;&gt; Removed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;valuetype System.Collections.Generic.KeyValuePair`2&lt;class Microsoft.Rtc.Collaboration.ConversationParticipant, valuetype Microsoft.Rtc.Collaboration.LobbyRemovalReason&gt;&gt; Removed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs.Removed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Removed As Collection(Of KeyValuePair(Of ConversationParticipant, LobbyRemovalReason))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^, Microsoft::Rtc::Collaboration::LobbyRemovalReason&gt;&gt; ^ Removed { System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^, Microsoft::Rtc::Collaboration::LobbyRemovalReason&gt;&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Collaboration.LobbyRemovalReason&gt;&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of participants who were admitted into the conference
+            or who left the lobby.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            For lobby participants who are admitted to the conference, a <see cref="E:Microsoft.Rtc.Collaboration.Conversation.LobbyParticipantAttendanceChanged" /> will be
+            raised indicating that the participant is removed from the lobby participant list with the <see cref="F:Microsoft.Rtc.Collaboration.LobbyRemovalReason.Admitted" /> as the removal reason.
+            Then another <see cref="E:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipantAttendanceChanged" /> will be raised for the same participant indicating that this
+            participant has been added to the conference.
+            </para>
+          <para>
+            As for participants who leave the lobby, a <see cref="E:Microsoft.Rtc.Collaboration.Conversation.LobbyParticipantAttendanceChanged" /> will be raised indicating that 
+            the participant is removed from the lobby participant list with the <see cref="F:Microsoft.Rtc.Collaboration.LobbyRemovalReason.LeftLobby" /> as the removal reason.
+            For this case, the platform does not raise another <see cref="E:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipantAttendanceChanged" /> event.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

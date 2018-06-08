@@ -1,0 +1,487 @@
+﻿<Type Name="ApplicationEndpoint" FullName="Microsoft.Rtc.Collaboration.ApplicationEndpoint">
+  <TypeSignature Language="C#" Value="public class ApplicationEndpoint : Microsoft.Rtc.Collaboration.LocalEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi ApplicationEndpoint extends Microsoft.Rtc.Collaboration.LocalEndpoint" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ApplicationEndpoint" />
+  <TypeSignature Language="VB.NET" Value="Public Class ApplicationEndpoint&#xA;Inherits LocalEndpoint" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ApplicationEndpoint : Microsoft::Rtc::Collaboration::LocalEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.LocalEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+             ApplicationEndpoint is a specialization of LocalEndpoint for communication on behalf of services and applications. 
+             </summary>
+    <remarks>
+      <para>ApplicationEndpoints are meant to be used within a service that can serve thousands of information workers at the same time. 
+             They are designed to be globally trusted by other server components. 
+             </para>
+      <para>An ApplicationEndpoint is generally used in conjunction with its corresponding Active Directory Contact object.
+             It only needs to register if it needs to publish endpoint bound presence.
+             </para>
+      <para>ApplicationEndpoints are also designed to be highly available. While an ApplicationEndpoint
+             will terminate automatically if its Contact Object is deleted, 
+             registered ApplicationEndpoints will attempt to re-register until the service is re-established in case of a temporary server outage.
+             </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ApplicationEndpoint (Microsoft.Rtc.Collaboration.CollaborationPlatform platform, Microsoft.Rtc.Collaboration.ApplicationEndpointSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.CollaborationPlatform platform, class Microsoft.Rtc.Collaboration.ApplicationEndpointSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpoint.#ctor(Microsoft.Rtc.Collaboration.CollaborationPlatform,Microsoft.Rtc.Collaboration.ApplicationEndpointSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (platform As CollaborationPlatform, settings As ApplicationEndpointSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpoint(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, Microsoft::Rtc::Collaboration::ApplicationEndpointSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="platform" Type="Microsoft.Rtc.Collaboration.CollaborationPlatform" />
+        <Parameter Name="settings" Type="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings" />
+      </Parameters>
+      <Docs>
+        <param name="platform">The platform instance that this endpoint is bound to.</param>
+        <param name="settings">Settings used to initialize the object.</param>
+        <summary>
+            Creates a new instance of the ApplicationEndpoint class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown if invoked before an auto-provisioned platform has been started.</exception>
+        <exception cref="T:System.ArgumentException">Thrown if another endpoint has already be designated as the default routing endpoint.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when one or more arguments are null or empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDrain">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDrain (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDrain(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpoint.BeginDrain(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDrain (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDrain(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when all conversations have been terminated or the endpoint exits the Draining state.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Starts declining requests for new conversations on the endpoint.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>Upon calling the method the endpoint enters the Draining state. In this state new
+            conversations are declined while calls on existing conversations continue to be accepted.
+            When no outstanding conversations remain, the callback is invoked. Application would normally
+            terminate the endpoint after the callback is invoked. However, it is free to terminate the endpoint
+            at any time.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the state of the endpoint is not Established or Reestablishing.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDrain">
+      <MemberSignature Language="C#" Value="public void EndDrain (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDrain(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpoint.EndDrain(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDrain (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDrain(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            This method is used to determine whether the corresponding operation completed successfully. 
+            This method will wait if the operation has not yet completed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMatchingConversation">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Rtc.Collaboration.Conversation GetMatchingConversation (Microsoft.Rtc.Signaling.SessionReceivedEventArgs sessionReceivedEventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Collaboration.Conversation GetMatchingConversation(class Microsoft.Rtc.Signaling.SessionReceivedEventArgs sessionReceivedEventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpoint.GetMatchingConversation(Microsoft.Rtc.Signaling.SessionReceivedEventArgs)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Rtc::Collaboration::Conversation ^ GetMatchingConversation(Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^ sessionReceivedEventArgs);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Conversation</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sessionReceivedEventArgs" Type="Microsoft.Rtc.Signaling.SessionReceivedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sessionReceivedEventArgs">Information about the incoming signaling session received.</param>
+        <summary>
+            Intercepts an incoming signaling session for conference type endpoints <see cref="F:Microsoft.Rtc.Collaboration.EndpointType.Conference" /> 
+            when there is more than one conversation (advanced).
+            </summary>
+        <returns>Returns the Conversation to be used to route incoming signaling session. Can return null if the application cannot find the matching conversation.</returns>
+        <remarks>
+          <para>
+            When endpoint type is <see cref="F:Microsoft.Rtc.Collaboration.EndpointType.Conference" /> incoming signaling session
+            cannot be routed to conversations based on conversation identifiers. For this reason,
+            if there is more than one conversation present, application needs to decide which conversation should handle the incoming
+            signaling session and return it by overriding this function.
+            </para>
+          <para>
+            An application that overrides this function must first create a derivative of ApplicationEndpoint.
+            </para>
+          <para>
+            If an application returns null then we will decline the incoming session.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDefaultRoutingEndpoint">
+      <MemberSignature Language="C#" Value="public bool IsDefaultRoutingEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDefaultRoutingEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.IsDefaultRoutingEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDefaultRoutingEndpoint As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDefaultRoutingEndpoint { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the endpoint is the default routing endpoint to handle incoming calls.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Any incoming call which cannot be mapped to an endpoint will be routed to the default
+            routing endpoint.
+            </para>
+          <para>
+            In an instance of CollaborationPlatform, only one endpoint can be marked as the default routing endpoint.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerDisplayName">
+      <MemberSignature Language="C#" Value="public override sealed string OwnerDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.OwnerDisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerDisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerDisplayName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display name of the owner of the local endpoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value is optional.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerPhoneUri">
+      <MemberSignature Language="C#" Value="public override sealed string OwnerPhoneUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerPhoneUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.OwnerPhoneUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerPhoneUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerPhoneUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the phone URI of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property can return null or String.Empty if the tel URI is unknown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerPropertiesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ApplicationEndpointOwnerPropertiesChangedEventArgs&gt; OwnerPropertiesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ApplicationEndpointOwnerPropertiesChangedEventArgs&gt; OwnerPropertiesChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ApplicationEndpoint.OwnerPropertiesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event OwnerPropertiesChanged As EventHandler(Of ApplicationEndpointOwnerPropertiesChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ApplicationEndpointOwnerPropertiesChangedEventArgs ^&gt; ^ OwnerPropertiesChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ApplicationEndpointOwnerPropertiesChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when any of the application endpoint owner's properties change.
+            </summary>
+        <remarks>
+          <para>This event will only be raised for auto-provisioned endpoints.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OwnerUri">
+      <MemberSignature Language="C#" Value="public override sealed string OwnerUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OwnerUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.OwnerUri" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI of the owner of the local endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Note that this URI is different from the endpoint URI. This URI is not bound to a specific endpoint but to the owner of the endpoint.
+            The owner of an endpoint can typically be contacted on multiple endpoints through forking or load balancing.
+            
+            This value identifies the owner of the local endpoint and must be set when the LocalEndpoint implementation is instantiated.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices PinServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices PinServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.PinServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PinServices As ApplicationPinServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::PinManagement::ApplicationPinServices ^ PinServices { Microsoft::Rtc::Collaboration::PinManagement::ApplicationPinServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the application pin services <see cref="T:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceServices">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices PresenceServices { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices PresenceServices" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.PresenceServices" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceServices As ApplicationEndpointPresenceServices" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ApplicationEndpointPresenceServices ^ PresenceServices { Microsoft::Rtc::Collaboration::ApplicationEndpointPresenceServices ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceServices</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the presence services for this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProvisioningDataQueryDisabled">
+      <MemberSignature Language="C#" Value="public bool ProvisioningDataQueryDisabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ProvisioningDataQueryDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.ProvisioningDataQueryDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProvisioningDataQueryDisabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProvisioningDataQueryDisabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether querying provisioning data has been disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProxyInformation">
+      <MemberSignature Language="C#" Value="public void SetProxyInformation (Microsoft.Rtc.Signaling.ConnectionContext proxyConnectionContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProxyInformation(class Microsoft.Rtc.Signaling.ConnectionContext proxyConnectionContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpoint.SetProxyInformation(Microsoft.Rtc.Signaling.ConnectionContext)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetProxyInformation (proxyConnectionContext As ConnectionContext)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetProxyInformation(Microsoft::Rtc::Signaling::ConnectionContext ^ proxyConnectionContext);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proxyConnectionContext" Type="Microsoft.Rtc.Signaling.ConnectionContext" />
+      </Parameters>
+      <Docs>
+        <param name="proxyConnectionContext">Connection information used to connect to a proxy.</param>
+        <summary>
+            Sets the information about the next hop proxy.
+            </summary>
+        <remarks>
+          <para>
+            This is an advanced API to be used by applications capable of working with multiple next hop proxies.
+            This API can be used if the applications want to change the next hop proxy information.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown if the supplied <paramref name="proxyConnectionContext" /> is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown if the supplied host is empty.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if the supplied port is out of range.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the endpoint is registered or auto-provisioned.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetProxyInformation">
+      <MemberSignature Language="C#" Value="public void SetProxyInformation (string proxyHost, int proxyPort);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetProxyInformation(string proxyHost, int32 proxyPort) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpoint.SetProxyInformation(System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetProxyInformation (proxyHost As String, proxyPort As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetProxyInformation(System::String ^ proxyHost, int proxyPort);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Obsolete("Please use the overload that takes ConnectionContext as an argument.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="proxyHost" Type="System.String" />
+        <Parameter Name="proxyPort" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="proxyHost">The proxy host to use as the first hop instead of a direct connection to the other endpoint.</param>
+        <param name="proxyPort">The port to use for connecting to a proxy.</param>
+        <summary>
+            Sets the information about the next hop proxy.
+            </summary>
+        <remarks>
+          <para>
+            This is an advanced API to be used by applications capable of working with multiple next hop proxies.
+            This API can be used if the applications want to change the next hop proxy information.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown if the supplied <paramref name="proxyHost" /> is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown if the supplied <paramref name="proxyHost" /> is empty.
+            </exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if the supplied <paramref name="proxyPort" /> is out of range.
+            </exception>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown if the endpoint is registered or auto-provisioned.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="UseRegistration">
+      <MemberSignature Language="C#" Value="public bool UseRegistration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseRegistration" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpoint.UseRegistration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UseRegistration As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseRegistration { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether registration is performed for the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>It must be set to true if application wants to publish endpoint bound presence.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

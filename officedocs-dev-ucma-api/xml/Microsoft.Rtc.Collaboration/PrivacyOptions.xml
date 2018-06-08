@@ -1,0 +1,112 @@
+﻿<Type Name="PrivacyOptions" FullName="Microsoft.Rtc.Collaboration.PrivacyOptions">
+  <TypeSignature Language="C#" Value="public enum PrivacyOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PrivacyOptions extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PrivacyOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PrivacyOptions" />
+  <TypeSignature Language="C++ CLI" Value="public enum class PrivacyOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Various privacy options that will be part of Ms-Sensitivity-Header
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.PrivacyOptions Normal = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.PrivacyOptions.Normal" />
+      <MemberSignature Language="VB.NET" Value="Normal" />
+      <MemberSignature Language="C++ CLI" Value="Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PrivacyOptions</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            All possible destinations will be selected by the routing script 
+            subject to the details of the preamble. This is the default value
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalNoDiversion">
+      <MemberSignature Language="C#" Value="NormalNoDiversion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.PrivacyOptions NormalNoDiversion = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.PrivacyOptions.NormalNoDiversion" />
+      <MemberSignature Language="VB.NET" Value="NormalNoDiversion" />
+      <MemberSignature Language="C++ CLI" Value="NormalNoDiversion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PrivacyOptions</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Disables voicemail and call forwarding. If the call is not answered 
+            by the user or team member within the time limits specified by 'wait' elements, 
+            the call will fail with a 480 response.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Private">
+      <MemberSignature Language="C#" Value="Private" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.PrivacyOptions Private = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.PrivacyOptions.Private" />
+      <MemberSignature Language="VB.NET" Value="Private" />
+      <MemberSignature Language="C++ CLI" Value="Private" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PrivacyOptions</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Disables  features like team ringing. Call may still be forwarded 
+            or routed to voicemail
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateNoDiversion">
+      <MemberSignature Language="C#" Value="PrivateNoDiversion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Rtc.Collaboration.PrivacyOptions PrivateNoDiversion = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.PrivacyOptions.PrivateNoDiversion" />
+      <MemberSignature Language="VB.NET" Value="PrivateNoDiversion" />
+      <MemberSignature Language="C++ CLI" Value="PrivateNoDiversion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.PrivacyOptions</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Disables  features like team ringing, call-forwarding, and voice mail. 
+            If the call is not answered by the user within the time limits specified 
+            by the 'wait' elements, then it will fail with a 480 response.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

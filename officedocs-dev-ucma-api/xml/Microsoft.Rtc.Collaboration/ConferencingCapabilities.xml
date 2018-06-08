@@ -1,0 +1,451 @@
+﻿<Type Name="ConferencingCapabilities" FullName="Microsoft.Rtc.Collaboration.ConferencingCapabilities">
+  <TypeSignature Language="C#" Value="public class ConferencingCapabilities" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferencingCapabilities extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferencingCapabilities" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferencingCapabilities" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferencingCapabilities" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Conferencing capabilities.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllowedAccessLevels">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceAccessLevel&gt; AllowedAccessLevels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel&gt; AllowedAccessLevels" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.AllowedAccessLevels" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedAccessLevels As Collection(Of ConferenceAccessLevel)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConferenceAccessLevel&gt; ^ AllowedAccessLevels { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConferenceAccessLevel&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceAccessLevel&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference access levels allowed by the server for the endpoint owner.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Locked conferences will only allow the organizer and pre-set leaders to join the conference
+            while all other participants attempting to join the conference are placed in the lobby.
+            This is useful for leaders to prepare their conference while their attendees wait in the lobby.
+            Note that scheduling locked conferences is supported by Microsoft Lync Server 2010 or later.
+            </para>
+          <para>
+            The administrator may also prevent specific users from scheduling conferences with the <see cref="F:Microsoft.Rtc.Collaboration.ConferenceAccessLevel.Everyone" /> 
+            access level.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedAutomaticLeaderAssignments">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment&gt; AllowedAutomaticLeaderAssignments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment&gt; AllowedAutomaticLeaderAssignments" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.AllowedAutomaticLeaderAssignments" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedAutomaticLeaderAssignments As Collection(Of AutomaticLeaderAssignment)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment&gt; ^ AllowedAutomaticLeaderAssignments { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the automatic promotion policies allowed by the server for the endpoint owner.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Automatic promotion specifies which users are automatically promoted to the leader
+            role as they join the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedLobbyBypassSettings">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.LobbyBypass&gt; AllowedLobbyBypassSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;valuetype Microsoft.Rtc.Collaboration.LobbyBypass&gt; AllowedLobbyBypassSettings" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.AllowedLobbyBypassSettings" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedLobbyBypassSettings As Collection(Of LobbyBypass)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::LobbyBypass&gt; ^ AllowedLobbyBypassSettings { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::LobbyBypass&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.LobbyBypass&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the allowed settings for lobby bypass.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRecordingAllowedForExternalUsers">
+      <MemberSignature Language="C#" Value="public bool IsRecordingAllowedForExternalUsers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRecordingAllowedForExternalUsers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.IsRecordingAllowedForExternalUsers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRecordingAllowedForExternalUsers As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsRecordingAllowedForExternalUsers { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether an external user is allowed to record.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An administrator can specify whether external users are allowed to record conferences.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRecordingAllowedForInternalUsers">
+      <MemberSignature Language="C#" Value="public bool IsRecordingAllowedForInternalUsers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRecordingAllowedForInternalUsers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.IsRecordingAllowedForInternalUsers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRecordingAllowedForInternalUsers As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsRecordingAllowedForInternalUsers { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether an internal user is allowed to record.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An administrator can specify whether internal users are allowed to record conferences.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumConferencesWithAdministratorSuppliedTemplates">
+      <MemberSignature Language="C#" Value="public long MaximumConferencesWithAdministratorSuppliedTemplates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 MaximumConferencesWithAdministratorSuppliedTemplates" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.MaximumConferencesWithAdministratorSuppliedTemplates" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaximumConferencesWithAdministratorSuppliedTemplates As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long MaximumConferencesWithAdministratorSuppliedTemplates { long get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the maximum number of conferences scheduled with the administrator template at one time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The server implementation currently supports one administrator template conference per organizer.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mcus">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceMcuInformation&gt; Mcus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceMcuInformation&gt; Mcus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.Mcus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Mcus As Collection(Of ConferenceMcuInformation)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceMcuInformation ^&gt; ^ Mcus { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceMcuInformation ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceMcuInformation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the available MCUs for scheduling.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneAccess">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceManagement.PhoneAccessInformation PhoneAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConferenceManagement.PhoneAccessInformation PhoneAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.PhoneAccess" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneAccess As PhoneAccessInformation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceManagement::PhoneAccessInformation ^ PhoneAccess { Microsoft::Rtc::Collaboration::ConferenceManagement::PhoneAccessInformation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceManagement.PhoneAccessInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the phone directory, number, and region information if phone access is available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property may return null if phone access is not available.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecommendedAccessLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceAccessLevel RecommendedAccessLevel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel RecommendedAccessLevel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.RecommendedAccessLevel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RecommendedAccessLevel As ConferenceAccessLevel" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceAccessLevel RecommendedAccessLevel { Microsoft::Rtc::Collaboration::ConferenceAccessLevel get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceAccessLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recommended access level set by the administrator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An administrator can specify the recommended default access level to be used by scheduling
+            applications. Applications can still schedule conferences using other access levels
+            as long as the user is allowed to.        
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecommendedAttendanceAnnouncementsStatus">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus RecommendedAttendanceAnnouncementsStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus RecommendedAttendanceAnnouncementsStatus" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.RecommendedAttendanceAnnouncementsStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RecommendedAttendanceAnnouncementsStatus As AttendanceAnnouncementsStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus RecommendedAttendanceAnnouncementsStatus { Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recommended setting for attendance announcements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An administrator can specify the recommended setting for attendance announcements (on\off) to be used by scheduling
+            applications. Applications can still schedule conferences using a different setting.
+            </para>
+          <para>
+            If modifying attendance announcements status is not supported by the conference <see cref="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsModifyingAttendanceAnnouncements" />,
+            this this property will return <see cref="F:Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus.Unsupported" /></para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecommendedLeaderAssignment">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment RecommendedLeaderAssignment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment RecommendedLeaderAssignment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.RecommendedLeaderAssignment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RecommendedLeaderAssignment As AutomaticLeaderAssignment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment RecommendedLeaderAssignment { Microsoft::Rtc::Collaboration::AutomaticLeaderAssignment get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AutomaticLeaderAssignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recommended automatic leader assignment set by the administrator.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            An administrator can specify the recommended default leader assignment to be used by scheduling
+            applications. Applications can still schedule conferences using other automatic leader assignments
+            as long as the user is allowed to. 
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecommendedSchedulingTemplate">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.SchedulingTemplate RecommendedSchedulingTemplate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.SchedulingTemplate RecommendedSchedulingTemplate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.RecommendedSchedulingTemplate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RecommendedSchedulingTemplate As SchedulingTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::SchedulingTemplate RecommendedSchedulingTemplate { Microsoft::Rtc::Collaboration::SchedulingTemplate get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.SchedulingTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the scheduling method that scheduling applications should offer to users by default.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAdministratorSuppliedTemplates">
+      <MemberSignature Language="C#" Value="public bool SupportsAdministratorSuppliedTemplates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsAdministratorSuppliedTemplates" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsAdministratorSuppliedTemplates" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsAdministratorSuppliedTemplates As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsAdministratorSuppliedTemplates { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the endpoint owner can schedule conferences based on the administrator template.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsModifyingAttendanceAnnouncements">
+      <MemberSignature Language="C#" Value="public bool SupportsModifyingAttendanceAnnouncements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsModifyingAttendanceAnnouncements" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsModifyingAttendanceAnnouncements" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsModifyingAttendanceAnnouncements As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsModifyingAttendanceAnnouncements { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the conference supports enabling and disabling attendance announcements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsOptionalPasscode">
+      <MemberSignature Language="C#" Value="public bool SupportsOptionalPasscode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsOptionalPasscode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsOptionalPasscode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsOptionalPasscode As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsOptionalPasscode { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the endpoint owner can schedule conferences where anonymous users can join without
+            supplying a passcode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Some trusted applications like Conferencing Auto Attendant (CAA) allow anonymous users to join conferences. In the case of CAA,
+            PSTN users are allowed to join conferences as anonymous users if they do not have a valid corporate PIN and the conference is
+            scheduled to allow anonymous access. For most of the cases, the conference organizer would want specific users to join and therefore
+            the CAA service should challenge those users for the conference passcode. However, in other conferences, like a shareholder meeting,
+            verifying the passcode may not be required. Setting this property to true, will cause CAA to skip challenging the PSTN user for a passcode.
+            </para>
+          <para>
+            Note that even on setting this property to true, a passcode needs to be provided when scheduling a conference with anonymous access since
+            legacy clients like LiveMeeting do not support optional passcodes. In other words, those legacy clients will always challenge anonymous
+            users for their passcode.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsPhoneAccess">
+      <MemberSignature Language="C#" Value="public bool SupportsPhoneAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsPhoneAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferencingCapabilities.SupportsPhoneAccess" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsPhoneAccess As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsPhoneAccess { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether accessing conferences via phone is available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

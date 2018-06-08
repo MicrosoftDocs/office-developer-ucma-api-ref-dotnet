@@ -1,0 +1,97 @@
+﻿<Type Name="DiversionContext" FullName="Microsoft.Rtc.Collaboration.DiversionContext">
+  <TypeSignature Language="C#" Value="public class DiversionContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DiversionContext extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.DiversionContext" />
+  <TypeSignature Language="VB.NET" Value="Public Class DiversionContext" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DiversionContext" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class represents information available in an incoming call that indicates 
+            the forwarding parties before the call was received.
+            </summary>
+    <remarks>
+      <para>
+            Diversion context is retrieved from the signaling headers such as History-Info, and Diversion.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetAllDivertedDestinations">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.DivertedDestination&gt; GetAllDivertedDestinations ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.DivertedDestination&gt; GetAllDivertedDestinations() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.DiversionContext.GetAllDivertedDestinations" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAllDivertedDestinations () As Collection(Of DivertedDestination)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::DivertedDestination ^&gt; ^ GetAllDivertedDestinations();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.DivertedDestination&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets all the diverted destinations.
+            </summary>
+        <returns>Collection of all diverted destinations. This collection can be empty if no diverted destinations are received.</returns>
+        <remarks>
+          <para>
+            This method returns a collection of all diverted destinations in a sorted order based on the diversion context source used <see cref="P:Microsoft.Rtc.Collaboration.DiversionContext.Source" />.
+            </para>
+          <para>
+            If the source is <see cref="F:Microsoft.Rtc.Collaboration.DiversionContextSource.HistoryInfo" /> , all of the headers are sorted in ascending order, based on the index value of the History-Info
+            header - in accordance with RFC 4244. Typically, for a History-Info header based collection, the last entry will contain information that matches the information in the Request-URI of the incoming INVITE.
+            </para>
+          <para>
+            If the source is <see cref="F:Microsoft.Rtc.Collaboration.DiversionContextSource.Diversion" /> , all of the incoming headers
+            are sorted in the reverse of incoming order. 
+            Thus the last Diversion/CC-Diversion header we receive on the wire will contain the first DivertedDestination details.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the signaling headers containing the diversion information could not be parsed successfully.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.DiversionContextSource Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.DiversionContextSource Source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.DiversionContext.Source" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Source As DiversionContextSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::DiversionContextSource Source { Microsoft::Rtc::Collaboration::DiversionContextSource get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.DiversionContextSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the header type source from which this diversion context was derived.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Diversion context can be derived from various header type sources as specified in <see cref="T:Microsoft.Rtc.Collaboration.DiversionContextSource" />.
+            Diversion context is extracted from headers in the following order: Diversion, CC-Diversion, HistoryInfo.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

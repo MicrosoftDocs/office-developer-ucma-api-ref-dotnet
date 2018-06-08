@@ -1,0 +1,34 @@
+﻿<Type Name="UnhandledThreadPoolExceptionHandler" FullName="Microsoft.Rtc.Signaling.UnhandledThreadPoolExceptionHandler">
+  <TypeSignature Language="C#" Value="public delegate bool UnhandledThreadPoolExceptionHandler(Exception ex, WaitCallback method, object state);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed UnhandledThreadPoolExceptionHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.UnhandledThreadPoolExceptionHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Function UnhandledThreadPoolExceptionHandler(ex As Exception, method As WaitCallback, state As Object) As Boolean " />
+  <TypeSignature Language="C++ CLI" Value="public delegate bool UnhandledThreadPoolExceptionHandler(Exception ^ ex, WaitCallback ^ method, System::Object ^ state);" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="ex" Type="System.Exception" />
+    <Parameter Name="method" Type="System.Threading.WaitCallback" />
+    <Parameter Name="state" Type="System.Object" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Boolean</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="ex">Unhandled exception thrown.</param>
+    <param name="method">This argument should be ignored.</param>
+    <param name="state">This argument should be ignored.</param>
+    <summary>
+            Unhandled Threadpool Exception event handler would be raised whenever an unhandled exception occurs in a
+            threadpool used by the platform. If this delegate returns true then the exception is ignored,
+            otherwise it is rethrown.
+            </summary>
+    <returns>To be added.</returns>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

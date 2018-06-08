@@ -1,0 +1,719 @@
+﻿<Type Name="ContactGroupServices" FullName="Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices">
+  <TypeSignature Language="C#" Value="public class ContactGroupServices : Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ContactGroupServices extends Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices" />
+  <TypeSignature Language="VB.NET" Value="Public Class ContactGroupServices&#xA;Inherits PublishSubscribeSession" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ContactGroupServices : Microsoft::Rtc::Collaboration::Presence::PublishSubscribeSession" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            ContactGroupServices class contains services to add, delete, or update the contacts and groups of the session's owner.
+            </summary>
+    <remarks>
+      <para>
+            Contacts are unified communication entities identifiable by SIP URIs that can be assembled into logical collections called groups. A <see cref="T:Microsoft.Rtc.Collaboration.ContactsGroups.Group" />
+            is identified by a group ID which is a server-assigned integer. A <see cref="T:Microsoft.Rtc.Collaboration.ContactsGroups.Contact" /> can belong to zero or more groups. Adding someone
+            to the contact list does not automatically indicate that their presence information is subscribed to. The application 
+            must separately use the <see cref="T:Microsoft.Rtc.Collaboration.Presence.RemotePresence" /> class to subscribe to these contacts. Groups do not hold references 
+            to their contained contacts.
+            </para>
+      <para>
+            This feature is available only to the <see cref="T:Microsoft.Rtc.Collaboration.UserEndpoint" /> class and not to an <see cref="T:Microsoft.Rtc.Collaboration.ApplicationEndpoint" />.
+            </para>
+      <para>
+            These contacts and groups are cached locally when <see cref="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginSubscribe(System.AsyncCallback,System.Object)" /> is invoked and are cleared 
+            if they have not been accessed for 
+            longer than five minutes. Subsequent usage of the APIs in this class causes the cache to be populated again.
+            </para>
+      <para>
+            The allowed operations are adding, deleting, and updating of contact and group properties. When a group is deleted, the group is
+            automatically removed from all contacts belonging to that group.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginAddContact">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAddContact (string contactUri, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAddContact(string contactUri, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddContact(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAddContact (contactUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddContact(System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contactUri" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contactUri">URI of the contact being added.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to add a contact.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="contactUri" /> is an invalid sip URI.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAddContact">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAddContact (string contactUri, Microsoft.Rtc.Collaboration.ContactsGroups.ContactAddOptions options, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAddContact(string contactUri, class Microsoft.Rtc.Collaboration.ContactsGroups.ContactAddOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddContact(System.String,Microsoft.Rtc.Collaboration.ContactsGroups.ContactAddOptions,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAddContact (contactUri As String, options As ContactAddOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddContact(System::String ^ contactUri, Microsoft::Rtc::Collaboration::ContactsGroups::ContactAddOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contactUri" Type="System.String" />
+        <Parameter Name="options" Type="Microsoft.Rtc.Collaboration.ContactsGroups.ContactAddOptions" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contactUri">URI of the contact being added.</param>
+        <param name="options">Optional parameters when creating a contact.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to add a contact.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            If the endpoint is operating in privacy mode then an Access Control Entry will automatically be added to the endpoint owner's
+            Access Control lists or containers. The notifications if this operation is successful can be obtained by wiring 
+            <see cref="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.ContainerNotificationReceived" />.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="contactUri" /> is an invalid sip URI.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="options" />are null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when any of options.GroupIds is negative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAddContact">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAddContact (string contactUri, string contactName, bool isSubscribed, string contactData, string contactExtension, int[] groupIds, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAddContact(string contactUri, string contactName, bool isSubscribed, string contactData, string contactExtension, int32[] groupIds, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddContact(System.String,System.String,System.Boolean,System.String,System.String,System.Int32[],System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAddContact (contactUri As String, contactName As String, isSubscribed As Boolean, contactData As String, contactExtension As String, groupIds As Integer(), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddContact(System::String ^ contactUri, System::String ^ contactName, bool isSubscribed, System::String ^ contactData, System::String ^ contactExtension, cli::array &lt;int&gt; ^ groupIds, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This method will be removed from future Versions. Please use BeginAddContact(contactUri, options, userCallback, state) instead.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contactUri" Type="System.String" />
+        <Parameter Name="contactName" Type="System.String" />
+        <Parameter Name="isSubscribed" Type="System.Boolean" />
+        <Parameter Name="contactData" Type="System.String" />
+        <Parameter Name="contactExtension" Type="System.String" />
+        <Parameter Name="groupIds" Type="System.Int32[]" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contactUri">URI of the contact being added.</param>
+        <param name="contactName">Name of the contact being added.</param>
+        <param name="isSubscribed">True, if this contact also needs to be subscribed.</param>
+        <param name="contactData">ContactData.</param>
+        <param name="contactExtension">ContactExtension data needs to be published with this contact.</param>
+        <param name="groupIds">List of GroupIds where this contact would be added.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to add a contact.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when any of the <paramref name="groupIds" /> are less than zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="contactUri" /> is an invalid sip URI.</exception>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="contactName" /> or <paramref name="contactData" />are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginAddGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginAddGroup (string groupName, string groupData, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginAddGroup(string groupName, string groupData, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddGroup(System.String,System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginAddGroup (groupName As String, groupData As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddGroup(System::String ^ groupName, System::String ^ groupData, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+        <Parameter Name="groupData" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">Name of the group to be added.</param>
+        <param name="groupData">Data to be associated with the group.</param>
+        <param name="userCallback">The callback to be invoked when the add group is done.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to add a group.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="groupName" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="groupName" /> is empty.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDeleteContact">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDeleteContact (string contactUri, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDeleteContact(string contactUri, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginDeleteContact(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDeleteContact (contactUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeleteContact(System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contactUri" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contactUri">The contact to be deleted.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to remove a specified contact.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="contactUri" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="contactUri" /> is empty.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when subscription state is not idle or subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginDeleteGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginDeleteGroup (int groupId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDeleteGroup(int32 groupId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginDeleteGroup(System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginDeleteGroup (groupId As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeleteGroup(int groupId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupId" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="groupId">ID of the group to be deleted.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to remove a specified group.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="groupId" /> is less than zero.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetCachedContact">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetCachedContact (string contactUri, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetCachedContact(string contactUri, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginGetCachedContact(System.String,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetCachedContact (contactUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetCachedContact(System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contactUri" Type="System.String" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contactUri">Contact to get information about.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to get a cached contact.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="contactUri" /> is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginGetCachedGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginGetCachedGroup (int groupId, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginGetCachedGroup(int32 groupId, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginGetCachedGroup(System.Int32,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginGetCachedGroup (groupId As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetCachedGroup(int groupId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupId" Type="System.Int32" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="groupId">Group to get information about.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to get a cached group.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="groupId" /> is not positive.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRefresh">
+      <MemberSignature Language="C#" Value="public override IAsyncResult BeginRefresh (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.IAsyncResult BeginRefresh(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginRefresh(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to refresh the subscription.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription was not previously established.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdateContact">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdateContact (Microsoft.Rtc.Collaboration.ContactsGroups.Contact contact, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateContact(class Microsoft.Rtc.Collaboration.ContactsGroups.Contact contact, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginUpdateContact(Microsoft.Rtc.Collaboration.ContactsGroups.Contact,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateContact(Microsoft::Rtc::Collaboration::ContactsGroups::Contact ^ contact, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contact" Type="Microsoft.Rtc.Collaboration.ContactsGroups.Contact" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="contact">Contact to be updated.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to update the information for the specified contact.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="contact" /> is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUpdateGroup">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUpdateGroup (Microsoft.Rtc.Collaboration.ContactsGroups.Group group, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateGroup(class Microsoft.Rtc.Collaboration.ContactsGroups.Group group, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginUpdateGroup(Microsoft.Rtc.Collaboration.ContactsGroups.Group,System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateGroup(Microsoft::Rtc::Collaboration::ContactsGroups::Group ^ group, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="group" Type="Microsoft.Rtc.Collaboration.ContactsGroups.Group" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="group">Group to be updated.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins an asynchronous operation to update the information for a specified group.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="group" /> is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the subscription state is not idle or subscribed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAddContact">
+      <MemberSignature Language="C#" Value="public void EndAddContact (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAddContact(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndAddContact(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndAddContact (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddContact(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginAddContact.
+            </summary>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndAddContact was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAddGroup">
+      <MemberSignature Language="C#" Value="public void EndAddGroup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndAddGroup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndAddGroup(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndAddGroup (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddGroup(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginAddGroup.
+            </summary>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndAddGroup was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDeleteContact">
+      <MemberSignature Language="C#" Value="public void EndDeleteContact (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDeleteContact(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndDeleteContact(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDeleteContact (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeleteContact(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginDeleteContact.
+            </summary>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndDeleteContact was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndDeleteGroup">
+      <MemberSignature Language="C#" Value="public void EndDeleteGroup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndDeleteGroup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndDeleteGroup(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndDeleteGroup (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeleteGroup(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginDeleteGroup.
+            </summary>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndDeleteGroup was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetCachedContact">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ContactsGroups.Contact EndGetCachedContact (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.ContactsGroups.Contact EndGetCachedContact(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndGetCachedContact(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetCachedContact (result As IAsyncResult) As Contact" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ContactsGroups::Contact ^ EndGetCachedContact(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ContactsGroups.Contact</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by the BeginGetCachedContact.
+            </summary>
+        <returns>Information about the contact.</returns>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndCachedContact was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndGetCachedGroup">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ContactsGroups.Group EndGetCachedGroup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.ContactsGroups.Group EndGetCachedGroup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndGetCachedGroup(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndGetCachedGroup (result As IAsyncResult) As Group" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ContactsGroups::Group ^ EndGetCachedGroup(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ContactsGroups.Group</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by the BeginGetCachedGroup.
+            </summary>
+        <returns>Information about the group.</returns>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndGetCachedGroup was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateContact">
+      <MemberSignature Language="C#" Value="public void EndUpdateContact (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdateContact(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndUpdateContact(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateContact (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateContact(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginUpdateContact.
+            </summary>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndUpdateContact was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUpdateGroup">
+      <MemberSignature Language="C#" Value="public void EndUpdateGroup (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndUpdateGroup(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndUpdateGroup(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateGroup (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateGroup(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by BeginUpdateGroup.
+            </summary>
+        <remarks>
+          <para>For OperationFailureException, the inner exception should give more information.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null. </exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndUpdateGroup was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the underlying subscription changed during the operation.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="NotificationReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupNotificationEventArgs&gt; NotificationReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupNotificationEventArgs&gt; NotificationReceived" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.NotificationReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event NotificationReceived As EventHandler(Of ContactGroupNotificationEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ContactsGroups::ContactGroupNotificationEventArgs ^&gt; ^ NotificationReceived;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupNotificationEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event handler to notify about contacts and groups changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

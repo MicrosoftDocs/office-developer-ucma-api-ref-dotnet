@@ -1,0 +1,229 @@
+﻿<Type Name="SdpOrigin" FullName="Microsoft.Rtc.Signaling.SdpOrigin">
+  <TypeSignature Language="C#" Value="public class SdpOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpOrigin extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SdpOrigin" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpOrigin" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpOrigin" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the  "o" line in the SDP.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpOrigin ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpOrigin.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpOrigin();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the SdpOrigin class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpOrigin (Microsoft.Rtc.Signaling.SdpOrigin source);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SdpOrigin source) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpOrigin.#ctor(Microsoft.Rtc.Signaling.SdpOrigin)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (source As SdpOrigin)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpOrigin(Microsoft::Rtc::Signaling::SdpOrigin ^ source);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="source" Type="Microsoft.Rtc.Signaling.SdpOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="source">SdpOrigin to copy.</param>
+        <summary>
+            Initializes a copy of the supplied SdpOrigin.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the source is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpOrigin (System.Net.IPAddress originIP);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.IPAddress originIP) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpOrigin.#ctor(System.Net.IPAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (originIP As IPAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpOrigin(System::Net::IPAddress ^ originIP);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="originIP" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="originIP">To be added.</param>
+        <summary>
+            Initializes a new instance of the SdpOrigin class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Connection">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SdpConnection Connection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SdpConnection Connection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpOrigin.Connection" />
+      <MemberSignature Language="VB.NET" Value="Public Property Connection As SdpConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SdpConnection ^ Connection { Microsoft::Rtc::Signaling::SdpConnection ^ get(); void set(Microsoft::Rtc::Signaling::SdpConnection ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SdpConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the IP address found in the "o" line of the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the connection is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (System.Net.IPAddress originIP);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset(class System.Net.IPAddress originIP) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpOrigin.Reset(System.Net.IPAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset (originIP As IPAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset(System::Net::IPAddress ^ originIP);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="originIP" Type="System.Net.IPAddress" />
+      </Parameters>
+      <Docs>
+        <param name="originIP">To be added.</param>
+        <summary>
+            Sets default values for Origin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SessionId">
+      <MemberSignature Language="C#" Value="public string SessionId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SessionId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpOrigin.SessionId" />
+      <MemberSignature Language="VB.NET" Value="Public Property SessionId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SessionId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the session ID found in the "o" line of the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when value is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when value is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpOrigin.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a string representation of the SdpOrigin instance. This function is useful
+            for tracing or debugging.
+            </summary>
+        <returns>Returns a string representation of the SdpOrigin instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public string UserName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpOrigin.UserName" />
+      <MemberSignature Language="VB.NET" Value="Public Property UserName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the UserName found in the "o" line of the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when value is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when value is an empty string.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public long Version { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SdpOrigin.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Property Version As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long Version { long get(); void set(long value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the version found in the "o" line of the SDP.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

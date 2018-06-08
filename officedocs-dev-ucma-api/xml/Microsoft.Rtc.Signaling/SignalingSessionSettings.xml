@@ -1,0 +1,220 @@
+﻿<Type Name="SignalingSessionSettings" FullName="Microsoft.Rtc.Signaling.SignalingSessionSettings">
+  <TypeSignature Language="C#" Value="public class SignalingSessionSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SignalingSessionSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SignalingSessionSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class SignalingSessionSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignalingSessionSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the configuration settings for a SignalingSession.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignalingSessionSettings (Microsoft.Rtc.Signaling.RealTimeAddress destinationAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeAddress destinationAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSessionSettings.#ctor(Microsoft.Rtc.Signaling.RealTimeAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (destinationAddress As RealTimeAddress)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSessionSettings(Microsoft::Rtc::Signaling::RealTimeAddress ^ destinationAddress);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="destinationAddress" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="destinationAddress">The address of the destination.</param>
+        <summary>
+            Creates a new instance of the object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Address passed was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SignalingSessionSettings (string destinationUri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string destinationUri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSessionSettings.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (destinationUri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSessionSettings(System::String ^ destinationUri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="destinationUri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destinationUri">The URI of the destination to contact.</param>
+        <summary>
+            Creates a new instance of the object.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The destination URI is not formatted correctly.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CallId">
+      <MemberSignature Language="C#" Value="public string CallId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CallId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSessionSettings.CallId" />
+      <MemberSignature Language="VB.NET" Value="Public Property CallId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CallId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the call ID that should be used in the session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationEndpointId">
+      <MemberSignature Language="C#" Value="public string DestinationEndpointId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DestinationEndpointId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSessionSettings.DestinationEndpointId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DestinationEndpointId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DestinationEndpointId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote destination endpoint ID.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Returns String.Empty if not set.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DestinationUri">
+      <MemberSignature Language="C#" Value="public string DestinationUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DestinationUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSessionSettings.DestinationUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DestinationUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DestinationUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the remote destination URI that will be contacted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Impersonate">
+      <MemberSignature Language="C#" Value="public void Impersonate (string localOwnerUri, string localOwnerDisplayName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Impersonate(string localOwnerUri, string localOwnerDisplayName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSessionSettings.Impersonate(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Impersonate (localOwnerUri As String, localOwnerDisplayName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Impersonate(System::String ^ localOwnerUri, System::String ^ localOwnerDisplayName);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="localOwnerUri" Type="System.String" />
+        <Parameter Name="localOwnerDisplayName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="localOwnerUri">The URI to used represent the local endpoint.</param>
+        <param name="localOwnerDisplayName">
+            The display name used to represent the local endpoint. 
+            If NULL the display name configured on the endpoint will be used. 
+            If String.Empty, an empty display name will be used.</param>
+        <summary>
+            Changes the URI and display name used to represent the local endpoint.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The URI is not in a supported format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalOwnerDisplayName">
+      <MemberSignature Language="C#" Value="public string LocalOwnerDisplayName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalOwnerDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSessionSettings.LocalOwnerDisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalOwnerDisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalOwnerDisplayName { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display name used to represent the local endpoint in the session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This property can be null, which indicates that no displayname should be sent.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalOwnerUri">
+      <MemberSignature Language="C#" Value="public string LocalOwnerUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LocalOwnerUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSessionSettings.LocalOwnerUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalOwnerUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalOwnerUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the URI used to represent the local endpoint in the session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,222 @@
+﻿<Type Name="LocalEndpointPresenceServices" FullName="Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices">
+  <TypeSignature Language="C#" Value="public abstract class LocalEndpointPresenceServices" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LocalEndpointPresenceServices extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LocalEndpointPresenceServices" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LocalEndpointPresenceServices abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the base class which provide presence services related to publication of local presence data and subscription 
+            to remote presentities.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BeginPresenceQuery">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginPresenceQuery (System.Collections.Generic.IEnumerable&lt;string&gt; targets, string[] categories, EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt; queryResultHandler, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginPresenceQuery(class System.Collections.Generic.IEnumerable`1&lt;string&gt; targets, string[] categories, class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt; queryResultHandler, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.BeginPresenceQuery(System.Collections.Generic.IEnumerable{System.String},System.String[],System.EventHandler{Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginPresenceQuery (targets As IEnumerable(Of String), categories As String(), queryResultHandler As EventHandler(Of RemotePresentitiesNotificationEventArgs), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPresenceQuery(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ targets, cli::array &lt;System::String ^&gt; ^ categories, EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentitiesNotificationEventArgs ^&gt; ^ queryResultHandler, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targets" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="categories" Type="System.String[]" />
+        <Parameter Name="queryResultHandler" Type="System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="targets">The list of target addresses for the query.</param>
+        <param name="categories">The list of presence categories for the query. Categories that can be set are "contactCard", "note", "state", "services", and "calendarData".</param>
+        <param name="queryResultHandler">EventHandler to be invoked as results become available. This value can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed. This value can be null.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins a presence query request for a given list of targets for the given set of presence categories.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>
+            A presence query internally can involve multiple query requests to different single and pool targets.
+            If the user specified a query result handler, then results will be notified on the given event handler 
+            as soon as they are available.
+            Calling EndPresenceQuery will return all results for the query.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="targets" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="targets" /> is an empty collection, or when it contains a null member, or when there are no new targets to be added or removed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRefreshRemotePresenceViews">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRefreshRemotePresenceViews (AsyncCallback callback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefreshRemotePresenceViews(class System.AsyncCallback callback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.BeginRefreshRemotePresenceViews(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRefreshRemotePresenceViews (callback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefreshRemotePresenceViews(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="callback">Callback to be invoked when this operation completes.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Begins the asynchronous operation to refresh all views that were created out of this endpoint.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>
+          <para>This is an expensive operation and applications are advised to use the API sparingly.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPresenceQuery">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification&gt; EndPresenceQuery (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification&gt; EndPresenceQuery(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.EndPresenceQuery(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndPresenceQuery (result As IAsyncResult) As IEnumerable(Of RemotePresentityNotification)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentityNotification ^&gt; ^ EndPresenceQuery(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Ends the asynchronous operation initiated by the BeginPresenceQuery.
+            </summary>
+        <returns>The list of presence notifications for the targets.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="result" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="result" /> was created by a Begin method for a different operation.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when EndPresenceQuery was called more than once for the same instance of result.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.PublishSubscribeException">Thrown when the SIP SERVICE request is rejected by the server.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">Thrown when SIP Transport, SIP authentication and credential-related errors are encountered.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRefreshRemotePresenceViews">
+      <MemberSignature Language="C#" Value="public void EndRefreshRemotePresenceViews (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EndRefreshRemotePresenceViews(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.EndRefreshRemotePresenceViews(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EndRefreshRemotePresenceViews (result As IAsyncResult)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRefreshRemotePresenceViews(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">An IAsyncResult that references the asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous operation started by <see cref="M:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.BeginRefreshRemotePresenceViews(System.AsyncCallback,System.Object)" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemotePresenceViews">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceView&gt; GetRemotePresenceViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Presence.RemotePresenceView&gt; GetRemotePresenceViews() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.GetRemotePresenceViews" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRemotePresenceViews () As Collection(Of RemotePresenceView)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresenceView ^&gt; ^ GetRemotePresenceViews();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceView&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns all the views created on this endpoint.
+            </summary>
+        <returns>Collection of all views that were created on this endpoint.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalEndpoint">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.LocalEndpoint LocalEndpoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.LocalEndpoint LocalEndpoint" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.LocalEndpoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalEndpoint As LocalEndpoint" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ LocalEndpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.LocalEndpoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance of LocalEndpoint for PresenceServices.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PresenceSubscriptionCategories">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt; PresenceSubscriptionCategories { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;string&gt; PresenceSubscriptionCategories" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices.PresenceSubscriptionCategories" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceSubscriptionCategories As ReadOnlyCollection(Of String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ PresenceSubscriptionCategories { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the presence subscription categories that new views that are created will be initialized with.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

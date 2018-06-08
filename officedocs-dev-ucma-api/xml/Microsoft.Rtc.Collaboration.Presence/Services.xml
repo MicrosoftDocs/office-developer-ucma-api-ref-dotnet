@@ -1,0 +1,222 @@
+﻿<Type Name="Services" FullName="Microsoft.Rtc.Collaboration.Presence.Services">
+  <TypeSignature Language="C#" Value="public class Services : Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Services extends Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.Services" />
+  <TypeSignature Language="VB.NET" Value="Public Class Services&#xA;Inherits PresenceCategory" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Services : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.Presence.PresenceCategory</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Services represent the "services" category which captures the capabilities of a presentity.
+            </summary>
+    <remarks>
+      <para>
+            It is typically an aggregation of capabilities of all endpoints of a presentity. Whenever endpoints publish a device category or
+            update its instance,
+            the services category is automatically updated/created by an aggregation script that runs on the server which is republished to
+            all endpoints and watchers who are subscribed to this category.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Services (Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData category) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Services.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Services(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="category" Type="Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData" />
+      </Parameters>
+      <Docs>
+        <param name="category">Instance of PresenceCategoryWithMetaData to be parsed.</param>
+        <summary>
+            Create an instance of the Services class.
+            </summary>
+        <remarks>
+          <para>
+            The service capability is case sensitive and can only the following types are recognized as valid types: calendar, remoteCallControl,
+            voice, video, CCCP, text, gifInk, isfInk, breakthrough and applicationSharing.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="category" /> or category.Category are null.</exception>
+        <exception cref="T:System.ArgumentException">If category.Name is anything other than the PresenceCategoryNames.Services or the xml representing category.Category provided is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationSharingEnabled">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport ApplicationSharingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport ApplicationSharingEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Services.ApplicationSharingEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationSharingEnabled As ServiceCapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport ApplicationSharingEnabled { Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this presentity is capable of supporting an application sharing session.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If there are multiple instances of the same capability, then if any of them are enabled for render/capture, then 
+            the capability is considered enabled.
+            If there is no entry for this capability in the notification, it would have the value ServiceCapabilitySupport.Unknown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioEnabled">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport AudioEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport AudioEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Services.AudioEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioEnabled As ServiceCapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport AudioEnabled { Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this presentity is capable of supporting an audio conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If there are multiple instances of the same capability, then if any of them are enabled for render/capture, then 
+            the capability is considered enabled.
+            If there is no entry for this capability in the notification, it would have the value ServiceCapabilitySupport.Unknown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCategoryDataXml">
+      <MemberSignature Language="C#" Value="public override string GetCategoryDataXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string GetCategoryDataXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Services.GetCategoryDataXml" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns this services instance as a serialized xml.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstantMessagingEnabled">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport InstantMessagingEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport InstantMessagingEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Services.InstantMessagingEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstantMessagingEnabled As ServiceCapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport InstantMessagingEnabled { Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this presentity is capable of supporting an instance messaging (IM) conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If there are multiple instances of the same capability, then if any of them are enabled for render/capture, then 
+            the capability is considered enabled.
+            If there is no entry for this capability in the notification, it would have the value ServiceCapabilitySupport.Unknown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceList">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.ServiceCapability&gt; ServiceList { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.Presence.ServiceCapability&gt; ServiceList" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Services.ServiceList" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServiceList As Collection(Of ServiceCapability)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::ServiceCapability ^&gt; ^ ServiceList { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Presence::ServiceCapability ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Presence.ServiceCapability&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of all the service capabilities.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VideoEnabled">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport VideoEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport VideoEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Services.VideoEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VideoEnabled As ServiceCapabilitySupport" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport VideoEnabled { Microsoft::Rtc::Collaboration::Presence::ServiceCapabilitySupport get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ServiceCapabilitySupport</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this presentity is capable of supporting an video conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If there are multiple instances of the same capability, then if any of them are enabled for render/capture, then 
+            the capability is considered enabled.
+            If there is no entry for this capability in the notification, it would have the value ServiceCapabilitySupport.Unknown.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

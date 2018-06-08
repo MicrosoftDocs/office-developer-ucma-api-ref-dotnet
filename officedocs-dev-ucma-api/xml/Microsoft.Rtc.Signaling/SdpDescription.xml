@@ -1,0 +1,95 @@
+﻿<Type Name="SdpDescription" FullName="Microsoft.Rtc.Signaling.SdpDescription">
+  <TypeSignature Language="C#" Value="public class SdpDescription : Microsoft.Rtc.Signaling.Sdp&lt;Microsoft.Rtc.Signaling.SdpGlobalDescription,Microsoft.Rtc.Signaling.SdpMediaDescription&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpDescription extends Microsoft.Rtc.Signaling.Sdp`2&lt;class Microsoft.Rtc.Signaling.SdpGlobalDescription, class Microsoft.Rtc.Signaling.SdpMediaDescription&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SdpDescription" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpDescription&#xA;Inherits Sdp(Of SdpGlobalDescription, SdpMediaDescription)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpDescription : Microsoft::Rtc::Signaling::Sdp&lt;Microsoft::Rtc::Signaling::SdpGlobalDescription ^, Microsoft::Rtc::Signaling::SdpMediaDescription ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.Sdp&lt;Microsoft.Rtc.Signaling.SdpGlobalDescription,Microsoft.Rtc.Signaling.SdpMediaDescription&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="TGlobalDescription">Microsoft.Rtc.Signaling.SdpGlobalDescription</BaseTypeArgument>
+      <BaseTypeArgument TypeParamName="TMediaDescription">Microsoft.Rtc.Signaling.SdpMediaDescription</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Applies an alias for the generic class for simplicity.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpDescription ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpDescription.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpDescription();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpDescription (byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpDescription.#ctor(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (body As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpDescription(cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="body">The bytes containing the SDP to parse.</param>
+        <summary>
+            Creates the object. Srict parsing is enforced.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpDescription (byte[] body, bool strict);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] body, bool strict) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SdpDescription.#ctor(System.Byte[],System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (body As Byte(), strict As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpDescription(cli::array &lt;System::Byte&gt; ^ body, bool strict);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="body" Type="System.Byte[]" />
+        <Parameter Name="strict" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="body">The bytes containing the SDP to parse.</param>
+        <param name="strict">A value of true indicates the SDP parser should strictly enforce 
+            the SDP encoding rules. It is recommended that strict parsing is always used, however 
+            being more lenient may be useful there is a need to communicate with a noncompliant
+            device.</param>
+        <summary>
+            Creates the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

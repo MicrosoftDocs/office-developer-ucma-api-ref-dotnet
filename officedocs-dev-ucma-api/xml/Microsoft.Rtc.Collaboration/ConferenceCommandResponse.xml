@@ -1,0 +1,239 @@
+﻿<Type Name="ConferenceCommandResponse" FullName="Microsoft.Rtc.Collaboration.ConferenceCommandResponse">
+  <TypeSignature Language="C#" Value="public abstract class ConferenceCommandResponse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConferenceCommandResponse extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceCommandResponse" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ConferenceCommandResponse" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceCommandResponse abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains basic information about a completed command.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConferenceCommandResponse ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ConferenceCommandResponse();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs the object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Diagnostics">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Diagnostics { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Diagnostics" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.Diagnostics" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Diagnostics As IDictionary(Of String, String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ Diagnostics { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the diagnostics information from the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayString">
+      <MemberSignature Language="C#" Value="public string DisplayString { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DisplayString" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.DisplayString" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayString As String" />
+      <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ DisplayString {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the display string from the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneralReason">
+      <MemberSignature Language="C#" Value="public string GeneralReason { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GeneralReason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.GeneralReason" />
+      <MemberSignature Language="VB.NET" Value="Public Property GeneralReason As String" />
+      <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ GeneralReason {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the general reason for failure, if available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageData">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipMessageData MessageData { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipMessageData MessageData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.MessageData" />
+      <MemberSignature Language="VB.NET" Value="Public Property MessageData As SipMessageData" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::SipMessageData ^ MessageData {  public:&#xA;Microsoft::Rtc::Signaling::SipMessageData ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::SipMessageData ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipMessageData</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message that completed the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The message could either be an INFO request or a 200 OK response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reason">
+      <MemberSignature Language="C#" Value="public string Reason { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Reason" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.Reason" />
+      <MemberSignature Language="VB.NET" Value="Public Property Reason As String" />
+      <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ Reason {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the specific reason for failure, if available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDiagnostics">
+      <MemberSignature Language="C#" Value="protected void SetDiagnostics (System.Collections.Generic.IDictionary&lt;string,string&gt; diagnostics);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetDiagnostics(class System.Collections.Generic.IDictionary`2&lt;string, string&gt; diagnostics) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.SetDiagnostics(System.Collections.Generic.IDictionary{System.String,System.String})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SetDiagnostics (diagnostics As IDictionary(Of String, String))" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SetDiagnostics(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ diagnostics);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diagnostics" Type="System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="diagnostics">The diagnostic information key value pairs.</param>
+        <summary>
+            Sets the diagnostics information.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StatusCode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.CommandStatusCode StatusCode { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.CommandStatusCode StatusCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.StatusCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property StatusCode As CommandStatusCode" />
+      <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::CommandStatusCode StatusCode {  public:&#xA;Microsoft::Rtc::Collaboration::CommandStatusCode get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::CommandStatusCode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.CommandStatusCode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the command status value from the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryProcessResponseCore">
+      <MemberSignature Language="C#" Value="protected abstract bool TryProcessResponseCore (Microsoft.Rtc.Signaling.SipMessageData messageData, out Microsoft.Rtc.Signaling.RealTimeException exception);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool TryProcessResponseCore(class Microsoft.Rtc.Signaling.SipMessageData messageData, [out] class Microsoft.Rtc.Signaling.RealTimeException&amp; exception) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.TryProcessResponseCore(Microsoft.Rtc.Signaling.SipMessageData,Microsoft.Rtc.Signaling.RealTimeException@)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function TryProcessResponseCore (messageData As SipMessageData, ByRef exception As RealTimeException) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract bool TryProcessResponseCore(Microsoft::Rtc::Signaling::SipMessageData ^ messageData, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::RealTimeException ^ % exception);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageData" Type="Microsoft.Rtc.Signaling.SipMessageData" />
+        <Parameter Name="exception" Type="Microsoft.Rtc.Signaling.RealTimeException&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="messageData">The message that contains the result of the request.</param>
+        <param name="exception">Any exception encountered during processing</param>
+        <summary>
+            Process the response and populate the properties of the response object.
+            </summary>
+        <returns>True if processing was successful, otherwise false.</returns>
+        <remarks>
+          <para>
+            The message body contains the XML to process for the C3P response. The message itself may be
+            an INFO request with the final result ("success" or "pending") or may be a 200 OK response 
+            to the INFO message making the initial request.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

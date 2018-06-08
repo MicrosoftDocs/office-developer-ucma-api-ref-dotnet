@@ -1,0 +1,119 @@
+﻿<Type Name="SdpContentDescription" FullName="Microsoft.Rtc.Collaboration.SdpContentDescription">
+  <TypeSignature Language="C#" Value="public class SdpContentDescription : Microsoft.Rtc.Signaling.ContentDescription" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpContentDescription extends Microsoft.Rtc.Signaling.ContentDescription" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.SdpContentDescription" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpContentDescription&#xA;Inherits ContentDescription" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpContentDescription : Microsoft::Rtc::Signaling::ContentDescription" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.ContentDescription</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            SdpContentDescription class contains the contentId and content type and content body.
+            </summary>
+    <remarks>
+      <para>
+            ContentId is the contentID for the parts in multipart mime message.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpContentDescription (byte[] sdpBody);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] sdpBody) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpContentDescription.#ctor(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sdpBody As Byte())" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpContentDescription(cli::array &lt;System::Byte&gt; ^ sdpBody);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sdpBody" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="sdpBody">Byte array representing the Sdp content body.</param>
+        <summary>
+            Create an instance of SdpContentDescription class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpContentDescription (byte[] sdpBody, string contentId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8[] sdpBody, string contentId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpContentDescription.#ctor(System.Byte[],System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sdpBody As Byte(), contentId As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpContentDescription(cli::array &lt;System::Byte&gt; ^ sdpBody, System::String ^ contentId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sdpBody" Type="System.Byte[]" />
+        <Parameter Name="contentId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sdpBody">Byte array representing the Sdp content body.</param>
+        <param name="contentId">ContentId for Sdp in multipart/mime.</param>
+        <summary>
+            Create an instance of SdpContentDescription class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentDisposition">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SignalingHeader ContentDisposition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SignalingHeader ContentDisposition" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SdpContentDescription.ContentDisposition" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContentDisposition As SignalingHeader" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentDisposition { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); void set(Microsoft::Rtc::Signaling::SignalingHeader ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SignalingHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the content disposition header.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentId">
+      <MemberSignature Language="C#" Value="public string ContentId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SdpContentDescription.ContentId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContentId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ContentId for Sdp. Used in Content-ID or Content-Answering-CID
+            depending on offer or answer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

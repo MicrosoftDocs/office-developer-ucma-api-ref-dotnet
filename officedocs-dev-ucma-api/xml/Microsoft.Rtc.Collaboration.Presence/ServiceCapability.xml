@@ -1,0 +1,161 @@
+﻿<Type Name="ServiceCapability" FullName="Microsoft.Rtc.Collaboration.Presence.ServiceCapability">
+  <TypeSignature Language="C#" Value="public class ServiceCapability" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ServiceCapability extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.ServiceCapability" />
+  <TypeSignature Language="VB.NET" Value="Public Class ServiceCapability" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ServiceCapability" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class summarizes a capability and whether it supports render and capture.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CapabilityType">
+      <MemberSignature Language="C#" Value="public string CapabilityType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CapabilityType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ServiceCapability.CapabilityType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CapabilityType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CapabilityType { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the capability type.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CaptureEnabled">
+      <MemberSignature Language="C#" Value="public bool CaptureEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CaptureEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ServiceCapability.CaptureEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CaptureEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool CaptureEnabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this presentity is capable of capturing or sending this capability.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceAvailability">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceAvailability DeviceAvailability { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.PresenceAvailability DeviceAvailability" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ServiceCapability.DeviceAvailability" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceAvailability As PresenceAvailability" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceAvailability DeviceAvailability { Microsoft::Rtc::Collaboration::Presence::PresenceAvailability get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceAvailability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the device availability for ServiceCapability.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Returns PresenceAvailability.None, if availabilty is not specified.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceAvailabilityValue">
+      <MemberSignature Language="C#" Value="public long DeviceAvailabilityValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 DeviceAvailabilityValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ServiceCapability.DeviceAvailabilityValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceAvailabilityValue As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long DeviceAvailabilityValue { long get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the numeric value of device availability for ServiceCapability.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Returns PresenceState.AvailabilityValueUnknown if no availability is specified.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderEnabled">
+      <MemberSignature Language="C#" Value="public bool RenderEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RenderEnabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ServiceCapability.RenderEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RenderEnabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RenderEnabled { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether this presentity is capable of receiving or rendering this capability.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.ServiceCapability.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Uri of this presentity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

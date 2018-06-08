@@ -1,0 +1,582 @@
+﻿<Type Name="Recorder" FullName="Microsoft.Rtc.Collaboration.AudioVideo.Recorder">
+  <TypeSignature Language="C#" Value="public class Recorder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Recorder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.Recorder" />
+  <TypeSignature Language="VB.NET" Value="Public Class Recorder" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Recorder" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The Recorder class represents an entity that is capable of recording media. 
+            </summary>
+    <remarks>
+      <para>
+            The recorder's input comes from an AudioVideoFlow instance; its output is written to a media sink,
+            which is an instance of a subclass of the MediaSink class.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Recorder ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Recorder();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the Recorder class.
+            </summary>
+        <remarks>
+          <para>
+            By default, the state of the created Recorder instance is Stopped.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachFlow">
+      <MemberSignature Language="C#" Value="public void AttachFlow (Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.AttachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AttachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="audioVideoFlow" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" />
+      </Parameters>
+      <Docs>
+        <param name="audioVideoFlow">The AudioVideoFlow instance to be attached.</param>
+        <summary>
+            Attaches an AudioVideoFlow instance to this recorder.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example attaches and detaches a Recorder by the time AudioVideoFlow changes its state to Active and Terminated.
+                </para>
+          <para> C# Attaching and detaching an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoFlow.StateChanged += delegate(object sender, MediaFlowStateChangedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                if(avFlow.State == MediaFlowState.Active)
+                {
+
+                    Recorder recorder = new Recorder();
+                    recorder.AttachFlow(avFlow);
+
+                }
+                else if(avFlow.State == MediaFlowState.Terminated)
+                {
+
+                    if (avFlow.Recorder != null)
+                    {
+                        avFlow.Recorder.DetachFlow();
+                    }
+
+                }
+            };
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
+        <exception cref="T:System.InvalidOperationException"> 
+            Thrown when the recorder is already attached to another AudioVideoFlow instance.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AudioVideoFlow">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow AudioVideoFlow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow AudioVideoFlow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.AudioVideoFlow" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoFlow As AudioVideoFlow" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ AudioVideoFlow { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the AudioVideoFlow instance that is attached to this recorder.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetachFlow">
+      <MemberSignature Language="C#" Value="public void DetachFlow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachFlow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.DetachFlow" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DetachFlow ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DetachFlow();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Detaches an AudioVideoFlow instance from this recorder.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example attaches and detaches a Recorder by the time AudioVideoFlow changes its state to Active and Terminated.
+                </para>
+          <para> C# Attaching and detaching an AudioVideoFlow.</para>
+          <code> 
+
+            audioVideoFlow.StateChanged += delegate(object sender, MediaFlowStateChangedEventArgs args)
+            {
+                AudioVideoFlow avFlow = (AudioVideoFlow)sender;
+
+                if(avFlow.State == MediaFlowState.Active)
+                {
+
+                    Recorder recorder = new Recorder();
+                    recorder.AttachFlow(avFlow);
+
+                }
+                else if(avFlow.State == MediaFlowState.Terminated)
+                {
+
+                    if (avFlow.Recorder != null)
+                    {
+                        avFlow.Recorder.DetachFlow();
+                    }
+
+                }
+            };
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Pause" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Pause ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Pause();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Pauses the recorder.
+            </summary>
+        <remarks>
+          <para>
+            Pause can be called only on recorder whose state is Started.
+            To resume recording call Recorder.Start.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example starts, pause, restarts (by calling Start) and stops the Recorder.  
+                </para>
+          <para> C# Starting, pausing, restarting and stopping a Recorder.</para>
+          <code> 
+
+            recorder.AttachFlow(audioVideoFlow);
+            recorder.SetSink(sink);
+            recorder.Start();
+
+
+
+            recorder.Pause();
+
+
+
+            recorder.Start();
+
+
+
+            recorder.Stop();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the recorder's State is not Started.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveSink">
+      <MemberSignature Language="C#" Value="public void RemoveSink ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveSink() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.RemoveSink" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveSink ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveSink();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Removes the media sink from this recorder.
+            </summary>
+        <remarks>
+          <para>
+            If the recorder is not Stopped, RemoveSink stops it.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows Recorder removing a MediaSink and then setting and starting to record.
+                </para>
+          <para> C# Removing and setting MediaSink.</para>
+          <code> 
+
+            // In case no sink is set, RemoveSink will be no-op.
+            recorder.RemoveSink();
+
+
+
+            recorder.AttachFlow(audioVideoFlow);
+            recorder.SetSink(sink);
+            recorder.Start();
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSink">
+      <MemberSignature Language="C#" Value="public void SetSink (Microsoft.Rtc.Collaboration.AudioVideo.MediaSink sink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSink(class Microsoft.Rtc.Collaboration.AudioVideo.MediaSink sink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.SetSink(Microsoft.Rtc.Collaboration.AudioVideo.MediaSink)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSink (sink As MediaSink)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetSink(Microsoft::Rtc::Collaboration::AudioVideo::MediaSink ^ sink);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sink" Type="Microsoft.Rtc.Collaboration.AudioVideo.MediaSink" />
+      </Parameters>
+      <Docs>
+        <param name="sink">The media sink that is recorded to.</param>
+        <summary>
+            Sets the media sink for this recorder.
+            </summary>
+        <remarks>
+          <para>
+            If the recorder is not Stopped, SetSink stops it. 
+            This method throws an exception if it is called with a media sink associated with another recorder.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example shows Recorder removing a MediaSink and then setting and starting to record.
+                </para>
+          <para> C# Removing and setting MediaSink.</para>
+          <code> 
+
+            // In case no sink is set, RemoveSink will be no-op.
+            recorder.RemoveSink();
+
+
+
+            recorder.AttachFlow(audioVideoFlow);
+            recorder.SetSink(sink);
+            recorder.Start();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">Thrown when the sink parameter is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the sink provided has already been associated with another recorder.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Sink">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.MediaSink Sink { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.AudioVideo.MediaSink Sink" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Sink" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Sink As MediaSink" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaSink ^ Sink { Microsoft::Rtc::Collaboration::AudioVideo::MediaSink ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.MediaSink</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the media sink to be written to by this recorder.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Start" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Start();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Starts and resume recording. 
+            </summary>
+        <remarks>
+          <para>
+            Start can be used to start a new recording or resume a paused one.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example starts a Recorder.  
+                </para>
+          <para> C# Starting a Recorder.</para>
+          <code> 
+
+            recorder.AttachFlow(audioVideoFlow);
+            recorder.SetSink(sink);
+            recorder.Start();
+
+
+
+</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when sink is not defined or if the recorder is already started.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when the operation failed.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.RecorderState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.AudioVideo.RecorderState State" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.State" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As RecorderState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::RecorderState State { Microsoft::Rtc::Collaboration::AudioVideo::RecorderState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.RecorderState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recorder's current state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.RecorderStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.RecorderStateChangedEventArgs&gt; StateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.StateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of RecorderStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::RecorderStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.RecorderStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised to notify an application that the recorder's state has changed.
+            </summary>
+        <remarks>
+          <para>
+            This event is raised for every state change that occurs on the recorder, including when the application causes the state change.
+            </para>
+          <para />
+        </remarks>
+        <example>
+          <para />
+          <para>
+            The following example show how to subscribe to StateChanged event.
+                </para>
+          <para> C# Subscribing to StateChanged event.</para>
+          <code> 
+
+            recorder.StateChanged += delegate(object sender, RecorderStateChangedEventArgs args)
+            {
+                RecorderState previousState = args.PreviousState;
+                RecorderState currentState = args.State;
+
+                // Do whatever it needs with recorder.
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops recording.
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example starts, pause, restarts (by calling Start) and stops the Recorder.  
+                </para>
+          <para> C# Starting, pausing, restarting and stopping a Recorder.</para>
+          <code> 
+
+            recorder.AttachFlow(audioVideoFlow);
+            recorder.SetSink(sink);
+            recorder.Start();
+
+
+
+            recorder.Pause();
+
+
+
+            recorder.Start();
+
+
+
+            recorder.Stop();
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="VoiceActivityChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs&gt; VoiceActivityChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs&gt; VoiceActivityChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.VoiceActivityChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event VoiceActivityChanged As EventHandler(Of VoiceActivityChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::VoiceActivityChangedEventArgs ^&gt; ^ VoiceActivityChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised to notify an application that recorder detected a change in voice state (noise or voice).
+            </summary>
+        <remarks>To be added.</remarks>
+        <example>
+          <para />
+          <para>
+            The following example show how to subscribe to VoiceActivityChanged event.
+                </para>
+          <para> C# Subscribing to VoiceActivityChanged event.</para>
+          <code> 
+
+            recorder.VoiceActivityChanged += delegate(object sender, VoiceActivityChangedEventArgs args)
+            {
+                TimeSpan timeStamp = args.TimeStamp;
+                bool isVoice = args.IsVoice;
+
+                // Do whatever it needs with recorder.
+            };
+
+
+
+</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,107 @@
+﻿<Type Name="DeliveryNotificationReceivedEventArgs" FullName="Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs">
+  <TypeSignature Language="C#" Value="public class DeliveryNotificationReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DeliveryNotificationReceivedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public Class DeliveryNotificationReceivedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DeliveryNotificationReceivedEventArgs : EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides information regarding delivery status of a previously sent message.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeliveryFailures">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.MessageDeliveryFailureData&gt; DeliveryFailures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.ICollection`1&lt;class Microsoft.Rtc.Collaboration.MessageDeliveryFailureData&gt; DeliveryFailures" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs.DeliveryFailures" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeliveryFailures As ICollection(Of MessageDeliveryFailureData)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::MessageDeliveryFailureData ^&gt; ^ DeliveryFailures { System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::MessageDeliveryFailureData ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.MessageDeliveryFailureData&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the collection of delivery failure information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Includes the list of participants who did not receive the original message.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FailedDeliveryAttemptExists">
+      <MemberSignature Language="C#" Value="public bool FailedDeliveryAttemptExists { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FailedDeliveryAttemptExists" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs.FailedDeliveryAttemptExists" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailedDeliveryAttemptExists As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FailedDeliveryAttemptExists { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether there were any failed delivery attempts.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If this is true, the application can access DeliveryFailures for more
+            information regarding the specific failures. If false, the message 
+            was successfully delivered to all participants. DeliveryFailures need
+            not be accessed. If accessed, it will return an empty collection.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageId">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.InstantMessageId MessageId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.InstantMessageId MessageId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs.MessageId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageId As InstantMessageId" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessageId ^ MessageId { Microsoft::Rtc::Collaboration::InstantMessageId ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.InstantMessageId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the message ID of the message corresponding to this notification.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application can find the cached message matching the message ID.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

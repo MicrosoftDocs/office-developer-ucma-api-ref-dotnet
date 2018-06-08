@@ -1,0 +1,149 @@
+﻿<Type Name="Group" FullName="Microsoft.Rtc.Collaboration.ContactsGroups.Group">
+  <TypeSignature Language="C#" Value="public sealed class Group" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Group extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ContactsGroups.Group" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Group" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Group sealed" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A group represents a logical assemblage of contacts.
+            </summary>
+    <remarks>
+      <para>
+            Groups can be added, deleted, or have their properties modifed using the APIs from <see cref="T:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices" />.
+            A group is identified by a group ID that the server assigns when the group is created. Contacts that are created
+            can be modified to belong to zero or more groups. Groups do not hold any references to the contacts that belong to them.
+            </para>
+      <para>
+            Deleting a group causes its entry to be removed from the list of group IDs of contacts that belong to that group.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DeltaNumber">
+      <MemberSignature Language="C#" Value="public int DeltaNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DeltaNumber" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ContactsGroups.Group.DeltaNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeltaNumber As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DeltaNumber { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the delta number of the group.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupData">
+      <MemberSignature Language="C#" Value="public string GroupData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string GroupData" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ContactsGroups.Group.GroupData" />
+      <MemberSignature Language="VB.NET" Value="Public Property GroupData As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ GroupData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the external URI of the group.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroupId">
+      <MemberSignature Language="C#" Value="public int GroupId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GroupId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ContactsGroups.Group.GroupId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GroupId As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int GroupId { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the group ID of the group.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>The group ID is assigned by the server. If unassigned, the value is -1.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ContactsGroups.Group.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the group display name.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="value" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="value" /> is empty.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.Group.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            For debug purposes: Shows information for the group in the log file.
+            </summary>
+        <returns>The string representation of group.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

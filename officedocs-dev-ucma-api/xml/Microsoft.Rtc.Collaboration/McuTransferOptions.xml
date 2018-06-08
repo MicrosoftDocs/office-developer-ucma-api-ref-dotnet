@@ -1,0 +1,174 @@
+﻿<Type Name="McuTransferOptions" FullName="Microsoft.Rtc.Collaboration.McuTransferOptions">
+  <TypeSignature Language="C#" Value="public class McuTransferOptions : Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit McuTransferOptions extends Microsoft.Rtc.Collaboration.ConferenceCommandOptions" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.McuTransferOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class McuTransferOptions&#xA;Inherits ConferenceCommandOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class McuTransferOptions : Microsoft::Rtc::Collaboration::ConferenceCommandOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Collaboration.ConferenceCommandOptions</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MCU Transfer options.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public McuTransferOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuTransferOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; McuTransferOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the McuTransferOptions class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntryExitAnnouncementsDisabled">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; EntryExitAnnouncementsDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; EntryExitAnnouncementsDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuTransferOptions.EntryExitAnnouncementsDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property EntryExitAnnouncementsDisabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;bool&gt; EntryExitAnnouncementsDisabled { Nullable&lt;bool&gt; get(); void set(Nullable&lt;bool&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Obsolete("This property will be removed from future versions.")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether entry/exit annoucements are to be disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantDisplayName">
+      <MemberSignature Language="C#" Value="public string ParticipantDisplayName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParticipantDisplayName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuTransferOptions.ParticipantDisplayName" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParticipantDisplayName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ParticipantDisplayName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the participant display name to appear in conference roster for the transferred participant.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If not set on transferring a call to the MCU, the transfer operation shall be carried out 
+            using the transferred call remote participant display name.
+            Setting this value is an option suggestion to the server, the server can override this value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParticipantUri">
+      <MemberSignature Language="C#" Value="public string ParticipantUri { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ParticipantUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuTransferOptions.ParticipantUri" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParticipantUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ParticipantUri { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the participant URI to appear in the conference roster.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If not set on transferring a call to the MCU, the transfer operation shall be carried out using 
+            the transferred call remote participant URI.
+            Setting this value is an option suggestion to the server, the server can override this value.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreferredLanguage">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo PreferredLanguage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo PreferredLanguage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuTransferOptions.PreferredLanguage" />
+      <MemberSignature Language="VB.NET" Value="Public Property PreferredLanguage As CultureInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Globalization::CultureInfo ^ PreferredLanguage { System::Globalization::CultureInfo ^ get(); void set(System::Globalization::CultureInfo ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the preferred language for entry/exit announcements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrivateAssistantDisabled">
+      <MemberSignature Language="C#" Value="public Nullable&lt;bool&gt; PrivateAssistantDisabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;bool&gt; PrivateAssistantDisabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuTransferOptions.PrivateAssistantDisabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property PrivateAssistantDisabled As Nullable(Of Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;bool&gt; PrivateAssistantDisabled { Nullable&lt;bool&gt; get(); void set(Nullable&lt;bool&gt; value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the private vitual assistant is to be disabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

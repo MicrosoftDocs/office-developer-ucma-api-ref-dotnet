@@ -1,0 +1,228 @@
+﻿<Type Name="ConversationSettings" FullName="Microsoft.Rtc.Collaboration.ConversationSettings">
+  <TypeSignature Language="C#" Value="public class ConversationSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConversationSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConversationSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConversationSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConversationSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents settings that can be applied when creating a conversation.
+            </summary>
+    <remarks>
+      <para>
+            An application can specify settings such as identifier, subject and priority to use in the conversation.
+            </para>
+      <para />
+    </remarks>
+    <example>
+      <para />
+      <para>
+            The following example shows how to resume a previous conversation and preserve the previous
+            conversation subject and Id. 
+            
+            </para>
+      <para> C# Resuming previous conversation</para>
+      <code> 
+ConversationSettings settings = new ConversationSettings();
+settings.Subject = _previousSubject;
+settings.Id = _previousConversationId;
+settings.Priority = ConversationPriority.Normal;
+
+_conversation1 = new Conversation(_endpoint1, settings);
+            #endregion SpecifyConversationSettings
+
+            #region CreateIMCall
+_imCall1 = new InstantMessagingCall(_conversation1);
+
+_imCall1 = new InstantMessagingCall(_conversation1);
+
+_imCall1.BeginEstablish(
+     _endpoint2.OwnerUri, 
+     null /*options*/,
+     this.EstablishCompleted,
+     _imCall1 /*state*/);
+
+
+</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConversationSettings();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Rtc.Collaboration.ConversationSettings" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConversationSettings (string priority, string subject, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string priority, string subject, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationSettings.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (priority As String, subject As String, id As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConversationSettings(System::String ^ priority, System::String ^ subject, System::String ^ id);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="priority" Type="System.String" />
+        <Parameter Name="subject" Type="System.String" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="priority">The priority.</param>
+        <param name="subject">The subject.</param>
+        <param name="id">The identifier for this conversation.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Rtc.Collaboration.ConversationSettings" /> class
+            with a given subject, priority and ID.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the given priority is invalid.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDerivedConversationId">
+      <MemberSignature Language="C#" Value="public static string GetDerivedConversationId (string previousConversationId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetDerivedConversationId(string previousConversationId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationSettings.GetDerivedConversationId(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetDerivedConversationId (previousConversationId As String) As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetDerivedConversationId(System::String ^ previousConversationId);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="previousConversationId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="previousConversationId">previous conversation identifier.</param>
+        <summary>
+            Gets the identifier for a new conversation that is extended from a previous conversation.
+            </summary>
+        <returns>The new conversation identifier.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public string Id { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationSettings.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the conversation identifier.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            In some cases, an application may need to restart or continue a conversation that was terminated previously.
+            To indicate the conversation that is being restarted, the conversation ID of the previous conversation can be specified.
+            By specifying the ID, continued conversations can be handled more intuitively in the user interface of the remote application.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Priority">
+      <MemberSignature Language="C#" Value="public string Priority { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Priority" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationSettings.Priority" />
+      <MemberSignature Language="VB.NET" Value="Public Property Priority As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Priority { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the priority of the conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Valid priority strings are defined in the 
+            <see cref="T:Microsoft.Rtc.Collaboration.ConversationPriority" /> class.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the priority value is empty or not a valid priority.
+            <see cref="T:Microsoft.Rtc.Collaboration.ConversationPriority" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationSettings.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public Property Subject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the subject of the conversation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The conversation subject is used in the client user interface to indicate what the conversation is about
+            before accepting a call.  If the conversation is a follow up to an email message, it may be the same
+            as the subject of the mail that prompted the conversation.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

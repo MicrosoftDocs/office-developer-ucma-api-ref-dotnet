@@ -1,0 +1,886 @@
+﻿<Type Name="SipEndpoint" FullName="Microsoft.Rtc.Signaling.SipEndpoint">
+  <TypeSignature Language="C#" Value="public class SipEndpoint : Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi SipEndpoint extends Microsoft.Rtc.Signaling.RealTimeEndpoint" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipEndpoint" />
+  <TypeSignature Language="VB.NET" Value="Public Class SipEndpoint&#xA;Inherits RealTimeEndpoint" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SipEndpoint : Microsoft::Rtc::Signaling::RealTimeEndpoint" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Rtc.Signaling.RealTimeEndpoint</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a registration server based endpoint. All messages are routed to this server.
+            The endpoint caches the connection created to communicate with the server.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipEndpoint (string ownerUri, Microsoft.Rtc.Signaling.RealTimeConnectionManager connectionManager, Microsoft.Rtc.Signaling.SipEndpointSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, class Microsoft.Rtc.Signaling.RealTimeConnectionManager connectionManager, class Microsoft.Rtc.Signaling.SipEndpointSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeConnectionManager,Microsoft.Rtc.Signaling.SipEndpointSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeConnectionManager, settings As SipEndpointSettings)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipEndpointSettings ^ settings);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="connectionManager" Type="Microsoft.Rtc.Signaling.RealTimeConnectionManager" />
+        <Parameter Name="settings" Type="Microsoft.Rtc.Signaling.SipEndpointSettings" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">
+            The URI for this endpoint. This should not include port. Port will be 
+            automatically added depending on the listening port, if any.
+            </param>
+        <param name="connectionManager">
+            The connection manager to use for this endpoint. 
+            </param>
+        <param name="settings">
+            Additional settings to configure the endpoint or null.</param>
+        <summary>
+            Initializes a new instance of the SipEndpoint class.  
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipEndpoint (string ownerUri, Microsoft.Rtc.Signaling.SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, valuetype Microsoft.Rtc.Signaling.SipAuthenticationProtocols allowedAuthenticationProtocols, valuetype Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipAuthenticationProtocols,Microsoft.Rtc.Signaling.SipTransportType,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, allowedAuthenticationProtocols As SipAuthenticationProtocols, transportType As SipTransportType, serverName As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="allowedAuthenticationProtocols" Type="Microsoft.Rtc.Signaling.SipAuthenticationProtocols" />
+        <Parameter Name="transportType" Type="Microsoft.Rtc.Signaling.SipTransportType" />
+        <Parameter Name="serverName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user identifying the endpoint.</param>
+        <param name="allowedAuthenticationProtocols">
+            The authentication protocols to be used for the server specified.
+            </param>
+        <param name="transportType">
+            The type of transport to be used to connect to the server.
+            </param>
+        <param name="serverName">The name of the server to be used.</param>
+        <summary>
+            Creates a new instance of SipEndpoint. This endpoint is server-based.
+            By default, the platform will use port 5060 for TCP and 5061 for TLS. To use a
+            port other than these, the caller should set the port property before
+            trying to register.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when one of the arguments is not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipEndpoint (string ownerUri, Microsoft.Rtc.Signaling.SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName, int serverPort, bool allowNoAuthentication, Microsoft.Rtc.Signaling.RealTimeConnectionManager connectionManager, string endpointId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, valuetype Microsoft.Rtc.Signaling.SipAuthenticationProtocols allowedAuthenticationProtocols, valuetype Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName, int32 serverPort, bool allowNoAuthentication, class Microsoft.Rtc.Signaling.RealTimeConnectionManager connectionManager, string endpointId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipAuthenticationProtocols,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,System.Boolean,Microsoft.Rtc.Signaling.RealTimeConnectionManager,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, allowedAuthenticationProtocols As SipAuthenticationProtocols, transportType As SipTransportType, serverName As String, serverPort As Integer, allowNoAuthentication As Boolean, connectionManager As RealTimeConnectionManager, endpointId As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName, int serverPort, bool allowNoAuthentication, Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ connectionManager, System::String ^ endpointId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="allowedAuthenticationProtocols" Type="Microsoft.Rtc.Signaling.SipAuthenticationProtocols" />
+        <Parameter Name="transportType" Type="Microsoft.Rtc.Signaling.SipTransportType" />
+        <Parameter Name="serverName" Type="System.String" />
+        <Parameter Name="serverPort" Type="System.Int32" />
+        <Parameter Name="allowNoAuthentication" Type="System.Boolean" />
+        <Parameter Name="connectionManager" Type="Microsoft.Rtc.Signaling.RealTimeConnectionManager" />
+        <Parameter Name="endpointId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user identifying the endpoint.</param>
+        <param name="allowedAuthenticationProtocols">
+            The authentication protocols to be used for the server specified.
+            </param>
+        <param name="transportType">
+            The type of transport to be used to connect to the server.
+            </param>
+        <param name="serverName">The name of the server to be used.</param>
+        <param name="serverPort">The port to be used to connect to the server. User 0 to use default.</param>
+        <param name="allowNoAuthentication">Indicates whether the client allows communicating with a
+            server that does not challenge messages from this client. Most applications should pass false.
+            </param>
+        <param name="connectionManager">
+            The connection manager to be used for this endpoint.
+            </param>
+        <param name="endpointId">The epid to use. Can be null.</param>
+        <summary>
+            Creates a new instance of SipEndpoint. This endpoint is server-based.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when one of the arguments is not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SipEndpoint (string ownerUri, Microsoft.Rtc.Signaling.SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName, int serverPort, bool allowNoAuthentication, Microsoft.Rtc.Signaling.RealTimeConnectionManager connectionManager, string endpointId, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; additionalHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string ownerUri, valuetype Microsoft.Rtc.Signaling.SipAuthenticationProtocols allowedAuthenticationProtocols, valuetype Microsoft.Rtc.Signaling.SipTransportType transportType, string serverName, int32 serverPort, bool allowNoAuthentication, class Microsoft.Rtc.Signaling.RealTimeConnectionManager connectionManager, string endpointId, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; additionalHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipAuthenticationProtocols,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,System.Boolean,Microsoft.Rtc.Signaling.RealTimeConnectionManager,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, allowedAuthenticationProtocols As SipAuthenticationProtocols, transportType As SipTransportType, serverName As String, serverPort As Integer, allowNoAuthentication As Boolean, connectionManager As RealTimeConnectionManager, endpointId As String, additionalHeaders As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName, int serverPort, bool allowNoAuthentication, Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ connectionManager, System::String ^ endpointId, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeaders);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ownerUri" Type="System.String" />
+        <Parameter Name="allowedAuthenticationProtocols" Type="Microsoft.Rtc.Signaling.SipAuthenticationProtocols" />
+        <Parameter Name="transportType" Type="Microsoft.Rtc.Signaling.SipTransportType" />
+        <Parameter Name="serverName" Type="System.String" />
+        <Parameter Name="serverPort" Type="System.Int32" />
+        <Parameter Name="allowNoAuthentication" Type="System.Boolean" />
+        <Parameter Name="connectionManager" Type="Microsoft.Rtc.Signaling.RealTimeConnectionManager" />
+        <Parameter Name="endpointId" Type="System.String" />
+        <Parameter Name="additionalHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="ownerUri">The URI of the user identifying the endpoint.</param>
+        <param name="allowedAuthenticationProtocols">
+            The authentication protocols to be used for the server specified.
+            </param>
+        <param name="transportType">
+            The type of transport to be used to connect to the server.
+            </param>
+        <param name="serverName">The name of the server to be used.</param>
+        <param name="serverPort">The port to be used to connect to the server. User 0 to use default.</param>
+        <param name="allowNoAuthentication">Indicates whether the client allows communicating with a
+            server that does not challenge messages from this client. Most applications should pass false.
+            </param>
+        <param name="connectionManager">
+            The connection manager to be used for this endpoint.
+            </param>
+        <param name="endpointId">The epid to use. Can be null.</param>
+        <param name="additionalHeaders">
+            Additional headers to put on every SIP message sent from this endpoint.
+            </param>
+        <summary>
+            Creates a new instance of SipEndpoint. This endpoint is server-based.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when one of the arguments is not valid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowedAuthenticationProtocols">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipAuthenticationProtocols AllowedAuthenticationProtocols { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SipAuthenticationProtocols AllowedAuthenticationProtocols" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.AllowedAuthenticationProtocols" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedAuthenticationProtocols As SipAuthenticationProtocols" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipAuthenticationProtocols AllowedAuthenticationProtocols { Microsoft::Rtc::Signaling::SipAuthenticationProtocols get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipAuthenticationProtocols</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the allowed set of authentication protocols to be used for this endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AllowNoAuthentication">
+      <MemberSignature Language="C#" Value="public bool AllowNoAuthentication { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AllowNoAuthentication" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.AllowNoAuthentication" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowNoAuthentication As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowNoAuthentication { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the flag that indicates whether the client allows communicating with a
+            server that does not challenge messages from this client.
+            </summary>
+        <value>The Boolean value.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProtocol">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipAuthenticationProtocols AuthenticationProtocol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SipAuthenticationProtocols AuthenticationProtocol" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.AuthenticationProtocol" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthenticationProtocol As SipAuthenticationProtocols" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipAuthenticationProtocols AuthenticationProtocol { Microsoft::Rtc::Signaling::SipAuthenticationProtocols get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipAuthenticationProtocols</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the authentication protocol currently in use with the server.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If there is no security context established with the server,
+            the default value of SipAuthenticationProtocols.None is returned.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AuthenticationProtocolChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; AuthenticationProtocolChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; AuthenticationProtocolChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.AuthenticationProtocolChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event AuthenticationProtocolChanged As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ AuthenticationProtocolChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the protocol used between the client and server changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRegister">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRegister (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRegister(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.BeginRegister(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRegister (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRegister(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Starts an asynchronous Register operation for the current endpoint.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the method was not called in the Unregistered state, or the endpoint had been terminated.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginRegister">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginRegister (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRegister(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.BeginRegister(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginRegister (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRegister(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">Collection of signaling headers to be included with Register request. Can be null.</param>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Starts an asynchronous Register operation for the current endpoint.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+               Thrown when the method was not called in the Unregistered state, or the endpoint is terminated.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RegisterException">Thrown when the registration failed.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.AuthenticationException">Thrown when a general authentication-related problem occurred.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one of the header in headers parameters is a restricted header.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BeginUnregister">
+      <MemberSignature Language="C#" Value="public IAsyncResult BeginUnregister (AsyncCallback userCallback, object state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUnregister(class System.AsyncCallback userCallback, object state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.BeginUnregister(System.AsyncCallback,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BeginUnregister (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnregister(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IAsyncResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userCallback" Type="System.AsyncCallback" />
+        <Parameter Name="state" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="userCallback">The method to be called when the asynchronous operation is completed.</param>
+        <param name="state">A user-provided object that distinguishes this particular asynchronous operation from other asynchronous operations.</param>
+        <summary>
+            Starts an asynchronous process to unregister the current endpoint.
+            This method always succeeds.
+            </summary>
+        <returns>An IAsyncResult that references the asynchronous operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CredentialCache">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipCredentialCache CredentialCache { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.SipCredentialCache CredentialCache" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.CredentialCache" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CredentialCache As SipCredentialCache" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipCredentialCache ^ CredentialCache { Microsoft::Rtc::Signaling::SipCredentialCache ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipCredentialCache</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a credential cache that can be used by the application
+            to supply credentials needed to authenticate the application with servers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultRtcRealm">
+      <MemberSignature Language="C#" Value="public const string DefaultRtcRealm;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string DefaultRtcRealm" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.SipEndpoint.DefaultRtcRealm" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultRtcRealm As String " />
+      <MemberSignature Language="C++ CLI" Value="public: System::String ^ DefaultRtcRealm;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default realm used when communicating with the server. This realm
+            is used when adding a NetworkCredential to the CredentialCache.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableRegisterRefreshForConnectionDrop">
+      <MemberSignature Language="C#" Value="public bool DisableRegisterRefreshForConnectionDrop { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisableRegisterRefreshForConnectionDrop" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.DisableRegisterRefreshForConnectionDrop" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisableRegisterRefreshForConnectionDrop As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableRegisterRefreshForConnectionDrop { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value that controls whether automatic register refresh should be allowed due to connection drop.
+            When the current connection is disconnected for some reason and the endpoint uses either client
+            connection manager or a server connection manager that does not listen, a register refresh attempt
+            is made. By default, this property is set to false (Register Refresh occurs when connection drops).
+            If disabled, connection drop would set the registration state to Unregistered.
+            This flag is ignored when the server connection manager is used and the manager is listening for incoming connections as there is
+            no automatic register refresh attempted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndRegister">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndRegister (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndRegister(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.EndRegister(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndRegister (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndRegister(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Completes the asynchronous Register operation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:Microsoft.Rtc.Signaling.RegisterException">Thrown when the Register operation failed with the message text indicating the reason.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.AuthenticationException">Thrown when a general authentication-related problem occurred.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when server did not respond for Register request.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndUnregister">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData EndUnregister (IAsyncResult result);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData EndUnregister(class System.IAsyncResult result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.EndUnregister(System.IAsyncResult)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EndUnregister (result As IAsyncResult) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndUnregister(IAsyncResult ^ result);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="result" Type="System.IAsyncResult" />
+      </Parameters>
+      <Docs>
+        <param name="result">The reference to the pending asynchronous operation.</param>
+        <summary>
+            Finishes the asynchronous Unregister operation.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when this method is invoked multiple times using the same result.
+            </exception>
+        <exception cref="T:System.ArgumentNullException">
+            Thrown when the <paramref name="result" /> parameter is null.
+            </exception>
+        <exception cref="T:System.ArgumentException">
+            Thrown when the <paramref name="result" /> parameter is invalid.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">
+            Thrown when this operation timed out.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RealTimeException">
+            Thrown when any of the sub operations of this operation failed due to SIP related errors like connection failure, Authentication failure.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEndpointThrottled">
+      <MemberSignature Language="C#" Value="public bool IsEndpointThrottled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEndpointThrottled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.IsEndpointThrottled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsEndpointThrottled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEndpointThrottled { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the Boolean value indicating if the endpoint should be throttled or not.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumRegisterRedirectionAttempts">
+      <MemberSignature Language="C#" Value="public int MaximumRegisterRedirectionAttempts { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaximumRegisterRedirectionAttempts" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.MaximumRegisterRedirectionAttempts" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumRegisterRedirectionAttempts As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumRegisterRedirectionAttempts { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value that controls the number of redirect attempts allowed for registration.
+            The default value is 3. The allowed range is from 0 to 5. The value of 0 disables automatic redirection.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData Register ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Register() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.Register" />
+      <MemberSignature Language="VB.NET" Value="Public Function Register () As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Register();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Synchronously registers the current endpoint. This method waits until the Register
+            operation is completed. It is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the SipResponseData from the server after a successful Register operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method is not called in the Unregistered state, or the endpoint is terminated.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RegisterException">Thrown when the registration failed.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.AuthenticationException">Thrown when a general authentication-related problem occurred.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationTimeoutException">Thrown when server did not respond for Register request.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Register">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData Register (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Register(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.Register(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Function Register (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Register(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="signalingHeaders">Collection of signaling headers to be included with the Register request. Can be null.</param>
+        <summary>
+            Synchronously registers the current endpoint. This method waits until the Register
+            operation is completed. It is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the SipResponseData from the server after a successful Register operation.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the method was not called in the Unregistered state, or the endpoint is terminated.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.RegisterException">Thrown when the registration failed.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.AuthenticationException">Thrown when a general authentication-related problem occurred.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when one of the header in headers parameters is a restricted header.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMethods">
+      <MemberSignature Language="C#" Value="public string RegisterMethods { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RegisterMethods" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.RegisterMethods" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegisterMethods As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RegisterMethods { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the methods supported by this endpoint to be specified in the Register message.
+            By default, this is set to support subscription and signaling sessions.
+            The application should normally set this property before calling the Register method.
+            If this is set after the Register method is completed, it will take effect when a Register refresh occurs.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationState">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.RegistrationState RegistrationState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.RegistrationState RegistrationState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.RegistrationState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RegistrationState As RegistrationState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RegistrationState RegistrationState { Microsoft::Rtc::Signaling::RegistrationState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.RegistrationState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Registration state of endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegistrationStateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Microsoft.Rtc.Signaling.RegistrationStateChangedEventArgs&gt; RegistrationStateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Microsoft.Rtc.Signaling.RegistrationStateChangedEventArgs&gt; RegistrationStateChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.RegistrationStateChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event RegistrationStateChanged As EventHandler(Of RegistrationStateChangedEventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RegistrationStateChangedEventArgs ^&gt; ^ RegistrationStateChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Microsoft.Rtc.Signaling.RegistrationStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the Registration state changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Server">
+      <MemberSignature Language="C#" Value="public string Server { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Server" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.Server" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Server As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Server { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the server currently used by the endpoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; ServerChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; ServerChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.ServerChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ServerChanged As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ServerChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raised when the server is changed, as when the server is autodiscovered
+            or when redirection occurs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerPort">
+      <MemberSignature Language="C#" Value="public int ServerPort { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ServerPort" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.ServerPort" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerPort As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ServerPort { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the port used to connect to the server. This is the port currently used to
+            connect to the server or the port configured by the application if there is
+            no active connection to the server. If the server is unknown, then 0 is returned.
+            </summary>
+        <value>The port value</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerPortChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt; ServerPortChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; ServerPortChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.ServerPortChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Custom Event ServerPortChanged As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ServerPortChanged;" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raises the server port is changed, as when the server is autodiscovered
+            or when redirection occurs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SipInstance">
+      <MemberSignature Language="C#" Value="public string SipInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SipInstance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.SipInstance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SipInstance As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SipInstance { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the sipInstance parameter value used in the contact header for Register
+            (used by the server to generate the GRUU).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransportType">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipTransportType TransportType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Signaling.SipTransportType TransportType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.TransportType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransportType As SipTransportType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipTransportType TransportType { Microsoft::Rtc::Signaling::SipTransportType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipTransportType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Gets the transport type used for connecting to the server.
+             This is the same as what is specified by the application or
+             the transport used for connecting to an autodiscovered server.
+             In case of autoconfiguration, this property will change only after a
+             successful connection to the server.
+            
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unregister">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.SipResponseData Unregister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Unregister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.Unregister" />
+      <MemberSignature Language="VB.NET" Value="Public Function Unregister () As SipResponseData" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Unregister();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.SipResponseData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Synchronously unregisters the endpoint. It is not recommended for a UI thread.
+            </summary>
+        <returns>Returns the SipResponseData returned by the server after a successful Unregister operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uuid">
+      <MemberSignature Language="C#" Value="public string Uuid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uuid" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.Uuid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uuid As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uuid { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the universally unique identifier.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

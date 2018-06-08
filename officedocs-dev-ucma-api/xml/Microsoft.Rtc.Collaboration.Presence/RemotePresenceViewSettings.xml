@@ -1,0 +1,100 @@
+﻿<Type Name="RemotePresenceViewSettings" FullName="Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings">
+  <TypeSignature Language="C#" Value="public class RemotePresenceViewSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RemotePresenceViewSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class RemotePresenceViewSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RemotePresenceViewSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the settings needed to initialize the RemotePresenceView.    
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RemotePresenceViewSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RemotePresenceViewSettings();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of the RemotePresenceViewSettings class.
+            </summary>
+        <remarks>
+          <para>
+            The subscription mode is set to Default.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PollingInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan PollingInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan PollingInterval" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings.PollingInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property PollingInterval As TimeSpan" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan PollingInterval { TimeSpan get(); void set(TimeSpan value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the polling interval.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This value is ignored when <see cref="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings.SubscriptionMode" /> is Persistent.
+            The default value is 300 seconds. If any other value is set, then the view will reset it to the closest
+            multiple of 300 seconds less than it.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="value" /> is invalid.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SubscriptionMode">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode SubscriptionMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode SubscriptionMode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSettings.SubscriptionMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property SubscriptionMode As RemotePresenceViewSubscriptionMode" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::RemotePresenceViewSubscriptionMode SubscriptionMode { Microsoft::Rtc::Collaboration::Presence::RemotePresenceViewSubscriptionMode get(); void set(Microsoft::Rtc::Collaboration::Presence::RemotePresenceViewSubscriptionMode value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.RemotePresenceViewSubscriptionMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the mode of subscription.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when the value being set is an invalid mode.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

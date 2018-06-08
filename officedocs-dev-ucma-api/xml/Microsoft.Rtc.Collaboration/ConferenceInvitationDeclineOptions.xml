@@ -1,0 +1,164 @@
+﻿<Type Name="ConferenceInvitationDeclineOptions" FullName="Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions">
+  <TypeSignature Language="C#" Value="public class ConferenceInvitationDeclineOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceInvitationDeclineOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceInvitationDeclineOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceInvitationDeclineOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A data structure containing options which can be applied when declining a <see cref="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceInvitationDeclineOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceInvitationDeclineOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the ConferenceInvitationDeclineOptions class with a 486 response code (<see cref="F:Microsoft.Rtc.Signaling.ResponseCode.BusyHere" />).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ConferenceInvitationDeclineOptions (int responseCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 responseCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (responseCode As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceInvitationDeclineOptions(int responseCode);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">Response code to be used when declining an incoming conference invitation</param>
+        <summary>
+            Creates a new instance of the ConferenceInvitationDeclineOptions class with a specific response code.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiagnosticsInformation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.DiagnosticsInformation DiagnosticsInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.DiagnosticsInformation DiagnosticsInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions.DiagnosticsInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Property DiagnosticsInformation As DiagnosticsInformation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DiagnosticsInformation ^ DiagnosticsInformation { Microsoft::Rtc::Signaling::DiagnosticsInformation ^ get(); void set(Microsoft::Rtc::Signaling::DiagnosticsInformation ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.DiagnosticsInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the diagnostics information to be included when declining a conference invitation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included in the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseCode">
+      <MemberSignature Language="C#" Value="public int ResponseCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ResponseCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions.ResponseCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseCode As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ResponseCode { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the response code that will be used to decline the incoming <see cref="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the value is outside the range of acceptable response codes for declining a conference invitation
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseText">
+      <MemberSignature Language="C#" Value="public string ResponseText { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ResponseText" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions.ResponseText" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseText As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ResponseText { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the response text that will be used to decline the incoming conference invitation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If this value is not set or set to null or empty then default response text based on the response code set will be used.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

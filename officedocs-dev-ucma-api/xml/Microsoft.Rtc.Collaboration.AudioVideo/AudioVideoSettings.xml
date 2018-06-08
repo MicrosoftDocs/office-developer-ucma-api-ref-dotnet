@@ -1,0 +1,154 @@
+﻿<Type Name="AudioVideoSettings" FullName="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings">
+  <TypeSignature Language="C#" Value="public class AudioVideoSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AudioVideoSettings extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings" />
+  <TypeSignature Language="VB.NET" Value="Public Class AudioVideoSettings" />
+  <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoSettings" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Global configuration of audio/video platform. Application can define detailed platform attributes.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FipsCompliantMediaEncryptionRequired">
+      <MemberSignature Language="C#" Value="public bool FipsCompliantMediaEncryptionRequired { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool FipsCompliantMediaEncryptionRequired" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings.FipsCompliantMediaEncryptionRequired" />
+      <MemberSignature Language="VB.NET" Value="Public Property FipsCompliantMediaEncryptionRequired As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool FipsCompliantMediaEncryptionRequired { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether FIPS-compliant encryption should be used to secure audio/video media.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPortRange">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange GetPortRange ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange GetPortRange() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings.GetPortRange" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPortRange () As NetworkPortRange" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::AudioVideo::NetworkPortRange ^ GetPortRange();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns copy of audio/video port range policy. 
+            </summary>
+        <returns>Global audio/video communication network port range.</returns>
+        <remarks>
+          <para>
+            Any change made on the returned
+            object will not affect the global audio/video port configuration policy. In order to apply
+            changes, the application must call the SetPortRange method.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetQualityOfService">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.AudioVideo.QualityOfService GetQualityOfService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Collaboration.AudioVideo.QualityOfService GetQualityOfService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings.GetQualityOfService" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetQualityOfService () As QualityOfService" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::AudioVideo::QualityOfService ^ GetQualityOfService();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.AudioVideo.QualityOfService</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns audio/video quality of service (qos) policy.
+            </summary>
+        <returns>Global audio/video quality of service</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxEarlyMediaSessionsSupported">
+      <MemberSignature Language="C#" Value="public int MaxEarlyMediaSessionsSupported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxEarlyMediaSessionsSupported" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings.MaxEarlyMediaSessionsSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxEarlyMediaSessionsSupported As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxEarlyMediaSessionsSupported { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum number of supported early media sessions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when assigned value is not in valid range.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPortRange">
+      <MemberSignature Language="C#" Value="public void SetPortRange (Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange portRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPortRange(class Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange portRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoSettings.SetPortRange(Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPortRange (portRange As NetworkPortRange)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetPortRange(Microsoft::Rtc::Collaboration::AudioVideo::NetworkPortRange ^ portRange);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="portRange" Type="Microsoft.Rtc.Collaboration.AudioVideo.NetworkPortRange" />
+      </Parameters>
+      <Docs>
+        <param name="portRange">New global audio/video port range policy.</param>
+        <summary>
+            Apply global audio/video port range policy as specified in forwarded parameter. 
+            </summary>
+        <remarks>
+          <para>
+            Any change in the  
+            portRange parameter after calling this method will not affect the global audio/video port range
+            configuration policy.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when portRange argument is null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

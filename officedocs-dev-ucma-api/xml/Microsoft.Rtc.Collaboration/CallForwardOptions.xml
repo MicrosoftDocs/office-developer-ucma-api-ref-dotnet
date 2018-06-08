@@ -1,0 +1,139 @@
+﻿<Type Name="CallForwardOptions" FullName="Microsoft.Rtc.Collaboration.CallForwardOptions">
+  <TypeSignature Language="C#" Value="public class CallForwardOptions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CallForwardOptions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallForwardOptions" />
+  <TypeSignature Language="VB.NET" Value="Public Class CallForwardOptions" />
+  <TypeSignature Language="C++ CLI" Value="public ref class CallForwardOptions" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Optional parameter for forwarding the call.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallForwardOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallForwardOptions.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallForwardOptions();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a new instance of the call forward options class with a 303 response code.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CallForwardOptions (int responseCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 responseCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallForwardOptions.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (responseCode As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; CallForwardOptions(int responseCode);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="responseCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="responseCode">Response code with which the call will be forwarded.</param>
+        <summary>
+            Creates a new instance of call forward options with given response code
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiagnosticsInformation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Signaling.DiagnosticsInformation DiagnosticsInformation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Signaling.DiagnosticsInformation DiagnosticsInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallForwardOptions.DiagnosticsInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Property DiagnosticsInformation As DiagnosticsInformation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DiagnosticsInformation ^ DiagnosticsInformation { Microsoft::Rtc::Signaling::DiagnosticsInformation ^ get(); void set(Microsoft::Rtc::Signaling::DiagnosticsInformation ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Signaling.DiagnosticsInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the diagnostics information to be included when forwarding the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Headers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; Headers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallForwardOptions.Headers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Headers As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the list of custom signaling headers to be included in the response.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The application should add its custom headers to this list. Restricted headers cannot be included in the response.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResponseCode">
+      <MemberSignature Language="C#" Value="public int ResponseCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ResponseCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallForwardOptions.ResponseCode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResponseCode As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ResponseCode { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the response code for forwarding the call.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Only response codes in the 3xx range are allowed for ForwardOptions.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when response code is less than 300 or greater than 399.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

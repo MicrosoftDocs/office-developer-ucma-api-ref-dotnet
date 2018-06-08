@@ -1,0 +1,404 @@
+﻿<Type Name="PresenceCategoryWithMetaData" FullName="Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData">
+  <TypeSignature Language="C#" Value="public class PresenceCategoryWithMetaData" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PresenceCategoryWithMetaData extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData" />
+  <TypeSignature Language="VB.NET" Value="Public Class PresenceCategoryWithMetaData" />
+  <TypeSignature Language="C++ CLI" Value="public ref class PresenceCategoryWithMetaData" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            PresenceCategoryWithMetaData class represents a Rich Presence Category data and contains certain meta data information 
+            in addition to the category data.
+            </summary>
+    <remarks>
+      <para>
+            Category data represents the actual presence category data published along with other attributes. The attributes
+            such as instanceId, version, container and expireType, will always be populated (unless the category is deleted where
+            only the value of the <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ContainerId" /> property will be populated) when it is the presence of the endpoint owners. When an object of this class is
+            received while subscribing to other people's presence, only category data and container ID will have valid information.
+            </para>
+      <para>
+        <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Name" />, <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ContainerId" />and <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.InstanceId" />
+            forms a key that must be unique within a publication service request. Otherwise
+            the server responds with a duplicate publication error.
+            </para>
+      <para>
+            All the attributes are settable, except <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Version" />, which is supplied internally by UCMA. 
+            When a category is successfully published, the server updates its cached category version number of the category at its end 
+            and informs all the endpoints if they have subscribed to receive notifications.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PresenceCategoryWithMetaData (long instanceId, int containerId, Microsoft.Rtc.Collaboration.Presence.PresenceCategory item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int64 instanceId, int32 containerId, class Microsoft.Rtc.Collaboration.Presence.PresenceCategory item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.#ctor(System.Int64,System.Int32,Microsoft.Rtc.Collaboration.Presence.PresenceCategory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (instanceId As Long, containerId As Integer, item As PresenceCategory)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceCategoryWithMetaData(long instanceId, int containerId, Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^ item);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="containerId" Type="System.Int32" />
+        <Parameter Name="item" Type="Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
+      </Parameters>
+      <Docs>
+        <param name="instanceId">Instance attribute of the category.</param>
+        <param name="containerId">ID of the container, where category is published or being published.</param>
+        <param name="item">Data to be used as inner XML for the category.</param>
+        <summary>
+            Creates a new instance of the PresenceCategoryWithMetaData class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="item" /> is null.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="instanceId" /> is not within zero and Int32.MaxValue.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PresenceCategoryWithMetaData (string name, long instanceId, int containerId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int64 instanceId, int32 containerId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.#ctor(System.String,System.Int64,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, instanceId As Long, containerId As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceCategoryWithMetaData(System::String ^ name, long instanceId, int containerId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="instanceId" Type="System.Int64" />
+        <Parameter Name="containerId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the category.</param>
+        <param name="instanceId">Instance attribute of the category.</param>
+        <param name="containerId">ID of the container where category is published or being published.</param>
+        <summary>
+            Creates a new instance of the PresenceCategoryWithMetaData class with empty data.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="name" /> is null.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when <paramref name="name" /> is empty.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when <paramref name="instanceId" /> is not within zero and Int32.MaxValue.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Category">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.PresenceCategory Category { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.Presence.PresenceCategory Category" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Category" />
+      <MemberSignature Language="VB.NET" Value="Public Property Category As PresenceCategory" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^ Category { Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^ get(); void set(Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.PresenceCategory</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the actual presence category data.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainerId">
+      <MemberSignature Language="C#" Value="public int ContainerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ContainerId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ContainerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainerId As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ContainerId { int get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the container ID of the container wherein the category is published.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            This data will only be received in LocalOwnerPresence. In notifications about RemotePresence, 
+            ContainerId has no meaning.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateInnerDataXml">
+      <MemberSignature Language="C#" Value="public virtual string CreateInnerDataXml ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string CreateInnerDataXml() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.CreateInnerDataXml" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateInnerDataXml () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::String ^ CreateInnerDataXml();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an XML string that represents the presence category data.
+            </summary>
+        <returns>XML string with category data.</returns>
+        <remarks>
+          <para>Empty string will be returned if <see cref="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Category" /> is set to null.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Expires">
+      <MemberSignature Language="C#" Value="public int Expires { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Expires" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Expires" />
+      <MemberSignature Language="VB.NET" Value="Public Property Expires As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Expires { int get(); void set(int value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the expiration time for the category.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            Expiration dictates the time to live for the published category. The client should refresh the category
+            within this period, otherwise server will remove it on expiry.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpiryPolicy">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy ExpiryPolicy { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy ExpiryPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ExpiryPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExpiryPolicy As ExpiryPolicy" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy ExpiryPolicy { Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy get(); void set(Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets expiration type for the category. The default expiration type is "endpoint".
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtensionXml">
+      <MemberSignature Language="C#" Value="public string ExtensionXml { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ExtensionXml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ExtensionXml" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExtensionXml As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExtensionXml { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the extension category xml set by derived classes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InstanceId">
+      <MemberSignature Language="C#" Value="public long InstanceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 InstanceId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.InstanceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long InstanceId { long get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the instance ID of the category item.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the category.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParseInnerDataXml">
+      <MemberSignature Language="C#" Value="public virtual void ParseInnerDataXml (System.Xml.XmlReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ParseInnerDataXml(class System.Xml.XmlReader reader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.ParseInnerDataXml(System.Xml.XmlReader)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ParseInnerDataXml (reader As XmlReader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void ParseInnerDataXml(System::Xml::XmlReader ^ reader);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.Xml.XmlReader" />
+      </Parameters>
+      <Docs>
+        <param name="reader"> XmlReader for the xml document to be parsed.</param>
+        <summary>
+            Parses XML into an instance that represents the presence category.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PublishTime">
+      <MemberSignature Language="C#" Value="public DateTime PublishTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime PublishTime" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.PublishTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublishTime As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime PublishTime { DateTime get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the time of publication for the Category item.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownContainer">
+      <MemberSignature Language="C#" Value="public const int UnknownContainer = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 UnknownContainer = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.UnknownContainer" />
+      <MemberSignature Language="VB.NET" Value="Public Const UnknownContainer As Integer  = -1" />
+      <MemberSignature Language="C++ CLI" Value="public: int UnknownContainer = -1;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>
+            Constant for unknown container
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnknownExpires">
+      <MemberSignature Language="C#" Value="public const int UnknownExpires = -1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 UnknownExpires = (-1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.UnknownExpires" />
+      <MemberSignature Language="VB.NET" Value="Public Const UnknownExpires As Integer  = -1" />
+      <MemberSignature Language="C++ CLI" Value="public: int UnknownExpires = -1;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>-1</MemberValue>
+      <Docs>
+        <summary>
+            Constant for unknown expiry time
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public long Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData.Version" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Long" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property long Version { long get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the version number of the category item.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

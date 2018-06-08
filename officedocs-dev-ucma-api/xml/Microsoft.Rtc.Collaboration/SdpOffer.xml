@@ -1,0 +1,155 @@
+﻿<Type Name="SdpOffer" FullName="Microsoft.Rtc.Collaboration.SdpOffer">
+  <TypeSignature Language="C#" Value="public class SdpOffer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SdpOffer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.SdpOffer" />
+  <TypeSignature Language="VB.NET" Value="Public Class SdpOffer" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SdpOffer" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            SdpOffer, contains the sdp offer message received from the remote endpoint or 
+            sdp offer being send to the remote endpoint. 
+            </summary>
+    <remarks>
+      <para>
+            Sdp offer may contain the multiple sdp offers. If multiple offers are specified in the outgoing 
+            offer, it will be send out in multipart/mime message.
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpOffer (Microsoft.Rtc.Collaboration.SdpContentDescription description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.SdpContentDescription description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpOffer.#ctor(Microsoft.Rtc.Collaboration.SdpContentDescription)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (description As SdpContentDescription)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpOffer(Microsoft::Rtc::Collaboration::SdpContentDescription ^ description);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="Microsoft.Rtc.Collaboration.SdpContentDescription" />
+      </Parameters>
+      <Docs>
+        <param name="description">Sdp containing the offer sdp.</param>
+        <summary>
+            Create the instance of SdpOffer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpOffer (Microsoft.Rtc.Collaboration.SdpContentDescription description, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.SdpContentDescription description, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpOffer.#ctor(Microsoft.Rtc.Collaboration.SdpContentDescription,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (description As SdpContentDescription, headers As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpOffer(Microsoft::Rtc::Collaboration::SdpContentDescription ^ description, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="description" Type="Microsoft.Rtc.Collaboration.SdpContentDescription" />
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="description">Sdp containing the offer sdp.</param>
+        <param name="headers">Additional headers to be sent with the Offer.</param>
+        <summary>
+            Create the instance of SdpOffer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SdpOffer (System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt; descriptions, System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; headers);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Collaboration.SdpContentDescription&gt; descriptions, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpOffer.#ctor(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.SdpContentDescription},System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (descriptions As IEnumerable(Of SdpContentDescription), headers As IEnumerable(Of SignalingHeader))" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpOffer(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::SdpContentDescription ^&gt; ^ descriptions, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="descriptions" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt;" />
+        <Parameter Name="headers" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="descriptions">List of Sdp bodies to be sent in multipart mime offer.</param>
+        <param name="headers">Additional headers to be sent with the Offer.</param>
+        <summary>
+            Create the instance of SdpOffer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageHeaders">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; MessageHeaders { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; MessageHeaders" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SdpOffer.MessageHeaders" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageHeaders As Collection(Of SignalingHeader)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ MessageHeaders { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of Headers on the message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            In case of incoming offer MessageHeaders represents all the Signaling Headers received on offer message.
+            In case of outgoing offer MessageHeaders represents the additional headers, MediaProvider willing to include with the offer message.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offers">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt; Offers { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.Collection`1&lt;class Microsoft.Rtc.Collaboration.SdpContentDescription&gt; Offers" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SdpOffer.Offers" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Offers As Collection(Of SdpContentDescription)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::SdpContentDescription ^&gt; ^ Offers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::SdpContentDescription ^&gt; ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            List of Sdps to be send or received in the offer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            If multiple SdpDescription are specified on the offer, they will be send out as multipart/mime offer
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

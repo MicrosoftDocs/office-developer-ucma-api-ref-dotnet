@@ -1,0 +1,160 @@
+﻿<Type Name="ConferenceMcuNotificationProcessor" FullName="Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor">
+  <TypeSignature Language="C#" Value="public abstract class ConferenceMcuNotificationProcessor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ConferenceMcuNotificationProcessor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ConferenceMcuNotificationProcessor" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceMcuNotificationProcessor abstract" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ConferenceMcuNotificationProcessor (Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.#ctor(Microsoft.Rtc.Collaboration.ConferenceSession)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ConferenceMcuNotificationProcessor(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="conferenceSession" Type="Microsoft.Rtc.Collaboration.ConferenceSession" />
+      </Parameters>
+      <Docs>
+        <param name="conferenceSession">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleGetMcuProperties">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; HandleGetMcuProperties (byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.McuSessionProperties&gt; HandleGetMcuProperties(unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleGetMcuProperties(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleGetMcuProperties (body As Byte()) As PropertyMergeInformation(Of McuSessionProperties)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ HandleGetMcuProperties(cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleGetParticipantEndpointProperties">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; HandleGetParticipantEndpointProperties (byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; HandleGetParticipantEndpointProperties(unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleGetParticipantEndpointProperties(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleGetParticipantEndpointProperties (body As Byte()) As PropertyMergeInformation(Of McuParticipantEndpointProperties)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ HandleGetParticipantEndpointProperties(cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleMergeMcuProperties">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; HandleMergeMcuProperties (Microsoft.Rtc.Collaboration.McuSessionProperties properties, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.McuSessionProperties&gt; HandleMergeMcuProperties(class Microsoft.Rtc.Collaboration.McuSessionProperties properties, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleMergeMcuProperties(Microsoft.Rtc.Collaboration.McuSessionProperties,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleMergeMcuProperties (properties As McuSessionProperties, body As Byte()) As PropertyMergeInformation(Of McuSessionProperties)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ HandleMergeMcuProperties(Microsoft::Rtc::Collaboration::McuSessionProperties ^ properties, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.McuSessionProperties" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="properties">To be added.</param>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleMergeParticipantEndpointProperties">
+      <MemberSignature Language="C#" Value="protected abstract Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; HandleMergeParticipantEndpointProperties (Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties properties, byte[] body);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation`1&lt;class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; HandleMergeParticipantEndpointProperties(class Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties properties, unsigned int8[] body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleMergeParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleMergeParticipantEndpointProperties (properties As McuParticipantEndpointProperties, body As Byte()) As PropertyMergeInformation(Of McuParticipantEndpointProperties)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ HandleMergeParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^ properties, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties" />
+        <Parameter Name="body" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="properties">To be added.</param>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="McuType">
+      <MemberSignature Language="C#" Value="public abstract string McuType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string McuType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.McuType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property McuType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ McuType { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

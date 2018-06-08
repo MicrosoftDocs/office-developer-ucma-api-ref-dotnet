@@ -1,0 +1,434 @@
+﻿<Type Name="RealTimeAddress" FullName="Microsoft.Rtc.Signaling.RealTimeAddress">
+  <TypeSignature Language="C#" Value="public class RealTimeAddress : IEquatable&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RealTimeAddress extends System.Object implements class System.IEquatable`1&lt;class Microsoft.Rtc.Signaling.RealTimeAddress&gt;" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeAddress" />
+  <TypeSignature Language="VB.NET" Value="Public Class RealTimeAddress&#xA;Implements IEquatable(Of RealTimeAddress)" />
+  <TypeSignature Language="C++ CLI" Value="public ref class RealTimeAddress : IEquatable&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Defines the structure identifying a session target.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RealTimeAddress (string uri);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeAddress(System::String ^ uri);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">
+            The URI of the identity. The URI can be a GRUU, a sip URI or a tel URI.
+            </param>
+        <summary>
+            Creates a new instance of RealTimeAddress.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RealTimeAddress (string uri, string endpointId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri, string endpointId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String, endpointId As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeAddress(System::String ^ uri, System::String ^ endpointId);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="endpointId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">
+            The URI of the identity.
+            </param>
+        <param name="endpointId">
+            A string that uniquely identifies the endpoint.
+            </param>
+        <summary>
+            Creates a new instance of RealTimeAddress.
+            </summary>
+        <remarks>
+          <para>
+            If the URI represents a GRUU, the endpoint ID is not needed but can be included with no harm.
+            The URI can be sip URI or tel URI. For a tel URI the endpoint ID should be passed as null.
+            </para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">
+            Thrown when <paramref name="uri" /> is null, empty, or not formed correctly.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RealTimeAddress (string uri, string defaultDomain, string phoneContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uri, string defaultDomain, string phoneContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.#ctor(System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String, defaultDomain As String, phoneContext As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeAddress(System::String ^ uri, System::String ^ defaultDomain, System::String ^ phoneContext);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uri" Type="System.String" />
+        <Parameter Name="defaultDomain" Type="System.String" />
+        <Parameter Name="phoneContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uri">
+            The URI of the identity. The URI can be sip URI or tel URI. 
+            If <paramref name="phoneContext" /> is not null the URI can also be just the phone number.
+            </param>
+        <param name="defaultDomain">The default domain to use when converting a tel URI to a sip URI. If null the tel URI will not be converted to a sip URI.</param>
+        <param name="phoneContext">The default phone context to use if missing in the given tel URI. Can be null.</param>
+        <summary>
+            Creates a new instance of RealTimeAddress.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndpointId">
+      <MemberSignature Language="C#" Value="public string EndpointId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EndpointId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.EndpointId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the endpoint identifier for the target.
+            </summary>
+        <value>
+            The endpoint identifier or the empty string. 
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Microsoft.Rtc.Signaling.RealTimeAddress other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Microsoft.Rtc.Signaling.RealTimeAddress other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.Equals(Microsoft.Rtc.Signaling.RealTimeAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As RealTimeAddress) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Signaling::RealTimeAddress ^ other);" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+      </Parameters>
+      <Docs>
+        <param name="other">The target real-time address object to compare with.</param>
+        <summary>
+            Returns true if the current RealTimeAddress is equal to the passed RealTimeAddress. It compares the URI string and epid.
+            </summary>
+        <returns>Returns true when this instance matched the supplied target instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The target real-time address object to compare with.</param>
+        <summary>
+            Returns true if the current RealTimeAddress is equal to the passed RealTimeAddress. It compares the URI string and epid.
+            </summary>
+        <returns>Returns true if the addresses are equal, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Generates a hash code for the realTime Address object based on URI string and epid.
+            </summary>
+        <returns>Returns the hash code for this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEndpointTarget">
+      <MemberSignature Language="C#" Value="public bool IsEndpointTarget { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEndpointTarget" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.IsEndpointTarget" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEndpointTarget As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEndpointTarget { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value that indicates whether this address targets a specific endpoint.
+            </summary>
+        <value>
+            True if the target is for a device (when URI is GRUU or epid exists in this address), False otherwise.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGruu">
+      <MemberSignature Language="C#" Value="public bool IsGruu { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsGruu" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.IsGruu" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsGruu As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsGruu { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating if the URI passed is a GRUU URI.
+            </summary>
+        <value>True if the URI is a GRUU URI, false otherwise.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPhone">
+      <MemberSignature Language="C#" Value="public bool IsPhone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPhone" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.IsPhone" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPhone As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsPhone { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the value indicating if the URI passed represents a phone device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Microsoft.Rtc.Signaling.RealTimeAddress address1, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Microsoft.Rtc.Signaling.RealTimeAddress address1, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.op_Equality(Microsoft.Rtc.Signaling.RealTimeAddress,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (address1 As RealTimeAddress, obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Signaling::RealTimeAddress ^ address1, System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address1" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address1">The first address to compare.</param>
+        <param name="obj">The object to compare to.</param>
+        <summary>
+            Returns true if the current RealTimeAddress is equal to the passed RealTimeAddress. It compares the URI string and epid.
+            </summary>
+        <returns>Returns true if the addresses are equal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Microsoft.Rtc.Signaling.RealTimeAddress address1, object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Microsoft.Rtc.Signaling.RealTimeAddress address1, object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.op_Inequality(Microsoft.Rtc.Signaling.RealTimeAddress,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (address1 As RealTimeAddress, obj As Object) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Signaling::RealTimeAddress ^ address1, System::Object ^ obj);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address1" Type="Microsoft.Rtc.Signaling.RealTimeAddress" />
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="address1">The first address to compare.</param>
+        <param name="obj">The object to compare to.</param>
+        <summary>
+            Returns true if the current RealTimeAddress is not equal to the passed RealTimeAddress. Compares the URI string and epid.
+            </summary>
+        <returns>Returns true if address are equal, otherwise returns false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneUri">
+      <MemberSignature Language="C#" Value="public string PhoneUri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PhoneUri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.PhoneUri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneUri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PhoneUri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the tel URI of this target. This is null if the target is not phone.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Obtains the string representation of the object.
+            </summary>
+        <returns>Returns the string representation of the object.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the sip URI of this target. This can be null if the tel URI was given that could not converted to 
+            sip URI due to missing default domain.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAtHost">
+      <MemberSignature Language="C#" Value="public string UserAtHost { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserAtHost" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.UserAtHost" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAtHost As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAtHost { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the user@host portion of the sip URI, if available. If the sip URI is not available, 
+            the value returned is String.Empty.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

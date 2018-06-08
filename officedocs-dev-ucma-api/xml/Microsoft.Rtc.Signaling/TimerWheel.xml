@@ -1,0 +1,283 @@
+﻿<Type Name="TimerWheel" FullName="Microsoft.Rtc.Signaling.TimerWheel">
+  <TypeSignature Language="C#" Value="public class TimerWheel : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TimerWheel extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.TimerWheel" />
+  <TypeSignature Language="VB.NET" Value="Public Class TimerWheel&#xA;Implements IDisposable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TimerWheel : IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Provides support for managing a large number of timers represented by TimerItem instances. The timer wheel
+            is optimized so that add/remove operations for timer items is constant time (O(1)).
+            </summary>
+    <remarks>
+      <para>
+            The implementation leverage a single system timer to identity and select expired timer items managed. 
+            The timer wheel maintains a wheel comprising of sectors. Each sector contains timer items that belong 
+            to that sector. The timer wheel manages the current sector index which is incremented every time the 
+            system timer expires. All the timer items in the sector are examined to determine those that have expired.
+            The expired timer items are removed from the sector and the corresponding expiry callbacks are invoked in 
+            a separate worker thread. Each timer items maintains the timespan, the sector index, the index within the sector, and a count
+            indicating the number of times the sector needs to be hit before the timer item will expire. The sector span
+            indicates the timer span value for the system timer. It is possible for an application to use to two timer wheel to 
+            manager both fine and coarse timer items. For managing fine time items, the sector span can be very small such as 5 seconds.
+            For coarse timer items, the sector span can be larger such as 1 minute. 
+            
+            The application should choose the number of sectors and sector span so that the average number of items that can exist
+            in a sector can be processed within the sector span time. The processing time includes the time it takes the examine all
+            the timer items in the sector to determine the ones that expired but does not include the time it takes to invoke the
+            expiry callback for the timer items. The processing of a sector involves rearranging all the items so that the expiry 
+            timer items are at the end of the list and then the list is truncated to remove the expired items.
+            
+            </para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimerWheel ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TimerWheel();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the TimerWheel class with
+            the default number of sectors (512) and sector span (1 second).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TimerWheel (int sectorCount, TimeSpan sectorSpan);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 sectorCount, valuetype System.TimeSpan sectorSpan) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.#ctor(System.Int32,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sectorCount As Integer, sectorSpan As TimeSpan)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; TimerWheel(int sectorCount, TimeSpan sectorSpan);" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sectorCount" Type="System.Int32" />
+        <Parameter Name="sectorSpan" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="sectorCount">
+            The number of sectors in the timer wheel.
+            </param>
+        <param name="sectorSpan">
+            The span for each sector in seconds.
+            </param>
+        <summary>
+            Initializes a new instance of the TimerWheel class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown when the sector count or sector span arguments are out of range or 
+            unable to support maximum possible timer item.
+            </exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSectorCount">
+      <MemberSignature Language="C#" Value="public const int DefaultSectorCount = 512;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultSectorCount = (512)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.DefaultSectorCount" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultSectorCount As Integer  = 512" />
+      <MemberSignature Language="C++ CLI" Value="public: int DefaultSectorCount = 512;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>512</MemberValue>
+      <Docs>
+        <summary>
+            The number of sectors in the timer wheel. This value should be a power of 2. 
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSectorSpan">
+      <MemberSignature Language="C#" Value="public const int DefaultSectorSpan = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultSectorSpan = (1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.DefaultSectorSpan" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultSectorSpan As Integer  = 1" />
+      <MemberSignature Language="C++ CLI" Value="public: int DefaultSectorSpan = 1;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            The span for each sector. This gives the resolution for the timer wheel.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes the timerwheel. The timerwheel will no longer be useful.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True =&gt; clean up managed resources</param>
+        <summary>
+            Dispose timerwheel.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~TimerWheel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="C++ CLI" Value="!TimerWheel ()" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Releases resources held by the TimerWheel object before garbage collection.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxCurrentCount">
+      <MemberSignature Language="C#" Value="public const int MaxCurrentCount = 255;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxCurrentCount = (255)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.MaxCurrentCount" />
+      <MemberSignature Language="VB.NET" Value="Public Const MaxCurrentCount As Integer  = 255" />
+      <MemberSignature Language="C++ CLI" Value="public: int MaxCurrentCount = 255;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>255</MemberValue>
+      <Docs>
+        <summary>
+            Maximum possible value for the count for a timer item.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSectors">
+      <MemberSignature Language="C#" Value="public const int MaxSectors = 65535;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxSectors = (65535)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.MaxSectors" />
+      <MemberSignature Language="VB.NET" Value="Public Const MaxSectors As Integer  = 65535" />
+      <MemberSignature Language="C++ CLI" Value="public: int MaxSectors = 65535;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>65535</MemberValue>
+      <Docs>
+        <summary>
+            Maximum possible value for number of sectors.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSpanSeconds">
+      <MemberSignature Language="C#" Value="public const int MaxSpanSeconds = 65535;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaxSpanSeconds = (65535)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.MaxSpanSeconds" />
+      <MemberSignature Language="VB.NET" Value="Public Const MaxSpanSeconds As Integer  = 65535" />
+      <MemberSignature Language="C++ CLI" Value="public: int MaxSpanSeconds = 65535;" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>65535</MemberValue>
+      <Docs>
+        <summary>
+            Maximum possible value for span seconds.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

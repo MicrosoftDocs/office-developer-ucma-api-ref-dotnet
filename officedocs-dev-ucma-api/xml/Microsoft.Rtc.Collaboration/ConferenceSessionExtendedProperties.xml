@@ -1,0 +1,125 @@
+﻿<Type Name="ConferenceSessionExtendedProperties" FullName="Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties">
+  <TypeSignature Language="C#" Value="public class ConferenceSessionExtendedProperties" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ConferenceSessionExtendedProperties extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties" />
+  <TypeSignature Language="VB.NET" Value="Public Class ConferenceSessionExtendedProperties" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ConferenceSessionExtendedProperties" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+    <AssemblyVersion>6.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents extended properties of the conference.
+            </summary>
+    <remarks>
+      <para>
+            The extended properties of a ConferenceSession can be retrieved by calling <see cref="M:Microsoft.Rtc.Collaboration.ConferenceSession.BeginGetExtendedProperties(System.AsyncCallback,System.Object)" /></para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Passcode">
+      <MemberSignature Language="C#" Value="public string Passcode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Passcode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties.Passcode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Passcode As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Passcode { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the conference passcode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The returned value could be an empty string indicating no passcode was set for the conference.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhoneInformation">
+      <MemberSignature Language="C#" Value="public Microsoft.Rtc.Collaboration.ConferenceManagement.ConferencePhoneInformation PhoneInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Rtc.Collaboration.ConferenceManagement.ConferencePhoneInformation PhoneInformation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties.PhoneInformation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneInformation As ConferencePhoneInformation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceManagement::ConferencePhoneInformation ^ PhoneInformation { Microsoft::Rtc::Collaboration::ConferenceManagement::ConferencePhoneInformation ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Rtc.Collaboration.ConferenceManagement.ConferencePhoneInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the phone numbers to access the conference.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsPhoneAccess">
+      <MemberSignature Language="C#" Value="public bool SupportsPhoneAccess { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SupportsPhoneAccess" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties.SupportsPhoneAccess" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportsPhoneAccess As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SupportsPhoneAccess { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the conference could be joined by a phone.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WebUrl">
+      <MemberSignature Language="C#" Value="public string WebUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WebUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceSessionExtendedProperties.WebUrl" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WebUrl As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ WebUrl { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
+        <AssemblyVersion>6.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a web Url to access the conference from outside the corporate network.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The return value could be an empty string.
+            </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
