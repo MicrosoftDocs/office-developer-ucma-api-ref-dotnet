@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.SdpContentDescription" />
   <TypeSignature Language="VB.NET" Value="Public Class SdpContentDescription&#xA;Inherits ContentDescription" />
   <TypeSignature Language="C++ CLI" Value="public ref class SdpContentDescription : Microsoft::Rtc::Signaling::ContentDescription" />
+  <TypeSignature Language="F#" Value="type SdpContentDescription = class&#xA;    inherit ContentDescription" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -30,6 +31,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpContentDescription.#ctor(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sdpBody As Byte())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpContentDescription(cli::array &lt;System::Byte&gt; ^ sdpBody);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.SdpContentDescription : byte[] -&gt; Microsoft.Rtc.Collaboration.SdpContentDescription" Usage="new Microsoft.Rtc.Collaboration.SdpContentDescription sdpBody" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -52,6 +54,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.SdpContentDescription.#ctor(System.Byte[],System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sdpBody As Byte(), contentId As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SdpContentDescription(cli::array &lt;System::Byte&gt; ^ sdpBody, System::String ^ contentId);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.SdpContentDescription : byte[] * string -&gt; Microsoft.Rtc.Collaboration.SdpContentDescription" Usage="new Microsoft.Rtc.Collaboration.SdpContentDescription (sdpBody, contentId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -76,6 +79,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SdpContentDescription.ContentDisposition" />
       <MemberSignature Language="VB.NET" Value="Public Property ContentDisposition As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentDisposition { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); void set(Microsoft::Rtc::Signaling::SignalingHeader ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentDisposition : Microsoft.Rtc.Signaling.SignalingHeader with get, set" Usage="Microsoft.Rtc.Collaboration.SdpContentDescription.ContentDisposition" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -98,6 +102,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.SdpContentDescription.ContentId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContentId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContentId : string" Usage="Microsoft.Rtc.Collaboration.SdpContentDescription.ContentId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

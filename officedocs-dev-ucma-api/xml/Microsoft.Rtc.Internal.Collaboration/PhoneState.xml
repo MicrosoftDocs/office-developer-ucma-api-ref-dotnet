@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.PhoneState" />
   <TypeSignature Language="VB.NET" Value="Public Class PhoneState&#xA;Inherits PresenceStateInternal" />
   <TypeSignature Language="C++ CLI" Value="public ref class PhoneState : Microsoft::Rtc::Internal::Collaboration::PresenceStateInternal" />
+  <TypeSignature Language="F#" Value="type PhoneState = class&#xA;    inherit PresenceStateInternal" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.PhoneState.#ctor(System.Int32,Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal,Microsoft.Rtc.Internal.Collaboration.PhoneState.PhoneCallOption,Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (availability As Integer, activity As PresenceActivityInternal, callOption As PhoneState.PhoneCallOption, phoneUri As RealTimeAddress)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; PhoneState(int availability, Microsoft::Rtc::Internal::Collaboration::PresenceActivityInternal ^ activity, Microsoft::Rtc::Internal::Collaboration::PhoneState::PhoneCallOption callOption, Microsoft::Rtc::Signaling::RealTimeAddress ^ phoneUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.PhoneState : int * Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal * Microsoft.Rtc.Internal.Collaboration.PhoneState.PhoneCallOption * Microsoft.Rtc.Signaling.RealTimeAddress -&gt; Microsoft.Rtc.Internal.Collaboration.PhoneState" Usage="new Microsoft.Rtc.Internal.Collaboration.PhoneState (availability, activity, callOption, phoneUri)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -49,6 +51,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.PhoneState.CallOption" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallOption As PhoneState.PhoneCallOption" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::PhoneState::PhoneCallOption CallOption { Microsoft::Rtc::Internal::Collaboration::PhoneState::PhoneCallOption get(); };" />
+      <MemberSignature Language="F#" Value="member this.CallOption : Microsoft.Rtc.Internal.Collaboration.PhoneState.PhoneCallOption" Usage="Microsoft.Rtc.Internal.Collaboration.PhoneState.CallOption" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +72,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.PhoneState.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="phoneState.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -93,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.PhoneState.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="phoneState.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -114,6 +119,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.PhoneState.InAConference(Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function InAConference (phoneUri As RealTimeAddress) As PhoneState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Collaboration::PhoneState ^ InAConference(Microsoft::Rtc::Signaling::RealTimeAddress ^ phoneUri);" />
+      <MemberSignature Language="F#" Value="static member InAConference : Microsoft.Rtc.Signaling.RealTimeAddress -&gt; Microsoft.Rtc.Internal.Collaboration.PhoneState" Usage="Microsoft.Rtc.Internal.Collaboration.PhoneState.InAConference phoneUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -138,6 +144,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.PhoneState.InstanceId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long InstanceId { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : int64" Usage="Microsoft.Rtc.Internal.Collaboration.PhoneState.InstanceId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -158,6 +165,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.PhoneState.OnthePhone(Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function OnthePhone (phoneUri As RealTimeAddress) As PhoneState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Collaboration::PhoneState ^ OnthePhone(Microsoft::Rtc::Signaling::RealTimeAddress ^ phoneUri);" />
+      <MemberSignature Language="F#" Value="static member OnthePhone : Microsoft.Rtc.Signaling.RealTimeAddress -&gt; Microsoft.Rtc.Internal.Collaboration.PhoneState" Usage="Microsoft.Rtc.Internal.Collaboration.PhoneState.OnthePhone phoneUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -182,6 +190,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.PhoneState.PhoneUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneUri As RealTimeAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ PhoneUri { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PhoneUri : Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Internal.Collaboration.PhoneState.PhoneUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

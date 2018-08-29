@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.InstantMessagingFlow" />
   <TypeSignature Language="VB.NET" Value="Public Class InstantMessagingFlow&#xA;Inherits MediaFlow" />
   <TypeSignature Language="C++ CLI" Value="public ref class InstantMessagingFlow : Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow" />
+  <TypeSignature Language="F#" Value="type InstantMessagingFlow = class&#xA;    inherit MediaFlow" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendFailureDeliveryNotification(Microsoft.Rtc.Collaboration.InstantMessageId,System.Int32,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendFailureDeliveryNotification (messageId As InstantMessageId, responseCode As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendFailureDeliveryNotification(Microsoft::Rtc::Collaboration::InstantMessageId ^ messageId, int responseCode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendFailureDeliveryNotification : Microsoft.Rtc.Collaboration.InstantMessageId * int * AsyncCallback * obj -&gt; IAsyncResult" Usage="instantMessagingFlow.BeginSendFailureDeliveryNotification (messageId, responseCode, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendInstantMessage(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendInstantMessage (textBody As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendInstantMessage(System::String ^ textBody, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendInstantMessage : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="instantMessagingFlow.BeginSendInstantMessage (textBody, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +119,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendInstantMessage(class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendInstantMessage(System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendInstantMessage(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendInstantMessage : System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="instantMessagingFlow.BeginSendInstantMessage (contentType, body, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -171,6 +175,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.BeginSendSuccessDeliveryNotification(Microsoft.Rtc.Collaboration.InstantMessageId,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendSuccessDeliveryNotification (messageId As InstantMessageId, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendSuccessDeliveryNotification(Microsoft::Rtc::Collaboration::InstantMessageId ^ messageId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendSuccessDeliveryNotification : Microsoft.Rtc.Collaboration.InstantMessageId * AsyncCallback * obj -&gt; IAsyncResult" Usage="instantMessagingFlow.BeginSendSuccessDeliveryNotification (messageId, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -208,6 +213,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.Call" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call As InstantMessagingCall" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingCall ^ Call { Microsoft::Rtc::Collaboration::InstantMessagingCall ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Call : Microsoft.Rtc.Collaboration.InstantMessagingCall" Usage="Microsoft.Rtc.Collaboration.InstantMessagingFlow.Call" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -230,6 +236,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.ComposingTimeoutValue" />
       <MemberSignature Language="VB.NET" Value="Public Property ComposingTimeoutValue As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ComposingTimeoutValue { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ComposingTimeoutValue : int with get, set" Usage="Microsoft.Rtc.Collaboration.InstantMessagingFlow.ComposingTimeoutValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -261,6 +268,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.DeliveryNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DeliveryNotificationReceived As EventHandler(Of DeliveryNotificationReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::DeliveryNotificationReceivedEventArgs ^&gt; ^ DeliveryNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.DeliveryNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs&gt; " Usage="member this.DeliveryNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.DeliveryNotificationReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -308,6 +316,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.EndSendFailureDeliveryNotification(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSendFailureDeliveryNotification (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendFailureDeliveryNotification(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendFailureDeliveryNotification : IAsyncResult -&gt; unit" Usage="instantMessagingFlow.EndSendFailureDeliveryNotification result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -342,6 +351,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.EndSendInstantMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendInstantMessage (result As IAsyncResult) As SendInstantMessageResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::SendInstantMessageResult ^ EndSendInstantMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendInstantMessage : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.SendInstantMessageResult" Usage="instantMessagingFlow.EndSendInstantMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -388,6 +398,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.EndSendSuccessDeliveryNotification(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSendSuccessDeliveryNotification (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendSuccessDeliveryNotification(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendSuccessDeliveryNotification : IAsyncResult -&gt; unit" Usage="instantMessagingFlow.EndSendSuccessDeliveryNotification result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -422,6 +433,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.InstantMessagingFlow.Initialize(Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Initialize (template As InstantMessagingFlowTemplate)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Initialize(Microsoft::Rtc::Collaboration::InstantMessagingFlowTemplate ^ template);" />
+      <MemberSignature Language="F#" Value="member this.Initialize : Microsoft.Rtc.Collaboration.InstantMessagingFlowTemplate -&gt; unit" Usage="instantMessagingFlow.Initialize template" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -452,6 +464,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.LocalComposingState" />
       <MemberSignature Language="VB.NET" Value="Public Property LocalComposingState As ComposingState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ComposingState LocalComposingState { Microsoft::Rtc::Collaboration::ComposingState get(); void set(Microsoft::Rtc::Collaboration::ComposingState value); };" />
+      <MemberSignature Language="F#" Value="member this.LocalComposingState : Microsoft.Rtc.Collaboration.ComposingState with get, set" Usage="Microsoft.Rtc.Collaboration.InstantMessagingFlow.LocalComposingState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -533,6 +546,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.MessageConsumptionMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageConsumptionMode As InstantMessageConsumptionMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode MessageConsumptionMode { Microsoft::Rtc::Collaboration::InstantMessageConsumptionMode get(); };" />
+      <MemberSignature Language="F#" Value="member this.MessageConsumptionMode : Microsoft.Rtc.Collaboration.InstantMessageConsumptionMode" Usage="Microsoft.Rtc.Collaboration.InstantMessagingFlow.MessageConsumptionMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -555,6 +569,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.MessageReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event MessageReceived As EventHandler(Of InstantMessageReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InstantMessageReceivedEventArgs ^&gt; ^ MessageReceived;" />
+      <MemberSignature Language="F#" Value="member this.MessageReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs&gt; " Usage="member this.MessageReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessageReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -658,6 +673,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.PropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of InstantMessagingFlowPropertiesChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InstantMessagingFlowPropertiesChangedEventArgs ^&gt; ^ PropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.PropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessagingFlowPropertiesChangedEventArgs&gt; " Usage="member this.PropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.InstantMessagingFlowPropertiesChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -679,6 +695,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.InstantMessagingFlow.RemoteComposingStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteComposingStateChanged As EventHandler(Of ComposingStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ComposingStateChangedEventArgs ^&gt; ^ RemoteComposingStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.RemoteComposingStateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ComposingStateChangedEventArgs&gt; " Usage="member this.RemoteComposingStateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ComposingStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -731,6 +748,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.InstantMessagingFlow.SupportedRemoteMediaCapabilities" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedRemoteMediaCapabilities As InstantMessagingMediaCapabilities" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::InstantMessagingMediaCapabilities ^ SupportedRemoteMediaCapabilities { Microsoft::Rtc::Collaboration::InstantMessagingMediaCapabilities ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedRemoteMediaCapabilities : Microsoft.Rtc.Collaboration.InstantMessagingMediaCapabilities" Usage="Microsoft.Rtc.Collaboration.InstantMessagingFlow.SupportedRemoteMediaCapabilities" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

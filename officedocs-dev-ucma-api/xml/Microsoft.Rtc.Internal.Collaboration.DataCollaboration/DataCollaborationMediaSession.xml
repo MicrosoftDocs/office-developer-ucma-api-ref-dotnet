@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession" />
   <TypeSignature Language="VB.NET" Value="Public Class DataCollaborationMediaSession&#xA;Inherits MediaSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataCollaborationMediaSession : Microsoft::Rtc::Internal::Collaboration::MediaSession" />
+  <TypeSignature Language="F#" Value="type DataCollaborationMediaSession = class&#xA;    inherit MediaSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DataCollaborationMediaSession(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession" Usage="new Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -42,6 +44,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.BeginHandleSessionEstablishment(Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function BeginHandleSessionEstablishment (dialInResponse As ParticipantCommandResponse, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override IAsyncResult ^ BeginHandleSessionEstablishment(Microsoft::Rtc::Internal::Collaboration::ParticipantCommandResponse ^ dialInResponse, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginHandleSessionEstablishment : Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse * AsyncCallback * obj -&gt; IAsyncResult" Usage="dataCollaborationMediaSession.BeginHandleSessionEstablishment (dialInResponse, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.BeginHandleTermination(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function BeginHandleTermination (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override IAsyncResult ^ BeginHandleTermination(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult" Usage="dataCollaborationMediaSession.BeginHandleTermination (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -95,6 +99,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Rtc.Client.Psom.Kernel.ITransportProvider CreateTransportProvider(class Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo connectionInfo) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.CreateTransportProvider(Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Rtc::Client::Psom::Kernel::ITransportProvider ^ CreateTransportProvider(Microsoft::Rtc::Client::Psom::Kernel::ConnectionInfo ^ connectionInfo);" />
+      <MemberSignature Language="F#" Value="abstract member CreateTransportProvider : Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo -&gt; Microsoft.Rtc.Client.Psom.Kernel.ITransportProvider&#xA;override this.CreateTransportProvider : Microsoft.Rtc.Client.Psom.Kernel.ConnectionInfo -&gt; Microsoft.Rtc.Client.Psom.Kernel.ITransportProvider" Usage="dataCollaborationMediaSession.CreateTransportProvider connectionInfo" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -124,6 +129,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.DataSessionInitialized" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DataSessionInitialized As EventHandler(Of DataSessionInitializedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataSessionInitializedEventArgs ^&gt; ^ DataSessionInitialized;" />
+      <MemberSignature Language="F#" Value="member this.DataSessionInitialized : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs&gt; " Usage="member this.DataSessionInitialized : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -143,6 +149,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.EndHandleSessionEstablishment(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function EndHandleSessionEstablishment (result As IAsyncResult) As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EndHandleSessionEstablishment(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndHandleSessionEstablishment : IAsyncResult -&gt; seq&lt;string&gt;" Usage="dataCollaborationMediaSession.EndHandleSessionEstablishment result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -167,6 +174,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.EndHandleTermination(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub EndHandleTermination (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void EndHandleTermination(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndHandleTermination : IAsyncResult -&gt; unit" Usage="dataCollaborationMediaSession.EndHandleTermination result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -190,6 +198,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.MediaSessionConfigurationRequested" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event MediaSessionConfigurationRequested As EventHandler(Of MediaSessionConfigurationRequestedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::MediaSessionConfigurationRequestedEventArgs ^&gt; ^ MediaSessionConfigurationRequested;" />
+      <MemberSignature Language="F#" Value="member this.MediaSessionConfigurationRequested : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs&gt; " Usage="member this.MediaSessionConfigurationRequested : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -209,6 +218,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.OnDataSessionInitialized(Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnDataSessionInitialized (args As DataSessionInitializedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnDataSessionInitialized(Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataSessionInitializedEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnDataSessionInitialized : Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs -&gt; unit&#xA;override this.OnDataSessionInitialized : Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataSessionInitializedEventArgs -&gt; unit" Usage="dataCollaborationMediaSession.OnDataSessionInitialized args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -232,6 +242,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.OnMediaSessionConfigurationRequested(Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnMediaSessionConfigurationRequested (args As MediaSessionConfigurationRequestedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnMediaSessionConfigurationRequested(Microsoft::Rtc::Internal::Collaboration::DataCollaboration::MediaSessionConfigurationRequestedEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnMediaSessionConfigurationRequested : Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs -&gt; unit&#xA;override this.OnMediaSessionConfigurationRequested : Microsoft.Rtc.Internal.Collaboration.DataCollaboration.MediaSessionConfigurationRequestedEventArgs -&gt; unit" Usage="dataCollaborationMediaSession.OnMediaSessionConfigurationRequested args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -255,6 +266,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationMediaSession.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

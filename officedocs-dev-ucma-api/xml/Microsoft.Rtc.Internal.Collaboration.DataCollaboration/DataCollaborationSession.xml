@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession" />
   <TypeSignature Language="VB.NET" Value="Public Class DataCollaborationSession&#xA;Inherits DataCollaborationMediaSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class DataCollaborationSession : Microsoft::Rtc::Internal::Collaboration::DataCollaboration::DataCollaborationMediaSession" />
+  <TypeSignature Language="F#" Value="type DataCollaborationSession = class&#xA;    inherit DataCollaborationMediaSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DataCollaborationSession(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession" Usage="new Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -42,6 +44,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.BeginHandleSessionEstablishment(Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function BeginHandleSessionEstablishment (dialInResponse As ParticipantCommandResponse, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override IAsyncResult ^ BeginHandleSessionEstablishment(Microsoft::Rtc::Internal::Collaboration::ParticipantCommandResponse ^ dialInResponse, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginHandleSessionEstablishment : Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse * AsyncCallback * obj -&gt; IAsyncResult" Usage="dataCollaborationSession.BeginHandleSessionEstablishment (dialInResponse, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.BeginHandleTermination(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function BeginHandleTermination (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override IAsyncResult ^ BeginHandleTermination(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult" Usage="dataCollaborationSession.BeginHandleTermination (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -96,6 +100,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.ConnectionInfoInitialized" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionInfoInitialized As EventHandler(Of ConnectionInfoInitializedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::DataCollaboration::ConnectionInfoInitializedEventArgs ^&gt; ^ ConnectionInfoInitialized;" />
+      <MemberSignature Language="F#" Value="member this.ConnectionInfoInitialized : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.ConnectionInfoInitializedEventArgs&gt; " Usage="member this.ConnectionInfoInitialized : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.DataCollaboration.ConnectionInfoInitializedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -115,6 +120,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.EndHandleSessionEstablishment(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function EndHandleSessionEstablishment (result As IAsyncResult) As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EndHandleSessionEstablishment(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndHandleSessionEstablishment : IAsyncResult -&gt; seq&lt;string&gt;" Usage="dataCollaborationSession.EndHandleSessionEstablishment result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -139,6 +145,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.EndHandleTermination(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub EndHandleTermination (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; override void EndHandleTermination(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndHandleTermination : IAsyncResult -&gt; unit" Usage="dataCollaborationSession.EndHandleTermination result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -162,6 +169,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.DataCollaboration.DataCollaborationSession.OnConnectionInfoInitialized(Microsoft.Rtc.Internal.Collaboration.DataCollaboration.ConnectionInfoInitializedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnConnectionInfoInitialized (args As ConnectionInfoInitializedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnConnectionInfoInitialized(Microsoft::Rtc::Internal::Collaboration::DataCollaboration::ConnectionInfoInitializedEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnConnectionInfoInitialized : Microsoft.Rtc.Internal.Collaboration.DataCollaboration.ConnectionInfoInitializedEventArgs -&gt; unit&#xA;override this.OnConnectionInfoInitialized : Microsoft.Rtc.Internal.Collaboration.DataCollaboration.ConnectionInfoInitializedEventArgs -&gt; unit" Usage="dataCollaborationSession.OnConnectionInfoInitialized args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

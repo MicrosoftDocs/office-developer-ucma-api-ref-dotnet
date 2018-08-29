@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module InternalConferencingExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class InternalConferencingExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type InternalConferencingExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginSendCommand(class Microsoft.Rtc.Collaboration.McuSession mcuSession, class Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand command, class Microsoft.Rtc.Collaboration.ConferenceCommandOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.BeginSendCommand(Microsoft.Rtc.Collaboration.McuSession,Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand,Microsoft.Rtc.Collaboration.ConferenceCommandOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginSendCommand(Microsoft::Rtc::Collaboration::McuSession ^ mcuSession, Microsoft::Rtc::Internal::Collaboration::Conferencing::Commands::ConferenceCommand ^ command, Microsoft::Rtc::Collaboration::ConferenceCommandOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginSendCommand : Microsoft.Rtc.Collaboration.McuSession * Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand * Microsoft.Rtc.Collaboration.ConferenceCommandOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.BeginSendCommand (mcuSession, command, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginSetEndpointRecording(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, bool isRecording, class Microsoft.Rtc.Collaboration.ParticipantEndpoint endpoint, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.BeginSetEndpointRecording(Microsoft.Rtc.Collaboration.ConferenceSession,System.Boolean,Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginSetEndpointRecording(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession, bool isRecording, Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginSetEndpointRecording : Microsoft.Rtc.Collaboration.ConferenceSession * bool * Microsoft.Rtc.Collaboration.ParticipantEndpoint * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.BeginSetEndpointRecording (conferenceSession, isRecording, endpoint, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -84,6 +87,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Collaboration.ConferenceCommandResponse EndSendCommand(class Microsoft.Rtc.Collaboration.McuSession mcuSession, class System.IAsyncResult result) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.EndSendCommand(Microsoft.Rtc.Collaboration.McuSession,System.IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::ConferenceCommandResponse ^ EndSendCommand(Microsoft::Rtc::Collaboration::McuSession ^ mcuSession, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndSendCommand : Microsoft.Rtc.Collaboration.McuSession * IAsyncResult -&gt; Microsoft.Rtc.Collaboration.ConferenceCommandResponse" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.EndSendCommand (mcuSession, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -109,6 +113,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndSetEndpointRecording(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, class System.IAsyncResult result) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.EndSetEndpointRecording(Microsoft.Rtc.Collaboration.ConferenceSession,System.IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EndSetEndpointRecording(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndSetEndpointRecording : Microsoft.Rtc.Collaboration.ConferenceSession * IAsyncResult -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.EndSetEndpointRecording (conferenceSession, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -133,6 +138,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Collaboration.ConferenceAccessLevel GetCccpAdmissionPolicy(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetCccpAdmissionPolicy(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::ConferenceAccessLevel GetCccpAdmissionPolicy(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetCccpAdmissionPolicy : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; Microsoft.Rtc.Collaboration.ConferenceAccessLevel" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetCccpAdmissionPolicy conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -156,6 +162,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Internal.Collaboration.Conferencing.ConferenceAttendanceType GetConferenceAttendanceType(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetConferenceAttendanceType(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Internal::Collaboration::Conferencing::ConferenceAttendanceType GetConferenceAttendanceType(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetConferenceAttendanceType : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; Microsoft.Rtc.Internal.Collaboration.Conferencing.ConferenceAttendanceType" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetConferenceAttendanceType conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +186,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Signaling.DialogContext GetDialogContext(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetDialogContext(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Signaling::DialogContext ^ GetDialogContext(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetDialogContext : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; Microsoft.Rtc.Signaling.DialogContext" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetDialogContext conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -202,6 +210,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool GetIsAnonymousDialOutAllowed(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetIsAnonymousDialOutAllowed(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static bool GetIsAnonymousDialOutAllowed(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetIsAnonymousDialOutAllowed : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetIsAnonymousDialOutAllowed conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -225,6 +234,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetJoinUrl(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetJoinUrl(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetJoinUrl(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetJoinUrl : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; string" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetJoinUrl conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -248,6 +258,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetLocalCaaUri(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetLocalCaaUri(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetLocalCaaUri(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetLocalCaaUri : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; string" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetLocalCaaUri conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -271,6 +282,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Nullable`1&lt;int64&gt; GetServerMode(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetServerMode(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Nullable&lt;long&gt; GetServerMode(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetServerMode : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; Nullable&lt;int64&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetServerMode conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -294,6 +306,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetTelemetryId(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetTelemetryId(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetTelemetryId(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="static member GetTelemetryId : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; string" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.GetTelemetryId conferenceSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -317,6 +330,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAcpMcuSessionSupport(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession, bool isSupported) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.SetAcpMcuSessionSupport(Microsoft.Rtc.Collaboration.ConferenceSession,System.Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetAcpMcuSessionSupport(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession, bool isSupported);" />
+      <MemberSignature Language="F#" Value="static member SetAcpMcuSessionSupport : Microsoft.Rtc.Collaboration.ConferenceSession * bool -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.SetAcpMcuSessionSupport (conferenceSession, isSupported)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -342,6 +356,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.SetEndpointRecording(Microsoft.Rtc.Collaboration.ConferenceJoinOptions,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub SetEndpointRecording (options As ConferenceJoinOptions, isRecording As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void SetEndpointRecording(Microsoft::Rtc::Collaboration::ConferenceJoinOptions ^ options, bool isRecording);" />
+      <MemberSignature Language="F#" Value="static member SetEndpointRecording : Microsoft.Rtc.Collaboration.ConferenceJoinOptions * bool -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferencingExtensions.SetEndpointRecording (options, isRecording)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession" />
   <TypeSignature Language="VB.NET" Value="Public Class AudioVideoMcuSession&#xA;Inherits McuSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoMcuSession : Microsoft::Rtc::Collaboration::McuSession" />
+  <TypeSignature Language="F#" Value="type AudioVideoMcuSession = class&#xA;    inherit McuSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AttendanceAnnouncementsStatus" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AttendanceAnnouncementsStatus As AttendanceAnnouncementsStatus" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus AttendanceAnnouncementsStatus { Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.AttendanceAnnouncementsStatus : Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AttendanceAnnouncementsStatus" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +68,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AudioMuteAllMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioMuteAllMode As MuteAllMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode AudioMuteAllMode { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode get(); };" />
+      <MemberSignature Language="F#" Value="member this.AudioMuteAllMode : Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AudioMuteAllMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -87,6 +90,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AudioSelfUnmuteAssignment" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioSelfUnmuteAssignment As SelfUnmuteAssignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment AudioSelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); };" />
+      <MemberSignature Language="F#" Value="member this.AudioSelfUnmuteAssignment : Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.AudioSelfUnmuteAssignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -108,6 +112,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginAddToDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddToDefaultRouting (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddToDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddToDefaultRouting : Microsoft.Rtc.Collaboration.ParticipantEndpoint * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginAddToDefaultRouting (endpoint, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -158,6 +163,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginAddToDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AddToDefaultRoutingOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddToDefaultRouting (endpoint As ParticipantEndpoint, options As AddToDefaultRoutingOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddToDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::AddToDefaultRoutingOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddToDefaultRouting : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Collaboration.AddToDefaultRoutingOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginAddToDefaultRouting (endpoint, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -210,6 +216,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDialOut(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDialOut (destinationUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginDialOut : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginDialOut (destinationUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -261,6 +268,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions audioVideoMcuDialOutOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDialOut(System.String,Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuDialOutOptions ^ audioVideoMcuDialOutOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginDialOut : string * Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuDialOutOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginDialOut (destinationUri, audioVideoMcuDialOutOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -313,6 +321,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class Microsoft.Rtc.Collaboration.McuDialOutOptions mcuDialOutOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDialOut(System.String,Microsoft.Rtc.Collaboration.McuDialOutOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::McuDialOutOptions ^ mcuDialOutOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginDialOut : string * Microsoft.Rtc.Collaboration.McuDialOutOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginDialOut (destinationUri, mcuDialOutOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -366,6 +375,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDisableMuteAllMode(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDisableMuteAllMode (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDisableMuteAllMode(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDisableMuteAllMode : AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginDisableMuteAllMode (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -409,6 +419,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginDisableMuteAllMode(Microsoft.Rtc.Collaboration.AudioVideo.DisableMuteAllModeOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDisableMuteAllMode (options As DisableMuteAllModeOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDisableMuteAllMode(Microsoft::Rtc::Collaboration::AudioVideo::DisableMuteAllModeOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDisableMuteAllMode : Microsoft.Rtc.Collaboration.AudioVideo.DisableMuteAllModeOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginDisableMuteAllMode (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -454,6 +465,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginEnableMuteAllMode(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEnableMuteAllMode (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEnableMuteAllMode(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEnableMuteAllMode : AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginEnableMuteAllMode (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -496,6 +508,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginEnableMuteAllMode(Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEnableMuteAllMode (options As EnableMuteAllModeOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEnableMuteAllMode(Microsoft::Rtc::Collaboration::AudioVideo::EnableMuteAllModeOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEnableMuteAllMode : Microsoft.Rtc.Collaboration.AudioVideo.EnableMuteAllModeOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginEnableMuteAllMode (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -541,6 +554,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginModifyAttendanceAnnouncements(Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginModifyAttendanceAnnouncements (status As AttendanceAnnouncementsStatus, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyAttendanceAnnouncements(Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus status, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginModifyAttendanceAnnouncements : Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginModifyAttendanceAnnouncements (status, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -587,6 +601,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginModifyAttendanceAnnouncements(Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus,Microsoft.Rtc.Collaboration.AudioVideo.ModifyAttendanceAnnouncementOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginModifyAttendanceAnnouncements (status As AttendanceAnnouncementsStatus, options As ModifyAttendanceAnnouncementOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginModifyAttendanceAnnouncements(Microsoft::Rtc::Collaboration::AttendanceAnnouncementsStatus status, Microsoft::Rtc::Collaboration::AudioVideo::ModifyAttendanceAnnouncementOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginModifyAttendanceAnnouncements : Microsoft.Rtc.Collaboration.AttendanceAnnouncementsStatus * Microsoft.Rtc.Collaboration.AudioVideo.ModifyAttendanceAnnouncementOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginModifyAttendanceAnnouncements (status, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -635,6 +650,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginMute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginMute (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginMute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginMute : Microsoft.Rtc.Collaboration.ParticipantEndpoint * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginMute (endpoint, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -678,6 +694,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginMute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AudioVideo.MuteOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginMute (endpoint As ParticipantEndpoint, options As MuteOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginMute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::AudioVideo::MuteOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginMute : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Collaboration.AudioVideo.MuteOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginMute (endpoint, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -723,6 +740,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginRemoveFromDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRemoveFromDefaultRouting (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRemoveFromDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRemoveFromDefaultRouting : Microsoft.Rtc.Collaboration.ParticipantEndpoint * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginRemoveFromDefaultRouting (endpoint, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -782,6 +800,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginRemoveFromDefaultRouting(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRemoveFromDefaultRouting (endpoint As ParticipantEndpoint, options As RemoveFromDefaultRoutingOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRemoveFromDefaultRouting(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::RemoveFromDefaultRoutingOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRemoveFromDefaultRouting : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Collaboration.RemoveFromDefaultRoutingOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginRemoveFromDefaultRouting (endpoint, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -845,6 +864,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTransfer(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall call, class Microsoft.Rtc.Collaboration.McuTransferOptions mcuTransferOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginTransfer(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall,Microsoft.Rtc.Collaboration.McuTransferOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTransfer(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCall ^ call, Microsoft::Rtc::Collaboration::McuTransferOptions ^ mcuTransferOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginTransfer : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall * Microsoft.Rtc.Collaboration.McuTransferOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginTransfer (call, mcuTransferOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -896,6 +916,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginUnmute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginUnmute (endpoint As ParticipantEndpoint, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnmute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUnmute : Microsoft.Rtc.Collaboration.ParticipantEndpoint * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginUnmute (endpoint, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -939,6 +960,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.BeginUnmute(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AudioVideo.UnmuteOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginUnmute (endpoint As ParticipantEndpoint, options As UnmuteOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnmute(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Collaboration::AudioVideo::UnmuteOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUnmute : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Collaboration.AudioVideo.UnmuteOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoMcuSession.BeginUnmute (endpoint, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -984,6 +1006,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndAddToDefaultRouting(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAddToDefaultRouting (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddToDefaultRouting(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAddToDefaultRouting : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndAddToDefaultRouting result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1024,6 +1047,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndDialOut(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndDialOut (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDialOut(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndDialOut : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndDialOut result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1064,6 +1088,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndDisableMuteAllMode(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndDisableMuteAllMode (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDisableMuteAllMode(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDisableMuteAllMode : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndDisableMuteAllMode result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1104,6 +1129,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndEnableMuteAllMode(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEnableMuteAllMode (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEnableMuteAllMode(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEnableMuteAllMode : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndEnableMuteAllMode result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1144,6 +1170,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndModifyAttendanceAnnouncements(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndModifyAttendanceAnnouncements (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndModifyAttendanceAnnouncements(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndModifyAttendanceAnnouncements : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndModifyAttendanceAnnouncements result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1172,6 +1199,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndMute(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndMute (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndMute(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndMute : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndMute result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1212,6 +1240,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndRemoveFromDefaultRouting(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndRemoveFromDefaultRouting (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRemoveFromDefaultRouting(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRemoveFromDefaultRouting : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndRemoveFromDefaultRouting result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1252,6 +1281,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndTransfer(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTransfer (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTransfer(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndTransfer : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndTransfer result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1292,6 +1322,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.EndUnmute(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndUnmute (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUnmute(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUnmute : IAsyncResult -&gt; unit" Usage="audioVideoMcuSession.EndUnmute result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1332,6 +1363,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.HandleParticipantEndpointAttendanceChanged(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointAttendanceChanged (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints);" />
+      <MemberSignature Language="F#" Value="override this.HandleParticipantEndpointAttendanceChanged : System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; * System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; -&gt; unit" Usage="audioVideoMcuSession.HandleParticipantEndpointAttendanceChanged (addedEndpoints, removedEndpoints)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1359,6 +1391,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.HandleParticipantEndpointPropertiesChanged(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointPropertiesChanged (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointPropertiesChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi);" />
+      <MemberSignature Language="F#" Value="override this.HandleParticipantEndpointPropertiesChanged : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; -&gt; unit" Usage="audioVideoMcuSession.HandleParticipantEndpointPropertiesChanged (endpoint, pmi)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1386,6 +1419,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.HandlePropertiesChanged(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandlePropertiesChanged (pmi As PropertyMergeInformation(Of McuSessionProperties))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandlePropertiesChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi);" />
+      <MemberSignature Language="F#" Value="override this.HandlePropertiesChanged : Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; -&gt; unit" Usage="audioVideoMcuSession.HandlePropertiesChanged pmi" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1411,6 +1445,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsAudioSupported" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAudioSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAudioSupported { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsAudioSupported : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsAudioSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1433,6 +1468,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsMultiViewVideoSupported" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsMultiViewVideoSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsMultiViewVideoSupported { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsMultiViewVideoSupported : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsMultiViewVideoSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1455,6 +1491,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsVideoSupported" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsVideoSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsVideoSupported { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsVideoSupported : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.IsVideoSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1477,6 +1514,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.MuteAllMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MuteAllMode As MuteAllMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode MuteAllMode { Microsoft::Rtc::Collaboration::AudioVideo::MuteAllMode get(); };" />
+      <MemberSignature Language="F#" Value="member this.MuteAllMode : Microsoft.Rtc.Collaboration.AudioVideo.MuteAllMode" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.MuteAllMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1506,6 +1544,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.ParticipantEndpointAttendanceChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointAttendanceChanged As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of AudioVideoMcuParticipantEndpointProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointAttendanceChanged;" />
+      <MemberSignature Language="F#" Value="member this.ParticipantEndpointAttendanceChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; " Usage="member this.ParticipantEndpointAttendanceChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1533,6 +1572,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.ParticipantEndpointPropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointPropertiesChanged As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of AudioVideoMcuParticipantEndpointProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointPropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.ParticipantEndpointPropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; " Usage="member this.ParticipantEndpointPropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1560,6 +1600,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.PropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of AudioVideoMcuSessionProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuSessionProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.PropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties&gt;&gt; " Usage="member this.PropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSessionProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1581,6 +1622,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.ResetCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ResetCore ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ResetCore();" />
+      <MemberSignature Language="F#" Value="override this.ResetCore : unit -&gt; unit" Usage="audioVideoMcuSession.ResetCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1603,6 +1645,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SelfUnmuteAssignment" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SelfUnmuteAssignment As SelfUnmuteAssignment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment SelfUnmuteAssignment { Microsoft::Rtc::Collaboration::AudioVideo::SelfUnmuteAssignment get(); };" />
+      <MemberSignature Language="F#" Value="member this.SelfUnmuteAssignment : Microsoft.Rtc.Collaboration.AudioVideo.SelfUnmuteAssignment" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SelfUnmuteAssignment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1632,6 +1675,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : seq&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1654,6 +1698,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As AudioVideoMcuParticipantEndpointProperties) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuParticipantEndpointProperties ^ % properties);" />
+      <MemberSignature Language="F#" Value="override this.TryGetParticipantEndpointProperties : Microsoft.Rtc.Collaboration.ParticipantEndpoint *  -&gt; bool" Usage="audioVideoMcuSession.TryGetParticipantEndpointProperties (endpoint, properties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1664,7 +1709,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
-        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties&amp;" RefType="out" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuParticipantEndpointProperties" RefType="out" />
       </Parameters>
       <Docs>
         <param name="endpoint">The participant endpoint for which to retrieve properties.</param>
@@ -1682,6 +1727,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.VideoSource" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VideoSource As VideoSource" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::VideoSource ^ VideoSource { Microsoft::Rtc::Collaboration::AudioVideo::VideoSource ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.VideoSource : Microsoft.Rtc.Collaboration.AudioVideo.VideoSource" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuSession.VideoSource" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

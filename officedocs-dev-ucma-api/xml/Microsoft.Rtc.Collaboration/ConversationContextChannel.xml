@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConversationContextChannel" />
   <TypeSignature Language="VB.NET" Value="Public Class ConversationContextChannel" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConversationContextChannel" />
+  <TypeSignature Language="F#" Value="type ConversationContextChannel = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation, class Microsoft.Rtc.Collaboration.ParticipantEndpoint remoteEndpoint) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.#ctor(Microsoft.Rtc.Collaboration.Conversation,Microsoft.Rtc.Collaboration.ParticipantEndpoint)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ConversationContextChannel(Microsoft::Rtc::Collaboration::Conversation ^ conversation, Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ remoteEndpoint);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ConversationContextChannel : Microsoft.Rtc.Collaboration.Conversation * Microsoft.Rtc.Collaboration.ParticipantEndpoint -&gt; Microsoft.Rtc.Collaboration.ConversationContextChannel" Usage="new Microsoft.Rtc.Collaboration.ConversationContextChannel (conversation, remoteEndpoint)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.BeginEstablish(System.Guid,Microsoft.Rtc.Collaboration.ConversationContextChannelEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (applicationId As Guid, options As ConversationContextChannelEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Guid applicationId, Microsoft::Rtc::Collaboration::ConversationContextChannelEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : Guid * Microsoft.Rtc.Collaboration.ConversationContextChannelEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversationContextChannel.BeginEstablish (applicationId, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +92,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendData(class System.Net.Mime.ContentType contentType, unsigned int8[] contentBody, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.BeginSendData(System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendData(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ contentBody, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendData : System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversationContextChannel.BeginSendData (contentType, contentBody, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="conversationContextChannel.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -149,6 +154,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationContextChannel.Conversation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As Conversation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ Conversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Conversation : Microsoft.Rtc.Collaboration.Conversation" Usage="Microsoft.Rtc.Collaboration.ConversationContextChannel.Conversation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -171,6 +177,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConversationContextChannel.DataReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DataReceived As EventHandler(Of ConversationContextChannelDataReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConversationContextChannelDataReceivedEventArgs ^&gt; ^ DataReceived;" />
+      <MemberSignature Language="F#" Value="member this.DataReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelDataReceivedEventArgs&gt; " Usage="member this.DataReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelDataReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -192,6 +199,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.EndEstablish(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEstablish (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEstablish(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEstablish : IAsyncResult -&gt; unit" Usage="conversationContextChannel.EndEstablish result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -239,6 +247,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.EndSendData(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSendData (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendData(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendData : IAsyncResult -&gt; unit" Usage="conversationContextChannel.EndSendData result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -265,6 +274,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConversationContextChannel.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="conversationContextChannel.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -291,6 +301,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationContextChannel.RemoteEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpoint As ParticipantEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ RemoteEndpoint { Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteEndpoint : Microsoft.Rtc.Collaboration.ParticipantEndpoint" Usage="Microsoft.Rtc.Collaboration.ConversationContextChannel.RemoteEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -313,6 +324,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConversationContextChannel.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ConversationContextChannelState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationContextChannelState State { Microsoft::Rtc::Collaboration::ConversationContextChannelState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.ConversationContextChannelState" Usage="Microsoft.Rtc.Collaboration.ConversationContextChannel.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -335,6 +347,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConversationContextChannel.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of ConversationContextChannelStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConversationContextChannelStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationContextChannelStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

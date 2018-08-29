@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RegisterException" />
   <TypeSignature Language="VB.NET" Value="Public Class RegisterException&#xA;Inherits FailureResponseException" />
   <TypeSignature Language="C++ CLI" Value="public ref class RegisterException : Microsoft::Rtc::Signaling::FailureResponseException" />
+  <TypeSignature Language="F#" Value="type RegisterException = class&#xA;    inherit FailureResponseException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RegisterException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RegisterException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RegisterException : string -&gt; Microsoft.Rtc.Signaling.RegisterException" Usage="new Microsoft.Rtc.Signaling.RegisterException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RegisterException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; RegisterException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RegisterException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.RegisterException" Usage="new Microsoft.Rtc.Signaling.RegisterException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RegisterException.#ctor(System.String,Microsoft.Rtc.Signaling.RegistrationTransitionReason)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, deregisterReason As RegistrationTransitionReason)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RegisterException(System::String ^ message, Microsoft::Rtc::Signaling::RegistrationTransitionReason deregisterReason);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RegisterException : string * Microsoft.Rtc.Signaling.RegistrationTransitionReason -&gt; Microsoft.Rtc.Signaling.RegisterException" Usage="new Microsoft.Rtc.Signaling.RegisterException (message, deregisterReason)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -125,6 +129,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RegisterException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RegisterException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RegisterException : string * Exception -&gt; Microsoft.Rtc.Signaling.RegisterException" Usage="new Microsoft.Rtc.Signaling.RegisterException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -152,6 +157,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RegisterException.DeregisterReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeregisterReason As RegistrationTransitionReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RegistrationTransitionReason DeregisterReason { Microsoft::Rtc::Signaling::RegistrationTransitionReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.DeregisterReason : Microsoft.Rtc.Signaling.RegistrationTransitionReason" Usage="Microsoft.Rtc.Signaling.RegisterException.DeregisterReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RegisterException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="registerException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -206,6 +213,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RegisterException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="registerException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

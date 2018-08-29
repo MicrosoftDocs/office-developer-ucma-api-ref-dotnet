@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.TlsFailureException" />
   <TypeSignature Language="VB.NET" Value="Public Class TlsFailureException&#xA;Inherits RealTimeException" />
   <TypeSignature Language="C++ CLI" Value="public ref class TlsFailureException : Microsoft::Rtc::Signaling::RealTimeException" />
+  <TypeSignature Language="F#" Value="type TlsFailureException = class&#xA;    inherit RealTimeException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TlsFailureException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TlsFailureException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.TlsFailureException : string -&gt; Microsoft.Rtc.Signaling.TlsFailureException" Usage="new Microsoft.Rtc.Signaling.TlsFailureException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TlsFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; TlsFailureException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.TlsFailureException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.TlsFailureException" Usage="new Microsoft.Rtc.Signaling.TlsFailureException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TlsFailureException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TlsFailureException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.TlsFailureException : string * Exception -&gt; Microsoft.Rtc.Signaling.TlsFailureException" Usage="new Microsoft.Rtc.Signaling.TlsFailureException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string message, class System.Exception innerException, int32 errorCode, valuetype Microsoft.Rtc.Signaling.TlsFailureReason tlsFailureReason) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TlsFailureException.#ctor(System.String,System.Exception,System.Int32,Microsoft.Rtc.Signaling.TlsFailureReason)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TlsFailureException(System::String ^ message, Exception ^ innerException, int errorCode, Microsoft::Rtc::Signaling::TlsFailureReason tlsFailureReason);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.TlsFailureException : string * Exception * int * Microsoft.Rtc.Signaling.TlsFailureReason -&gt; Microsoft.Rtc.Signaling.TlsFailureException" Usage="new Microsoft.Rtc.Signaling.TlsFailureException (message, innerException, errorCode, tlsFailureReason)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -151,6 +156,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TlsFailureException.ErrorCode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorCode As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ErrorCode { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : int" Usage="Microsoft.Rtc.Signaling.TlsFailureException.ErrorCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -173,6 +179,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TlsFailureException.FailureReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureReason As TlsFailureReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::TlsFailureReason FailureReason { Microsoft::Rtc::Signaling::TlsFailureReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.FailureReason : Microsoft.Rtc.Signaling.TlsFailureReason" Usage="Microsoft.Rtc.Signaling.TlsFailureException.FailureReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -195,6 +202,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TlsFailureException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="tlsFailureException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -222,6 +230,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TlsFailureException.LocalEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalEndpoint As IPEndPoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPEndPoint ^ LocalEndpoint { System::Net::IPEndPoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalEndpoint : System.Net.IPEndPoint" Usage="Microsoft.Rtc.Signaling.TlsFailureException.LocalEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -249,6 +258,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TlsFailureException.RemoteCertificate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteCertificate As X509Certificate" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Security::Cryptography::X509Certificates::X509Certificate ^ RemoteCertificate { System::Security::Cryptography::X509Certificates::X509Certificate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteCertificate : System.Security.Cryptography.X509Certificates.X509Certificate" Usage="Microsoft.Rtc.Signaling.TlsFailureException.RemoteCertificate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -276,6 +286,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TlsFailureException.RemoteEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpoint As IPEndPoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPEndPoint ^ RemoteEndpoint { System::Net::IPEndPoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteEndpoint : System.Net.IPEndPoint" Usage="Microsoft.Rtc.Signaling.TlsFailureException.RemoteEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -303,6 +314,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TlsFailureException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="tlsFailureException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

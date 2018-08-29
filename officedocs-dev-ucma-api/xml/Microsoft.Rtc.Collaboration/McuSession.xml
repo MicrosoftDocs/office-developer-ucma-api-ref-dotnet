@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.McuSession" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class McuSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class McuSession abstract" />
+  <TypeSignature Language="F#" Value="type McuSession = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (mcuType As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; McuSession(System::String ^ mcuType);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.McuSession : string -&gt; Microsoft.Rtc.Collaboration.McuSession" Usage="new Microsoft.Rtc.Collaboration.McuSession mcuType" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginDialOut(string destinationUri, class Microsoft.Rtc.Collaboration.McuDialOutOptions mcuDialOutOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginDialOut(System.String,Microsoft.Rtc.Collaboration.McuDialOutOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginDialOut(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::McuDialOutOptions ^ mcuDialOutOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDialOut : string * Microsoft.Rtc.Collaboration.McuDialOutOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginDialOut (destinationUri, mcuDialOutOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -120,6 +123,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginEject(Microsoft.Rtc.Collaboration.ConversationParticipant,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEject (participant As ConversationParticipant, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEject(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEject : Microsoft.Rtc.Collaboration.ConversationParticipant * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginEject (participant, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -162,6 +166,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginEject(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEject (uri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEject(System::String ^ uri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEject : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginEject (uri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -203,6 +208,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginEject(Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Collaboration.EjectOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEject (participant As ConversationParticipant, options As EjectOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEject(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, Microsoft::Rtc::Collaboration::EjectOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEject : Microsoft.Rtc.Collaboration.ConversationParticipant * Microsoft.Rtc.Collaboration.EjectOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginEject (participant, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -247,6 +253,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginEject(System.String,Microsoft.Rtc.Collaboration.EjectOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEject (uri As String, options As EjectOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEject(System::String ^ uri, Microsoft::Rtc::Collaboration::EjectOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEject : string * Microsoft.Rtc.Collaboration.EjectOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginEject (uri, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -290,6 +297,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginSendCommand(Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Function BeginSendCommand (command As ConferenceCommand, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginSendCommand(Microsoft::Rtc::Internal::Collaboration::Conferencing::Commands::ConferenceCommand ^ command, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendCommand : Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginSendCommand (command, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -329,6 +337,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginSendCommand(Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand,Microsoft.Rtc.Collaboration.ConferenceCommandOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Function BeginSendCommand (command As ConferenceCommand, options As ConferenceCommandOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginSendCommand(Microsoft::Rtc::Internal::Collaboration::Conferencing::Commands::ConferenceCommand ^ command, Microsoft::Rtc::Collaboration::ConferenceCommandOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendCommand : Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand * Microsoft.Rtc.Collaboration.ConferenceCommandOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginSendCommand (command, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -369,6 +378,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginTransfer(class Microsoft.Rtc.Collaboration.Call call, class Microsoft.Rtc.Collaboration.McuTransferOptions mcuTransferOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.BeginTransfer(Microsoft.Rtc.Collaboration.Call,Microsoft.Rtc.Collaboration.McuTransferOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginTransfer(Microsoft::Rtc::Collaboration::Call ^ call, Microsoft::Rtc::Collaboration::McuTransferOptions ^ mcuTransferOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTransfer : Microsoft.Rtc.Collaboration.Call * Microsoft.Rtc.Collaboration.McuTransferOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="mcuSession.BeginTransfer (call, mcuTransferOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -414,6 +424,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuSession.ConferenceSession" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceSession As ConferenceSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceSession ^ ConferenceSession { Microsoft::Rtc::Collaboration::ConferenceSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConferenceSession : Microsoft.Rtc.Collaboration.ConferenceSession" Usage="Microsoft.Rtc.Collaboration.McuSession.ConferenceSession" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -436,6 +447,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.EndDialOut(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub EndDialOut (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void EndDialOut(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDialOut : IAsyncResult -&gt; unit" Usage="mcuSession.EndDialOut result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -476,6 +488,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.EndEject(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEject (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEject(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEject : IAsyncResult -&gt; unit" Usage="mcuSession.EndEject result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -510,6 +523,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.EndSendCommand(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Function EndSendCommand (result As IAsyncResult) As ConferenceCommandResponse" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; Microsoft::Rtc::Collaboration::ConferenceCommandResponse ^ EndSendCommand(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendCommand : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.ConferenceCommandResponse" Usage="mcuSession.EndSendCommand result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -545,6 +559,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.EndTransfer(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub EndTransfer (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void EndTransfer(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTransfer : IAsyncResult -&gt; unit" Usage="mcuSession.EndTransfer result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -579,6 +594,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.GetLocalParticipantEndpoints" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLocalParticipantEndpoints () As Collection(Of ParticipantEndpoint)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^&gt; ^ GetLocalParticipantEndpoints();" />
+      <MemberSignature Language="F#" Value="member this.GetLocalParticipantEndpoints : unit -&gt; System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt;" Usage="mcuSession.GetLocalParticipantEndpoints " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -611,6 +627,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.GetRemoteParticipantEndpoints" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRemoteParticipantEndpoints () As Collection(Of ParticipantEndpoint)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^&gt; ^ GetRemoteParticipantEndpoints();" />
+      <MemberSignature Language="F#" Value="member this.GetRemoteParticipantEndpoints : unit -&gt; System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint&gt;" Usage="mcuSession.GetRemoteParticipantEndpoints " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -640,6 +657,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.HandleParticipantEndpointAttendanceChanged(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}})" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub HandleParticipantEndpointAttendanceChanged (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void HandleParticipantEndpointAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints);" />
+      <MemberSignature Language="F#" Value="abstract member HandleParticipantEndpointAttendanceChanged : System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; * System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; -&gt; unit" Usage="mcuSession.HandleParticipantEndpointAttendanceChanged (addedEndpoints, removedEndpoints)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -667,6 +685,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.HandleParticipantEndpointPropertiesChanged(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties})" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub HandleParticipantEndpointPropertiesChanged (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void HandleParticipantEndpointPropertiesChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi);" />
+      <MemberSignature Language="F#" Value="abstract member HandleParticipantEndpointPropertiesChanged : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; -&gt; unit" Usage="mcuSession.HandleParticipantEndpointPropertiesChanged (endpoint, pmi)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -694,6 +713,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.HandlePropertiesChanged(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties})" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub HandlePropertiesChanged (pmi As PropertyMergeInformation(Of McuSessionProperties))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void HandlePropertiesChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi);" />
+      <MemberSignature Language="F#" Value="abstract member HandlePropertiesChanged : Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; -&gt; unit" Usage="mcuSession.HandlePropertiesChanged pmi" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -719,6 +739,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuSession.McuInformation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property McuInformation As McuInformation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::McuInformation ^ McuInformation { Microsoft::Rtc::Collaboration::McuInformation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.McuInformation : Microsoft.Rtc.Collaboration.McuInformation" Usage="Microsoft.Rtc.Collaboration.McuSession.McuInformation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -742,6 +763,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname class Microsoft.Rtc.Signaling.RealTimeAddress op_Implicit(class Microsoft.Rtc.Collaboration.McuSession mcuSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.op_Implicit(Microsoft.Rtc.Collaboration.McuSession)~Microsoft.Rtc.Signaling.RealTimeAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static operator Microsoft::Rtc::Signaling::RealTimeAddress ^(Microsoft::Rtc::Collaboration::McuSession ^ mcuSession);" />
+      <MemberSignature Language="F#" Value="static member op_Implicit : Microsoft.Rtc.Collaboration.McuSession -&gt; Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Collaboration.McuSession.op_Implicit mcuSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -769,6 +791,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.RaiseAttendanceChanged``1(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.EventHandler{Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs{``0}})" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RaiseAttendanceChanged(Of TProperties As McuParticipantEndpointProperties) (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), handler As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of TProperties)))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename TProperties&gt;&#xA; where TProperties : Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties void RaiseAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints, EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;TProperties&gt; ^&gt; ^ handler);" />
+      <MemberSignature Language="F#" Value="member this.RaiseAttendanceChanged : System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; * System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; * EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;'Properties&gt;&gt; -&gt; unit (requires 'Properties :&gt; Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties)" Usage="mcuSession.RaiseAttendanceChanged (addedEndpoints, removedEndpoints, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -806,6 +829,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.RaiseSessionParticipantPropertyChanged``1(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties},System.EventHandler{Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs{``0}})" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RaiseSessionParticipantPropertyChanged(Of TProperties As McuParticipantEndpointProperties) (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties), handler As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of TProperties)))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename TProperties&gt;&#xA; where TProperties : Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties void RaiseSessionParticipantPropertyChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi, EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;TProperties&gt; ^&gt; ^ handler);" />
+      <MemberSignature Language="F#" Value="member this.RaiseSessionParticipantPropertyChanged : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; * EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;'Properties&gt;&gt; -&gt; unit (requires 'Properties :&gt; Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties)" Usage="mcuSession.RaiseSessionParticipantPropertyChanged (endpoint, pmi, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -843,6 +867,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.RaiseSessionPropertyChanged``1(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties},System.EventHandler{Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs{``0}})" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RaiseSessionPropertyChanged(Of TProperties As McuSessionProperties) (pmi As PropertyMergeInformation(Of McuSessionProperties), handler As EventHandler(Of PropertiesChangedEventArgs(Of TProperties)))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename TProperties&gt;&#xA; where TProperties : Microsoft::Rtc::Collaboration::McuSessionProperties void RaiseSessionPropertyChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi, EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;TProperties&gt; ^&gt; ^ handler);" />
+      <MemberSignature Language="F#" Value="member this.RaiseSessionPropertyChanged : Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; * EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;'Properties&gt;&gt; -&gt; unit (requires 'Properties :&gt; Microsoft.Rtc.Collaboration.McuSessionProperties)" Usage="mcuSession.RaiseSessionPropertyChanged (pmi, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -878,6 +903,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.ResetCore" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub ResetCore ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void ResetCore();" />
+      <MemberSignature Language="F#" Value="abstract member ResetCore : unit -&gt; unit" Usage="mcuSession.ResetCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -906,6 +932,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuSession.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As McuSessionState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::McuSessionState State { Microsoft::Rtc::Collaboration::McuSessionState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.McuSessionState" Usage="Microsoft.Rtc.Collaboration.McuSession.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -952,6 +979,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.McuSession.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of StateChangedEventArgs(Of McuSessionState)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Collaboration::McuSessionState&gt; ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.McuSessionState&gt;&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.McuSessionState&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -997,6 +1025,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.McuSession.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : seq&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.McuSession.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1018,6 +1047,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Signaling.RealTimeAddress ToRealTimeAddress(class Microsoft.Rtc.Collaboration.McuSession mcuSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.ToRealTimeAddress(Microsoft.Rtc.Collaboration.McuSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Signaling::RealTimeAddress ^ ToRealTimeAddress(Microsoft::Rtc::Collaboration::McuSession ^ mcuSession);" />
+      <MemberSignature Language="F#" Value="static member ToRealTimeAddress : Microsoft.Rtc.Collaboration.McuSession -&gt; Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Collaboration.McuSession.ToRealTimeAddress mcuSession" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1046,6 +1076,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="mcuSession.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1071,6 +1102,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.McuSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties@)" />
       <MemberSignature Language="VB.NET" Value="Protected Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As McuParticipantEndpointProperties) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^ % properties);" />
+      <MemberSignature Language="F#" Value="member this.TryGetParticipantEndpointProperties : Microsoft.Rtc.Collaboration.ParticipantEndpoint *  -&gt; bool" Usage="mcuSession.TryGetParticipantEndpointProperties (endpoint, properties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1081,7 +1113,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
-        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&amp;" RefType="out" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties" RefType="out" />
       </Parameters>
       <Docs>
         <param name="endpoint">The endpoint to get properties for.</param>

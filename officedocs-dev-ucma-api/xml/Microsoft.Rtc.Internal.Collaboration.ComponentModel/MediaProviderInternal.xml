@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaProviderInternal&#xA;Inherits MediaProvider" />
   <TypeSignature Language="C++ CLI" Value="public ref class MediaProviderInternal abstract : Microsoft::Rtc::Collaboration::ComponentModel::MediaProvider" />
+  <TypeSignature Language="F#" Value="type MediaProviderInternal = class&#xA;    inherit MediaProvider" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -40,6 +41,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.BeginSendQoEMetricsInternal(Microsoft.Rtc.Collaboration.CallDialogContext,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendQoEMetricsInternal (signalingContext As CallDialogContext, qoeData As Byte(), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendQoEMetricsInternal(Microsoft::Rtc::Collaboration::CallDialogContext ^ signalingContext, cli::array &lt;System::Byte&gt; ^ qoeData, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendQoEMetricsInternal : Microsoft.Rtc.Collaboration.CallDialogContext * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaProviderInternal.BeginSendQoEMetricsInternal (signalingContext, qoeData, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +71,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendQoEMetricsInternal(string qoeGruu, class Microsoft.Rtc.Collaboration.Call call, unsigned int8[] qoeData, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.BeginSendQoEMetricsInternal(System.String,Microsoft.Rtc.Collaboration.Call,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendQoEMetricsInternal(System::String ^ qoeGruu, Microsoft::Rtc::Collaboration::Call ^ call, cli::array &lt;System::Byte&gt; ^ qoeData, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendQoEMetricsInternal : string * Microsoft.Rtc.Collaboration.Call * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaProviderInternal.BeginSendQoEMetricsInternal (qoeGruu, call, qoeData, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -101,6 +104,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.EnableBandwidthPolicy" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EnableBandwidthPolicy As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool EnableBandwidthPolicy { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.EnableBandwidthPolicy : bool" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.EnableBandwidthPolicy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.EndSendQoEMetricsInternal(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendQoEMetricsInternal (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendQoEMetricsInternal(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendQoEMetricsInternal : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="mediaProviderInternal.EndSendQoEMetricsInternal result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -145,6 +150,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.GetMediaRelayFromContext(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetMediaRelayFromContext (context As OfferAnswerContext) As MediaRelayToken" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^ GetMediaRelayFromContext(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ context);" />
+      <MemberSignature Language="F#" Value="member this.GetMediaRelayFromContext : Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext -&gt; Microsoft.Rtc.Internal.Collaboration.MediaRelayToken" Usage="mediaProviderInternal.GetMediaRelayFromContext context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -169,6 +175,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.IsQosEnabledInternal" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property IsQosEnabledInternal As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; property bool IsQosEnabledInternal { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsQosEnabledInternal : bool" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.IsQosEnabledInternal" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -189,6 +196,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.ReportBandwidthUtilization" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReportBandwidthUtilization As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ReportBandwidthUtilization { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReportBandwidthUtilization : bool" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.ReportBandwidthUtilization" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -209,6 +217,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.SetExternalConnectivityCandidatesStatus(Microsoft.Rtc.Collaboration.SdpAnswer,Microsoft.Rtc.Internal.Collaboration.ComponentModel.ExternalConnectivityCandidatesStatus)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub SetExternalConnectivityCandidatesStatus (answer As SdpAnswer, status As ExternalConnectivityCandidatesStatus)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SetExternalConnectivityCandidatesStatus(Microsoft::Rtc::Collaboration::SdpAnswer ^ answer, Microsoft::Rtc::Internal::Collaboration::ComponentModel::ExternalConnectivityCandidatesStatus status);" />
+      <MemberSignature Language="F#" Value="static member SetExternalConnectivityCandidatesStatus : Microsoft.Rtc.Collaboration.SdpAnswer * Microsoft.Rtc.Internal.Collaboration.ComponentModel.ExternalConnectivityCandidatesStatus -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.SetExternalConnectivityCandidatesStatus (answer, status)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -234,6 +243,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.SetExternalConnectivityCandidatesStatus(Microsoft.Rtc.Collaboration.SdpOffer,Microsoft.Rtc.Internal.Collaboration.ComponentModel.ExternalConnectivityCandidatesStatus)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Sub SetExternalConnectivityCandidatesStatus (offer As SdpOffer, status As ExternalConnectivityCandidatesStatus)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void SetExternalConnectivityCandidatesStatus(Microsoft::Rtc::Collaboration::SdpOffer ^ offer, Microsoft::Rtc::Internal::Collaboration::ComponentModel::ExternalConnectivityCandidatesStatus status);" />
+      <MemberSignature Language="F#" Value="static member SetExternalConnectivityCandidatesStatus : Microsoft.Rtc.Collaboration.SdpOffer * Microsoft.Rtc.Internal.Collaboration.ComponentModel.ExternalConnectivityCandidatesStatus -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.SetExternalConnectivityCandidatesStatus (offer, status)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -259,6 +269,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.SupportsMediaBypass" />
       <MemberSignature Language="VB.NET" Value="Protected Property SupportsMediaBypass As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; property bool SupportsMediaBypass { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.SupportsMediaBypass : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaProviderInternal.SupportsMediaBypass" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

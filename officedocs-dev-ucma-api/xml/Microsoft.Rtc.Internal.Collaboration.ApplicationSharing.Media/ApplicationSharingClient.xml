@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationSharingClient" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingClient abstract" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingClient = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.#ctor(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (flow As ApplicationSharingFlow)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; ApplicationSharingClient(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlow ^ flow);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient" Usage="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient flow" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.AttendeeConnected" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AttendeeConnected As EventHandler(Of AttendeeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ AttendeeConnected;" />
+      <MemberSignature Language="F#" Value="member this.AttendeeConnected : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " Usage="member this.AttendeeConnected : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -62,6 +65,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.AttendeeDisconnected" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AttendeeDisconnected As EventHandler(Of AttendeeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ AttendeeDisconnected;" />
+      <MemberSignature Language="F#" Value="member this.AttendeeDisconnected : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " Usage="member this.AttendeeDisconnected : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +85,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.AttendeeUpdated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AttendeeUpdated As EventHandler(Of AttendeeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ AttendeeUpdated;" />
+      <MemberSignature Language="F#" Value="member this.AttendeeUpdated : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " Usage="member this.AttendeeUpdated : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -100,6 +105,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.ClientStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ClientStateChanged As EventHandler(Of ClientStateEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ClientStateEventArgs ^&gt; ^ ClientStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.ClientStateChanged : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ClientStateEventArgs&gt; " Usage="member this.ClientStateChanged : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ClientStateEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -119,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.CreateException(Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory,Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ErrorReason,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Shared Function CreateException (category As MediaOperationFailureCategory, reason As ErrorReason, innerException As Exception) As MediaOperationFailureException" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; static Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureException ^ CreateException(Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureCategory category, Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ErrorReason reason, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="static member CreateException : Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory * Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ErrorReason * Exception -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.CreateException (category, reason, innerException)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -147,6 +154,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.CreateException(Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory,Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ErrorReason,System.Exception,Microsoft.Rtc.Signaling.DiagnosticsInformation)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Shared Function CreateException (category As MediaOperationFailureCategory, reason As ErrorReason, innerException As Exception, diagnosticsInfo As DiagnosticsInformation) As MediaOperationFailureException" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; static Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureException ^ CreateException(Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureCategory category, Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ErrorReason reason, Exception ^ innerException, Microsoft::Rtc::Signaling::DiagnosticsInformation ^ diagnosticsInfo);" />
+      <MemberSignature Language="F#" Value="static member CreateException : Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory * Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ErrorReason * Exception * Microsoft.Rtc.Signaling.DiagnosticsInformation -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.CreateException (category, reason, innerException, diagnosticsInfo)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -177,6 +185,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.ErrorOccurred" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ErrorOccurred As EventHandler(Of ApplicationSharingErrorEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingErrorEventArgs ^&gt; ^ ErrorOccurred;" />
+      <MemberSignature Language="F#" Value="member this.ErrorOccurred : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingErrorEventArgs&gt; " Usage="member this.ErrorOccurred : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingErrorEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -196,6 +205,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.IsMediaStackCollocatedWithServer" />
       <MemberSignature Language="VB.NET" Value="Public Property IsMediaStackCollocatedWithServer As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:  property bool IsMediaStackCollocatedWithServer {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsMediaStackCollocatedWithServer : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.IsMediaStackCollocatedWithServer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -216,6 +226,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.MediaEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MediaEndpoint As IMediaEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::IMediaEndpoint ^ MediaEndpoint { Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::IMediaEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MediaEndpoint : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.MediaEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -236,6 +247,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.OnAttendeeConnected(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnAttendeeConnected (args As AttendeeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnAttendeeConnected(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnAttendeeConnected : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit&#xA;override this.OnAttendeeConnected : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit" Usage="applicationSharingClient.OnAttendeeConnected args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -259,6 +271,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.OnAttendeeDisconnected(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnAttendeeDisconnected (args As AttendeeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnAttendeeDisconnected(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnAttendeeDisconnected : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit&#xA;override this.OnAttendeeDisconnected : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit" Usage="applicationSharingClient.OnAttendeeDisconnected args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -282,6 +295,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.OnAttendeeUpdated(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnAttendeeUpdated (args As AttendeeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnAttendeeUpdated(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnAttendeeUpdated : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit&#xA;override this.OnAttendeeUpdated : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit" Usage="applicationSharingClient.OnAttendeeUpdated args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -305,6 +319,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.OnClientStateChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ClientStateEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnClientStateChanged (args As ClientStateEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnClientStateChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ClientStateEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnClientStateChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ClientStateEventArgs -&gt; unit&#xA;override this.OnClientStateChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ClientStateEventArgs -&gt; unit" Usage="applicationSharingClient.OnClientStateChanged args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -328,6 +343,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.OnErrorOccurred(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingErrorEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnErrorOccurred (args As ApplicationSharingErrorEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnErrorOccurred(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingErrorEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnErrorOccurred : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingErrorEventArgs -&gt; unit&#xA;override this.OnErrorOccurred : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingErrorEventArgs -&gt; unit" Usage="applicationSharingClient.OnErrorOccurred args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -351,6 +367,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.ResourceFilter" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ResourceFilter As ShareableResourceFilter" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResourceFilter ^ ResourceFilter { Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResourceFilter ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ResourceFilter : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.ResourceFilter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -371,6 +388,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ApplicationSharingState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingState State { Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingState" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -391,6 +409,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient.StopSession" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub StopSession ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void StopSession();" />
+      <MemberSignature Language="F#" Value="abstract member StopSession : unit -&gt; unit&#xA;override this.StopSession : unit -&gt; unit" Usage="applicationSharingClient.StopSession " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

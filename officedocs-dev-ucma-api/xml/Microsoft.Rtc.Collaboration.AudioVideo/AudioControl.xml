@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioControl" />
   <TypeSignature Language="VB.NET" Value="Public Class AudioControl" />
   <TypeSignature Language="C++ CLI" Value="public ref class AudioControl" />
+  <TypeSignature Language="F#" Value="type AudioControl = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioControl.DirectionMuted" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DirectionMuted As MuteDirection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MuteDirection DirectionMuted { Microsoft::Rtc::Collaboration::AudioVideo::MuteDirection get(); };" />
+      <MemberSignature Language="F#" Value="member this.DirectionMuted : Microsoft.Rtc.Collaboration.AudioVideo.MuteDirection" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioControl.DirectionMuted" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioControl.GetChannels" />
       <MemberSignature Language="VB.NET" Value="Public Function GetChannels () As IDictionary(Of ChannelLabel, AudioChannel)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IDictionary&lt;Microsoft::Rtc::Collaboration::AudioVideo::ChannelLabel, Microsoft::Rtc::Collaboration::AudioVideo::AudioChannel ^&gt; ^ GetChannels();" />
+      <MemberSignature Language="F#" Value="member this.GetChannels : unit -&gt; System.Collections.Generic.IDictionary&lt;Microsoft.Rtc.Collaboration.AudioVideo.ChannelLabel, Microsoft.Rtc.Collaboration.AudioVideo.AudioChannel&gt;" Usage="audioControl.GetChannels " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -104,6 +107,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioControl.Mute(Microsoft.Rtc.Collaboration.AudioVideo.MuteDirection)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Mute (direction As MuteDirection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Mute(Microsoft::Rtc::Collaboration::AudioVideo::MuteDirection direction);" />
+      <MemberSignature Language="F#" Value="member this.Mute : Microsoft.Rtc.Collaboration.AudioVideo.MuteDirection -&gt; unit" Usage="audioControl.Mute direction" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +125,9 @@
             Mutes the audio.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is no audio channel.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the direction specified is invalid.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the direction specified is not a value in the MuteDirection enumerated type.</exception>
         <example>
           <para />
           <para>
@@ -135,9 +142,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is no audio channel.</exception>
-        <exception cref="T:System.ArgumentException">Thrown when the direction specified is invalid.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the direction specified is not a value in the MuteDirection enumerated type.</exception>
       </Docs>
     </Member>
     <Member MemberName="Unmute">
@@ -146,6 +150,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioControl.Unmute(Microsoft.Rtc.Collaboration.AudioVideo.MuteDirection)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Unmute (direction As MuteDirection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Unmute(Microsoft::Rtc::Collaboration::AudioVideo::MuteDirection direction);" />
+      <MemberSignature Language="F#" Value="member this.Unmute : Microsoft.Rtc.Collaboration.AudioVideo.MuteDirection -&gt; unit" Usage="audioControl.Unmute direction" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -163,6 +168,9 @@
             Unmutes the audio.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is no audio channel.</exception>
+        <exception cref="T:System.ArgumentException">Thrown when the direction specified is invalid.</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the direction specified is not a value in the MuteDirection enumerated type.</exception>
         <example>
           <para />
           <para>
@@ -177,9 +185,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when the AudioVideoFlow is not in the Active state or when there is no audio channel.</exception>
-        <exception cref="T:System.ArgumentException">Thrown when the direction specified is invalid.</exception>
-        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the direction specified is not a value in the MuteDirection enumerated type.</exception>
       </Docs>
     </Member>
   </Members>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LobbyManager" />
   <TypeSignature Language="VB.NET" Value="Public Class LobbyManager" />
   <TypeSignature Language="C++ CLI" Value="public ref class LobbyManager" />
+  <TypeSignature Language="F#" Value="type LobbyManager = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -26,6 +27,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginAdmitLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAdmitLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAdmitLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAdmitLobbyParticipants : seq&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="lobbyManager.BeginAdmitLobbyParticipants (lobbyParticipants, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginAdmitLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},Microsoft.Rtc.Collaboration.LobbyAdmitOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAdmitLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), options As LobbyAdmitOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAdmitLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, Microsoft::Rtc::Collaboration::LobbyAdmitOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAdmitLobbyParticipants : seq&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; * Microsoft.Rtc.Collaboration.LobbyAdmitOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="lobbyManager.BeginAdmitLobbyParticipants (lobbyParticipants, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -100,6 +103,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginDenyLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDenyLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDenyLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDenyLobbyParticipants : seq&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="lobbyManager.BeginDenyLobbyParticipants (lobbyParticipants, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -139,6 +143,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.BeginDenyLobbyParticipants(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Collaboration.ConversationParticipant},Microsoft.Rtc.Collaboration.LobbyDenyOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDenyLobbyParticipants (lobbyParticipants As IEnumerable(Of ConversationParticipant), options As LobbyDenyOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDenyLobbyParticipants(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ lobbyParticipants, Microsoft::Rtc::Collaboration::LobbyDenyOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDenyLobbyParticipants : seq&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt; * Microsoft.Rtc.Collaboration.LobbyDenyOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="lobbyManager.BeginDenyLobbyParticipants (lobbyParticipants, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -180,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LobbyManager.ConferenceSession" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceSession As ConferenceSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceSession ^ ConferenceSession { Microsoft::Rtc::Collaboration::ConferenceSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConferenceSession : Microsoft.Rtc.Collaboration.ConferenceSession" Usage="Microsoft.Rtc.Collaboration.LobbyManager.ConferenceSession" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -202,6 +208,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.EndAdmitLobbyParticipants(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndAdmitLobbyParticipants (result As IAsyncResult) As LobbyOperationResponse" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::LobbyOperationResponse ^ EndAdmitLobbyParticipants(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAdmitLobbyParticipants : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.LobbyOperationResponse" Usage="lobbyManager.EndAdmitLobbyParticipants result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -238,6 +245,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LobbyManager.EndDenyLobbyParticipants(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndDenyLobbyParticipants (result As IAsyncResult) As LobbyOperationResponse" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::LobbyOperationResponse ^ EndDenyLobbyParticipants(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDenyLobbyParticipants : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.LobbyOperationResponse" Usage="lobbyManager.EndDenyLobbyParticipants result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

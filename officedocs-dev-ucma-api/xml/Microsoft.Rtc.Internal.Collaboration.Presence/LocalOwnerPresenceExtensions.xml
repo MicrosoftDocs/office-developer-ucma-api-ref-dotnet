@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module LocalOwnerPresenceExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class LocalOwnerPresenceExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type LocalOwnerPresenceExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.AddPrivacyModeChangedHandler(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.EventHandler{Microsoft.Rtc.Internal.Collaboration.Presence.PrivacyModeChangedEventArgs})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub AddPrivacyModeChangedHandler (lop As LocalOwnerPresence, handler As EventHandler(Of PrivacyModeChangedEventArgs))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void AddPrivacyModeChangedHandler(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::Presence::PrivacyModeChangedEventArgs ^&gt; ^ handler);" />
+      <MemberSignature Language="F#" Value="static member AddPrivacyModeChangedHandler : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.Presence.PrivacyModeChangedEventArgs&gt; -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.AddPrivacyModeChangedHandler (lop, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginAddUserACE(class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence localOwnerPresence, string contactUri, int32 containerId, valuetype Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginAddUserACE(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.String,System.Int32,Microsoft.Rtc.Collaboration.SourceNetwork,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginAddUserACE(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ localOwnerPresence, System::String ^ contactUri, int containerId, Microsoft::Rtc::Collaboration::SourceNetwork sourceNetwork, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginAddUserACE : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * string * int * Microsoft.Rtc.Collaboration.SourceNetwork * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginAddUserACE (localOwnerPresence, contactUri, containerId, sourceNetwork, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +84,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginDeletePresence(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.String,System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginDeletePresence (lop As LocalOwnerPresence, categoryItems As ICollection(Of PresenceCategory), publisherGruu As String, publisherEpid As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginDeletePresence(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^&gt; ^ categoryItems, System::String ^ publisherGruu, System::String ^ publisherEpid, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginDeletePresence : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; * string * string * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginDeletePresence (lop, categoryItems, publisherGruu, publisherEpid, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -114,6 +118,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginDeleteUserACE(class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence localOwnerPresence, string contactUri, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginDeleteUserACE(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginDeleteUserACE(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ localOwnerPresence, System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginDeleteUserACE : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * string * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginDeleteUserACE (localOwnerPresence, contactUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -144,6 +149,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginPublishPresence(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.String,System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginPublishPresence (lop As LocalOwnerPresence, categoryItems As ICollection(Of PresenceCategory), publisherGruu As String, publisherEpid As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginPublishPresence(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^&gt; ^ categoryItems, System::String ^ publisherGruu, System::String ^ publisherEpid, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginPublishPresence : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; * string * string * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.BeginPublishPresence (lop, categoryItems, publisherGruu, publisherEpid, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -177,6 +183,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndAddUserACE(class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence localOwnerPresence, class System.IAsyncResult result) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.EndAddUserACE(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EndAddUserACE(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ localOwnerPresence, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndAddUserACE : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * IAsyncResult -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.EndAddUserACE (localOwnerPresence, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -201,6 +208,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndDeleteUserACE(class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence localOwnerPresence, class System.IAsyncResult result) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.EndDeleteUserACE(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EndDeleteUserACE(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ localOwnerPresence, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndDeleteUserACE : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * IAsyncResult -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.EndDeleteUserACE (localOwnerPresence, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -226,6 +234,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.GetAllAcesForUser(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetAllAcesForUser (lop As LocalOwnerPresence, contactUri As RealTimeAddress) As List(Of Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::List&lt;int&gt; ^ GetAllAcesForUser(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, Microsoft::Rtc::Signaling::RealTimeAddress ^ contactUri);" />
+      <MemberSignature Language="F#" Value="static member GetAllAcesForUser : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * Microsoft.Rtc.Signaling.RealTimeAddress -&gt; System.Collections.Generic.List&lt;int&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.GetAllAcesForUser (lop, contactUri)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -251,6 +260,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel GetDefaultRelationshipLevelBasedOnContainerManifest(class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence lop, valuetype Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.GetDefaultRelationshipLevelBasedOnContainerManifest(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,Microsoft.Rtc.Collaboration.SourceNetwork)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::Presence::PresenceRelationshipLevel GetDefaultRelationshipLevelBasedOnContainerManifest(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, Microsoft::Rtc::Collaboration::SourceNetwork sourceNetwork);" />
+      <MemberSignature Language="F#" Value="static member GetDefaultRelationshipLevelBasedOnContainerManifest : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * Microsoft.Rtc.Collaboration.SourceNetwork -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.GetDefaultRelationshipLevelBasedOnContainerManifest (lop, sourceNetwork)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -276,6 +286,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel GetPresenceRelationshipLevel(class Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence lop, class Microsoft.Rtc.Signaling.RealTimeAddress uri, valuetype Microsoft.Rtc.Collaboration.SourceNetwork sourceNetwork) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.GetPresenceRelationshipLevel(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Collaboration.SourceNetwork)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::Presence::PresenceRelationshipLevel GetPresenceRelationshipLevel(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, Microsoft::Rtc::Signaling::RealTimeAddress ^ uri, Microsoft::Rtc::Collaboration::SourceNetwork sourceNetwork);" />
+      <MemberSignature Language="F#" Value="static member GetPresenceRelationshipLevel : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Collaboration.SourceNetwork -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceRelationshipLevel" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.GetPresenceRelationshipLevel (lop, uri, sourceNetwork)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -304,6 +315,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.RemovePrivacyModeChangedHandler(Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence,System.EventHandler{Microsoft.Rtc.Internal.Collaboration.Presence.PrivacyModeChangedEventArgs})" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub RemovePrivacyModeChangedHandler (lop As LocalOwnerPresence, handler As EventHandler(Of PrivacyModeChangedEventArgs))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void RemovePrivacyModeChangedHandler(Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ lop, EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::Presence::PrivacyModeChangedEventArgs ^&gt; ^ handler);" />
+      <MemberSignature Language="F#" Value="static member RemovePrivacyModeChangedHandler : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence * EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.Presence.PrivacyModeChangedEventArgs&gt; -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.Presence.LocalOwnerPresenceExtensions.RemovePrivacyModeChangedHandler (lop, handler)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

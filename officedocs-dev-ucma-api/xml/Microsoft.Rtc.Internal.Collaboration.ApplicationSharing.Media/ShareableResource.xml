@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ShareableResource&#xA;Implements IEquatable(Of ShareableResource)" />
   <TypeSignature Language="C++ CLI" Value="public ref class ShareableResource abstract : IEquatable&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResource ^&gt;" />
+  <TypeSignature Language="F#" Value="type ShareableResource = class&#xA;    interface IEquatable&lt;ShareableResource&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.Equals(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ShareableResource) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResource ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource -&gt; bool" Usage="shareableResource.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -71,6 +73,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="shareableResource.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="shareableResource.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +120,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.GetIcon" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetIcon () As Icon" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::Icon ^ GetIcon();" />
+      <MemberSignature Language="F#" Value="abstract member GetIcon : unit -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.Icon" Usage="shareableResource.GetIcon " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -137,6 +142,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.Id" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Id As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Id { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : int" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -157,6 +163,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.IsShared" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property IsShared As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsShared { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsShared : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.IsShared" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -177,6 +184,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.Name" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -197,6 +205,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.op_Equality(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (obj1 As ShareableResource, value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResource ^ obj1, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource * obj -&gt; bool" Usage="obj1 = value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -223,6 +232,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.op_Inequality(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (obj1 As ShareableResource, value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResource ^ obj1, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource * obj -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource.op_Inequality (obj1, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

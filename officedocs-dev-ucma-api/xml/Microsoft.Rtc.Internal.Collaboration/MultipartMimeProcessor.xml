@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor" />
   <TypeSignature Language="VB.NET" Value="Public Class MultipartMimeProcessor" />
   <TypeSignature Language="C++ CLI" Value="public ref class MultipartMimeProcessor" />
+  <TypeSignature Language="F#" Value="type MultipartMimeProcessor = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.ContentDescription contentDescription) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.#ctor(Microsoft.Rtc.Signaling.ContentDescription)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MultipartMimeProcessor(Microsoft::Rtc::Signaling::ContentDescription ^ contentDescription);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor : Microsoft.Rtc.Signaling.ContentDescription -&gt; Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor" Usage="new Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor contentDescription" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.ContentDescription contentDescription, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; headers) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.#ctor(Microsoft.Rtc.Signaling.ContentDescription,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MultipartMimeProcessor(Microsoft::Rtc::Signaling::ContentDescription ^ contentDescription, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor : Microsoft.Rtc.Signaling.ContentDescription * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor" Usage="new Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor (contentDescription, headers)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -63,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.CustomMimeList" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CustomMimeList As Collection(Of MimePartContentDescription)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MimePartContentDescription ^&gt; ^ CustomMimeList { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MimePartContentDescription ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CustomMimeList : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.MimePartContentDescription&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.CustomMimeList" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -83,6 +87,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.NestingLevelDepth" />
       <MemberSignature Language="VB.NET" Value="Public Shared Property NestingLevelDepth As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property long NestingLevelDepth { long get(); void set(long value); };" />
+      <MemberSignature Language="F#" Value="member this.NestingLevelDepth : int64 with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.NestingLevelDepth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -103,6 +108,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.Parse" />
       <MemberSignature Language="VB.NET" Value="Public Function Parse () As MimeProcessorResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Internal::Collaboration::MimeProcessorResult Parse();" />
+      <MemberSignature Language="F#" Value="member this.Parse : unit -&gt; Microsoft.Rtc.Internal.Collaboration.MimeProcessorResult" Usage="multipartMimeProcessor.Parse " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -124,6 +130,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.SdpOffers" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SdpOffers As Collection(Of SdpContentDescription)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::SdpContentDescription ^&gt; ^ SdpOffers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::SdpContentDescription ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SdpOffers : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.SdpContentDescription&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.MultipartMimeProcessor.SdpOffers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

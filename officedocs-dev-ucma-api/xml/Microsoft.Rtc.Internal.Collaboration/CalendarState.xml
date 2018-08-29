@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.CalendarState" />
   <TypeSignature Language="VB.NET" Value="Public Class CalendarState&#xA;Inherits PresenceStateInternal" />
   <TypeSignature Language="C++ CLI" Value="public ref class CalendarState : Microsoft::Rtc::Internal::Collaboration::PresenceStateInternal" />
+  <TypeSignature Language="F#" Value="type CalendarState = class&#xA;    inherit PresenceStateInternal" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CalendarState.#ctor(System.Int32,Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (availability As Integer, activity As PresenceActivityInternal, smtpAddress As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CalendarState(int availability, Microsoft::Rtc::Internal::Collaboration::PresenceActivityInternal ^ activity, System::String ^ smtpAddress);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.CalendarState : int * Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal * string -&gt; Microsoft.Rtc.Internal.Collaboration.CalendarState" Usage="new Microsoft.Rtc.Internal.Collaboration.CalendarState (availability, activity, smtpAddress)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CalendarState.#ctor(System.Int32,Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal,System.String,System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (availability As Integer, activity As PresenceActivityInternal, smtpAddress As String, isStatic As Boolean, isOofPresenceState As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CalendarState(int availability, Microsoft::Rtc::Internal::Collaboration::PresenceActivityInternal ^ activity, System::String ^ smtpAddress, bool isStatic, bool isOofPresenceState);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.CalendarState : int * Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal * string * bool * bool -&gt; Microsoft.Rtc.Internal.Collaboration.CalendarState" Usage="new Microsoft.Rtc.Internal.Collaboration.CalendarState (availability, activity, smtpAddress, isStatic, isOofPresenceState)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -75,6 +78,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CalendarState.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="calendarState.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -96,6 +100,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CalendarState.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="calendarState.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -120,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CalendarState.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="calendarState.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -141,6 +147,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CalendarState.InMeeting(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function InMeeting (smtpAddress As String, meetingSubject As String, meetingLocation As String) As CalendarState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Collaboration::CalendarState ^ InMeeting(System::String ^ smtpAddress, System::String ^ meetingSubject, System::String ^ meetingLocation);" />
+      <MemberSignature Language="F#" Value="static member InMeeting : string * string * string -&gt; Microsoft.Rtc.Internal.Collaboration.CalendarState" Usage="Microsoft.Rtc.Internal.Collaboration.CalendarState.InMeeting (smtpAddress, meetingSubject, meetingLocation)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -169,6 +176,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.CalendarState.MeetingLocation" />
       <MemberSignature Language="VB.NET" Value="Public Property MeetingLocation As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MeetingLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MeetingLocation : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.CalendarState.MeetingLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -189,6 +197,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.CalendarState.MeetingSubject" />
       <MemberSignature Language="VB.NET" Value="Public Property MeetingSubject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MeetingSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MeetingSubject : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.CalendarState.MeetingSubject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -209,6 +218,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.CalendarState.Uri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Rtc.Internal.Collaboration.CalendarState.Uri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

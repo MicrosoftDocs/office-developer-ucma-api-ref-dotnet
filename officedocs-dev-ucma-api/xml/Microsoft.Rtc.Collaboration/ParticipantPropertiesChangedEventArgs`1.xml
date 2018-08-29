@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs`1" />
   <TypeSignature Language="VB.NET" Value="Public Class ParticipantPropertiesChangedEventArgs(Of TProperties)&#xA;Inherits PropertiesChangedEventArgs(Of TProperties)" />
   <TypeSignature Language="C++ CLI" Value="generic &lt;typename TProperties&gt;&#xA;public ref class ParticipantPropertiesChangedEventArgs : Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;TProperties&gt;" />
+  <TypeSignature Language="F#" Value="type ParticipantPropertiesChangedEventArgs&lt;'Properties&gt; = class&#xA;    inherit PropertiesChangedEventArgs&lt;'Properties&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -30,6 +31,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs`1.#ctor(Microsoft.Rtc.Collaboration.ConversationParticipant,System.Collections.Generic.IEnumerable{System.String},`0)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (participant As ConversationParticipant, changedPropertyNames As IEnumerable(Of String), properties As TProperties)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; ParticipantPropertiesChangedEventArgs(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ changedPropertyNames, TProperties properties);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&lt;'Properties&gt; : Microsoft.Rtc.Collaboration.ConversationParticipant * seq&lt;string&gt; * 'Properties -&gt; Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&lt;'Properties&gt;" Usage="new Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&lt;'Properties&gt; (participant, changedPropertyNames, properties)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -54,6 +56,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs`1.Participant" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Participant As ConversationParticipant" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ Participant { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Participant : Microsoft.Rtc.Collaboration.ConversationParticipant" Usage="Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&lt;'Properties&gt;.Participant" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

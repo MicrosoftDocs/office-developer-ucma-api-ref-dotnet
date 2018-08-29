@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession" />
   <TypeSignature Language="VB.NET" Value="Public Class ApplicationSharingSession&#xA;Implements IEquatable(Of ApplicationSharingSession)" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingSession : IEquatable&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingSession ^&gt;" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingSession = class&#xA;    interface IEquatable&lt;ApplicationSharingSession&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.#ctor(System.Int64)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (id As Long)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationSharingSession(long id);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession : int64 -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession" Usage="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession id" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.Equals(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As ApplicationSharingSession) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingSession ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession -&gt; bool" Usage="applicationSharingSession.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -91,6 +94,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="applicationSharingSession.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -115,6 +119,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="applicationSharingSession.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -136,6 +141,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long Id { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : int64" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -156,6 +162,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.op_Equality(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (session1 As ApplicationSharingSession, value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingSession ^ session1, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession * obj -&gt; bool" Usage="session1 = value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -182,6 +189,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.op_Inequality(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (session1 As ApplicationSharingSession, value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingSession ^ session1, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession * obj -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.op_Inequality (session1, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -208,6 +216,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingSession.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="applicationSharingSession.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

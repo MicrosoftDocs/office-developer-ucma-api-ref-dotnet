@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ServerPlatformSettings" />
   <TypeSignature Language="VB.NET" Value="Public Class ServerPlatformSettings" />
   <TypeSignature Language="C++ CLI" Value="public ref class ServerPlatformSettings" />
+  <TypeSignature Language="F#" Value="type ServerPlatformSettings = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.#ctor(System.String,System.String,System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (applicationUserAgent As String, localhost As String, port As Integer, gruu As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerPlatformSettings(System::String ^ applicationUserAgent, System::String ^ localhost, int port, System::String ^ gruu);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ServerPlatformSettings : string * string * int * string -&gt; Microsoft.Rtc.Collaboration.ServerPlatformSettings" Usage="new Microsoft.Rtc.Collaboration.ServerPlatformSettings (applicationUserAgent, localhost, port, gruu)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.#ctor(System.String,System.String,System.Int32,System.String,System.Security.Cryptography.X509Certificates.X509Certificate)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (applicationUserAgent As String, localhost As String, port As Integer, gruu As String, certificate As X509Certificate)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerPlatformSettings(System::String ^ applicationUserAgent, System::String ^ localhost, int port, System::String ^ gruu, System::Security::Cryptography::X509Certificates::X509Certificate ^ certificate);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ServerPlatformSettings : string * string * int * string * System.Security.Cryptography.X509Certificates.X509Certificate -&gt; Microsoft.Rtc.Collaboration.ServerPlatformSettings" Usage="new Microsoft.Rtc.Collaboration.ServerPlatformSettings (applicationUserAgent, localhost, port, gruu, certificate)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -105,6 +108,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.#ctor(System.String,System.String,System.Int32,System.String,System.String,System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (applicationUserAgent As String, localhost As String, port As Integer, gruu As String, certificateIssuerName As String, certificateSerialNumber As Byte())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ServerPlatformSettings(System::String ^ applicationUserAgent, System::String ^ localhost, int port, System::String ^ gruu, System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ServerPlatformSettings : string * string * int * string * string * byte[] -&gt; Microsoft.Rtc.Collaboration.ServerPlatformSettings" Usage="new Microsoft.Rtc.Collaboration.ServerPlatformSettings (applicationUserAgent, localhost, port, gruu, certificateIssuerName, certificateSerialNumber)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -145,6 +149,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.ApplicationUserAgent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationUserAgent As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationUserAgent { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationUserAgent : string" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.ApplicationUserAgent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -170,6 +175,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.CertificateIssuerName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CertificateIssuerName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CertificateIssuerName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CertificateIssuerName : string" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.CertificateIssuerName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -192,6 +198,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.DefaultAudioVideoProviderEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property DefaultAudioVideoProviderEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DefaultAudioVideoProviderEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultAudioVideoProviderEnabled : bool with get, set" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.DefaultAudioVideoProviderEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -221,6 +228,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ServerPlatformSettings.GetCertificateSerialNumber" />
       <MemberSignature Language="VB.NET" Value="Public Function GetCertificateSerialNumber () As Byte()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetCertificateSerialNumber();" />
+      <MemberSignature Language="F#" Value="member this.GetCertificateSerialNumber : unit -&gt; byte[]" Usage="serverPlatformSettings.GetCertificateSerialNumber " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -244,6 +252,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.Gruu" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Gruu As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Gruu { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Gruu : string" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.Gruu" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -270,6 +279,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.IpV6SupportDisabled" />
       <MemberSignature Language="VB.NET" Value="Public Property IpV6SupportDisabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IpV6SupportDisabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IpV6SupportDisabled : bool with get, set" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.IpV6SupportDisabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -290,6 +300,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.ListeningIPAddress" />
       <MemberSignature Language="VB.NET" Value="Public Property ListeningIPAddress As IPAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ ListeningIPAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ListeningIPAddress : System.Net.IPAddress with get, set" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.ListeningIPAddress" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -324,6 +335,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.ListeningPort" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ListeningPort As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ListeningPort { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ListeningPort : int" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.ListeningPort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -346,6 +358,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.Localhost" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Localhost As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Localhost { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Localhost : string" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.Localhost" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -368,6 +381,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.OutboundConnectionConfiguration" />
       <MemberSignature Language="VB.NET" Value="Public Property OutboundConnectionConfiguration As OutboundConnectionConfiguration" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ OutboundConnectionConfiguration { Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ get(); void set(Microsoft::Rtc::Signaling::OutboundConnectionConfiguration ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OutboundConnectionConfiguration : Microsoft.Rtc.Signaling.OutboundConnectionConfiguration with get, set" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.OutboundConnectionConfiguration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -388,6 +402,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.SecondaryListeningIPAddress" />
       <MemberSignature Language="VB.NET" Value="Public Property SecondaryListeningIPAddress As IPAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ SecondaryListeningIPAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SecondaryListeningIPAddress : System.Net.IPAddress with get, set" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.SecondaryListeningIPAddress" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -422,6 +437,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.TrustedDomainModeForTcp" />
       <MemberSignature Language="VB.NET" Value="Public Property TrustedDomainModeForTcp As TrustedDomainMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::TrustedDomainMode TrustedDomainModeForTcp { Microsoft::Rtc::Collaboration::TrustedDomainMode get(); void set(Microsoft::Rtc::Collaboration::TrustedDomainMode value); };" />
+      <MemberSignature Language="F#" Value="member this.TrustedDomainModeForTcp : Microsoft.Rtc.Collaboration.TrustedDomainMode with get, set" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.TrustedDomainModeForTcp" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -444,6 +460,7 @@ The certificate should be installed in the local computer certificate store.
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ServerPlatformSettings.TrustedDomains" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TrustedDomains As Collection(Of TrustedDomain)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::TrustedDomain ^&gt; ^ TrustedDomains { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::TrustedDomain ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TrustedDomains : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.TrustedDomain&gt;" Usage="Microsoft.Rtc.Collaboration.ServerPlatformSettings.TrustedDomains" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

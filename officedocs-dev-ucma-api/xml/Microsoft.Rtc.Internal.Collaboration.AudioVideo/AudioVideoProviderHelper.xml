@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper" />
   <TypeSignature Language="VB.NET" Value="Public Module AudioVideoProviderHelper" />
   <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoProviderHelper abstract sealed" />
+  <TypeSignature Language="F#" Value="type AudioVideoProviderHelper = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddConferenceParticipantsMediaSourceIDs(class Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider mediaProvider, class System.Collections.Generic.ICollection`1&lt;unsigned int32[]&gt; audioVideoMediaSourceIds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.AddConferenceParticipantsMediaSourceIDs(Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider,System.Collections.Generic.ICollection{System.UInt32[]})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddConferenceParticipantsMediaSourceIDs(Microsoft::Rtc::Collaboration::ComponentModel::MediaProvider ^ mediaProvider, System::Collections::Generic::ICollection&lt;cli::array &lt;System::UInt32&gt; ^&gt; ^ audioVideoMediaSourceIds);" />
+      <MemberSignature Language="F#" Value="static member AddConferenceParticipantsMediaSourceIDs : Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider * System.Collections.Generic.ICollection&lt;uint32[]&gt; -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.AddConferenceParticipantsMediaSourceIDs (mediaProvider, audioVideoMediaSourceIds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -46,6 +48,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddDiagnosticsInformationIfAllowed(class System.Collections.Generic.List`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt;&amp; signalingHeaders, class Microsoft.Rtc.Signaling.DiagnosticsInformation diagnosticsInformation, class Microsoft.Rtc.Signaling.SignalingSession signalingSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.AddDiagnosticsInformationIfAllowed(System.Collections.Generic.List{Microsoft.Rtc.Signaling.SignalingHeader}@,Microsoft.Rtc.Signaling.DiagnosticsInformation,Microsoft.Rtc.Signaling.SignalingSession)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void AddDiagnosticsInformationIfAllowed(System::Collections::Generic::List&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ % signalingHeaders, Microsoft::Rtc::Signaling::DiagnosticsInformation ^ diagnosticsInformation, Microsoft::Rtc::Signaling::SignalingSession ^ signalingSession);" />
+      <MemberSignature Language="F#" Value="static member AddDiagnosticsInformationIfAllowed :  * Microsoft.Rtc.Signaling.DiagnosticsInformation * Microsoft.Rtc.Signaling.SignalingSession -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.AddDiagnosticsInformationIfAllowed (signalingHeaders, diagnosticsInformation, signalingSession)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -55,7 +58,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.List&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;&amp;" RefType="ref" />
+        <Parameter Name="signalingHeaders" Type="System.Collections.Generic.List&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" RefType="ref" />
         <Parameter Name="diagnosticsInformation" Type="Microsoft.Rtc.Signaling.DiagnosticsInformation" />
         <Parameter Name="signalingSession" Type="Microsoft.Rtc.Signaling.SignalingSession" />
       </Parameters>
@@ -73,6 +76,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.CreateAudioVideoFlowConfigurationChangedEventArgs" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateAudioVideoFlowConfigurationChangedEventArgs () As AudioVideoFlowConfigurationChangedEventArgs" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlowConfigurationChangedEventArgs ^ CreateAudioVideoFlowConfigurationChangedEventArgs();" />
+      <MemberSignature Language="F#" Value="static member CreateAudioVideoFlowConfigurationChangedEventArgs : unit -&gt; Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowConfigurationChangedEventArgs" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.CreateAudioVideoFlowConfigurationChangedEventArgs " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +98,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.EnableVideoProxyCrossbarRouting" />
       <MemberSignature Language="VB.NET" Value="Public Property EnableVideoProxyCrossbarRouting As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property bool EnableVideoProxyCrossbarRouting { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.EnableVideoProxyCrossbarRouting : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.EnableVideoProxyCrossbarRouting" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -114,6 +119,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetCall(Microsoft.Rtc.Collaboration.CallDialogContext)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetCall (context As CallDialogContext) As Call" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::Call ^ GetCall(Microsoft::Rtc::Collaboration::CallDialogContext ^ context);" />
+      <MemberSignature Language="F#" Value="static member GetCall : Microsoft.Rtc.Collaboration.CallDialogContext -&gt; Microsoft.Rtc.Collaboration.Call" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetCall context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -138,6 +144,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetCallSessionData(Microsoft.Rtc.Collaboration.CallDialogContext)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetCallSessionData (context As CallDialogContext) As CallSessionData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Collaboration::CallSessionData ^ GetCallSessionData(Microsoft::Rtc::Collaboration::CallDialogContext ^ context);" />
+      <MemberSignature Language="F#" Value="static member GetCallSessionData : Microsoft.Rtc.Collaboration.CallDialogContext -&gt; Microsoft.Rtc.Internal.Collaboration.CallSessionData" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetCallSessionData context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -162,6 +169,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetConnection(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetConnection (context As OfferAnswerContext) As RealTimeConnection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Signaling::RealTimeConnection ^ GetConnection(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ context);" />
+      <MemberSignature Language="F#" Value="static member GetConnection : Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext -&gt; Microsoft.Rtc.Signaling.RealTimeConnection" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetConnection context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -186,6 +194,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetLocalEndpointLocation(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetLocalEndpointLocation (context As OfferAnswerContext) As RtpEndpointLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Internal::Media::RtpEndpointLocation GetLocalEndpointLocation(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ context);" />
+      <MemberSignature Language="F#" Value="static member GetLocalEndpointLocation : Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext -&gt; Microsoft.Rtc.Internal.Media.RtpEndpointLocation" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetLocalEndpointLocation context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -210,6 +219,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetMediaMidSessionFailureCodes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetMediaMidSessionFailureCodes () As IEnumerable(Of Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::Collections::Generic::IEnumerable&lt;int&gt; ^ GetMediaMidSessionFailureCodes();" />
+      <MemberSignature Language="F#" Value="static member GetMediaMidSessionFailureCodes : unit -&gt; seq&lt;int&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetMediaMidSessionFailureCodes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -231,6 +241,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetMediaProviderOfAudioVideoFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetMediaProviderOfAudioVideoFlow (flow As AudioVideoFlow) As MediaProvider" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Collaboration::ComponentModel::MediaProvider ^ GetMediaProviderOfAudioVideoFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ flow);" />
+      <MemberSignature Language="F#" Value="static member GetMediaProviderOfAudioVideoFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow -&gt; Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetMediaProviderOfAudioVideoFlow flow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -255,6 +266,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetMediaRelayToken(Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetMediaRelayToken (context As OfferAnswerContext) As MediaRelayToken" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^ GetMediaRelayToken(Microsoft::Rtc::Collaboration::ComponentModel::OfferAnswerContext ^ context);" />
+      <MemberSignature Language="F#" Value="static member GetMediaRelayToken : Microsoft.Rtc.Collaboration.ComponentModel.OfferAnswerContext -&gt; Microsoft.Rtc.Internal.Collaboration.MediaRelayToken" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetMediaRelayToken context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -278,6 +290,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetQoeUriFromProvisionedData(class Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider mediaProvider) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetQoeUriFromProvisionedData(Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetQoeUriFromProvisionedData(Microsoft::Rtc::Collaboration::ComponentModel::MediaProvider ^ mediaProvider);" />
+      <MemberSignature Language="F#" Value="static member GetQoeUriFromProvisionedData : Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider -&gt; string" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetQoeUriFromProvisionedData mediaProvider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -301,6 +314,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Microsoft.Rtc.Collaboration.ConversationParticipant GetRemoteParticipant(class Microsoft.Rtc.Collaboration.Call call) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetRemoteParticipant(Microsoft.Rtc.Collaboration.Call)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Collaboration::ConversationParticipant ^ GetRemoteParticipant(Microsoft::Rtc::Collaboration::Call ^ call);" />
+      <MemberSignature Language="F#" Value="static member GetRemoteParticipant : Microsoft.Rtc.Collaboration.Call -&gt; Microsoft.Rtc.Collaboration.ConversationParticipant" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetRemoteParticipant call" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -325,6 +339,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetRemoteRtpEndpointLocation(System.Collections.Generic.ICollection{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRemoteRtpEndpointLocation (signalingHeaders As ICollection(Of SignalingHeader)) As RtpEndpointLocation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Media::RtpEndpointLocation GetRemoteRtpEndpointLocation(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="static member GetRemoteRtpEndpointLocation : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Internal.Media.RtpEndpointLocation" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetRemoteRtpEndpointLocation signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -349,6 +364,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetSignalingSession(Microsoft.Rtc.Collaboration.CallDialogContext)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetSignalingSession (context As CallDialogContext) As SignalingSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static Microsoft::Rtc::Signaling::SignalingSession ^ GetSignalingSession(Microsoft::Rtc::Collaboration::CallDialogContext ^ context);" />
+      <MemberSignature Language="F#" Value="static member GetSignalingSession : Microsoft.Rtc.Collaboration.CallDialogContext -&gt; Microsoft.Rtc.Signaling.SignalingSession" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetSignalingSession context" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -373,6 +389,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetVideoControl(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetVideoControl (flow As AudioVideoFlow) As VideoControl" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Collaboration::AudioVideo::VideoControl ^ GetVideoControl(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ flow);" />
+      <MemberSignature Language="F#" Value="static member GetVideoControl : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow -&gt; Microsoft.Rtc.Internal.Collaboration.AudioVideo.VideoControl" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.GetVideoControl flow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -396,6 +413,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RemoveConferenceParticipantsMediaSourceIDs(class Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider mediaProvider, class System.Collections.Generic.ICollection`1&lt;unsigned int32[]&gt; audioVideoMediaSourceIds) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.RemoveConferenceParticipantsMediaSourceIDs(Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider,System.Collections.Generic.ICollection{System.UInt32[]})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static void RemoveConferenceParticipantsMediaSourceIDs(Microsoft::Rtc::Collaboration::ComponentModel::MediaProvider ^ mediaProvider, System::Collections::Generic::ICollection&lt;cli::array &lt;System::UInt32&gt; ^&gt; ^ audioVideoMediaSourceIds);" />
+      <MemberSignature Language="F#" Value="static member RemoveConferenceParticipantsMediaSourceIDs : Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider * System.Collections.Generic.ICollection&lt;uint32[]&gt; -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.RemoveConferenceParticipantsMediaSourceIDs (mediaProvider, audioVideoMediaSourceIds)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -421,6 +439,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.TryQueryActiveChannelMediaTypes(Microsoft.Rtc.Internal.Collaboration.AudioVideo.InternalAudioVideoFlowFlags,Microsoft.Rtc.Collaboration.SdpContentDescription,Microsoft.Rtc.Internal.Collaboration.AudioVideo.ActiveMediaChannelTypes@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryQueryActiveChannelMediaTypes (flags As InternalAudioVideoFlowFlags, sdpContent As SdpContentDescription, ByRef mediaChannelTypes As ActiveMediaChannelTypes) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryQueryActiveChannelMediaTypes(Microsoft::Rtc::Internal::Collaboration::AudioVideo::InternalAudioVideoFlowFlags flags, Microsoft::Rtc::Collaboration::SdpContentDescription ^ sdpContent, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::AudioVideo::ActiveMediaChannelTypes ^ % mediaChannelTypes);" />
+      <MemberSignature Language="F#" Value="static member TryQueryActiveChannelMediaTypes : Microsoft.Rtc.Internal.Collaboration.AudioVideo.InternalAudioVideoFlowFlags * Microsoft.Rtc.Collaboration.SdpContentDescription *  -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.TryQueryActiveChannelMediaTypes (flags, sdpContent, mediaChannelTypes)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -432,7 +451,7 @@
       <Parameters>
         <Parameter Name="flags" Type="Microsoft.Rtc.Internal.Collaboration.AudioVideo.InternalAudioVideoFlowFlags" />
         <Parameter Name="sdpContent" Type="Microsoft.Rtc.Collaboration.SdpContentDescription" />
-        <Parameter Name="mediaChannelTypes" Type="Microsoft.Rtc.Internal.Collaboration.AudioVideo.ActiveMediaChannelTypes&amp;" RefType="out" />
+        <Parameter Name="mediaChannelTypes" Type="Microsoft.Rtc.Internal.Collaboration.AudioVideo.ActiveMediaChannelTypes" RefType="out" />
       </Parameters>
       <Docs>
         <param name="flags">To be added.</param>
@@ -449,6 +468,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.TryQueryActiveChannelMediaTypes(Microsoft.Rtc.Internal.Collaboration.AudioVideo.InternalAudioVideoFlowFlags,Microsoft.Rtc.Signaling.SipRequestData,Microsoft.Rtc.Internal.Collaboration.AudioVideo.ActiveMediaChannelTypes@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryQueryActiveChannelMediaTypes (flags As InternalAudioVideoFlowFlags, requestData As SipRequestData, ByRef mediaChannelTypes As ActiveMediaChannelTypes) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryQueryActiveChannelMediaTypes(Microsoft::Rtc::Internal::Collaboration::AudioVideo::InternalAudioVideoFlowFlags flags, Microsoft::Rtc::Signaling::SipRequestData ^ requestData, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::AudioVideo::ActiveMediaChannelTypes ^ % mediaChannelTypes);" />
+      <MemberSignature Language="F#" Value="static member TryQueryActiveChannelMediaTypes : Microsoft.Rtc.Internal.Collaboration.AudioVideo.InternalAudioVideoFlowFlags * Microsoft.Rtc.Signaling.SipRequestData *  -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.AudioVideo.AudioVideoProviderHelper.TryQueryActiveChannelMediaTypes (flags, requestData, mediaChannelTypes)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -460,7 +480,7 @@
       <Parameters>
         <Parameter Name="flags" Type="Microsoft.Rtc.Internal.Collaboration.AudioVideo.InternalAudioVideoFlowFlags" />
         <Parameter Name="requestData" Type="Microsoft.Rtc.Signaling.SipRequestData" />
-        <Parameter Name="mediaChannelTypes" Type="Microsoft.Rtc.Internal.Collaboration.AudioVideo.ActiveMediaChannelTypes&amp;" RefType="out" />
+        <Parameter Name="mediaChannelTypes" Type="Microsoft.Rtc.Internal.Collaboration.AudioVideo.ActiveMediaChannelTypes" RefType="out" />
       </Parameters>
       <Docs>
         <param name="flags">To be added.</param>

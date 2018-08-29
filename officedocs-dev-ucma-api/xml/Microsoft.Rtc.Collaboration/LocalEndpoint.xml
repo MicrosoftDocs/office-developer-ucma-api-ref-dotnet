@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.LocalEndpoint" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class LocalEndpoint" />
   <TypeSignature Language="C++ CLI" Value="public ref class LocalEndpoint abstract" />
+  <TypeSignature Language="F#" Value="type LocalEndpoint = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -45,6 +46,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginEstablish(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : AsyncCallback * obj -&gt; IAsyncResult" Usage="localEndpoint.BeginEstablish (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -72,6 +74,7 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the state of the platform or endpoint is not correct for this operation.</exception>
         <example>
           <para />
           <para>
@@ -175,7 +178,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when the state of the platform or endpoint is not correct for this operation.</exception>
       </Docs>
     </Member>
     <Member MemberName="BeginEstablish">
@@ -184,6 +186,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginEstablish(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (additionalHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="localEndpoint.BeginEstablish (additionalHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -223,6 +226,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginGetProvisioningData(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginGetProvisioningData (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetProvisioningData(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginGetProvisioningData : AsyncCallback * obj -&gt; IAsyncResult" Usage="localEndpoint.BeginGetProvisioningData (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -260,6 +264,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="localEndpoint.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -295,6 +300,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.LocalEndpoint.ConferenceInvitationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ConferenceInvitationReceived As EventHandler(Of ConferenceInvitationReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConferenceInvitationReceivedEventArgs ^&gt; ^ ConferenceInvitationReceived;" />
+      <MemberSignature Language="F#" Value="member this.ConferenceInvitationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationReceivedEventArgs&gt; " Usage="member this.ConferenceInvitationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -322,6 +328,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.ConferenceServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceServices As ConferenceServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceServices ^ ConferenceServices { Microsoft::Rtc::Collaboration::ConferenceManagement::ConferenceServices ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConferenceServices : Microsoft.Rtc.Collaboration.ConferenceManagement.ConferenceServices" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.ConferenceServices" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -350,6 +357,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.DefaultDomain" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultDomain As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultDomain { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultDomain : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.DefaultDomain" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -377,6 +385,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.EndEstablish(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndEstablish (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndEstablish(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEstablish : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="localEndpoint.EndEstablish result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -422,6 +431,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.EndGetProvisioningData(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndGetProvisioningData (result As IAsyncResult) As ProvisioningData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Presence::ProvisioningData ^ EndGetProvisioningData(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndGetProvisioningData : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.Presence.ProvisioningData" Usage="localEndpoint.EndGetProvisioningData result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -459,6 +469,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointSubtype" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointSubtype As EndpointSubtype" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::EndpointSubtype EndpointSubtype { Microsoft::Rtc::Collaboration::EndpointSubtype get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointSubtype : Microsoft.Rtc.Collaboration.EndpointSubtype" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointSubtype" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -489,6 +500,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointType As EndpointType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::EndpointType EndpointType { Microsoft::Rtc::Collaboration::EndpointType get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointType : Microsoft.Rtc.Collaboration.EndpointType" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -511,6 +523,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointUri : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.EndpointUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -539,6 +552,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="localEndpoint.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -571,6 +585,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.GetConversations" />
       <MemberSignature Language="VB.NET" Value="Public Function GetConversations () As Collection(Of Conversation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Conversation ^&gt; ^ GetConversations();" />
+      <MemberSignature Language="F#" Value="member this.GetConversations : unit -&gt; System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Conversation&gt;" Usage="localEndpoint.GetConversations " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -599,6 +614,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.GetProvisioningData" />
       <MemberSignature Language="VB.NET" Value="Public Function GetProvisioningData () As ProvisioningData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Presence::ProvisioningData ^ GetProvisioningData();" />
+      <MemberSignature Language="F#" Value="member this.GetProvisioningData : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ProvisioningData" Usage="localEndpoint.GetProvisioningData " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -623,6 +639,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HandleSignalingSession(class Microsoft.Rtc.Signaling.SessionReceivedEventArgs sessionReceivedEventArgs) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.HandleSignalingSession(Microsoft.Rtc.Signaling.SessionReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool HandleSignalingSession(Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^ sessionReceivedEventArgs);" />
+      <MemberSignature Language="F#" Value="abstract member HandleSignalingSession : Microsoft.Rtc.Signaling.SessionReceivedEventArgs -&gt; bool&#xA;override this.HandleSignalingSession : Microsoft.Rtc.Signaling.SessionReceivedEventArgs -&gt; bool" Usage="localEndpoint.HandleSignalingSession sessionReceivedEventArgs" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -660,6 +677,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.InnerEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InnerEndpoint As RealTimeEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeEndpoint ^ InnerEndpoint { Microsoft::Rtc::Signaling::RealTimeEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InnerEndpoint : Microsoft.Rtc.Signaling.RealTimeEndpoint" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.InnerEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -685,6 +703,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.IsOutsideCorporateNetwork" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOutsideCorporateNetwork As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsOutsideCorporateNetwork { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsOutsideCorporateNetwork : bool" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.IsOutsideCorporateNetwork" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -716,6 +735,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.LocalOwnerPresence" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalOwnerPresence As LocalOwnerPresence" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ LocalOwnerPresence { Microsoft::Rtc::Collaboration::Presence::LocalOwnerPresence ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalOwnerPresence : Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.LocalOwnerPresence" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -741,6 +761,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.MaxRegisterRetries" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxRegisterRetries As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaxRegisterRetries { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.MaxRegisterRetries : int" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.MaxRegisterRetries" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -771,6 +792,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OutboundConnectionDefaultAddressFamilyHint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutboundConnectionDefaultAddressFamilyHint As Nullable(Of AddressFamilyHint)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; get(); };" />
+      <MemberSignature Language="F#" Value="member this.OutboundConnectionDefaultAddressFamilyHint : Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt;" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.OutboundConnectionDefaultAddressFamilyHint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -793,6 +815,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerDisplayName" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property OwnerDisplayName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ OwnerDisplayName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerDisplayName : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerDisplayName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -823,6 +846,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerPhoneUri" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OwnerPhoneUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ OwnerPhoneUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerPhoneUri : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerPhoneUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -852,6 +876,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerUri" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property OwnerUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerUri : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.OwnerUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -882,6 +907,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PhoneContext" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneContext As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PhoneContext { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PhoneContext : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.PhoneContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -912,6 +938,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.Platform" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Platform As CollaborationPlatform" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CollaborationPlatform ^ Platform { Microsoft::Rtc::Collaboration::CollaborationPlatform ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Platform : Microsoft.Rtc.Collaboration.CollaborationPlatform" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.Platform" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -934,6 +961,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceBasedScreeningDisabled" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceBasedScreeningDisabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PresenceBasedScreeningDisabled { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.PresenceBasedScreeningDisabled : bool" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceBasedScreeningDisabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -963,6 +991,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceServices As LocalEndpointPresenceServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices ^ PresenceServices { Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PresenceServices : Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.PresenceServices" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -985,6 +1014,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.ProvisioningDataDisabled" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProvisioningDataDisabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProvisioningDataDisabled { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProvisioningDataDisabled : bool" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.ProvisioningDataDisabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1015,6 +1045,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.PublishingQoeMetricsDisabled" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublishingQoeMetricsDisabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool PublishingQoeMetricsDisabled { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.PublishingQoeMetricsDisabled : bool" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.PublishingQoeMetricsDisabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1037,6 +1068,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.RegisterForIncomingCall``1(Microsoft.Rtc.Collaboration.IncomingCallDelegate{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterForIncomingCall(Of TCall As Call) (incomingCallDelegate As IncomingCallDelegate(Of TCall))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TCall&gt;&#xA; where TCall : Microsoft::Rtc::Collaboration::Call void RegisterForIncomingCall(Microsoft::Rtc::Collaboration::IncomingCallDelegate&lt;TCall&gt; ^ incomingCallDelegate);" />
+      <MemberSignature Language="F#" Value="member this.RegisterForIncomingCall : Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;'Call (requires 'Call :&gt; Microsoft.Rtc.Collaboration.Call)&gt; -&gt; unit (requires 'Call :&gt; Microsoft.Rtc.Collaboration.Call)" Usage="localEndpoint.RegisterForIncomingCall incomingCallDelegate" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1135,6 +1167,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.RegisterMethods" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RegisterMethods As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RegisterMethods { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RegisterMethods : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.RegisterMethods" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1160,6 +1193,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.RemotePresence" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemotePresence As RemotePresence" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::RemotePresence ^ RemotePresence { Microsoft::Rtc::Collaboration::Presence::RemotePresence ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemotePresence : Microsoft.Rtc.Collaboration.Presence.RemotePresence" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.RemotePresence" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1193,6 +1227,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.LocalEndpoint.RepublishingRequired" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RepublishingRequired As EventHandler(Of RePublishingRequiredEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::RePublishingRequiredEventArgs ^&gt; ^ RepublishingRequired;" />
+      <MemberSignature Language="F#" Value="member this.RepublishingRequired : EventHandler&lt;Microsoft.Rtc.Collaboration.RePublishingRequiredEventArgs&gt; " Usage="member this.RepublishingRequired : System.EventHandler&lt;Microsoft.Rtc.Collaboration.RePublishingRequiredEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1220,6 +1255,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As LocalEndpointState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpointState State { Microsoft::Rtc::Collaboration::LocalEndpointState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.LocalEndpointState" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1248,6 +1284,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.LocalEndpoint.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of LocalEndpointStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::LocalEndpointStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.LocalEndpointStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.LocalEndpointStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1275,6 +1312,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.SupportedMimePartContentTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedMimePartContentTypes As IEnumerable(Of ContentType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ SupportedMimePartContentTypes { System::Collections::Generic::IEnumerable&lt;System::Net::Mime::ContentType ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMimePartContentTypes : seq&lt;System.Net.Mime.ContentType&gt;" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.SupportedMimePartContentTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1301,6 +1339,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.SyncRoot" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property SyncRoot As Object" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Object ^ SyncRoot { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SyncRoot : obj" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.SyncRoot" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1331,6 +1370,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.LocalEndpoint.UnregisterForIncomingCall``1(Microsoft.Rtc.Collaboration.IncomingCallDelegate{``0})" />
       <MemberSignature Language="VB.NET" Value="Public Sub UnregisterForIncomingCall(Of TCall As Call) (incomingCallDelegate As IncomingCallDelegate(Of TCall))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;generic &lt;typename TCall&gt;&#xA; where TCall : Microsoft::Rtc::Collaboration::Call void UnregisterForIncomingCall(Microsoft::Rtc::Collaboration::IncomingCallDelegate&lt;TCall&gt; ^ incomingCallDelegate);" />
+      <MemberSignature Language="F#" Value="member this.UnregisterForIncomingCall : Microsoft.Rtc.Collaboration.IncomingCallDelegate&lt;'Call (requires 'Call :&gt; Microsoft.Rtc.Collaboration.Call)&gt; -&gt; unit (requires 'Call :&gt; Microsoft.Rtc.Collaboration.Call)" Usage="localEndpoint.UnregisterForIncomingCall incomingCallDelegate" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1364,6 +1404,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.LocalEndpoint.UserAgent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAgent As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAgent { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserAgent : string" Usage="Microsoft.Rtc.Collaboration.LocalEndpoint.UserAgent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.AuthenticationException" />
   <TypeSignature Language="VB.NET" Value="Public Class AuthenticationException&#xA;Inherits FailureResponseException" />
   <TypeSignature Language="C++ CLI" Value="public ref class AuthenticationException : Microsoft::Rtc::Signaling::FailureResponseException" />
+  <TypeSignature Language="F#" Value="type AuthenticationException = class&#xA;    inherit FailureResponseException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.AuthenticationException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; AuthenticationException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.AuthenticationException : string -&gt; Microsoft.Rtc.Signaling.AuthenticationException" Usage="new Microsoft.Rtc.Signaling.AuthenticationException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.AuthenticationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; AuthenticationException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.AuthenticationException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.AuthenticationException" Usage="new Microsoft.Rtc.Signaling.AuthenticationException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.AuthenticationException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; AuthenticationException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.AuthenticationException : string * Exception -&gt; Microsoft.Rtc.Signaling.AuthenticationException" Usage="new Microsoft.Rtc.Signaling.AuthenticationException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.AuthenticationException.ErrorCode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorCode As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ErrorCode { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : int" Usage="Microsoft.Rtc.Signaling.AuthenticationException.ErrorCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -143,6 +148,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.AuthenticationException.FailureReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureReason As AuthenticationFailureReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::AuthenticationFailureReason FailureReason { Microsoft::Rtc::Signaling::AuthenticationFailureReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.FailureReason : Microsoft.Rtc.Signaling.AuthenticationFailureReason" Usage="Microsoft.Rtc.Signaling.AuthenticationException.FailureReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -165,6 +171,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.AuthenticationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="authenticationException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -192,6 +199,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.AuthenticationException.Realm" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Realm As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Realm { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Realm : string" Usage="Microsoft.Rtc.Signaling.AuthenticationException.Realm" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -214,6 +222,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.AuthenticationException.SupportedAuthenticationProtocols" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedAuthenticationProtocols As SipAuthenticationProtocols" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipAuthenticationProtocols SupportedAuthenticationProtocols { Microsoft::Rtc::Signaling::SipAuthenticationProtocols get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedAuthenticationProtocols : Microsoft.Rtc.Signaling.SipAuthenticationProtocols" Usage="Microsoft.Rtc.Signaling.AuthenticationException.SupportedAuthenticationProtocols" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -236,6 +245,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.AuthenticationException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="authenticationException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

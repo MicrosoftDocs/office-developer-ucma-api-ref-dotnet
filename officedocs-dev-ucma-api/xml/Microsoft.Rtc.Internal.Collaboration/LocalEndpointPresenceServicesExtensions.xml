@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.LocalEndpointPresenceServicesExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module LocalEndpointPresenceServicesExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class LocalEndpointPresenceServicesExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type LocalEndpointPresenceServicesExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.LocalEndpointPresenceServicesExtensions.BeginEnhancedPresenceQuery(Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices,System.Collections.Generic.IEnumerable{System.String},System.String[],System.EventHandler{Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginEnhancedPresenceQuery (presenceServices As LocalEndpointPresenceServices, targets As IEnumerable(Of String), categories As String(), queryResultHandler As EventHandler(Of RemotePresentitiesNotificationEventArgs), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginEnhancedPresenceQuery(Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices ^ presenceServices, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ targets, cli::array &lt;System::String ^&gt; ^ categories, EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentitiesNotificationEventArgs ^&gt; ^ queryResultHandler, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginEnhancedPresenceQuery : Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices * seq&lt;string&gt; * string[] * EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitiesNotificationEventArgs&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.LocalEndpointPresenceServicesExtensions.BeginEnhancedPresenceQuery (presenceServices, targets, categories, queryResultHandler, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.LocalEndpointPresenceServicesExtensions.EndEnhancedPresenceQuery(Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices,System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EndEnhancedPresenceQuery (presenceServices As LocalEndpointPresenceServices, result As IAsyncResult) As IEnumerable(Of RemotePresentityNotification)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentityNotification ^&gt; ^ EndEnhancedPresenceQuery(Microsoft::Rtc::Collaboration::LocalEndpointPresenceServices ^ presenceServices, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndEnhancedPresenceQuery : Microsoft.Rtc.Collaboration.LocalEndpointPresenceServices * IAsyncResult -&gt; seq&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotification&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.LocalEndpointPresenceServicesExtensions.EndEnhancedPresenceQuery (presenceServices, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

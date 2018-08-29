@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.OfferAnswerException" />
   <TypeSignature Language="VB.NET" Value="Public Class OfferAnswerException&#xA;Inherits RealTimeException" />
   <TypeSignature Language="C++ CLI" Value="public ref class OfferAnswerException : Microsoft::Rtc::Signaling::RealTimeException" />
+  <TypeSignature Language="F#" Value="type OfferAnswerException = class&#xA;    inherit RealTimeException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -50,6 +51,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.OfferAnswerException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; OfferAnswerException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.OfferAnswerException : string -&gt; Microsoft.Rtc.Collaboration.OfferAnswerException" Usage="new Microsoft.Rtc.Collaboration.OfferAnswerException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -72,6 +74,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.OfferAnswerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; OfferAnswerException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.OfferAnswerException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Collaboration.OfferAnswerException" Usage="new Microsoft.Rtc.Collaboration.OfferAnswerException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.OfferAnswerException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; OfferAnswerException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.OfferAnswerException : string * Exception -&gt; Microsoft.Rtc.Collaboration.OfferAnswerException" Usage="new Microsoft.Rtc.Collaboration.OfferAnswerException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.OfferAnswerException.#ctor(Microsoft.Rtc.Collaboration.OfferAnswerFailureReason,System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (reason As OfferAnswerFailureReason, message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; OfferAnswerException(Microsoft::Rtc::Collaboration::OfferAnswerFailureReason reason, System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.OfferAnswerException : Microsoft.Rtc.Collaboration.OfferAnswerFailureReason * string * Exception -&gt; Microsoft.Rtc.Collaboration.OfferAnswerException" Usage="new Microsoft.Rtc.Collaboration.OfferAnswerException (reason, message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -145,6 +150,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Rtc.Collaboration.OfferAnswerFailureReason reason, string message, class System.Exception innerException, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class Microsoft.Rtc.Signaling.DiagnosticsInformation diagnosticsInformation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.OfferAnswerException.#ctor(Microsoft.Rtc.Collaboration.OfferAnswerFailureReason,System.String,System.Exception,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},Microsoft.Rtc.Signaling.DiagnosticsInformation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; OfferAnswerException(Microsoft::Rtc::Collaboration::OfferAnswerFailureReason reason, System::String ^ message, Exception ^ innerException, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, Microsoft::Rtc::Signaling::DiagnosticsInformation ^ diagnosticsInformation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.OfferAnswerException : Microsoft.Rtc.Collaboration.OfferAnswerFailureReason * string * Exception * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * Microsoft.Rtc.Signaling.DiagnosticsInformation -&gt; Microsoft.Rtc.Collaboration.OfferAnswerException" Usage="new Microsoft.Rtc.Collaboration.OfferAnswerException (reason, message, innerException, signalingHeaders, diagnosticsInformation)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.OfferAnswerException.DiagnosticsInformation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DiagnosticsInformation As DiagnosticsInformation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DiagnosticsInformation ^ DiagnosticsInformation { Microsoft::Rtc::Signaling::DiagnosticsInformation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DiagnosticsInformation : Microsoft.Rtc.Signaling.DiagnosticsInformation" Usage="Microsoft.Rtc.Collaboration.OfferAnswerException.DiagnosticsInformation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -201,6 +208,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.OfferAnswerException.FailureReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureReason As OfferAnswerFailureReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::OfferAnswerFailureReason FailureReason { Microsoft::Rtc::Collaboration::OfferAnswerFailureReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.FailureReason : Microsoft.Rtc.Collaboration.OfferAnswerFailureReason" Usage="Microsoft.Rtc.Collaboration.OfferAnswerException.FailureReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -223,6 +231,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.OfferAnswerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="offerAnswerException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -250,6 +259,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.OfferAnswerException.SignalingHeaders" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignalingHeaders As ReadOnlyCollection(Of SignalingHeader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ SignalingHeaders { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignalingHeaders : System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" Usage="Microsoft.Rtc.Collaboration.OfferAnswerException.SignalingHeaders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallOrbit" />
   <TypeSignature Language="VB.NET" Value="Public Class CallOrbit" />
   <TypeSignature Language="C++ CLI" Value="public ref class CallOrbit" />
+  <TypeSignature Language="F#" Value="type CallOrbit = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (orbitNumber As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CallOrbit(System::String ^ orbitNumber);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.CallOrbit : string -&gt; Microsoft.Rtc.Collaboration.CallOrbit" Usage="new Microsoft.Rtc.Collaboration.CallOrbit orbitNumber" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (orbitNumber As String, orbitUri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CallOrbit(System::String ^ orbitNumber, System::String ^ orbitUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.CallOrbit : string * string -&gt; Microsoft.Rtc.Collaboration.CallOrbit" Usage="new Microsoft.Rtc.Collaboration.CallOrbit (orbitNumber, orbitUri)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +92,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.Equals(Microsoft.Rtc.Collaboration.CallOrbit)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (orbit As CallOrbit) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Equals(Microsoft::Rtc::Collaboration::CallOrbit ^ orbit);" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Rtc.Collaboration.CallOrbit -&gt; bool" Usage="callOrbit.Equals orbit" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +120,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="callOrbit.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -143,6 +148,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="callOrbit.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -166,6 +172,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.op_Equality(Microsoft.Rtc.Collaboration.CallOrbit,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (orbit1 As CallOrbit, orbit2 As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Collaboration::CallOrbit ^ orbit1, System::Object ^ orbit2);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.Rtc.Collaboration.CallOrbit * obj -&gt; bool" Usage="orbit1 = orbit2" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -195,6 +202,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallOrbit.op_Inequality(Microsoft.Rtc.Collaboration.CallOrbit,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (orbit1 As CallOrbit, orbit2 As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Collaboration::CallOrbit ^ orbit1, System::Object ^ orbit2);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.Rtc.Collaboration.CallOrbit * obj -&gt; bool" Usage="Microsoft.Rtc.Collaboration.CallOrbit.op_Inequality (orbit1, orbit2)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -224,6 +232,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallOrbit.OrbitNumber" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OrbitNumber As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OrbitNumber { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OrbitNumber : string" Usage="Microsoft.Rtc.Collaboration.CallOrbit.OrbitNumber" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -246,6 +255,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallOrbit.OrbitUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OrbitUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OrbitUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OrbitUri : string" Usage="Microsoft.Rtc.Collaboration.CallOrbit.OrbitUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

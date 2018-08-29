@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.MessageForwarder" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class MessageForwarder" />
   <TypeSignature Language="C++ CLI" Value="public ref class MessageForwarder abstract" />
+  <TypeSignature Language="F#" Value="type MessageForwarder = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -39,6 +40,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginHandleIncomingMessage(class Microsoft.Rtc.Internal.Collaboration.MessageForwardingContext messageForwardingContext, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MessageForwarder.BeginHandleIncomingMessage(Microsoft.Rtc.Internal.Collaboration.MessageForwardingContext,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginHandleIncomingMessage(Microsoft::Rtc::Internal::Collaboration::MessageForwardingContext ^ messageForwardingContext, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginHandleIncomingMessage : Microsoft.Rtc.Internal.Collaboration.MessageForwardingContext * AsyncCallback * obj -&gt; IAsyncResult" Usage="messageForwarder.BeginHandleIncomingMessage (messageForwardingContext, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MessageForwarder.EndHandleIncomingMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndHandleIncomingMessage (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndHandleIncomingMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndHandleIncomingMessage : IAsyncResult -&gt; unit" Usage="messageForwarder.EndHandleIncomingMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

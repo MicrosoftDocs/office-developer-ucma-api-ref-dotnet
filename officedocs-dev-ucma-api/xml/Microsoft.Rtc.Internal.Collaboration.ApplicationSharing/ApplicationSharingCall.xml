@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall" />
   <TypeSignature Language="VB.NET" Value="Public Class ApplicationSharingCall&#xA;Inherits Call" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingCall : Microsoft::Rtc::Collaboration::Call" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingCall = class&#xA;    inherit Call" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationSharingCall(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall" Usage="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -42,6 +44,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.BeginEstablish(Microsoft.Rtc.Internal.Collaboration.AppSharingCallEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (options As AppSharingCallEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Internal::Collaboration::AppSharingCallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginEstablish : Microsoft.Rtc.Internal.Collaboration.AppSharingCallEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="applicationSharingCall.BeginEstablish (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.DefaultMediaType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property DefaultMediaType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DefaultMediaType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultMediaType : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.DefaultMediaType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HandleFlowConfigurationRequested(class Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow mediaFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.HandleFlowConfigurationRequested(Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool HandleFlowConfigurationRequested(Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow ^ mediaFlow);" />
+      <MemberSignature Language="F#" Value="override this.HandleFlowConfigurationRequested : Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow -&gt; bool" Usage="applicationSharingCall.HandleFlowConfigurationRequested mediaFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -113,6 +118,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.HandleTransferNotificationReceived(Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleTransferNotificationReceived (e As TransferStateChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleTransferNotificationReceived(Microsoft::Rtc::Collaboration::TransferStateChangedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.HandleTransferNotificationReceived : Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs -&gt; unit" Usage="applicationSharingCall.HandleTransferNotificationReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -136,6 +142,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.HandleTransferReceived(Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleTransferReceived (e As CallTransferReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleTransferReceived(Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.HandleTransferReceived : Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs -&gt; unit" Usage="applicationSharingCall.HandleTransferReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -159,6 +166,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.MediaFlowConfigurationRequested" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event MediaFlowConfigurationRequested As EventHandler(Of ApplicationSharingFlowConfigurationRequestedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlowConfigurationRequestedEventArgs ^&gt; ^ MediaFlowConfigurationRequested;" />
+      <MemberSignature Language="F#" Value="member this.MediaFlowConfigurationRequested : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlowConfigurationRequestedEventArgs&gt; " Usage="member this.MediaFlowConfigurationRequested : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlowConfigurationRequestedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -178,6 +186,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingCall.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

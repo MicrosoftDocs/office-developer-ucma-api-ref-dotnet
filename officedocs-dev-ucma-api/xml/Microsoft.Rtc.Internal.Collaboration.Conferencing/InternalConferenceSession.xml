@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession" />
   <TypeSignature Language="VB.NET" Value="Public Class InternalConferenceSession&#xA;Inherits ConferenceSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class InternalConferenceSession : Microsoft::Rtc::Collaboration::ConferenceSession" />
+  <TypeSignature Language="F#" Value="type InternalConferenceSession = class&#xA;    inherit ConferenceSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.BeginSendCommand(Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand,Microsoft.Rtc.Collaboration.ConferenceCommandOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendCommand (command As ConferenceCommand, options As ConferenceCommandOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendCommand(Microsoft::Rtc::Internal::Collaboration::Conferencing::Commands::ConferenceCommand ^ command, Microsoft::Rtc::Collaboration::ConferenceCommandOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendCommand : Microsoft.Rtc.Internal.Collaboration.Conferencing.Commands.ConferenceCommand * Microsoft.Rtc.Collaboration.ConferenceCommandOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="internalConferenceSession.BeginSendCommand (command, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.BeginSetUserAccess(System.String,System.Boolean,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSetUserAccess (participantUri As String, granted As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSetUserAccess(System::String ^ participantUri, bool granted, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSetUserAccess : string * bool * AsyncCallback * obj -&gt; IAsyncResult" Usage="internalConferenceSession.BeginSetUserAccess (participantUri, granted, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -83,6 +86,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.EndSendCommand(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendCommand (result As IAsyncResult) As ConferenceCommandResponse" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ConferenceCommandResponse ^ EndSendCommand(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendCommand : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.ConferenceCommandResponse" Usage="internalConferenceSession.EndSendCommand result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -107,6 +111,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Conferencing.InternalConferenceSession.EndSetUserAccess(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSetUserAccess (asyncResult As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSetUserAccess(IAsyncResult ^ asyncResult);" />
+      <MemberSignature Language="F#" Value="member this.EndSetUserAccess : IAsyncResult -&gt; unit" Usage="internalConferenceSession.EndSetUserAccess asyncResult" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

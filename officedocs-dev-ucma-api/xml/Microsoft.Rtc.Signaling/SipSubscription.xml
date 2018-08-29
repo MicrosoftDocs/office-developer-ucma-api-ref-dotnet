@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipSubscription" />
   <TypeSignature Language="VB.NET" Value="Public Class SipSubscription" />
   <TypeSignature Language="C++ CLI" Value="public ref class SipSubscription" />
+  <TypeSignature Language="F#" Value="type SipSubscription = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String,Microsoft.Rtc.Signaling.ISipSubscriptionProcessor)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (subscriber As RealTimeEndpoint, targetAddress As RealTimeAddress, eventPackageName As String, processorInterface As ISipSubscriptionProcessor)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipSubscription(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ subscriber, Microsoft::Rtc::Signaling::RealTimeAddress ^ targetAddress, System::String ^ eventPackageName, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor ^ processorInterface);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipSubscription : Microsoft.Rtc.Signaling.RealTimeEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress * string * Microsoft.Rtc.Signaling.ISipSubscriptionProcessor -&gt; Microsoft.Rtc.Signaling.SipSubscription" Usage="new Microsoft.Rtc.Signaling.SipSubscription (subscriber, targetAddress, eventPackageName, processorInterface)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String,Microsoft.Rtc.Signaling.ISipSubscriptionProcessor,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (subscriber As RealTimeEndpoint, targetAddress As RealTimeAddress, eventPackageName As String, processorInterface As ISipSubscriptionProcessor, isQueryOnly As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipSubscription(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ subscriber, Microsoft::Rtc::Signaling::RealTimeAddress ^ targetAddress, System::String ^ eventPackageName, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor ^ processorInterface, bool isQueryOnly);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipSubscription : Microsoft.Rtc.Signaling.RealTimeEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress * string * Microsoft.Rtc.Signaling.ISipSubscriptionProcessor * bool -&gt; Microsoft.Rtc.Signaling.SipSubscription" Usage="new Microsoft.Rtc.Signaling.SipSubscription (subscriber, targetAddress, eventPackageName, processorInterface, isQueryOnly)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -90,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String,Microsoft.Rtc.Signaling.ISipSubscriptionProcessor,System.Boolean,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (subscriber As RealTimeEndpoint, targetAddress As RealTimeAddress, eventPackageName As String, processorInterface As ISipSubscriptionProcessor, isQueryOnly As Boolean, localIdentityUri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipSubscription(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ subscriber, Microsoft::Rtc::Signaling::RealTimeAddress ^ targetAddress, System::String ^ eventPackageName, Microsoft::Rtc::Signaling::ISipSubscriptionProcessor ^ processorInterface, bool isQueryOnly, System::String ^ localIdentityUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipSubscription : Microsoft.Rtc.Signaling.RealTimeEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress * string * Microsoft.Rtc.Signaling.ISipSubscriptionProcessor * bool * string -&gt; Microsoft.Rtc.Signaling.SipSubscription" Usage="new Microsoft.Rtc.Signaling.SipSubscription (subscriber, targetAddress, eventPackageName, processorInterface, isQueryOnly, localIdentityUri)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginRefresh(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRefresh : AsyncCallback * obj -&gt; IAsyncResult" Usage="sipSubscription.BeginRefresh (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +159,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendUpdateMessage(class System.Net.Mime.ContentType contentType, unsigned int8[] messageBody, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginSendUpdateMessage(System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendUpdateMessage(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ messageBody, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendUpdateMessage : System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="sipSubscription.BeginSendUpdateMessage (contentType, messageBody, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -188,6 +194,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginSubscribe(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSubscribe (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSubscribe(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSubscribe : AsyncCallback * obj -&gt; IAsyncResult" Usage="sipSubscription.BeginSubscribe (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -220,6 +227,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="sipSubscription.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -248,6 +256,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.CurrentState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentState As SubscriptionSignalingState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SubscriptionSignalingState CurrentState { Microsoft::Rtc::Signaling::SubscriptionSignalingState get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentState : Microsoft.Rtc.Signaling.SubscriptionSignalingState" Usage="Microsoft.Rtc.Signaling.SipSubscription.CurrentState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -270,6 +279,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndRefresh(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndRefresh (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRefresh(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRefresh : IAsyncResult -&gt; unit" Usage="sipSubscription.EndRefresh result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -298,6 +308,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndSendUpdateMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSendUpdateMessage (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendUpdateMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendUpdateMessage : IAsyncResult -&gt; unit" Usage="sipSubscription.EndSendUpdateMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -323,6 +334,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndSubscribe(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSubscribe (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSubscribe(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSubscribe : IAsyncResult -&gt; unit" Usage="sipSubscription.EndSubscribe result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -351,6 +363,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="sipSubscription.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -379,6 +392,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.EventPackage" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EventPackage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EventPackage { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EventPackage : string" Usage="Microsoft.Rtc.Signaling.SipSubscription.EventPackage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -401,6 +415,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.GetTraceCorrelationID" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberSignature Language="F#" Value="member this.GetTraceCorrelationID : unit -&gt; int64" Usage="sipSubscription.GetTraceCorrelationID " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -424,6 +439,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.IsActive" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsActive As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsActive { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsActive : bool" Usage="Microsoft.Rtc.Signaling.SipSubscription.IsActive" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -446,6 +462,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.IsQueryOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsQueryOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsQueryOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsQueryOnly : bool" Usage="Microsoft.Rtc.Signaling.SipSubscription.IsQueryOnly" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -468,6 +485,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.Refresh" />
       <MemberSignature Language="VB.NET" Value="Public Sub Refresh ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh();" />
+      <MemberSignature Language="F#" Value="member this.Refresh : unit -&gt; unit" Usage="sipSubscription.Refresh " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -491,6 +509,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.Subscribe" />
       <MemberSignature Language="VB.NET" Value="Public Sub Subscribe ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Subscribe();" />
+      <MemberSignature Language="F#" Value="member this.Subscribe : unit -&gt; unit" Usage="sipSubscription.Subscribe " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -514,6 +533,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.SubscriberEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriberEndpoint As RealTimeEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeEndpoint ^ SubscriberEndpoint { Microsoft::Rtc::Signaling::RealTimeEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubscriberEndpoint : Microsoft.Rtc.Signaling.RealTimeEndpoint" Usage="Microsoft.Rtc.Signaling.SipSubscription.SubscriberEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -536,6 +556,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.Target" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Target As RealTimeAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ Target { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Target : Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Signaling.SipSubscription.Target" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -558,6 +579,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.Terminate" />
       <MemberSignature Language="VB.NET" Value="Public Sub Terminate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate();" />
+      <MemberSignature Language="F#" Value="member this.Terminate : unit -&gt; unit" Usage="sipSubscription.Terminate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -580,6 +602,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipSubscription.TimeRemainingToRefresh" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimeRemainingToRefresh As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan TimeRemainingToRefresh { TimeSpan get(); };" />
+      <MemberSignature Language="F#" Value="member this.TimeRemainingToRefresh : TimeSpan" Usage="Microsoft.Rtc.Signaling.SipSubscription.TimeRemainingToRefresh" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -602,6 +625,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipSubscription.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="sipSubscription.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

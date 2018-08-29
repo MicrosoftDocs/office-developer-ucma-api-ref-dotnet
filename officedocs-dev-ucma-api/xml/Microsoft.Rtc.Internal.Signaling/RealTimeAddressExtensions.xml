@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Signaling.RealTimeAddressExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module RealTimeAddressExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class RealTimeAddressExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type RealTimeAddressExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig string GetUriWithoutSipPrefix(class Microsoft.Rtc.Signaling.RealTimeAddress realTimeAddress) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.RealTimeAddressExtensions.GetUriWithoutSipPrefix(Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static System::String ^ GetUriWithoutSipPrefix(Microsoft::Rtc::Signaling::RealTimeAddress ^ realTimeAddress);" />
+      <MemberSignature Language="F#" Value="static member GetUriWithoutSipPrefix : Microsoft.Rtc.Signaling.RealTimeAddress -&gt; string" Usage="Microsoft.Rtc.Internal.Signaling.RealTimeAddressExtensions.GetUriWithoutSipPrefix realTimeAddress" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -45,6 +47,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryParse(string uri, string defaultDomain, string phoneContext, [out] class Microsoft.Rtc.Signaling.RealTimeAddress&amp; address, bool isStrict) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.RealTimeAddressExtensions.TryParse(System.String,System.String,System.String,Microsoft.Rtc.Signaling.RealTimeAddress@,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryParse (uri As String, defaultDomain As String, phoneContext As String, ByRef address As RealTimeAddress, Optional isStrict As Boolean = false) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryParse : string * string * string *  * bool -&gt; bool" Usage="Microsoft.Rtc.Internal.Signaling.RealTimeAddressExtensions.TryParse (uri, defaultDomain, phoneContext, address, isStrict)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -57,7 +60,7 @@
         <Parameter Name="uri" Type="System.String" />
         <Parameter Name="defaultDomain" Type="System.String" />
         <Parameter Name="phoneContext" Type="System.String" />
-        <Parameter Name="address" Type="Microsoft.Rtc.Signaling.RealTimeAddress&amp;" RefType="out" />
+        <Parameter Name="address" Type="Microsoft.Rtc.Signaling.RealTimeAddress" RefType="out" />
         <Parameter Name="isStrict" Type="System.Boolean" />
       </Parameters>
       <Docs>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.Recorder" />
   <TypeSignature Language="VB.NET" Value="Public Class Recorder" />
   <TypeSignature Language="C++ CLI" Value="public ref class Recorder" />
+  <TypeSignature Language="F#" Value="type Recorder = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -54,6 +55,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.AttachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AttachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberSignature Language="F#" Value="member this.AttachFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow -&gt; unit" Usage="recorder.AttachFlow audioVideoFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -71,6 +73,10 @@
             Attaches an AudioVideoFlow instance to this recorder.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
+        <exception cref="T:System.InvalidOperationException"> 
+            Thrown when the recorder is already attached to another AudioVideoFlow instance.
+            </exception>
         <example>
           <para />
           <para>
@@ -104,10 +110,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
-        <exception cref="T:System.InvalidOperationException"> 
-            Thrown when the recorder is already attached to another AudioVideoFlow instance.
-            </exception>
       </Docs>
     </Member>
     <Member MemberName="AudioVideoFlow">
@@ -116,6 +118,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.AudioVideoFlow" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoFlow As AudioVideoFlow" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ AudioVideoFlow { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AudioVideoFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Recorder.AudioVideoFlow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -138,6 +141,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.DetachFlow" />
       <MemberSignature Language="VB.NET" Value="Public Sub DetachFlow ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DetachFlow();" />
+      <MemberSignature Language="F#" Value="member this.DetachFlow : unit -&gt; unit" Usage="recorder.DetachFlow " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -193,6 +197,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Pause" />
       <MemberSignature Language="VB.NET" Value="Public Sub Pause ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Pause();" />
+      <MemberSignature Language="F#" Value="member this.Pause : unit -&gt; unit" Usage="recorder.Pause " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -213,6 +218,9 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the recorder's State is not Started.
+            </exception>
         <example>
           <para />
           <para>
@@ -241,9 +249,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">
-            Thrown when the recorder's State is not Started.
-            </exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveSink">
@@ -252,6 +257,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.RemoveSink" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveSink ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveSink();" />
+      <MemberSignature Language="F#" Value="member this.RemoveSink : unit -&gt; unit" Usage="recorder.RemoveSink " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -300,6 +306,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.SetSink(Microsoft.Rtc.Collaboration.AudioVideo.MediaSink)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetSink (sink As MediaSink)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetSink(Microsoft::Rtc::Collaboration::AudioVideo::MediaSink ^ sink);" />
+      <MemberSignature Language="F#" Value="member this.SetSink : Microsoft.Rtc.Collaboration.AudioVideo.MediaSink -&gt; unit" Usage="recorder.SetSink sink" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -323,6 +330,8 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the sink parameter is null.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the sink provided has already been associated with another recorder.</exception>
         <example>
           <para />
           <para>
@@ -344,8 +353,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentNullException">Thrown when the sink parameter is null.</exception>
-        <exception cref="T:System.InvalidOperationException">Thrown when the sink provided has already been associated with another recorder.</exception>
       </Docs>
     </Member>
     <Member MemberName="Sink">
@@ -354,6 +361,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Sink" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Sink As MediaSink" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaSink ^ Sink { Microsoft::Rtc::Collaboration::AudioVideo::MediaSink ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Sink : Microsoft.Rtc.Collaboration.AudioVideo.MediaSink" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Sink" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -376,6 +384,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Start" />
       <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Start();" />
+      <MemberSignature Language="F#" Value="member this.Start : unit -&gt; unit" Usage="recorder.Start " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -395,6 +404,12 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when sink is not defined or if the recorder is already started.
+            </exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
+            Thrown when the operation failed.
+            </exception>
         <example>
           <para />
           <para>
@@ -411,12 +426,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">
-            Thrown when sink is not defined or if the recorder is already started.
-            </exception>
-        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">
-            Thrown when the operation failed.
-            </exception>
       </Docs>
     </Member>
     <Member MemberName="State">
@@ -425,6 +434,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As RecorderState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::RecorderState State { Microsoft::Rtc::Collaboration::AudioVideo::RecorderState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.AudioVideo.RecorderState" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Recorder.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -447,6 +457,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of RecorderStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::RecorderStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.RecorderStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.RecorderStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -493,6 +504,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.Stop" />
       <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="recorder.Stop " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -543,6 +555,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.Recorder.VoiceActivityChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event VoiceActivityChanged As EventHandler(Of VoiceActivityChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::VoiceActivityChangedEventArgs ^&gt; ^ VoiceActivityChanged;" />
+      <MemberSignature Language="F#" Value="member this.VoiceActivityChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs&gt; " Usage="member this.VoiceActivityChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.VoiceActivityChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

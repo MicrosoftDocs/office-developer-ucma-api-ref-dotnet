@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse" />
   <TypeSignature Language="VB.NET" Value="Public Class ParticipantCommandResponse&#xA;Inherits ConferenceCommandResponse" />
   <TypeSignature Language="C++ CLI" Value="public ref class ParticipantCommandResponse : Microsoft::Rtc::Collaboration::ConferenceCommandResponse" />
+  <TypeSignature Language="F#" Value="type ParticipantCommandResponse = class&#xA;    inherit ConferenceCommandResponse" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -40,6 +41,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse.GetMcuProperties" />
       <MemberSignature Language="VB.NET" Value="Public Function GetMcuProperties () As IDictionary(Of String, String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ GetMcuProperties();" />
+      <MemberSignature Language="F#" Value="member this.GetMcuProperties : unit -&gt; System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="participantCommandResponse.GetMcuProperties " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -61,6 +63,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse.Participant" />
       <MemberSignature Language="VB.NET" Value="Public Property Participant As ConversationParticipant" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::ConversationParticipant ^ Participant {  public:&#xA;Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::ConversationParticipant ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Participant : Microsoft.Rtc.Collaboration.ConversationParticipant with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse.Participant" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +84,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse.Properties" />
       <MemberSignature Language="VB.NET" Value="Public Property Properties As McuParticipantEndpointProperties" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^ Properties {  public:&#xA;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^ get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Properties : Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse.Properties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -101,6 +105,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse.TryProcessResponseCore(Microsoft.Rtc.Signaling.SipMessageData,Microsoft.Rtc.Signaling.RealTimeException@)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function TryProcessResponseCore (messageData As SipMessageData, ByRef exception As RealTimeException) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool TryProcessResponseCore(Microsoft::Rtc::Signaling::SipMessageData ^ messageData, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::RealTimeException ^ % exception);" />
+      <MemberSignature Language="F#" Value="override this.TryProcessResponseCore : Microsoft.Rtc.Signaling.SipMessageData *  -&gt; bool" Usage="participantCommandResponse.TryProcessResponseCore (messageData, exception)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -111,7 +116,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="messageData" Type="Microsoft.Rtc.Signaling.SipMessageData" />
-        <Parameter Name="exception" Type="Microsoft.Rtc.Signaling.RealTimeException&amp;" RefType="out" />
+        <Parameter Name="exception" Type="Microsoft.Rtc.Signaling.RealTimeException" RefType="out" />
       </Parameters>
       <Docs>
         <param name="messageData">To be added.</param>

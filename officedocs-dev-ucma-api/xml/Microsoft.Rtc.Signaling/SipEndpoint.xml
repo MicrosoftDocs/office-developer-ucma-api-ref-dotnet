@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipEndpoint" />
   <TypeSignature Language="VB.NET" Value="Public Class SipEndpoint&#xA;Inherits RealTimeEndpoint" />
   <TypeSignature Language="C++ CLI" Value="public ref class SipEndpoint : Microsoft::Rtc::Signaling::RealTimeEndpoint" />
+  <TypeSignature Language="F#" Value="type SipEndpoint = class&#xA;    inherit RealTimeEndpoint" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -26,6 +27,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeConnectionManager,Microsoft.Rtc.Signaling.SipEndpointSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeConnectionManager, settings As SipEndpointSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipEndpointSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipEndpoint : string * Microsoft.Rtc.Signaling.RealTimeConnectionManager * Microsoft.Rtc.Signaling.SipEndpointSettings -&gt; Microsoft.Rtc.Signaling.SipEndpoint" Usage="new Microsoft.Rtc.Signaling.SipEndpoint (ownerUri, connectionManager, settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipAuthenticationProtocols,Microsoft.Rtc.Signaling.SipTransportType,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, allowedAuthenticationProtocols As SipAuthenticationProtocols, transportType As SipTransportType, serverName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipEndpoint : string * Microsoft.Rtc.Signaling.SipAuthenticationProtocols * Microsoft.Rtc.Signaling.SipTransportType * string -&gt; Microsoft.Rtc.Signaling.SipEndpoint" Usage="new Microsoft.Rtc.Signaling.SipEndpoint (ownerUri, allowedAuthenticationProtocols, transportType, serverName)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipAuthenticationProtocols,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,System.Boolean,Microsoft.Rtc.Signaling.RealTimeConnectionManager,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, allowedAuthenticationProtocols As SipAuthenticationProtocols, transportType As SipTransportType, serverName As String, serverPort As Integer, allowNoAuthentication As Boolean, connectionManager As RealTimeConnectionManager, endpointId As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName, int serverPort, bool allowNoAuthentication, Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ connectionManager, System::String ^ endpointId);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipEndpoint : string * Microsoft.Rtc.Signaling.SipAuthenticationProtocols * Microsoft.Rtc.Signaling.SipTransportType * string * int * bool * Microsoft.Rtc.Signaling.RealTimeConnectionManager * string -&gt; Microsoft.Rtc.Signaling.SipEndpoint" Usage="new Microsoft.Rtc.Signaling.SipEndpoint (ownerUri, allowedAuthenticationProtocols, transportType, serverName, serverPort, allowNoAuthentication, connectionManager, endpointId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -139,6 +143,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipAuthenticationProtocols,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,System.Boolean,Microsoft.Rtc.Signaling.RealTimeConnectionManager,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, allowedAuthenticationProtocols As SipAuthenticationProtocols, transportType As SipTransportType, serverName As String, serverPort As Integer, allowNoAuthentication As Boolean, connectionManager As RealTimeConnectionManager, endpointId As String, additionalHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::SipAuthenticationProtocols allowedAuthenticationProtocols, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName, int serverPort, bool allowNoAuthentication, Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ connectionManager, System::String ^ endpointId, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeaders);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipEndpoint : string * Microsoft.Rtc.Signaling.SipAuthenticationProtocols * Microsoft.Rtc.Signaling.SipTransportType * string * int * bool * Microsoft.Rtc.Signaling.RealTimeConnectionManager * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipEndpoint" Usage="new Microsoft.Rtc.Signaling.SipEndpoint (ownerUri, allowedAuthenticationProtocols, transportType, serverName, serverPort, allowNoAuthentication, connectionManager, endpointId, additionalHeaders)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -188,6 +193,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.AllowedAuthenticationProtocols" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowedAuthenticationProtocols As SipAuthenticationProtocols" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipAuthenticationProtocols AllowedAuthenticationProtocols { Microsoft::Rtc::Signaling::SipAuthenticationProtocols get(); };" />
+      <MemberSignature Language="F#" Value="member this.AllowedAuthenticationProtocols : Microsoft.Rtc.Signaling.SipAuthenticationProtocols" Usage="Microsoft.Rtc.Signaling.SipEndpoint.AllowedAuthenticationProtocols" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -210,6 +216,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.AllowNoAuthentication" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AllowNoAuthentication As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AllowNoAuthentication { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.AllowNoAuthentication : bool" Usage="Microsoft.Rtc.Signaling.SipEndpoint.AllowNoAuthentication" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -233,6 +240,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.AuthenticationProtocol" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AuthenticationProtocol As SipAuthenticationProtocols" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipAuthenticationProtocols AuthenticationProtocol { Microsoft::Rtc::Signaling::SipAuthenticationProtocols get(); };" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationProtocol : Microsoft.Rtc.Signaling.SipAuthenticationProtocols" Usage="Microsoft.Rtc.Signaling.SipEndpoint.AuthenticationProtocol" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -261,6 +269,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.AuthenticationProtocolChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AuthenticationProtocolChanged As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ AuthenticationProtocolChanged;" />
+      <MemberSignature Language="F#" Value="member this.AuthenticationProtocolChanged : EventHandler&lt;EventArgs&gt; " Usage="member this.AuthenticationProtocolChanged : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -282,6 +291,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.BeginRegister(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRegister (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRegister(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRegister : AsyncCallback * obj -&gt; IAsyncResult" Usage="sipEndpoint.BeginRegister (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -313,6 +323,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.BeginRegister(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRegister (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRegister(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRegister : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="sipEndpoint.BeginRegister (signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -354,6 +365,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.BeginUnregister(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginUnregister (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUnregister(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUnregister : AsyncCallback * obj -&gt; IAsyncResult" Usage="sipEndpoint.BeginUnregister (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -383,6 +395,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.CredentialCache" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CredentialCache As SipCredentialCache" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipCredentialCache ^ CredentialCache { Microsoft::Rtc::Signaling::SipCredentialCache ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CredentialCache : Microsoft.Rtc.Signaling.SipCredentialCache" Usage="Microsoft.Rtc.Signaling.SipEndpoint.CredentialCache" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -406,6 +419,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.SipEndpoint.DefaultRtcRealm" />
       <MemberSignature Language="VB.NET" Value="Public Const DefaultRtcRealm As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ DefaultRtcRealm;" />
+      <MemberSignature Language="F#" Value="val mutable DefaultRtcRealm : string" Usage="Microsoft.Rtc.Signaling.SipEndpoint.DefaultRtcRealm" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -428,6 +442,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.DisableRegisterRefreshForConnectionDrop" />
       <MemberSignature Language="VB.NET" Value="Public Property DisableRegisterRefreshForConnectionDrop As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableRegisterRefreshForConnectionDrop { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisableRegisterRefreshForConnectionDrop : bool with get, set" Usage="Microsoft.Rtc.Signaling.SipEndpoint.DisableRegisterRefreshForConnectionDrop" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -456,6 +471,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.EndRegister(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndRegister (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndRegister(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRegister : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipEndpoint.EndRegister result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -485,6 +501,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.EndUnregister(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndUnregister (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndUnregister(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUnregister : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipEndpoint.EndUnregister result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -526,6 +543,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.IsEndpointThrottled" />
       <MemberSignature Language="VB.NET" Value="Public Property IsEndpointThrottled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEndpointThrottled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsEndpointThrottled : bool with get, set" Usage="Microsoft.Rtc.Signaling.SipEndpoint.IsEndpointThrottled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -548,6 +566,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.MaximumRegisterRedirectionAttempts" />
       <MemberSignature Language="VB.NET" Value="Public Property MaximumRegisterRedirectionAttempts As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumRegisterRedirectionAttempts { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumRegisterRedirectionAttempts : int with get, set" Usage="Microsoft.Rtc.Signaling.SipEndpoint.MaximumRegisterRedirectionAttempts" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -571,6 +590,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.Register" />
       <MemberSignature Language="VB.NET" Value="Public Function Register () As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Register();" />
+      <MemberSignature Language="F#" Value="member this.Register : unit -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipEndpoint.Register " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -599,6 +619,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.Register(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function Register (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Register(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Register : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipEndpoint.Register signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -635,6 +656,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.RegisterMethods" />
       <MemberSignature Language="VB.NET" Value="Public Property RegisterMethods As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RegisterMethods { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.RegisterMethods : string with get, set" Usage="Microsoft.Rtc.Signaling.SipEndpoint.RegisterMethods" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -660,6 +682,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.RegistrationState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RegistrationState As RegistrationState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RegistrationState RegistrationState { Microsoft::Rtc::Signaling::RegistrationState get(); };" />
+      <MemberSignature Language="F#" Value="member this.RegistrationState : Microsoft.Rtc.Signaling.RegistrationState" Usage="Microsoft.Rtc.Signaling.SipEndpoint.RegistrationState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -682,6 +705,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.RegistrationStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RegistrationStateChanged As EventHandler(Of RegistrationStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RegistrationStateChangedEventArgs ^&gt; ^ RegistrationStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.RegistrationStateChanged : EventHandler&lt;Microsoft.Rtc.Signaling.RegistrationStateChangedEventArgs&gt; " Usage="member this.RegistrationStateChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.RegistrationStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -703,6 +727,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.Server" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Server As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Server { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Server : string" Usage="Microsoft.Rtc.Signaling.SipEndpoint.Server" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -725,6 +750,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.ServerChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ServerChanged As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ServerChanged;" />
+      <MemberSignature Language="F#" Value="member this.ServerChanged : EventHandler&lt;EventArgs&gt; " Usage="member this.ServerChanged : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -747,6 +773,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.ServerPort" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerPort As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ServerPort { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ServerPort : int" Usage="Microsoft.Rtc.Signaling.SipEndpoint.ServerPort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -771,6 +798,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipEndpoint.ServerPortChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ServerPortChanged As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ServerPortChanged;" />
+      <MemberSignature Language="F#" Value="member this.ServerPortChanged : EventHandler&lt;EventArgs&gt; " Usage="member this.ServerPortChanged : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -793,6 +821,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.SipInstance" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SipInstance As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SipInstance { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SipInstance : string" Usage="Microsoft.Rtc.Signaling.SipEndpoint.SipInstance" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -816,6 +845,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.TransportType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransportType As SipTransportType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipTransportType TransportType { Microsoft::Rtc::Signaling::SipTransportType get(); };" />
+      <MemberSignature Language="F#" Value="member this.TransportType : Microsoft.Rtc.Signaling.SipTransportType" Usage="Microsoft.Rtc.Signaling.SipEndpoint.TransportType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -843,6 +873,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipEndpoint.Unregister" />
       <MemberSignature Language="VB.NET" Value="Public Function Unregister () As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Unregister();" />
+      <MemberSignature Language="F#" Value="member this.Unregister : unit -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipEndpoint.Unregister " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -866,6 +897,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipEndpoint.Uuid" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uuid As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uuid { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uuid : string" Usage="Microsoft.Rtc.Signaling.SipEndpoint.Uuid" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

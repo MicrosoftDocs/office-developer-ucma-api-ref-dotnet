@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState" />
   <TypeSignature Language="VB.NET" Value="Public Class AggregateMachineState&#xA;Inherits PresenceStateInternal" />
   <TypeSignature Language="C++ CLI" Value="public ref class AggregateMachineState : Microsoft::Rtc::Internal::Collaboration::PresenceStateInternal" />
+  <TypeSignature Language="F#" Value="type AggregateMachineState = class&#xA;    inherit PresenceStateInternal" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.#ctor(System.Int32,Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (availability As Integer, activity As PresenceActivityInternal)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; AggregateMachineState(int availability, Microsoft::Rtc::Internal::Collaboration::PresenceActivityInternal ^ activity);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.AggregateMachineState : int * Microsoft.Rtc.Internal.Collaboration.PresenceActivityInternal -&gt; Microsoft.Rtc.Internal.Collaboration.AggregateMachineState" Usage="new Microsoft.Rtc.Internal.Collaboration.AggregateMachineState (availability, activity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -45,6 +47,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="aggregateMachineState.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +72,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.DeviceType" />
       <MemberSignature Language="VB.NET" Value="Public Property DeviceType As DeviceType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::DeviceType DeviceType { Microsoft::Rtc::Collaboration::Presence::DeviceType get(); void set(Microsoft::Rtc::Collaboration::Presence::DeviceType value); };" />
+      <MemberSignature Language="F#" Value="member this.DeviceType : Microsoft.Rtc.Collaboration.Presence.DeviceType with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.DeviceType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.EndpointId" />
       <MemberSignature Language="VB.NET" Value="Public Property EndpointId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointId : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.EndpointId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -109,6 +114,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="aggregateMachineState.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -130,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.TimeZoneAbbreviation" />
       <MemberSignature Language="VB.NET" Value="Public Property TimeZoneAbbreviation As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TimeZoneAbbreviation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TimeZoneAbbreviation : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.TimeZoneAbbreviation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -150,6 +157,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.TimeZoneBias" />
       <MemberSignature Language="VB.NET" Value="Public Property TimeZoneBias As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long TimeZoneBias { long get(); void set(long value); };" />
+      <MemberSignature Language="F#" Value="member this.TimeZoneBias : int64 with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.TimeZoneBias" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -170,6 +178,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.TimeZoneName" />
       <MemberSignature Language="VB.NET" Value="Public Property TimeZoneName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TimeZoneName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TimeZoneName : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.AggregateMachineState.TimeZoneName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

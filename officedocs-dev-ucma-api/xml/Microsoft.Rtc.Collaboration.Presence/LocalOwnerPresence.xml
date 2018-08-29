@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence" />
   <TypeSignature Language="VB.NET" Value="Public Class LocalOwnerPresence&#xA;Inherits PublishSubscribeSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class LocalOwnerPresence : Microsoft::Rtc::Collaboration::Presence::PublishSubscribeSession" />
+  <TypeSignature Language="F#" Value="type LocalOwnerPresence = class&#xA;    inherit PublishSubscribeSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -50,6 +51,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutomaticPublicationState As PresencePublicationState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresencePublicationState AutomaticPublicationState { Microsoft::Rtc::Collaboration::Presence::PresencePublicationState get(); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticPublicationState : Microsoft.Rtc.Collaboration.Presence.PresencePublicationState" Usage="Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -80,6 +82,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.AutomaticPublicationStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AutomaticPublicationStateChanged As EventHandler(Of PresencePublicationStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::PresencePublicationStateChangedEventArgs ^&gt; ^ AutomaticPublicationStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.AutomaticPublicationStateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresencePublicationStateChangedEventArgs&gt; " Usage="member this.AutomaticPublicationStateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresencePublicationStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -107,6 +110,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginAcknowledgeSubscriber(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAcknowledgeSubscriber (subscriberId As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAcknowledgeSubscriber(System::String ^ subscriberId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAcknowledgeSubscriber : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="localOwnerPresence.BeginAcknowledgeSubscriber (subscriberId, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -140,6 +144,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginDeletePresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDeletePresence (categoryItems As ICollection(Of PresenceCategory), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeletePresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^&gt; ^ categoryItems, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDeletePresence : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="localOwnerPresence.BeginDeletePresence (categoryItems, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -173,6 +178,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginDeletePresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDeletePresence (categories As ICollection(Of PresenceCategoryWithMetaData), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeletePresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ categories, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDeletePresence : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="localOwnerPresence.BeginDeletePresence (categories, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -206,6 +212,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginPublishPresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategory},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginPublishPresence (categoryItems As ICollection(Of PresenceCategory), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPublishPresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategory ^&gt; ^ categoryItems, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginPublishPresence : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategory&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="localOwnerPresence.BeginPublishPresence (categoryItems, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -248,6 +255,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginPublishPresence(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginPublishPresence (categories As ICollection(Of PresenceCategoryWithMetaData), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPublishPresence(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^&gt; ^ categories, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginPublishPresence : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="localOwnerPresence.BeginPublishPresence (categories, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -288,6 +296,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.BeginUpdateContainerMembership(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginUpdateContainerMembership (operations As ICollection(Of ContainerUpdateOperation), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateContainerMembership(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::ContainerUpdateOperation ^&gt; ^ operations, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUpdateContainerMembership : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.ContainerUpdateOperation&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="localOwnerPresence.BeginUpdateContainerMembership (operations, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -321,6 +330,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.CategoryNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event CategoryNotificationReceived As EventHandler(Of CategoryNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::CategoryNotificationEventArgs ^&gt; ^ CategoryNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.CategoryNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.CategoryNotificationEventArgs&gt; " Usage="member this.CategoryNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.CategoryNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -350,6 +360,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.CategoryPublicationManifest" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CategoryPublicationManifest As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CategoryPublicationManifest { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CategoryPublicationManifest : string" Usage="Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.CategoryPublicationManifest" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -375,6 +386,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.ContainerManifest" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContainerManifest As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContainerManifest { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContainerManifest : string" Usage="Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.ContainerManifest" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -400,6 +412,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.ContainerNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ContainerNotificationReceived As EventHandler(Of ContainerNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::ContainerNotificationEventArgs ^&gt; ^ ContainerNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.ContainerNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.ContainerNotificationEventArgs&gt; " Usage="member this.ContainerNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.ContainerNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -421,6 +434,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.DelegateNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event DelegateNotificationReceived As EventHandler(Of DelegatesNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::DelegatesNotificationEventArgs ^&gt; ^ DelegateNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.DelegateNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.DelegatesNotificationEventArgs&gt; " Usage="member this.DelegateNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.DelegatesNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -442,6 +456,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndAcknowledgeSubscriber(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAcknowledgeSubscriber (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAcknowledgeSubscriber(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAcknowledgeSubscriber : IAsyncResult -&gt; unit" Usage="localOwnerPresence.EndAcknowledgeSubscriber result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -476,6 +491,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndDeletePresence(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndDeletePresence (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeletePresence(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDeletePresence : IAsyncResult -&gt; unit" Usage="localOwnerPresence.EndDeletePresence result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -509,6 +525,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndPublishPresence(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndPublishPresence (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndPublishPresence(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndPublishPresence : IAsyncResult -&gt; unit" Usage="localOwnerPresence.EndPublishPresence result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -544,6 +561,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.EndUpdateContainerMembership(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateContainerMembership (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateContainerMembership(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUpdateContainerMembership : IAsyncResult -&gt; unit" Usage="localOwnerPresence.EndUpdateContainerMembership result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -579,6 +597,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.PresenceNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PresenceNotificationReceived As EventHandler(Of LocalPresentityNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::LocalPresentityNotificationEventArgs ^&gt; ^ PresenceNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.PresenceNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.LocalPresentityNotificationEventArgs&gt; " Usage="member this.PresenceNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.LocalPresentityNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -600,6 +619,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.LocalOwnerPresence.SubscriberNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SubscriberNotificationReceived As EventHandler(Of SubscriberNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::SubscriberNotificationEventArgs ^&gt; ^ SubscriberNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.SubscriberNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.SubscriberNotificationEventArgs&gt; " Usage="member this.SubscriberNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.SubscriberNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

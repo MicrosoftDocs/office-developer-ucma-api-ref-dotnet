@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.TimerItem" />
   <TypeSignature Language="VB.NET" Value="Public Class TimerItem" />
   <TypeSignature Language="C++ CLI" Value="public ref class TimerItem" />
+  <TypeSignature Language="F#" Value="type TimerItem = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.TimerWheel timerWheel, valuetype System.TimeSpan timeSpan) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.#ctor(Microsoft.Rtc.Signaling.TimerWheel,System.TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TimerItem(Microsoft::Rtc::Signaling::TimerWheel ^ timerWheel, TimeSpan timeSpan);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.TimerItem : Microsoft.Rtc.Signaling.TimerWheel * TimeSpan -&gt; Microsoft.Rtc.Signaling.TimerItem" Usage="new Microsoft.Rtc.Signaling.TimerItem (timerWheel, timeSpan)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.TimerItem.Expired" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Expired As EventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler ^ Expired;" />
+      <MemberSignature Language="F#" Value="member this.Expired : EventHandler " Usage="member this.Expired : System.EventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.IsStarted" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStarted As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsStarted { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsStarted : bool" Usage="Microsoft.Rtc.Signaling.TimerItem.IsStarted" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -100,6 +104,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.RemainingTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemainingTime As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan RemainingTime { TimeSpan get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemainingTime : TimeSpan" Usage="Microsoft.Rtc.Signaling.TimerItem.RemainingTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -122,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset();" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="timerItem.Reset " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -148,6 +154,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Reset(System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Reset (newTimerSpan As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Reset(TimeSpan newTimerSpan);" />
+      <MemberSignature Language="F#" Value="member this.Reset : TimeSpan -&gt; unit" Usage="timerItem.Reset newTimerSpan" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +186,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Start" />
       <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Start();" />
+      <MemberSignature Language="F#" Value="member this.Start : unit -&gt; unit" Usage="timerItem.Start " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -202,6 +210,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerItem.Stop" />
       <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="timerItem.Stop " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -225,6 +234,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.TimerSpan" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TimerSpan As TimeSpan" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property TimeSpan TimerSpan { TimeSpan get(); };" />
+      <MemberSignature Language="F#" Value="member this.TimerSpan : TimeSpan" Usage="Microsoft.Rtc.Signaling.TimerItem.TimerSpan" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -247,6 +257,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.TimerItem.Wheel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Wheel As TimerWheel" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::TimerWheel ^ Wheel { Microsoft::Rtc::Signaling::TimerWheel ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Wheel : Microsoft.Rtc.Signaling.TimerWheel" Usage="Microsoft.Rtc.Signaling.TimerItem.Wheel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

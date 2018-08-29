@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PresenceCategory" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class PresenceCategory" />
   <TypeSignature Language="C++ CLI" Value="public ref class PresenceCategory abstract" />
+  <TypeSignature Language="F#" Value="type PresenceCategory = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -36,6 +37,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (category As PresenceCategoryWithMetaData)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; PresenceCategory(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.PresenceCategory : Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceCategory" Usage="new Microsoft.Rtc.Collaboration.Presence.PresenceCategory category" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (name As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; PresenceCategory(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.PresenceCategory : string -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceCategory" Usage="new Microsoft.Rtc.Collaboration.Presence.PresenceCategory name" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -80,6 +83,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.CategoryName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CategoryName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CategoryName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CategoryName : string" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceCategory.CategoryName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -102,6 +106,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="abstract member CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy&#xA;override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="presenceCategory.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -125,6 +130,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="abstract member CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64&#xA;override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="presenceCategory.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -153,6 +159,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.GenerateInstanceId(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateInstanceId (id As String, numberOfBits As Integer) As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static long GenerateInstanceId(System::String ^ id, int numberOfBits);" />
+      <MemberSignature Language="F#" Value="static member GenerateInstanceId : string * int -&gt; int64" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceCategory.GenerateInstanceId (id, numberOfBits)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -181,6 +188,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.GenerateMD5Hash(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GenerateMD5Hash (id As String, numberOfBits As Integer) As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static long GenerateMD5Hash(System::String ^ id, int numberOfBits);" />
+      <MemberSignature Language="F#" Value="static member GenerateMD5Hash : string * int -&gt; int64" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceCategory.GenerateMD5Hash (id, numberOfBits)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -217,6 +225,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="abstract member GetCategoryDataXml : unit -&gt; string" Usage="presenceCategory.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -240,6 +249,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceCategory.InstanceIdUnknown" />
       <MemberSignature Language="VB.NET" Value="Public Const InstanceIdUnknown As Integer  = -1" />
       <MemberSignature Language="C++ CLI" Value="public: int InstanceIdUnknown = -1;" />
+      <MemberSignature Language="F#" Value="val mutable InstanceIdUnknown : int" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceCategory.InstanceIdUnknown" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

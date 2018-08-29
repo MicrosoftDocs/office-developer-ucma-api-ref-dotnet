@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RedirectingEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class RedirectingEventArgs&#xA;Inherits SipResponseReceivedEventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class RedirectingEventArgs abstract : Microsoft::Rtc::Signaling::SipResponseReceivedEventArgs" />
+  <TypeSignature Language="F#" Value="type RedirectingEventArgs = class&#xA;    inherit SipResponseReceivedEventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -26,6 +27,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.Action" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property Action As RedirectAction" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Rtc::Signaling::RedirectAction Action { Microsoft::Rtc::Signaling::RedirectAction get(); void set(Microsoft::Rtc::Signaling::RedirectAction value); };" />
+      <MemberSignature Language="F#" Value="member this.Action : Microsoft.Rtc.Signaling.RedirectAction with get, set" Usage="Microsoft.Rtc.Signaling.RedirectingEventArgs.Action" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -48,6 +50,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.CurrentTarget" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CurrentTarget As RealTimeAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Rtc::Signaling::RealTimeAddress ^ CurrentTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentTarget : Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Signaling.RedirectingEventArgs.CurrentTarget" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.DisableAutomaticRedirection" />
       <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticRedirection As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticRedirection { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisableAutomaticRedirection : bool with get, set" Usage="Microsoft.Rtc.Signaling.RedirectingEventArgs.DisableAutomaticRedirection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -97,6 +101,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.Headers" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Headers As Collection(Of SignalingHeader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ Headers { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Headers : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" Usage="Microsoft.Rtc.Signaling.RedirectingEventArgs.Headers" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -125,6 +130,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.PreviousException" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreviousException As Exception" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Exception ^ PreviousException { Exception ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PreviousException : Exception" Usage="Microsoft.Rtc.Signaling.RedirectingEventArgs.PreviousException" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -147,6 +153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RedirectingEventArgs.ResumeRedirection" />
       <MemberSignature Language="VB.NET" Value="Public Sub ResumeRedirection ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ResumeRedirection();" />
+      <MemberSignature Language="F#" Value="member this.ResumeRedirection : unit -&gt; unit" Usage="redirectingEventArgs.ResumeRedirection " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -170,6 +177,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RedirectingEventArgs.Targets" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Targets As ReadOnlyCollection(Of RealTimeAddress)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ Targets { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Targets : System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt;" Usage="Microsoft.Rtc.Signaling.RedirectingEventArgs.Targets" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

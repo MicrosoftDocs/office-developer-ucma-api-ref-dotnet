@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ConversationIdExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Class ConversationIdExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConversationIdExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type ConversationIdExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConversationIdExtensions.GetBase64DerivedConversationId(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetBase64DerivedConversationId (originalConversationId As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static System::String ^ GetBase64DerivedConversationId(System::String ^ originalConversationId);" />
+      <MemberSignature Language="F#" Value="static member GetBase64DerivedConversationId : string -&gt; string" Usage="Microsoft.Rtc.Internal.Collaboration.ConversationIdExtensions.GetBase64DerivedConversationId originalConversationId" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConversationIdExtensions.GetPreviousDerivedConversationId(System.String,System.String@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function GetPreviousDerivedConversationId (conversationId As String, ByRef previousDerivedConversationId As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool GetPreviousDerivedConversationId(System::String ^ conversationId, [Runtime::InteropServices::Out] System::String ^ % previousDerivedConversationId);" />
+      <MemberSignature Language="F#" Value="static member GetPreviousDerivedConversationId : string *  -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.ConversationIdExtensions.GetPreviousDerivedConversationId (conversationId, previousDerivedConversationId)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -57,7 +60,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="conversationId" Type="System.String" />
-        <Parameter Name="previousDerivedConversationId" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="previousDerivedConversationId" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
         <param name="conversationId">To be added.</param>

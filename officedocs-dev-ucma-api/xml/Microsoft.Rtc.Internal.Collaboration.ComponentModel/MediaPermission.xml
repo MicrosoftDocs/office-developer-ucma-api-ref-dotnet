@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission" />
   <TypeSignature Language="VB.NET" Value="Public Class MediaPermission&#xA;Implements IEquatable(Of MediaPermission)" />
   <TypeSignature Language="C++ CLI" Value="public ref class MediaPermission : IEquatable&lt;Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^&gt;" />
+  <TypeSignature Language="F#" Value="type MediaPermission = class&#xA;    interface IEquatable&lt;MediaPermission&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.#ctor(System.String,System.Boolean,System.Boolean,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As Boolean, mutable As Boolean, mediaType As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaPermission(System::String ^ name, bool value, bool mutable, System::String ^ mediaType);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission : string * bool * bool * string -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission" Usage="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission (name, value, mutable, mediaType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Equals(Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As MediaPermission) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission -&gt; bool" Usage="mediaPermission.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -80,6 +83,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="mediaPermission.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -104,6 +108,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="mediaPermission.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -125,6 +130,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.MediaType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MediaType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MediaType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MediaType : string" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.MediaType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -145,6 +151,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Mutable" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Mutable As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Mutable { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Mutable : bool" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Mutable" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -165,6 +172,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -185,6 +193,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.op_Equality(Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (permission1 As MediaPermission, value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^ permission1, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission * obj -&gt; bool" Usage="permission1 = value" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -211,6 +220,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.op_Inequality(Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (permission1 As MediaPermission, value As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^ permission1, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission * obj -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.op_Inequality (permission1, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -237,6 +247,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Value" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Value { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Value : bool" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission.Value" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.RemotePresence" />
   <TypeSignature Language="VB.NET" Value="Public Class RemotePresence" />
   <TypeSignature Language="C++ CLI" Value="public ref class RemotePresence" />
+  <TypeSignature Language="F#" Value="type RemotePresence = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -43,6 +44,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.BeginAddTargets(System.Collections.Generic.ICollection{Microsoft.Rtc.Collaboration.Presence.RemotePresentitySubscriptionTarget},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddTargets (targetsToAdd As ICollection(Of RemotePresentitySubscriptionTarget), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddTargets(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentitySubscriptionTarget ^&gt; ^ targetsToAdd, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddTargets : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentitySubscriptionTarget&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="remotePresence.BeginAddTargets (targetsToAdd, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -80,6 +82,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.BeginPresenceQuery(System.Collections.Generic.IEnumerable{System.String},System.String[],System.EventHandler{Microsoft.Rtc.Collaboration.Presence.RemotePresenceNotificationEventArgs},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginPresenceQuery (targets As IEnumerable(Of String), categories As String(), queryResultHandler As EventHandler(Of RemotePresenceNotificationEventArgs), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPresenceQuery(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ targets, cli::array &lt;System::String ^&gt; ^ categories, EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresenceNotificationEventArgs ^&gt; ^ queryResultHandler, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginPresenceQuery : seq&lt;string&gt; * string[] * EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceNotificationEventArgs&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="remotePresence.BeginPresenceQuery (targets, categories, queryResultHandler, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -124,6 +127,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.BeginRefresh(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRefresh : AsyncCallback * obj -&gt; IAsyncResult" Usage="remotePresence.BeginRefresh (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -153,6 +157,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.BeginRemoveAllTargets(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRemoveAllTargets (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRemoveAllTargets(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRemoveAllTargets : AsyncCallback * obj -&gt; IAsyncResult" Usage="remotePresence.BeginRemoveAllTargets (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -184,6 +189,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.BeginRemoveTarget(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRemoveTarget (uri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRemoveTarget(System::String ^ uri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRemoveTarget : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="remotePresence.BeginRemoveTarget (uri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -216,6 +222,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.EndAddTargets(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAddTargets (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddTargets(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAddTargets : IAsyncResult -&gt; unit" Usage="remotePresence.EndAddTargets result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -243,6 +250,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.EndPresenceQuery(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndPresenceQuery (result As IAsyncResult) As IEnumerable(Of RemotePresentityNotificationData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresentityNotificationData ^&gt; ^ EndPresenceQuery(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndPresenceQuery : IAsyncResult -&gt; seq&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresentityNotificationData&gt;" Usage="remotePresence.EndPresenceQuery result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -274,6 +282,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.EndRefresh(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndRefresh (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRefresh(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRefresh : IAsyncResult -&gt; unit" Usage="remotePresence.EndRefresh result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -304,6 +313,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.EndRemoveAllTargets(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndRemoveAllTargets (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRemoveAllTargets(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRemoveAllTargets : IAsyncResult -&gt; unit" Usage="remotePresence.EndRemoveAllTargets result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -332,6 +342,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.EndRemoveTarget(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndRemoveTarget (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndRemoveTarget(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRemoveTarget : IAsyncResult -&gt; unit" Usage="remotePresence.EndRemoveTarget result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -360,6 +371,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.RemotePresence.GetCurrentSubscriptionState(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetCurrentSubscriptionState (uri As String) As CollaborationSubscriptionState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Presence::CollaborationSubscriptionState GetCurrentSubscriptionState(System::String ^ uri);" />
+      <MemberSignature Language="F#" Value="member this.GetCurrentSubscriptionState : string -&gt; Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState" Usage="remotePresence.GetCurrentSubscriptionState uri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -388,6 +400,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.RemotePresence.PresenceNotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PresenceNotificationReceived As EventHandler(Of RemotePresenceNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresenceNotificationEventArgs ^&gt; ^ PresenceNotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.PresenceNotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceNotificationEventArgs&gt; " Usage="member this.PresenceNotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -409,6 +422,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresence.PresenceSubscriptionCategories" />
       <MemberSignature Language="VB.NET" Value="Public Property PresenceSubscriptionCategories As String()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property cli::array &lt;System::String ^&gt; ^ PresenceSubscriptionCategories { cli::array &lt;System::String ^&gt; ^ get(); void set(cli::array &lt;System::String ^&gt; ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.PresenceSubscriptionCategories : string[] with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.RemotePresence.PresenceSubscriptionCategories" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -433,6 +447,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.RemotePresence.PresenceSubscriptionStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PresenceSubscriptionStateChanged As EventHandler(Of RemotePresenceSubscriptionStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::RemotePresenceSubscriptionStateChangedEventArgs ^&gt; ^ PresenceSubscriptionStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.PresenceSubscriptionStateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceSubscriptionStateChangedEventArgs&gt; " Usage="member this.PresenceSubscriptionStateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.RemotePresenceSubscriptionStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -454,6 +469,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.RemotePresence.SubscriberEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriberEndpoint As LocalEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ SubscriberEndpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubscriberEndpoint : Microsoft.Rtc.Collaboration.LocalEndpoint" Usage="Microsoft.Rtc.Collaboration.Presence.RemotePresence.SubscriberEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

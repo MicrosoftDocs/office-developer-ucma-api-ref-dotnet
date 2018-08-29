@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ProvisioningFailureException" />
   <TypeSignature Language="VB.NET" Value="Public Class ProvisioningFailureException&#xA;Inherits RealTimeException" />
   <TypeSignature Language="C++ CLI" Value="public ref class ProvisioningFailureException : Microsoft::Rtc::Signaling::RealTimeException" />
+  <TypeSignature Language="F#" Value="type ProvisioningFailureException = class&#xA;    inherit RealTimeException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -48,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ProvisioningFailureException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ProvisioningFailureException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ProvisioningFailureException : string -&gt; Microsoft.Rtc.Collaboration.ProvisioningFailureException" Usage="new Microsoft.Rtc.Collaboration.ProvisioningFailureException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +72,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ProvisioningFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; ProvisioningFailureException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ProvisioningFailureException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Collaboration.ProvisioningFailureException" Usage="new Microsoft.Rtc.Collaboration.ProvisioningFailureException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ProvisioningFailureException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ProvisioningFailureException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ProvisioningFailureException : string * Exception -&gt; Microsoft.Rtc.Collaboration.ProvisioningFailureException" Usage="new Microsoft.Rtc.Collaboration.ProvisioningFailureException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ProvisioningFailureException.#ctor(System.String,System.Exception,Microsoft.Rtc.Collaboration.ProvisioningFailureReason)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception, failureReason As ProvisioningFailureReason)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ProvisioningFailureException(System::String ^ message, Exception ^ innerException, Microsoft::Rtc::Collaboration::ProvisioningFailureReason failureReason);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ProvisioningFailureException : string * Exception * Microsoft.Rtc.Collaboration.ProvisioningFailureReason -&gt; Microsoft.Rtc.Collaboration.ProvisioningFailureException" Usage="new Microsoft.Rtc.Collaboration.ProvisioningFailureException (message, innerException, failureReason)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -156,6 +161,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ProvisioningFailureException.FailureReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureReason As ProvisioningFailureReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ProvisioningFailureReason FailureReason { Microsoft::Rtc::Collaboration::ProvisioningFailureReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.FailureReason : Microsoft.Rtc.Collaboration.ProvisioningFailureReason" Usage="Microsoft.Rtc.Collaboration.ProvisioningFailureException.FailureReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -178,6 +184,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ProvisioningFailureException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="provisioningFailureException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -205,6 +212,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ProvisioningFailureException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="provisioningFailureException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

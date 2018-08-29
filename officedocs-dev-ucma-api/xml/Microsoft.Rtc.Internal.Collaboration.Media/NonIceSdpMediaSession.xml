@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class NonIceSdpMediaSession&#xA;Inherits SdpMediaSession(Of SdpSessionDescription, SdpMediaDescription)" />
   <TypeSignature Language="C++ CLI" Value="public ref class NonIceSdpMediaSession sealed : Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaSession&lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpSessionDescription ^, Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaDescription ^&gt;" />
+  <TypeSignature Language="F#" Value="type NonIceSdpMediaSession = class&#xA;    inherit SdpMediaSession&lt;SdpSessionDescription, SdpMediaDescription&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession.#ctor(Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (settings As SdpNegotiatorSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; NonIceSdpMediaSession(Microsoft::Rtc::Internal::Collaboration::Media::SdpNegotiatorSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession : Microsoft.Rtc.Internal.Collaboration.Media.SdpNegotiatorSettings -&gt; Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession" Usage="new Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession settings" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.NonIceSdpMediaSession.ValidateMediaBinding(Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription,Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext,System.Collections.Generic.IList{Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo},Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo,Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation,Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode@,System.String@)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function ValidateMediaBinding (mediaDescription As SdpMediaDescription, targetMediaChannel As MediaChannelContext, currentMediaBindings As IList(Of SdpMediaOfferAnswerInfo), previousMediaBinding As SdpMediaOfferAnswerInfo, parsingOperation As OfferAnswerParsingOperation, ByRef diagnosticsCode As SdpDiagnosticsCode, ByRef errorMessage As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool ValidateMediaBinding(Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaDescription ^ mediaDescription, Microsoft::Rtc::Internal::Collaboration::Media::MediaChannelContext ^ targetMediaChannel, System::Collections::Generic::IList&lt;Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaOfferAnswerInfo ^&gt; ^ currentMediaBindings, Microsoft::Rtc::Internal::Collaboration::Media::SdpMediaOfferAnswerInfo ^ previousMediaBinding, Microsoft::Rtc::Internal::Collaboration::Media::OfferAnswerParsingOperation parsingOperation, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::Media::SdpDiagnosticsCode % diagnosticsCode, [Runtime::InteropServices::Out] System::String ^ % errorMessage);" />
+      <MemberSignature Language="F#" Value="override this.ValidateMediaBinding : Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaDescription * Microsoft.Rtc.Internal.Collaboration.Media.MediaChannelContext * System.Collections.Generic.IList&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt; * Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo * Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation *  *  -&gt; bool" Usage="nonIceSdpMediaSession.ValidateMediaBinding (mediaDescription, targetMediaChannel, currentMediaBindings, previousMediaBinding, parsingOperation, diagnosticsCode, errorMessage)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -61,8 +64,8 @@
         <Parameter Name="currentMediaBindings" Type="System.Collections.Generic.IList&lt;Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo&gt;" />
         <Parameter Name="previousMediaBinding" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpMediaOfferAnswerInfo" />
         <Parameter Name="parsingOperation" Type="Microsoft.Rtc.Internal.Collaboration.Media.OfferAnswerParsingOperation" />
-        <Parameter Name="diagnosticsCode" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode&amp;" RefType="out" />
-        <Parameter Name="errorMessage" Type="System.String&amp;" RefType="out" />
+        <Parameter Name="diagnosticsCode" Type="Microsoft.Rtc.Internal.Collaboration.Media.SdpDiagnosticsCode" RefType="out" />
+        <Parameter Name="errorMessage" Type="System.String" RefType="out" />
       </Parameters>
       <Docs>
         <param name="mediaDescription">To be added.</param>

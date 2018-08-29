@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceCommandResponse" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ConferenceCommandResponse" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConferenceCommandResponse abstract" />
+  <TypeSignature Language="F#" Value="type ConferenceCommandResponse = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -44,6 +45,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.Diagnostics" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Diagnostics As IDictionary(Of String, String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ Diagnostics { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Diagnostics : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Rtc.Collaboration.ConferenceCommandResponse.Diagnostics" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +68,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.DisplayString" />
       <MemberSignature Language="VB.NET" Value="Public Property DisplayString As String" />
       <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ DisplayString {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DisplayString : string with get, set" Usage="Microsoft.Rtc.Collaboration.ConferenceCommandResponse.DisplayString" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -88,6 +91,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.GeneralReason" />
       <MemberSignature Language="VB.NET" Value="Public Property GeneralReason As String" />
       <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ GeneralReason {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.GeneralReason : string with get, set" Usage="Microsoft.Rtc.Collaboration.ConferenceCommandResponse.GeneralReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -110,6 +114,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.MessageData" />
       <MemberSignature Language="VB.NET" Value="Public Property MessageData As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::SipMessageData ^ MessageData {  public:&#xA;Microsoft::Rtc::Signaling::SipMessageData ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::SipMessageData ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MessageData : Microsoft.Rtc.Signaling.SipMessageData with get, set" Usage="Microsoft.Rtc.Collaboration.ConferenceCommandResponse.MessageData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -137,6 +142,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.Reason" />
       <MemberSignature Language="VB.NET" Value="Public Property Reason As String" />
       <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ Reason {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Reason : string with get, set" Usage="Microsoft.Rtc.Collaboration.ConferenceCommandResponse.Reason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -159,6 +165,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.SetDiagnostics(System.Collections.Generic.IDictionary{System.String,System.String})" />
       <MemberSignature Language="VB.NET" Value="Protected Sub SetDiagnostics (diagnostics As IDictionary(Of String, String))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SetDiagnostics(System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ diagnostics);" />
+      <MemberSignature Language="F#" Value="member this.SetDiagnostics : System.Collections.Generic.IDictionary&lt;string, string&gt; -&gt; unit" Usage="conferenceCommandResponse.SetDiagnostics diagnostics" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -184,6 +191,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.StatusCode" />
       <MemberSignature Language="VB.NET" Value="Public Property StatusCode As CommandStatusCode" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Collaboration::CommandStatusCode StatusCode {  public:&#xA;Microsoft::Rtc::Collaboration::CommandStatusCode get(); protected:&#xA; void set(Microsoft::Rtc::Collaboration::CommandStatusCode value); };" />
+      <MemberSignature Language="F#" Value="member this.StatusCode : Microsoft.Rtc.Collaboration.CommandStatusCode with get, set" Usage="Microsoft.Rtc.Collaboration.ConferenceCommandResponse.StatusCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -206,6 +214,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceCommandResponse.TryProcessResponseCore(Microsoft.Rtc.Signaling.SipMessageData,Microsoft.Rtc.Signaling.RealTimeException@)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function TryProcessResponseCore (messageData As SipMessageData, ByRef exception As RealTimeException) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract bool TryProcessResponseCore(Microsoft::Rtc::Signaling::SipMessageData ^ messageData, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::RealTimeException ^ % exception);" />
+      <MemberSignature Language="F#" Value="abstract member TryProcessResponseCore : Microsoft.Rtc.Signaling.SipMessageData *  -&gt; bool" Usage="conferenceCommandResponse.TryProcessResponseCore (messageData, exception)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -216,7 +225,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="messageData" Type="Microsoft.Rtc.Signaling.SipMessageData" />
-        <Parameter Name="exception" Type="Microsoft.Rtc.Signaling.RealTimeException&amp;" RefType="out" />
+        <Parameter Name="exception" Type="Microsoft.Rtc.Signaling.RealTimeException" RefType="out" />
       </Parameters>
       <Docs>
         <param name="messageData">The message that contains the result of the request.</param>

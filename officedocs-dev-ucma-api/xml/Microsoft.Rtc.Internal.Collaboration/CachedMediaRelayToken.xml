@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken" />
   <TypeSignature Language="VB.NET" Value="Public Class CachedMediaRelayToken" />
   <TypeSignature Language="C++ CLI" Value="public ref class CachedMediaRelayToken" />
+  <TypeSignature Language="F#" Value="type CachedMediaRelayToken = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As LocalEndpoint, mrasServer As RealTimeAddress)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CachedMediaRelayToken(Microsoft::Rtc::Collaboration::LocalEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ mrasServer);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken : Microsoft.Rtc.Collaboration.LocalEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress -&gt; Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken" Usage="new Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken (endpoint, mrasServer)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -45,6 +47,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Internal.Collaboration.RelayLocation)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As LocalEndpoint, mrasServer As RealTimeAddress, location As RelayLocation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CachedMediaRelayToken(Microsoft::Rtc::Collaboration::LocalEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ mrasServer, Microsoft::Rtc::Internal::Collaboration::RelayLocation location);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken : Microsoft.Rtc.Collaboration.LocalEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Internal.Collaboration.RelayLocation -&gt; Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken" Usage="new Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken (endpoint, mrasServer, location)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +72,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ConnectionContext,Microsoft.Rtc.Internal.Collaboration.RelayLocation,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As LocalEndpoint, mrasServer As RealTimeAddress, mrasServerConnectionContext As ConnectionContext, location As RelayLocation, version As String, identity As String, additionalHeadersForTokenRequest As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; CachedMediaRelayToken(Microsoft::Rtc::Collaboration::LocalEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ mrasServer, Microsoft::Rtc::Signaling::ConnectionContext ^ mrasServerConnectionContext, Microsoft::Rtc::Internal::Collaboration::RelayLocation location, System::String ^ version, System::String ^ identity, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeadersForTokenRequest);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken : Microsoft.Rtc.Collaboration.LocalEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.ConnectionContext * Microsoft.Rtc.Internal.Collaboration.RelayLocation * string * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken" Usage="new Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken (endpoint, mrasServer, mrasServerConnectionContext, location, version, identity, additionalHeadersForTokenRequest)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -101,6 +105,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.BeginInitialize(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginInitialize (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInitialize(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginInitialize : AsyncCallback * obj -&gt; IAsyncResult" Usage="cachedMediaRelayToken.BeginInitialize (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -127,6 +132,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.BeginInitialize(System.Collections.Generic.ICollection{Microsoft.Rtc.Internal.Collaboration.MediaRelayTokenRequestData},Microsoft.Rtc.Internal.Collaboration.MediaRelayTokenRequestRoute,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginInitialize (requestList As ICollection(Of MediaRelayTokenRequestData), route As MediaRelayTokenRequestRoute, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInitialize(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Internal::Collaboration::MediaRelayTokenRequestData ^&gt; ^ requestList, Microsoft::Rtc::Internal::Collaboration::MediaRelayTokenRequestRoute route, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginInitialize : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Internal.Collaboration.MediaRelayTokenRequestData&gt; * Microsoft.Rtc.Internal.Collaboration.MediaRelayTokenRequestRoute * AsyncCallback * obj -&gt; IAsyncResult" Usage="cachedMediaRelayToken.BeginInitialize (requestList, route, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -157,6 +163,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.EndInitialize(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndInitialize (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndInitialize(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndInitialize : IAsyncResult -&gt; unit" Usage="cachedMediaRelayToken.EndInitialize result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -180,6 +187,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.IsAutoRefresh" />
       <MemberSignature Language="VB.NET" Value="Public Property IsAutoRefresh As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsAutoRefresh { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsAutoRefresh : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.IsAutoRefresh" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -200,6 +208,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.StopAutoRefresh" />
       <MemberSignature Language="VB.NET" Value="Public Sub StopAutoRefresh ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopAutoRefresh();" />
+      <MemberSignature Language="F#" Value="member this.StopAutoRefresh : unit -&gt; unit" Usage="cachedMediaRelayToken.StopAutoRefresh " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -220,6 +229,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.StopExpireTimer" />
       <MemberSignature Language="VB.NET" Value="Public Sub StopExpireTimer ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void StopExpireTimer();" />
+      <MemberSignature Language="F#" Value="member this.StopExpireTimer : unit -&gt; unit" Usage="cachedMediaRelayToken.StopExpireTimer " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -240,6 +250,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.Token" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Token As MediaRelayToken" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^ Token { Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Token : Microsoft.Rtc.Internal.Collaboration.MediaRelayToken" Usage="Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.Token" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -260,6 +271,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.TokenRefreshed" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TokenRefreshed As EventHandler(Of MediaRelayTokenRefreshEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::MediaRelayTokenRefreshEventArgs ^&gt; ^ TokenRefreshed;" />
+      <MemberSignature Language="F#" Value="member this.TokenRefreshed : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.MediaRelayTokenRefreshEventArgs&gt; " Usage="member this.TokenRefreshed : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.MediaRelayTokenRefreshEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -279,6 +291,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.Tokens" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Tokens As List(Of MediaRelayToken)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::List&lt;Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^&gt; ^ Tokens { System::Collections::Generic::List&lt;Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Tokens : System.Collections.Generic.List&lt;Microsoft.Rtc.Internal.Collaboration.MediaRelayToken&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.CachedMediaRelayToken.Tokens" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

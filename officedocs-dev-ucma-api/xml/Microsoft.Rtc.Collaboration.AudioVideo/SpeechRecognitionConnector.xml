@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector" />
   <TypeSignature Language="VB.NET" Value="Public Class SpeechRecognitionConnector&#xA;Implements IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public ref class SpeechRecognitionConnector : IDisposable" />
+  <TypeSignature Language="F#" Value="type SpeechRecognitionConnector = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -53,6 +54,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.AttachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AttachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberSignature Language="F#" Value="member this.AttachFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow -&gt; unit" Usage="speechRecognitionConnector.AttachFlow audioVideoFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -71,6 +73,7 @@
             Only one AudioVideoFlow may be attached at a time.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when an AudioVideoFlow is already attached or when an AudioVideoFlow is already attached to another SpeechRecognitionConnector.</exception>
         <example>
           <para />
           <para>
@@ -104,7 +107,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when an AudioVideoFlow is already attached or when an AudioVideoFlow is already attached to another SpeechRecognitionConnector.</exception>
       </Docs>
     </Member>
     <Member MemberName="AudioVideoFlow">
@@ -113,6 +115,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.AudioVideoFlow" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoFlow As AudioVideoFlow" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ AudioVideoFlow { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AudioVideoFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" Usage="Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.AudioVideoFlow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -135,6 +138,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.DetachFlow" />
       <MemberSignature Language="VB.NET" Value="Public Sub DetachFlow ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DetachFlow();" />
+      <MemberSignature Language="F#" Value="member this.DetachFlow : unit -&gt; unit" Usage="speechRecognitionConnector.DetachFlow " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -193,6 +197,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="speechRecognitionConnector.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
@@ -218,6 +223,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.IsActive" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsActive As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsActive { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsActive : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.IsActive" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -240,6 +246,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.Start" />
       <MemberSignature Language="VB.NET" Value="Public Function Start () As SpeechRecognitionStream" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::AudioVideo::SpeechRecognitionStream ^ Start();" />
+      <MemberSignature Language="F#" Value="member this.Start : unit -&gt; Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionStream" Usage="speechRecognitionConnector.Start " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -256,6 +263,7 @@
             </summary>
         <returns>A stream containing audio data.</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the SpeechRecognitionConnector is not bound to an AudioVideoFlow, or when the SpeechRecognitionConnector is already started.</exception>
         <example>
           <para />
           <para>
@@ -273,7 +281,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when the SpeechRecognitionConnector is not bound to an AudioVideoFlow, or when the SpeechRecognitionConnector is already started.</exception>
       </Docs>
     </Member>
     <Member MemberName="Stop">
@@ -282,6 +289,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.SpeechRecognitionConnector.Stop" />
       <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="speechRecognitionConnector.Stop " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

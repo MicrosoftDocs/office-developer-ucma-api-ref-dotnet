@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings" />
   <TypeSignature Language="VB.NET" Value="Public Class ApplicationEndpointSettings&#xA;Inherits LocalEndpointSettings" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationEndpointSettings : Microsoft::Rtc::Collaboration::LocalEndpointSettings" />
+  <TypeSignature Language="F#" Value="type ApplicationEndpointSettings = class&#xA;    inherit LocalEndpointSettings" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointSettings(System::String ^ ownerUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ApplicationEndpointSettings : string -&gt; Microsoft.Rtc.Collaboration.ApplicationEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.ApplicationEndpointSettings ownerUri" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.#ctor(System.String,Microsoft.Rtc.Signaling.ConnectionContext)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, proxyConnectionContext As ConnectionContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointSettings(System::String ^ ownerUri, Microsoft::Rtc::Signaling::ConnectionContext ^ proxyConnectionContext);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ApplicationEndpointSettings : string * Microsoft.Rtc.Signaling.ConnectionContext -&gt; Microsoft.Rtc.Collaboration.ApplicationEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.ApplicationEndpointSettings (ownerUri, proxyConnectionContext)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -84,6 +87,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.#ctor(System.String,System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, proxyHost As String, proxyPort As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ApplicationEndpointSettings(System::String ^ ownerUri, System::String ^ proxyHost, int proxyPort);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ApplicationEndpointSettings : string * string * int -&gt; Microsoft.Rtc.Collaboration.ApplicationEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.ApplicationEndpointSettings (ownerUri, proxyHost, proxyPort)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -112,6 +116,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property AutomaticPresencePublicationEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticPresencePublicationEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticPresencePublicationEnabled : bool with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.AutomaticPresencePublicationEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -149,6 +154,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.IsDefaultRoutingEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public Property IsDefaultRoutingEndpoint As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDefaultRoutingEndpoint { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsDefaultRoutingEndpoint : bool with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.IsDefaultRoutingEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -196,6 +202,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.MediaEdgeAuthenticationService" />
       <MemberSignature Language="VB.NET" Value="Public Property MediaEdgeAuthenticationService As ConnectionContext" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ConnectionContext ^ MediaEdgeAuthenticationService { Microsoft::Rtc::Signaling::ConnectionContext ^ get(); void set(Microsoft::Rtc::Signaling::ConnectionContext ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MediaEdgeAuthenticationService : Microsoft.Rtc.Signaling.ConnectionContext with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.MediaEdgeAuthenticationService" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -226,6 +233,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.OwnerDisplayName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerDisplayName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerDisplayName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerDisplayName : string" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.OwnerDisplayName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -248,6 +256,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.OwnerPhoneUri" />
       <MemberSignature Language="VB.NET" Value="Public Property OwnerPhoneUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerPhoneUri { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerPhoneUri : string with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.OwnerPhoneUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -277,6 +286,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.Presence" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Presence As ApplicationEndpointPresenceSettings" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ApplicationEndpointPresenceSettings ^ Presence { Microsoft::Rtc::Collaboration::ApplicationEndpointPresenceSettings ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Presence : Microsoft.Rtc.Collaboration.ApplicationEndpointPresenceSettings" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.Presence" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -305,6 +315,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProvisioningDataQueryDisabled" />
       <MemberSignature Language="VB.NET" Value="Public Property ProvisioningDataQueryDisabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ProvisioningDataQueryDisabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ProvisioningDataQueryDisabled : bool with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProvisioningDataQueryDisabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -332,6 +343,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyCertificateSubject" />
       <MemberSignature Language="VB.NET" Value="Public Property ProxyCertificateSubject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProxyCertificateSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ProxyCertificateSubject : string with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyCertificateSubject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -359,6 +371,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyHost" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProxyHost As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProxyHost { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProxyHost : string" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyHost" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -387,6 +400,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyPort" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProxyPort As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ProxyPort { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProxyPort : int" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.ProxyPort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -408,6 +422,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEndpointType(valuetype Microsoft.Rtc.Collaboration.EndpointType endpointType) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.SetEndpointType(Microsoft.Rtc.Collaboration.EndpointType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetEndpointType(Microsoft::Rtc::Collaboration::EndpointType endpointType);" />
+      <MemberSignature Language="F#" Value="member this.SetEndpointType : Microsoft.Rtc.Collaboration.EndpointType -&gt; unit" Usage="applicationEndpointSettings.SetEndpointType endpointType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -432,6 +447,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEndpointType(valuetype Microsoft.Rtc.Collaboration.EndpointType endpointType, valuetype Microsoft.Rtc.Collaboration.EndpointSubtype endpointSubtype) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.SetEndpointType(Microsoft.Rtc.Collaboration.EndpointType,Microsoft.Rtc.Collaboration.EndpointSubtype)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetEndpointType(Microsoft::Rtc::Collaboration::EndpointType endpointType, Microsoft::Rtc::Collaboration::EndpointSubtype endpointSubtype);" />
+      <MemberSignature Language="F#" Value="member this.SetEndpointType : Microsoft.Rtc.Collaboration.EndpointType * Microsoft.Rtc.Collaboration.EndpointSubtype -&gt; unit" Usage="applicationEndpointSettings.SetEndpointType (endpointType, endpointSubtype)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -460,6 +476,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.UseRegistration" />
       <MemberSignature Language="VB.NET" Value="Public Property UseRegistration As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UseRegistration { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.UseRegistration : bool with get, set" Usage="Microsoft.Rtc.Collaboration.ApplicationEndpointSettings.UseRegistration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SignalingHeader" />
   <TypeSignature Language="VB.NET" Value="Public Class SignalingHeader&#xA;Implements ISerializable" />
   <TypeSignature Language="C++ CLI" Value="public ref class SignalingHeader : System::Runtime::Serialization::ISerializable" />
+  <TypeSignature Language="F#" Value="type SignalingHeader = class&#xA;    interface ISerializable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingHeader.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignalingHeader(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SignalingHeader : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.SignalingHeader" Usage="new Microsoft.Rtc.Signaling.SignalingHeader (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -55,6 +57,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingHeader.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingHeader(System::String ^ name, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SignalingHeader : string * string -&gt; Microsoft.Rtc.Signaling.SignalingHeader" Usage="new Microsoft.Rtc.Signaling.SignalingHeader (name, value)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -86,6 +89,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingHeader.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="signalingHeader.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</InterfaceMember>
@@ -121,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingHeader.GetValue" />
       <MemberSignature Language="VB.NET" Value="Public Function GetValue () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetValue();" />
+      <MemberSignature Language="F#" Value="member this.GetValue : unit -&gt; string" Usage="signalingHeader.GetValue " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -145,6 +150,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingHeader.MicrosoftSupportedEventCategories" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MicrosoftSupportedEventCategories As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::SignalingHeader ^ MicrosoftSupportedEventCategories { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MicrosoftSupportedEventCategories : Microsoft.Rtc.Signaling.SignalingHeader" Usage="Microsoft.Rtc.Signaling.SignalingHeader.MicrosoftSupportedEventCategories" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -167,6 +173,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingHeader.MicrosoftSupportedForking" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MicrosoftSupportedForking As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::SignalingHeader ^ MicrosoftSupportedForking { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MicrosoftSupportedForking : Microsoft.Rtc.Signaling.SignalingHeader" Usage="Microsoft.Rtc.Signaling.SignalingHeader.MicrosoftSupportedForking" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -189,6 +196,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingHeader.MicrosoftSupportedPresence" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MicrosoftSupportedPresence As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::SignalingHeader ^ MicrosoftSupportedPresence { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MicrosoftSupportedPresence : Microsoft.Rtc.Signaling.SignalingHeader" Usage="Microsoft.Rtc.Signaling.SignalingHeader.MicrosoftSupportedPresence" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -211,6 +219,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingHeader.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Rtc.Signaling.SignalingHeader.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -233,6 +242,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingHeader.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="signalingHeader.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

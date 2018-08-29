@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ConnectionPool" />
   <TypeSignature Language="VB.NET" Value="Public Class ConnectionPool" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConnectionPool" />
+  <TypeSignature Language="F#" Value="type ConnectionPool = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -30,6 +31,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ConnectionPool.ConnectionAdded" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionAdded As EventHandler(Of CollectionChangedEventArgs(Of RealTimeConnection)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^&gt; ^ ConnectionAdded;" />
+      <MemberSignature Language="F#" Value="member this.ConnectionAdded : EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; " Usage="member this.ConnectionAdded : System.EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -51,6 +53,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.ConnectionManager" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionManager As RealTimeConnectionManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ ConnectionManager { Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConnectionManager : Microsoft.Rtc.Signaling.RealTimeConnectionManager" Usage="Microsoft.Rtc.Signaling.ConnectionPool.ConnectionManager" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -73,6 +76,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ConnectionPool.ConnectionRemoved" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ConnectionRemoved As EventHandler(Of CollectionChangedEventArgs(Of RealTimeConnection)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::CollectionChangedEventArgs&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^&gt; ^ ConnectionRemoved;" />
+      <MemberSignature Language="F#" Value="member this.ConnectionRemoved : EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; " Usage="member this.ConnectionRemoved : System.EventHandler&lt;Microsoft.Rtc.Signaling.CollectionChangedEventArgs&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +98,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Rtc.Signaling.ConnectionPool.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +121,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionPool.GetConnections" />
       <MemberSignature Language="VB.NET" Value="Public Function GetConnections () As ReadOnlyCollection(Of RealTimeConnection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Signaling::RealTimeConnection ^&gt; ^ GetConnections();" />
+      <MemberSignature Language="F#" Value="member this.GetConnections : unit -&gt; System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Signaling.RealTimeConnection&gt;" Usage="connectionPool.GetConnections " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -139,6 +145,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.HostName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HostName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ HostName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HostName : string" Usage="Microsoft.Rtc.Signaling.ConnectionPool.HostName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -161,6 +168,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.MaximumNumberOfConnections" />
       <MemberSignature Language="VB.NET" Value="Public Property MaximumNumberOfConnections As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumNumberOfConnections { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumNumberOfConnections : int with get, set" Usage="Microsoft.Rtc.Signaling.ConnectionPool.MaximumNumberOfConnections" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -186,6 +194,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.Port" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Port As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Port { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Port : int" Usage="Microsoft.Rtc.Signaling.ConnectionPool.Port" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -208,6 +217,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ConnectionPool.ProtocolName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProtocolName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProtocolName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ProtocolName : string" Usage="Microsoft.Rtc.Signaling.ConnectionPool.ProtocolName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -230,6 +240,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ConnectionPool.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="connectionPool.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

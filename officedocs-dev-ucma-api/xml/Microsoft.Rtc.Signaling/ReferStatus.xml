@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ReferStatus" />
   <TypeSignature Language="VB.NET" Value="Public Class ReferStatus" />
   <TypeSignature Language="C++ CLI" Value="public ref class ReferStatus" />
+  <TypeSignature Language="F#" Value="type ReferStatus = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -48,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferStatus.#ctor(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (applicationContext As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ReferStatus(System::Object ^ applicationContext);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.ReferStatus : obj -&gt; Microsoft.Rtc.Signaling.ReferStatus" Usage="new Microsoft.Rtc.Signaling.ReferStatus applicationContext" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -72,6 +74,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferStatus.ApplicationContext" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationContext As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationContext : obj" Usage="Microsoft.Rtc.Signaling.ReferStatus.ApplicationContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferStatus.BeginTerminateSubscription(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminateSubscription (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminateSubscription(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminateSubscription : AsyncCallback * obj -&gt; IAsyncResult" Usage="referStatus.BeginTerminateSubscription (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferStatus.EndTerminateSubscription(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndTerminateSubscription (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndTerminateSubscription(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminateSubscription : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="referStatus.EndTerminateSubscription result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -165,6 +170,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferStatus.IsSubscriptionActive" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSubscriptionActive As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSubscriptionActive { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSubscriptionActive : bool" Usage="Microsoft.Rtc.Signaling.ReferStatus.IsSubscriptionActive" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -187,6 +193,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferStatus.Session" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Session As SignalingSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingSession ^ Session { Microsoft::Rtc::Signaling::SignalingSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Session : Microsoft.Rtc.Signaling.SignalingSession" Usage="Microsoft.Rtc.Signaling.ReferStatus.Session" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -210,6 +217,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferStatus.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ReferState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ReferState State { Microsoft::Rtc::Signaling::ReferState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Signaling.ReferState" Usage="Microsoft.Rtc.Signaling.ReferStatus.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -239,6 +247,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ReferStatus.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of ReferStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::ReferStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Signaling.ReferStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.ReferStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -260,6 +269,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferStatus.TerminateSubscription" />
       <MemberSignature Language="VB.NET" Value="Public Function TerminateSubscription () As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ TerminateSubscription();" />
+      <MemberSignature Language="F#" Value="member this.TerminateSubscription : unit -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="referStatus.TerminateSubscription " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
