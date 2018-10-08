@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MediaTransportAddress" />
   <TypeSignature Language="C++ CLI" Value="public ref class MediaTransportAddress sealed" />
+  <TypeSignature Language="F#" Value="type MediaTransportAddress = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.#ctor(System.Net.IPAddress,System.Int32,System.Int32,Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (address As IPAddress, rtpPort As Integer, rtcpPort As Integer, transportType As MediaTransportType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaTransportAddress(System::Net::IPAddress ^ address, int rtpPort, int rtcpPort, Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportType transportType);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress : System.Net.IPAddress * int * int * Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportType -&gt; Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress" Usage="new Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress (address, rtpPort, rtcpPort, transportType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -49,6 +51,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.#ctor(System.Net.IPAddress,System.Int32,System.Net.IPAddress,System.Int32,Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (address As IPAddress, rtpPort As Integer, rtcpAddress As IPAddress, rtcpPort As Integer, transportType As MediaTransportType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaTransportAddress(System::Net::IPAddress ^ address, int rtpPort, System::Net::IPAddress ^ rtcpAddress, int rtcpPort, Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportType transportType);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress : System.Net.IPAddress * int * System.Net.IPAddress * int * Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportType -&gt; Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress" Usage="new Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress (address, rtpPort, rtcpAddress, rtcpPort, transportType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -77,6 +80,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtcpAddress" />
       <MemberSignature Language="VB.NET" Value="Public Property RtcpAddress As IPAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ RtcpAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.RtcpAddress : System.Net.IPAddress with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtcpAddress" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -97,6 +101,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtcpPort" />
       <MemberSignature Language="VB.NET" Value="Public Property RtcpPort As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RtcpPort { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.RtcpPort : int with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtcpPort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -117,6 +122,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtpAddress" />
       <MemberSignature Language="VB.NET" Value="Public Property RtpAddress As IPAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::IPAddress ^ RtpAddress { System::Net::IPAddress ^ get(); void set(System::Net::IPAddress ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.RtpAddress : System.Net.IPAddress with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtpAddress" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -137,6 +143,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtpPort" />
       <MemberSignature Language="VB.NET" Value="Public Property RtpPort As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int RtpPort { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.RtpPort : int with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.RtpPort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -157,6 +164,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.TransportType" />
       <MemberSignature Language="VB.NET" Value="Public Property TransportType As MediaTransportType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportType TransportType { Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportType get(); void set(Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportType value); };" />
+      <MemberSignature Language="F#" Value="member this.TransportType : Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportType with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportAddress.TransportType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

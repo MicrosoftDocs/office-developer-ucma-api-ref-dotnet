@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Conversation" />
   <TypeSignature Language="VB.NET" Value="Public Class Conversation" />
   <TypeSignature Language="C++ CLI" Value="public ref class Conversation" />
+  <TypeSignature Language="F#" Value="type Conversation = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.LocalEndpoint localEndpoint) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Conversation(Microsoft::Rtc::Collaboration::LocalEndpoint ^ localEndpoint);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Conversation : Microsoft.Rtc.Collaboration.LocalEndpoint -&gt; Microsoft.Rtc.Collaboration.Conversation" Usage="new Microsoft.Rtc.Collaboration.Conversation localEndpoint" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -60,6 +62,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.LocalEndpoint localEndpoint, class Microsoft.Rtc.Collaboration.ConversationSettings settings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.#ctor(Microsoft.Rtc.Collaboration.LocalEndpoint,Microsoft.Rtc.Collaboration.ConversationSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Conversation(Microsoft::Rtc::Collaboration::LocalEndpoint ^ localEndpoint, Microsoft::Rtc::Collaboration::ConversationSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Conversation : Microsoft.Rtc.Collaboration.LocalEndpoint * Microsoft.Rtc.Collaboration.ConversationSettings -&gt; Microsoft.Rtc.Collaboration.Conversation" Usage="new Microsoft.Rtc.Collaboration.Conversation (localEndpoint, settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.ActiveMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveMediaTypes As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ ActiveMediaTypes { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveMediaTypes : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.Conversation.ActiveMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -129,6 +133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.ApplicationContext" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationContext : obj with get, set" Usage="Microsoft.Rtc.Collaboration.Conversation.ApplicationContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -157,6 +162,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginEscalateToConference(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEscalateToConference (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEscalateToConference(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEscalateToConference : AsyncCallback * obj -&gt; IAsyncResult" Usage="conversation.BeginEscalateToConference (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -192,6 +198,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInviteRemoteParticipants(class System.Collections.Generic.IEnumerable`1&lt;string&gt; destinationUris, class Microsoft.Rtc.Collaboration.ToastMessage toastMessage, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginInviteRemoteParticipants(System.Collections.Generic.IEnumerable{System.String},Microsoft.Rtc.Collaboration.ToastMessage,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInviteRemoteParticipants(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ destinationUris, Microsoft::Rtc::Collaboration::ToastMessage ^ toastMessage, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginInviteRemoteParticipants : seq&lt;string&gt; * Microsoft.Rtc.Collaboration.ToastMessage * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversation.BeginInviteRemoteParticipants (destinationUris, toastMessage, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -246,6 +253,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginInviteRemoteParticipants(class System.Collections.Generic.IEnumerable`1&lt;string&gt; destinationUris, class System.Collections.Generic.IEnumerable`1&lt;string&gt; mediaTypes, class Microsoft.Rtc.Collaboration.ToastMessage toastMessage, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginInviteRemoteParticipants(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},Microsoft.Rtc.Collaboration.ToastMessage,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInviteRemoteParticipants(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ destinationUris, System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ mediaTypes, Microsoft::Rtc::Collaboration::ToastMessage ^ toastMessage, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginInviteRemoteParticipants : seq&lt;string&gt; * seq&lt;string&gt; * Microsoft.Rtc.Collaboration.ToastMessage * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversation.BeginInviteRemoteParticipants (destinationUris, mediaTypes, toastMessage, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -303,6 +311,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="conversation.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -694,6 +703,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginTerminate(Microsoft.Rtc.Collaboration.ConversationTerminateOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (options As ConversationTerminateOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(Microsoft::Rtc::Collaboration::ConversationTerminateOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : Microsoft.Rtc.Collaboration.ConversationTerminateOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversation.BeginTerminate (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -732,6 +742,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateProperties(class Microsoft.Rtc.Collaboration.ConversationProperties conversationProperties, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.BeginUpdateProperties(Microsoft.Rtc.Collaboration.ConversationProperties,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateProperties(Microsoft::Rtc::Collaboration::ConversationProperties ^ conversationProperties, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUpdateProperties : Microsoft.Rtc.Collaboration.ConversationProperties * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversation.BeginUpdateProperties (conversationProperties, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -776,6 +787,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Calls" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Calls As Collection(Of Call)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Call ^&gt; ^ Calls { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::Call ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Calls : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.Call&gt;" Usage="Microsoft.Rtc.Collaboration.Conversation.Calls" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -798,6 +810,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.ConferenceSession" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceSession As ConferenceSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceSession ^ ConferenceSession { Microsoft::Rtc::Collaboration::ConferenceSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConferenceSession : Microsoft.Rtc.Collaboration.ConferenceSession" Usage="Microsoft.Rtc.Collaboration.Conversation.ConferenceSession" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -827,6 +840,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndEscalateToConference(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEscalateToConference (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEscalateToConference(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEscalateToConference : IAsyncResult -&gt; unit" Usage="conversation.EndEscalateToConference result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -871,6 +885,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndInviteRemoteParticipants(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndInviteRemoteParticipants (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndInviteRemoteParticipants(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndInviteRemoteParticipants : IAsyncResult -&gt; unit" Usage="conversation.EndInviteRemoteParticipants result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -923,6 +938,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Endpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Endpoint As LocalEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ Endpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : Microsoft.Rtc.Collaboration.LocalEndpoint" Usage="Microsoft.Rtc.Collaboration.Conversation.Endpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -945,6 +961,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="conversation.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -974,6 +991,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.EndUpdateProperties(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateProperties (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateProperties(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUpdateProperties : IAsyncResult -&gt; unit" Usage="conversation.EndUpdateProperties result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1018,6 +1036,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.EscalateToConferenceRequested" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event EscalateToConferenceRequested As EventHandler(Of EscalateToConferenceRequestedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::EscalateToConferenceRequestedEventArgs ^&gt; ^ EscalateToConferenceRequested;" />
+      <MemberSignature Language="F#" Value="member this.EscalateToConferenceRequested : EventHandler&lt;Microsoft.Rtc.Collaboration.EscalateToConferenceRequestedEventArgs&gt; " Usage="member this.EscalateToConferenceRequested : System.EventHandler&lt;Microsoft.Rtc.Collaboration.EscalateToConferenceRequestedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1047,6 +1066,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetActiveMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetActiveMediaTypes () As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetActiveMediaTypes();" />
+      <MemberSignature Language="F#" Value="member this.GetActiveMediaTypes : unit -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="conversation.GetActiveMediaTypes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1070,6 +1090,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetConversationContextChannels" />
       <MemberSignature Language="VB.NET" Value="Public Function GetConversationContextChannels () As Collection(Of ConversationContextChannel)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationContextChannel ^&gt; ^ GetConversationContextChannels();" />
+      <MemberSignature Language="F#" Value="member this.GetConversationContextChannels : unit -&gt; System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationContextChannel&gt;" Usage="conversation.GetConversationContextChannels " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1093,6 +1114,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetLobbyParticipants" />
       <MemberSignature Language="VB.NET" Value="Public Function GetLobbyParticipants () As Collection(Of ConversationParticipant)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ GetLobbyParticipants();" />
+      <MemberSignature Language="F#" Value="member this.GetLobbyParticipants : unit -&gt; System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;" Usage="conversation.GetLobbyParticipants " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1121,6 +1143,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetRemoteParticipantsCount" />
       <MemberSignature Language="VB.NET" Value="Public Function GetRemoteParticipantsCount () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; int GetRemoteParticipantsCount();" />
+      <MemberSignature Language="F#" Value="member this.GetRemoteParticipantsCount : unit -&gt; int" Usage="conversation.GetRemoteParticipantsCount " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1150,6 +1173,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.GetTraceCorrelationID" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberSignature Language="F#" Value="member this.GetTraceCorrelationID : unit -&gt; int64" Usage="conversation.GetTraceCorrelationID " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1173,6 +1197,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Rtc.Collaboration.Conversation.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1195,6 +1220,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Conversation.Impersonate(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Impersonate (uri As String, phoneUri As String, displayName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Impersonate(System::String ^ uri, System::String ^ phoneUri, System::String ^ displayName);" />
+      <MemberSignature Language="F#" Value="member this.Impersonate : string * string * string -&gt; unit" Usage="conversation.Impersonate (uri, phoneUri, displayName)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1237,6 +1263,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.InviteRemoteParticipantUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event InviteRemoteParticipantUpdate As EventHandler(Of InviteParticipantUpdateEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::InviteParticipantUpdateEventArgs ^&gt; ^ InviteRemoteParticipantUpdate;" />
+      <MemberSignature Language="F#" Value="member this.InviteRemoteParticipantUpdate : EventHandler&lt;Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs&gt; " Usage="member this.InviteRemoteParticipantUpdate : System.EventHandler&lt;Microsoft.Rtc.Collaboration.InviteParticipantUpdateEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1272,6 +1299,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.LobbyParticipantAttendanceChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event LobbyParticipantAttendanceChanged As EventHandler(Of LobbyParticipantAttendanceChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::LobbyParticipantAttendanceChangedEventArgs ^&gt; ^ LobbyParticipantAttendanceChanged;" />
+      <MemberSignature Language="F#" Value="member this.LobbyParticipantAttendanceChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs&gt; " Usage="member this.LobbyParticipantAttendanceChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.LobbyParticipantAttendanceChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1312,6 +1340,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.LocalParticipant" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalParticipant As ConversationParticipant" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationParticipant ^ LocalParticipant { Microsoft::Rtc::Collaboration::ConversationParticipant ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalParticipant : Microsoft.Rtc.Collaboration.ConversationParticipant" Usage="Microsoft.Rtc.Collaboration.Conversation.LocalParticipant" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1334,6 +1363,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.ParticipantPropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantPropertiesChanged As EventHandler(Of ParticipantPropertiesChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantPropertiesChangedEventArgs ^&gt; ^ ParticipantPropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.ParticipantPropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&gt; " Usage="member this.ParticipantPropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantPropertiesChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1360,6 +1390,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Priority" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Priority As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Priority { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Priority : string" Usage="Microsoft.Rtc.Collaboration.Conversation.Priority" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1382,6 +1413,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.PropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of ConversationProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConversationProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.PropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationProperties&gt;&gt; " Usage="member this.PropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1403,6 +1435,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipantAttendanceChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteParticipantAttendanceChanged As EventHandler(Of ParticipantAttendanceChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantAttendanceChangedEventArgs ^&gt; ^ RemoteParticipantAttendanceChanged;" />
+      <MemberSignature Language="F#" Value="member this.RemoteParticipantAttendanceChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantAttendanceChangedEventArgs&gt; " Usage="member this.RemoteParticipantAttendanceChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantAttendanceChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1429,6 +1462,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.RemoteParticipants" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteParticipants As Collection(Of ConversationParticipant)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ RemoteParticipants { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::ConversationParticipant ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteParticipants : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.ConversationParticipant&gt;" Usage="Microsoft.Rtc.Collaboration.Conversation.RemoteParticipants" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1456,6 +1490,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ConversationState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConversationState State { Microsoft::Rtc::Collaboration::ConversationState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.ConversationState" Usage="Microsoft.Rtc.Collaboration.Conversation.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1478,6 +1513,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Conversation.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of StateChangedEventArgs(Of ConversationState)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::StateChangedEventArgs&lt;Microsoft::Rtc::Collaboration::ConversationState&gt; ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationState&gt;&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.StateChangedEventArgs&lt;Microsoft.Rtc.Collaboration.ConversationState&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1499,6 +1535,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Conversation.Subject" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Subject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Subject : string" Usage="Microsoft.Rtc.Collaboration.Conversation.Subject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

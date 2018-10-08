@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager" />
   <TypeSignature Language="VB.NET" Value="Public Class RealTimeServerTcpConnectionManager&#xA;Inherits RealTimeServerConnectionManager" />
   <TypeSignature Language="C++ CLI" Value="public ref class RealTimeServerTcpConnectionManager : Microsoft::Rtc::Signaling::RealTimeServerConnectionManager" />
+  <TypeSignature Language="F#" Value="type RealTimeServerTcpConnectionManager = class&#xA;    inherit RealTimeServerConnectionManager" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -46,6 +47,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (localHost As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeServerTcpConnectionManager(System::String ^ localHost);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager : string -&gt; Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager" Usage="new Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager localHost" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +72,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Net.IPEndPoint ListenForIncomingConnections(class System.Net.IPEndPoint ipEndpoint) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.ListenForIncomingConnections(System.Net.IPEndPoint)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Net::IPEndPoint ^ ListenForIncomingConnections(System::Net::IPEndPoint ^ ipEndpoint);" />
+      <MemberSignature Language="F#" Value="override this.ListenForIncomingConnections : System.Net.IPEndPoint -&gt; System.Net.IPEndPoint" Usage="realTimeServerTcpConnectionManager.ListenForIncomingConnections ipEndpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager.StopListeningForIncomingConnections" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub StopListeningForIncomingConnections ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void StopListeningForIncomingConnections();" />
+      <MemberSignature Language="F#" Value="override this.StopListeningForIncomingConnections : unit -&gt; unit" Usage="realTimeServerTcpConnectionManager.StopListeningForIncomingConnections " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class PublishSubscribeSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class PublishSubscribeSession abstract" />
+  <TypeSignature Language="F#" Value="type PublishSubscribeSession = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -33,6 +34,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginRefresh(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginRefresh : AsyncCallback * obj -&gt; IAsyncResult&#xA;override this.BeginRefresh : AsyncCallback * obj -&gt; IAsyncResult" Usage="publishSubscribeSession.BeginRefresh (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginSubscribe(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function BeginSubscribe (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual IAsyncResult ^ BeginSubscribe(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginSubscribe : AsyncCallback * obj -&gt; IAsyncResult&#xA;override this.BeginSubscribe : AsyncCallback * obj -&gt; IAsyncResult" Usage="publishSubscribeSession.BeginSubscribe (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.BeginUnsubscribe(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function BeginUnsubscribe (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual IAsyncResult ^ BeginUnsubscribe(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginUnsubscribe : AsyncCallback * obj -&gt; IAsyncResult&#xA;override this.BeginUnsubscribe : AsyncCallback * obj -&gt; IAsyncResult" Usage="publishSubscribeSession.BeginUnsubscribe (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -126,6 +130,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.CurrentState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CurrentState As CollaborationSubscriptionState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::CollaborationSubscriptionState CurrentState { Microsoft::Rtc::Collaboration::Presence::CollaborationSubscriptionState get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentState : Microsoft.Rtc.Collaboration.Presence.CollaborationSubscriptionState" Usage="Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.CurrentState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -148,6 +153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.EndRefresh(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndRefresh (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndRefresh(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndRefresh : IAsyncResult -&gt; unit&#xA;override this.EndRefresh : IAsyncResult -&gt; unit" Usage="publishSubscribeSession.EndRefresh result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -177,6 +183,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.EndSubscribe(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndSubscribe (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndSubscribe(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndSubscribe : IAsyncResult -&gt; unit&#xA;override this.EndSubscribe : IAsyncResult -&gt; unit" Usage="publishSubscribeSession.EndSubscribe result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -207,6 +214,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.EndUnsubscribe(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub EndUnsubscribe (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void EndUnsubscribe(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndUnsubscribe : IAsyncResult -&gt; unit&#xA;override this.EndUnsubscribe : IAsyncResult -&gt; unit" Usage="publishSubscribeSession.EndUnsubscribe result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -236,6 +244,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.IsSubscriptionActive" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSubscriptionActive As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSubscriptionActive { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSubscriptionActive : bool" Usage="Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.IsSubscriptionActive" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -266,6 +275,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriberEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubscriberEndpoint As LocalEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::LocalEndpoint ^ SubscriberEndpoint { Microsoft::Rtc::Collaboration::LocalEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubscriberEndpoint : Microsoft.Rtc.Collaboration.LocalEndpoint" Usage="Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriberEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -288,6 +298,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Presence.PublishSubscribeSession.SubscriptionStateChange" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SubscriptionStateChange As EventHandler(Of PresenceSubscriptionStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::Presence::PresenceSubscriptionStateChangedEventArgs ^&gt; ^ SubscriptionStateChange;" />
+      <MemberSignature Language="F#" Value="member this.SubscriptionStateChange : EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs&gt; " Usage="member this.SubscriptionStateChange : System.EventHandler&lt;Microsoft.Rtc.Collaboration.Presence.PresenceSubscriptionStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipServiceRequest" />
   <TypeSignature Language="VB.NET" Value="Public Class SipServiceRequest" />
   <TypeSignature Language="C++ CLI" Value="public ref class SipServiceRequest" />
+  <TypeSignature Language="F#" Value="type SipServiceRequest = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.RealTimeEndpoint requestorEndpoint, class System.Net.Mime.ContentType contentType, unsigned int8[] messageBody) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipServiceRequest(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ requestorEndpoint, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ messageBody);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipServiceRequest : Microsoft.Rtc.Signaling.RealTimeEndpoint * System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Signaling.SipServiceRequest" Usage="new Microsoft.Rtc.Signaling.SipServiceRequest (requestorEndpoint, contentType, messageBody)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Signaling.SipEndpoint requestorEndpoint, class System.Net.Mime.ContentType contentType, unsigned int8[] messageBody) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.#ctor(Microsoft.Rtc.Signaling.SipEndpoint,System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipServiceRequest(Microsoft::Rtc::Signaling::SipEndpoint ^ requestorEndpoint, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ messageBody);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipServiceRequest : Microsoft.Rtc.Signaling.SipEndpoint * System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Signaling.SipServiceRequest" Usage="new Microsoft.Rtc.Signaling.SipServiceRequest (requestorEndpoint, contentType, messageBody)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -85,6 +88,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.BeginService(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginService (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginService(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginService : AsyncCallback * obj -&gt; IAsyncResult" Usage="sipServiceRequest.BeginService (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -113,6 +117,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.BeginService(Microsoft.Rtc.Signaling.RealTimeAddress,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginService (target As RealTimeAddress, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginService(Microsoft::Rtc::Signaling::RealTimeAddress ^ target, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginService : Microsoft.Rtc.Signaling.RealTimeAddress * AsyncCallback * obj -&gt; IAsyncResult" Usage="sipServiceRequest.BeginService (target, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -143,6 +148,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.BeginService(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},Microsoft.Rtc.Signaling.RealTimeAddress,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginService (signalingHeaders As IEnumerable(Of SignalingHeader), target As RealTimeAddress, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginService(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, Microsoft::Rtc::Signaling::RealTimeAddress ^ target, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginService : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * Microsoft.Rtc.Signaling.RealTimeAddress * AsyncCallback * obj -&gt; IAsyncResult" Usage="sipServiceRequest.BeginService (signalingHeaders, target, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -175,6 +181,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.EndService(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndService (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndService(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndService : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipServiceRequest.EndService result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -222,6 +229,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipServiceRequest.Service(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Function Service (signalingHeaders As IEnumerable(Of SignalingHeader), target As RealTimeAddress) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Service(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, Microsoft::Rtc::Signaling::RealTimeAddress ^ target);" />
+      <MemberSignature Language="F#" Value="member this.Service : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * Microsoft.Rtc.Signaling.RealTimeAddress -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="sipServiceRequest.Service (signalingHeaders, target)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

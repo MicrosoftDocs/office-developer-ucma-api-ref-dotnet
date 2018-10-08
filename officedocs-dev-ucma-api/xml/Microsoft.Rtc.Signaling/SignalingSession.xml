@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SignalingSession" />
   <TypeSignature Language="VB.NET" Value="Public Class SignalingSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class SignalingSession" />
+  <TypeSignature Language="F#" Value="type SignalingSession = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As RealTimeEndpoint, sessionTarget As RealTimeAddress)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSession(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SignalingSession : Microsoft.Rtc.Signaling.RealTimeEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress -&gt; Microsoft.Rtc.Signaling.SignalingSession" Usage="new Microsoft.Rtc.Signaling.SignalingSession (endpoint, sessionTarget)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -50,6 +52,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.SignalingSessionSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As RealTimeEndpoint, settings As SignalingSessionSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSession(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint, Microsoft::Rtc::Signaling::SignalingSessionSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SignalingSession : Microsoft.Rtc.Signaling.RealTimeEndpoint * Microsoft.Rtc.Signaling.SignalingSessionSettings -&gt; Microsoft.Rtc.Signaling.SignalingSession" Usage="new Microsoft.Rtc.Signaling.SignalingSession (endpoint, settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -74,6 +77,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.#ctor(Microsoft.Rtc.Signaling.RealTimeEndpoint,Microsoft.Rtc.Signaling.RealTimeAddress,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpoint As RealTimeEndpoint, sessionTarget As RealTimeAddress, callId As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SignalingSession(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::String ^ callId);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SignalingSession : Microsoft.Rtc.Signaling.RealTimeEndpoint * Microsoft.Rtc.Signaling.RealTimeAddress * string -&gt; Microsoft.Rtc.Signaling.SignalingSession" Usage="new Microsoft.Rtc.Signaling.SignalingSession (endpoint, sessionTarget, callId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -101,6 +105,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginAccept(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginAccept (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -139,6 +144,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginAccept(Microsoft.Rtc.Signaling.SignalingSessionAcceptOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (options As SignalingSessionAcceptOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(Microsoft::Rtc::Signaling::SignalingSessionAcceptOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : Microsoft.Rtc.Signaling.SignalingSessionAcceptOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginAccept (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -185,6 +191,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginEstablish(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginEstablish (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -223,6 +230,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginEstablish(Microsoft.Rtc.Signaling.SignalingSessionEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (options As SignalingSessionEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Signaling::SignalingSessionEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : Microsoft.Rtc.Signaling.SignalingSessionEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginEstablish (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -268,6 +276,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginParticipate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginParticipate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginParticipate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginParticipate : AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginParticipate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -317,6 +326,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginParticipate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginParticipate (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginParticipate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginParticipate : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginParticipate (signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -368,6 +378,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRefer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRefer : Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.ReferStatus * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginRefer (referTarget, referStatus, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -419,6 +430,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRefer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRefer : Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.ReferStatus * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginRefer (referTarget, referStatus, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -470,6 +482,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginRefer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRefer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRefer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRefer : Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.ReferStatus * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginRefer (referTarget, referStatus, signalingHeaders, contentType, body, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -526,6 +539,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRenegotiateDescription(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRenegotiateDescription (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRenegotiateDescription(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRenegotiateDescription : AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginRenegotiateDescription (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -572,6 +586,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRenegotiateDescription(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRenegotiateDescription (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRenegotiateDescription(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRenegotiateDescription : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginRenegotiateDescription (signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -621,6 +636,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginRenegotiateDescription(Microsoft.Rtc.Signaling.SipDialogContext,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginRenegotiateDescription (dialogContext As SipDialogContext, signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginRenegotiateDescription(Microsoft::Rtc::Signaling::SipDialogContext ^ dialogContext, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginRenegotiateDescription : Microsoft.Rtc.Signaling.SipDialogContext * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginRenegotiateDescription (dialogContext, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -672,6 +688,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginSendMessage (messageType, contentType, body, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -711,6 +728,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginSendMessage (messageType, contentType, body, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -753,6 +771,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendProvisionalResponse(System.Int32,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendProvisionalResponse (responseCode As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendProvisionalResponse(int responseCode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendProvisionalResponse : int * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginSendProvisionalResponse (responseCode, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -792,6 +811,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendProvisionalResponse(System.Int32,Microsoft.Rtc.Signaling.SendProvisionalResponseOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendProvisionalResponse (responseCode As Integer, options As SendProvisionalResponseOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendProvisionalResponse(int responseCode, Microsoft::Rtc::Signaling::SendProvisionalResponseOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendProvisionalResponse : int * Microsoft.Rtc.Signaling.SendProvisionalResponseOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginSendProvisionalResponse (responseCode, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -837,6 +857,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendReliableProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendReliableProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendReliableProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendReliableProvisionalResponse : int * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * bool * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginSendReliableProvisionalResponse (responseCode, signalingHeaders, needEarlyMediaSupport, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -878,6 +899,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginSendReliableProvisionalResponse(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendReliableProvisionalResponse (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendReliableProvisionalResponse(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendReliableProvisionalResponse : int * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * bool * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginSendReliableProvisionalResponse (responseCode, responseText, signalingHeaders, needEarlyMediaSupport, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -921,6 +943,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -950,6 +973,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.BeginTerminate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="signalingSession.BeginTerminate (signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -981,6 +1005,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.CallId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CallId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CallId : string" Usage="Microsoft.Rtc.Signaling.SignalingSession.CallId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1003,6 +1028,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.Connection" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Connection As RealTimeConnection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeConnection ^ Connection { Microsoft::Rtc::Signaling::RealTimeConnection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Connection : Microsoft.Rtc.Signaling.RealTimeConnection" Usage="Microsoft.Rtc.Signaling.SignalingSession.Connection" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1028,6 +1054,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.DesiredSessionTimerInterval" />
       <MemberSignature Language="VB.NET" Value="Public Property DesiredSessionTimerInterval As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DesiredSessionTimerInterval { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.DesiredSessionTimerInterval : int with get, set" Usage="Microsoft.Rtc.Signaling.SignalingSession.DesiredSessionTimerInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1061,6 +1088,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndAccept(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndAccept (result As IAsyncResult) As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndAccept(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAccept : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipMessageData" Usage="signalingSession.EndAccept result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1103,6 +1131,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndEstablish(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndEstablish (result As IAsyncResult) As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndEstablish(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEstablish : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipMessageData" Usage="signalingSession.EndEstablish result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1145,6 +1174,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndParticipate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndParticipate (result As IAsyncResult) As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndParticipate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndParticipate : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipMessageData" Usage="signalingSession.EndParticipate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1196,6 +1226,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.Endpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Endpoint As RealTimeEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeEndpoint ^ Endpoint { Microsoft::Rtc::Signaling::RealTimeEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Endpoint : Microsoft.Rtc.Signaling.RealTimeEndpoint" Usage="Microsoft.Rtc.Signaling.SignalingSession.Endpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1218,6 +1249,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndRefer(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndRefer (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndRefer(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRefer : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.EndRefer result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1259,6 +1291,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndRenegotiateDescription(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndRenegotiateDescription (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndRenegotiateDescription(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndRenegotiateDescription : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.EndRenegotiateDescription result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1306,6 +1339,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndSendMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendMessage (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendMessage : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.EndSendMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1349,6 +1383,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndSendProvisionalResponse(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendProvisionalResponse (result As IAsyncResult) As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ EndSendProvisionalResponse(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendProvisionalResponse : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipMessageData" Usage="signalingSession.EndSendProvisionalResponse result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1394,6 +1429,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndSendReliableProvisionalResponse(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendReliableProvisionalResponse (result As IAsyncResult) As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipRequestData ^ EndSendReliableProvisionalResponse(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendReliableProvisionalResponse : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipRequestData" Usage="signalingSession.EndSendReliableProvisionalResponse result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1430,6 +1466,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="signalingSession.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1455,6 +1492,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.FromTag" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FromTag As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FromTag { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.FromTag : string" Usage="Microsoft.Rtc.Signaling.SignalingSession.FromTag" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1481,6 +1519,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.GetNewEarlyDialog" />
       <MemberSignature Language="VB.NET" Value="Public Function GetNewEarlyDialog () As SipDialogContext" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipDialogContext ^ GetNewEarlyDialog();" />
+      <MemberSignature Language="F#" Value="member this.GetNewEarlyDialog : unit -&gt; Microsoft.Rtc.Signaling.SipDialogContext" Usage="signalingSession.GetNewEarlyDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1514,6 +1553,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.GetTraceCorrelationID" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberSignature Language="F#" Value="member this.GetTraceCorrelationID : unit -&gt; int64" Usage="signalingSession.GetTraceCorrelationID " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1537,6 +1577,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.InvitationAccepted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event InvitationAccepted As EventHandler(Of InvitationAcceptedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::InvitationAcceptedEventArgs ^&gt; ^ InvitationAccepted;" />
+      <MemberSignature Language="F#" Value="member this.InvitationAccepted : EventHandler&lt;Microsoft.Rtc.Signaling.InvitationAcceptedEventArgs&gt; " Usage="member this.InvitationAccepted : System.EventHandler&lt;Microsoft.Rtc.Signaling.InvitationAcceptedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1562,6 +1603,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.InvitationCompleted" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event InvitationCompleted As EventHandler(Of SipRequestReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ InvitationCompleted;" />
+      <MemberSignature Language="F#" Value="member this.InvitationCompleted : EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " Usage="member this.InvitationCompleted : System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1588,6 +1630,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.IsIncoming" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsIncoming As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsIncoming { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsIncoming : bool" Usage="Microsoft.Rtc.Signaling.SignalingSession.IsIncoming" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1610,6 +1653,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.IsSessionTimerSupported" />
       <MemberSignature Language="VB.NET" Value="Public Property IsSessionTimerSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSessionTimerSupported { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsSessionTimerSupported : bool with get, set" Usage="Microsoft.Rtc.Signaling.SignalingSession.IsSessionTimerSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1642,6 +1686,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.LocalParticipant" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalParticipant As SignalingParticipant" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingParticipant ^ LocalParticipant { Microsoft::Rtc::Signaling::SignalingParticipant ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalParticipant : Microsoft.Rtc.Signaling.SignalingParticipant" Usage="Microsoft.Rtc.Signaling.SignalingSession.LocalParticipant" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1666,6 +1711,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.MessageReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event MessageReceived As EventHandler(Of MessageReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::MessageReceivedEventArgs ^&gt; ^ MessageReceived;" />
+      <MemberSignature Language="F#" Value="member this.MessageReceived : EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; " Usage="member this.MessageReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1687,6 +1733,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.MinimumSessionExpiresInterval" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MinimumSessionExpiresInterval As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MinimumSessionExpiresInterval { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.MinimumSessionExpiresInterval : int" Usage="Microsoft.Rtc.Signaling.SignalingSession.MinimumSessionExpiresInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1717,6 +1764,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.OfferAnswerNegotiation" />
       <MemberSignature Language="VB.NET" Value="Public Property OfferAnswerNegotiation As IOfferAnswer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::IOfferAnswer ^ OfferAnswerNegotiation { Microsoft::Rtc::Signaling::IOfferAnswer ^ get(); void set(Microsoft::Rtc::Signaling::IOfferAnswer ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.OfferAnswerNegotiation : Microsoft.Rtc.Signaling.IOfferAnswer with get, set" Usage="Microsoft.Rtc.Signaling.SignalingSession.OfferAnswerNegotiation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1739,6 +1787,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Participate" />
       <MemberSignature Language="VB.NET" Value="Public Function Participate () As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ Participate();" />
+      <MemberSignature Language="F#" Value="member this.Participate : unit -&gt; Microsoft.Rtc.Signaling.SipMessageData" Usage="signalingSession.Participate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1783,6 +1832,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Participate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function Participate (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipMessageData ^ Participate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Participate : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipMessageData" Usage="signalingSession.Participate signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1828,6 +1878,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.ProvisionalResponseReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ProvisionalResponseReceived As EventHandler(Of SipResponseReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipResponseReceivedEventArgs ^&gt; ^ ProvisionalResponseReceived;" />
+      <MemberSignature Language="F#" Value="member this.ProvisionalResponseReceived : EventHandler&lt;Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs&gt; " Usage="member this.ProvisionalResponseReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.SipResponseReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1849,6 +1900,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.Redirecting" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Redirecting As EventHandler(Of RedirectingEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RedirectingEventArgs ^&gt; ^ Redirecting;" />
+      <MemberSignature Language="F#" Value="member this.Redirecting : EventHandler&lt;Microsoft.Rtc.Signaling.RedirectingEventArgs&gt; " Usage="member this.Redirecting : System.EventHandler&lt;Microsoft.Rtc.Signaling.RedirectingEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1869,6 +1921,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Refer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Refer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Refer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus);" />
+      <MemberSignature Language="F#" Value="member this.Refer : Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.ReferStatus -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.Refer (referTarget, referStatus)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1910,6 +1963,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData Refer(class Microsoft.Rtc.Signaling.RealTimeAddress referTarget, class Microsoft.Rtc.Signaling.ReferStatus referStatus, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Refer(Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.ReferStatus,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ Refer(Microsoft::Rtc::Signaling::RealTimeAddress ^ referTarget, Microsoft::Rtc::Signaling::ReferStatus ^ referStatus, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Refer : Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.ReferStatus * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.Refer (referTarget, referStatus, signalingHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1956,6 +2010,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.ReferReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ReferReceived As EventHandler(Of ReferReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::ReferReceivedEventArgs ^&gt; ^ ReferReceived;" />
+      <MemberSignature Language="F#" Value="member this.ReferReceived : EventHandler&lt;Microsoft.Rtc.Signaling.ReferReceivedEventArgs&gt; " Usage="member this.ReferReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.ReferReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1977,6 +2032,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.ReInviteReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ReInviteReceived As EventHandler(Of SipRequestReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ ReInviteReceived;" />
+      <MemberSignature Language="F#" Value="member this.ReInviteReceived : EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " Usage="member this.ReInviteReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2001,6 +2057,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.ReliableProvisionalResponsePolicy" />
       <MemberSignature Language="VB.NET" Value="Public Property ReliableProvisionalResponsePolicy As ExtensionFeatureSupport" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ExtensionFeatureSupport ReliableProvisionalResponsePolicy { Microsoft::Rtc::Signaling::ExtensionFeatureSupport get(); void set(Microsoft::Rtc::Signaling::ExtensionFeatureSupport value); };" />
+      <MemberSignature Language="F#" Value="member this.ReliableProvisionalResponsePolicy : Microsoft.Rtc.Signaling.ExtensionFeatureSupport with get, set" Usage="Microsoft.Rtc.Signaling.SignalingSession.ReliableProvisionalResponsePolicy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2027,6 +2084,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.RemoteParticipant" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteParticipant As SignalingParticipant" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingParticipant ^ RemoteParticipant { Microsoft::Rtc::Signaling::SignalingParticipant ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteParticipant : Microsoft.Rtc.Signaling.SignalingParticipant" Usage="Microsoft.Rtc.Signaling.SignalingSession.RemoteParticipant" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2049,6 +2107,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.RenegotiateDescription" />
       <MemberSignature Language="VB.NET" Value="Public Function RenegotiateDescription () As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ RenegotiateDescription();" />
+      <MemberSignature Language="F#" Value="member this.RenegotiateDescription : unit -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.RenegotiateDescription " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2082,6 +2141,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.RenegotiateDescription(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function RenegotiateDescription (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ RenegotiateDescription(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.RenegotiateDescription : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.RenegotiateDescription signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2116,6 +2176,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.RenegotiationToRefreshNeeded" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RenegotiationToRefreshNeeded As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ RenegotiationToRefreshNeeded;" />
+      <MemberSignature Language="F#" Value="member this.RenegotiationToRefreshNeeded : EventHandler&lt;EventArgs&gt; " Usage="member this.RenegotiationToRefreshNeeded : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2140,6 +2201,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.RequestOrResponseReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RequestOrResponseReceived As EventHandler(Of RequestOrResponseReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RequestOrResponseReceivedEventArgs ^&gt; ^ RequestOrResponseReceived;" />
+      <MemberSignature Language="F#" Value="member this.RequestOrResponseReceived : EventHandler&lt;Microsoft.Rtc.Signaling.RequestOrResponseReceivedEventArgs&gt; " Usage="member this.RequestOrResponseReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.RequestOrResponseReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2167,6 +2229,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.RouteSetStatus" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RouteSetStatus As RouteSetStatus" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RouteSetStatus RouteSetStatus { Microsoft::Rtc::Signaling::RouteSetStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.RouteSetStatus : Microsoft.Rtc.Signaling.RouteSetStatus" Usage="Microsoft.Rtc.Signaling.SignalingSession.RouteSetStatus" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2195,6 +2258,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.RouteSetStatusChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RouteSetStatusChanged As EventHandler(Of RouteSetStatusChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RouteSetStatusChangedEventArgs ^&gt; ^ RouteSetStatusChanged;" />
+      <MemberSignature Language="F#" Value="member this.RouteSetStatusChanged : EventHandler&lt;Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt; " Usage="member this.RouteSetStatusChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2215,6 +2279,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="member this.SendMessage : Microsoft.Rtc.Signaling.MessageType * System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.SendMessage (messageType, contentType, body)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2262,6 +2327,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.SendMessage : Microsoft.Rtc.Signaling.MessageType * System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="signalingSession.SendMessage (messageType, contentType, body, signalingHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2312,6 +2378,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.SendProvisionalResponse : int * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit" Usage="signalingSession.SendProvisionalResponse (responseCode, signalingHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2342,6 +2409,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport);" />
+      <MemberSignature Language="F#" Value="member this.SendProvisionalResponse : int * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * bool -&gt; unit" Usage="signalingSession.SendProvisionalResponse (responseCode, signalingHeaders, needEarlyMediaSupport)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2374,6 +2442,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.SendProvisionalResponse(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader), needEarlyMediaSupport As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, bool needEarlyMediaSupport);" />
+      <MemberSignature Language="F#" Value="member this.SendProvisionalResponse : int * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * bool -&gt; unit" Usage="signalingSession.SendProvisionalResponse (responseCode, responseText, signalingHeaders, needEarlyMediaSupport)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2408,6 +2477,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.SessionTarget" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionTarget As RealTimeAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ SessionTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SessionTarget : Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Signaling.SignalingSession.SessionTarget" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2430,6 +2500,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.SessionTimerInterval" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SessionTimerInterval As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int SessionTimerInterval { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.SessionTimerInterval : int" Usage="Microsoft.Rtc.Signaling.SignalingSession.SessionTimerInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2452,6 +2523,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As SignalingState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingState State { Microsoft::Rtc::Signaling::SignalingState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Signaling.SignalingState" Usage="Microsoft.Rtc.Signaling.SignalingSession.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2474,6 +2546,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of SignalingStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SignalingStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Signaling.SignalingStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.SignalingStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2495,6 +2568,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Terminate" />
       <MemberSignature Language="VB.NET" Value="Public Sub Terminate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate();" />
+      <MemberSignature Language="F#" Value="member this.Terminate : unit -&gt; unit" Usage="signalingSession.Terminate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2525,6 +2599,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.Terminate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub Terminate (signalingHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Terminate : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit" Usage="signalingSession.Terminate signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2558,6 +2633,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SignalingSession.TerminatedByRemote" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TerminatedByRemote As EventHandler(Of SipRequestReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ TerminatedByRemote;" />
+      <MemberSignature Language="F#" Value="member this.TerminatedByRemote : EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " Usage="member this.TerminatedByRemote : System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2590,6 +2666,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRedirection(Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRedirection (redirectAddress As RealTimeAddress)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRedirection(Microsoft::Rtc::Signaling::RealTimeAddress ^ redirectAddress);" />
+      <MemberSignature Language="F#" Value="member this.TerminateWithRedirection : Microsoft.Rtc.Signaling.RealTimeAddress -&gt; unit" Usage="signalingSession.TerminateWithRedirection redirectAddress" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2618,6 +2695,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRedirection(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.RealTimeAddress})" />
       <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRedirection (redirectAddresses As IEnumerable(Of RealTimeAddress))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRedirection(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ redirectAddresses);" />
+      <MemberSignature Language="F#" Value="member this.TerminateWithRedirection : seq&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt; -&gt; unit" Usage="signalingSession.TerminateWithRedirection redirectAddresses" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2646,6 +2724,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRedirection(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.RealTimeAddress})" />
       <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRedirection (responseCode As Integer, redirectAddresses As IEnumerable(Of RealTimeAddress))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRedirection(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt; ^ redirectAddresses);" />
+      <MemberSignature Language="F#" Value="member this.TerminateWithRedirection : int * seq&lt;Microsoft.Rtc.Signaling.RealTimeAddress&gt; -&gt; unit" Usage="signalingSession.TerminateWithRedirection (responseCode, redirectAddresses)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2678,6 +2757,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TerminateWithRejection(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub TerminateWithRejection (responseCode As Integer, responseText As String, signalingHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void TerminateWithRejection(int responseCode, System::String ^ responseText, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.TerminateWithRejection : int * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit" Usage="signalingSession.TerminateWithRejection (responseCode, responseText, signalingHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2711,6 +2791,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SignalingSession.ToTag" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ToTag As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToTag { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ToTag : string" Usage="Microsoft.Rtc.Signaling.SignalingSession.ToTag" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2737,6 +2818,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TryCancelRenegotiateDescription" />
       <MemberSignature Language="VB.NET" Value="Public Function TryCancelRenegotiateDescription () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryCancelRenegotiateDescription();" />
+      <MemberSignature Language="F#" Value="member this.TryCancelRenegotiateDescription : unit -&gt; bool" Usage="signalingSession.TryCancelRenegotiateDescription " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2762,6 +2844,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SignalingSession.TryCancelRenegotiateDescription(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function TryCancelRenegotiateDescription (signalingHeaders As IEnumerable(Of SignalingHeader)) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryCancelRenegotiateDescription(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.TryCancelRenegotiateDescription : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; bool" Usage="signalingSession.TryCancelRenegotiateDescription signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

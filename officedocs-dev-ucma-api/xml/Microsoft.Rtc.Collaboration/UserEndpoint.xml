@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.UserEndpoint" />
   <TypeSignature Language="VB.NET" Value="Public Class UserEndpoint&#xA;Inherits LocalEndpoint" />
   <TypeSignature Language="C++ CLI" Value="public ref class UserEndpoint : Microsoft::Rtc::Collaboration::LocalEndpoint" />
+  <TypeSignature Language="F#" Value="type UserEndpoint = class&#xA;    inherit LocalEndpoint" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpoint.#ctor(Microsoft.Rtc.Collaboration.CollaborationPlatform,Microsoft.Rtc.Collaboration.UserEndpointSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (platform As CollaborationPlatform, settings As UserEndpointSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpoint(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, Microsoft::Rtc::Collaboration::UserEndpointSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.UserEndpoint : Microsoft.Rtc.Collaboration.CollaborationPlatform * Microsoft.Rtc.Collaboration.UserEndpointSettings -&gt; Microsoft.Rtc.Collaboration.UserEndpoint" Usage="new Microsoft.Rtc.Collaboration.UserEndpoint (platform, settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -59,6 +61,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.ContactGroupServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContactGroupServices As ContactGroupServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ContactsGroups::ContactGroupServices ^ ContactGroupServices { Microsoft::Rtc::Collaboration::ContactsGroups::ContactGroupServices ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContactGroupServices : Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.ContactGroupServices" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +84,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.Credential" />
       <MemberSignature Language="VB.NET" Value="Public Property Credential As NetworkCredential" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::NetworkCredential ^ Credential { System::Net::NetworkCredential ^ get(); void set(System::Net::NetworkCredential ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Net.NetworkCredential with get, set" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.Credential" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -107,6 +111,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.OwnerPhoneUri" />
       <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerPhoneUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerPhoneUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerPhoneUri : string" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.OwnerPhoneUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -135,6 +140,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.OwnerUri" />
       <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable ReadOnly Property OwnerUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerUri : string" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.OwnerUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -165,6 +171,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.OwnerVoicemailUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerVoicemailUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerVoicemailUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerVoicemailUri : string" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.OwnerVoicemailUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -195,6 +202,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.PinServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PinServices As UserPinServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::PinManagement::UserPinServices ^ PinServices { Microsoft::Rtc::Collaboration::PinManagement::UserPinServices ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PinServices : Microsoft.Rtc.Collaboration.PinManagement.UserPinServices" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.PinServices" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -217,6 +225,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.PresenceServices" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PresenceServices As UserEndpointPresenceServices" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::UserEndpointPresenceServices ^ PresenceServices { Microsoft::Rtc::Collaboration::UserEndpointPresenceServices ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PresenceServices : Microsoft.Rtc.Collaboration.UserEndpointPresenceServices" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.PresenceServices" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -239,6 +248,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.TelephonyMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TelephonyMode As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TelephonyMode { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TelephonyMode : string" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.TelephonyMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -267,6 +277,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpoint.UmEnabled" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UmEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool UmEnabled { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.UmEnabled : bool" Usage="Microsoft.Rtc.Collaboration.UserEndpoint.UmEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

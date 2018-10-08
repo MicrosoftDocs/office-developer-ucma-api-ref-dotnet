@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ReferNotifier" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ReferNotifier" />
   <TypeSignature Language="C++ CLI" Value="public ref class ReferNotifier abstract" />
+  <TypeSignature Language="F#" Value="type ReferNotifier = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginSetState(valuetype Microsoft.Rtc.Signaling.ReferState referState, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.BeginSetState(Microsoft.Rtc.Signaling.ReferState,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginSetState(Microsoft::Rtc::Signaling::ReferState referState, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginSetState : Microsoft.Rtc.Signaling.ReferState * AsyncCallback * obj -&gt; IAsyncResult" Usage="referNotifier.BeginSetState (referState, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.BeginSetState(System.Int32,System.String,System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginSetState (responseCode As Integer, responseText As String, remainingSipFragment As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginSetState(int responseCode, System::String ^ responseText, System::String ^ remainingSipFragment, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginSetState : int * string * string * AsyncCallback * obj -&gt; IAsyncResult" Usage="referNotifier.BeginSetState (responseCode, responseText, remainingSipFragment, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -97,6 +100,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.EndSetState(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndSetState (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndSetState(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndSetState : IAsyncResult -&gt; unit" Usage="referNotifier.EndSetState result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -137,6 +141,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferNotifier.ReferTarget" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReferTarget As RealTimeAddress" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeAddress ^ ReferTarget { Microsoft::Rtc::Signaling::RealTimeAddress ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReferTarget : Microsoft.Rtc.Signaling.RealTimeAddress" Usage="Microsoft.Rtc.Signaling.ReferNotifier.ReferTarget" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -159,6 +164,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferNotifier.Session" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Session As SignalingSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingSession ^ Session { Microsoft::Rtc::Signaling::SignalingSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Session : Microsoft.Rtc.Signaling.SignalingSession" Usage="Microsoft.Rtc.Signaling.ReferNotifier.Session" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -180,6 +186,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetState(valuetype Microsoft.Rtc.Signaling.ReferState referState) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.SetState(Microsoft.Rtc.Signaling.ReferState)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetState(Microsoft::Rtc::Signaling::ReferState referState);" />
+      <MemberSignature Language="F#" Value="member this.SetState : Microsoft.Rtc.Signaling.ReferState -&gt; unit" Usage="referNotifier.SetState referState" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -210,6 +217,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ReferNotifier.SetState(System.Int32,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetState (responseCode As Integer, responseText As String, remainingSipFragment As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetState(int responseCode, System::String ^ responseText, System::String ^ remainingSipFragment);" />
+      <MemberSignature Language="F#" Value="member this.SetState : int * string * string -&gt; unit" Usage="referNotifier.SetState (responseCode, responseText, remainingSipFragment)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -250,6 +258,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ReferNotifier.State" />
       <MemberSignature Language="VB.NET" Value="Public Property State As ReferState" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::ReferState State {  public:&#xA;Microsoft::Rtc::Signaling::ReferState get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::ReferState value); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Signaling.ReferState with get, set" Usage="Microsoft.Rtc.Signaling.ReferNotifier.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -278,6 +287,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.ReferNotifier.SubscriptionTerminated" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event SubscriptionTerminated As EventHandler(Of SipRequestReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event EventHandler&lt;Microsoft::Rtc::Signaling::SipRequestReceivedEventArgs ^&gt; ^ SubscriptionTerminated;" />
+      <MemberSignature Language="F#" Value="member this.SubscriptionTerminated : EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " Usage="member this.SubscriptionTerminated : System.EventHandler&lt;Microsoft.Rtc.Signaling.SipRequestReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

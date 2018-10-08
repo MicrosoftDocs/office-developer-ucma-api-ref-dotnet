@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics" />
   <TypeSignature Language="VB.NET" Value="Public Class Diagnostics" />
   <TypeSignature Language="C++ CLI" Value="public ref class Diagnostics abstract sealed" />
+  <TypeSignature Language="F#" Value="type Diagnostics = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics.TryGetMsDiagnosticsSignalingHeader(Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility,System.Int32,Microsoft.Rtc.Signaling.SignalingHeader@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryGetMsDiagnosticsSignalingHeader (visibility As DiagnosticsVisibility, diagnosticsCode As Integer, ByRef diagnosticsHeader As SignalingHeader) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryGetMsDiagnosticsSignalingHeader(Microsoft::Rtc::Internal::Collaboration::Utilities::DiagnosticsVisibility visibility, int diagnosticsCode, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::SignalingHeader ^ % diagnosticsHeader);" />
+      <MemberSignature Language="F#" Value="static member TryGetMsDiagnosticsSignalingHeader : Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility * int *  -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics.TryGetMsDiagnosticsSignalingHeader (visibility, diagnosticsCode, diagnosticsHeader)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -34,7 +36,7 @@
       <Parameters>
         <Parameter Name="visibility" Type="Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility" />
         <Parameter Name="diagnosticsCode" Type="System.Int32" />
-        <Parameter Name="diagnosticsHeader" Type="Microsoft.Rtc.Signaling.SignalingHeader&amp;" RefType="out" />
+        <Parameter Name="diagnosticsHeader" Type="Microsoft.Rtc.Signaling.SignalingHeader" RefType="out" />
       </Parameters>
       <Docs>
         <param name="visibility">To be added.</param>
@@ -51,6 +53,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics.TryGetMsDiagnosticsSignalingHeader(Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility,System.Int32,System.String,Microsoft.Rtc.Signaling.SignalingHeader@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryGetMsDiagnosticsSignalingHeader (visibility As DiagnosticsVisibility, diagnosticsCode As Integer, component As String, ByRef diagnosticsHeader As SignalingHeader) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryGetMsDiagnosticsSignalingHeader(Microsoft::Rtc::Internal::Collaboration::Utilities::DiagnosticsVisibility visibility, int diagnosticsCode, System::String ^ component, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::SignalingHeader ^ % diagnosticsHeader);" />
+      <MemberSignature Language="F#" Value="static member TryGetMsDiagnosticsSignalingHeader : Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility * int * string *  -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics.TryGetMsDiagnosticsSignalingHeader (visibility, diagnosticsCode, component, diagnosticsHeader)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -63,7 +66,7 @@
         <Parameter Name="visibility" Type="Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility" />
         <Parameter Name="diagnosticsCode" Type="System.Int32" />
         <Parameter Name="component" Type="System.String" />
-        <Parameter Name="diagnosticsHeader" Type="Microsoft.Rtc.Signaling.SignalingHeader&amp;" RefType="out" />
+        <Parameter Name="diagnosticsHeader" Type="Microsoft.Rtc.Signaling.SignalingHeader" RefType="out" />
       </Parameters>
       <Docs>
         <param name="visibility">To be added.</param>
@@ -81,6 +84,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics.TryGetMsDiagnosticsSignalingHeader(Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility,System.Int32,System.String,System.String,Microsoft.Rtc.Signaling.SignalingHeader@)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function TryGetMsDiagnosticsSignalingHeader (visibility As DiagnosticsVisibility, diagnosticsCode As Integer, component As String, customValue As String, ByRef diagnosticsHeader As SignalingHeader) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool TryGetMsDiagnosticsSignalingHeader(Microsoft::Rtc::Internal::Collaboration::Utilities::DiagnosticsVisibility visibility, int diagnosticsCode, System::String ^ component, System::String ^ customValue, [Runtime::InteropServices::Out] Microsoft::Rtc::Signaling::SignalingHeader ^ % diagnosticsHeader);" />
+      <MemberSignature Language="F#" Value="static member TryGetMsDiagnosticsSignalingHeader : Microsoft.Rtc.Internal.Collaboration.Utilities.DiagnosticsVisibility * int * string * string *  -&gt; bool" Usage="Microsoft.Rtc.Internal.Collaboration.Utilities.Diagnostics.TryGetMsDiagnosticsSignalingHeader (visibility, diagnosticsCode, component, customValue, diagnosticsHeader)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,7 +98,7 @@
         <Parameter Name="diagnosticsCode" Type="System.Int32" />
         <Parameter Name="component" Type="System.String" />
         <Parameter Name="customValue" Type="System.String" />
-        <Parameter Name="diagnosticsHeader" Type="Microsoft.Rtc.Signaling.SignalingHeader&amp;" RefType="out" />
+        <Parameter Name="diagnosticsHeader" Type="Microsoft.Rtc.Signaling.SignalingHeader" RefType="out" />
       </Parameters>
       <Docs>
         <param name="visibility">To be added.</param>

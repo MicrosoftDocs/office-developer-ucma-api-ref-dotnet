@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Call" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class Call" />
   <TypeSignature Language="C++ CLI" Value="public ref class Call abstract" />
+  <TypeSignature Language="F#" Value="type Call = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -56,6 +57,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; Call(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Call : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Collaboration.Call" Usage="new Microsoft.Rtc.Collaboration.Call conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -86,6 +88,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.ActiveMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveMediaTypes As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ ActiveMediaTypes { System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveMediaTypes : System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.Call.ActiveMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -125,6 +128,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.ApplicationContext" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationContext : obj with get, set" Usage="Microsoft.Rtc.Collaboration.Call.ApplicationContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -151,6 +155,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginAccept(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginAccept (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -174,6 +179,9 @@
           <para>The state of the call can change if the remote party decides to cancel the call.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the call is in invalid state to perform this operation.
+            </exception>
         <example>
           <para />
           <para>
@@ -232,9 +240,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">
-            Thrown when the call is in invalid state to perform this operation.
-            </exception>
       </Docs>
     </Member>
     <Member MemberName="BeginAccept">
@@ -243,6 +248,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginAccept(Microsoft.Rtc.Collaboration.CallAcceptOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (options As CallAcceptOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(Microsoft::Rtc::Collaboration::CallAcceptOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : Microsoft.Rtc.Collaboration.CallAcceptOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginAccept (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -280,6 +286,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginEstablish(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginEstablish (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -311,6 +318,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginEstablish(Microsoft.Rtc.Collaboration.CallEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (options As CallEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Collaboration::CallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : Microsoft.Rtc.Collaboration.CallEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginEstablish (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -348,6 +356,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginEstablish(System.String,Microsoft.Rtc.Collaboration.CallEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (destinationUri As String, options As CallEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::CallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : string * Microsoft.Rtc.Collaboration.CallEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginEstablish (destinationUri, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -389,6 +398,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginHandleTermination(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function BeginHandleTermination (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual IAsyncResult ^ BeginHandleTermination(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult&#xA;override this.BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginHandleTermination (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -428,6 +438,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendInfo(class System.Net.Mime.ContentType contentType, unsigned int8[] contentBody, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginSendInfo(System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendInfo(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ contentBody, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendInfo : System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginSendInfo (contentType, contentBody, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -484,6 +495,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginSendMessage (messageType, contentType, body, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -523,6 +535,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginSendReliableProvisionalResponse(System.Int32,System.Boolean,Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Function BeginSendReliableProvisionalResponse (responseCode As Integer, needEarlyMediaSupport As Boolean, options As CallProvisionalResponseOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginSendReliableProvisionalResponse(int responseCode, bool needEarlyMediaSupport, Microsoft::Rtc::Collaboration::CallProvisionalResponseOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendReliableProvisionalResponse : int * bool * Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginSendReliableProvisionalResponse (responseCode, needEarlyMediaSupport, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -579,6 +592,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -607,6 +621,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginTerminate(Microsoft.Rtc.Collaboration.CallTerminateOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (options As CallTerminateOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(Microsoft::Rtc::Collaboration::CallTerminateOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : Microsoft.Rtc.Collaboration.CallTerminateOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginTerminate (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -640,6 +655,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginTerminate(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginTerminate (signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -673,6 +689,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginTransfer(Microsoft.Rtc.Collaboration.Call,Microsoft.Rtc.Collaboration.CallTransferOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Function BeginTransfer (callToReplace As Call, options As CallTransferOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginTransfer(Microsoft::Rtc::Collaboration::Call ^ callToReplace, Microsoft::Rtc::Collaboration::CallTransferOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTransfer : Microsoft.Rtc.Collaboration.Call * Microsoft.Rtc.Collaboration.CallTransferOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginTransfer (callToReplace, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -733,6 +750,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BeginTransfer(System.String,Microsoft.Rtc.Collaboration.CallTransferOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Function BeginTransfer (targetUri As String, options As CallTransferOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; IAsyncResult ^ BeginTransfer(System::String ^ targetUri, Microsoft::Rtc::Collaboration::CallTransferOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTransfer : string * Microsoft.Rtc.Collaboration.CallTransferOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="call.BeginTransfer (targetUri, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -784,6 +802,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BindMediaProvider(class Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider mediaProvider) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.BindMediaProvider(Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void BindMediaProvider(Microsoft::Rtc::Collaboration::ComponentModel::MediaProvider ^ mediaProvider);" />
+      <MemberSignature Language="F#" Value="member this.BindMediaProvider : Microsoft.Rtc.Collaboration.ComponentModel.MediaProvider -&gt; unit" Usage="call.BindMediaProvider mediaProvider" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -818,6 +837,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.CallId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CallId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CallId : string" Usage="Microsoft.Rtc.Collaboration.Call.CallId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -844,6 +864,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.CanBeDeflected" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property CanBeDeflected As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool CanBeDeflected { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanBeDeflected : bool" Usage="Microsoft.Rtc.Collaboration.Call.CanBeDeflected" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -866,6 +887,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.CanHandleTransferReceived" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property CanHandleTransferReceived As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool CanHandleTransferReceived { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanHandleTransferReceived : bool" Usage="Microsoft.Rtc.Collaboration.Call.CanHandleTransferReceived" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -895,6 +917,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.Conversation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As Conversation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ Conversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Conversation : Microsoft.Rtc.Collaboration.Conversation" Usage="Microsoft.Rtc.Collaboration.Call.Conversation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -917,6 +940,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Call.ConversationChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ConversationChanged As EventHandler(Of ConversationChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConversationChangedEventArgs ^&gt; ^ ConversationChanged;" />
+      <MemberSignature Language="F#" Value="member this.ConversationChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationChangedEventArgs&gt; " Usage="member this.ConversationChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConversationChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -945,6 +969,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.Decline" />
       <MemberSignature Language="VB.NET" Value="Public Sub Decline ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline();" />
+      <MemberSignature Language="F#" Value="member this.Decline : unit -&gt; unit" Usage="call.Decline " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -973,6 +998,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.Decline(Microsoft.Rtc.Collaboration.CallDeclineOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Decline (options As CallDeclineOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline(Microsoft::Rtc::Collaboration::CallDeclineOptions ^ options);" />
+      <MemberSignature Language="F#" Value="member this.Decline : Microsoft.Rtc.Collaboration.CallDeclineOptions -&gt; unit" Usage="call.Decline options" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1007,6 +1033,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.DefaultMediaType" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property DefaultMediaType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ DefaultMediaType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultMediaType : string with get, set" Usage="Microsoft.Rtc.Collaboration.Call.DefaultMediaType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1036,6 +1063,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndAccept(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndAccept (result As IAsyncResult) As CallMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::CallMessageData ^ EndAccept(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAccept : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallMessageData" Usage="call.EndAccept result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1084,6 +1112,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndEstablish(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function EndEstablish (result As IAsyncResult) As CallMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Rtc::Collaboration::CallMessageData ^ EndEstablish(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndEstablish : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallMessageData&#xA;override this.EndEstablish : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallMessageData" Usage="call.EndEstablish result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1132,6 +1161,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndHandleTermination(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub EndHandleTermination (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void EndHandleTermination(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndHandleTermination : IAsyncResult -&gt; unit&#xA;override this.EndHandleTermination : IAsyncResult -&gt; unit" Usage="call.EndHandleTermination result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1167,6 +1197,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndSendInfo(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendInfo (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendInfo(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendInfo : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="call.EndSendInfo result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1223,6 +1254,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndSendMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Function EndSendMessage (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendMessage : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="call.EndSendMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1271,6 +1303,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndSendReliableProvisionalResponse(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub EndSendReliableProvisionalResponse (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void EndSendReliableProvisionalResponse(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendReliableProvisionalResponse : IAsyncResult -&gt; unit" Usage="call.EndSendReliableProvisionalResponse result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1315,6 +1348,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="call.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1341,6 +1375,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.EndTransfer(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Function EndTransfer (result As IAsyncResult) As CallMessageData" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; Microsoft::Rtc::Collaboration::CallMessageData ^ EndTransfer(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTransfer : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallMessageData" Usage="call.EndTransfer result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1392,6 +1427,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.Forward(System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub Forward (targetUri As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void Forward(System::String ^ targetUri);" />
+      <MemberSignature Language="F#" Value="member this.Forward : string -&gt; unit" Usage="call.Forward targetUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1431,6 +1467,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.Forward(System.String,Microsoft.Rtc.Collaboration.CallForwardOptions)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub Forward (targetUri As String, forwardOptions As CallForwardOptions)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void Forward(System::String ^ targetUri, Microsoft::Rtc::Collaboration::CallForwardOptions ^ forwardOptions);" />
+      <MemberSignature Language="F#" Value="member this.Forward : string * Microsoft.Rtc.Collaboration.CallForwardOptions -&gt; unit" Usage="call.Forward (targetUri, forwardOptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1476,6 +1513,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.GetActiveMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetActiveMediaTypes () As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetActiveMediaTypes();" />
+      <MemberSignature Language="F#" Value="member this.GetActiveMediaTypes : unit -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="call.GetActiveMediaTypes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1508,6 +1546,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.GetMediaForDialReplaces" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetMediaForDialReplaces () As IEnumerable(Of McuMediaChannel)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::McuMediaChannel ^&gt; ^ GetMediaForDialReplaces();" />
+      <MemberSignature Language="F#" Value="abstract member GetMediaForDialReplaces : unit -&gt; seq&lt;Microsoft.Rtc.Collaboration.McuMediaChannel&gt;&#xA;override this.GetMediaForDialReplaces : unit -&gt; seq&lt;Microsoft.Rtc.Collaboration.McuMediaChannel&gt;" Usage="call.GetMediaForDialReplaces " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1531,6 +1570,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.GetNewEarlyDialog" />
       <MemberSignature Language="VB.NET" Value="Public Function GetNewEarlyDialog () As DialogContext" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::DialogContext ^ GetNewEarlyDialog();" />
+      <MemberSignature Language="F#" Value="member this.GetNewEarlyDialog : unit -&gt; Microsoft.Rtc.Signaling.DialogContext" Usage="call.GetNewEarlyDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1558,6 +1598,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.GetTraceCorrelationID" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberSignature Language="F#" Value="member this.GetTraceCorrelationID : unit -&gt; int64" Usage="call.GetTraceCorrelationID " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1581,6 +1622,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleCallMessageReceived(Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function HandleCallMessageReceived (e As CallMessageReceivedEventArgs) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool HandleCallMessageReceived(Microsoft::Rtc::Collaboration::CallMessageReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleCallMessageReceived : Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs -&gt; bool&#xA;override this.HandleCallMessageReceived : Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs -&gt; bool" Usage="call.HandleCallMessageReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1616,6 +1658,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool HandleFlowConfigurationRequested(class Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow mediaFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleFlowConfigurationRequested(Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract bool HandleFlowConfigurationRequested(Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow ^ mediaFlow);" />
+      <MemberSignature Language="F#" Value="abstract member HandleFlowConfigurationRequested : Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow -&gt; bool" Usage="call.HandleFlowConfigurationRequested mediaFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1642,6 +1685,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleForwardReceived(Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub HandleForwardReceived (e As CallForwardReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void HandleForwardReceived(Microsoft::Rtc::Collaboration::CallForwardReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleForwardReceived : Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs -&gt; unit&#xA;override this.HandleForwardReceived : Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs -&gt; unit" Usage="call.HandleForwardReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1677,6 +1721,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleMessageReceived(Microsoft.Rtc.Signaling.MessageReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function HandleMessageReceived (e As MessageReceivedEventArgs) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual bool HandleMessageReceived(Microsoft::Rtc::Signaling::MessageReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleMessageReceived : Microsoft.Rtc.Signaling.MessageReceivedEventArgs -&gt; bool&#xA;override this.HandleMessageReceived : Microsoft.Rtc.Signaling.MessageReceivedEventArgs -&gt; bool" Usage="call.HandleMessageReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1721,6 +1766,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleStateChange(Microsoft.Rtc.Collaboration.CallStateChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub HandleStateChange (e As CallStateChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void HandleStateChange(Microsoft::Rtc::Collaboration::CallStateChangedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleStateChange : Microsoft.Rtc.Collaboration.CallStateChangedEventArgs -&gt; unit&#xA;override this.HandleStateChange : Microsoft.Rtc.Collaboration.CallStateChangedEventArgs -&gt; unit" Usage="call.HandleStateChange e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1754,6 +1800,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleTransferNotificationReceived(Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub HandleTransferNotificationReceived (e As TransferStateChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void HandleTransferNotificationReceived(Microsoft::Rtc::Collaboration::TransferStateChangedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleTransferNotificationReceived : Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs -&gt; unit" Usage="call.HandleTransferNotificationReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1785,6 +1832,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.HandleTransferReceived(Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub HandleTransferReceived (e As CallTransferReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract void HandleTransferReceived(Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleTransferReceived : Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs -&gt; unit" Usage="call.HandleTransferReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1820,6 +1868,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Call.InfoReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event InfoReceived As EventHandler(Of MessageReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::MessageReceivedEventArgs ^&gt; ^ InfoReceived;" />
+      <MemberSignature Language="F#" Value="member this.InfoReceived : EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; " Usage="member this.InfoReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1856,6 +1905,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.IsEarlyMediaSupported" />
       <MemberSignature Language="VB.NET" Value="Public Property IsEarlyMediaSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:  property bool IsEarlyMediaSupported {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsEarlyMediaSupported : bool with get, set" Usage="Microsoft.Rtc.Collaboration.Call.IsEarlyMediaSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1887,6 +1937,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.IsReplacesSupported" />
       <MemberSignature Language="VB.NET" Value="Public Property IsReplacesSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:  property bool IsReplacesSupported {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsReplacesSupported : bool with get, set" Usage="Microsoft.Rtc.Collaboration.Call.IsReplacesSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1918,6 +1969,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.IsSupportedMediaType(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function IsSupportedMediaType (mediaType As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool IsSupportedMediaType(System::String ^ mediaType);" />
+      <MemberSignature Language="F#" Value="abstract member IsSupportedMediaType : string -&gt; bool&#xA;override this.IsSupportedMediaType : string -&gt; bool" Usage="call.IsSupportedMediaType mediaType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1946,6 +1998,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.IsThirdPartyCallControl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsThirdPartyCallControl As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsThirdPartyCallControl { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsThirdPartyCallControl : bool" Usage="Microsoft.Rtc.Collaboration.Call.IsThirdPartyCallControl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1974,6 +2027,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.IsUsingGeneratedIdentity" />
       <MemberSignature Language="VB.NET" Value="Protected Friend ReadOnly Property IsUsingGeneratedIdentity As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; property bool IsUsingGeneratedIdentity { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsUsingGeneratedIdentity : bool" Usage="Microsoft.Rtc.Collaboration.Call.IsUsingGeneratedIdentity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2001,6 +2055,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.LocalTag" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LocalTag As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ LocalTag { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LocalTag : string" Usage="Microsoft.Rtc.Collaboration.Call.LocalTag" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2028,6 +2083,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.MakeCallback(System.AsyncCallback,System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub MakeCallback (callback As AsyncCallback, result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void MakeCallback(AsyncCallback ^ callback, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.MakeCallback : AsyncCallback * IAsyncResult -&gt; unit" Usage="call.MakeCallback (callback, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2058,6 +2114,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.OriginalDestinationUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalDestinationUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OriginalDestinationUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OriginalDestinationUri : string" Usage="Microsoft.Rtc.Collaboration.Call.OriginalDestinationUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2086,6 +2143,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.ProcessIncomingInviteHeaders(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ProcessIncomingInviteHeaders (headers As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void ProcessIncomingInviteHeaders(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberSignature Language="F#" Value="abstract member ProcessIncomingInviteHeaders : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit&#xA;override this.ProcessIncomingInviteHeaders : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit" Usage="call.ProcessIncomingInviteHeaders headers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2114,6 +2172,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Call.ProvisionalResponseReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ProvisionalResponseReceived As EventHandler(Of CallProvisionalResponseReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::CallProvisionalResponseReceivedEventArgs ^&gt; ^ ProvisionalResponseReceived;" />
+      <MemberSignature Language="F#" Value="member this.ProvisionalResponseReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.CallProvisionalResponseReceivedEventArgs&gt; " Usage="member this.ProvisionalResponseReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.CallProvisionalResponseReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2135,6 +2194,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RaiseEvent(Of TEventArg As EventArgs) (handler As EventHandler(Of TEventArg), sender As Object, e As TEventArg)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename TEventArg&gt;&#xA; where TEventArg : EventArgs void RaiseEvent(EventHandler&lt;TEventArg&gt; ^ handler, System::Object ^ sender, TEventArg e);" />
+      <MemberSignature Language="F#" Value="member this.RaiseEvent : EventHandler&lt;'EventArg (requires 'EventArg :&gt; EventArgs)&gt; * obj * 'EventArg -&gt; unit (requires 'EventArg :&gt; EventArgs)" Usage="call.RaiseEvent (handler, sender, e)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2175,6 +2235,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.RemoteEndpoint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpoint As ParticipantEndpoint" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ RemoteEndpoint { Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteEndpoint : Microsoft.Rtc.Collaboration.ParticipantEndpoint" Usage="Microsoft.Rtc.Collaboration.Call.RemoteEndpoint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2202,6 +2263,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.RemoteEndpointProperties" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteEndpointProperties As CallParticipantEndpointProperties" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CallParticipantEndpointProperties ^ RemoteEndpointProperties { Microsoft::Rtc::Collaboration::CallParticipantEndpointProperties ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteEndpointProperties : Microsoft.Rtc.Collaboration.CallParticipantEndpointProperties" Usage="Microsoft.Rtc.Collaboration.Call.RemoteEndpointProperties" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2230,6 +2292,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Call.RemoteParticipantChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteParticipantChanged As EventHandler(Of RemoteParticipantChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::RemoteParticipantChangedEventArgs ^&gt; ^ RemoteParticipantChanged;" />
+      <MemberSignature Language="F#" Value="member this.RemoteParticipantChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.RemoteParticipantChangedEventArgs&gt; " Usage="member this.RemoteParticipantChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.RemoteParticipantChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2251,6 +2314,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.RemoteTag" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteTag As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ RemoteTag { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteTag : string" Usage="Microsoft.Rtc.Collaboration.Call.RemoteTag" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2278,6 +2342,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.RouteSetStatus" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RouteSetStatus As RouteSetStatus" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RouteSetStatus RouteSetStatus { Microsoft::Rtc::Signaling::RouteSetStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.RouteSetStatus : Microsoft.Rtc.Signaling.RouteSetStatus" Usage="Microsoft.Rtc.Collaboration.Call.RouteSetStatus" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2306,6 +2371,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Call.RouteSetStatusChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RouteSetStatusChanged As EventHandler(Of RouteSetStatusChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::RouteSetStatusChangedEventArgs ^&gt; ^ RouteSetStatusChanged;" />
+      <MemberSignature Language="F#" Value="member this.RouteSetStatusChanged : EventHandler&lt;Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt; " Usage="member this.RouteSetStatusChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.RouteSetStatusChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2327,6 +2393,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.SendProvisionalResponse(System.Int32,Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub SendProvisionalResponse (responseCode As Integer, options As CallProvisionalResponseOptions)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SendProvisionalResponse(int responseCode, Microsoft::Rtc::Collaboration::CallProvisionalResponseOptions ^ options);" />
+      <MemberSignature Language="F#" Value="member this.SendProvisionalResponse : int * Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions -&gt; unit" Usage="call.SendProvisionalResponse (responseCode, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2363,6 +2430,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As CallState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::CallState State { Microsoft::Rtc::Collaboration::CallState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.CallState" Usage="Microsoft.Rtc.Collaboration.Call.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2385,6 +2453,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.Call.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of CallStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::CallStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.CallStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.CallStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2442,6 +2511,7 @@ private void CallStateChanged(object sender, CallStateChangedEventArgs e)
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Call.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.Call.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -2467,6 +2537,7 @@ private void CallStateChanged(object sender, CallStateChangedEventArgs e)
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Call.UnbindMediaProvider" />
       <MemberSignature Language="VB.NET" Value="Public Sub UnbindMediaProvider ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void UnbindMediaProvider();" />
+      <MemberSignature Language="F#" Value="member this.UnbindMediaProvider : unit -&gt; unit" Usage="call.UnbindMediaProvider " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

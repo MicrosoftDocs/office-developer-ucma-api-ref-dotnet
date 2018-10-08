@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint" />
   <TypeSignature Language="VB.NET" Value="Public Interface IMediaEndpoint" />
   <TypeSignature Language="C++ CLI" Value="public interface class IMediaEndpoint" />
+  <TypeSignature Language="F#" Value="type IMediaEndpoint = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -20,6 +21,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginConnectivityChecks(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginConnectivityChecks (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginConnectivityChecks(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginConnectivityChecks : AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginConnectivityChecks (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -46,6 +48,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginGetLocalMediaTransportInfo(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginGetLocalMediaTransportInfo (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetLocalMediaTransportInfo(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginGetLocalMediaTransportInfo : AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginGetLocalMediaTransportInfo (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -72,6 +75,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginGetMediaCryptoKeySet(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginGetMediaCryptoKeySet (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetMediaCryptoKeySet(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginGetMediaCryptoKeySet : AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginGetMediaCryptoKeySet (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -98,6 +102,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginInitialization(System.Collections.Generic.ICollection{Microsoft.Rtc.Internal.Collaboration.MediaRelayToken},System.Boolean,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginInitialization (tokens As ICollection(Of MediaRelayToken), controlling As Boolean, callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginInitialization(System::Collections::Generic::ICollection&lt;Microsoft::Rtc::Internal::Collaboration::MediaRelayToken ^&gt; ^ tokens, bool controlling, AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginInitialization : System.Collections.Generic.ICollection&lt;Microsoft.Rtc.Internal.Collaboration.MediaRelayToken&gt; * bool * AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginInitialization (tokens, controlling, callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -128,6 +133,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginSetRemoteMediaTransportInfo(Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportInfo,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSetRemoteMediaTransportInfo (remoteMediaTransportInfo As MediaTransportInfo, callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSetRemoteMediaTransportInfo(Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportInfo ^ remoteMediaTransportInfo, AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginSetRemoteMediaTransportInfo : Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportInfo * AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginSetRemoteMediaTransportInfo (remoteMediaTransportInfo, callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -156,6 +162,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginSetSrtpCryptoKeys(Microsoft.Rtc.Internal.Collaboration.Media.SdpSrtpCryptoKey,Microsoft.Rtc.Internal.Collaboration.Media.SdpSrtpCryptoKey,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSetSrtpCryptoKeys (localKey As SdpSrtpCryptoKey, remoteKey As SdpSrtpCryptoKey, callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSetSrtpCryptoKeys(Microsoft::Rtc::Internal::Collaboration::Media::SdpSrtpCryptoKey ^ localKey, Microsoft::Rtc::Internal::Collaboration::Media::SdpSrtpCryptoKey ^ remoteKey, AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginSetSrtpCryptoKeys : Microsoft.Rtc.Internal.Collaboration.Media.SdpSrtpCryptoKey * Microsoft.Rtc.Internal.Collaboration.Media.SdpSrtpCryptoKey * AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginSetSrtpCryptoKeys (localKey, remoteKey, callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -186,6 +193,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="iMediaEndpoint.BeginTerminate (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -212,6 +220,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndConnectivityChecks(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndConnectivityChecks (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndConnectivityChecks(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndConnectivityChecks : IAsyncResult -&gt; unit" Usage="iMediaEndpoint.EndConnectivityChecks result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -235,6 +244,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndGetLocalMediaTransportInfo(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndGetLocalMediaTransportInfo (result As IAsyncResult) As MediaTransportInfo" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Internal::Collaboration::Media::MediaTransportInfo ^ EndGetLocalMediaTransportInfo(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndGetLocalMediaTransportInfo : IAsyncResult -&gt; Microsoft.Rtc.Internal.Collaboration.Media.MediaTransportInfo" Usage="iMediaEndpoint.EndGetLocalMediaTransportInfo result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -259,6 +269,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndGetMediaCryptoKeySet(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndGetMediaCryptoKeySet (result As IAsyncResult) As MediaCryptoKeySet" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Internal::Collaboration::Media::MediaCryptoKeySet ^ EndGetMediaCryptoKeySet(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndGetMediaCryptoKeySet : IAsyncResult -&gt; Microsoft.Rtc.Internal.Collaboration.Media.MediaCryptoKeySet" Usage="iMediaEndpoint.EndGetMediaCryptoKeySet result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -283,6 +294,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndInitialization(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndInitialization (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndInitialization(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndInitialization : IAsyncResult -&gt; unit" Usage="iMediaEndpoint.EndInitialization result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -306,6 +318,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndSetRemoteMediaTransportInfo(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSetRemoteMediaTransportInfo (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSetRemoteMediaTransportInfo(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndSetRemoteMediaTransportInfo : IAsyncResult -&gt; unit" Usage="iMediaEndpoint.EndSetRemoteMediaTransportInfo result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -329,6 +342,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndSetSrtpCryptoKeys(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSetSrtpCryptoKeys (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSetSrtpCryptoKeys(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndSetSrtpCryptoKeys : IAsyncResult -&gt; unit" Usage="iMediaEndpoint.EndSetSrtpCryptoKeys result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -352,6 +366,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.IMediaEndpoint.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndTerminate : IAsyncResult -&gt; unit" Usage="iMediaEndpoint.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

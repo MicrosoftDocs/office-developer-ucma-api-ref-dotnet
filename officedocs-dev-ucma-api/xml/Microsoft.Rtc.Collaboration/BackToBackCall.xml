@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.BackToBackCall" />
   <TypeSignature Language="VB.NET" Value="Public Class BackToBackCall" />
   <TypeSignature Language="C++ CLI" Value="public ref class BackToBackCall" />
+  <TypeSignature Language="F#" Value="type BackToBackCall = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -33,6 +34,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.#ctor(Microsoft.Rtc.Collaboration.BackToBackCallSettings,Microsoft.Rtc.Collaboration.BackToBackCallSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (call1Settings As BackToBackCallSettings, call2Settings As BackToBackCallSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; BackToBackCall(Microsoft::Rtc::Collaboration::BackToBackCallSettings ^ call1Settings, Microsoft::Rtc::Collaboration::BackToBackCallSettings ^ call2Settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.BackToBackCall : Microsoft.Rtc.Collaboration.BackToBackCallSettings * Microsoft.Rtc.Collaboration.BackToBackCallSettings -&gt; Microsoft.Rtc.Collaboration.BackToBackCall" Usage="new Microsoft.Rtc.Collaboration.BackToBackCall (call1Settings, call2Settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.BeginEstablish(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : AsyncCallback * obj -&gt; IAsyncResult" Usage="backToBackCall.BeginEstablish (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="backToBackCall.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.BeginTerminate(Microsoft.Rtc.Collaboration.BackToBackCallTerminateOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (options As BackToBackCallTerminateOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(Microsoft::Rtc::Collaboration::BackToBackCallTerminateOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : Microsoft.Rtc.Collaboration.BackToBackCallTerminateOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="backToBackCall.BeginTerminate (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -157,6 +162,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.Call1" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call1 As Call" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Call ^ Call1 { Microsoft::Rtc::Collaboration::Call ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Call1 : Microsoft.Rtc.Collaboration.Call" Usage="Microsoft.Rtc.Collaboration.BackToBackCall.Call1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.Call2" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Call2 As Call" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Call ^ Call2 { Microsoft::Rtc::Collaboration::Call ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Call2 : Microsoft.Rtc.Collaboration.Call" Usage="Microsoft.Rtc.Collaboration.BackToBackCall.Call2" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -201,6 +208,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.EndEstablish(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEstablish (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEstablish(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEstablish : IAsyncResult -&gt; unit" Usage="backToBackCall.EndEstablish result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -249,6 +257,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="backToBackCall.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -275,6 +284,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.GetPassThroughHeaderNames" />
       <MemberSignature Language="VB.NET" Value="Public Function GetPassThroughHeaderNames () As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetPassThroughHeaderNames();" />
+      <MemberSignature Language="F#" Value="member this.GetPassThroughHeaderNames : unit -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="backToBackCall.GetPassThroughHeaderNames " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -304,6 +314,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.GetTraceCorrelationID" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberSignature Language="F#" Value="member this.GetTraceCorrelationID : unit -&gt; int64" Usage="backToBackCall.GetTraceCorrelationID " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -327,6 +338,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.RemoteMediaFlowState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RemoteMediaFlowState As RemoteMediaFlowState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::RemoteMediaFlowState RemoteMediaFlowState { Microsoft::Rtc::Collaboration::RemoteMediaFlowState get(); };" />
+      <MemberSignature Language="F#" Value="member this.RemoteMediaFlowState : Microsoft.Rtc.Collaboration.RemoteMediaFlowState" Usage="Microsoft.Rtc.Collaboration.BackToBackCall.RemoteMediaFlowState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -359,6 +371,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.BackToBackCall.RemoteMediaFlowStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event RemoteMediaFlowStateChanged As EventHandler(Of RemoteMediaFlowStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::RemoteMediaFlowStateChangedEventArgs ^&gt; ^ RemoteMediaFlowStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.RemoteMediaFlowStateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.RemoteMediaFlowStateChangedEventArgs&gt; " Usage="member this.RemoteMediaFlowStateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.RemoteMediaFlowStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -380,6 +393,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.BackToBackCall.SetPassThroughHeaderNames(System.Collections.Generic.IEnumerable{System.String})" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetPassThroughHeaderNames (passThroughHeaders As IEnumerable(Of String))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetPassThroughHeaderNames(System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ passThroughHeaders);" />
+      <MemberSignature Language="F#" Value="member this.SetPassThroughHeaderNames : seq&lt;string&gt; -&gt; unit" Usage="backToBackCall.SetPassThroughHeaderNames passThroughHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -412,6 +426,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.BackToBackCall.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As BackToBackCallState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::BackToBackCallState State { Microsoft::Rtc::Collaboration::BackToBackCallState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.BackToBackCallState" Usage="Microsoft.Rtc.Collaboration.BackToBackCall.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -434,6 +449,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.BackToBackCall.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of BackToBackCallStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::BackToBackCallStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.BackToBackCallStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.BackToBackCallStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.DiagnosticsInformation" />
   <TypeSignature Language="VB.NET" Value="Public Class DiagnosticsInformation&#xA;Implements ISerializable" />
   <TypeSignature Language="C++ CLI" Value="public ref class DiagnosticsInformation : System::Runtime::Serialization::ISerializable" />
+  <TypeSignature Language="F#" Value="type DiagnosticsInformation = class&#xA;    interface ISerializable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -16,6 +17,11 @@
       <InterfaceName>System.Runtime.Serialization.ISerializable</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Represents diagnostics information.
@@ -29,6 +35,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DiagnosticsInformation.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; DiagnosticsInformation(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.DiagnosticsInformation : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.DiagnosticsInformation" Usage="new Microsoft.Rtc.Signaling.DiagnosticsInformation (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -52,6 +59,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 errorCode, string reason, string description, valuetype Microsoft.Rtc.Signaling.DiagnosticVisibility diagnosticVisibility) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DiagnosticsInformation.#ctor(System.Int32,System.String,System.String,Microsoft.Rtc.Signaling.DiagnosticVisibility)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; DiagnosticsInformation(int errorCode, System::String ^ reason, System::String ^ description, Microsoft::Rtc::Signaling::DiagnosticVisibility diagnosticVisibility);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.DiagnosticsInformation : int * string * string * Microsoft.Rtc.Signaling.DiagnosticVisibility -&gt; Microsoft.Rtc.Signaling.DiagnosticsInformation" Usage="new Microsoft.Rtc.Signaling.DiagnosticsInformation (errorCode, reason, description, diagnosticVisibility)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +89,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DiagnosticsInformation.AddAttribute(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddAttribute (attributeName As String, attributeValue As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddAttribute(System::String ^ attributeName, System::String ^ attributeValue);" />
+      <MemberSignature Language="F#" Value="member this.AddAttribute : string * string -&gt; unit" Usage="diagnosticsInformation.AddAttribute (attributeName, attributeValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -114,6 +123,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DiagnosticsInformation.Description" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Description As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Description : string" Usage="Microsoft.Rtc.Signaling.DiagnosticsInformation.Description" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -136,6 +146,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DiagnosticsInformation.ErrorCode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorCode As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ErrorCode { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : int" Usage="Microsoft.Rtc.Signaling.DiagnosticsInformation.ErrorCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -158,6 +169,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DiagnosticsInformation.GetAttributes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAttributes () As IDictionary(Of String, String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ GetAttributes();" />
+      <MemberSignature Language="F#" Value="member this.GetAttributes : unit -&gt; System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="diagnosticsInformation.GetAttributes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -181,6 +193,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.DiagnosticsInformation.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="abstract member GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit&#xA;override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="diagnosticsInformation.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)</InterfaceMember>
@@ -216,6 +229,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DiagnosticsInformation.Reason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Reason { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Reason : string" Usage="Microsoft.Rtc.Signaling.DiagnosticsInformation.Reason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -238,6 +252,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.DiagnosticsInformation.Visibility" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Visibility As DiagnosticVisibility" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DiagnosticVisibility Visibility { Microsoft::Rtc::Signaling::DiagnosticVisibility get(); };" />
+      <MemberSignature Language="F#" Value="member this.Visibility : Microsoft.Rtc.Signaling.DiagnosticVisibility" Usage="Microsoft.Rtc.Signaling.DiagnosticsInformation.Visibility" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

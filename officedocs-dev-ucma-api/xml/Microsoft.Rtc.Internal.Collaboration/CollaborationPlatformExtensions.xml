@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions" />
   <TypeSignature Language="VB.NET" Value="Public Module CollaborationPlatformExtensions" />
   <TypeSignature Language="C++ CLI" Value="public ref class CollaborationPlatformExtensions abstract sealed" />
+  <TypeSignature Language="F#" Value="type CollaborationPlatformExtensions = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.BeginChangeCertificateTls(Microsoft.Rtc.Collaboration.CollaborationPlatform,System.String,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginChangeCertificateTls (platform As CollaborationPlatform, certificateIssuerName As String, certificateSerialNumber As Byte(), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginChangeCertificateTls(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, System::String ^ certificateIssuerName, cli::array &lt;System::Byte&gt; ^ certificateSerialNumber, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginChangeCertificateTls : Microsoft.Rtc.Collaboration.CollaborationPlatform * string * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.BeginChangeCertificateTls (platform, certificateIssuerName, certificateSerialNumber, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -54,6 +56,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IAsyncResult BeginDrain(class Microsoft.Rtc.Collaboration.CollaborationPlatform collaborationPlatform, class Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformDrainOptions drainOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.BeginDrain(Microsoft.Rtc.Collaboration.CollaborationPlatform,Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformDrainOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginDrain(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ collaborationPlatform, Microsoft::Rtc::Internal::Collaboration::CollaborationPlatformDrainOptions ^ drainOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginDrain : Microsoft.Rtc.Collaboration.CollaborationPlatform * Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformDrainOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.BeginDrain (collaborationPlatform, drainOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -84,6 +87,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.BeginShutdown(Microsoft.Rtc.Collaboration.CollaborationPlatform,System.Boolean,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function BeginShutdown (platform As CollaborationPlatform, terminateEndpoints As Boolean, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static IAsyncResult ^ BeginShutdown(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, bool terminateEndpoints, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="static member BeginShutdown : Microsoft.Rtc.Collaboration.CollaborationPlatform * bool * AsyncCallback * obj -&gt; IAsyncResult" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.BeginShutdown (platform, terminateEndpoints, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -114,6 +118,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.ConfigureAsTestPlatform(Microsoft.Rtc.Collaboration.CollaborationPlatform)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ConfigureAsTestPlatform (platform As CollaborationPlatform)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void ConfigureAsTestPlatform(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform);" />
+      <MemberSignature Language="F#" Value="static member ConfigureAsTestPlatform : Microsoft.Rtc.Collaboration.CollaborationPlatform -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.ConfigureAsTestPlatform platform" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -137,6 +142,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.ConfigurePlatformForTestMessageForwarding(Microsoft.Rtc.Collaboration.CollaborationPlatform,Microsoft.Rtc.Internal.Collaboration.MessageForwardingTestSettings)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ConfigurePlatformForTestMessageForwarding (platform As CollaborationPlatform, settings As MessageForwardingTestSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void ConfigurePlatformForTestMessageForwarding(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, Microsoft::Rtc::Internal::Collaboration::MessageForwardingTestSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="static member ConfigurePlatformForTestMessageForwarding : Microsoft.Rtc.Collaboration.CollaborationPlatform * Microsoft.Rtc.Internal.Collaboration.MessageForwardingTestSettings -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.ConfigurePlatformForTestMessageForwarding (platform, settings)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -162,6 +168,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.EnableClientDraining(Microsoft.Rtc.Collaboration.CollaborationPlatform)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub EnableClientDraining (platform As CollaborationPlatform)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EnableClientDraining(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform);" />
+      <MemberSignature Language="F#" Value="static member EnableClientDraining : Microsoft.Rtc.Collaboration.CollaborationPlatform -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.EnableClientDraining platform" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -185,6 +192,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.EndChangeCertificateTls(Microsoft.Rtc.Collaboration.CollaborationPlatform,System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub EndChangeCertificateTls (platform As CollaborationPlatform, result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EndChangeCertificateTls(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndChangeCertificateTls : Microsoft.Rtc.Collaboration.CollaborationPlatform * IAsyncResult -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.EndChangeCertificateTls (platform, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -209,6 +217,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void EndDrain(class Microsoft.Rtc.Collaboration.CollaborationPlatform collaborationPlatform, class System.IAsyncResult result) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.EndDrain(Microsoft.Rtc.Collaboration.CollaborationPlatform,System.IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void EndDrain(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ collaborationPlatform, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="static member EndDrain : Microsoft.Rtc.Collaboration.CollaborationPlatform * IAsyncResult -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.EndDrain (collaborationPlatform, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -233,6 +242,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterMessageForwarder(class Microsoft.Rtc.Collaboration.CollaborationPlatform platform, class Microsoft.Rtc.Internal.Collaboration.MessageForwarder messageForwarder) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.RegisterMessageForwarder(Microsoft.Rtc.Collaboration.CollaborationPlatform,Microsoft.Rtc.Internal.Collaboration.MessageForwarder)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA;[System::Runtime::CompilerServices::Extension]&#xA; static void RegisterMessageForwarder(Microsoft::Rtc::Collaboration::CollaborationPlatform ^ platform, Microsoft::Rtc::Internal::Collaboration::MessageForwarder ^ messageForwarder);" />
+      <MemberSignature Language="F#" Value="static member RegisterMessageForwarder : Microsoft.Rtc.Collaboration.CollaborationPlatform * Microsoft.Rtc.Internal.Collaboration.MessageForwarder -&gt; unit" Usage="Microsoft.Rtc.Internal.Collaboration.CollaborationPlatformExtensions.RegisterMessageForwarder (platform, messageForwarder)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

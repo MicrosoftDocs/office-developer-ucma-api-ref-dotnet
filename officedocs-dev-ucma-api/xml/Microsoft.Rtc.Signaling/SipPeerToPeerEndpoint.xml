@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" />
   <TypeSignature Language="VB.NET" Value="Public Class SipPeerToPeerEndpoint&#xA;Inherits RealTimeEndpoint" />
   <TypeSignature Language="C++ CLI" Value="public ref class SipPeerToPeerEndpoint : Microsoft::Rtc::Signaling::RealTimeEndpoint" />
+  <TypeSignature Language="F#" Value="type SipPeerToPeerEndpoint = class&#xA;    inherit RealTimeEndpoint" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -69,6 +70,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint ownerUri" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -106,6 +108,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -135,6 +138,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipPeerToPeerEndpointSettings)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager, settings As SipPeerToPeerEndpointSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipPeerToPeerEndpointSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipPeerToPeerEndpointSettings -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager, settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -166,6 +170,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipTransportType)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager, defaultTransportType As SipTransportType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipTransportType defaultTransportType);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipTransportType -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager, defaultTransportType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -200,6 +205,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipTransportType,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager, defaultTransportType As SipTransportType, additionalHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipTransportType defaultTransportType, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeaders);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipTransportType * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager, defaultTransportType, additionalHeaders)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -238,6 +244,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipTransportType,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager, defaultTransportType As SipTransportType, gruu As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipTransportType defaultTransportType, System::String ^ gruu);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipTransportType * string -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager, defaultTransportType, gruu)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -275,6 +282,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager, defaultTransportType As SipTransportType, proxyHost As String, proxyPort As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipTransportType defaultTransportType, System::String ^ proxyHost, int proxyPort);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipTransportType * string * int -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager, defaultTransportType, proxyHost, proxyPort)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -317,6 +325,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, connectionManager As RealTimeServerConnectionManager, defaultTransportType As SipTransportType, proxyHost As String, proxyPort As Integer, additionalHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ ownerUri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipTransportType defaultTransportType, System::String ^ proxyHost, int proxyPort, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ additionalHeaders);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipTransportType * string * int * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (ownerUri, connectionManager, defaultTransportType, proxyHost, proxyPort, additionalHeaders)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -363,6 +372,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.RealTimeServerConnectionManager,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String, connectionManager As RealTimeServerConnectionManager, defaultTransportType As SipTransportType, proxyHost As String, proxyPort As Integer, gruu As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipPeerToPeerEndpoint(System::String ^ uri, Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ connectionManager, Microsoft::Rtc::Signaling::SipTransportType defaultTransportType, System::String ^ proxyHost, int proxyPort, System::String ^ gruu);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint : string * Microsoft.Rtc.Signaling.RealTimeServerConnectionManager * Microsoft.Rtc.Signaling.SipTransportType * string * int * string -&gt; Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint" Usage="new Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint (uri, connectionManager, defaultTransportType, proxyHost, proxyPort, gruu)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -408,6 +418,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(string localIdentityUri, valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.BeginSendMessage(System.String,Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(System::String ^ localIdentityUri, Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginSendMessage : string * Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.RealTimeAddress * System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="sipPeerToPeerEndpoint.BeginSendMessage (localIdentityUri, messageType, sessionTarget, contentType, body, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -454,6 +465,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.ConnectionManager" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConnectionManager As RealTimeServerConnectionManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ ConnectionManager { Microsoft::Rtc::Signaling::RealTimeServerConnectionManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConnectionManager : Microsoft.Rtc.Signaling.RealTimeServerConnectionManager" Usage="Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.ConnectionManager" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -476,6 +488,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.DefaultTransport" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultTransport As SipTransportType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipTransportType DefaultTransport { Microsoft::Rtc::Signaling::SipTransportType get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultTransport : Microsoft.Rtc.Signaling.SipTransportType" Usage="Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.DefaultTransport" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -498,6 +511,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.EndpointUri" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property EndpointUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EndpointUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointUri : string" Usage="Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.EndpointUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -526,6 +540,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.ProxyCertificateSubject" />
       <MemberSignature Language="VB.NET" Value="Public Property ProxyCertificateSubject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ProxyCertificateSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ProxyCertificateSubject : string with get, set" Usage="Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.ProxyCertificateSubject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -553,6 +568,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As EndpointState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::EndpointState State { Microsoft::Rtc::Signaling::EndpointState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Signaling.EndpointState" Usage="Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -575,6 +591,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of EndpointStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::EndpointStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Signaling.EndpointStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Signaling.EndpointStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -596,6 +613,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.Uri" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Uri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Rtc.Signaling.SipPeerToPeerEndpoint.Uri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

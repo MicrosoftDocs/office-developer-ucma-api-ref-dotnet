@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ConferenceMcuNotificationProcessor" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConferenceMcuNotificationProcessor abstract" />
+  <TypeSignature Language="F#" Value="type ConferenceMcuNotificationProcessor = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.ConferenceSession conferenceSession) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.#ctor(Microsoft.Rtc.Collaboration.ConferenceSession)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; ConferenceMcuNotificationProcessor(Microsoft::Rtc::Collaboration::ConferenceSession ^ conferenceSession);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor : Microsoft.Rtc.Collaboration.ConferenceSession -&gt; Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor" Usage="new Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor conferenceSession" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -42,6 +44,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleGetMcuProperties(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleGetMcuProperties (body As Byte()) As PropertyMergeInformation(Of McuSessionProperties)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ HandleGetMcuProperties(cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member HandleGetMcuProperties : byte[] -&gt; Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;" Usage="conferenceMcuNotificationProcessor.HandleGetMcuProperties body" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleGetParticipantEndpointProperties(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleGetParticipantEndpointProperties (body As Byte()) As PropertyMergeInformation(Of McuParticipantEndpointProperties)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ HandleGetParticipantEndpointProperties(cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member HandleGetParticipantEndpointProperties : byte[] -&gt; Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;" Usage="conferenceMcuNotificationProcessor.HandleGetParticipantEndpointProperties body" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -90,6 +94,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleMergeMcuProperties(Microsoft.Rtc.Collaboration.McuSessionProperties,System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleMergeMcuProperties (properties As McuSessionProperties, body As Byte()) As PropertyMergeInformation(Of McuSessionProperties)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ HandleMergeMcuProperties(Microsoft::Rtc::Collaboration::McuSessionProperties ^ properties, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member HandleMergeMcuProperties : Microsoft.Rtc.Collaboration.McuSessionProperties * byte[] -&gt; Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt;" Usage="conferenceMcuNotificationProcessor.HandleMergeMcuProperties (properties, body)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +121,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.HandleMergeParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties,System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Protected MustOverride Function HandleMergeParticipantEndpointProperties (properties As McuParticipantEndpointProperties, body As Byte()) As PropertyMergeInformation(Of McuParticipantEndpointProperties)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ HandleMergeParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^ properties, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member HandleMergeParticipantEndpointProperties : Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties * byte[] -&gt; Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;" Usage="conferenceMcuNotificationProcessor.HandleMergeParticipantEndpointProperties (properties, body)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -142,6 +148,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.McuType" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property McuType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ McuType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.McuType : string" Usage="Microsoft.Rtc.Internal.Collaboration.ConferenceMcuNotificationProcessor.McuType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ConversationReplicationHandler" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConversationReplicationHandler abstract" />
+  <TypeSignature Language="F#" Value="type ConversationReplicationHandler = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (replicationKey As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ConversationReplicationHandler(System::String ^ replicationKey);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler : string -&gt; Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler" Usage="new Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler replicationKey" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -42,6 +44,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginReplicateConversationRestorationContext(class Microsoft.Rtc.Internal.Collaboration.RestorationContext restorationContext, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler.BeginReplicateConversationRestorationContext(Microsoft.Rtc.Internal.Collaboration.RestorationContext,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginReplicateConversationRestorationContext(Microsoft::Rtc::Internal::Collaboration::RestorationContext ^ restorationContext, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginReplicateConversationRestorationContext : Microsoft.Rtc.Internal.Collaboration.RestorationContext * AsyncCallback * obj -&gt; IAsyncResult" Usage="conversationReplicationHandler.BeginReplicateConversationRestorationContext (restorationContext, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler.ConversationRestorationPropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ConversationRestorationPropertiesChanged As EventHandler(Of ConversationRestorationPropertiesChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ConversationRestorationPropertiesChangedEventArgs ^&gt; ^ ConversationRestorationPropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.ConversationRestorationPropertiesChanged : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ConversationRestorationPropertiesChangedEventArgs&gt; " Usage="member this.ConversationRestorationPropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ConversationRestorationPropertiesChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler.EndReplicateConversationRestorationContext(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndReplicateConversationRestorationContext (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndReplicateConversationRestorationContext(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndReplicateConversationRestorationContext : IAsyncResult -&gt; unit" Usage="conversationReplicationHandler.EndReplicateConversationRestorationContext result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -112,6 +117,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler.ReplicationKey" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReplicationKey As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ReplicationKey { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReplicationKey : string" Usage="Microsoft.Rtc.Internal.Collaboration.ConversationReplicationHandler.ReplicationKey" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

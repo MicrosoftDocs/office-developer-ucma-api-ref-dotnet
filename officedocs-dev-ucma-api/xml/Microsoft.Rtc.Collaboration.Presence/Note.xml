@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.Note" />
   <TypeSignature Language="VB.NET" Value="Public Class Note&#xA;Inherits PresenceCategory" />
   <TypeSignature Language="C++ CLI" Value="public ref class Note : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <TypeSignature Language="F#" Value="type Note = class&#xA;    inherit PresenceCategory" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -29,6 +30,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Note(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.Note : Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData -&gt; Microsoft.Rtc.Collaboration.Presence.Note" Usage="new Microsoft.Rtc.Collaboration.Presence.Note category" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (personalNoteMessage As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Note(System::String ^ personalNoteMessage);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.Note : string -&gt; Microsoft.Rtc.Collaboration.Presence.Note" Usage="new Microsoft.Rtc.Collaboration.Presence.Note personalNoteMessage" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -76,6 +79,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (outOfOfficeMessage As String, smtpAddress As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Note(System::String ^ outOfOfficeMessage, System::String ^ smtpAddress);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.Note : string * string -&gt; Microsoft.Rtc.Collaboration.Presence.Note" Usage="new Microsoft.Rtc.Collaboration.Presence.Note (outOfOfficeMessage, smtpAddress)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -106,6 +110,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="note.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -129,6 +134,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="note.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -155,6 +161,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.Note.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="note.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -178,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Note.Message" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Message As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Message { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Message : string" Usage="Microsoft.Rtc.Collaboration.Presence.Note.Message" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -200,6 +208,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Note.NoteType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NoteType As NoteType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::NoteType NoteType { Microsoft::Rtc::Collaboration::Presence::NoteType get(); };" />
+      <MemberSignature Language="F#" Value="member this.NoteType : Microsoft.Rtc.Collaboration.Presence.NoteType" Usage="Microsoft.Rtc.Collaboration.Presence.Note.NoteType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -225,6 +234,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.Note.PublishTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublishTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime PublishTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.PublishTime : DateTime" Usage="Microsoft.Rtc.Collaboration.Presence.Note.PublishTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

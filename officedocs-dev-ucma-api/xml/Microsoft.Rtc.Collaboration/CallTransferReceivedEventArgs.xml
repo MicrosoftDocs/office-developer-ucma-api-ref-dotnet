@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class CallTransferReceivedEventArgs&#xA;Inherits EventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class CallTransferReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="F#" Value="type CallTransferReceivedEventArgs = class&#xA;    inherit EventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.#ctor(Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (e As CallTransferReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; CallTransferReceivedEventArgs(Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs : Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs -&gt; Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs" Usage="new Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs e" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.Accept(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function Accept (headers As IEnumerable(Of SignalingHeader)) As Call" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::Call ^ Accept(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberSignature Language="F#" Value="member this.Accept : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Collaboration.Call" Usage="callTransferReceivedEventArgs.Accept headers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -83,6 +86,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.BeginSendTransferNotification(System.Int32,Microsoft.Rtc.Collaboration.CallTransferNotificationOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendTransferNotification (responseCode As Integer, notificationOptions As CallTransferNotificationOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendTransferNotification(int responseCode, Microsoft::Rtc::Collaboration::CallTransferNotificationOptions ^ notificationOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendTransferNotification : int * Microsoft.Rtc.Collaboration.CallTransferNotificationOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="callTransferReceivedEventArgs.BeginSendTransferNotification (responseCode, notificationOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -122,6 +126,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.Decline" />
       <MemberSignature Language="VB.NET" Value="Public Sub Decline ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline();" />
+      <MemberSignature Language="F#" Value="member this.Decline : unit -&gt; unit" Usage="callTransferReceivedEventArgs.Decline " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -146,6 +151,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.DeclineWithResponse(Microsoft.Rtc.Collaboration.CallDeclineOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub DeclineWithResponse (declineOptions As CallDeclineOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeclineWithResponse(Microsoft::Rtc::Collaboration::CallDeclineOptions ^ declineOptions);" />
+      <MemberSignature Language="F#" Value="member this.DeclineWithResponse : Microsoft.Rtc.Collaboration.CallDeclineOptions -&gt; unit" Usage="callTransferReceivedEventArgs.DeclineWithResponse declineOptions" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +185,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.EndSendTransferNotification(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndSendTransferNotification (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndSendTransferNotification(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendTransferNotification : IAsyncResult -&gt; unit" Usage="callTransferReceivedEventArgs.EndSendTransferNotification result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -218,6 +225,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.ImplicitNotificationDisabled" />
       <MemberSignature Language="VB.NET" Value="Public Property ImplicitNotificationDisabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool ImplicitNotificationDisabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ImplicitNotificationDisabled : bool with get, set" Usage="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.ImplicitNotificationDisabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -251,6 +259,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.MessageData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageData As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipRequestData ^ MessageData { Microsoft::Rtc::Signaling::SipRequestData ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MessageData : Microsoft.Rtc.Signaling.SipRequestData" Usage="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.MessageData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -273,6 +282,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.NewConversation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NewConversation As Conversation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ NewConversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NewConversation : Microsoft.Rtc.Collaboration.Conversation" Usage="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.NewConversation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -295,6 +305,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.TransferDestination" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransferDestination As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransferDestination { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TransferDestination : string" Usage="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.TransferDestination" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -317,6 +328,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.TransferredBy" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransferredBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TransferredBy { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TransferredBy : string" Usage="Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs.TransferredBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

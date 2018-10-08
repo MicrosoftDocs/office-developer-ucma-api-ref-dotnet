@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Mobility" />
   <TypeSignature Language="VB.NET" Value="Public Class Mobility&#xA;Inherits PresenceCategory" />
   <TypeSignature Language="C++ CLI" Value="public ref class Mobility : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <TypeSignature Language="F#" Value="type Mobility = class&#xA;    inherit PresenceCategory" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Mobility.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Mobility(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Mobility : Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData -&gt; Microsoft.Rtc.Internal.Collaboration.Mobility" Usage="new Microsoft.Rtc.Internal.Collaboration.Mobility category" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Mobility.#ctor(System.Int64,System.String,System.String,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (instanceId As Long, applicationId As String, applicationData As String, expiryTime As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Mobility(long instanceId, System::String ^ applicationId, System::String ^ applicationData, TimeSpan expiryTime);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Mobility : int64 * string * string * TimeSpan -&gt; Microsoft.Rtc.Internal.Collaboration.Mobility" Usage="new Microsoft.Rtc.Internal.Collaboration.Mobility (instanceId, applicationId, applicationData, expiryTime)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +72,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Mobility.ApplicationData" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationData As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationData { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationData : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Mobility.ApplicationData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Mobility.ApplicationId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationId : string" Usage="Microsoft.Rtc.Internal.Collaboration.Mobility.ApplicationId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -109,6 +114,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Mobility.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="mobility.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -130,6 +136,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Mobility.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="mobility.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +161,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Mobility.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="mobility.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -175,6 +183,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Mobility.InstanceId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InstanceId As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long InstanceId { long get(); };" />
+      <MemberSignature Language="F#" Value="member this.InstanceId : int64" Usage="Microsoft.Rtc.Internal.Collaboration.Mobility.InstanceId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -195,6 +204,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Internal.Collaboration.Mobility.Name" />
       <MemberSignature Language="VB.NET" Value="Public Const Name As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ Name;" />
+      <MemberSignature Language="F#" Value="val mutable Name : string" Usage="Microsoft.Rtc.Internal.Collaboration.Mobility.Name" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -214,6 +224,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Mobility.PublishTime" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PublishTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime PublishTime { DateTime get(); };" />
+      <MemberSignature Language="F#" Value="member this.PublishTime : DateTime" Usage="Microsoft.Rtc.Internal.Collaboration.Mobility.PublishTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -234,6 +245,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Mobility.SetExpiryTime(System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetExpiryTime (expiryTime As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetExpiryTime(TimeSpan expiryTime);" />
+      <MemberSignature Language="F#" Value="member this.SetExpiryTime : TimeSpan -&gt; unit" Usage="mobility.SetExpiryTime expiryTime" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

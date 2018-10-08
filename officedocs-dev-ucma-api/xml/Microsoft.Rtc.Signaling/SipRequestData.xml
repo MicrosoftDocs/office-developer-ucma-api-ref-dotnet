@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.SipRequestData" />
   <TypeSignature Language="VB.NET" Value="Public Class SipRequestData&#xA;Inherits SipMessageData" />
   <TypeSignature Language="C++ CLI" Value="public ref class SipRequestData : Microsoft::Rtc::Signaling::SipMessageData" />
+  <TypeSignature Language="F#" Value="type SipRequestData = class&#xA;    inherit SipMessageData" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -12,6 +13,11 @@
     <BaseTypeName>Microsoft.Rtc.Signaling.SipMessageData</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Captures information in an incoming SIP request. It gives access to the message type
@@ -28,6 +34,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipRequestData.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SipRequestData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.SipRequestData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.SipRequestData" Usage="new Microsoft.Rtc.Signaling.SipRequestData (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -59,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.SipRequestData.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="sipRequestData.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -91,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.SipRequestData.MessageType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MessageType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MessageType : string" Usage="Microsoft.Rtc.Signaling.SipRequestData.MessageType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

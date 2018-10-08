@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.MessageParsingException" />
   <TypeSignature Language="VB.NET" Value="Public Class MessageParsingException&#xA;Inherits RealTimeException" />
   <TypeSignature Language="C++ CLI" Value="public ref class MessageParsingException : Microsoft::Rtc::Signaling::RealTimeException" />
+  <TypeSignature Language="F#" Value="type MessageParsingException = class&#xA;    inherit RealTimeException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -12,6 +13,11 @@
     <BaseTypeName>Microsoft.Rtc.Signaling.RealTimeException</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Defines the exception associated with a parsing of header.
@@ -44,6 +50,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MessageParsingException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.MessageParsingException : string -&gt; Microsoft.Rtc.Signaling.MessageParsingException" Usage="new Microsoft.Rtc.Signaling.MessageParsingException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +74,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; MessageParsingException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.MessageParsingException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Signaling.MessageParsingException" Usage="new Microsoft.Rtc.Signaling.MessageParsingException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +102,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MessageParsingException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.MessageParsingException : string * Exception -&gt; Microsoft.Rtc.Signaling.MessageParsingException" Usage="new Microsoft.Rtc.Signaling.MessageParsingException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -122,6 +131,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.#ctor(System.String,System.Exception,Microsoft.Rtc.Signaling.ParsingFailureReason)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception, errorCause As ParsingFailureReason)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MessageParsingException(System::String ^ message, Exception ^ innerException, Microsoft::Rtc::Signaling::ParsingFailureReason errorCause);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.MessageParsingException : string * Exception * Microsoft.Rtc.Signaling.ParsingFailureReason -&gt; Microsoft.Rtc.Signaling.MessageParsingException" Usage="new Microsoft.Rtc.Signaling.MessageParsingException (message, innerException, errorCause)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +164,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.#ctor(System.String,System.Exception,Microsoft.Rtc.Signaling.ParsingFailureReason,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception, errorCause As ParsingFailureReason, lineNumber As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MessageParsingException(System::String ^ message, Exception ^ innerException, Microsoft::Rtc::Signaling::ParsingFailureReason errorCause, int lineNumber);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.MessageParsingException : string * Exception * Microsoft.Rtc.Signaling.ParsingFailureReason * int -&gt; Microsoft.Rtc.Signaling.MessageParsingException" Usage="new Microsoft.Rtc.Signaling.MessageParsingException (message, innerException, errorCause, lineNumber)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -197,6 +208,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="messageParsingException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -224,6 +236,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageParsingException.LineNumber" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LineNumber As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int LineNumber { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.LineNumber : int" Usage="Microsoft.Rtc.Signaling.MessageParsingException.LineNumber" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -247,6 +260,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.MessageParsingException.Reason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As ParsingFailureReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ParsingFailureReason Reason { Microsoft::Rtc::Signaling::ParsingFailureReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.Reason : Microsoft.Rtc.Signaling.ParsingFailureReason" Usage="Microsoft.Rtc.Signaling.MessageParsingException.Reason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -269,6 +283,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.MessageParsingException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="messageParsingException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

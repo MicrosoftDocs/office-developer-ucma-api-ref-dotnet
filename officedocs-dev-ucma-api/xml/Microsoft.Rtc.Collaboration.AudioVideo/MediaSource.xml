@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaSource" />
   <TypeSignature Language="C++ CLI" Value="public ref class MediaSource abstract" />
+  <TypeSignature Language="F#" Value="type MediaSource = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.BeginPrepareSource(Microsoft.Rtc.Collaboration.AudioVideo.MediaSourceOpenMode,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginPrepareSource (mode As MediaSourceOpenMode, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPrepareSource(Microsoft::Rtc::Collaboration::AudioVideo::MediaSourceOpenMode mode, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginPrepareSource : Microsoft.Rtc.Collaboration.AudioVideo.MediaSourceOpenMode * AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaSource.BeginPrepareSource (mode, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -70,6 +72,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.Close" />
       <MemberSignature Language="VB.NET" Value="Public Sub Close ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Close();" />
+      <MemberSignature Language="F#" Value="member this.Close : unit -&gt; unit" Usage="mediaSource.Close " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -98,6 +101,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.Duration" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Duration As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Duration { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Duration : int" Usage="Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.Duration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.MediaSource.EndPrepareSource(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndPrepareSource (ar As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndPrepareSource(IAsyncResult ^ ar);" />
+      <MemberSignature Language="F#" Value="member this.EndPrepareSource : IAsyncResult -&gt; unit" Usage="mediaSource.EndPrepareSource ar" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

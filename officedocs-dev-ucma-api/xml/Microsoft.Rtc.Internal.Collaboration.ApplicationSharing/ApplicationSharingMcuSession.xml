@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession" />
   <TypeSignature Language="VB.NET" Value="Public Class ApplicationSharingMcuSession&#xA;Inherits McuSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingMcuSession : Microsoft::Rtc::Collaboration::McuSession" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingMcuSession = class&#xA;    inherit McuSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.ApplicationSharingLevel" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationSharingLevel As ApplicationSharingLevel" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingLevel ApplicationSharingLevel { Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingLevel get(); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationSharingLevel : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingLevel" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.ApplicationSharingLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.HandleParticipantEndpointAttendanceChanged(System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}},System.Collections.ObjectModel.Collection{System.Collections.Generic.KeyValuePair{Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties}})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointAttendanceChanged (addedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)), removedEndpoints As Collection(Of KeyValuePair(Of ParticipantEndpoint, McuParticipantEndpointProperties)))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointAttendanceChanged(System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ addedEndpoints, System::Collections::ObjectModel::Collection&lt;System::Collections::Generic::KeyValuePair&lt;Microsoft::Rtc::Collaboration::ParticipantEndpoint ^, Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt;&gt; ^ removedEndpoints);" />
+      <MemberSignature Language="F#" Value="override this.HandleParticipantEndpointAttendanceChanged : System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; * System.Collections.ObjectModel.Collection&lt;System.Collections.Generic.KeyValuePair&lt;Microsoft.Rtc.Collaboration.ParticipantEndpoint, Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt;&gt; -&gt; unit" Usage="applicationSharingMcuSession.HandleParticipantEndpointAttendanceChanged (addedEndpoints, removedEndpoints)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -68,6 +71,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.HandleParticipantEndpointPropertiesChanged(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleParticipantEndpointPropertiesChanged (endpoint As ParticipantEndpoint, pmi As PropertyMergeInformation(Of McuParticipantEndpointProperties))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleParticipantEndpointPropertiesChanged(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::ComponentModel::McuParticipantEndpointProperties ^&gt; ^ pmi);" />
+      <MemberSignature Language="F#" Value="override this.HandleParticipantEndpointPropertiesChanged : Microsoft.Rtc.Collaboration.ParticipantEndpoint * Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.ComponentModel.McuParticipantEndpointProperties&gt; -&gt; unit" Usage="applicationSharingMcuSession.HandleParticipantEndpointPropertiesChanged (endpoint, pmi)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -93,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.HandlePropertiesChanged(Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation{Microsoft.Rtc.Collaboration.McuSessionProperties})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandlePropertiesChanged (pmi As PropertyMergeInformation(Of McuSessionProperties))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandlePropertiesChanged(Microsoft::Rtc::Internal::Collaboration::PropertyMergeInformation&lt;Microsoft::Rtc::Collaboration::McuSessionProperties ^&gt; ^ pmi);" />
+      <MemberSignature Language="F#" Value="override this.HandlePropertiesChanged : Microsoft.Rtc.Internal.Collaboration.PropertyMergeInformation&lt;Microsoft.Rtc.Collaboration.McuSessionProperties&gt; -&gt; unit" Usage="applicationSharingMcuSession.HandlePropertiesChanged pmi" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +121,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.MediaPermissions" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MediaPermissions As ReadOnlyCollection(Of MediaPermission)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^&gt; ^ MediaPermissions { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaPermission ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MediaPermissions : System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaPermission&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.MediaPermissions" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -136,6 +142,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.ParticipantEndpointAttendanceChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointAttendanceChanged As EventHandler(Of ParticipantEndpointAttendanceChangedEventArgs(Of ApplicationSharingMcuParticipantEndpointProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointAttendanceChanged;" />
+      <MemberSignature Language="F#" Value="member this.ParticipantEndpointAttendanceChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties&gt;&gt; " Usage="member this.ParticipantEndpointAttendanceChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointAttendanceChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -155,6 +162,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.ParticipantEndpointPropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ParticipantEndpointPropertiesChanged As EventHandler(Of ParticipantEndpointPropertiesChangedEventArgs(Of ApplicationSharingMcuParticipantEndpointProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingMcuParticipantEndpointProperties ^&gt; ^&gt; ^ ParticipantEndpointPropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.ParticipantEndpointPropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties&gt;&gt; " Usage="member this.ParticipantEndpointPropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ParticipantEndpointPropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -174,6 +182,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.PropertiesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event PropertiesChanged As EventHandler(Of PropertiesChangedEventArgs(Of ApplicationSharingMcuSessionProperties)) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::PropertiesChangedEventArgs&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingMcuSessionProperties ^&gt; ^&gt; ^ PropertiesChanged;" />
+      <MemberSignature Language="F#" Value="member this.PropertiesChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSessionProperties&gt;&gt; " Usage="member this.PropertiesChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.PropertiesChangedEventArgs&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSessionProperties&gt;&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -193,6 +202,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.ResetCore" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ResetCore ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ResetCore();" />
+      <MemberSignature Language="F#" Value="override this.ResetCore : unit -&gt; unit" Usage="applicationSharingMcuSession.ResetCore " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -213,6 +223,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : seq&lt;string&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -233,6 +244,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuSession.TryGetParticipantEndpointProperties(Microsoft.Rtc.Collaboration.ParticipantEndpoint,Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties@)" />
       <MemberSignature Language="VB.NET" Value="Public Function TryGetParticipantEndpointProperties (endpoint As ParticipantEndpoint, ByRef properties As ApplicationSharingMcuParticipantEndpointProperties) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool TryGetParticipantEndpointProperties(Microsoft::Rtc::Collaboration::ParticipantEndpoint ^ endpoint, [Runtime::InteropServices::Out] Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingMcuParticipantEndpointProperties ^ % properties);" />
+      <MemberSignature Language="F#" Value="override this.TryGetParticipantEndpointProperties : Microsoft.Rtc.Collaboration.ParticipantEndpoint *  -&gt; bool" Usage="applicationSharingMcuSession.TryGetParticipantEndpointProperties (endpoint, properties)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -243,7 +255,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="endpoint" Type="Microsoft.Rtc.Collaboration.ParticipantEndpoint" />
-        <Parameter Name="properties" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties&amp;" RefType="out" />
+        <Parameter Name="properties" Type="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingMcuParticipantEndpointProperties" RefType="out" />
       </Parameters>
       <Docs>
         <param name="endpoint">To be added.</param>

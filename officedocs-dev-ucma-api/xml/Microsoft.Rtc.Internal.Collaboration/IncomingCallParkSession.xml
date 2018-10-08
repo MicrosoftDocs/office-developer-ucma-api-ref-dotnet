@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession" />
   <TypeSignature Language="VB.NET" Value="Public Class IncomingCallParkSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class IncomingCallParkSession" />
+  <TypeSignature Language="F#" Value="type IncomingCallParkSession = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.#ctor(Microsoft.Rtc.Signaling.SessionReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (eventArgs As SessionReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IncomingCallParkSession(Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^ eventArgs);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession : Microsoft.Rtc.Signaling.SessionReceivedEventArgs -&gt; Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession" Usage="new Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession eventArgs" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.BeginAccept(System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (orbitNumber As String, parkedCallDialog As String, signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(System::String ^ orbitNumber, System::String ^ parkedCallDialog, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : string * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="incomingCallParkSession.BeginAccept (orbitNumber, parkedCallDialog, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -75,6 +78,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.BeginSendParkNotification(System.String,System.String,Microsoft.Rtc.Internal.Collaboration.CallParkNotificationReason,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginSendParkNotification (version As String, requestId As String, notificationReason As CallParkNotificationReason, notificationTarget As String, signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendParkNotification(System::String ^ version, System::String ^ requestId, Microsoft::Rtc::Internal::Collaboration::CallParkNotificationReason notificationReason, System::String ^ notificationTarget, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendParkNotification : string * string * Microsoft.Rtc.Internal.Collaboration.CallParkNotificationReason * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="incomingCallParkSession.BeginSendParkNotification (version, requestId, notificationReason, notificationTarget, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -111,6 +115,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.CallParkRequestData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CallParkRequestData As CallParkRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::CallParkRequestData ^ CallParkRequestData { Microsoft::Rtc::Internal::Collaboration::CallParkRequestData ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CallParkRequestData : Microsoft.Rtc.Internal.Collaboration.CallParkRequestData" Usage="Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.CallParkRequestData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -131,6 +136,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.EndAccept(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAccept (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAccept(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAccept : IAsyncResult -&gt; unit" Usage="incomingCallParkSession.EndAccept result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +160,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.EndSendParkNotification(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendParkNotification (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendParkNotification(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendParkNotification : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="incomingCallParkSession.EndSendParkNotification result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -178,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.SignalingSession" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignalingSession As SignalingSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingSession ^ SignalingSession { Microsoft::Rtc::Signaling::SignalingSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignalingSession : Microsoft.Rtc.Signaling.SignalingSession" Usage="Microsoft.Rtc.Internal.Collaboration.IncomingCallParkSession.SignalingSession" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

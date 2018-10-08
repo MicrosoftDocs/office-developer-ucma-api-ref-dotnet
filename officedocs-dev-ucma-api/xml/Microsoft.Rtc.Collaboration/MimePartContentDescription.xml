@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.MimePartContentDescription" />
   <TypeSignature Language="VB.NET" Value="Public Class MimePartContentDescription&#xA;Inherits ContentDescription" />
   <TypeSignature Language="C++ CLI" Value="public ref class MimePartContentDescription : Microsoft::Rtc::Signaling::ContentDescription" />
+  <TypeSignature Language="F#" Value="type MimePartContentDescription = class&#xA;    inherit ContentDescription" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -38,6 +39,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.#ctor(System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MimePartContentDescription(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.MimePartContentDescription : System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Collaboration.MimePartContentDescription" Usage="new Microsoft.Rtc.Collaboration.MimePartContentDescription (contentType, body)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.Add(Microsoft.Rtc.Collaboration.MimePartContentDescription)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Add (part As MimePartContentDescription)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Add(Microsoft::Rtc::Collaboration::MimePartContentDescription ^ part);" />
+      <MemberSignature Language="F#" Value="member this.Add : Microsoft.Rtc.Collaboration.MimePartContentDescription -&gt; unit" Usage="mimePartContentDescription.Add part" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.Children" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Children As Collection(Of MimePartContentDescription)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MimePartContentDescription ^&gt; ^ Children { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Collaboration::MimePartContentDescription ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Children : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Collaboration.MimePartContentDescription&gt;" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.Children" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -117,6 +121,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionHeader" />
       <MemberSignature Language="VB.NET" Value="Public Property ContentDispositionHeader As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentDispositionHeader { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); void set(Microsoft::Rtc::Signaling::SignalingHeader ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentDispositionHeader : Microsoft.Rtc.Signaling.SignalingHeader with get, set" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionHeader" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -139,6 +144,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType" />
       <MemberSignature Language="VB.NET" Value="Public Property ContentDispositionType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContentDispositionType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentDispositionType : string with get, set" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -161,6 +167,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Alert" />
       <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Alert As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Alert;" />
+      <MemberSignature Language="F#" Value="val mutable ContentDispositionType_Alert : string" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Alert" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -182,6 +189,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Icon" />
       <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Icon As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Icon;" />
+      <MemberSignature Language="F#" Value="val mutable ContentDispositionType_Icon : string" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Icon" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -203,6 +211,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Inline" />
       <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Inline As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Inline;" />
+      <MemberSignature Language="F#" Value="val mutable ContentDispositionType_Inline : string" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Inline" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -224,6 +233,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Render" />
       <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Render As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Render;" />
+      <MemberSignature Language="F#" Value="val mutable ContentDispositionType_Render : string" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Render" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -245,6 +255,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Session" />
       <MemberSignature Language="VB.NET" Value="Public Const ContentDispositionType_Session As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ ContentDispositionType_Session;" />
+      <MemberSignature Language="F#" Value="val mutable ContentDispositionType_Session : string" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentDispositionType_Session" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -266,6 +277,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentId" />
       <MemberSignature Language="VB.NET" Value="Public Property ContentId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ContentId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentId : string with get, set" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -288,6 +300,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentIdHeader" />
       <MemberSignature Language="VB.NET" Value="Public Property ContentIdHeader As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentIdHeader { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); void set(Microsoft::Rtc::Signaling::SignalingHeader ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentIdHeader : Microsoft.Rtc.Signaling.SignalingHeader with get, set" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentIdHeader" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -310,6 +323,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentTypeHeader" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentTypeHeader As SignalingHeader" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingHeader ^ ContentTypeHeader { Microsoft::Rtc::Signaling::SignalingHeader ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContentTypeHeader : Microsoft.Rtc.Signaling.SignalingHeader" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.ContentTypeHeader" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -332,6 +346,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.IsHandlingRequired" />
       <MemberSignature Language="VB.NET" Value="Public Property IsHandlingRequired As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsHandlingRequired { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsHandlingRequired : bool with get, set" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.IsHandlingRequired" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -354,6 +369,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.Parent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As MimePartContentDescription" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::MimePartContentDescription ^ Parent { Microsoft::Rtc::Collaboration::MimePartContentDescription ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parent : Microsoft.Rtc.Collaboration.MimePartContentDescription" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.Parent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -376,6 +392,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.RecomputeBody" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RecomputeBody ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void RecomputeBody();" />
+      <MemberSignature Language="F#" Value="override this.RecomputeBody : unit -&gt; unit" Usage="mimePartContentDescription.RecomputeBody " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -398,6 +415,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.Remove(Microsoft.Rtc.Collaboration.MimePartContentDescription)" />
       <MemberSignature Language="VB.NET" Value="Public Function Remove (part As MimePartContentDescription) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Remove(Microsoft::Rtc::Collaboration::MimePartContentDescription ^ part);" />
+      <MemberSignature Language="F#" Value="member this.Remove : Microsoft.Rtc.Collaboration.MimePartContentDescription -&gt; bool" Usage="mimePartContentDescription.Remove part" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -425,6 +443,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.MimePartContentDescription.RemoveAt(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveAt (index As Integer) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveAt(int index);" />
+      <MemberSignature Language="F#" Value="member this.RemoveAt : int -&gt; bool" Usage="mimePartContentDescription.RemoveAt index" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -454,6 +473,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.MimePartContentDescription.SignalingHeaders" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SignalingHeaders As IEnumerable(Of SignalingHeader)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ SignalingHeaders { System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignalingHeaders : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" Usage="Microsoft.Rtc.Collaboration.MimePartContentDescription.SignalingHeaders" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

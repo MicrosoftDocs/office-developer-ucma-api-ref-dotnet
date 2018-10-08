@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ConferenceInvitation" />
   <TypeSignature Language="VB.NET" Value="Public Class ConferenceInvitation" />
   <TypeSignature Language="C++ CLI" Value="public ref class ConferenceInvitation" />
+  <TypeSignature Language="F#" Value="type ConferenceInvitation = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -24,6 +25,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceInvitation(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ConferenceInvitation : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Collaboration.ConferenceInvitation" Usage="new Microsoft.Rtc.Collaboration.ConferenceInvitation conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -49,6 +51,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation, class Microsoft.Rtc.Collaboration.ConferenceInvitationSettings settings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.#ctor(Microsoft.Rtc.Collaboration.Conversation,Microsoft.Rtc.Collaboration.ConferenceInvitationSettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ConferenceInvitation(Microsoft::Rtc::Collaboration::Conversation ^ conversation, Microsoft::Rtc::Collaboration::ConferenceInvitationSettings ^ settings);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.ConferenceInvitation : Microsoft.Rtc.Collaboration.Conversation * Microsoft.Rtc.Collaboration.ConferenceInvitationSettings -&gt; Microsoft.Rtc.Collaboration.ConferenceInvitation" Usage="new Microsoft.Rtc.Collaboration.ConferenceInvitation (conversation, settings)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -75,6 +78,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceInvitation.AutoAcceptNeeded" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AutoAcceptNeeded As EventHandler(Of AutoAcceptNeededEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AutoAcceptNeededEventArgs ^&gt; ^ AutoAcceptNeeded;" />
+      <MemberSignature Language="F#" Value="member this.AutoAcceptNeeded : EventHandler&lt;Microsoft.Rtc.Collaboration.AutoAcceptNeededEventArgs&gt; " Usage="member this.AutoAcceptNeeded : System.EventHandler&lt;Microsoft.Rtc.Collaboration.AutoAcceptNeededEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -105,6 +109,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.AvailableMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AvailableMediaTypes As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ AvailableMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AvailableMediaTypes : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.AvailableMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -127,6 +132,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.BeginAccept(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : AsyncCallback * obj -&gt; IAsyncResult" Usage="conferenceInvitation.BeginAccept (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -161,6 +167,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.BeginAccept(Microsoft.Rtc.Collaboration.ConferenceInvitationAcceptOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (options As ConferenceInvitationAcceptOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(Microsoft::Rtc::Collaboration::ConferenceInvitationAcceptOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : Microsoft.Rtc.Collaboration.ConferenceInvitationAcceptOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="conferenceInvitation.BeginAccept (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -197,6 +204,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.BeginDeliver(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDeliver (destinationUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeliver(System::String ^ destinationUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDeliver : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="conferenceInvitation.BeginDeliver (destinationUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -233,6 +241,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.BeginDeliver(System.String,Microsoft.Rtc.Collaboration.ConferenceInvitationDeliverOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDeliver (destinationUri As String, options As ConferenceInvitationDeliverOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeliver(System::String ^ destinationUri, Microsoft::Rtc::Collaboration::ConferenceInvitationDeliverOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDeliver : string * Microsoft.Rtc.Collaboration.ConferenceInvitationDeliverOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="conferenceInvitation.BeginDeliver (destinationUri, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -271,6 +280,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.ConferenceUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConferenceUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ConferenceUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConferenceUri : string" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.ConferenceUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -293,6 +303,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.Conversation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As Conversation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ Conversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Conversation : Microsoft.Rtc.Collaboration.Conversation" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.Conversation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -315,6 +326,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.Decline" />
       <MemberSignature Language="VB.NET" Value="Public Sub Decline ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline();" />
+      <MemberSignature Language="F#" Value="member this.Decline : unit -&gt; unit" Usage="conferenceInvitation.Decline " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -343,6 +355,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.Decline(Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Decline (options As ConferenceInvitationDeclineOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Decline(Microsoft::Rtc::Collaboration::ConferenceInvitationDeclineOptions ^ options);" />
+      <MemberSignature Language="F#" Value="member this.Decline : Microsoft.Rtc.Collaboration.ConferenceInvitationDeclineOptions -&gt; unit" Usage="conferenceInvitation.Decline options" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -385,6 +398,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.DeclineAll" />
       <MemberSignature Language="VB.NET" Value="Public Sub DeclineAll ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeclineAll();" />
+      <MemberSignature Language="F#" Value="member this.DeclineAll : unit -&gt; unit" Usage="conferenceInvitation.DeclineAll " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -413,6 +427,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.DeclineEverywhere" />
       <MemberSignature Language="VB.NET" Value="Public Sub DeclineEverywhere ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DeclineEverywhere();" />
+      <MemberSignature Language="F#" Value="member this.DeclineEverywhere : unit -&gt; unit" Usage="conferenceInvitation.DeclineEverywhere " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -441,6 +456,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.EndAccept(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAccept (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAccept(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAccept : IAsyncResult -&gt; unit" Usage="conferenceInvitation.EndAccept result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -485,6 +501,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.EndDeliver(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndDeliver (result As IAsyncResult) As ConferenceInvitationResponse" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ConferenceInvitationResponse ^ EndDeliver(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDeliver : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.ConferenceInvitationResponse" Usage="conferenceInvitation.EndDeliver result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -533,6 +550,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ConferenceInvitation.GetAvailableMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetAvailableMediaTypes () As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetAvailableMediaTypes();" />
+      <MemberSignature Language="F#" Value="member this.GetAvailableMediaTypes : unit -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="conferenceInvitation.GetAvailableMediaTypes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -565,6 +583,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.IsDelayedAutoAcceptNeeded" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDelayedAutoAcceptNeeded As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDelayedAutoAcceptNeeded { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDelayedAutoAcceptNeeded : bool" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.IsDelayedAutoAcceptNeeded" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -585,6 +604,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.IsImmediateAutoAcceptNeeded" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsImmediateAutoAcceptNeeded As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsImmediateAutoAcceptNeeded { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsImmediateAutoAcceptNeeded : bool" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.IsImmediateAutoAcceptNeeded" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -619,6 +639,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.OriginalDestinationUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OriginalDestinationUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OriginalDestinationUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OriginalDestinationUri : string" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.OriginalDestinationUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -641,6 +662,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.ConferenceInvitation.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As ConferenceInvitationState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::ConferenceInvitationState State { Microsoft::Rtc::Collaboration::ConferenceInvitationState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.ConferenceInvitationState" Usage="Microsoft.Rtc.Collaboration.ConferenceInvitation.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -663,6 +685,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ConferenceInvitation.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of ConferenceInvitationStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ConferenceInvitationStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ConferenceInvitationStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

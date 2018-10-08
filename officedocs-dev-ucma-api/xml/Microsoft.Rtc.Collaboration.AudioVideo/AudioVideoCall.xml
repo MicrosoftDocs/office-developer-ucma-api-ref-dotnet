@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" />
   <TypeSignature Language="VB.NET" Value="Public Class AudioVideoCall&#xA;Inherits Call" />
   <TypeSignature Language="C++ CLI" Value="public ref class AudioVideoCall : Microsoft::Rtc::Collaboration::Call" />
+  <TypeSignature Language="F#" Value="type AudioVideoCall = class&#xA;    inherit Call" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -31,6 +32,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; AudioVideoCall(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall" Usage="new Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -62,6 +64,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.AudioVideoFlowConfigurationRequested" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event AudioVideoFlowConfigurationRequested As EventHandler(Of AudioVideoFlowConfigurationRequestedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlowConfigurationRequestedEventArgs ^&gt; ^ AudioVideoFlowConfigurationRequested;" />
+      <MemberSignature Language="F#" Value="member this.AudioVideoFlowConfigurationRequested : EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowConfigurationRequestedEventArgs&gt; " Usage="member this.AudioVideoFlowConfigurationRequested : System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlowConfigurationRequestedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +124,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.AudioVideoMcuRouting" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoMcuRouting As AudioVideoMcuRouting" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuRouting ^ AudioVideoMcuRouting { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoMcuRouting ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AudioVideoMcuRouting : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoMcuRouting" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.AudioVideoMcuRouting" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +158,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginEstablish(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (options As AudioVideoCallEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginEstablish : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginEstablish (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -200,6 +205,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginEstablish(Microsoft.Rtc.Collaboration.CallOrbit,Microsoft.Rtc.Collaboration.CallEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (orbit As CallOrbit, options As CallEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Collaboration::CallOrbit ^ orbit, Microsoft::Rtc::Collaboration::CallEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginEstablish : Microsoft.Rtc.Collaboration.CallOrbit * Microsoft.Rtc.Collaboration.CallEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginEstablish (orbit, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -244,6 +250,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginEstablishEarlyMedia(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablishEarlyMedia (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablishEarlyMedia(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablishEarlyMedia : AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginEstablishEarlyMedia (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -275,6 +282,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginEstablishEarlyMedia(Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablishEarlyMedia (options As CallProvisionalResponseOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablishEarlyMedia(Microsoft::Rtc::Collaboration::CallProvisionalResponseOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablishEarlyMedia : Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginEstablishEarlyMedia (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -314,6 +322,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginEstablishEarlyMedia(System.Int32,Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablishEarlyMedia (responseCode As Integer, options As CallProvisionalResponseOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablishEarlyMedia(int responseCode, Microsoft::Rtc::Collaboration::CallProvisionalResponseOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablishEarlyMedia : int * Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginEstablishEarlyMedia (responseCode, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -355,6 +364,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginHandleTermination(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function BeginHandleTermination (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override IAsyncResult ^ BeginHandleTermination(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginHandleTermination (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -383,6 +393,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginPark(Microsoft.Rtc.Collaboration.CallParkOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginPark (options As CallParkOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginPark(Microsoft::Rtc::Collaboration::CallParkOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginPark : Microsoft.Rtc.Collaboration.CallParkOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginPark (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -425,6 +436,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.ContentDescription contentDescription, class Microsoft.Rtc.Collaboration.CallSendMessageRequestOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.ContentDescription,Microsoft.Rtc.Collaboration.CallSendMessageRequestOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::ContentDescription ^ contentDescription, Microsoft::Rtc::Collaboration::CallSendMessageRequestOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.ContentDescription * Microsoft.Rtc.Collaboration.CallSendMessageRequestOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginSendMessage (messageType, contentDescription, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -465,6 +477,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginTransfer(Microsoft.Rtc.Collaboration.Call,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTransfer (callToReplace As Call, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTransfer(Microsoft::Rtc::Collaboration::Call ^ callToReplace, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginTransfer : Microsoft.Rtc.Collaboration.Call * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginTransfer (callToReplace, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -519,6 +532,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginTransfer(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTransfer (targetUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTransfer(System::String ^ targetUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginTransfer : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginTransfer (targetUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -559,6 +573,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTransfer(class Microsoft.Rtc.Collaboration.Call callToReplace, class Microsoft.Rtc.Collaboration.CallTransferOptions callTransferOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginTransfer(Microsoft.Rtc.Collaboration.Call,Microsoft.Rtc.Collaboration.CallTransferOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTransfer(Microsoft::Rtc::Collaboration::Call ^ callToReplace, Microsoft::Rtc::Collaboration::CallTransferOptions ^ callTransferOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginTransfer : Microsoft.Rtc.Collaboration.Call * Microsoft.Rtc.Collaboration.CallTransferOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginTransfer (callToReplace, callTransferOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -619,6 +634,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginTransfer(string targetUri, class Microsoft.Rtc.Collaboration.CallTransferOptions callTransferOptions, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.BeginTransfer(System.String,Microsoft.Rtc.Collaboration.CallTransferOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTransfer(System::String ^ targetUri, Microsoft::Rtc::Collaboration::CallTransferOptions ^ callTransferOptions, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginTransfer : string * Microsoft.Rtc.Collaboration.CallTransferOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="audioVideoCall.BeginTransfer (targetUri, callTransferOptions, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -675,6 +691,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.CallMessageReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event CallMessageReceived As EventHandler(Of CallMessageReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::CallMessageReceivedEventArgs ^&gt; ^ CallMessageReceived;" />
+      <MemberSignature Language="F#" Value="member this.CallMessageReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs&gt; " Usage="member this.CallMessageReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -696,6 +713,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.CanBeDeflected" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property CanBeDeflected As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool CanBeDeflected { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanBeDeflected : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.CanBeDeflected" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -719,6 +737,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.CanHandleTransferReceived" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property CanHandleTransferReceived As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property bool CanHandleTransferReceived { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.CanHandleTransferReceived : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.CanHandleTransferReceived" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -751,6 +770,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.DefaultMediaType" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Property DefaultMediaType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ DefaultMediaType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultMediaType : string with get, set" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.DefaultMediaType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -778,6 +798,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.EndEstablishEarlyMedia(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEstablishEarlyMedia (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEstablishEarlyMedia(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEstablishEarlyMedia : IAsyncResult -&gt; unit" Usage="audioVideoCall.EndEstablishEarlyMedia result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -822,6 +843,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.EndHandleTermination(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub EndHandleTermination (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void EndHandleTermination(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndHandleTermination : IAsyncResult -&gt; unit" Usage="audioVideoCall.EndHandleTermination result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -848,6 +870,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.EndPark(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndPark (result As IAsyncResult) As CallParkResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::CallParkResponseData ^ EndPark(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndPark : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallParkResponseData" Usage="audioVideoCall.EndPark result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -899,6 +922,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.EndSendMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendMessage (result As IAsyncResult) As CallMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::CallMessageData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndSendMessage : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallMessageData" Usage="audioVideoCall.EndSendMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -947,6 +971,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.EndTransfer(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndTransfer (result As IAsyncResult) As CallMessageData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::CallMessageData ^ EndTransfer(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="override this.EndTransfer : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.CallMessageData" Usage="audioVideoCall.EndTransfer result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -995,6 +1020,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.Flow" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Flow As AudioVideoFlow" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ Flow { Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Flow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.Flow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1017,6 +1043,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.Forward(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Forward (targetUri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Forward(System::String ^ targetUri);" />
+      <MemberSignature Language="F#" Value="override this.Forward : string -&gt; unit" Usage="audioVideoCall.Forward targetUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1056,6 +1083,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.Forward(System.String,Microsoft.Rtc.Collaboration.CallForwardOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Forward (targetUri As String, forwardOptions As CallForwardOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Forward(System::String ^ targetUri, Microsoft::Rtc::Collaboration::CallForwardOptions ^ forwardOptions);" />
+      <MemberSignature Language="F#" Value="override this.Forward : string * Microsoft.Rtc.Collaboration.CallForwardOptions -&gt; unit" Usage="audioVideoCall.Forward (targetUri, forwardOptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1102,6 +1130,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.Forwarded" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event Forwarded As EventHandler(Of CallForwardReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::CallForwardReceivedEventArgs ^&gt; ^ Forwarded;" />
+      <MemberSignature Language="F#" Value="member this.Forwarded : EventHandler&lt;Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs&gt; " Usage="member this.Forwarded : System.EventHandler&lt;Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1123,6 +1152,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.GetMediaForDialReplaces" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetMediaForDialReplaces () As IEnumerable(Of McuMediaChannel)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Collaboration::McuMediaChannel ^&gt; ^ GetMediaForDialReplaces();" />
+      <MemberSignature Language="F#" Value="override this.GetMediaForDialReplaces : unit -&gt; seq&lt;Microsoft.Rtc.Collaboration.McuMediaChannel&gt;" Usage="audioVideoCall.GetMediaForDialReplaces " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1146,6 +1176,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.HandleCallMessageReceived(Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function HandleCallMessageReceived (e As CallMessageReceivedEventArgs) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool HandleCallMessageReceived(Microsoft::Rtc::Collaboration::CallMessageReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.HandleCallMessageReceived : Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs -&gt; bool" Usage="audioVideoCall.HandleCallMessageReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1171,6 +1202,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool HandleFlowConfigurationRequested(class Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow mediaFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.HandleFlowConfigurationRequested(Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool HandleFlowConfigurationRequested(Microsoft::Rtc::Collaboration::ComponentModel::MediaFlow ^ mediaFlow);" />
+      <MemberSignature Language="F#" Value="override this.HandleFlowConfigurationRequested : Microsoft.Rtc.Collaboration.ComponentModel.MediaFlow -&gt; bool" Usage="audioVideoCall.HandleFlowConfigurationRequested mediaFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1197,6 +1229,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.HandleForwardReceived(Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleForwardReceived (e As CallForwardReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleForwardReceived(Microsoft::Rtc::Collaboration::CallForwardReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.HandleForwardReceived : Microsoft.Rtc.Collaboration.CallForwardReceivedEventArgs -&gt; unit" Usage="audioVideoCall.HandleForwardReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1232,6 +1265,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.HandleTransferNotificationReceived(Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleTransferNotificationReceived (e As TransferStateChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleTransferNotificationReceived(Microsoft::Rtc::Collaboration::TransferStateChangedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.HandleTransferNotificationReceived : Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs -&gt; unit" Usage="audioVideoCall.HandleTransferNotificationReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1258,6 +1292,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.HandleTransferReceived(Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub HandleTransferReceived (e As CallTransferReceivedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void HandleTransferReceived(Microsoft::Rtc::Collaboration::CallTransferReceivedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="override this.HandleTransferReceived : Microsoft.Rtc.Collaboration.CallTransferReceivedEventArgs -&gt; unit" Usage="audioVideoCall.HandleTransferReceived e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1288,6 +1323,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.IsUsingGeneratedIdentity" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsUsingGeneratedIdentity As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsUsingGeneratedIdentity { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsUsingGeneratedIdentity : bool" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.IsUsingGeneratedIdentity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1315,6 +1351,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.MediaTroubleshootingDataReported" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event MediaTroubleshootingDataReported As EventHandler(Of MediaTroubleshootingDataReportedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::MediaTroubleshootingDataReportedEventArgs ^&gt; ^ MediaTroubleshootingDataReported;" />
+      <MemberSignature Language="F#" Value="member this.MediaTroubleshootingDataReported : EventHandler&lt;Microsoft.Rtc.Collaboration.MediaTroubleshootingDataReportedEventArgs&gt; " Usage="member this.MediaTroubleshootingDataReported : System.EventHandler&lt;Microsoft.Rtc.Collaboration.MediaTroubleshootingDataReportedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1336,6 +1373,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.ProcessIncomingInviteHeaders(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ProcessIncomingInviteHeaders (headers As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void ProcessIncomingInviteHeaders(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ headers);" />
+      <MemberSignature Language="F#" Value="override this.ProcessIncomingInviteHeaders : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit" Usage="audioVideoCall.ProcessIncomingInviteHeaders headers" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1361,6 +1399,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.SendProvisionalResponse(System.Int32,Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SendProvisionalResponse (responseCode As Integer, options As CallProvisionalResponseOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendProvisionalResponse(int responseCode, Microsoft::Rtc::Collaboration::CallProvisionalResponseOptions ^ options);" />
+      <MemberSignature Language="F#" Value="override this.SendProvisionalResponse : int * Microsoft.Rtc.Collaboration.CallProvisionalResponseOptions -&gt; unit" Usage="audioVideoCall.SendProvisionalResponse (responseCode, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1397,6 +1436,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1419,6 +1459,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.TransferReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TransferReceived As EventHandler(Of AudioVideoCallTransferReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoCallTransferReceivedEventArgs ^&gt; ^ TransferReceived;" />
+      <MemberSignature Language="F#" Value="member this.TransferReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallTransferReceivedEventArgs&gt; " Usage="member this.TransferReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCallTransferReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1440,6 +1481,7 @@ private void FlowConfigurationRequested(
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoCall.TransferStateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event TransferStateChanged As EventHandler(Of TransferStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::TransferStateChangedEventArgs ^&gt; ^ TransferStateChanged;" />
+      <MemberSignature Language="F#" Value="member this.TransferStateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs&gt; " Usage="member this.TransferStateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.TransferStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

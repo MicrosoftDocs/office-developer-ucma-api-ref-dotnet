@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ShareableResourceFilter" />
   <TypeSignature Language="C++ CLI" Value="public ref class ShareableResourceFilter abstract" />
+  <TypeSignature Language="F#" Value="type ShareableResourceFilter = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.#ctor(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (client As ApplicationSharingClient)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; ShareableResourceFilter(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClient ^ client);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClient -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter" Usage="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter client" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.ActiveFilterType" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property ActiveFilterType As Type" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Type ^ ActiveFilterType { Type ^ get(); void set(Type ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveFilterType : Type with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.ActiveFilterType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -63,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.Cleanup" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Cleanup ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Cleanup();" />
+      <MemberSignature Language="F#" Value="abstract member Cleanup : unit -&gt; unit&#xA;override this.Cleanup : unit -&gt; unit" Usage="shareableResourceFilter.Cleanup " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -83,6 +87,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.GetResources" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetResources () As Collection(Of ShareableResource)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ShareableResource ^&gt; ^ GetResources();" />
+      <MemberSignature Language="F#" Value="abstract member GetResources : unit -&gt; System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResource&gt;" Usage="shareableResourceFilter.GetResources " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -104,6 +109,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.OnResourceFilterChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub OnResourceFilterChanged (args As ResourceFilterEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void OnResourceFilterChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ResourceFilterEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="member this.OnResourceFilterChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs -&gt; unit" Usage="shareableResourceFilter.OnResourceFilterChanged args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -127,6 +133,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.ResourceFilterUpdated" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ResourceFilterUpdated As EventHandler(Of ResourceFilterEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ResourceFilterEventArgs ^&gt; ^ ResourceFilterUpdated;" />
+      <MemberSignature Language="F#" Value="member this.ResourceFilterUpdated : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs&gt; " Usage="member this.ResourceFilterUpdated : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ResourceFilterEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -146,6 +153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ShareableResourceFilter.SetBackgroundColor(System.Byte,System.Byte,System.Byte,System.Byte)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetBackgroundColor (a As Byte, r As Byte, g As Byte, b As Byte)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetBackgroundColor(System::Byte a, System::Byte r, System::Byte g, System::Byte b);" />
+      <MemberSignature Language="F#" Value="abstract member SetBackgroundColor : byte * byte * byte * byte -&gt; unit" Usage="shareableResourceFilter.SetBackgroundColor (a, r, g, b)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

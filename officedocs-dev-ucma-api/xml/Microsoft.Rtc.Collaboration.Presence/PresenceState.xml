@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.Presence.PresenceState" />
   <TypeSignature Language="VB.NET" Value="Public Class PresenceState&#xA;Inherits PresenceCategory" />
   <TypeSignature Language="C++ CLI" Value="public ref class PresenceState : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <TypeSignature Language="F#" Value="type PresenceState = class&#xA;    inherit PresenceCategory" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -33,6 +34,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceState(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.PresenceState : Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="new Microsoft.Rtc.Collaboration.Presence.PresenceState category" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceStateType,System.Int32,Microsoft.Rtc.Collaboration.Presence.PresenceActivity)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (stateType As PresenceStateType, availability As Integer, activity As PresenceActivity)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceState(Microsoft::Rtc::Collaboration::Presence::PresenceStateType stateType, int availability, Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ activity);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.PresenceState : Microsoft.Rtc.Collaboration.Presence.PresenceStateType * int * Microsoft.Rtc.Collaboration.Presence.PresenceActivity -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="new Microsoft.Rtc.Collaboration.Presence.PresenceState (stateType, availability, activity)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -87,6 +90,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 availability, class Microsoft.Rtc.Collaboration.Presence.PresenceActivity activity, valuetype Microsoft.Rtc.Collaboration.Presence.PhoneCallType phoneCallType, string phoneUri) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.#ctor(System.Int32,Microsoft.Rtc.Collaboration.Presence.PresenceActivity,Microsoft.Rtc.Collaboration.Presence.PhoneCallType,System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; PresenceState(int availability, Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ activity, Microsoft::Rtc::Collaboration::Presence::PhoneCallType phoneCallType, System::String ^ phoneUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.Presence.PresenceState : int * Microsoft.Rtc.Collaboration.Presence.PresenceActivity * Microsoft.Rtc.Collaboration.Presence.PhoneCallType * string -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="new Microsoft.Rtc.Collaboration.Presence.PresenceState (availability, activity, phoneCallType, phoneUri)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +120,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.Activity" />
       <MemberSignature Language="VB.NET" Value="Public Property Activity As PresenceActivity" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ Activity { Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ get(); void set(Microsoft::Rtc::Collaboration::Presence::PresenceActivity ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Activity : Microsoft.Rtc.Collaboration.Presence.PresenceActivity with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.Activity" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -138,6 +143,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.Availability" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Availability As PresenceAvailability" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceAvailability Availability { Microsoft::Rtc::Collaboration::Presence::PresenceAvailability get(); };" />
+      <MemberSignature Language="F#" Value="member this.Availability : Microsoft.Rtc.Collaboration.Presence.PresenceAvailability" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.Availability" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -163,6 +169,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.AvailabilityValue" />
       <MemberSignature Language="VB.NET" Value="Public Property AvailabilityValue As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long AvailabilityValue { long get(); void set(long value); };" />
+      <MemberSignature Language="F#" Value="member this.AvailabilityValue : int64 with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.AvailabilityValue" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -185,6 +192,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Collaboration.Presence.PresenceState.AvailabilityValueUnknown" />
       <MemberSignature Language="VB.NET" Value="Public Const AvailabilityValueUnknown As Long  = -1" />
       <MemberSignature Language="C++ CLI" Value="public: long AvailabilityValueUnknown = -1;" />
+      <MemberSignature Language="F#" Value="val mutable AvailabilityValueUnknown : int64" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.AvailabilityValueUnknown" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -207,6 +215,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="presenceState.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -230,6 +239,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="presenceState.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -263,6 +273,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.DeviceType" />
       <MemberSignature Language="VB.NET" Value="Public Property DeviceType As DeviceType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::DeviceType DeviceType { Microsoft::Rtc::Collaboration::Presence::DeviceType get(); void set(Microsoft::Rtc::Collaboration::Presence::DeviceType value); };" />
+      <MemberSignature Language="F#" Value="member this.DeviceType : Microsoft.Rtc.Collaboration.Presence.DeviceType with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.DeviceType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -286,6 +297,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointAway" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EndpointAway As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ EndpointAway { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointAway : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointAway" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -311,6 +323,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointIdle" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EndpointIdle As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ EndpointIdle { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointIdle : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointIdle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -336,6 +349,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointLocation" />
       <MemberSignature Language="VB.NET" Value="Public Property EndpointLocation As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointLocation : string with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -358,6 +372,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointOnline" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property EndpointOnline As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ EndpointOnline { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointOnline : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.EndpointOnline" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -383,6 +398,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="presenceState.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -406,6 +422,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.IsManual" />
       <MemberSignature Language="VB.NET" Value="Public Property IsManual As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsManual { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsManual : bool with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.IsManual" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -433,6 +450,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.LastActive" />
       <MemberSignature Language="VB.NET" Value="Public Property LastActive As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime LastActive { DateTime get(); void set(DateTime value); };" />
+      <MemberSignature Language="F#" Value="member this.LastActive : DateTime with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.LastActive" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -459,6 +477,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.MeetingLocation" />
       <MemberSignature Language="VB.NET" Value="Public Property MeetingLocation As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MeetingLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MeetingLocation : string with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.MeetingLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -482,6 +501,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.MeetingSubject" />
       <MemberSignature Language="VB.NET" Value="Public Property MeetingSubject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MeetingSubject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MeetingSubject : string with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.MeetingSubject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -505,6 +525,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.PersistentOnline" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property PersistentOnline As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ PersistentOnline { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PersistentOnline : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.PersistentOnline" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -530,6 +551,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.PhoneInACall(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function PhoneInACall (phoneUri As String) As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Collaboration::Presence::PresenceState ^ PhoneInACall(System::String ^ phoneUri);" />
+      <MemberSignature Language="F#" Value="static member PhoneInACall : string -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.PhoneInACall phoneUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -562,6 +584,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.PhoneInAConference(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function PhoneInAConference (phoneUri As String) As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Collaboration::Presence::PresenceState ^ PhoneInAConference(System::String ^ phoneUri);" />
+      <MemberSignature Language="F#" Value="static member PhoneInAConference : string -&gt; Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.PhoneInAConference phoneUri" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -594,6 +617,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.Presence.PresenceState.SetExpiryTime(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetExpiryTime (expiryTime As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetExpiryTime(int expiryTime);" />
+      <MemberSignature Language="F#" Value="member this.SetExpiryTime : int -&gt; unit" Usage="presenceState.SetExpiryTime expiryTime" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -624,6 +648,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StartTime" />
       <MemberSignature Language="VB.NET" Value="Public Property StartTime As DateTime" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property DateTime StartTime { DateTime get(); void set(DateTime value); };" />
+      <MemberSignature Language="F#" Value="member this.StartTime : DateTime with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.StartTime" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -646,6 +671,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StateType As PresenceStateType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Presence::PresenceStateType StateType { Microsoft::Rtc::Collaboration::Presence::PresenceStateType get(); };" />
+      <MemberSignature Language="F#" Value="member this.StateType : Microsoft.Rtc.Collaboration.Presence.PresenceStateType" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.StateType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -668,6 +694,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneAbbreviation" />
       <MemberSignature Language="VB.NET" Value="Public Property TimeZoneAbbreviation As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TimeZoneAbbreviation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TimeZoneAbbreviation : string with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneAbbreviation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -695,6 +722,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneBias" />
       <MemberSignature Language="VB.NET" Value="Public Property TimeZoneBias As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property long TimeZoneBias { long get(); void set(long value); };" />
+      <MemberSignature Language="F#" Value="member this.TimeZoneBias : int64 with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneBias" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -721,6 +749,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneName" />
       <MemberSignature Language="VB.NET" Value="Public Property TimeZoneName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ TimeZoneName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.TimeZoneName : string with get, set" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.TimeZoneName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -747,6 +776,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserAvailable" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserAvailable As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserAvailable { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserAvailable : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserAvailable" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -769,6 +799,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserAway" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserAway As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserAway { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserAway : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserAway" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -791,6 +822,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserBeRightBack" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserBeRightBack As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserBeRightBack { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserBeRightBack : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserBeRightBack" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -813,6 +845,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserBusy" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserBusy As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserBusy { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserBusy : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserBusy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -838,6 +871,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserDoNotDisturb" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserDoNotDisturb As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserDoNotDisturb { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserDoNotDisturb : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserDoNotDisturb" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -864,6 +898,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserOffline" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserOffline As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserOffline { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserOffline : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserOffline" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -886,6 +921,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.Presence.PresenceState.UserOffWork" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property UserOffWork As PresenceState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Collaboration::Presence::PresenceState ^ UserOffWork { Microsoft::Rtc::Collaboration::Presence::PresenceState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserOffWork : Microsoft.Rtc.Collaboration.Presence.PresenceState" Usage="Microsoft.Rtc.Collaboration.Presence.PresenceState.UserOffWork" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

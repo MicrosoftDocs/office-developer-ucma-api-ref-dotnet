@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.TimerWheel" />
   <TypeSignature Language="VB.NET" Value="Public Class TimerWheel&#xA;Implements IDisposable" />
   <TypeSignature Language="C++ CLI" Value="public ref class TimerWheel : IDisposable" />
+  <TypeSignature Language="F#" Value="type TimerWheel = class&#xA;    interface IDisposable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -71,6 +72,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.#ctor(System.Int32,System.TimeSpan)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (sectorCount As Integer, sectorSpan As TimeSpan)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; TimerWheel(int sectorCount, TimeSpan sectorSpan);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.TimerWheel : int * TimeSpan -&gt; Microsoft.Rtc.Signaling.TimerWheel" Usage="new Microsoft.Rtc.Signaling.TimerWheel (sectorCount, sectorSpan)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -103,6 +105,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.DefaultSectorCount" />
       <MemberSignature Language="VB.NET" Value="Public Const DefaultSectorCount As Integer  = 512" />
       <MemberSignature Language="C++ CLI" Value="public: int DefaultSectorCount = 512;" />
+      <MemberSignature Language="F#" Value="val mutable DefaultSectorCount : int" Usage="Microsoft.Rtc.Signaling.TimerWheel.DefaultSectorCount" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -125,6 +128,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.DefaultSectorSpan" />
       <MemberSignature Language="VB.NET" Value="Public Const DefaultSectorSpan As Integer  = 1" />
       <MemberSignature Language="C++ CLI" Value="public: int DefaultSectorSpan = 1;" />
+      <MemberSignature Language="F#" Value="val mutable DefaultSectorSpan : int" Usage="Microsoft.Rtc.Signaling.TimerWheel.DefaultSectorSpan" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -147,6 +151,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.Dispose" />
       <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Dispose();" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="timerWheel.Dispose " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
@@ -172,6 +177,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void Dispose(bool disposing);" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="timerWheel.Dispose disposing" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -197,6 +203,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.TimerWheel.Finalize" />
       <MemberSignature Language="VB.NET" Value="Finalize ()" />
       <MemberSignature Language="C++ CLI" Value="!TimerWheel ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="timerWheel.Finalize " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -219,6 +226,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.MaxCurrentCount" />
       <MemberSignature Language="VB.NET" Value="Public Const MaxCurrentCount As Integer  = 255" />
       <MemberSignature Language="C++ CLI" Value="public: int MaxCurrentCount = 255;" />
+      <MemberSignature Language="F#" Value="val mutable MaxCurrentCount : int" Usage="Microsoft.Rtc.Signaling.TimerWheel.MaxCurrentCount" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -241,6 +249,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.MaxSectors" />
       <MemberSignature Language="VB.NET" Value="Public Const MaxSectors As Integer  = 65535" />
       <MemberSignature Language="C++ CLI" Value="public: int MaxSectors = 65535;" />
+      <MemberSignature Language="F#" Value="val mutable MaxSectors : int" Usage="Microsoft.Rtc.Signaling.TimerWheel.MaxSectors" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -263,6 +272,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Signaling.TimerWheel.MaxSpanSeconds" />
       <MemberSignature Language="VB.NET" Value="Public Const MaxSpanSeconds As Integer  = 65535" />
       <MemberSignature Language="C++ CLI" Value="public: int MaxSpanSeconds = 65535;" />
+      <MemberSignature Language="F#" Value="val mutable MaxSpanSeconds : int" Usage="Microsoft.Rtc.Signaling.TimerWheel.MaxSpanSeconds" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

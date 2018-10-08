@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationSharingViewer&#xA;Inherits ApplicationSharingClient" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingViewer abstract : Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClient" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingViewer = class&#xA;    inherit ApplicationSharingClient" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.#ctor(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (flow As ApplicationSharingFlow)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; ApplicationSharingViewer(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlow ^ flow);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer" Usage="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer flow" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.ApplicationSharingSessionPaused" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ApplicationSharingSessionPaused As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ApplicationSharingSessionPaused;" />
+      <MemberSignature Language="F#" Value="member this.ApplicationSharingSessionPaused : EventHandler&lt;EventArgs&gt; " Usage="member this.ApplicationSharingSessionPaused : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -62,6 +65,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.ApplicationSharingSessionResumed" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ApplicationSharingSessionResumed As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;EventArgs ^&gt; ^ ApplicationSharingSessionResumed;" />
+      <MemberSignature Language="F#" Value="member this.ApplicationSharingSessionResumed : EventHandler&lt;EventArgs&gt; " Usage="member this.ApplicationSharingSessionResumed : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +85,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.BeginReleaseControl(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginReleaseControl (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginReleaseControl(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginReleaseControl : AsyncCallback * obj -&gt; IAsyncResult" Usage="applicationSharingViewer.BeginReleaseControl (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -107,6 +112,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.BeginRequestControl(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginRequestControl (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginRequestControl(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginRequestControl : AsyncCallback * obj -&gt; IAsyncResult" Usage="applicationSharingViewer.BeginRequestControl (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -133,6 +139,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.EndReleaseControl(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndReleaseControl (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndReleaseControl(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndReleaseControl : IAsyncResult -&gt; unit" Usage="applicationSharingViewer.EndReleaseControl result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -156,6 +163,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.EndRequestControl(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndRequestControl (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndRequestControl(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndRequestControl : IAsyncResult -&gt; unit" Usage="applicationSharingViewer.EndRequestControl result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +187,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.IsApplicationSharingSessionPaused" />
       <MemberSignature Language="VB.NET" Value="Public Property IsApplicationSharingSessionPaused As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:  property bool IsApplicationSharingSessionPaused {  public:&#xA;bool get(); protected:&#xA; void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsApplicationSharingSessionPaused : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.IsApplicationSharingSessionPaused" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -199,6 +208,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.OnApplicationSharingSessionPaused(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnApplicationSharingSessionPaused (args As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnApplicationSharingSessionPaused(EventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnApplicationSharingSessionPaused : EventArgs -&gt; unit&#xA;override this.OnApplicationSharingSessionPaused : EventArgs -&gt; unit" Usage="applicationSharingViewer.OnApplicationSharingSessionPaused args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -222,6 +232,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.OnApplicationSharingSessionResumed(System.EventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnApplicationSharingSessionResumed (args As EventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnApplicationSharingSessionResumed(EventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnApplicationSharingSessionResumed : EventArgs -&gt; unit&#xA;override this.OnApplicationSharingSessionResumed : EventArgs -&gt; unit" Usage="applicationSharingViewer.OnApplicationSharingSessionResumed args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -245,6 +256,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.OnAttendeeConnected(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnAttendeeConnected (args As AttendeeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnAttendeeConnected(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="override this.OnAttendeeConnected : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit" Usage="applicationSharingViewer.OnAttendeeConnected args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -268,6 +280,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.OnSharedDesktopRegionChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnSharedDesktopRegionChanged (args As DesktopRegionEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnSharedDesktopRegionChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegionEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnSharedDesktopRegionChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs -&gt; unit&#xA;override this.OnSharedDesktopRegionChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs -&gt; unit" Usage="applicationSharingViewer.OnSharedDesktopRegionChanged args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -291,6 +304,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.OnViewableDesktopRegionChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnViewableDesktopRegionChanged (args As DesktopRegionEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnViewableDesktopRegionChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegionEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnViewableDesktopRegionChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs -&gt; unit&#xA;override this.OnViewableDesktopRegionChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs -&gt; unit" Usage="applicationSharingViewer.OnViewableDesktopRegionChanged args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -314,6 +328,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.SharedDesktopRegion" />
       <MemberSignature Language="VB.NET" Value="Public Property SharedDesktopRegion As DesktopRegion" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegion SharedDesktopRegion {  public:&#xA;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegion get(); protected:&#xA; void set(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegion value); };" />
+      <MemberSignature Language="F#" Value="member this.SharedDesktopRegion : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegion with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.SharedDesktopRegion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -334,6 +349,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.SharedDesktopRegionChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SharedDesktopRegionChanged As EventHandler(Of DesktopRegionEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegionEventArgs ^&gt; ^ SharedDesktopRegionChanged;" />
+      <MemberSignature Language="F#" Value="member this.SharedDesktopRegionChanged : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs&gt; " Usage="member this.SharedDesktopRegionChanged : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -353,6 +369,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.SmartSizing" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property SmartSizing As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool SmartSizing { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.SmartSizing : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.SmartSizing" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -373,6 +390,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.StopSession" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopSession ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void StopSession();" />
+      <MemberSignature Language="F#" Value="override this.StopSession : unit -&gt; unit" Usage="applicationSharingViewer.StopSession " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -393,6 +411,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.UIControl" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UIControl As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ UIControl { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UIControl : obj" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.UIControl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -413,6 +432,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.ViewableDesktopRegion" />
       <MemberSignature Language="VB.NET" Value="Public Property ViewableDesktopRegion As DesktopRegion" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegion ViewableDesktopRegion {  public:&#xA;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegion get(); protected:&#xA; void set(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegion value); };" />
+      <MemberSignature Language="F#" Value="member this.ViewableDesktopRegion : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegion with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.ViewableDesktopRegion" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -433,6 +453,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer.ViewableDesktopRegionChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ViewableDesktopRegionChanged As EventHandler(Of DesktopRegionEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::DesktopRegionEventArgs ^&gt; ^ ViewableDesktopRegionChanged;" />
+      <MemberSignature Language="F#" Value="member this.ViewableDesktopRegionChanged : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs&gt; " Usage="member this.ViewableDesktopRegionChanged : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.DesktopRegionEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

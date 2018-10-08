@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeAddress" />
   <TypeSignature Language="VB.NET" Value="Public Class RealTimeAddress&#xA;Implements IEquatable(Of RealTimeAddress)" />
   <TypeSignature Language="C++ CLI" Value="public ref class RealTimeAddress : IEquatable&lt;Microsoft::Rtc::Signaling::RealTimeAddress ^&gt;" />
+  <TypeSignature Language="F#" Value="type RealTimeAddress = class&#xA;    interface IEquatable&lt;RealTimeAddress&gt;" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -29,6 +30,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeAddress(System::String ^ uri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeAddress : string -&gt; Microsoft.Rtc.Signaling.RealTimeAddress" Usage="new Microsoft.Rtc.Signaling.RealTimeAddress uri" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String, endpointId As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeAddress(System::String ^ uri, System::String ^ endpointId);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeAddress : string * string -&gt; Microsoft.Rtc.Signaling.RealTimeAddress" Usage="new Microsoft.Rtc.Signaling.RealTimeAddress (uri, endpointId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -90,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.#ctor(System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (uri As String, defaultDomain As String, phoneContext As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RealTimeAddress(System::String ^ uri, System::String ^ defaultDomain, System::String ^ phoneContext);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeAddress : string * string * string -&gt; Microsoft.Rtc.Signaling.RealTimeAddress" Usage="new Microsoft.Rtc.Signaling.RealTimeAddress (uri, defaultDomain, phoneContext)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -119,6 +123,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.EndpointId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointId : string" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.EndpointId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -143,6 +148,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.Equals(Microsoft.Rtc.Signaling.RealTimeAddress)" />
       <MemberSignature Language="VB.NET" Value="Public Function Equals (other As RealTimeAddress) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool Equals(Microsoft::Rtc::Signaling::RealTimeAddress ^ other);" />
+      <MemberSignature Language="F#" Value="override this.Equals : Microsoft.Rtc.Signaling.RealTimeAddress -&gt; bool" Usage="realTimeAddress.Equals other" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -172,6 +178,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override bool Equals(System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="realTimeAddress.Equals obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -198,6 +205,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override int GetHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="realTimeAddress.GetHashCode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -221,6 +229,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.IsEndpointTarget" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsEndpointTarget As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsEndpointTarget { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsEndpointTarget : bool" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.IsEndpointTarget" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -245,6 +254,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.IsGruu" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsGruu As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsGruu { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsGruu : bool" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.IsGruu" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -267,6 +277,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.IsPhone" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsPhone As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsPhone { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsPhone : bool" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.IsPhone" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -289,6 +300,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.op_Equality(Microsoft.Rtc.Signaling.RealTimeAddress,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (address1 As RealTimeAddress, obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator ==(Microsoft::Rtc::Signaling::RealTimeAddress ^ address1, System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Microsoft.Rtc.Signaling.RealTimeAddress * obj -&gt; bool" Usage="address1 = obj" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -317,6 +329,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.op_Inequality(Microsoft.Rtc.Signaling.RealTimeAddress,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (address1 As RealTimeAddress, obj As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static bool operator !=(Microsoft::Rtc::Signaling::RealTimeAddress ^ address1, System::Object ^ obj);" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Microsoft.Rtc.Signaling.RealTimeAddress * obj -&gt; bool" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.op_Inequality (address1, obj)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -345,6 +358,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.PhoneUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhoneUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ PhoneUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PhoneUri : string" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.PhoneUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -367,6 +381,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeAddress.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="realTimeAddress.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -390,6 +405,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.Uri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Uri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.Uri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -413,6 +429,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeAddress.UserAtHost" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAtHost As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAtHost { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserAtHost : string" Usage="Microsoft.Rtc.Signaling.RealTimeAddress.UserAtHost" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

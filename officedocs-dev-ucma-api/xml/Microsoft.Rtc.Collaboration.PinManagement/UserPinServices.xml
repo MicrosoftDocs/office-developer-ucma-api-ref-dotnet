@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PinManagement.UserPinServices" />
   <TypeSignature Language="VB.NET" Value="Public Class UserPinServices&#xA;Inherits PinServices" />
   <TypeSignature Language="C++ CLI" Value="public ref class UserPinServices : Microsoft::Rtc::Collaboration::PinManagement::PinServices" />
+  <TypeSignature Language="F#" Value="type UserPinServices = class&#xA;    inherit PinServices" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.UserPinServices.BeginUpdatePin(System.String,Microsoft.Rtc.Collaboration.PinManagement.UpdatePinOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginUpdatePin (newPin As String, options As UpdatePinOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdatePin(System::String ^ newPin, Microsoft::Rtc::Collaboration::PinManagement::UpdatePinOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUpdatePin : string * Microsoft.Rtc.Collaboration.PinManagement.UpdatePinOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="userPinServices.BeginUpdatePin (newPin, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.UserPinServices.EndUpdatePin(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndUpdatePin (result As IAsyncResult) As UpdatePinResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::PinManagement::UpdatePinResult ^ EndUpdatePin(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUpdatePin : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.PinManagement.UpdatePinResult" Usage="userPinServices.EndUpdatePin result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

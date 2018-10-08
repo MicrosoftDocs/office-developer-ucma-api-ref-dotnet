@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.UserEndpointSettings" />
   <TypeSignature Language="VB.NET" Value="Public Class UserEndpointSettings&#xA;Inherits LocalEndpointSettings" />
   <TypeSignature Language="C++ CLI" Value="public ref class UserEndpointSettings : Microsoft::Rtc::Collaboration::LocalEndpointSettings" />
+  <TypeSignature Language="F#" Value="type UserEndpointSettings = class&#xA;    inherit LocalEndpointSettings" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.UserEndpointSettings : string -&gt; Microsoft.Rtc.Collaboration.UserEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.UserEndpointSettings ownerUri" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String,Microsoft.Rtc.Signaling.ConnectionContext)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, serverConnectionContext As ConnectionContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri, Microsoft::Rtc::Signaling::ConnectionContext ^ serverConnectionContext);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.UserEndpointSettings : string * Microsoft.Rtc.Signaling.ConnectionContext -&gt; Microsoft.Rtc.Collaboration.UserEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.UserEndpointSettings (ownerUri, serverConnectionContext)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, serverName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri, System::String ^ serverName);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.UserEndpointSettings : string * string -&gt; Microsoft.Rtc.Collaboration.UserEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.UserEndpointSettings (ownerUri, serverName)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -103,6 +107,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.UserEndpointSettings.#ctor(System.String,System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (ownerUri As String, serverName As String, serverPort As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; UserEndpointSettings(System::String ^ ownerUri, System::String ^ serverName, int serverPort);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.UserEndpointSettings : string * string * int -&gt; Microsoft.Rtc.Collaboration.UserEndpointSettings" Usage="new Microsoft.Rtc.Collaboration.UserEndpointSettings (ownerUri, serverName, serverPort)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -131,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" />
       <MemberSignature Language="VB.NET" Value="Public Property AutomaticPresencePublicationEnabled As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool AutomaticPresencePublicationEnabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.AutomaticPresencePublicationEnabled : bool with get, set" Usage="Microsoft.Rtc.Collaboration.UserEndpointSettings.AutomaticPresencePublicationEnabled" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -160,6 +166,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.Credential" />
       <MemberSignature Language="VB.NET" Value="Public Property Credential As NetworkCredential" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::NetworkCredential ^ Credential { System::Net::NetworkCredential ^ get(); void set(System::Net::NetworkCredential ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Credential : System.Net.NetworkCredential with get, set" Usage="Microsoft.Rtc.Collaboration.UserEndpointSettings.Credential" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -185,6 +192,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.EndpointId" />
       <MemberSignature Language="VB.NET" Value="Public Property EndpointId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointId : string with get, set" Usage="Microsoft.Rtc.Collaboration.UserEndpointSettings.EndpointId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -207,6 +215,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.Presence" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Presence As UserPresenceSettings" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::UserPresenceSettings ^ Presence { Microsoft::Rtc::Collaboration::UserPresenceSettings ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Presence : Microsoft.Rtc.Collaboration.UserPresenceSettings" Usage="Microsoft.Rtc.Collaboration.UserEndpointSettings.Presence" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -236,6 +245,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.ServerName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ServerName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ServerName : string" Usage="Microsoft.Rtc.Collaboration.UserEndpointSettings.ServerName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -258,6 +268,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.UserEndpointSettings.ServerPort" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerPort As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ServerPort { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.ServerPort : int" Usage="Microsoft.Rtc.Collaboration.UserEndpointSettings.ServerPort" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

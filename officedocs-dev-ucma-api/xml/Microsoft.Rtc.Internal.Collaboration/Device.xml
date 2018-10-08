@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.Device" />
   <TypeSignature Language="VB.NET" Value="Public Class Device&#xA;Inherits PresenceCategory" />
   <TypeSignature Language="C++ CLI" Value="public ref class Device : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <TypeSignature Language="F#" Value="type Device = class&#xA;    inherit PresenceCategory" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Device(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Device : Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData -&gt; Microsoft.Rtc.Internal.Collaboration.Device" Usage="new Microsoft.Rtc.Internal.Collaboration.Device category" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.#ctor(System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Internal.Collaboration.DeviceCapabilities})" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpointId As String, devices As IEnumerable(Of DeviceCapabilities))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Device(System::String ^ endpointId, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Collaboration::DeviceCapabilities ^&gt; ^ devices);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Device : string * seq&lt;Microsoft.Rtc.Internal.Collaboration.DeviceCapabilities&gt; -&gt; Microsoft.Rtc.Internal.Collaboration.Device" Usage="new Microsoft.Rtc.Internal.Collaboration.Device (endpointId, devices)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -65,6 +68,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.#ctor(System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Internal.Collaboration.DeviceCapabilities},System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (endpointId As String, devices As IEnumerable(Of DeviceCapabilities), machineName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Device(System::String ^ endpointId, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Collaboration::DeviceCapabilities ^&gt; ^ devices, System::String ^ machineName);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.Device : string * seq&lt;Microsoft.Rtc.Internal.Collaboration.DeviceCapabilities&gt; * string -&gt; Microsoft.Rtc.Internal.Collaboration.Device" Usage="new Microsoft.Rtc.Internal.Collaboration.Device (endpointId, devices, machineName)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="device.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -110,6 +115,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="device.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -134,6 +140,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Device.DeviceList" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceList As Collection(Of DeviceCapabilities)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Internal::Collaboration::DeviceCapabilities ^&gt; ^ DeviceList { System::Collections::ObjectModel::Collection&lt;Microsoft::Rtc::Internal::Collaboration::DeviceCapabilities ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DeviceList : System.Collections.ObjectModel.Collection&lt;Microsoft.Rtc.Internal.Collaboration.DeviceCapabilities&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.Device.DeviceList" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +161,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.DuplicateDeviceCategory(Microsoft.Rtc.Internal.Collaboration.Device)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Function DuplicateDeviceCategory (original As Device) As Device" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static Microsoft::Rtc::Internal::Collaboration::Device ^ DuplicateDeviceCategory(Microsoft::Rtc::Internal::Collaboration::Device ^ original);" />
+      <MemberSignature Language="F#" Value="static member DuplicateDeviceCategory : Microsoft.Rtc.Internal.Collaboration.Device -&gt; Microsoft.Rtc.Internal.Collaboration.Device" Usage="Microsoft.Rtc.Internal.Collaboration.Device.DuplicateDeviceCategory original" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -178,6 +186,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Device.EndpointId" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndpointId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ EndpointId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointId : string" Usage="Microsoft.Rtc.Internal.Collaboration.Device.EndpointId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -198,6 +207,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="device.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -219,6 +229,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Device.GruuForInstanceId" />
       <MemberSignature Language="VB.NET" Value="Public Property GruuForInstanceId As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ GruuForInstanceId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.GruuForInstanceId : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.Device.GruuForInstanceId" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -239,6 +250,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.Device.MachineName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MachineName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MachineName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MachineName : string" Usage="Microsoft.Rtc.Internal.Collaboration.Device.MachineName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -259,6 +271,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Internal.Collaboration.Device.Name" />
       <MemberSignature Language="VB.NET" Value="Public Const Name As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ Name;" />
+      <MemberSignature Language="F#" Value="val mutable Name : string" Usage="Microsoft.Rtc.Internal.Collaboration.Device.Name" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -278,6 +291,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.Device.SetExpiryTime(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetExpiryTime (expiryTime As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetExpiryTime(int expiryTime);" />
+      <MemberSignature Language="F#" Value="member this.SetExpiryTime : int -&gt; unit" Usage="device.SetExpiryTime expiryTime" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

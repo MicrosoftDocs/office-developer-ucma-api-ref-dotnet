@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClientFactory" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationSharingClientFactory" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingClientFactory abstract" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingClientFactory = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -40,6 +41,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClientFactory.CreateApplicationSharingHost(Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateApplicationSharingHost (participant As ConversationParticipant, mediaFlow As ApplicationSharingFlow) As ApplicationSharingHost" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingHost ^ CreateApplicationSharingHost(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlow ^ mediaFlow);" />
+      <MemberSignature Language="F#" Value="abstract member CreateApplicationSharingHost : Microsoft.Rtc.Collaboration.ConversationParticipant * Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost" Usage="applicationSharingClientFactory.CreateApplicationSharingHost (participant, mediaFlow)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +68,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClientFactory.CreateApplicationSharingViewer(Microsoft.Rtc.Collaboration.ConversationParticipant,Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateApplicationSharingViewer (participant As ConversationParticipant, mediaFlow As ApplicationSharingFlow) As ApplicationSharingViewer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingViewer ^ CreateApplicationSharingViewer(Microsoft::Rtc::Collaboration::ConversationParticipant ^ participant, Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlow ^ mediaFlow);" />
+      <MemberSignature Language="F#" Value="abstract member CreateApplicationSharingViewer : Microsoft.Rtc.Collaboration.ConversationParticipant * Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingViewer" Usage="applicationSharingClientFactory.CreateApplicationSharingViewer (participant, mediaFlow)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClientFactory.Default" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Default As ApplicationSharingClientFactory" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClientFactory ^ Default { Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClientFactory ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Default : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClientFactory" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingClientFactory.Default" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

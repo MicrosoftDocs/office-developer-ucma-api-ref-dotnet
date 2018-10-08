@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class SubscriptionRefreshReceivedEventArgs&#xA;Inherits EventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class SubscriptionRefreshReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="F#" Value="type SubscriptionRefreshReceivedEventArgs = class&#xA;    inherit EventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs.BeginAccept(Microsoft.Rtc.Internal.Signaling.SubscriptionSessionAcceptOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAccept (options As SubscriptionSessionAcceptOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAccept(Microsoft::Rtc::Internal::Signaling::SubscriptionSessionAcceptOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAccept : Microsoft.Rtc.Internal.Signaling.SubscriptionSessionAcceptOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="subscriptionRefreshReceivedEventArgs.BeginAccept (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -51,6 +53,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs.BeginDecline(System.Int32,Microsoft.Rtc.Internal.Signaling.SubscriptionSessionDeclineOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDecline (responseCode As Integer, options As SubscriptionSessionDeclineOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDecline(int responseCode, Microsoft::Rtc::Internal::Signaling::SubscriptionSessionDeclineOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDecline : int * Microsoft.Rtc.Internal.Signaling.SubscriptionSessionDeclineOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="subscriptionRefreshReceivedEventArgs.BeginDecline (responseCode, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -81,6 +84,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs.EndAccept(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAccept (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAccept(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAccept : IAsyncResult -&gt; unit" Usage="subscriptionRefreshReceivedEventArgs.EndAccept result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -104,6 +108,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs.EndDecline(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndDecline (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDecline(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDecline : IAsyncResult -&gt; unit" Usage="subscriptionRefreshReceivedEventArgs.EndDecline result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -127,6 +132,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs.RequestData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestData As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipRequestData ^ RequestData { Microsoft::Rtc::Signaling::SipRequestData ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RequestData : Microsoft.Rtc.Signaling.SipRequestData" Usage="Microsoft.Rtc.Internal.Signaling.SubscriptionRefreshReceivedEventArgs.RequestData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class OfferInReInviteEventArgs&#xA;Inherits EventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class OfferInReInviteEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type OfferInReInviteEventArgs = class&#xA;    inherit EventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Accept(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public Function Accept (signalingHeaders As IEnumerable(Of SignalingHeader)) As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipRequestData ^ Accept(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.Accept : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipRequestData" Usage="offerInReInviteEventArgs.Accept signalingHeaders" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +68,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.BeginAccept(System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginAccept (signalingHeaders As IEnumerable(Of SignalingHeader), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginAccept(System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginAccept : seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="offerInReInviteEventArgs.BeginAccept (signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -102,6 +105,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IAsyncResult BeginDecline(int32 responseCode, string reasonPhrase, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.BeginDecline(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginDecline(int responseCode, System::String ^ reasonPhrase, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginDecline : int * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="offerInReInviteEventArgs.BeginDecline (responseCode, reasonPhrase, signalingHeaders, contentType, body, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -148,6 +152,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Cancelled" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Cancelled As EventHandler(Of EventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event EventHandler&lt;EventArgs ^&gt; ^ Cancelled;" />
+      <MemberSignature Language="F#" Value="member this.Cancelled : EventHandler&lt;EventArgs&gt; " Usage="member this.Cancelled : System.EventHandler&lt;System.EventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -168,6 +173,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipRequestData Decline(int32 responseCode, string reasonPhrase, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Decline(System.Int32,System.String,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipRequestData ^ Decline(int responseCode, System::String ^ reasonPhrase, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="member this.Decline : int * string * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Signaling.SipRequestData" Usage="offerInReInviteEventArgs.Decline (responseCode, reasonPhrase, signalingHeaders, contentType, body)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -215,6 +221,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.DialogContext" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DialogContext As SipDialogContext" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipDialogContext ^ DialogContext { Microsoft::Rtc::Signaling::SipDialogContext ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DialogContext : Microsoft.Rtc.Signaling.SipDialogContext" Usage="Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.DialogContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -237,6 +244,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.EndAccept(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function EndAccept (result As IAsyncResult) As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Signaling::SipRequestData ^ EndAccept(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndAccept : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipRequestData" Usage="offerInReInviteEventArgs.EndAccept result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -266,6 +274,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.EndDecline(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function EndDecline (result As IAsyncResult) As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Signaling::SipRequestData ^ EndDecline(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndDecline : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipRequestData" Usage="offerInReInviteEventArgs.EndDecline result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -294,6 +303,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Offer" />
       <MemberSignature Language="VB.NET" Value="Public Property Offer As ContentDescription" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::ContentDescription ^ Offer {  public:&#xA;Microsoft::Rtc::Signaling::ContentDescription ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::ContentDescription ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Offer : Microsoft.Rtc.Signaling.ContentDescription with get, set" Usage="Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Offer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -316,6 +326,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.ReinviteRequestData" />
       <MemberSignature Language="VB.NET" Value="Public Property ReinviteRequestData As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::SipRequestData ^ ReinviteRequestData {  public:&#xA;Microsoft::Rtc::Signaling::SipRequestData ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::SipRequestData ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ReinviteRequestData : Microsoft.Rtc.Signaling.SipRequestData with get, set" Usage="Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.ReinviteRequestData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -338,6 +349,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.SendProvisionalResponse(System.Int32,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendProvisionalResponse (responseCode As Integer, signalingHeaders As IEnumerable(Of SignalingHeader))" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SendProvisionalResponse(int responseCode, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="abstract member SendProvisionalResponse : int * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; unit" Usage="offerInReInviteEventArgs.SendProvisionalResponse (responseCode, signalingHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -370,6 +382,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Session" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Session As SignalingSession" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SignalingSession ^ Session { Microsoft::Rtc::Signaling::SignalingSession ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Session : Microsoft.Rtc.Signaling.SignalingSession" Usage="Microsoft.Rtc.Signaling.OfferInReInviteEventArgs.Session" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

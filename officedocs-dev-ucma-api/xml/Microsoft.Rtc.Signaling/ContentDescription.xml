@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ContentDescription" />
   <TypeSignature Language="VB.NET" Value="Public Class ContentDescription" />
   <TypeSignature Language="C++ CLI" Value="public ref class ContentDescription" />
+  <TypeSignature Language="F#" Value="type ContentDescription = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -43,6 +44,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ContentDescription.#ctor(System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ContentDescription(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.ContentDescription : System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Signaling.ContentDescription" Usage="new Microsoft.Rtc.Signaling.ContentDescription (contentType, body)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +68,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, string body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ContentDescription.#ctor(System.Net.Mime.ContentType,System.String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; ContentDescription(System::Net::Mime::ContentType ^ contentType, System::String ^ body);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.ContentDescription : System.Net.Mime.ContentType * string -&gt; Microsoft.Rtc.Signaling.ContentDescription" Usage="new Microsoft.Rtc.Signaling.ContentDescription (contentType, body)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -93,6 +96,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.ContentDescription.ContentType" />
       <MemberSignature Language="VB.NET" Value="Public Property ContentType As ContentType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Net::Mime::ContentType ^ ContentType { System::Net::Mime::ContentType ^ get(); void set(System::Net::Mime::ContentType ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentType : System.Net.Mime.ContentType with get, set" Usage="Microsoft.Rtc.Signaling.ContentDescription.ContentType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -115,6 +119,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ContentDescription.GetBody" />
       <MemberSignature Language="VB.NET" Value="Public Function GetBody () As Byte()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetBody();" />
+      <MemberSignature Language="F#" Value="member this.GetBody : unit -&gt; byte[]" Usage="contentDescription.GetBody " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -142,6 +147,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ContentDescription.RecomputeBody" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub RecomputeBody ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void RecomputeBody();" />
+      <MemberSignature Language="F#" Value="abstract member RecomputeBody : unit -&gt; unit&#xA;override this.RecomputeBody : unit -&gt; unit" Usage="contentDescription.RecomputeBody " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -164,6 +170,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ContentDescription.SetBody(System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetBody (body As Byte())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetBody(cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member SetBody : byte[] -&gt; unit&#xA;override this.SetBody : byte[] -&gt; unit" Usage="contentDescription.SetBody body" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -189,6 +196,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ContentDescription.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="contentDescription.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

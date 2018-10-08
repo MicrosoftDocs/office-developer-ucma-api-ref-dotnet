@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.MediaSession" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class MediaSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class MediaSession abstract" />
+  <TypeSignature Language="F#" Value="type MediaSession = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Microsoft.Rtc.Collaboration.Conversation conversation) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.#ctor(Microsoft.Rtc.Collaboration.Conversation)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; MediaSession(Microsoft::Rtc::Collaboration::Conversation ^ conversation);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.MediaSession : Microsoft.Rtc.Collaboration.Conversation -&gt; Microsoft.Rtc.Internal.Collaboration.MediaSession" Usage="new Microsoft.Rtc.Internal.Collaboration.MediaSession conversation" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -42,6 +44,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MediaSession.ApplicationContext" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationContext : obj with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.MediaSession.ApplicationContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -62,6 +65,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.BeginEstablish(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaSession.BeginEstablish (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -88,6 +92,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.BeginEstablish(Microsoft.Rtc.Internal.Collaboration.MediaSessionEstablishOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginEstablish (options As MediaSessionEstablishOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginEstablish(Microsoft::Rtc::Internal::Collaboration::MediaSessionEstablishOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginEstablish : Microsoft.Rtc.Internal.Collaboration.MediaSessionEstablishOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaSession.BeginEstablish (options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -116,6 +121,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.BeginHandleSessionEstablishment(Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function BeginHandleSessionEstablishment (dialInResponse As ParticipantCommandResponse, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; abstract IAsyncResult ^ BeginHandleSessionEstablishment(Microsoft::Rtc::Internal::Collaboration::ParticipantCommandResponse ^ dialInResponse, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginHandleSessionEstablishment : Microsoft.Rtc.Internal.Collaboration.ParticipantCommandResponse * AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaSession.BeginHandleSessionEstablishment (dialInResponse, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -144,6 +150,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.BeginHandleTermination(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Function BeginHandleTermination (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual IAsyncResult ^ BeginHandleTermination(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult&#xA;override this.BeginHandleTermination : AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaSession.BeginHandleTermination (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -170,6 +177,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="mediaSession.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -196,6 +204,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MediaSession.Conversation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Conversation As Conversation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::Conversation ^ Conversation { Microsoft::Rtc::Collaboration::Conversation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Conversation : Microsoft.Rtc.Collaboration.Conversation" Usage="Microsoft.Rtc.Internal.Collaboration.MediaSession.Conversation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -216,6 +225,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.EndEstablish(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndEstablish (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndEstablish(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndEstablish : IAsyncResult -&gt; unit" Usage="mediaSession.EndEstablish result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -239,6 +249,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.EndHandleSessionEstablishment(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend MustOverride Function EndHandleSessionEstablishment (result As IAsyncResult) As IEnumerable(Of String)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; abstract System::Collections::Generic::IEnumerable&lt;System::String ^&gt; ^ EndHandleSessionEstablishment(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndHandleSessionEstablishment : IAsyncResult -&gt; seq&lt;string&gt;" Usage="mediaSession.EndHandleSessionEstablishment result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -263,6 +274,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.EndHandleTermination(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub EndHandleTermination (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; virtual void EndHandleTermination(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndHandleTermination : IAsyncResult -&gt; unit&#xA;override this.EndHandleTermination : IAsyncResult -&gt; unit" Usage="mediaSession.EndHandleTermination result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -286,6 +298,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="mediaSession.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -309,6 +322,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.GetActiveMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetActiveMediaTypes () As Collection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::Collection&lt;System::String ^&gt; ^ GetActiveMediaTypes();" />
+      <MemberSignature Language="F#" Value="member this.GetActiveMediaTypes : unit -&gt; System.Collections.ObjectModel.Collection&lt;string&gt;" Usage="mediaSession.GetActiveMediaTypes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -330,6 +344,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.GetMcuSession" />
       <MemberSignature Language="VB.NET" Value="Protected Friend Function GetMcuSession () As McuSession" />
       <MemberSignature Language="C++ CLI" Value="protected public:&#xA; Microsoft::Rtc::Collaboration::McuSession ^ GetMcuSession();" />
+      <MemberSignature Language="F#" Value="member this.GetMcuSession : unit -&gt; Microsoft.Rtc.Collaboration.McuSession" Usage="mediaSession.GetMcuSession " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -351,6 +366,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.HandleStateChange(Microsoft.Rtc.Internal.Collaboration.MediaSessionStateChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub HandleStateChange (e As MediaSessionStateChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void HandleStateChange(Microsoft::Rtc::Internal::Collaboration::MediaSessionStateChangedEventArgs ^ e);" />
+      <MemberSignature Language="F#" Value="abstract member HandleStateChange : Microsoft.Rtc.Internal.Collaboration.MediaSessionStateChangedEventArgs -&gt; unit&#xA;override this.HandleStateChange : Microsoft.Rtc.Internal.Collaboration.MediaSessionStateChangedEventArgs -&gt; unit" Usage="mediaSession.HandleStateChange e" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -374,6 +390,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.MakeCallback(System.AsyncCallback,System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub MakeCallback (callback As AsyncCallback, result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void MakeCallback(AsyncCallback ^ callback, IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.MakeCallback : AsyncCallback * IAsyncResult -&gt; unit" Usage="mediaSession.MakeCallback (callback, result)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -399,6 +416,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.MediaSession.RaiseEvent``1(System.EventHandler{``0},System.Object,``0)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RaiseEvent(Of TEventArg As EventArgs) (handler As EventHandler(Of TEventArg), sender As Object, e As TEventArg)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA;generic &lt;typename TEventArg&gt;&#xA; where TEventArg : EventArgs void RaiseEvent(EventHandler&lt;TEventArg&gt; ^ handler, System::Object ^ sender, TEventArg e);" />
+      <MemberSignature Language="F#" Value="member this.RaiseEvent : EventHandler&lt;'EventArg (requires 'EventArg :&gt; EventArgs)&gt; * obj * 'EventArg -&gt; unit (requires 'EventArg :&gt; EventArgs)" Usage="mediaSession.RaiseEvent (handler, sender, e)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -434,6 +452,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MediaSession.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As MediaSessionState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::MediaSessionState State { Microsoft::Rtc::Internal::Collaboration::MediaSessionState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Internal.Collaboration.MediaSessionState" Usage="Microsoft.Rtc.Internal.Collaboration.MediaSession.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -454,6 +473,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.MediaSession.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of MediaSessionStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::MediaSessionStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.MediaSessionStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.MediaSessionStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -473,6 +493,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.MediaSession.SupportedMediaTypes" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SupportedMediaTypes As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ SupportedMediaTypes { System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SupportedMediaTypes : System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="Microsoft.Rtc.Internal.Collaboration.MediaSession.SupportedMediaTypes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices" />
   <TypeSignature Language="VB.NET" Value="Public Class ContactGroupServices&#xA;Inherits PublishSubscribeSession" />
   <TypeSignature Language="C++ CLI" Value="public ref class ContactGroupServices : Microsoft::Rtc::Collaboration::Presence::PublishSubscribeSession" />
+  <TypeSignature Language="F#" Value="type ContactGroupServices = class&#xA;    inherit PublishSubscribeSession" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -46,6 +47,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddContact(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddContact (contactUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddContact(System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddContact : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginAddContact (contactUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -78,6 +80,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddContact(System.String,Microsoft.Rtc.Collaboration.ContactsGroups.ContactAddOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddContact (contactUri As String, options As ContactAddOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddContact(System::String ^ contactUri, Microsoft::Rtc::Collaboration::ContactsGroups::ContactAddOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddContact : string * Microsoft.Rtc.Collaboration.ContactsGroups.ContactAddOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginAddContact (contactUri, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -121,6 +124,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddContact(System.String,System.String,System.Boolean,System.String,System.String,System.Int32[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddContact (contactUri As String, contactName As String, isSubscribed As Boolean, contactData As String, contactExtension As String, groupIds As Integer(), userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddContact(System::String ^ contactUri, System::String ^ contactName, bool isSubscribed, System::String ^ contactData, System::String ^ contactExtension, cli::array &lt;int&gt; ^ groupIds, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddContact : string * string * bool * string * string * int[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginAddContact (contactUri, contactName, isSubscribed, contactData, contactExtension, groupIds, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -173,6 +177,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginAddGroup(System.String,System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginAddGroup (groupName As String, groupData As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginAddGroup(System::String ^ groupName, System::String ^ groupData, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginAddGroup : string * string * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginAddGroup (groupName, groupData, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -208,6 +213,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginDeleteContact(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDeleteContact (contactUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeleteContact(System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDeleteContact : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginDeleteContact (contactUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -241,6 +247,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginDeleteGroup(System.Int32,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginDeleteGroup (groupId As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginDeleteGroup(int groupId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginDeleteGroup : int * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginDeleteGroup (groupId, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -273,6 +280,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginGetCachedContact(System.String,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginGetCachedContact (contactUri As String, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetCachedContact(System::String ^ contactUri, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginGetCachedContact : string * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginGetCachedContact (contactUri, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -305,6 +313,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginGetCachedGroup(System.Int32,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginGetCachedGroup (groupId As Integer, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginGetCachedGroup(int groupId, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginGetCachedGroup : int * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginGetCachedGroup (groupId, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -337,6 +346,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginRefresh(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function BeginRefresh (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override IAsyncResult ^ BeginRefresh(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="override this.BeginRefresh : AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginRefresh (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -365,6 +375,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateContact(class Microsoft.Rtc.Collaboration.ContactsGroups.Contact contact, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginUpdateContact(Microsoft.Rtc.Collaboration.ContactsGroups.Contact,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateContact(Microsoft::Rtc::Collaboration::ContactsGroups::Contact ^ contact, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUpdateContact : Microsoft.Rtc.Collaboration.ContactsGroups.Contact * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginUpdateContact (contact, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -396,6 +407,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginUpdateGroup(class Microsoft.Rtc.Collaboration.ContactsGroups.Group group, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.BeginUpdateGroup(Microsoft.Rtc.Collaboration.ContactsGroups.Group,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginUpdateGroup(Microsoft::Rtc::Collaboration::ContactsGroups::Group ^ group, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginUpdateGroup : Microsoft.Rtc.Collaboration.ContactsGroups.Group * AsyncCallback * obj -&gt; IAsyncResult" Usage="contactGroupServices.BeginUpdateGroup (group, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -428,6 +440,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndAddContact(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAddContact (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddContact(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAddContact : IAsyncResult -&gt; unit" Usage="contactGroupServices.EndAddContact result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -462,6 +475,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndAddGroup(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndAddGroup (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndAddGroup(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndAddGroup : IAsyncResult -&gt; unit" Usage="contactGroupServices.EndAddGroup result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -496,6 +510,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndDeleteContact(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndDeleteContact (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeleteContact(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDeleteContact : IAsyncResult -&gt; unit" Usage="contactGroupServices.EndDeleteContact result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -530,6 +545,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndDeleteGroup(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndDeleteGroup (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndDeleteGroup(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndDeleteGroup : IAsyncResult -&gt; unit" Usage="contactGroupServices.EndDeleteGroup result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -564,6 +580,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndGetCachedContact(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndGetCachedContact (result As IAsyncResult) As Contact" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ContactsGroups::Contact ^ EndGetCachedContact(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndGetCachedContact : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.ContactsGroups.Contact" Usage="contactGroupServices.EndGetCachedContact result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -598,6 +615,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndGetCachedGroup(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndGetCachedGroup (result As IAsyncResult) As Group" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::ContactsGroups::Group ^ EndGetCachedGroup(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndGetCachedGroup : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.ContactsGroups.Group" Usage="contactGroupServices.EndGetCachedGroup result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -632,6 +650,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndUpdateContact(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateContact (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateContact(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUpdateContact : IAsyncResult -&gt; unit" Usage="contactGroupServices.EndUpdateContact result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -666,6 +685,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.EndUpdateGroup(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndUpdateGroup (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndUpdateGroup(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndUpdateGroup : IAsyncResult -&gt; unit" Usage="contactGroupServices.EndUpdateGroup result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -700,6 +720,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupServices.NotificationReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event NotificationReceived As EventHandler(Of ContactGroupNotificationEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::ContactsGroups::ContactGroupNotificationEventArgs ^&gt; ^ NotificationReceived;" />
+      <MemberSignature Language="F#" Value="member this.NotificationReceived : EventHandler&lt;Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupNotificationEventArgs&gt; " Usage="member this.NotificationReceived : System.EventHandler&lt;Microsoft.Rtc.Collaboration.ContactsGroups.ContactGroupNotificationEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

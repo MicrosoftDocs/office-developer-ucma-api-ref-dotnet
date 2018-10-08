@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Signaling.MultipartContentParser" />
   <TypeSignature Language="VB.NET" Value="Public Structure MultipartContentParser" />
   <TypeSignature Language="C++ CLI" Value="public value class MultipartContentParser" />
+  <TypeSignature Language="F#" Value="type MultipartContentParser = struct" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.#ctor(System.Byte[],System.Byte[])" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (boundary As Byte(), body As Byte())" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MultipartContentParser(cli::array &lt;System::Byte&gt; ^ boundary, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Signaling.MultipartContentParser : byte[] * byte[] -&gt; Microsoft.Rtc.Internal.Signaling.MultipartContentParser" Usage="new Microsoft.Rtc.Internal.Signaling.MultipartContentParser (boundary, body)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -44,6 +46,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.#ctor(System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MultipartContentParser(System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Signaling.MultipartContentParser : System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Internal.Signaling.MultipartContentParser" Usage="new Microsoft.Rtc.Internal.Signaling.MultipartContentParser (contentType, body)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundary" />
       <MemberSignature Language="VB.NET" Value="Public Function GetBoundary () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetBoundary();" />
+      <MemberSignature Language="F#" Value="member this.GetBoundary : unit -&gt; string" Usage="multipartContentParser.GetBoundary " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -87,6 +91,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundaryBytes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetBoundaryBytes () As Byte()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; cli::array &lt;System::Byte&gt; ^ GetBoundaryBytes();" />
+      <MemberSignature Language="F#" Value="member this.GetBoundaryBytes : unit -&gt; byte[]" Usage="multipartContentParser.GetBoundaryBytes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -107,6 +112,7 @@
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8[] GetBoundaryBytes(class System.Net.Mime.ContentType contentType) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundaryBytes(System.Net.Mime.ContentType)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static cli::array &lt;System::Byte&gt; ^ GetBoundaryBytes(System::Net::Mime::ContentType ^ contentType);" />
+      <MemberSignature Language="F#" Value="static member GetBoundaryBytes : System.Net.Mime.ContentType -&gt; byte[]" Usage="Microsoft.Rtc.Internal.Signaling.MultipartContentParser.GetBoundaryBytes contentType" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -131,6 +137,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Signaling.MultipartContentParser.Parts" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parts As IEnumerable(Of MultipartItem)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Signaling::MultipartItem&gt; ^ Parts { System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Internal::Signaling::MultipartItem&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Parts : seq&lt;Microsoft.Rtc.Internal.Signaling.MultipartItem&gt;" Usage="Microsoft.Rtc.Internal.Signaling.MultipartContentParser.Parts" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

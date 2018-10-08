@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor" />
   <TypeSignature Language="VB.NET" Value="Public Interface ISipSubscriptionProcessor" />
   <TypeSignature Language="C++ CLI" Value="public interface class ISipSubscriptionProcessor" />
+  <TypeSignature Language="F#" Value="type ISipSubscriptionProcessor = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetExtensionHeaders(valuetype Microsoft.Rtc.Signaling.SipSubscription/RequestType requestType, [out] class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt;&amp; extensionHeaders) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetExtensionHeaders(Microsoft.Rtc.Signaling.SipSubscription.RequestType,System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader}@)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void GetExtensionHeaders(Microsoft::Rtc::Signaling::SipSubscription::RequestType requestType, [Runtime::InteropServices::Out] System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ % extensionHeaders);" />
+      <MemberSignature Language="F#" Value="abstract member GetExtensionHeaders : Microsoft.Rtc.Signaling.SipSubscription.RequestType *  -&gt; unit" Usage="iSipSubscriptionProcessor.GetExtensionHeaders (requestType, extensionHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -32,7 +34,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="requestType" Type="Microsoft.Rtc.Signaling.SipSubscription+RequestType" />
-        <Parameter Name="extensionHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;&amp;" RefType="out" />
+        <Parameter Name="extensionHeaders" Type="System.Collections.Generic.IEnumerable&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt;" RefType="out" />
       </Parameters>
       <Docs>
         <param name="requestType">Subscription request type.</param>
@@ -48,6 +50,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetMessageBody(valuetype Microsoft.Rtc.Signaling.SipSubscription/RequestType requestType, [out] class System.Net.Mime.ContentType&amp; contentType, [out] unsigned int8[]&amp; messageBody) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.GetMessageBody(Microsoft.Rtc.Signaling.SipSubscription.RequestType,System.Net.Mime.ContentType@,System.Byte[]@)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void GetMessageBody(Microsoft::Rtc::Signaling::SipSubscription::RequestType requestType, [Runtime::InteropServices::Out] System::Net::Mime::ContentType ^ % contentType, [Runtime::InteropServices::Out] cli::array &lt;System::Byte&gt; ^ % messageBody);" />
+      <MemberSignature Language="F#" Value="abstract member GetMessageBody : Microsoft.Rtc.Signaling.SipSubscription.RequestType *  *  -&gt; unit" Usage="iSipSubscriptionProcessor.GetMessageBody (requestType, contentType, messageBody)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -58,8 +61,8 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="requestType" Type="Microsoft.Rtc.Signaling.SipSubscription+RequestType" />
-        <Parameter Name="contentType" Type="System.Net.Mime.ContentType&amp;" RefType="out" />
-        <Parameter Name="messageBody" Type="System.Byte[]&amp;" RefType="out" />
+        <Parameter Name="contentType" Type="System.Net.Mime.ContentType" RefType="out" />
+        <Parameter Name="messageBody" Type="System.Byte[]" RefType="out" />
       </Parameters>
       <Docs>
         <param name="requestType">Subscription request type.</param>
@@ -77,6 +80,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessErrorResponse(Microsoft.Rtc.Signaling.SipResponseData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ProcessErrorResponse (message As SipResponseData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ProcessErrorResponse(Microsoft::Rtc::Signaling::SipResponseData ^ message);" />
+      <MemberSignature Language="F#" Value="abstract member ProcessErrorResponse : Microsoft.Rtc.Signaling.SipResponseData -&gt; unit" Usage="iSipSubscriptionProcessor.ProcessErrorResponse message" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -108,6 +112,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.ProcessNotification(Microsoft.Rtc.Signaling.SipMessageData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ProcessNotification (message As SipMessageData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ProcessNotification(Microsoft::Rtc::Signaling::SipMessageData ^ message);" />
+      <MemberSignature Language="F#" Value="abstract member ProcessNotification : Microsoft.Rtc.Signaling.SipMessageData -&gt; unit" Usage="iSipSubscriptionProcessor.ProcessNotification message" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -134,6 +139,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.ISipSubscriptionProcessor.SubscriptionStateChanged(Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SubscriptionStateChanged (eventArg As SubscriptionStateChangedEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SubscriptionStateChanged(Microsoft::Rtc::Signaling::SubscriptionStateChangedEventArgs ^ eventArg);" />
+      <MemberSignature Language="F#" Value="abstract member SubscriptionStateChanged : Microsoft.Rtc.Signaling.SubscriptionStateChangedEventArgs -&gt; unit" Usage="iSipSubscriptionProcessor.SubscriptionStateChanged eventArg" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

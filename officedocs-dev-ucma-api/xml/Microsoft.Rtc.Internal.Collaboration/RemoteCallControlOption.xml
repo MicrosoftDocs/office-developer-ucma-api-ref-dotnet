@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption" />
   <TypeSignature Language="VB.NET" Value="Public Class RemoteCallControlOption&#xA;Inherits PresenceCategory" />
   <TypeSignature Language="C++ CLI" Value="public ref class RemoteCallControlOption : Microsoft::Rtc::Collaboration::Presence::PresenceCategory" />
+  <TypeSignature Language="F#" Value="type RemoteCallControlOption = class&#xA;    inherit PresenceCategory" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.#ctor(Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (category As PresenceCategoryWithMetaData)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RemoteCallControlOption(Microsoft::Rtc::Collaboration::Presence::PresenceCategoryWithMetaData ^ category);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption : Microsoft.Rtc.Collaboration.Presence.PresenceCategoryWithMetaData -&gt; Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption" Usage="new Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption category" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.#ctor(Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.CallForwardingMode,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (forwardingMode As RemoteCallControlOption.CallForwardingMode, phoneType As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; RemoteCallControlOption(Microsoft::Rtc::Internal::Collaboration::RemoteCallControlOption::CallForwardingMode forwardingMode, System::String ^ phoneType);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption : Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.CallForwardingMode * string -&gt; Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption" Usage="new Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption (forwardingMode, phoneType)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -65,6 +68,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.CreateExpiryPolicy" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateExpiryPolicy () As ExpiryPolicy" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override Microsoft::Rtc::Collaboration::Presence::ExpiryPolicy CreateExpiryPolicy();" />
+      <MemberSignature Language="F#" Value="override this.CreateExpiryPolicy : unit -&gt; Microsoft.Rtc.Collaboration.Presence.ExpiryPolicy" Usage="remoteCallControlOption.CreateExpiryPolicy " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -86,6 +90,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.CreateInstanceId(Microsoft.Rtc.Signaling.RealTimeEndpoint)" />
       <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateInstanceId (endpoint As RealTimeEndpoint) As Long" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; override long CreateInstanceId(Microsoft::Rtc::Signaling::RealTimeEndpoint ^ endpoint);" />
+      <MemberSignature Language="F#" Value="override this.CreateInstanceId : Microsoft.Rtc.Signaling.RealTimeEndpoint -&gt; int64" Usage="remoteCallControlOption.CreateInstanceId endpoint" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -110,6 +115,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.ForwardingMode" />
       <MemberSignature Language="VB.NET" Value="Public Property ForwardingMode As RemoteCallControlOption.CallForwardingMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::RemoteCallControlOption::CallForwardingMode ForwardingMode { Microsoft::Rtc::Internal::Collaboration::RemoteCallControlOption::CallForwardingMode get(); void set(Microsoft::Rtc::Internal::Collaboration::RemoteCallControlOption::CallForwardingMode value); };" />
+      <MemberSignature Language="F#" Value="member this.ForwardingMode : Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.CallForwardingMode with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.ForwardingMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -130,6 +136,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.GetCategoryDataXml" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetCategoryDataXml () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ GetCategoryDataXml();" />
+      <MemberSignature Language="F#" Value="override this.GetCategoryDataXml : unit -&gt; string" Usage="remoteCallControlOption.GetCategoryDataXml " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -151,6 +158,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.Name" />
       <MemberSignature Language="VB.NET" Value="Public Const Name As String " />
       <MemberSignature Language="C++ CLI" Value="public: System::String ^ Name;" />
+      <MemberSignature Language="F#" Value="val mutable Name : string" Usage="Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.Name" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -170,6 +178,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.ToPhoneType" />
       <MemberSignature Language="VB.NET" Value="Public Property ToPhoneType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ToPhoneType { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ToPhoneType : string with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.RemoteCallControlOption.ToPhoneType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

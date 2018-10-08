@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException" />
   <TypeSignature Language="VB.NET" Value="Public Class PinFailureException&#xA;Inherits RealTimeException" />
   <TypeSignature Language="C++ CLI" Value="public ref class PinFailureException : Microsoft::Rtc::Signaling::RealTimeException" />
+  <TypeSignature Language="F#" Value="type PinFailureException = class&#xA;    inherit RealTimeException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -12,6 +13,11 @@
     <BaseTypeName>Microsoft.Rtc.Signaling.RealTimeException</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Defines the exception to capture error conditions associated with pin operations.
@@ -44,6 +50,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; PinFailureException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.PinManagement.PinFailureException : string -&gt; Microsoft.Rtc.Collaboration.PinManagement.PinFailureException" Usage="new Microsoft.Rtc.Collaboration.PinManagement.PinFailureException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -67,6 +74,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; PinFailureException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.PinManagement.PinFailureException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Collaboration.PinManagement.PinFailureException" Usage="new Microsoft.Rtc.Collaboration.PinManagement.PinFailureException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -94,6 +102,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; PinFailureException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Collaboration.PinManagement.PinFailureException : string * Exception -&gt; Microsoft.Rtc.Collaboration.PinManagement.PinFailureException" Usage="new Microsoft.Rtc.Collaboration.PinManagement.PinFailureException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -127,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.DetailedReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DetailedReason As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DetailedReason { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DetailedReason : string" Usage="Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.DetailedReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -154,6 +164,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.GeneralReason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GeneralReason As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ GeneralReason { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.GeneralReason : string" Usage="Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.GeneralReason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -181,6 +192,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="pinFailureException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -213,6 +225,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.Reason" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Reason As PinFailureReason" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::PinManagement::PinFailureReason Reason { Microsoft::Rtc::Collaboration::PinManagement::PinFailureReason get(); };" />
+      <MemberSignature Language="F#" Value="member this.Reason : Microsoft.Rtc.Collaboration.PinManagement.PinFailureReason" Usage="Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.Reason" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -241,6 +254,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.SipResponseData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SipResponseData As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipResponseData ^ SipResponseData { Microsoft::Rtc::Signaling::SipResponseData ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SipResponseData : Microsoft.Rtc.Signaling.SipResponseData" Usage="Microsoft.Rtc.Collaboration.PinManagement.PinFailureException.SipResponseData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

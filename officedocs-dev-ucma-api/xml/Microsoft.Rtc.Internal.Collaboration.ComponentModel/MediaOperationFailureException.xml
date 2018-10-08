@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" />
   <TypeSignature Language="VB.NET" Value="Public Class MediaOperationFailureException&#xA;Inherits OperationFailureException" />
   <TypeSignature Language="C++ CLI" Value="public ref class MediaOperationFailureException : Microsoft::Rtc::Signaling::OperationFailureException" />
+  <TypeSignature Language="F#" Value="type MediaOperationFailureException = class&#xA;    inherit OperationFailureException" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -12,6 +13,11 @@
     <BaseTypeName>Microsoft.Rtc.Signaling.OperationFailureException</BaseTypeName>
   </Base>
   <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Serializable</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>To be added.</summary>
     <remarks>To be added.</remarks>
@@ -40,6 +46,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaOperationFailureException(System::String ^ message);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException : string -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException message" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -60,6 +67,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; MediaOperationFailureException(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException (info, context)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -82,6 +90,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.#ctor(System.String,System.Exception)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaOperationFailureException(System::String ^ message, Exception ^ innerException);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException : string * Exception -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException (message, innerException)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -104,6 +113,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.#ctor(System.String,System.Exception,System.String,Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception, mediaType As String, failureCategory As MediaOperationFailureCategory, failureReasonCode As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaOperationFailureException(System::String ^ message, Exception ^ innerException, System::String ^ mediaType, Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureCategory failureCategory, int failureReasonCode);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException : string * Exception * string * Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory * int -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException (message, innerException, mediaType, failureCategory, failureReasonCode)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -132,6 +142,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.#ctor(System.String,System.Exception,System.String,Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory,System.Int32,Microsoft.Rtc.Signaling.DiagnosticsInformation)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (message As String, innerException As Exception, mediaType As String, failureCategory As MediaOperationFailureCategory, failureReasonCode As Integer, diagnosticsInfo As DiagnosticsInformation)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; MediaOperationFailureException(System::String ^ message, Exception ^ innerException, System::String ^ mediaType, Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureCategory failureCategory, int failureReasonCode, Microsoft::Rtc::Signaling::DiagnosticsInformation ^ diagnosticsInfo);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException : string * Exception * string * Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory * int * Microsoft.Rtc.Signaling.DiagnosticsInformation -&gt; Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException" Usage="new Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException (message, innerException, mediaType, failureCategory, failureReasonCode, diagnosticsInfo)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -162,6 +173,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.DiagnosticsInformation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DiagnosticsInformation As DiagnosticsInformation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::DiagnosticsInformation ^ DiagnosticsInformation { Microsoft::Rtc::Signaling::DiagnosticsInformation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DiagnosticsInformation : Microsoft.Rtc.Signaling.DiagnosticsInformation" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.DiagnosticsInformation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -182,6 +194,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.FailureCategory" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureCategory As MediaOperationFailureCategory" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureCategory FailureCategory { Microsoft::Rtc::Internal::Collaboration::ComponentModel::MediaOperationFailureCategory get(); };" />
+      <MemberSignature Language="F#" Value="member this.FailureCategory : Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureCategory" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.FailureCategory" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -202,6 +215,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.FailureReasonCode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FailureReasonCode As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int FailureReasonCode { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.FailureReasonCode : int" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.FailureReasonCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -222,6 +236,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub GetObjectData (info As SerializationInfo, context As StreamingContext)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void GetObjectData(System::Runtime::Serialization::SerializationInfo ^ info, System::Runtime::Serialization::StreamingContext context);" />
+      <MemberSignature Language="F#" Value="override this.GetObjectData : System.Runtime.Serialization.SerializationInfo * System.Runtime.Serialization.StreamingContext -&gt; unit" Usage="mediaOperationFailureException.GetObjectData (info, context)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -247,6 +262,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.MediaType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MediaType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MediaType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MediaType : string" Usage="Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.MediaType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -267,6 +283,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ComponentModel.MediaOperationFailureException.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="mediaOperationFailureException.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

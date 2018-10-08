@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs" />
   <TypeSignature Language="VB.NET" Value="Public Class CallMessageReceivedEventArgs&#xA;Inherits EventArgs" />
   <TypeSignature Language="C++ CLI" Value="public ref class CallMessageReceivedEventArgs : EventArgs" />
+  <TypeSignature Language="F#" Value="type CallMessageReceivedEventArgs = class&#xA;    inherit EventArgs" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.ContentDescription" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContentDescription As ContentDescription" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ContentDescription ^ ContentDescription { Microsoft::Rtc::Signaling::ContentDescription ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ContentDescription : Microsoft.Rtc.Signaling.ContentDescription" Usage="Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.ContentDescription" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.DisableAutomaticResponse" />
       <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticResponse As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticResponse { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisableAutomaticResponse : bool with get, set" Usage="Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.DisableAutomaticResponse" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -71,6 +74,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.MessageType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageType As MessageType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::MessageType MessageType { Microsoft::Rtc::Signaling::MessageType get(); };" />
+      <MemberSignature Language="F#" Value="member this.MessageType : Microsoft.Rtc.Signaling.MessageType" Usage="Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.MessageType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -93,6 +97,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.RequestData" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestData As SipRequestData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::SipRequestData ^ RequestData { Microsoft::Rtc::Signaling::SipRequestData ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.RequestData : Microsoft.Rtc.Signaling.SipRequestData" Usage="Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.RequestData" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -115,6 +120,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.SendResponse(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SendResponse (responseCode As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendResponse(int responseCode);" />
+      <MemberSignature Language="F#" Value="member this.SendResponse : int -&gt; unit" Usage="callMessageReceivedEventArgs.SendResponse responseCode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -146,6 +152,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendResponse(int32 responseCode, class Microsoft.Rtc.Signaling.ContentDescription contentDescription, class Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions options) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.CallMessageReceivedEventArgs.SendResponse(System.Int32,Microsoft.Rtc.Signaling.ContentDescription,Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SendResponse(int responseCode, Microsoft::Rtc::Signaling::ContentDescription ^ contentDescription, Microsoft::Rtc::Collaboration::CallSendMessageResponseOptions ^ options);" />
+      <MemberSignature Language="F#" Value="member this.SendResponse : int * Microsoft.Rtc.Signaling.ContentDescription * Microsoft.Rtc.Collaboration.CallSendMessageResponseOptions -&gt; unit" Usage="callMessageReceivedEventArgs.SendResponse (responseCode, contentDescription, options)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

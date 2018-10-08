@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Signaling.RealTimeEndpoint" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class RealTimeEndpoint" />
   <TypeSignature Language="C++ CLI" Value="public ref class RealTimeEndpoint abstract" />
+  <TypeSignature Language="F#" Value="type RealTimeEndpoint = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.#ctor(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (uri As String, epid As String)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeEndpoint(System::String ^ uri, System::String ^ epid);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeEndpoint : string * string -&gt; Microsoft.Rtc.Signaling.RealTimeEndpoint" Usage="new Microsoft.Rtc.Signaling.RealTimeEndpoint (uri, epid)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -60,6 +62,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.#ctor(System.String,System.String,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (ownerUri As String, epid As String, disallowParameters As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeEndpoint(System::String ^ ownerUri, System::String ^ epid, bool disallowParameters);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeEndpoint : string * string * bool -&gt; Microsoft.Rtc.Signaling.RealTimeEndpoint" Usage="new Microsoft.Rtc.Signaling.RealTimeEndpoint (ownerUri, epid, disallowParameters)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -95,6 +98,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.#ctor(System.String,Microsoft.Rtc.Signaling.SipTransportType,System.String,System.Boolean,System.Int32,System.String,System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (uri As String, transportType As SipTransportType, serverName As String, useAutomaticConfiguration As Boolean, serverPort As Integer, endpointId As String, useExclusiveConnectionForRegistration As Boolean, retryOnRefreshFailure As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; RealTimeEndpoint(System::String ^ uri, Microsoft::Rtc::Signaling::SipTransportType transportType, System::String ^ serverName, bool useAutomaticConfiguration, int serverPort, System::String ^ endpointId, bool useExclusiveConnectionForRegistration, bool retryOnRefreshFailure);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Signaling.RealTimeEndpoint : string * Microsoft.Rtc.Signaling.SipTransportType * string * bool * int * string * bool * bool -&gt; Microsoft.Rtc.Signaling.RealTimeEndpoint" Usage="new Microsoft.Rtc.Signaling.RealTimeEndpoint (uri, transportType, serverName, useAutomaticConfiguration, serverPort, endpointId, useExclusiveConnectionForRegistration, retryOnRefreshFailure)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -149,6 +153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.AddFeatureParameter(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddFeatureParameter (name As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddFeatureParameter(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.AddFeatureParameter : string -&gt; unit" Usage="realTimeEndpoint.AddFeatureParameter name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -177,6 +182,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.AddFeatureParameter(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddFeatureParameter (name As String, value As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddFeatureParameter(System::String ^ name, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="member this.AddFeatureParameter : string * string -&gt; unit" Usage="realTimeEndpoint.AddFeatureParameter (name, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -207,6 +213,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.AddSipExtension(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub AddSipExtension (extension As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AddSipExtension(System::String ^ extension);" />
+      <MemberSignature Language="F#" Value="member this.AddSipExtension : string -&gt; unit" Usage="realTimeEndpoint.AddSipExtension extension" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -240,6 +247,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplicationContext" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationContext As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ApplicationContext { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationContext : obj with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplicationContext" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -262,6 +270,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplicationUserAgent" />
       <MemberSignature Language="VB.NET" Value="Public Property ApplicationUserAgent As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ApplicationUserAgent { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ApplicationUserAgent : string with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplicationUserAgent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -286,6 +295,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ApplyRouteSetRecoverySettings(class Microsoft.Rtc.Signaling.RouteSetRecoverySettings routeSetRecoverySettings) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.ApplyRouteSetRecoverySettings(Microsoft.Rtc.Signaling.RouteSetRecoverySettings)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ApplyRouteSetRecoverySettings(Microsoft::Rtc::Signaling::RouteSetRecoverySettings ^ routeSetRecoverySettings);" />
+      <MemberSignature Language="F#" Value="member this.ApplyRouteSetRecoverySettings : Microsoft.Rtc.Signaling.RouteSetRecoverySettings -&gt; unit" Usage="realTimeEndpoint.ApplyRouteSetRecoverySettings routeSetRecoverySettings" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -310,6 +320,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class Microsoft.Rtc.Signaling.SendMessageOptions options, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,Microsoft.Rtc.Signaling.SendMessageOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, Microsoft::Rtc::Signaling::SendMessageOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.RealTimeAddress * Microsoft.Rtc.Signaling.SendMessageOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="realTimeEndpoint.BeginSendMessage (messageType, sessionTarget, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -352,6 +363,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.RealTimeAddress * System.Net.Mime.ContentType * byte[] * AsyncCallback * obj -&gt; IAsyncResult" Usage="realTimeEndpoint.BeginSendMessage (messageType, sessionTarget, contentType, body, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -389,6 +401,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.IAsyncResult BeginSendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders, class System.AsyncCallback userCallback, object state) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginSendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader},System.AsyncCallback,System.Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginSendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginSendMessage : Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.RealTimeAddress * System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; * AsyncCallback * obj -&gt; IAsyncResult" Usage="realTimeEndpoint.BeginSendMessage (messageType, sessionTarget, contentType, body, signalingHeaders, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -433,6 +446,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.BeginTerminate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginTerminate (userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginTerminate(AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginTerminate : AsyncCallback * obj -&gt; IAsyncResult" Usage="realTimeEndpoint.BeginTerminate (userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -462,6 +476,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ConnectionManager" />
       <MemberSignature Language="VB.NET" Value="Public Property ConnectionManager As RealTimeConnectionManager" />
       <MemberSignature Language="C++ CLI" Value="public:  property Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ ConnectionManager {  public:&#xA;Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ get(); protected:&#xA; void set(Microsoft::Rtc::Signaling::RealTimeConnectionManager ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ConnectionManager : Microsoft.Rtc.Signaling.RealTimeConnectionManager with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.ConnectionManager" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -484,6 +499,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultDomain" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultDomain As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DefaultDomain { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultDomain : string" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultDomain" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -506,6 +522,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultPeerToPeerEndpointConnectionManager" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultPeerToPeerEndpointConnectionManager As RealTimeServerTcpConnectionManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::RealTimeServerTcpConnectionManager ^ DefaultPeerToPeerEndpointConnectionManager { Microsoft::Rtc::Signaling::RealTimeServerTcpConnectionManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultPeerToPeerEndpointConnectionManager : Microsoft.Rtc.Signaling.RealTimeServerTcpConnectionManager" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultPeerToPeerEndpointConnectionManager" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -530,6 +547,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultSipEndpointConnectionManager" />
       <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultSipEndpointConnectionManager As RealTimeClientConnectionManager" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; static property Microsoft::Rtc::Signaling::RealTimeClientConnectionManager ^ DefaultSipEndpointConnectionManager { Microsoft::Rtc::Signaling::RealTimeClientConnectionManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DefaultSipEndpointConnectionManager : Microsoft.Rtc.Signaling.RealTimeClientConnectionManager" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.DefaultSipEndpointConnectionManager" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -554,6 +572,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DesiredSessionTimerInterval" />
       <MemberSignature Language="VB.NET" Value="Public Property DesiredSessionTimerInterval As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int DesiredSessionTimerInterval { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.DesiredSessionTimerInterval : int with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.DesiredSessionTimerInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -587,6 +606,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DisableAutomaticRetryForRetryAfter" />
       <MemberSignature Language="VB.NET" Value="Public Property DisableAutomaticRetryForRetryAfter As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool DisableAutomaticRetryForRetryAfter { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.DisableAutomaticRetryForRetryAfter : bool with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.DisableAutomaticRetryForRetryAfter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -614,6 +634,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.DisplayName" />
       <MemberSignature Language="VB.NET" Value="Public Property DisplayName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DisplayName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DisplayName : string with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.DisplayName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -638,6 +659,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.EndpointUri" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property EndpointUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ EndpointUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EndpointUri : string" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.EndpointUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -666,6 +688,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.EndSendMessage(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndSendMessage (result As IAsyncResult) As SipResponseData" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ EndSendMessage(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndSendMessage : IAsyncResult -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="realTimeEndpoint.EndSendMessage result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -710,6 +733,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.EndTerminate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Sub EndTerminate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EndTerminate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndTerminate : IAsyncResult -&gt; unit" Usage="realTimeEndpoint.EndTerminate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -735,6 +759,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.GetFeatureParameterValue(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetFeatureParameterValue (name As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetFeatureParameterValue(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.GetFeatureParameterValue : string -&gt; string" Usage="realTimeEndpoint.GetFeatureParameterValue name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -764,6 +789,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.GetSupportedSipExtensions" />
       <MemberSignature Language="VB.NET" Value="Public Function GetSupportedSipExtensions () As ReadOnlyCollection(Of String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::ObjectModel::ReadOnlyCollection&lt;System::String ^&gt; ^ GetSupportedSipExtensions();" />
+      <MemberSignature Language="F#" Value="member this.GetSupportedSipExtensions : unit -&gt; System.Collections.ObjectModel.ReadOnlyCollection&lt;string&gt;" Usage="realTimeEndpoint.GetSupportedSipExtensions " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -791,6 +817,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.GetTraceCorrelationID" />
       <MemberSignature Language="VB.NET" Value="Public Function GetTraceCorrelationID () As Long" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; long GetTraceCorrelationID();" />
+      <MemberSignature Language="F#" Value="member this.GetTraceCorrelationID : unit -&gt; int64" Usage="realTimeEndpoint.GetTraceCorrelationID " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -814,6 +841,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.Gruu" />
       <MemberSignature Language="VB.NET" Value="Public Property Gruu As String" />
       <MemberSignature Language="C++ CLI" Value="public:  property System::String ^ Gruu {  public:&#xA;System::String ^ get(); protected:&#xA; void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Gruu : string with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.Gruu" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -836,6 +864,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -860,6 +889,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.IsSessionTimerSupported" />
       <MemberSignature Language="VB.NET" Value="Public Property IsSessionTimerSupported As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSessionTimerSupported { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsSessionTimerSupported : bool with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.IsSessionTimerSupported" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -884,6 +914,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.MaximumSessionConnectDuration" />
       <MemberSignature Language="VB.NET" Value="Public Property MaximumSessionConnectDuration As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MaximumSessionConnectDuration { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MaximumSessionConnectDuration : int with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.MaximumSessionConnectDuration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -914,6 +945,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeEndpoint.MessageReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event MessageReceived As EventHandler(Of MessageReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::MessageReceivedEventArgs ^&gt; ^ MessageReceived;" />
+      <MemberSignature Language="F#" Value="member this.MessageReceived : EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; " Usage="member this.MessageReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.MessageReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -935,6 +967,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.MinimumSessionTimerInterval" />
       <MemberSignature Language="VB.NET" Value="Public Property MinimumSessionTimerInterval As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int MinimumSessionTimerInterval { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.MinimumSessionTimerInterval : int with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.MinimumSessionTimerInterval" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -969,6 +1002,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.OutboundConnectionDefaultAddressFamilyHint" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutboundConnectionDefaultAddressFamilyHint As Nullable(Of AddressFamilyHint)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; OutboundConnectionDefaultAddressFamilyHint { Nullable&lt;Microsoft::Rtc::Signaling::AddressFamilyHint&gt; get(); };" />
+      <MemberSignature Language="F#" Value="member this.OutboundConnectionDefaultAddressFamilyHint : Nullable&lt;Microsoft.Rtc.Signaling.AddressFamilyHint&gt;" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.OutboundConnectionDefaultAddressFamilyHint" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -991,6 +1025,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.OwnerUri" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OwnerUri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ OwnerUri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OwnerUri : string" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.OwnerUri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1021,6 +1056,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.RegisterForPageModeMessages" />
       <MemberSignature Language="VB.NET" Value="Protected Sub RegisterForPageModeMessages ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void RegisterForPageModeMessages();" />
+      <MemberSignature Language="F#" Value="member this.RegisterForPageModeMessages : unit -&gt; unit" Usage="realTimeEndpoint.RegisterForPageModeMessages " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1043,6 +1079,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.ReliableProvisionalResponsePolicy" />
       <MemberSignature Language="VB.NET" Value="Public Property ReliableProvisionalResponsePolicy As ExtensionFeatureSupport" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::ExtensionFeatureSupport ReliableProvisionalResponsePolicy { Microsoft::Rtc::Signaling::ExtensionFeatureSupport get(); void set(Microsoft::Rtc::Signaling::ExtensionFeatureSupport value); };" />
+      <MemberSignature Language="F#" Value="member this.ReliableProvisionalResponsePolicy : Microsoft.Rtc.Signaling.ExtensionFeatureSupport with get, set" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.ReliableProvisionalResponsePolicy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1069,6 +1106,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.RemoveFeatureParameter(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function RemoveFeatureParameter (name As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool RemoveFeatureParameter(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="member this.RemoveFeatureParameter : string -&gt; bool" Usage="realTimeEndpoint.RemoveFeatureParameter name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1095,6 +1133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.RouteSetRecoveryMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RouteSetRecoveryMode As RouteSetRecoveryMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Signaling::RouteSetRecoveryMode RouteSetRecoveryMode { Microsoft::Rtc::Signaling::RouteSetRecoveryMode get(); };" />
+      <MemberSignature Language="F#" Value="member this.RouteSetRecoveryMode : Microsoft.Rtc.Signaling.RouteSetRecoveryMode" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.RouteSetRecoveryMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1116,6 +1155,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.SendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[])" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body);" />
+      <MemberSignature Language="F#" Value="member this.SendMessage : Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.RealTimeAddress * System.Net.Mime.ContentType * byte[] -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="realTimeEndpoint.SendMessage (messageType, sessionTarget, contentType, body)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1157,6 +1197,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Microsoft.Rtc.Signaling.SipResponseData SendMessage(valuetype Microsoft.Rtc.Signaling.MessageType messageType, class Microsoft.Rtc.Signaling.RealTimeAddress sessionTarget, class System.Net.Mime.ContentType contentType, unsigned int8[] body, class System.Collections.Generic.IEnumerable`1&lt;class Microsoft.Rtc.Signaling.SignalingHeader&gt; signalingHeaders) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.SendMessage(Microsoft.Rtc.Signaling.MessageType,Microsoft.Rtc.Signaling.RealTimeAddress,System.Net.Mime.ContentType,System.Byte[],System.Collections.Generic.IEnumerable{Microsoft.Rtc.Signaling.SignalingHeader})" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Signaling::SipResponseData ^ SendMessage(Microsoft::Rtc::Signaling::MessageType messageType, Microsoft::Rtc::Signaling::RealTimeAddress ^ sessionTarget, System::Net::Mime::ContentType ^ contentType, cli::array &lt;System::Byte&gt; ^ body, System::Collections::Generic::IEnumerable&lt;Microsoft::Rtc::Signaling::SignalingHeader ^&gt; ^ signalingHeaders);" />
+      <MemberSignature Language="F#" Value="member this.SendMessage : Microsoft.Rtc.Signaling.MessageType * Microsoft.Rtc.Signaling.RealTimeAddress * System.Net.Mime.ContentType * byte[] * seq&lt;Microsoft.Rtc.Signaling.SignalingHeader&gt; -&gt; Microsoft.Rtc.Signaling.SipResponseData" Usage="realTimeEndpoint.SendMessage (messageType, sessionTarget, contentType, body, signalingHeaders)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1201,6 +1242,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Signaling.RealTimeEndpoint.SessionReceived" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event SessionReceived As EventHandler(Of SessionReceivedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Signaling::SessionReceivedEventArgs ^&gt; ^ SessionReceived;" />
+      <MemberSignature Language="F#" Value="member this.SessionReceived : EventHandler&lt;Microsoft.Rtc.Signaling.SessionReceivedEventArgs&gt; " Usage="member this.SessionReceived : System.EventHandler&lt;Microsoft.Rtc.Signaling.SessionReceivedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1222,6 +1264,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.Terminate" />
       <MemberSignature Language="VB.NET" Value="Public Sub Terminate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Terminate();" />
+      <MemberSignature Language="F#" Value="member this.Terminate : unit -&gt; unit" Usage="realTimeEndpoint.Terminate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1245,6 +1288,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="realTimeEndpoint.ToString " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1268,6 +1312,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Signaling.RealTimeEndpoint.UnregisterForPageModeMessages" />
       <MemberSignature Language="VB.NET" Value="Protected Sub UnregisterForPageModeMessages ()" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; void UnregisterForPageModeMessages();" />
+      <MemberSignature Language="F#" Value="member this.UnregisterForPageModeMessages : unit -&gt; unit" Usage="realTimeEndpoint.UnregisterForPageModeMessages " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1290,6 +1335,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.Uri" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Uri As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.Uri" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -1324,6 +1370,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Signaling.RealTimeEndpoint.UserAgent" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UserAgent As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserAgent { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserAgent : string" Usage="Microsoft.Rtc.Signaling.RealTimeEndpoint.UserAgent" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

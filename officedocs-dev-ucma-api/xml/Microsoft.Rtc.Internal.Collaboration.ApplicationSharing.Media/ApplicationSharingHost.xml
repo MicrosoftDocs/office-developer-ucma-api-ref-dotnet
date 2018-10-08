@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class ApplicationSharingHost&#xA;Inherits ApplicationSharingClient" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationSharingHost abstract : Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingClient" />
+  <TypeSignature Language="F#" Value="type ApplicationSharingHost = class&#xA;    inherit ApplicationSharingClient" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -23,6 +24,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.#ctor(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (flow As ApplicationSharingFlow)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; ApplicationSharingHost(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::ApplicationSharingFlow ^ flow);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.ApplicationSharingFlow -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost" Usage="new Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost flow" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -43,6 +45,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.BeginActivate(System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function BeginActivate (callback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract IAsyncResult ^ BeginActivate(AsyncCallback ^ callback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="abstract member BeginActivate : AsyncCallback * obj -&gt; IAsyncResult" Usage="applicationSharingHost.BeginActivate (callback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +72,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlAllowed" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Property ControlAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool ControlAllowed { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.ControlAllowed : bool with get, set" Usage="Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ControlChanged As EventHandler(Of AttendeeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ ControlChanged;" />
+      <MemberSignature Language="F#" Value="member this.ControlChanged : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " Usage="member this.ControlChanged : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -108,6 +113,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ControlRequested" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event ControlRequested As EventHandler(Of AttendeeEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^&gt; ^ ControlRequested;" />
+      <MemberSignature Language="F#" Value="member this.ControlRequested : EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " Usage="member this.ControlRequested : System.EventHandler&lt;Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -127,6 +133,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.DeclineControl(System.Int32,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DeclineControl (attendeeId As Integer, reason As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void DeclineControl(int attendeeId, int reason);" />
+      <MemberSignature Language="F#" Value="abstract member DeclineControl : int * int -&gt; unit" Usage="applicationSharingHost.DeclineControl (attendeeId, reason)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -152,6 +159,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.EndActivate(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EndActivate (result As IAsyncResult)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EndActivate(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="abstract member EndActivate : IAsyncResult -&gt; unit" Usage="applicationSharingHost.EndActivate result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -175,6 +183,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.GrantControl(System.Int32,System.Boolean@)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub GrantControl (attendeeId As Integer, ByRef userDeclined As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void GrantControl(int attendeeId, [Runtime::InteropServices::Out] bool % userDeclined);" />
+      <MemberSignature Language="F#" Value="abstract member GrantControl : int *  -&gt; unit" Usage="applicationSharingHost.GrantControl (attendeeId, userDeclined)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -185,7 +194,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="attendeeId" Type="System.Int32" />
-        <Parameter Name="userDeclined" Type="System.Boolean&amp;" RefType="out" />
+        <Parameter Name="userDeclined" Type="System.Boolean" RefType="out" />
       </Parameters>
       <Docs>
         <param name="attendeeId">To be added.</param>
@@ -200,6 +209,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.OnControlChanged(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnControlChanged (args As AttendeeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnControlChanged(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnControlChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit&#xA;override this.OnControlChanged : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit" Usage="applicationSharingHost.OnControlChanged args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -223,6 +233,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.OnControlRequested(Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnControlRequested (args As AttendeeEventArgs)" />
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnControlRequested(Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::AttendeeEventArgs ^ args);" />
+      <MemberSignature Language="F#" Value="abstract member OnControlRequested : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit&#xA;override this.OnControlRequested : Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.AttendeeEventArgs -&gt; unit" Usage="applicationSharingHost.OnControlRequested args" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -246,6 +257,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.ProbeState" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Function ProbeState () As ApplicationSharingState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Rtc::Internal::Collaboration::ApplicationSharing::Media::ApplicationSharingState ProbeState();" />
+      <MemberSignature Language="F#" Value="abstract member ProbeState : unit -&gt; Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingState" Usage="applicationSharingHost.ProbeState " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -267,6 +279,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.RevokeControl" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RevokeControl ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RevokeControl();" />
+      <MemberSignature Language="F#" Value="abstract member RevokeControl : unit -&gt; unit" Usage="applicationSharingHost.RevokeControl " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -287,6 +300,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.SetPolicyEnableControl(System.Int32,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPolicyEnableControl (attendeeId As Integer, enabled As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetPolicyEnableControl(int attendeeId, bool enabled);" />
+      <MemberSignature Language="F#" Value="abstract member SetPolicyEnableControl : int * bool -&gt; unit" Usage="applicationSharingHost.SetPolicyEnableControl (attendeeId, enabled)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -312,6 +326,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Internal.Collaboration.ApplicationSharing.Media.ApplicationSharingHost.StopSession" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopSession ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void StopSession();" />
+      <MemberSignature Language="F#" Value="override this.StopSession : unit -&gt; unit" Usage="applicationSharingHost.StopSession " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

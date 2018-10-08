@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices" />
   <TypeSignature Language="VB.NET" Value="Public Class ApplicationPinServices&#xA;Inherits PinServices" />
   <TypeSignature Language="C++ CLI" Value="public ref class ApplicationPinServices : Microsoft::Rtc::Collaboration::PinManagement::PinServices" />
+  <TypeSignature Language="F#" Value="type ApplicationPinServices = class&#xA;    inherit PinServices" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -25,6 +26,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices.BeginVerifyPin(System.String,System.String,Microsoft.Rtc.Collaboration.PinManagement.VerifyPinOptions,System.AsyncCallback,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function BeginVerifyPin (uriToVerify As String, pin As String, options As VerifyPinOptions, userCallback As AsyncCallback, state As Object) As IAsyncResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; IAsyncResult ^ BeginVerifyPin(System::String ^ uriToVerify, System::String ^ pin, Microsoft::Rtc::Collaboration::PinManagement::VerifyPinOptions ^ options, AsyncCallback ^ userCallback, System::Object ^ state);" />
+      <MemberSignature Language="F#" Value="member this.BeginVerifyPin : string * string * Microsoft.Rtc.Collaboration.PinManagement.VerifyPinOptions * AsyncCallback * obj -&gt; IAsyncResult" Usage="applicationPinServices.BeginVerifyPin (uriToVerify, pin, options, userCallback, state)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -69,6 +71,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.PinManagement.ApplicationPinServices.EndVerifyPin(System.IAsyncResult)" />
       <MemberSignature Language="VB.NET" Value="Public Function EndVerifyPin (result As IAsyncResult) As PinVerificationResult" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Rtc::Collaboration::PinManagement::PinVerificationResult ^ EndVerifyPin(IAsyncResult ^ result);" />
+      <MemberSignature Language="F#" Value="member this.EndVerifyPin : IAsyncResult -&gt; Microsoft.Rtc.Collaboration.PinManagement.PinVerificationResult" Usage="applicationPinServices.EndVerifyPin result" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>

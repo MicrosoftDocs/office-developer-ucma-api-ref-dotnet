@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Rtc.Collaboration.AudioVideo.Player" />
   <TypeSignature Language="VB.NET" Value="Public Class Player" />
   <TypeSignature Language="C++ CLI" Value="public ref class Player" />
+  <TypeSignature Language="F#" Value="type Player = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
     <AssemblyVersion>6.0.0.0</AssemblyVersion>
@@ -69,6 +70,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AttachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.AttachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void AttachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberSignature Language="F#" Value="member this.AttachFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow -&gt; unit" Usage="player.AttachFlow audioVideoFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -91,6 +93,9 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the operation failed, such as for an overloaded system.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is invalid because an unbuffered media source is already being played to another AudioVideoFlow attached to this Player.</exception>
         <example>
           <para />
           <para>
@@ -125,9 +130,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
-        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the operation failed, such as for an overloaded system.</exception>
-        <exception cref="T:System.InvalidOperationException">Thrown when the operation is invalid because an unbuffered media source is already being played to another AudioVideoFlow attached to this Player.</exception>
       </Docs>
     </Member>
     <Member MemberName="AudioVideoFlows">
@@ -136,6 +138,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.AudioVideoFlows" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AudioVideoFlows As ReadOnlyCollection(Of AudioVideoFlow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^&gt; ^ AudioVideoFlows { System::Collections::ObjectModel::ReadOnlyCollection&lt;Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AudioVideoFlows : System.Collections.ObjectModel.ReadOnlyCollection&lt;Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow&gt;" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Player.AudioVideoFlows" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -157,6 +160,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DetachFlow(class Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow audioVideoFlow) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.DetachFlow(Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DetachFlow(Microsoft::Rtc::Collaboration::AudioVideo::AudioVideoFlow ^ audioVideoFlow);" />
+      <MemberSignature Language="F#" Value="member this.DetachFlow : Microsoft.Rtc.Collaboration.AudioVideo.AudioVideoFlow -&gt; unit" Usage="player.DetachFlow audioVideoFlow" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -179,6 +183,7 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
         <example>
           <para />
           <para>
@@ -213,7 +218,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentNullException">Thrown when the audioVideoFlow parameter is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="Mode">
@@ -222,6 +226,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.Mode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Mode As PlayerMode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::PlayerMode Mode { Microsoft::Rtc::Collaboration::AudioVideo::PlayerMode get(); };" />
+      <MemberSignature Language="F#" Value="member this.Mode : Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Player.Mode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -244,6 +249,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Pause" />
       <MemberSignature Language="VB.NET" Value="Public Sub Pause ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Pause();" />
+      <MemberSignature Language="F#" Value="member this.Pause : unit -&gt; unit" Usage="player.Pause " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -265,6 +271,9 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">
+            Thrown when the player's State is not Started.
+            </exception>
         <example>
           <para />
           <para>
@@ -293,9 +302,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">
-            Thrown when the player's State is not Started.
-            </exception>
       </Docs>
     </Member>
     <Member MemberName="PlaybackSpeed">
@@ -304,6 +310,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.PlaybackSpeed" />
       <MemberSignature Language="VB.NET" Value="Public Property PlaybackSpeed As PlaybackSpeed" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::PlaybackSpeed PlaybackSpeed { Microsoft::Rtc::Collaboration::AudioVideo::PlaybackSpeed get(); void set(Microsoft::Rtc::Collaboration::AudioVideo::PlaybackSpeed value); };" />
+      <MemberSignature Language="F#" Value="member this.PlaybackSpeed : Microsoft.Rtc.Collaboration.AudioVideo.PlaybackSpeed with get, set" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Player.PlaybackSpeed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -318,6 +325,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if PlaybackSpeed has a value not in the PlaybackSpeed enumeration.</exception>
         <example>
           <para />
           <para>
@@ -338,7 +346,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if PlaybackSpeed has a value not in the PlaybackSpeed enumeration.</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveSource">
@@ -347,6 +354,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.RemoveSource" />
       <MemberSignature Language="VB.NET" Value="Public Sub RemoveSource ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RemoveSource();" />
+      <MemberSignature Language="F#" Value="member this.RemoveSource : unit -&gt; unit" Usage="player.RemoveSource " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -395,6 +403,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.SetMode(Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetMode (mode As PlayerMode)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetMode(Microsoft::Rtc::Collaboration::AudioVideo::PlayerMode mode);" />
+      <MemberSignature Language="F#" Value="member this.SetMode : Microsoft.Rtc.Collaboration.AudioVideo.PlayerMode -&gt; unit" Usage="player.SetMode mode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -417,6 +426,7 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the mode parameter is not a value in the PlayerMode enumeration.</exception>
         <example>
           <para />
           <para>
@@ -437,7 +447,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the mode parameter is not a value in the PlayerMode enumeration.</exception>
       </Docs>
     </Member>
     <Member MemberName="SetSource">
@@ -446,6 +455,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.SetSource(Microsoft.Rtc.Collaboration.AudioVideo.MediaSource)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetSource (source As MediaSource)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetSource(Microsoft::Rtc::Collaboration::AudioVideo::MediaSource ^ source);" />
+      <MemberSignature Language="F#" Value="member this.SetSource : Microsoft.Rtc.Collaboration.AudioVideo.MediaSource -&gt; unit" Usage="player.SetSource source" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -468,6 +478,7 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the source parameter is null.</exception>
         <example>
           <para />
           <para>
@@ -489,7 +500,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.ArgumentNullException">Thrown when the source parameter is null.</exception>
       </Docs>
     </Member>
     <Member MemberName="Skip">
@@ -498,6 +508,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Skip(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Skip (milliSeconds As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Skip(int milliSeconds);" />
+      <MemberSignature Language="F#" Value="member this.Skip : int -&gt; unit" Usage="player.Skip milliSeconds" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -522,6 +533,7 @@
             </para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when no source is attached or when the source is closed.</exception>
         <example>
           <para />
           <para>
@@ -542,7 +554,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when no source is attached or when the source is closed.</exception>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -551,6 +562,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.Source" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Source As MediaSource" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::MediaSource ^ Source { Microsoft::Rtc::Collaboration::AudioVideo::MediaSource ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Source : Microsoft.Rtc.Collaboration.AudioVideo.MediaSource" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Player.Source" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -572,6 +584,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Start" />
       <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Start();" />
+      <MemberSignature Language="F#" Value="member this.Start : unit -&gt; unit" Usage="player.Start " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -586,6 +599,8 @@
             Starts and resume playing the attached media source.
             </summary>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">Thrown when the operation is invalid because Player is attached to more than one AudioVideoFlow and is using an unbuffered media source.</exception>
+        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the operation failed, such as for an overloaded system.</exception>
         <example>
           <para />
           <para>
@@ -602,8 +617,6 @@
 
 </code>
         </example>
-        <exception cref="T:System.InvalidOperationException">Thrown when the operation is invalid because Player is attached to more than one AudioVideoFlow and is using an unbuffered media source.</exception>
-        <exception cref="T:Microsoft.Rtc.Signaling.OperationFailureException">Thrown when the operation failed, such as for an overloaded system.</exception>
       </Docs>
     </Member>
     <Member MemberName="State">
@@ -612,6 +625,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Rtc.Collaboration.AudioVideo.Player.State" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property State As PlayerState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Rtc::Collaboration::AudioVideo::PlayerState State { Microsoft::Rtc::Collaboration::AudioVideo::PlayerState get(); };" />
+      <MemberSignature Language="F#" Value="member this.State : Microsoft.Rtc.Collaboration.AudioVideo.PlayerState" Usage="Microsoft.Rtc.Collaboration.AudioVideo.Player.State" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -634,6 +648,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Rtc.Collaboration.AudioVideo.Player.StateChanged" />
       <MemberSignature Language="VB.NET" Value="Public Custom Event StateChanged As EventHandler(Of PlayerStateChangedEventArgs) " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event EventHandler&lt;Microsoft::Rtc::Collaboration::AudioVideo::PlayerStateChangedEventArgs ^&gt; ^ StateChanged;" />
+      <MemberSignature Language="F#" Value="member this.StateChanged : EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.PlayerStateChangedEventArgs&gt; " Usage="member this.StateChanged : System.EventHandler&lt;Microsoft.Rtc.Collaboration.AudioVideo.PlayerStateChangedEventArgs&gt; " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
@@ -685,6 +700,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Rtc.Collaboration.AudioVideo.Player.Stop" />
       <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Stop();" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="player.Stop " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Rtc.Collaboration</AssemblyName>
