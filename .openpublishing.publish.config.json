@@ -15,15 +15,18 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "NetEnum": "Content",
+        "NetDelegate": "Content",
+        "NetNamespace": "Content",
+        "NetMember": "Content",
+        "NetType": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "base_path": "dotnet",
       "site_name": "Docs",
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
+      "customized_template_paths": [],
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
@@ -38,7 +41,8 @@
         "SourceXmlFolder": "officedocs-dev-ucma-api/xml",
         "OutputYamlFolder": "officedocs-dev-ucma-api/api",
         "Flatten": true,
-        "id": "officedocs-dev-ucma-api"
+        "id": "officedocs-dev-ucma-api",
+        "SDPMode": "true"
       },
       "SplitTOC": [
         "officedocs-dev-ucma-api/api/officedocs-dev-ucma-api/toc.yml"
